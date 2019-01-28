@@ -177,15 +177,16 @@ $secondary-font: ProximaNova
 #section-contact
   overflow: hidden
 
+
+
 .client-contact-list
-  height: 100vh
   background-color: #f0f2f6
 
 .client-contact-list-img
-  height: 100vh
   background-color: #e7bf5d
 
 .client-contact-list
+  font-family: $primary-font
   padding: 75px
   text-transform: uppercase
   font-weight: bold
@@ -200,22 +201,17 @@ $secondary-font: ProximaNova
   display: block
   color: $primary-color
 
-@media (max-width: 600px)
-    .client-contact-list__text span
-      line-height: 48px
-      font-size: 48pt
-
 .client-contact-list__quote::before
   display: flex
   justify-content: center
   content: "∨"
-  width: 67px
+  width: 70px
   padding: 15px
 
 .client-contact-list__quote p
   margin: 4px
   padding: 2px
-  font-size: 9pt
+  font-size: 14px
 
 .client-contact-list__social
   padding-top: 15px
@@ -226,7 +222,7 @@ $secondary-font: ProximaNova
 .client-contact-list__email a
   display: inline-block
   padding: 50px 0px
-  color: #363531
+  color: $primary-color
   text-transform: lowercase
   letter-spacing: 1px
   text-decoration: underline
@@ -242,13 +238,13 @@ $secondary-font: ProximaNova
   right: -75px
  
 .client-contact-list__social a
-  font-size: 8pt
+  font-size: 14px
   text-decoration: underline
-  color: #363531
+  color: $primary-color
 
 .client-contact-list__social--audio
   margin: 0
-  font-size: 8pt
+  font-size: 14px
   text-transform: lowercase
 
 .client-contact-list__social--audio a
@@ -268,8 +264,32 @@ $secondary-font: ProximaNova
 
 .client-contact-list-img img
   width: 100%
-  position: absolute
-  bottom: 0px
+/*section contact*/
+
+/*media query*/
+@media (min-width: 768px)
+  #section-contact .row
+    display: flex
+
+  .client-contact-list-img img
+    position: absolute
+    bottom: 0px
+
+@media (max-width: 768px)
+    .client-contact-list__text span
+      line-height: 48px
+      font-size: 48pt
+
+    .client-contact-list__quote::before
+      width: 50px
+
+    .client-contact-list-img
+      background: none
+
+
+
+/*media query*/
+
 
 @media (max-width: 600px)
   #section-logos .row
@@ -318,14 +338,16 @@ $secondary-font: ProximaNova
 
 /*footer*/
 .footer-section
-  background-color: #363531
+  background-color: $primary-color
   color: #ffffff
+
 
 .footer-client
   padding: 5px
   text-transform: uppercase
   text-align: center
   line-height: 10px
+  font-family: $primary-font
 
 .footer-client p
   font-size: 8pt
