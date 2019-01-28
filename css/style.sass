@@ -1,18 +1,48 @@
 /*# sourceMappingURL=style.css.map */
 //Fonts
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900')
+@font-face
+  font-family: ProximaNova
+  src: url(../fonts/ProximaNova-Light.ttf)
+
+
+//VARIABLES
+$primary-color: #363531
+$primary-font: 'Montserrat', sans-serif
+$secondary-font: ProximaNova
+
 /*SECTION BANNER*/
 #section-banner
   height: 100vh
   background-image: url("../img/first-section/photo1.png")
   background-size: cover
+  overflow: hidden
 
 .left-logo-banner-section embed
   width: 4.5%
 
+.text-center-banner-section
+  height: 83vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+.job-text-center
+  font-family: $primary-font
+  text-transform: uppercase
+  color: snow
+  margin: 2px 5px
+  font-size: 9px
+  letter-spacing: 4px
+
+.lines-job-text-center
+  font-family: $primary-font
+  color: snow
+  font-size: 20px
+  font-weight: 300
 
 .text-left-logo
-  font-family: 'Montserrat', sans-serif
+  font-family: $primary-font
   text-transform: uppercase
   color: snow
   margin: 2px 0
@@ -32,7 +62,7 @@
   flex-direction: column
   margin-left: 10px
 
-//HAMBURGER MENU
+//hamburger menu
 .hamburger-menu-banner-section
   display: flex
   justify-content: flex-end
@@ -47,7 +77,7 @@
 #menuToggle
   display: block
   position: relative
-  top: 50px
+  top: 35px
   left: 50px
   z-index: 1
   -webkit-user-select: none
@@ -117,7 +147,7 @@
 
 #menuToggle input:checked ~ ul
   transform: none
-//HAMBURGER MENU
+//hamburger menu
 
 /*SECTION BANNER*/
 
@@ -125,7 +155,7 @@
 
 /*SECTION LOGOS*/
 #section-logos
-  background-color: #363531
+  background-color: $primary-color
   display: flex
   align-items: center
   position: relative
@@ -140,36 +170,13 @@
   width: 120px
   height: 50px
 
-@media (min-width: 1000px) and (max-width: 1200px)
-  .logo-client-list
-      width: 14%
-
-
-@media (max-width: 600px)
-  #section-logos .row
-      display: block
-
-  #section-logos
-      height: auto
-
-  .logo-client-list
-      margin: 10px 0
-
-  .logo-client-list embed
-      width: 80px
-      height: 30px
-
-
-@media (min-width: 768px) and (max-width: 1000px)
-  .logo-client-list
-      width: 14%
-
-  .logo-client-list embed
-      width: 90px
-
-
 /*SECTION LOGOS*/
+
 /*section contact*/
+
+#section-contact
+  overflow: hidden
+
 .client-contact-list
   height: 100vh
   background-color: #f0f2f6
@@ -191,6 +198,7 @@
   line-height: 72px
   font-size: 72pt
   display: block
+  color: $primary-color
 
 @media (max-width: 600px)
     .client-contact-list__text span
@@ -232,7 +240,7 @@
   position: absolute
   top: 55px
   right: -75px
-
+ 
 .client-contact-list__social a
   font-size: 8pt
   text-decoration: underline
@@ -263,9 +271,50 @@
   position: absolute
   bottom: 0px
 
+@media (max-width: 600px)
+  #section-logos .row
+    display: block
+
+  #section-logos
+    height: auto
+
+  .logo-client-list
+    margin: 10px 0
+    width: 50%
+    float: left
+    text-align: center
+
+  .logo-client-list embed
+    width: 100px
+    height: 40px
+
+  #menuToggle
+    left: 0
+
+  .left-logo-banner-section embed
+    width: 12%
+
+@media (min-width: 601px) and (max-width: 767px)
+  .logo-client-list
+    width: 60%
+
+  .logo-client-list embed
+    width: 55px
+    height: 50px
+
+@media (max-width: 800px)
+  #menuToggle
+    left: 0
+
+@media (min-width: 768px) and (max-width: 1000px)
+  .logo-client-list
+    width: 14%
+
+  .logo-client-list embed
+    width: 90px
 
 
-/*section contact*/
+//MEDIA QUERY
 
 /*footer*/
 .footer-section
