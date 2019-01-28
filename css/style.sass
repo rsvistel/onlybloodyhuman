@@ -183,22 +183,113 @@
   text-transform: uppercase
   font-weight: bold
 
+.client-contact-list__text p
+  font-size: 12pt
+  margin: 4px
+
 .client-contact-list__text span
+  line-height: 72px
   font-size: 72pt
   display: block
 
+@media (max-width: 600px)
+    .client-contact-list__text span
+      line-height: 48px
+      font-size: 48pt
+
 .client-contact-list__quote::before
+  display: flex
+  justify-content: center
   content: "∨"
+  width: 67px
+  padding: 15px
 
 .client-contact-list__quote p
-  font-size: 10pt
+  margin: 4px
+  padding: 2px
+  font-size: 9pt
 
+.client-contact-list__social
+  padding-top: 15px
 
+.client-contact-list__email
+  position: relative
 
+.client-contact-list__email a
+  display: inline-block
+  padding: 50px 0px
+  color: #363531
+  text-transform: lowercase
+  letter-spacing: 1px
+  text-decoration: underline
+  font-size: 16pt
 
+.client-contact-list__email--triangle-left
+  height: 0
+  border-top: 5px solid transparent
+  border-right: 5px solid #e7bf5d
+  border-bottom: 5px solid transparent
+  position: absolute
+  top: 55px
+  right: -75px
 
+.client-contact-list__social a
+  font-size: 8pt
+  text-decoration: underline
+  color: #363531
+
+.client-contact-list__social--audio
+  margin: 0
+  font-size: 8pt
+  text-transform: lowercase
+
+.client-contact-list__social--audio a
+  text-transform: uppercase
+  letter-spacing: 1px
+
+.client-contact-list__social--instagram a
+  text-transform: lowercase
+  letter-spacing: 1px
+
+.client-contact-list__social img
+  padding: 5px 15px 5px 5px
+
+.client-contact-list-img
+  position: relative
+  padding: 0
+
+.client-contact-list-img img
+  width: 100%
+  position: absolute
+  bottom: 0px
 
 
 
 /*section contact*/
+
+/*footer*/
+.footer-section
+  background-color: #363531
+  color: #ffffff
+
+.footer-client
+  padding: 5px
+  text-transform: uppercase
+  text-align: center
+  line-height: 10px
+
+.footer-client p
+  font-size: 8pt
+  padding-top: 20px
+
+.footer-client span
+  font-size: 16pt
+
+.footer-section img
+  display: block
+  margin:  0 auto
+
+/*footer*/
+
+
 
