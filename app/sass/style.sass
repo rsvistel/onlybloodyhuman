@@ -212,8 +212,8 @@ $secondary-font: ProximaNova
   text-transform: uppercase
 
 .outdoor-section__text--header h1
-  font-size: 70px
-  line-height: 70px
+  font-size: 60px
+  line-height: 60px
   margin: 0
 
 .outdoor-section__text--header h4
@@ -228,29 +228,59 @@ $secondary-font: ProximaNova
   margin: 20px 0px 10px 0px
   font-size: 12px
 
+.outdoor-section-block
+  text-align: center
+  padding-top: 30px
+
+.outdoor-section-block a
+  text-align: center
+  font-weight: bold
+  text-transform: uppercase
+  color: #ffffff
+  font-size: 14px
+
+.outdoor-section__image::before
+  display: flex
+  justify-content: center
+  content: "∨"
+
+.outdoor-section__image img
+  width: 50px
+
+.outdoor-section__image p
+  text-align: center
+
+.outdoor-section
+  text-align: center
+/*Outdoor section*/
+
+
 /*media query*/
 @media (min-width: 768px)
   .outdoor-section__text
     width: 35%
     text-align: right
     position: absolute
-    top: 55%
+    top: 60%
     transform: translateY(-50%)
     right: 130px
 
 @media (max-width: 768px)
-  .outdoor-section__text
-    text-align: center
-    position: absolute
-    top: 55%
-    transform: translateY(-50%)
-    right: 100px
-    width: 70%
-    margin: 0 auto
-
   .outdoor-section__text--header h1
     font-size: 48px
     line-height: 48px
+
+  .outdoor-section
+    background-color: #363531
+
+  .outdoor-section__text
+    padding: 10px
+
+  @media (max-width: 1024px)
+    .outdoor-section__text
+      top: 50%
+
+
 /*media query*/
 
 /*Outdoor section*/
@@ -356,6 +386,9 @@ $secondary-font: ProximaNova
     bottom: 0px
 
 @media (max-width: 768px)
+  .client-contact-list
+    padding: 50px
+
   .client-contact-list__text span
     line-height: 48px
     font-size: 48pt
