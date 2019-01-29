@@ -71,7 +71,6 @@
   display: block;
   position: relative;
   top: 35px;
-  left: 50px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none; }
@@ -131,7 +130,8 @@
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  opacity: 0; }
 
 #menu li {
   padding: 10px 0;
@@ -155,8 +155,10 @@
   justify-content: space-between; }
 
 .logo-client-list embed {
-  width: 120px;
-  height: 50px; }
+  min-width: 70px;
+  max-width: 115px;
+  min-height: 30px;
+  max-height: 50px; }
 
 /*SECTION LOGOS */
 /*Outdoor section */
@@ -303,7 +305,6 @@
 
 .client-contact-list-img img {
   width: 100%; }
-
 /*section contact */
 /*media query */
 @media (min-width: 768px) {
@@ -339,7 +340,7 @@
 
   .logo-client-list embed {
     width: 100px;
-    height: 40px; }
+    height: 55px; }
 
   #menuToggle {
     left: 0; }
