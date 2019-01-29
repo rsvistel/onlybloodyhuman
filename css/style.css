@@ -71,7 +71,6 @@
   display: block;
   position: relative;
   top: 35px;
-  left: 50px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none; }
@@ -131,7 +130,8 @@
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  opacity: 0; }
 
 #menu li {
   padding: 10px 0;
@@ -155,10 +155,42 @@
   justify-content: space-between; }
 
 .logo-client-list embed {
-  width: 120px;
-  height: 50px; }
+  min-width: 70px;
+  max-width: 115px;
+  min-height: 30px;
+  max-height: 50px; }
 
 /*SECTION LOGOS */
+#section-about {
+  height: 200vh;
+  background-color: #eeeff1;
+  color: #363531;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase; }
+
+#section-about .row {
+  display: flex;
+  align-items: center; }
+
+.photo-man-section-about {
+  display: flex;
+  align-items: center;
+  margin-right: 50px; }
+
+.img-photo-man-section-about {
+  width: 220%;
+  margin-top: -20%; }
+
+.whole-text-section-about {
+  margin-left: 50px; }
+
+.whole-text-section-about h6 {
+  font-weight: 700;
+  letter-spacing: 1px; }
+
+.aka-name-section-about {
+  font-size: 10px; }
+
 /*section contact */
 #section-contact {
   overflow: hidden; }
@@ -256,34 +288,6 @@
   position: absolute;
   bottom: 0px; }
 
-/*section contact */
-/*footer */
-.footer-section {
-  background-color: #363531;
-  color: #ffffff; }
-
-.footer-client {
-  padding: 5px;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 10px; }
-
-.footer-client p {
-  font-size: 8pt;
-  padding-top: 20px; }
-
-.footer-client span {
-  font-size: 16pt; }
-
-.footer-section img {
-  display: block;
-  margin: 0 auto; }
-/*footer */
-
-/*section contact */
-@media (min-width: 1000px) and (max-width: 1200px) {
-  .logo-client-list {
-    width: 14%; } }
 @media (max-width: 600px) {
   #section-logos .row {
     display: block; }
@@ -299,7 +303,7 @@
 
   .logo-client-list embed {
     width: 100px;
-    height: 40px; }
+    height: 55px; }
 
   #menuToggle {
     left: 0; }
@@ -322,5 +326,28 @@
 
   .logo-client-list embed {
     width: 90px; } }
+/*footer */
+.footer-section {
+  background-color: #363531;
+  color: #ffffff; }
+
+.footer-client {
+  padding: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 10px; }
+
+.footer-client p {
+  font-size: 8pt;
+  padding-top: 20px; }
+
+.footer-client span {
+  font-size: 16pt; }
+
+.footer-section img {
+  display: block;
+  margin: 0 auto; }
+
+/*footer */
 
 /*# sourceMappingURL=style.css.map */
