@@ -198,6 +198,14 @@ $secondary-font: ProximaNova
 //Section About
 
 /*Outdoor section*/
+.outdoor-section__text
+  width: 35%
+  text-align: right
+  position: absolute
+  top: 60%
+  transform: translateY(-50%)
+  right: 130px
+
 .outdoor-section
   position: relative
 
@@ -252,36 +260,9 @@ $secondary-font: ProximaNova
 
 .outdoor-section
   text-align: center
-/*Outdoor section*/
 
-
-/*media query*/
-@media (min-width: 768px)
-  .outdoor-section__text
-    width: 35%
-    text-align: right
-    position: absolute
-    top: 60%
-    transform: translateY(-50%)
-    right: 130px
-
-@media (max-width: 768px)
-  .outdoor-section__text--header h1
-    font-size: 48px
-    line-height: 48px
-
-  .outdoor-section
-    background-color: #363531
-
-  .outdoor-section__text
-    padding: 10px
-
-  @media (max-width: 1024px)
-    .outdoor-section__text
-      top: 50%
-
-
-/*media query*/
+.outdoor-section__item
+  text-align: center
 
 /*Outdoor section*/
 
@@ -289,15 +270,23 @@ $secondary-font: ProximaNova
 #section-contact
   overflow: hidden
 
+#section-contact .row
+  display: flex
+
+.client-contact-list-img img
+  position: absolute
+  bottom: 0px
+
 .client-contact-list
   background-color: #f0f2f6
+  width: 50%
 
 .client-contact-list-img
   background-color: #e7bf5d
 
 .client-contact-list
   font-family: $primary-font
-  padding: 75px
+  padding: 50px
   text-transform: uppercase
   font-weight: bold
 
@@ -369,6 +358,7 @@ $secondary-font: ProximaNova
   padding: 5px 15px 5px 5px
 
 .client-contact-list-img
+  width: 50%
   position: relative
   padding: 0
 
@@ -377,17 +367,21 @@ $secondary-font: ProximaNova
 /*section contact*/
 
 /*media query*/
-@media (min-width: 768px)
-  #section-contact .row
-    display: flex
-
-  .client-contact-list-img img
-    position: absolute
-    bottom: 0px
-
 @media (max-width: 768px)
+
   .client-contact-list
     padding: 50px
+    width: 100%
+
+  #section-contact .row
+    display: block
+
+  .client-contact-list-img img
+    position: static
+
+  .client-contact-list-img
+    width: 100%
+    position: static
 
   .client-contact-list__text span
     line-height: 48px
@@ -398,6 +392,34 @@ $secondary-font: ProximaNova
 
   .client-contact-list-img
     background: none
+
+/*media query*/
+
+/*media query*/
+
+
+@media (max-width: 768px)
+  .outdoor-section__text
+    width: 100%
+    padding: 15px
+    position: static
+    transform: none
+    text-align: center
+
+  .outdoor-section__text--header h1
+    font-size: 48px
+    line-height: 48px
+
+  .outdoor-section
+    background-color: #363531
+
+  .outdoor-section__item
+    text-align: center
+
+@media (max-width: 1024px)
+  .outdoor-section__text
+    top: 50%
+
 
 /*media query*/
 
