@@ -461,17 +461,18 @@ p {
 
 /*Outdoor section*/
 .outdoor-section__text {
-  width: 35%;
+  width: 30%;
   text-align: right;
   position: absolute;
-  top: 60%;
+  top: 55%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 130px; }
+  right: 100px; }
 
 .outdoor-section {
-  position: relative; }
+  position: relative;
+  height: 100vh; }
 
 .outdoor-section img {
   width: 100%; }
@@ -480,17 +481,11 @@ p {
   font-family: "Montserrat", sans-serif;
   color: #ffffff; }
 
-.outdoor-section__text--header {
-  text-transform: uppercase; }
-
-.outdoor-section__text--header h1 {
-  font-size: 60px;
-  line-height: 60px;
+.outdoor-section__text--header h2 {
   margin: 0; }
 
-.outdoor-section__text--header h4 {
-  font-size: 20px;
-  margin: 0; }
+.outdoor-section__text--header h3 {
+  margin: 0 0 25px 0; }
 
 .outdoor-section__text--main {
   display: -webkit-box;
@@ -504,19 +499,25 @@ p {
           flex-direction: column; }
 
 .outdoor-section__text--main p {
-  margin: 20px 0px 10px 0px;
-  font-size: 12px; }
+  margin: 20px 0px 10px 0px; }
 
 .outdoor-section-block {
-  text-align: center;
-  padding-top: 30px; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center; }
 
-.outdoor-section-block a {
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-size: 14px; }
+.outdoor-section-block button {
+  border: none;
+  background: none; }
+
+.outdoor-section hr {
+  border: none;
+  border-top: 2px solid #ffff;
+  margin-top: 0; }
 
 .outdoor-section__image::before {
   display: -webkit-box;
@@ -529,9 +530,6 @@ p {
           justify-content: center;
   content: "∨"; }
 
-.outdoor-section__image img {
-  width: 50px; }
-
 .outdoor-section__image p {
   text-align: center; }
 
@@ -543,6 +541,9 @@ p {
 
 /*Outdoor section*/
 /*section instagram-followers*/
+.section-instagram {
+  height: 100vh; }
+
 .section-instagram-followers {
   font-family: "Montserrat", sans-serif;
   background-color: #363531;
