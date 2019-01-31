@@ -448,6 +448,37 @@
   text-align: center; }
 
 /*Outdoor section*/
+/*section instagram-followers*/
+.section-instagram-followers {
+  font-family: "Montserrat", sans-serif;
+  background-color: #363531;
+  color: #ffffff;
+  padding: 50px;
+  font-weight: bold; }
+
+.section-instagram-followers span {
+  font-size: 18px;
+  vertical-align: middle; }
+
+.section-instagram-followers a {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block; }
+
+/*section instagram-followers*/
+/*section instagran*/
+.section-instagram {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.section-instagram__photo {
+  padding: 0px; }
+
+.section-instagram__photo img {
+  width: 100%; }
+
+/*section instagran*/
 /*section contact*/
 #section-contact {
   overflow: hidden; }
