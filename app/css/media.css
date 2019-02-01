@@ -39,8 +39,8 @@
     height: auto;
     overflow: hidden; }
   .img-photo-man-section-about {
-    width: 200%;
-    margin-top: -40%;
+    width: 100%;
+    margin-top: -5%;
     padding: 0; }
   .text-bottom-section-about {
     margin-bottom: 0; }
@@ -68,7 +68,9 @@
 
 @media (max-width: 1024px) {
   .outdoor-section__text {
-    top: 50%; } }
+    top: 50%; }
+  #first-section {
+    height: auto; } }
 
 /*media query*/
 @media (max-width: 600px) {
@@ -120,6 +122,8 @@
   .img-photo-man-section-about {
     width: 260%;
     margin-top: -5%; }
+  #first-section {
+    height: auto; }
   .logo-client-list {
     width: 14%; }
   .whole-text-section-about {
