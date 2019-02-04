@@ -54,7 +54,8 @@
 @media (max-width: 768px) {
   .outdoor-section {
     position: static;
-    display: block; }
+    display: block;
+    height: auto; }
   .outdoor-section__text {
     width: 100%;
     padding: 15px;
