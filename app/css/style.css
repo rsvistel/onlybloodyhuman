@@ -747,10 +747,10 @@ p {
 .client-contact-list__center-arrow {
   text-align: center;
   width: 92px;
-  padding: 40px 0 30px 0; }
+  padding: 40px 0 25px 0; }
 
 .client-contact-list__center-arrow embed {
-  width: 10px; }
+  width: 15px; }
 
 .client-contact-list__quote p {
   font-family: "Montserrat", sans-serif;
