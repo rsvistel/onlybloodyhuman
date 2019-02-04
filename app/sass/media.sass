@@ -1,33 +1,55 @@
 /*media query*/
-@media (max-width: 768px)
 
+
+@media (max-width: 768px)
+  /*general*/
+  h1
+    font-size: 80px
+    line-height: 60px
+  h2
+    font-size: 42px
+    line-height: 42px
+  h3
+    font-size: 18px
+    line-height: 25px
+
+  /*general*/
+  #section-contact
+    height: auto
+
+  .whole-text-section-about, .gray-half-section-tools
+    padding: 5% 8%
+
+
+  #section-logos
+    padding: 2% 8% 0 8%
   .client-contact-list
-    padding: 50px
+    padding: 5% 8%
     width: 100%
 
   #section-contact .row
     display: block
 
-  .client-contact-list-img img
-    position: static
+
+  .client-contact-list__center-arrow
+    text-align: center
+    padding: 20px 0 15px 0
+    width: 65px
+
+  .client-contact-list__email--triangle-left
+    display: none
+
+  .client-contact-list__email a
+    padding: 50px 0
 
   .client-contact-list-img
+    background-position: bottom
+    padding: 0
+    height: 30vh
     width: 100%
-    position: static
-
-  .client-contact-list__text span
-    line-height: 48px
-    font-size: 48pt
-
-  .client-contact-list__quote::before
-    width: 50px
-
-  .client-contact-list-img
-    background: none
 
   .whole-text-section-about
     margin-left: 0
-    padding: 0 20px
     margin-top: 0
 
   #section-about .row
@@ -35,7 +57,7 @@
     align-items: initial
     flex-direction: column-reverse
 
-  #section-about
+  #section-about, #section-tools, .gray-half-section-tools, #section-logos
     height: auto
     overflow: hidden
 
@@ -53,35 +75,87 @@
   .dots-block-section-banner
     display: none
 
+  .arrow-down-section-banner
+    margin-bottom: 0
+
+  .text-under-img-section-tools, .over-line-block
+    padding: 0
+
+  .photo-half-section-tools
+    height: 50vh
+
+  .arrow-down-section-banner embed
+    width: 4%
+
+  #menu
+    height: 140vh
+
+  #first-section, #section-banner
+    overflow: initial
+
+  .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed
+    min-width: 70px
+    max-width: 90px
+
+  .logo-client-list embed
+    width: 110px
+
+  .logo-client-list embed
+    height: 50px
+
+  .logo-client-list
+    padding: 0
+
 /*media query*/
 
 /*media query*/
+
+@media (max-width: 450px)
+  .text-center-banner-section
+    height: 17vh
+
+@media (min-width: 450px) and (max-width: 600px)
+  .text-center-banner-section
+    height: 22vh
 
 
 @media (max-width: 768px)
   .outdoor-section
     position: static
     display: block
+    height: auto
+    background-color: #363531
 
   .outdoor-section__text
+    padding: 5% 8%
     width: 100%
-    padding: 15px
     position: static
     transform: none
-    text-align: center
 
   .outdoor-section__text--header h2
-    font-size: 48px
-    line-height: 48px
+    text-align: center
 
-  .outdoor-section
-    background-color: #363531
-    
+  .outdoor-section__text--header h3
+    text-align: center
+    margin: 0
+
+  .outdoor-section__text--main
+    margin: 0 0px 10px 0px
+
   .section-outdoor-professional
     position: static
 
-  .outdoor-section__item
-    text-align: center
+  .outdoor-section-block
+    padding: 10% 0 0 0
+
+  .outdoor-section-block button
+    padding: 0
+
+  .outdoor-section__image
+    padding: 3% 5% 0 5%
+
+  .section-instagram
+    height: auto
 
 @media (max-width: 1024px)
   .outdoor-section__text
@@ -98,19 +172,11 @@
   #section-logos .row
     display: block
 
-  #section-logos
-    height: auto
-    padding: 20px
-
   .logo-client-list
     margin: 10px 0
     width: 50%
     float: left
     text-align: center
-
-  .logo-client-list embed
-    width: 100px
-    height: 40px
 
   #menuToggle
     left: 0
@@ -130,6 +196,9 @@
     width: 55px
     height: 50px
 
+  .text-center-banner-section
+    height: 35vh
+
 @media (max-width: 800px)
   #menuToggle
     left: 0
@@ -147,6 +216,9 @@
 
   .img-photo-man-section-about
     width: 250%
+
+  .text-center-banner-section, .dots-block-section-banner
+    height: 43vh
 
 @media (min-width: 1000px) and (max-width: 1200px)
   .img-photo-man-section-about
