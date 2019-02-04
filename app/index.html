@@ -13,15 +13,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
 </head>
 <body>
 
     <!--First Section-->
-    <div id="first-section">
+    <div id="first-section" class="section section-fixed">
         <div id="section-banner" class="video-section">
-              <video src="img/first-section/video/reel.mp4" class="video-references" autoplay="autoplay" loop="loop"></video>
+              <video src="img/first-section/video/reel.mp4" class="video-references" autoplay loop muted></video>
               <div class="inner-content-section-banner">
                   <div class="row">
                       <div class="col-md-6 col-sm-6 col-xs-6 left-logo-banner-section">
@@ -119,7 +120,7 @@
 
 
 <!--Section About-->
-<div id="section-about">
+<div id="section-about" class="section">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-xs-12 photo-man-section-about">
@@ -205,7 +206,7 @@
 <!--Section About-->
 
 <!--Section Tools-->
-<div id="section-tools">
+<div id="section-tools" class="section section-fixed">
         <div class="row">
             <div class="col-md-6 gray-half-section-tools">
                   <div class="over-line-block">
@@ -232,7 +233,7 @@
 
 <!--Outdoor Section-->
 
-<div class="outdoor-section">
+<div class="outdoor-section section">
     <div class = "outdoor-section__text">
         <div class = "outdoor-section__text--header"><h2>outdoor</h2><h3>professional</h3></div>
         <div class = "outdoor-section__text--main"><p>Having had the good fortune to spend the last two decades exploring the far reaches of our planet, I specialise in executing productions in rough terrain, unfamiliar cultures and remote, hard to reach locations.</p>
@@ -267,7 +268,7 @@
                 </div>
             </div>
     </div>
-    <video  class="section-outdoor-professional" muted autoplay loop>
+    <video  class="section-outdoor-professional" autoplay loop muted>
         <source src="img/outdoor-section/professional.mp4" type="video/mp4">
         <source src="img/outdoor-section/professional.mp4" type="video/ogg">
     </video>
@@ -277,8 +278,8 @@
 
 <!--Outdoor Section-->
 
- <!--section instagram-->
-    <div class = "section-instagram">
+<div class="section section-fixed">
+<div class = "section-instagram">
 <div class = "section-instagram-followers">
     <img src="img/instagram/instagram.png">
     <span>49k</span>
@@ -314,12 +315,11 @@
         </div>
     </div>
 </div>
-
-
+</div>
 <!--section instagram-->
 
 <!--Contact Section-->
-
+<div class="section">
 <div id = "section-contact">
 
     <div class = "row">
@@ -360,7 +360,7 @@
     <img src = "img/footer/flag.png">
 </section>
 <!-- Footer-->
-
+</div>
 
 </body>
 </html>
