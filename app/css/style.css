@@ -563,11 +563,11 @@ p {
 .over-line-block {
   padding-right: 15%; }
 
-.img-under-line-block {
+.img-under-line-block, .text-under-img-section-tools {
   text-align: center; }
 
 .under-line-block .img-under-line-block embed {
-  width: 30%;
+  width: 45%;
   margin: 7% 0 7% -5%; }
 
 .text-under-img-section-tools {
