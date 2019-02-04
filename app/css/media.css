@@ -50,6 +50,9 @@
 /*media query*/
 /*media query*/
 @media (max-width: 768px) {
+  .outdoor-section {
+    position: static;
+    display: block; }
   .outdoor-section__text {
     width: 100%;
     padding: 15px;
@@ -58,11 +61,13 @@
         -ms-transform: none;
             transform: none;
     text-align: center; }
-  .outdoor-section__text--header h1 {
+  .outdoor-section__text--header h2 {
     font-size: 48px;
     line-height: 48px; }
   .outdoor-section {
     background-color: #363531; }
+  .section-outdoor-professional {
+    position: static; }
   .outdoor-section__item {
     text-align: center; } }
 
