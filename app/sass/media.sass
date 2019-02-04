@@ -1,33 +1,52 @@
 /*media query*/
+
+
 @media (max-width: 768px)
+  /*general*/
+  h1
+    font-size: 80px
+    line-height: 60px
+  h2
+    font-size: 42px
+    line-height: 42px
+  h3
+    font-size: 18px
+    line-height: 25px
+
+  /*general*/
+  #section-contact
+    height: auto
+
   .whole-text-section-about, .gray-half-section-tools
     padding: 5% 8%
+
 
   #section-logos
     padding: 2% 8% 0 8%
   .client-contact-list
-    padding: 50px
+    padding: 5% 8%
     width: 100%
 
   #section-contact .row
     display: block
 
-  .client-contact-list-img img
-    position: static
+
+  .client-contact-list__center-arrow
+    text-align: center
+    padding: 20px 0 15px 0
+    width: 65px
+
+  .client-contact-list__email--triangle-left
+    display: none
+
+  .client-contact-list__email a
+    padding: 50px 0
 
   .client-contact-list-img
+    background-position: bottom
+    padding: 0
+    height: 30vh
     width: 100%
-    position: static
-
-  .client-contact-list__text span
-    line-height: 48px
-    font-size: 48pt
-
-  .client-contact-list__quote::before
-    width: 50px
-
-  .client-contact-list-img
-    background: none
 
   .whole-text-section-about
     margin-left: 0
@@ -104,26 +123,39 @@
   .outdoor-section
     position: static
     display: block
+    height: auto
+    background-color: #363531
 
   .outdoor-section__text
+    padding: 5% 8%
     width: 100%
-    padding: 15px
     position: static
     transform: none
-    text-align: center
 
   .outdoor-section__text--header h2
-    font-size: 48px
-    line-height: 48px
+    text-align: center
 
-  .outdoor-section
-    background-color: #363531
-    
+  .outdoor-section__text--header h3
+    text-align: center
+    margin: 0
+
+  .outdoor-section__text--main
+    margin: 0 0px 10px 0px
+
   .section-outdoor-professional
     position: static
 
-  .outdoor-section__item
-    text-align: center
+  .outdoor-section-block
+    padding: 10% 0 0 0
+
+  .outdoor-section-block button
+    padding: 0
+
+  .outdoor-section__image
+    padding: 3% 5% 0 5%
+
+  .section-instagram
+    height: auto
 
 @media (max-width: 1024px)
   .outdoor-section__text
