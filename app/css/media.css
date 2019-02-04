@@ -45,7 +45,9 @@
   .text-bottom-section-about {
     margin-bottom: 0; }
   .now-section-about {
-    margin-top: 5%; } }
+    margin-top: 5%; }
+  .dots-block-section-banner {
+    display: none; } }
 
 /*media query*/
 /*media query*/

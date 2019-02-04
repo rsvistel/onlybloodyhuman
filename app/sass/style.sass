@@ -14,14 +14,17 @@ $secondary-font: ProximaNova
 
 h1
   font-size: 115px
+  line-height: 80px
+
 h2
   font-size: 72px
+  letter-spacing: 2px
 
 h3
   font-size: 24px
 
 
-h1, h2, h3, h6
+h1, h2, h3, h5, h6
   font-weight: 700
   font-family: $primary-font
   text-transform: uppercase
@@ -29,6 +32,7 @@ h1, h2, h3, h6
 p
   font-size: 12px
   font-family: $secondary-font
+  line-height: 22px
 
 .video-references
   position: absolute
@@ -69,13 +73,19 @@ p
   width: 99%
 
 .dots-block-section-banner
-  width: 1%
+  width: 12%
   float: left
   height: 69vh
   display: flex
   flex-direction: column
   align-items: center
   justify-content: center
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  z-index: 101
+  margin-top: 5%
 
 .dot-section-banner
   height: 7px
@@ -89,7 +99,33 @@ p
 
 .dot-section-banner:hover
   background: transparent
-  transform: scale(1.4)
+  transform: scale(1.8)
+
+.text-near-dots, .text-dots-block embed
+  opacity: 0
+
+.dot-section-banner:hover .text-near-dots, .dot-section-banner:hover .text-dots-block embed
+  opacity: 1
+
+.text-dots-block
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  width: 85%
+  cursor: pointer
+
+.text-dots-block embed
+  width: 14px
+  margin: 0 7% 0 5%
+  pointer-events: none
+
+.text-near-dots
+  color: snow
+  font-size: 8px
+  width: 40%
+  text-align: right
+  cursor: pointer
+
 .job-text-center
   font-family: $primary-font
   text-transform: uppercase
@@ -97,6 +133,7 @@ p
   margin: 2px 5px
   font-size: 9px
   letter-spacing: 4px
+
 
 .lines-job-text-center
   font-family: $primary-font
@@ -111,6 +148,7 @@ p
   margin: 2px 0
   font-size: 10px
   letter-spacing: 4px
+  line-height: 11px
 
 .surname-text-left-logo
   opacity: 0.7
@@ -239,6 +277,7 @@ p
   display: flex
   align-items: center
   justify-content: space-between
+  padding-top: 1%
 
 .logo-client-list embed
   min-width: 120px
@@ -287,15 +326,12 @@ p
 
 
 .jobs-section-about
-  font-weight: 700
-  letter-spacing: 2px
   margin-left: 3px
-  font-size: 12px
-  text-transform: uppercase
+  letter-spacing: 3px
 
 .now-section-about
-  margin-top: 25%
-  margin-bottom: 20px
+  margin-top: 30%
+  margin-bottom: 40px
 
 .tittle-section-about
   margin-top: 25px
@@ -306,7 +342,6 @@ p
 #section-about p
   text-transform: initial
   color: #4b4b56
-  line-height: 20px
   margin-bottom: 15px
 
 .aka-name-section-about
@@ -394,7 +429,6 @@ p
   margin-left: 7px
 
 .large-tittle-section-tools
-  line-height: 80px
   margin: 0
 
 .text-under-tittles-section-tools
@@ -579,7 +613,7 @@ p
 
 .client-contact-list__text h1
   display: block
-  line-height: 40px
+  margin: 0
 
 .client-contact-list__center-arrow
   text-align: center
