@@ -13,6 +13,12 @@
   /*general*/
   #section-contact {
     height: auto; }
+
+  .whole-text-section-about, .gray-half-section-tools {
+    padding: 5% 8%; }
+  #section-logos {
+    padding: 2% 8% 0 8%; }
+
   .client-contact-list {
     padding: 5% 8%;
     width: 100%; }
@@ -33,7 +39,6 @@
     width: 100%; }
   .whole-text-section-about {
     margin-left: 0;
-    padding: 0 20px;
     margin-top: 0; }
   #section-about .row {
     display: -webkit-box;
@@ -49,7 +54,7 @@
     -webkit-flex-direction: column-reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse; }
-  #section-about {
+  #section-about, #section-tools, .gray-half-section-tools, #section-logos {
     height: auto;
     overflow: hidden; }
   .img-photo-man-section-about {
@@ -61,10 +66,39 @@
   .now-section-about {
     margin-top: 5%; }
   .dots-block-section-banner {
-    display: none; } }
+    display: none; }
+  .arrow-down-section-banner {
+    margin-bottom: 0; }
+  .text-under-img-section-tools, .over-line-block {
+    padding: 0; }
+  .photo-half-section-tools {
+    height: 50vh; }
+  .arrow-down-section-banner embed {
+    width: 4%; }
+  #menu {
+    height: 140vh; }
+  #first-section, #section-banner {
+    overflow: initial; }
+  .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
+    min-width: 70px;
+    max-width: 90px; }
+  .logo-client-list embed {
+    width: 110px; }
+  .logo-client-list embed {
+    height: 50px; }
+  .logo-client-list {
+    padding: 0; } }
 
 /*media query*/
 /*media query*/
+@media (max-width: 450px) {
+  .text-center-banner-section {
+    height: 17vh; } }
+
+@media (min-width: 450px) and (max-width: 600px) {
+  .text-center-banner-section {
+    height: 22vh; } }
+
 @media (max-width: 768px) {
   .outdoor-section {
     position: static;
@@ -106,17 +140,11 @@
 @media (max-width: 600px) {
   #section-logos .row {
     display: block; }
-  #section-logos {
-    height: auto;
-    padding: 20px; }
   .logo-client-list {
     margin: 10px 0;
     width: 50%;
     float: left;
     text-align: center; }
-  .logo-client-list embed {
-    width: 100px;
-    height: 40px; }
   #menuToggle {
     left: 0; }
   .left-logo-banner-section embed {
@@ -131,7 +159,9 @@
     width: 60%; }
   .logo-client-list embed {
     width: 55px;
-    height: 50px; } }
+    height: 50px; }
+  .text-center-banner-section {
+    height: 35vh; } }
 
 @media (max-width: 800px) {
   #menuToggle {
@@ -146,7 +176,9 @@
     margin-top: 0;
     padding: 0; }
   .img-photo-man-section-about {
-    width: 250%; } }
+    width: 250%; }
+  .text-center-banner-section, .dots-block-section-banner {
+    height: 43vh; } }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .img-photo-man-section-about {
