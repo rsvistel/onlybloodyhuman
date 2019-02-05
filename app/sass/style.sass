@@ -111,8 +111,15 @@ p
 .text-near-dots, .text-dots-block embed
   opacity: 0
 
-.dot-section-banner:hover .text-near-dots, .dot-section-banner:hover .text-dots-block embed
-  opacity: 1
+//.dots-block-section-banner:hover .text-near-dots, .dots-block-section-banner:hover .text-dots-block embed
+//  opacity: 1
+
+.text-near-dots , .text-dots-block embed
+  transition: 0.3s
+
+.text-dots-block embed
+
+  transform: rotate(90deg)
 
 .text-dots-block
   display: flex
@@ -122,7 +129,7 @@ p
   cursor: pointer
 
 .text-dots-block embed
-  width: 14px
+  width: 10px
   margin: 0 7% 0 5%
   pointer-events: none
 

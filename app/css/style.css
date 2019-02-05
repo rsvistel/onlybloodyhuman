@@ -125,8 +125,15 @@ p {
 .text-near-dots, .text-dots-block embed {
   opacity: 0; }
 
-.dot-section-banner:hover .text-near-dots, .dot-section-banner:hover .text-dots-block embed {
-  opacity: 1; }
+.text-near-dots, .text-dots-block embed {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.text-dots-block embed {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
 
 .text-dots-block {
   display: -webkit-box;
@@ -145,7 +152,7 @@ p {
   cursor: pointer; }
 
 .text-dots-block embed {
-  width: 14px;
+  width: 10px;
   margin: 0 7% 0 5%;
   pointer-events: none; }
 
