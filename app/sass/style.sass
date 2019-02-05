@@ -108,18 +108,16 @@ p
   background: transparent
   transform: scale(1.8)
 
+.text-dots-block:hover .dot-section-banner
+  background: transparent
+  transform: scale(1.8)
+
+.text-dots-block.active .dot-section-banner
+  background: transparent
+  transform: scale(1.8)
+
 .text-near-dots, .text-dots-block embed
   opacity: 0
-
-//.dots-block-section-banner:hover .text-near-dots, .dots-block-section-banner:hover .text-dots-block embed
-//  opacity: 1
-
-.text-near-dots , .text-dots-block embed
-  transition: 0.3s
-
-.text-dots-block embed
-
-  transform: rotate(90deg)
 
 .text-dots-block
   display: flex
@@ -130,6 +128,7 @@ p
 
 .text-dots-block embed
   width: 10px
+  transform: rotate(90deg)
   margin: 0 7% 0 5%
   pointer-events: none
 
