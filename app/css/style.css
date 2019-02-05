@@ -122,11 +122,20 @@ p {
       -ms-transform: scale(1.8);
           transform: scale(1.8); }
 
+.text-dots-block:hover .dot-section-banner {
+  background: transparent;
+  -webkit-transform: scale(1.8);
+      -ms-transform: scale(1.8);
+          transform: scale(1.8); }
+
+.text-dots-block.active .dot-section-banner {
+  background: transparent;
+  -webkit-transform: scale(1.8);
+      -ms-transform: scale(1.8);
+          transform: scale(1.8); }
+
 .text-near-dots, .text-dots-block embed {
   opacity: 0; }
-
-.dot-section-banner:hover .text-near-dots, .dot-section-banner:hover .text-dots-block embed {
-  opacity: 1; }
 
 .text-dots-block {
   display: -webkit-box;
@@ -145,7 +154,10 @@ p {
   cursor: pointer; }
 
 .text-dots-block embed {
-  width: 14px;
+  width: 10px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
   margin: 0 7% 0 5%;
   pointer-events: none; }
 
