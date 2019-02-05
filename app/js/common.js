@@ -57,12 +57,12 @@ $(document).ready(function () {
         checkActiveDot();
         $(document).unbind('wheel');
         setTimeout(function () {
-            if (sections[active].hasClass('section-fixed')) {
-                bindScroll()
-            } else {
+            // if (sections[active].hasClass('section-fixed')) {
+            //     bindScroll()
+            // } else {
                 sections[active].css('overflow-y', 'scroll');
                 bindUnFixed()
-            }
+            // }
         }, speed);
     }
     $('.dots-block-section-banner').hover(function () {
