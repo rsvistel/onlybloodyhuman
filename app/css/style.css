@@ -37,7 +37,8 @@ p {
 
 .section {
   height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch; }
 
 ::-webkit-scrollbar {
   width: 0;
@@ -591,6 +592,9 @@ p {
 
 .text-under-img-section-tools {
   padding: 0 15%; }
+
+.icon-dji, .icon-movi {
+  display: none; }
 
 /*Outdoor section*/
 .outdoor-section {
