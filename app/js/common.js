@@ -135,7 +135,7 @@ $(document).ready(function () {
 
     $('.text-dots-block').click(function () {
         var thisElement = $(this);
-        for (var i = 0; i < dots.length-1; i++) {
+        for (var i = 0; i < dots.length; i++) {
             if (dots[i].find('h6').html() === thisElement.find('h6').html()) {
                 $('html, body').animate({scrollTop: sections[i].offset().top}, 1000);
                 active = i;
@@ -150,4 +150,26 @@ $(document).ready(function () {
         });
         dots[active].addClass('active')
     }
+
+    $('.outdoor-section-block button').click(function() {
+        $('.outdoor-section__image').removeClass('active');
+        var dataName = $(this).parent().data('name');
+        if (dataName.toLowerCase() === 'travel') {
+            animateArrow('16.66%')
+        } else if (dataName.toLowerCase() === 'outdoor') {
+            animateArrow('50%')
+        } else {
+            animateArrow('83.33%')
+        }
+
+        setTimeout(function () {
+            $('.icon-' + dataName)
+                .addClass('active');
+        },200);
+
+        function animateArrow(prop) {
+            $('#arrow-skills').animate({'left': prop}, 400);
+        }
+
+    });
 });

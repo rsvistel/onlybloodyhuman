@@ -123,13 +123,7 @@ p {
       -ms-transform: scale(1.8);
           transform: scale(1.8); }
 
-.text-dots-block:hover .dot-section-banner {
-  background: transparent;
-  -webkit-transform: scale(1.8);
-      -ms-transform: scale(1.8);
-          transform: scale(1.8); }
-
-.text-dots-block.active .dot-section-banner {
+.text-dots-block:hover .dot-section-banner, .text-dots-block.active .dot-section-banner {
   background: transparent;
   -webkit-transform: scale(1.8);
       -ms-transform: scale(1.8);
@@ -671,17 +665,40 @@ p {
   padding-bottom: 10px; }
 
 .outdoor-section__text {
-  text-align: center;
+  text-align: left;
   font-family: ProximaNova; }
 
 .outdoor-section button {
   overflow: hidden; }
 
-.outdoor-section__image {
-  padding: 3% 15% 0 15%; }
+.outdoor-section button:focus {
+  outline: 0; }
 
-.outdoor-section__text embed {
-  width: 10px; }
+.outdoor-section__image {
+  visibility: hidden;
+  padding: 3% 15% 0 15%;
+  position: absolute;
+  top: 3%;
+  z-index: 1; }
+  .outdoor-section__image:last-child {
+    position: static; }
+
+.outdoor-section__image.active {
+  visibility: visible; }
+
+.arrow-down-icon {
+  padding: 0 9%; }
+
+#arrow-skills {
+  position: relative;
+  width: 10px;
+  -webkit-transform: translateX(-5px);
+      -ms-transform: translateX(-5px);
+          transform: translateX(-5px);
+  left: 50%; }
+
+.outdoor-section__icons {
+  position: relative; }
 
 .outdoor-section__image embed {
   width: 40px;
@@ -689,7 +706,8 @@ p {
 
 .outdoor-section__image p {
   text-align: center;
-  padding-top: 10px; }
+  padding-top: 10px;
+  line-height: normal; }
 
 .outdoor-section {
   text-align: center; }
