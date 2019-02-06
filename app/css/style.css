@@ -706,7 +706,16 @@ p {
   left: 50%; }
 
 .outdoor-section__icons {
-  position: relative; }
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .outdoor-section__image embed {
   width: 40px;
