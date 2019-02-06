@@ -66,13 +66,24 @@ $(document).ready(function () {
             }
 
             function changeTool(current_icon, new_icon, current_class, new_class, new_bg) {
-                current_icon.hide();
-                new_icon.show();
-                $('.photo-half-section-tools').css('background-image', 'url("' + new_bg +'")');
+                current_icon.animate({'opacity': '0'}, 200);
+                setTimeout(function () {
+                    current_icon.hide();
+                    new_icon.show().animate({'opacity': '1'}, 200);
+                }, 200);
+                $('.photo-half-section-tools')
+                    .append('<div class="after"></div>');
+                    // .css('background-image', 'url("' + new_bg +'")');
+                $('.photo-half-section-tools .after')
+                    .css('background-image', 'url("' + new_bg +'")')
+                    .animate({'opacity': '1'}, 500);
+                setTimeout(function () {
+                    $('.photo-half-section-tools').css('background-image', 'url("' + new_bg +'")');
+                    $('.photo-half-section-tools .after').remove()
+                }, 1000);
                 $('#section-tools').removeClass(current_class).addClass(new_class);
                 $(document).unbind('wheel');
                 setTimeout(function () { bindTools() }, 1000);
-                sections[active].css('overflow-y', 'scroll');
             }
         });
     }

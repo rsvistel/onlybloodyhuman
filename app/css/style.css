@@ -527,6 +527,7 @@ p {
 
 .gray-half-section-tools {
   background: #3d3c37;
+  overflow-y: scroll;
   height: 100vh;
   padding: 3% 9%;
   text-transform: uppercase;
@@ -540,6 +541,18 @@ p {
           background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+  .photo-half-section-tools .after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
 
 .tittles-section-tools {
   font-weight: 700;
@@ -594,7 +607,8 @@ p {
   padding: 0 15%; }
 
 .icon-dji, .icon-movi {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 /*Outdoor section*/
 .outdoor-section {

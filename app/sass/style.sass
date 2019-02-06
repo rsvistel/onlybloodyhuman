@@ -422,6 +422,7 @@ p
 
 .gray-half-section-tools
   background: $primary-color
+  overflow-y: scroll
   height: 100vh
   padding: 3% 9%
   text-transform: uppercase
@@ -435,6 +436,17 @@ p
   background-size: cover
   background-repeat: no-repeat
   background-position: center
+  .after
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: 1
+    opacity: 0
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
 
 .tittles-section-tools
   font-weight: 700
@@ -479,6 +491,7 @@ p
 
 .icon-dji, .icon-movi
   display: none
+  opacity: 0
 //Section tools
 
 /*Outdoor section*/
