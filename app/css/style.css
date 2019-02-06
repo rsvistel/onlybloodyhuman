@@ -665,7 +665,7 @@ p {
   padding-bottom: 10px; }
 
 .outdoor-section__text {
-  text-align: center;
+  text-align: left;
   font-family: ProximaNova; }
 
 .outdoor-section button {
@@ -675,39 +675,30 @@ p {
   outline: 0; }
 
 .outdoor-section__image {
-  display: none;
-  padding: 3% 15% 0 15%; }
+  visibility: hidden;
+  padding: 3% 15% 0 15%;
+  position: absolute;
+  top: 3%;
+  z-index: 1; }
+  .outdoor-section__image:last-child {
+    position: static; }
 
 .outdoor-section__image.active {
-  display: block; }
-
-.outdoor-section__text embed {
-  width: 10px; }
+  visibility: visible; }
 
 .arrow-down-icon {
   padding: 0 9%; }
 
-.arrow-none {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: visibility 0.1s linear,opacity 0.3s linear;
-  -o-transition: visibility 0.1s linear,opacity 0.3s linear;
-  transition: visibility 0.1s linear,opacity 0.3s linear; }
-
-.arrow-none.active {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: -webkit-transform 0.5s linear;
-  transition: -webkit-transform 0.5s linear;
-  -o-transition: transform 0.5s linear;
-  transition: transform 0.5s linear;
-  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
-  -webkit-transform: translate(2px);
-      -ms-transform: translate(2px);
-          transform: translate(2px); }
+#arrow-skills {
+  position: relative;
+  width: 10px;
+  -webkit-transform: translateX(-5px);
+      -ms-transform: translateX(-5px);
+          transform: translateX(-5px);
+  left: 50%; }
 
 .outdoor-section__icons {
-  height: 100px; }
+  position: relative; }
 
 .outdoor-section__image embed {
   width: 40px;

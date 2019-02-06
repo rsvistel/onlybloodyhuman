@@ -151,18 +151,25 @@ $(document).ready(function () {
         dots[active].addClass('active')
     }
 
-    $('.outdoor-section-block button').each(function() {
-        $(this).on('click', function() {
+    $('.outdoor-section-block button').click(function() {
         $('.outdoor-section__image').removeClass('active');
-        $('.arrow-none').removeClass('active');
         var dataName = $(this).parent().data('name');
-        $('.arrow-' + dataName).addClass('active');
+        if (dataName.toLowerCase() === 'travel') {
+            animateArrow('16.66%')
+        } else if (dataName.toLowerCase() === 'outdoor') {
+            animateArrow('50%')
+        } else {
+            animateArrow('83.33%')
+        }
 
         setTimeout(function () {
-            $('.icon-' + dataName).addClass('active');
-        },200)
+            $('.icon-' + dataName)
+                .addClass('active');
+        },200);
 
-        })
+        function animateArrow(prop) {
+            $('#arrow-skills').animate({'left': prop}, 400);
+        }
 
     });
 });

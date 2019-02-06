@@ -539,7 +539,7 @@ p
   padding-bottom: 10px
 
 .outdoor-section__text
-  text-align: center
+  text-align: left
   font-family: $secondary-font
 
 .outdoor-section button
@@ -549,31 +549,39 @@ p
   outline: 0
 
 .outdoor-section__image
-  display: none
+  visibility: hidden
   padding: 3% 15% 0 15%
+  position: absolute
+  top: 3%
+  z-index: 1
+  &:last-child
+    position: static
 
 .outdoor-section__image.active
-  display: block
-
-.outdoor-section__text embed
-  width: 10px
+  visibility: visible
 
 .arrow-down-icon
   padding: 0 9%
 
-.arrow-none
- visibility: hidden
- opacity: 0
- transition: visibility 0.1s linear,opacity 0.3s linear
+#arrow-skills
+  position: relative
+  width: 10px
+  transform: translateX(-5px)
+  left: 50%
 
-.arrow-none.active
-  visibility: visible
-  opacity: 1
-  transition: transform 0.5s linear
-  transform: translate(2px)
+//.arrow-none
+// visibility: hidden
+// opacity: 0
+// transition: visibility 0.1s linear,opacity 0.3s linear
+//
+//.arrow-none.active
+//  visibility: visible
+//  opacity: 1
+//  transition: transform 0.5s linear
+//  transform: translate(2px)
 
 .outdoor-section__icons
-  height: 100px
+  position: relative
 
 .outdoor-section__image embed
   width: 40px
