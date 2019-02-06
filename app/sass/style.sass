@@ -55,7 +55,8 @@ p
   background: transparent
 
 //General
-
+#first-section
+  background-color: transparent
 #first-section
   height: 100vh
   overflow: hidden
@@ -74,6 +75,7 @@ p
 
 .text-center-banner-section
   height: 69vh
+  max-height: 530px
   display: flex
   justify-content: center
   align-items: center
@@ -84,6 +86,7 @@ p
   width: 12%
   float: left
   height: 69vh
+  max-height: 530px
   display: flex
   flex-direction: column
   align-items: center
@@ -257,7 +260,7 @@ p
   position: absolute
   width: 300px
   height: 100vh
-  margin: -100px 0 0 -150px
+  margin: -100px 0 0 -100px
   padding: 50px
   padding-top: 125px
   background: $primary-color
@@ -471,7 +474,10 @@ p
   text-align: center
 
 .under-line-block .img-under-line-block embed
-  width: 45%
+  min-width: 200px
+  max-width: 300px
+  min-height: 50px
+  max-height: 100px
   margin: 7% 0 7% -5%
 
 .text-under-img-section-tools
@@ -576,8 +582,12 @@ p
 /*Outdoor section*/
 
 /*section instagran*/
+.section
+  background-color: $primary-color
+
 .section-instagram
   height: 100vh
+  background: $primary-color
 
 .section-instagram-followers
   font-family: $primary-font
