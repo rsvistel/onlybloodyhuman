@@ -135,7 +135,7 @@ $(document).ready(function () {
 
     $('.text-dots-block').click(function () {
         var thisElement = $(this);
-        for (var i = 0; i < dots.length-1; i++) {
+        for (var i = 0; i < dots.length; i++) {
             if (dots[i].find('h6').html() === thisElement.find('h6').html()) {
                 $('html, body').animate({scrollTop: sections[i].offset().top}, 1000);
                 active = i;
@@ -150,4 +150,19 @@ $(document).ready(function () {
         });
         dots[active].addClass('active')
     }
+
+    $('.outdoor-section-block button').each(function() {
+        $(this).on('click', function() {
+        $('.outdoor-section__image').removeClass('active');
+        $('.arrow-none').removeClass('active');
+        var dataName = $(this).parent().data('name');
+        $('.arrow-' + dataName).addClass('active');
+
+        setTimeout(function () {
+            $('.icon-' + dataName).addClass('active');
+        },200)
+
+        })
+
+    });
 });

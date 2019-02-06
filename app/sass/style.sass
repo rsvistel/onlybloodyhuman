@@ -109,11 +109,11 @@ p
   background: transparent
   transform: scale(1.8)
 
-.text-dots-block:hover .dot-section-banner
-  background: transparent
-  transform: scale(1.8)
+//.text-dots-block:hover .dot-section-banner
+//  background: transparent
+//  transform: scale(1.8)
 
-.text-dots-block.active .dot-section-banner
+.text-dots-block:hover .dot-section-banner, .text-dots-block.active .dot-section-banner
   background: transparent
   transform: scale(1.8)
 
@@ -545,11 +545,35 @@ p
 .outdoor-section button
   overflow: hidden
 
+.outdoor-section button:focus
+  outline: 0
+
 .outdoor-section__image
+  display: none
   padding: 3% 15% 0 15%
+
+.outdoor-section__image.active
+  display: block
 
 .outdoor-section__text embed
   width: 10px
+
+.arrow-down-icon
+  padding: 0 9%
+
+.arrow-none
+ visibility: hidden
+ opacity: 0
+ transition: visibility 0.1s linear,opacity 0.3s linear
+
+.arrow-none.active
+  visibility: visible
+  opacity: 1
+  transition: transform 0.5s linear
+  transform: translate(2px)
+
+.outdoor-section__icons
+  height: 100px
 
 .outdoor-section__image embed
   width: 40px
@@ -558,6 +582,7 @@ p
 .outdoor-section__image p
   text-align: center
   padding-top: 10px
+  line-height: normal
 
 .outdoor-section
   text-align: center

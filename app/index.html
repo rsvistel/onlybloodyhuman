@@ -241,19 +241,37 @@
         <p>I live, breathe and work in the outdoors, and alongside an adventure film-making team, I can take your ideas to places others simply cannot.</div>
         <div class = "row ">
             <div class = "outdoor-section-block">
-            <div class = "col-sm-4 col-xs-4 outdoor-section__travel">
+            <div class = "col-sm-4 col-xs-4 outdoor-section__travel" data-name = "travel">
                 <button type="button"><h6>travel</h6></button>
             </div>
-            <div class = "col-sm-4 col-xs-4 outdoor-section__outdoor">
+            <div class = "col-sm-4 col-xs-4 outdoor-section__outdoor" data-name = "outdoor">
                 <button type="button"><h6>outdoor</h6></button>
             </div>
-            <div class = "col-sm-4 col-xs-4 outdoor-section__safety">
+            <div class = "col-sm-4 col-xs-4 outdoor-section__safety" data-name = "safety">
                 <button type="button"><h6>safety</h6></button>
             </div>
             </div>
             <hr>
-                <embed src="img/outdoor-section/arrow-down.svg">
-                <div class ="outdoor-section__image">
+                <div class = "arrow-down-icon">
+                    <embed src="img/outdoor-section/arrow-down.svg" class = "arrow-none arrow-travel">
+
+                </div>
+            <div class = "outdoor-section__icons">
+                <div class ="outdoor-section__image icon-travel">
+                    <div class ="col-sm-3 col-xs-3 ">
+                        <embed src="img/outdoor-section/circle1.svg"><p>Expeditions</p>
+                    </div>
+                    <div class ="col-sm-3 col-xs-3 ">
+                        <embed src="img/outdoor-section/circle2.svg"><p>Languges</p>
+                    </div>
+                    <div class ="col-sm-3 col-xs-3 ">
+                        <embed src="img/outdoor-section/circle3.svg"><p>Countries</p>
+                    </div>
+                    <div class ="col-sm-3 col-xs-3 ">
+                        <embed src="img/outdoor-section/circle4.svg"><p>W. Records</p>
+                    </div>
+                </div>
+                <div class ="outdoor-section__image icon-outdoor active">
                     <div class ="col-sm-3 col-xs-3 ">
                         <embed src="img/outdoor-section/climb.svg"><p>Alpinizm</p>
                     </div>
@@ -262,12 +280,31 @@
                     </div>
                     <div class ="col-sm-3 col-xs-3 ">
                         <embed src="img/outdoor-section/paraglide.svg"><p>Paraglide</p>
-                </div>
+                    </div>
                     <div class ="col-sm-3 col-xs-3 ">
                         <embed src="img/outdoor-section/ski.svg"><p>Ski</p>
+                    </div>
                 </div>
+                <div class ="outdoor-section__image icon-safety">
+                    <div class ="col-sm-3 col-xs-3 ">
+                        <embed src="img/outdoor-section/avalanche.svg"><p>Avalanche
+                        Rescue</p>
+                    </div>
+                    <div class ="col-sm-3 col-xs-3 ">
+                        <embed src="img/outdoor-section/desert.svg"><p>Desert
+                        Survival</p>
+                    </div>
+                    <div class ="col-sm-3 col-xs-3 ">
+                        <embed src="img/outdoor-section/jungle.svg"><p>Jungle
+                        Bushmaster</p>
+                    </div>
+                    <div class ="col-sm-3 col-xs-3 ">
+                        <embed src="img/outdoor-section/wilderness.svg"><p>Wilderness
+                        Emergency</p>
+                    </div>
                 </div>
             </div>
+        </div>
     </div>
     <video  class="section-outdoor-professional" autoplay loop muted>
         <source src="img/outdoor-section/professional.mp4" type="video/mp4">
