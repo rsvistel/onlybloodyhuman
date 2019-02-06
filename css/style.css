@@ -37,11 +37,15 @@ p {
 
 .section {
   height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch; }
 
 ::-webkit-scrollbar {
   width: 0;
   background: transparent; }
+
+#first-section {
+  background-color: transparent; }
 
 #first-section {
   height: 100vh;
@@ -60,6 +64,7 @@ p {
 
 .text-center-banner-section {
   height: 69vh;
+  max-height: 530px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,6 +84,7 @@ p {
   width: 12%;
   float: left;
   height: 69vh;
+  max-height: 530px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -122,13 +128,7 @@ p {
       -ms-transform: scale(1.8);
           transform: scale(1.8); }
 
-.text-dots-block:hover .dot-section-banner {
-  background: transparent;
-  -webkit-transform: scale(1.8);
-      -ms-transform: scale(1.8);
-          transform: scale(1.8); }
-
-.text-dots-block.active .dot-section-banner {
+.text-dots-block:hover .dot-section-banner, .text-dots-block.active .dot-section-banner {
   background: transparent;
   -webkit-transform: scale(1.8);
       -ms-transform: scale(1.8);
@@ -324,7 +324,7 @@ p {
   position: absolute;
   width: 300px;
   height: 100vh;
-  margin: -100px 0 0 -150px;
+  margin: -100px 0 0 -100px;
   padding: 50px;
   padding-top: 125px;
   background: #3d3c37;
@@ -526,6 +526,7 @@ p {
 
 .gray-half-section-tools {
   background: #3d3c37;
+  overflow-y: scroll;
   height: 100vh;
   padding: 3% 9%;
   text-transform: uppercase;
@@ -539,6 +540,18 @@ p {
           background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+  .photo-half-section-tools .after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
 
 .tittles-section-tools {
   font-weight: 700;
@@ -586,11 +599,24 @@ p {
   text-align: center; }
 
 .under-line-block .img-under-line-block embed {
-  width: 45%;
+  min-width: 220px;
+  max-width: 240px;
+  min-height: 50px;
+  max-height: 85px;
   margin: 7% 0 7% -5%; }
+
+.under-line-block .img-under-line-block.icon-movi embed {
+  min-width: 250px;
+  max-width: 300px;
+  min-height: 80px;
+  max-height: 110px; }
 
 .text-under-img-section-tools {
   padding: 0 15%; }
+
+.icon-dji, .icon-movi {
+  display: none;
+  opacity: 0; }
 
 /*Outdoor section*/
 .outdoor-section {
@@ -667,17 +693,49 @@ p {
   padding-bottom: 10px; }
 
 .outdoor-section__text {
-  text-align: center;
+  text-align: left;
   font-family: ProximaNova; }
 
 .outdoor-section button {
   overflow: hidden; }
 
-.outdoor-section__image {
-  padding: 3% 15% 0 15%; }
+.outdoor-section button:focus {
+  outline: 0; }
 
-.outdoor-section__text embed {
-  width: 10px; }
+.outdoor-section__image {
+  visibility: hidden;
+  padding: 3% 15% 0 15%;
+  position: absolute;
+  top: 3%;
+  z-index: 1; }
+  .outdoor-section__image:last-child {
+    position: static; }
+
+.outdoor-section__image.active {
+  visibility: visible; }
+
+.arrow-down-icon {
+  padding: 0 9%; }
+
+#arrow-skills {
+  position: relative;
+  width: 10px;
+  -webkit-transform: translateX(-5px);
+      -ms-transform: translateX(-5px);
+          transform: translateX(-5px);
+  left: 50%; }
+
+.outdoor-section__icons {
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .outdoor-section__image embed {
   width: 40px;
@@ -685,7 +743,8 @@ p {
 
 .outdoor-section__image p {
   text-align: center;
-  padding-top: 10px; }
+  padding-top: 10px;
+  line-height: normal; }
 
 .outdoor-section {
   text-align: center; }
@@ -704,8 +763,12 @@ p {
 
 /*Outdoor section*/
 /*section instagran*/
+.section {
+  background-color: #3d3c37; }
+
 .section-instagram {
-  height: 100vh; }
+  height: 100vh;
+  background: #3d3c37; }
 
 .section-instagram-followers {
   font-family: "Montserrat", sans-serif;
