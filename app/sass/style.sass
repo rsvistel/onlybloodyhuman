@@ -38,7 +38,7 @@ p
   position: absolute
   top: 0
   height: auto
-  width: 100%
+  min-width: 100%
   z-index: -1
 
 .video-section
@@ -183,11 +183,19 @@ p
 .arrow-down-section-banner
   display: flex
   justify-content: center
-  margin-bottom: 5%
+  margin-bottom: 10%
 
 .arrow-down-section-banner embed
   width: 1.5%
   cursor: pointer
+  animation: bottom 2s ease-in-out infinite
+
+@keyframes bottom
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(8px)
+
 
 
 
@@ -420,13 +428,15 @@ p
 
 //Section tools
 #section-tools
-  height: 100vh
   overflow: hidden
+
+#section-tools, .gray-half-section-tools, .photo-half-section-tools
+  height: 100vh
+  min-height: 750px
 
 .gray-half-section-tools
   background: $primary-color
   overflow-y: scroll
-  height: 100vh
   padding: 3% 9%
   text-transform: uppercase
   font-family: $primary-font

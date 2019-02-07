@@ -28,7 +28,7 @@ p {
   position: absolute;
   top: 0;
   height: auto;
-  width: 100%;
+  min-width: 100%;
   z-index: -1; }
 
 .video-section {
@@ -223,11 +223,29 @@ p {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 5%; }
+  margin-bottom: 10%; }
 
 .arrow-down-section-banner embed {
   width: 1.5%;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-animation: bottom 2s ease-in-out infinite;
+          animation: bottom 2s ease-in-out infinite; }
+
+@-webkit-keyframes bottom {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  to {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px); } }
+
+@keyframes bottom {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  to {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px); } }
 
 .hamburger-menu-banner-section {
   display: -webkit-box;
@@ -521,13 +539,15 @@ p {
   margin-bottom: 25px; }
 
 #section-tools {
-  height: 100vh;
   overflow: hidden; }
+
+#section-tools, .gray-half-section-tools, .photo-half-section-tools {
+  height: 100vh;
+  min-height: 750px; }
 
 .gray-half-section-tools {
   background: #3d3c37;
   overflow-y: scroll;
-  height: 100vh;
   padding: 3% 9%;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;

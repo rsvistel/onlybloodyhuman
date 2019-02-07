@@ -85,7 +85,7 @@
     width: 3%; }
   #menu {
     height: 140vh; }
-  #first-section, #section-banner {
+  #first-section {
     overflow: initial; }
   .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
     min-width: 70px;
@@ -99,7 +99,9 @@
   .job-section-about, .first-sentence-section-about, .aka-name-section-about, .jobs-section-about {
     text-align: center; }
   .job-text-center {
-    font-size: 7px; } }
+    font-size: 7px; }
+  .photo-half-section-tools {
+    height: 50vh; } }
 
 @media (max-width: 450px) {
   .text-center-banner-section {
@@ -110,13 +112,20 @@
   .text-center-banner-section {
     max-height: 95px; } }
 
-@media (min-width: 450px) and (max-width: 600px) {
+@media (min-width: 501px) and (max-width: 600px) {
   .text-center-banner-section {
-    height: 22vh; } }
+    height: 17vh; } }
 
 @media (min-width: 451px) and (max-width: 500px) {
   .text-center-banner-section {
     max-height: 170px; } }
+
+@media (max-width: 1024px) {
+  .outdoor-section__text {
+    top: 50%; }
+  #first-section {
+    height: auto;
+    overflow-x: hidden; } }
 
 @media (max-width: 768px) {
   .outdoor-section {
@@ -154,13 +163,11 @@
     float: left;
     text-align: center; }
   #section-logos .row {
-    display: block; } }
-
-@media (max-width: 1024px) {
-  .outdoor-section__text {
-    top: 50%; }
+    display: block; }
   #first-section {
-    height: auto; } }
+    min-height: auto; }
+  .video-references {
+    max-height: 150%; } }
 
 @media (max-width: 600px) {
   #menuToggle {
@@ -240,7 +247,32 @@
     width: 17%;
     margin-top: 8%; }
   .text-dots-block {
-    width: 40%; } }
+    width: 40%; }
+  #section-about .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  #section-about {
+    padding-top: 3%; }
+  .now-section-about, .tittle-section-about-margin {
+    margin-top: 10%; }
+  .whole-text-section-about {
+    width: 100%;
+    padding: 0 10%; }
+  .photo-man-section-about {
+    width: 75%;
+    padding: 0 10%; }
+  .outdoor-section {
+    height: 75vh;
+    max-height: 800px; }
+  .video-references, .section-outdoor-professional {
+    max-height: 800px; } }
 
 @media (min-width: 1200px) {
   #first-section {
@@ -251,10 +283,10 @@
   .img-photo-man-section-about {
     width: 260%;
     margin-top: -5%; }
-  #first-section, #section-contact, .client-contact-list-img {
+  #section-contact, .client-contact-list-img {
     height: auto; }
-  .text-center-banner-section, .dots-block-section-banner {
-    max-height: 420px; }
+  #section-banner {
+    height: 83.5%; }
   .logo-client-list {
     width: 14%;
     padding: 0; }
@@ -283,3 +315,15 @@
   .outdoor-section {
     min-height: 670px;
     max-height: 900px; } }
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .text-center-banner-section {
+    height: 100vh; }
+  .client-contact-list-img {
+    height: 60vh; }
+  .photo-half-section-tools {
+    height: 100vh; } }
+
+@media (max-width: 600px) and (orientation: landscape) {
+  .text-center-banner-section, .client-contact-list-img {
+    height: 65vh; } }
