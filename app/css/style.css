@@ -4,23 +4,26 @@
   src: url(../fonts/ProximaNova-Light.ttf); }
 
 h1 {
-  font-size: 115px;
+  font-size: 8vw;
   line-height: 80px; }
 
 h2 {
-  font-size: 72px;
+  font-size: 5vw;
   letter-spacing: 2px; }
 
 h3 {
-  font-size: 24px; }
+  font-size: 1.7vw; }
 
 h1, h2, h3, h5, h6 {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase; }
 
+h6 {
+  font-size: 0.8vw; }
+
 p {
-  font-size: 12px;
+  font-size: 0.8vw;
   font-family: ProximaNova;
   line-height: 22px; }
 
@@ -28,8 +31,9 @@ p {
   position: absolute;
   top: 0;
   height: auto;
-  width: 100%;
-  z-index: -1; }
+  min-width: 100%;
+  z-index: -1;
+  min-height: 84vh; }
 
 .video-section {
   position: relative;
@@ -52,19 +56,31 @@ p {
   overflow: hidden; }
 
 #section-banner {
-  height: 82%;
-  overflow: hidden; }
+  height: 80vh;
+  overflow: hidden;
+  position: relative; }
 
 .inner-content-section-banner {
-  padding: 0 4%; }
+  padding: 0 5%; }
 
 /*SECTION BANNER*/
 .left-logo-banner-section embed {
-  width: 4%; }
+  width: 3.2%; }
+
+.whole-text-left-logo {
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
+.left-logo-banner-section:hover .whole-text-left-logo {
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
 
 .text-center-banner-section {
-  height: 69vh;
-  max-height: 530px;
+  height: 71vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,10 +97,9 @@ p {
   width: 99%; }
 
 .dots-block-section-banner {
-  width: 12%;
+  width: 14%;
   float: left;
   height: 69vh;
-  max-height: 530px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,8 +125,8 @@ p {
   margin-top: 5%; }
 
 .dot-section-banner {
-  height: 7px;
-  width: 7px;
+  height: 6px;
+  width: 6px;
   background-color: white;
   border: 1px white solid;
   -webkit-border-radius: 50%;
@@ -130,9 +145,9 @@ p {
 
 .text-dots-block:hover .dot-section-banner, .text-dots-block.active .dot-section-banner {
   background: transparent;
-  -webkit-transform: scale(1.8);
-      -ms-transform: scale(1.8);
-          transform: scale(1.8); }
+  -webkit-transform: scale(1.6);
+      -ms-transform: scale(1.6);
+          transform: scale(1.6); }
 
 .text-near-dots, .text-dots-block embed {
   opacity: 0; }
@@ -163,7 +178,7 @@ p {
 
 .text-near-dots {
   color: snow;
-  font-size: 8px;
+  font-size: 0.55vw;
   width: 40%;
   text-align: right;
   cursor: pointer; }
@@ -172,9 +187,9 @@ p {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: snow;
-  margin: 2px 5px;
-  font-size: 9px;
-  letter-spacing: 4px; }
+  margin: 2px 1px;
+  letter-spacing: 4px;
+  font-size: 0.75vw; }
 
 .lines-job-text-center {
   font-family: "Montserrat", sans-serif;
@@ -187,7 +202,7 @@ p {
   text-transform: uppercase;
   color: snow;
   margin: 2px 0;
-  font-size: 10px;
+  font-size: 0.7vw;
   letter-spacing: 4px;
   line-height: 11px; }
 
@@ -223,11 +238,32 @@ p {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 5%; }
+  width: 100%;
+  bottom: 2%;
+  position: absolute;
+  z-index: 101; }
 
 .arrow-down-section-banner embed {
   width: 1.5%;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-animation: bottom 2s ease-in-out infinite;
+          animation: bottom 2s ease-in-out infinite; }
+
+@-webkit-keyframes bottom {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  to {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px); } }
+
+@keyframes bottom {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  to {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px); } }
 
 .hamburger-menu-banner-section {
   display: -webkit-box;
@@ -273,7 +309,7 @@ p {
 
 #menuToggle span {
   display: block;
-  width: 33px;
+  width: 30px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
@@ -324,10 +360,10 @@ p {
   position: absolute;
   width: 300px;
   height: 100vh;
-  margin: -100px 0 0 -100px;
+  margin: -100px 0 0 -120px;
   padding: 50px;
   padding-top: 125px;
-  background: #3d3c37;
+  background: #363531;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   -webkit-transform-origin: 0% 0%;
@@ -354,7 +390,7 @@ p {
 /*SECTION BANNER*/
 /*SECTION LOGOS*/
 #section-logos {
-  background-color: #3d3c37;
+  background-color: #363531;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -364,28 +400,17 @@ p {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  height: 140px; }
-
-#section-logos .row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 1%; }
+  height: 20vh;
+  padding: 1% 6% 0 6%; }
 
 .logo-client-list embed {
   min-width: 120px;
-  max-width: 160px;
+  max-width: 150px;
   min-height: 30px;
   max-height: 65px; }
+
+.logo-client-list {
+  width: 18%; }
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
   min-width: 100px;
@@ -398,7 +423,7 @@ p {
 /*SECTION about*/
 #section-about {
   background-image: url("../img/section-about/grain_texture.jpg");
-  color: #3d3c37;
+  color: #363531;
   font-family: "Montserrat", sans-serif;
   overflow: hidden; }
 
@@ -425,27 +450,27 @@ p {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 70px;
-  padding-left: 0; }
+  margin-right: 50px; }
 
 .img-photo-man-section-about {
-  width: 190%; }
+  width: 140%; }
 
 .whole-text-section-about {
-  margin-left: 50px;
   margin-top: -10%;
-  padding: 0 50px; }
+  padding: 0 10% 0 5%; }
 
 .first-sentence-section-about {
   letter-spacing: 1px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: 0.8vw; }
 
 .jobs-section-about {
   margin-left: 3px;
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  font-size: 1vw; }
 
 .now-section-about {
-  margin-top: 30%;
+  margin-top: 25%;
   margin-bottom: 40px; }
 
 .tittle-section-about {
@@ -461,7 +486,7 @@ p {
 
 .aka-name-section-about {
   font-style: italic;
-  font-size: 8px;
+  font-size: 0.55vw;
   font-family: ProximaNova;
   text-transform: initial;
   margin-bottom: 30px; }
@@ -514,26 +539,28 @@ p {
 
 .text-over-progress h6 {
   font-weight: 700;
-  font-size: 11px;
+  font-size: 80%;
   margin-bottom: 6px; }
 
 .progress-section {
   margin-bottom: 25px; }
 
 #section-tools {
-  height: 100vh;
   overflow: hidden; }
 
-.gray-half-section-tools {
-  background: #3d3c37;
+#section-tools, .gray-half-section-tools, .photo-half-section-tools {
   height: 100vh;
+  min-height: 800px; }
+
+.gray-half-section-tools {
+  height: 100vh;
+  background: #363531;
   padding: 3% 9%;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   color: white; }
 
 .photo-half-section-tools {
-  height: 100vh;
   background-image: url("../img/section-tools/red_camera.jpg");
   -webkit-background-size: cover;
           background-size: cover;
@@ -555,7 +582,8 @@ p {
 .tittles-section-tools {
   font-weight: 700;
   line-height: 25px;
-  margin-left: 7px; }
+  margin-left: 7px;
+  font-size: 1.25vw; }
 
 .large-tittle-section-tools {
   margin: 0; }
@@ -705,7 +733,6 @@ p {
   visibility: hidden;
   padding: 3% 15% 0 15%;
   position: absolute;
-  top: 3%;
   z-index: 1; }
   .outdoor-section__image:last-child {
     position: static; }
@@ -763,27 +790,26 @@ p {
 /*Outdoor section*/
 /*section instagran*/
 .section {
-  background-color: #3d3c37; }
+  background-color: #363531; }
 
 .section-instagram {
-  height: 100vh;
-  background: #3d3c37; }
+  min-height: 100vh;
+  background: #363531; }
 
 .section-instagram-followers {
   font-family: "Montserrat", sans-serif;
-  background-color: #3d3c37;
+  background-color: #363531;
   color: #ffffff;
   padding: 50px;
   font-weight: bold; }
 
 .section-instagram-followers span {
-  font-size: 18px;
-  vertical-align: middle; }
+  font-size: 1.5vw; }
 
 .section-instagram-followers a {
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1vw;
   display: block; }
 
 .section-instagram {
@@ -795,11 +821,20 @@ p {
 .section-instagram__photo img {
   width: 100%; }
 
+.section-instagram-followers embed {
+  width: 2%;
+  margin-right: 4px;
+  margin-bottom: -5px; }
+
 /*section instagran*/
 /*section contact*/
+.section-contact {
+  min-height: 100vh; }
+
 #section-contact {
   overflow: hidden;
-  height: 100vh; }
+  height: 100vh;
+  min-height: 800px; }
 
 #section-contact .row {
   display: -webkit-box;
@@ -816,7 +851,7 @@ p {
   font-weight: bold; }
 
 .client-contact-list__text p {
-  font-size: 16pt;
+  font-size: 1.4vw;
   margin-left: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold; }
@@ -837,7 +872,7 @@ p {
   font-family: "Montserrat", sans-serif;
   margin: 4px;
   padding: 2px;
-  font-size: 14px; }
+  font-size: 1vw; }
 
 .client-contact-list__social {
   padding-top: 15px; }
@@ -848,11 +883,11 @@ p {
 .client-contact-list__email a {
   display: inline-block;
   padding: 90px 0px;
-  color: #3d3c37;
+  color: #363531;
   text-transform: lowercase;
   letter-spacing: 1px;
   text-decoration: underline;
-  font-size: 24pt; }
+  font-size: 2.2vw; }
 
 .client-contact-list__email--triangle-left {
   height: 0;
@@ -864,18 +899,16 @@ p {
   right: 0; }
 
 .client-contact-list__social a {
-  font-size: 12px;
   font-weight: 600;
   text-decoration: underline;
-  color: #3d3c37; }
+  color: #363531; }
 
 .client-contact-list__social span {
-  font-weight: 600;
-  font-size: 12px; }
+  font-weight: 600; }
 
 .client-contact-list__social--icon {
   margin: 0;
-  font-size: 12px;
+  font-size: 0.8vw;
   text-transform: lowercase; }
 
 .client-contact-list__social--icon embed {
@@ -899,12 +932,28 @@ p {
   background-position: center;
   width: 50%;
   padding: 0;
-  height: 100vh; }
+  height: 100vh;
+  min-height: 800px; }
+
+.client-contact-list, .gray-half-section-tools {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 /*section contact*/
 /*footer*/
 .footer-section {
-  background-color: #3d3c37;
+  background-color: #363531;
   color: #ffffff;
   padding: 20px 0 40px 0;
   font-weight: 600; }
@@ -917,12 +966,11 @@ p {
   font-family: "Montserrat", sans-serif; }
 
 .footer-client p {
-  font-size: 8pt;
   padding-top: 20px;
   letter-spacing: 1px; }
 
 .footer-client span {
-  font-size: 16pt;
+  font-size: 1.45vw;
   letter-spacing: 3px;
   line-height: 6px; }
 
