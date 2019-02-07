@@ -67,6 +67,18 @@ p {
 .left-logo-banner-section embed {
   width: 3.2%; }
 
+.whole-text-left-logo {
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
+.left-logo-banner-section:hover .whole-text-left-logo {
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
 .text-center-banner-section {
   height: 71vh;
   display: -webkit-box;
@@ -721,7 +733,6 @@ p {
   visibility: hidden;
   padding: 3% 15% 0 15%;
   position: absolute;
-  top: 3%;
   z-index: 1; }
   .outdoor-section__image:last-child {
     position: static; }
