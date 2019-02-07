@@ -105,16 +105,22 @@ $(document).ready(function () {
             }
         }, speed);
     }
-    $('.dots-block-section-banner').hover(function () {
-        if (!$('#menuToggle').hasClass('opened--menu')){
-            if ($(this).hasClass('hover--menu')) {
-                $('.text-near-dots, .text-dots-block embed').animate({'opacity': '0'}, 200);
-                $('.dots-block-section-banner').removeClass('hover--menu');
-            } else {
-                $('.text-near-dots, .text-dots-block embed').animate({'opacity': '1'}, 200);
-                $('.dots-block-section-banner').addClass('hover--menu');
-            }
-        }
+    $('.text-dots-block').each(function () {
+        $(this).hover(function () {
+        if (!$('#menuToggle').hasClass('opened--menu')) {
+            var nearDots = $(this).find('.text-near-dots');
+            var DotsEmbed = $(this).find('embed');
+             if ($(this).hasClass('hover--menu')) {
+                 nearDots.animate({'opacity': '0'}, 200);
+                 DotsEmbed.animate({'opacity': '0'}, 200);
+              $('.text-dots-block').removeClass('hover--menu');
+             } else {
+                 nearDots.animate({'opacity': '1'}, 200);
+                 DotsEmbed.animate({'opacity': '1'}, 200);
+                 $('.text-dots-block').addClass('hover--menu');
+             }
+         }
+        })
     });
     $('#menuToggle').click(function () {
         if ($(this).hasClass('opened--menu')) {
@@ -152,7 +158,7 @@ $(document).ready(function () {
     }
 
     $('.outdoor-section-block button').click(function() {
-        $('.outdoor-section__image').removeClass('active');
+        $('.outdoor-section__image').animate({'opacity': '0'},200);
         var dataName = $(this).parent().data('name');
         if (dataName.toLowerCase() === 'travel') {
             animateArrow('16.66%')
@@ -162,14 +168,27 @@ $(document).ready(function () {
             animateArrow('83.33%')
         }
 
-        setTimeout(function () {
-            $('.icon-' + dataName)
-                .addClass('active');
-        },200);
+       setTimeout(function () {
+        $('.outdoor-section__image').removeClass('active');
+        $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'},200);
+
+         },200);
 
         function animateArrow(prop) {
             $('#arrow-skills').animate({'left': prop}, 400);
         }
-
     });
+
+
+    var count = 1;
+    countdown = setInterval(function(){
+        $("span.countup").html(count + "k");
+        count++;
+        if (count == 50) {
+            count = 1;
+        }
+
+    }, 300);
+
+
 });
