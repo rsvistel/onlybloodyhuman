@@ -526,7 +526,6 @@ p {
 
 .gray-half-section-tools {
   background: #3d3c37;
-  overflow-y: scroll;
   height: 100vh;
   padding: 3% 9%;
   text-transform: uppercase;
