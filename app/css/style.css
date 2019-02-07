@@ -553,8 +553,8 @@ p {
   min-height: 800px; }
 
 .gray-half-section-tools {
+  height: 100vh;
   background: #363531;
-  overflow-y: scroll;
   padding: 3% 9%;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;

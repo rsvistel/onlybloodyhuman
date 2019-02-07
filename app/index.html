@@ -14,6 +14,7 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
+
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
 </head>
@@ -326,34 +327,34 @@
     <a href="https://www.instagram.com/onlybloodyhuman/" target="_blank">@onlybloodyhuman</a>
 </div>
 
-    <div class = "row">
-        <div class ="col-sm-3 col-xs-6 section-instagram__photo">
-            <img src="img/instagram/insta1.png">
-        </div>
-        <div class ="col-sm-3 col-xs-6 section-instagram__photo">
-            <img src="img/instagram/insta2.png">
-        </div>
-        <div class ="col-sm-3 col-xs-6 section-instagram__photo">
-            <img src="img/instagram/insta3.png">
-        </div>
-        <div class ="col-sm-3 col-xs-6 section-instagram__photo">
-            <img src="img/instagram/insta4.png">
-        </div>
+    <div id="instafeed" class = "row">
+        <!--<div class ="col-sm-3 col-xs-6 section-instagram__photo">-->
+            <!--<img src="img/instagram/insta1.png">-->
+        <!--</div>-->
+        <!--<div class ="col-sm-3 col-xs-6 section-instagram__photo">-->
+            <!--<img src="img/instagram/insta2.png">-->
+        <!--</div>-->
+        <!--<div class ="col-sm-3 col-xs-6 section-instagram__photo">-->
+            <!--<img src="img/instagram/insta3.png">-->
+        <!--</div>-->
+        <!--<div class ="col-sm-3 col-xs-6 section-instagram__photo">-->
+            <!--<img src="img/instagram/insta4.png">-->
+        <!--</div>-->
     </div>
-    <div class = "row">
-        <div class ="col-sm-3 col-xs-6 section-instagram__photo">
-            <img src="img/instagram/insta5.png">
-        </div>
-        <div class ="col-sm-3 col-xs-6 section-instagram__photo">
-            <img src="img/instagram/insta6.png">
-        </div>
-        <div class ="col-sm-3 col-xs-6 section-instagram__photo">
-            <img src="img/instagram/insta7.png">
-        </div>
-        <div class ="col-sm-3 col-xs-6 section-instagram__photo">
-            <img src="img/instagram/insta8.png">
-        </div>
-    </div>
+    <!--<div class = "row">-->
+        <!--<div class ="col-sm-3 col-xs-6 section-instagram__photo">-->
+            <!--<img src="img/instagram/insta5.png">-->
+        <!--</div>-->
+        <!--<div class ="col-sm-3 col-xs-6 section-instagram__photo">-->
+            <!--<img src="img/instagram/insta6.png">-->
+        <!--</div>-->
+        <!--<div class ="col-sm-3 col-xs-6 section-instagram__photo">-->
+            <!--<img src="img/instagram/insta7.png">-->
+        <!--</div>-->
+        <!--<div class ="col-sm-3 col-xs-6 section-instagram__photo">-->
+            <!--<img src="img/instagram/insta8.png">-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
 </div>
 <!--section instagram-->
@@ -401,6 +402,33 @@
 </section>
 <!-- Footer-->
 </div>
+<!--<div id="instafeed"></div>-->
+
+
+    <script src="js/instafeed.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+            var userFeed = new Instafeed({
+                get: 'user',
+                userId: '314886036',
+                limit: 8,
+                resolution: 'standard_resolution',
+                accessToken: '314886036.845c61e.3de4192780f14774b2e7dd78cd66a334',
+                sortBy: 'most-recent',
+//                template: '<div class="col-lg-3 instaimg"><a href="{{i<div class="col-lg-3 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/><p>{{location}}</p></a></div>mage}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/><p>{{location}}</p></a></div>',
+                template: '<div class ="col-sm-3 col-xs-6 section-instagram__photo">\n' +
+                '            <img src="{{image}}">\n' +
+                '<p>{{location}}</p>' +
+                '        </div>',
+            });
+
+
+            userFeed.run();
+
+        });
+    </script>
 
 </body>
 </html>

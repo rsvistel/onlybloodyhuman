@@ -44,9 +44,9 @@ $(document).ready(function () {
             if (delta > 0) {
                 if (sections[active][0].scrollHeight - sections[active].scrollTop()-1 <= sections[active].outerHeight() && active < sections.length-1) {
                     if (sections[active].hasClass('tools-camera')) {
-                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '../img/section-tools/dji_inspire.jpg');
+                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', 'img/section-tools/dji_inspire.jpg');
                     } else if (sections[active].hasClass('tools-dji')) {
-                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '../img/section-tools/movi_pro.jpg');
+                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', 'img/section-tools/movi_pro.jpg');
                     } else if (sections[active].hasClass('tools-movi')) {
                         sections[active].css('overflow', 'hidden');
                         scroll('down');
@@ -55,9 +55,9 @@ $(document).ready(function () {
             } else {
                 if (sections[active].scrollTop() === 0 && active > 0) {
                     if (sections[active].hasClass('tools-movi')) {
-                        changeTool($('.icon-movi'), $('.icon-dji'), 'tools-movi', 'tools-dji', '../img/section-tools/dji_inspire.jpg');
+                        changeTool($('.icon-movi'), $('.icon-dji'), 'tools-movi', 'tools-dji', 'img/section-tools/dji_inspire.jpg');
                     } else if (sections[active].hasClass('tools-dji')) {
-                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '../img/section-tools/red_camera.jpg');
+                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', 'img/section-tools/red_camera.jpg');
                     } else if (sections[active].hasClass('tools-camera')) {
                         sections[active].css('overflow', 'hidden');
                         scroll('up');
@@ -79,8 +79,10 @@ $(document).ready(function () {
                     .animate({'opacity': '1'}, 500);
                 setTimeout(function () {
                     $('.photo-half-section-tools').css('background-image', 'url("' + new_bg +'")');
-                    $('.photo-half-section-tools .after').remove()
-                }, 1000);
+                    setTimeout(function () {
+                        $('.photo-half-section-tools .after').remove();
+                    },50);
+                }, 500);
                 $('#section-tools').removeClass(current_class).addClass(new_class);
                 $(document).unbind('wheel');
                 setTimeout(function () { bindTools() }, 1000);
