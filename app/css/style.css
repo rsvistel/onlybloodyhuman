@@ -849,7 +849,8 @@ p {
   background-color: #363531; }
 
 #section-instagram {
-  overflow: auto; }
+  overflow: auto;
+  overflow-x: hidden; }
 
 .section-instagram {
   background: #363531; }
