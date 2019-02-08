@@ -199,24 +199,22 @@ $(document).ready(function () {
 
     function runSubscribersCounter() {
         if ($("span.countup").isInViewport()) {
+            animateCounter()
+        } else {
+            $("#section-instagram").bind("scroll", function() {
+                if ($("span.countup").isInViewport()) {
+                    animateCounter()
+                }
+            });
+        }
+        function animateCounter() {
+            $("#section-instagram").unbind("scroll")
             var count = 1;
             countdown = setInterval(function () {
                 $("span.countup").html(count + "k");
                 count++;
                 if (count === 50) clearInterval(countdown);
             }, 30);
-        } else {
-            $("#section-instagram").bind("scroll", function() {
-                if ($("span.countup").isInViewport()) {
-                    $("#section-instagram").unbind("scroll")
-                    var count = 1;
-                    countdown = setInterval(function () {
-                        $("span.countup").html(count + "k");
-                        count++;
-                        if (count === 50) clearInterval(countdown);
-                    }, 30);
-                }
-            });
         }
     }
 
