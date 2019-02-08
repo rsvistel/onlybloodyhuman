@@ -6,40 +6,47 @@
 
 
 //VARIABLES
-$primary-color: #3d3c37
+$primary-color: #363531
 $primary-font: 'Montserrat', sans-serif
 $secondary-font: ProximaNova
 
 //General
 
 h1
-  font-size: 115px
-  line-height: 80px
+  //font-size: 115px
+  font-size: 8vw
+  line-height: 6.1vw
 
 h2
-  font-size: 72px
+  //font-size: 72px
+  font-size: 5vw
   letter-spacing: 2px
 
 h3
-  font-size: 24px
-
+  //font-size: 24px
+  font-size: 1.7vw
 
 h1, h2, h3, h5, h6
   font-weight: 700
   font-family: $primary-font
   text-transform: uppercase
 
-p
-  font-size: 12px
-  font-family: $secondary-font
-  line-height: 22px
+h6
+  font-size: 0.8vw
 
+p
+  //font-size: 12px
+  font-size: 0.8vw
+  font-family: $secondary-font
+  //line-height: 22px
+  line-height: 1.5vw
 .video-references
   position: absolute
   top: 0
   height: auto
-  width: 100%
+  min-width: 100%
   z-index: -1
+  min-height: 84vh
 
 .video-section
   position: relative
@@ -62,20 +69,60 @@ p
   overflow: hidden
 
 #section-banner
-  height: 82%
+  //height: 82%
+  height: 80vh
   overflow: hidden
+  position: relative
 
 .inner-content-section-banner
-  padding: 0 4%
+  padding: 0 0
+
 
 /*SECTION BANNER*/
+.hamburger-menu-banner-section, .left-logo-banner-section
+  opacity: 0
+
+.hamburger-menu-banner-section.animation
+  right: 0
+  animation: 1s ease-out  slideInFromRight
+  animation-fill-mode: forwards
+
+@keyframes slideInFromRight
+  from
+    transform: translateX(0px)
+    opacity: 0
+  to
+    transform: translateX(-50px)
+    opacity: 1
+
+.left-logo-banner-section.animation
+  left: 0
+  animation: 1s ease-out   slideInFromLeft
+  animation-fill-mode: forwards
+
+@keyframes slideInFromLeft
+  from
+    transform: translateX(0px)
+    opacity: 0
+  to
+    transform: translateX(50px)
+    opacity: 1
+
 
 .left-logo-banner-section embed
-  width: 4%
+  width: 3.2%
+
+.whole-text-left-logo
+  opacity: 0
+  transition: 0.2s
+
+.left-logo-banner-section:hover .whole-text-left-logo
+  opacity: 1
+  transition: 0.2s
 
 .text-center-banner-section
-  height: 69vh
-  max-height: 530px
+  height: 71vh
+  //max-height: 530px
   display: flex
   justify-content: center
   align-items: center
@@ -83,10 +130,10 @@ p
   width: 99%
 
 .dots-block-section-banner
-  width: 12%
+  width: 14%
   float: left
   height: 69vh
-  max-height: 530px
+  //max-height: 530px
   display: flex
   flex-direction: column
   align-items: center
@@ -99,8 +146,8 @@ p
   margin-top: 5%
 
 .dot-section-banner
-  height: 7px
-  width: 7px
+  height: 6px
+  width: 6px
   background-color: white
   border: 1px white solid
   border-radius: 50%
@@ -112,16 +159,13 @@ p
   background: transparent
   transform: scale(1.8)
 
-//.text-dots-block:hover .dot-section-banner
-//  background: transparent
-//  transform: scale(1.8)
-
 .text-dots-block:hover .dot-section-banner, .text-dots-block.active .dot-section-banner
   background: transparent
-  transform: scale(1.8)
+  transform: scale(1.6)
 
 .text-near-dots, .text-dots-block embed
   opacity: 0
+
 
 .text-dots-block
   display: flex
@@ -138,7 +182,8 @@ p
 
 .text-near-dots
   color: snow
-  font-size: 8px
+  //font-size: 8px
+  font-size: 0.6vw
   width: 40%
   text-align: right
   cursor: pointer
@@ -147,9 +192,10 @@ p
   font-family: $primary-font
   text-transform: uppercase
   color: snow
-  margin: 2px 5px
-  font-size: 9px
+  margin: 2px 1px
   letter-spacing: 4px
+  //font-size: 11px
+  font-size: 0.75vw
 
 
 .lines-job-text-center
@@ -163,9 +209,11 @@ p
   text-transform: uppercase
   color: snow
   margin: 2px 0
-  font-size: 10px
+  //font-size: 10px
+  font-size: 0.7vw
   letter-spacing: 4px
-  line-height: 11px
+  //line-height: 11px
+  line-height: 0.8vw
 
 .surname-text-left-logo
   opacity: 0.7
@@ -183,11 +231,23 @@ p
 .arrow-down-section-banner
   display: flex
   justify-content: center
-  margin-bottom: 5%
+  width: 100%
+  bottom: 2%
+  position: absolute
+  z-index: 101
+
 
 .arrow-down-section-banner embed
   width: 1.5%
   cursor: pointer
+  animation: bottom 2s ease-in-out infinite
+
+@keyframes bottom
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(8px)
+
 
 
 
@@ -223,9 +283,10 @@ p
   z-index: 2
   -webkit-touch-callout: none
 
+
 #menuToggle span
   display: block
-  width: 33px
+  width: 30px
   height: 4px
   margin-bottom: 5px
   position: relative
@@ -237,6 +298,8 @@ p
   background: 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
   opacity: 0.55s ease
 
+.opened--menu#menuToggle span
+  width: 33px
 
 #menuToggle span:first-child
   transform-origin: 0% 0%
@@ -260,7 +323,7 @@ p
   position: absolute
   width: 300px
   height: 100vh
-  margin: -100px 0 0 -100px
+  margin: -100px 0 0 -120px
   padding: 50px
   padding-top: 125px
   background: $primary-color
@@ -287,24 +350,32 @@ p
   background-color: $primary-color
   display: flex
   align-items: center
+  //justify-content: center
   position: relative
-  height: 140px
+  //height: 140px
+  height: 20vh
+  padding: 1% 6% 0 6%
 
-#section-logos .row
-  display: flex
-  align-items: center
-  justify-content: space-between
-  padding-top: 1%
+//#section-logos .row
+//  display: flex
+//  align-items: center
+
 
 .logo-client-list embed
-  min-width: 120px
-  max-width: 160px
-  min-height: 30px
-  max-height: 65px
+  //min-width: 120px
+  //max-width: 150px
+  //min-height: 30px
+  //max-height: 65px
+  min-width: 9vw
+  max-width: 10vw
+  min-height: 3.8vw
+  max-height: 4.3vw
+.logo-client-list
+  width: 18%
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed
-  min-width: 100px
-  max-width: 110px
+  min-width: 7.6vw
+  max-width: 8.3vw
 
 .logo-client-list
   text-align: center
@@ -316,7 +387,7 @@ p
   background-image: url("../img/section-about/grain_texture.jpg")
   color: $primary-color
   font-family: $primary-font
-  overflow: hidden
+  //overflow: hidden
 #section-about .row
   display: flex
   align-items: flex-end
@@ -325,28 +396,27 @@ p
   display: flex
   align-items: flex-end
   justify-content: center
-  margin-right: 70px
-  padding-left: 0
+  margin-right: 50px
 
 .img-photo-man-section-about
-  width: 190%
+  width: 140%
 
 .whole-text-section-about
-  margin-left: 50px
   margin-top: -10%
-  padding: 0 50px
+  padding: 0 10% 0 5%
 
 .first-sentence-section-about
   letter-spacing: 1px
   margin-bottom: 0
-
+  font-size: 0.8vw
 
 .jobs-section-about
   margin-left: 3px
   letter-spacing: 3px
+  font-size: 1vw
 
 .now-section-about
-  margin-top: 30%
+  margin-top: 25%
   margin-bottom: 40px
 
 .tittle-section-about
@@ -362,7 +432,8 @@ p
 
 .aka-name-section-about
   font-style: italic
-  font-size: 8px
+  //font-size: 8px
+  font-size: 0.55vw
   font-family: $secondary-font
   text-transform: initial
   margin-bottom: 30px
@@ -409,7 +480,8 @@ p
 
 .text-over-progress h6
   font-weight: 700
-  font-size: 11px
+  //font-size: 11px
+  font-size: 80%
   margin-bottom: 6px
 
 .progress-section
@@ -419,13 +491,15 @@ p
 //Section About
 
 //Section tools
-#section-tools
+//#section-tools
+  //overflow: hidden
+
+#section-tools, .gray-half-section-tools, .photo-half-section-tools
   height: 100vh
-  overflow: hidden
+  min-height: 800px
 
 .gray-half-section-tools
   background: $primary-color
-  overflow-y: scroll
   height: 100vh
   padding: 3% 9%
   text-transform: uppercase
@@ -434,7 +508,6 @@ p
 
 
 .photo-half-section-tools
-  height: 100vh
   background-image: url("../img/section-tools/red_camera.jpg")
   background-size: cover
   background-repeat: no-repeat
@@ -453,8 +526,10 @@ p
 
 .tittles-section-tools
   font-weight: 700
-  line-height: 25px
+  //line-height: 25px
+  line-height: 1.9vw
   margin-left: 7px
+  font-size: 1.25vw
 
 .large-tittle-section-tools
   margin: 0
@@ -576,10 +651,9 @@ p
   visibility: hidden
   padding: 3% 15% 0 15%
   position: absolute
-  top: 3%
   z-index: 1
   &:last-child
-    position: static
+   position: static
 
 .outdoor-section__image.active
   visibility: visible
@@ -639,9 +713,14 @@ p
 .section
   background-color: $primary-color
 
+#section-instagram
+  overflow: auto
+  overflow-x: hidden
+
 .section-instagram
-  height: 100vh
+  //min-height: 100vh
   background: $primary-color
+  //overflow: hidden
 
 .section-instagram-followers
   font-family: $primary-font
@@ -651,29 +730,59 @@ p
   font-weight: bold
 
 .section-instagram-followers span
-  font-size: 18px
-  vertical-align: middle
+  font-size: 1.5vw
+
 
 .section-instagram-followers a
   color: #ffffff
   text-transform: uppercase
-  font-size: 14px
+  font-size: 1vw
   display: block
 
-.section-instagram
- overflow: hidden
-
 .section-instagram__photo
+  overflow: hidden
+  width: 25.3vw
+  height: 25vw
   padding: 0px
+  position: relative
+  &:hover .hover-location
+    visibility: visible
 
 .section-instagram__photo img
   width: 100%
+  min-height: 100%
+
+
+
+
+
+.hover-location
+  visibility: hidden
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(0,0,0,0.6)
+  display: flex
+  align-items: center
+  justify-content: center
+  color: white
+
+.section-instagram-followers embed
+  width: 2%
+  margin-right: 4px
+  margin-bottom: -5px
 /*section instagran*/
 
 /*section contact*/
+.section-contact
+  min-height: 100vh
+
 #section-contact
   overflow: hidden
   height: 100vh
+  min-height: 800px
 #section-contact .row
   display: flex
 
@@ -686,7 +795,8 @@ p
   font-weight: bold
 
 .client-contact-list__text p
-  font-size: 16pt
+  //font-size: 16pt
+  font-size: 1.4vw
   margin-left: 10px
   font-family: $primary-font
   font-weight: bold
@@ -707,8 +817,8 @@ p
   font-family: $primary-font
   margin: 4px
   padding: 2px
-  font-size: 14px
-
+  //font-size: 14px
+  font-size: 1vw
 .client-contact-list__social
   padding-top: 15px
 
@@ -722,7 +832,8 @@ p
   text-transform: lowercase
   letter-spacing: 1px
   text-decoration: underline
-  font-size: 24pt
+  //font-size: 24pt
+  font-size: 2.2vw
 
 .client-contact-list__email--triangle-left
   height: 0
@@ -734,18 +845,19 @@ p
   right: 0
 
 .client-contact-list__social a
-  font-size: 12px
+  //font-size: 12px
   font-weight: 600
   text-decoration: underline
   color: $primary-color
 
 .client-contact-list__social span
   font-weight: 600
-  font-size: 12px
+  //font-size: 12px
 
 .client-contact-list__social--icon
   margin: 0
-  font-size: 12px
+  //font-size: 12px
+  font-size: 0.8vw
   text-transform: lowercase
 
 .client-contact-list__social--icon embed
@@ -769,10 +881,12 @@ p
   width: 50%
   padding: 0
   height: 100vh
+  min-height: 800px
 
-//.client-contact-list-img img
-//  width: 100%
-//  height: 100vh
+.client-contact-list, .gray-half-section-tools
+  display: flex
+  flex-direction: column
+  justify-content: center
 /*section contact*/
 
 
@@ -792,12 +906,12 @@ p
   font-family: $primary-font
 
 .footer-client p
-  font-size: 8pt
   padding-top: 20px
   letter-spacing: 1px
 
 .footer-client span
-  font-size: 16pt
+  //font-size: 16pt
+  font-size: 1.45vw
   letter-spacing: 3px
   line-height: 6px
 
