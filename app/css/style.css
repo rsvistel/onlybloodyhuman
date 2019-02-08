@@ -41,7 +41,6 @@ p {
 
 .section {
   height: 100vh;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch; }
 
 ::-webkit-scrollbar {
@@ -405,17 +404,17 @@ p {
   padding: 1% 6% 0 6%; }
 
 .logo-client-list embed {
-  min-width: 120px;
-  max-width: 150px;
-  min-height: 30px;
-  max-height: 65px; }
+  min-width: 9vw;
+  max-width: 10vw;
+  min-height: 3.8vw;
+  max-height: 4.3vw; }
 
 .logo-client-list {
   width: 18%; }
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
-  min-width: 100px;
-  max-width: 110px; }
+  min-width: 7.6vw;
+  max-width: 8.3vw; }
 
 .logo-client-list {
   text-align: center; }
