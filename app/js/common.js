@@ -109,6 +109,7 @@ $(document).ready(function () {
         }
         checkActiveDot();
         $(document).unbind('wheel');
+        $('.hamburger-menu-banner-section, .left-logo-banner-section').removeClass('animation');
         setTimeout(function () {
             sections[active].css('overflow-y', 'scroll');
             $("span.countup").html("1k");
@@ -116,6 +117,8 @@ $(document).ready(function () {
                 bindTools();
             } else if (sections[active].attr('id') === 'section-instagram') {
                 runSubscribersCounter();
+            } else if (sections[active].attr('id') === 'first-section'){
+                $('.hamburger-menu-banner-section, .left-logo-banner-section').addClass('animation');
                 bindUnFixed();
             } else {
                 bindUnFixed();
@@ -227,5 +230,6 @@ $(document).ready(function () {
 
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
+
 
 });

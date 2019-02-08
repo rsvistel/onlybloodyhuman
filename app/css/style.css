@@ -5,7 +5,7 @@
 
 h1 {
   font-size: 8vw;
-  line-height: 80px; }
+  line-height: 6.1vw; }
 
 h2 {
   font-size: 5vw;
@@ -25,7 +25,7 @@ h6 {
 p {
   font-size: 0.8vw;
   font-family: ProximaNova;
-  line-height: 22px; }
+  line-height: 1.5vw; }
 
 .video-references {
   position: absolute;
@@ -41,7 +41,6 @@ p {
 
 .section {
   height: 100vh;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch; }
 
 ::-webkit-scrollbar {
@@ -52,18 +51,73 @@ p {
   background-color: transparent; }
 
 #first-section {
-  height: 100vh;
-  overflow: hidden; }
+  height: 100vh; }
 
 #section-banner {
   height: 80vh;
-  overflow: hidden;
   position: relative; }
 
 .inner-content-section-banner {
-  padding: 0 5%; }
+  padding: 0 0; }
 
 /*SECTION BANNER*/
+.hamburger-menu-banner-section, .left-logo-banner-section {
+  opacity: 0; }
+
+.hamburger-menu-banner-section.animation {
+  right: 0;
+  -webkit-animation: 1s ease-out  slideInFromRight;
+          animation: 1s ease-out  slideInFromRight;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes slideInFromRight {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 1; } }
+
+@keyframes slideInFromRight {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 1; } }
+
+.left-logo-banner-section.animation {
+  left: 0;
+  -webkit-animation: 1s ease-out   slideInFromLeft;
+          animation: 1s ease-out   slideInFromLeft;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes slideInFromLeft {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 1; } }
+
+@keyframes slideInFromLeft {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 1; } }
+
 .left-logo-banner-section embed {
   width: 3.2%; }
 
@@ -178,7 +232,7 @@ p {
 
 .text-near-dots {
   color: snow;
-  font-size: 0.55vw;
+  font-size: 0.6vw;
   width: 40%;
   text-align: right;
   cursor: pointer; }
@@ -204,7 +258,7 @@ p {
   margin: 2px 0;
   font-size: 0.7vw;
   letter-spacing: 4px;
-  line-height: 11px; }
+  line-height: 0.8vw; }
 
 .surname-text-left-logo {
   opacity: 0.7;
@@ -328,6 +382,9 @@ p {
   background: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   opacity: 0.55s ease; }
 
+.opened--menu#menuToggle span {
+  width: 33px; }
+
 #menuToggle span:first-child {
   -webkit-transform-origin: 0% 0%;
       -ms-transform-origin: 0% 0%;
@@ -404,17 +461,17 @@ p {
   padding: 1% 6% 0 6%; }
 
 .logo-client-list embed {
-  min-width: 120px;
-  max-width: 150px;
-  min-height: 30px;
-  max-height: 65px; }
+  min-width: 9vw;
+  max-width: 10vw;
+  min-height: 3.8vw;
+  max-height: 4.3vw; }
 
 .logo-client-list {
   width: 18%; }
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
-  min-width: 100px;
-  max-width: 110px; }
+  min-width: 7.6vw;
+  max-width: 8.3vw; }
 
 .logo-client-list {
   text-align: center; }
@@ -424,8 +481,7 @@ p {
 #section-about {
   background-image: url("../img/section-about/grain_texture.jpg");
   color: #363531;
-  font-family: "Montserrat", sans-serif;
-  overflow: hidden; }
+  font-family: "Montserrat", sans-serif; }
 
 #section-about .row {
   display: -webkit-box;
@@ -545,9 +601,6 @@ p {
 .progress-section {
   margin-bottom: 25px; }
 
-#section-tools {
-  overflow: hidden; }
-
 #section-tools, .gray-half-section-tools, .photo-half-section-tools {
   height: 100vh;
   min-height: 800px; }
@@ -581,7 +634,7 @@ p {
 
 .tittles-section-tools {
   font-weight: 700;
-  line-height: 25px;
+  line-height: 1.9vw;
   margin-left: 7px;
   font-size: 1.25vw; }
 
@@ -656,8 +709,7 @@ p {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden; }
+          align-items: center; }
 
 .outdoor-section__text {
   width: 30%;
@@ -812,14 +864,40 @@ p {
   font-size: 1vw;
   display: block; }
 
-.section-instagram {
-  overflow: hidden; }
-
 .section-instagram__photo {
-  padding: 0px; }
+  overflow: hidden;
+  width: 25.3vw;
+  height: 25vw;
+  padding: 0px;
+  position: relative; }
+  .section-instagram__photo:hover .hover-location {
+    visibility: visible; }
 
 .section-instagram__photo img {
-  width: 100%; }
+  width: 100%;
+  min-height: 100%; }
+
+.hover-location {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white; }
 
 .section-instagram-followers embed {
   width: 2%;
@@ -832,7 +910,6 @@ p {
   min-height: 100vh; }
 
 #section-contact {
-  overflow: hidden;
   height: 100vh;
   min-height: 800px; }
 
