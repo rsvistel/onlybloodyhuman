@@ -76,22 +76,22 @@ p {
 
 @-webkit-keyframes slideInFromRight {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
     opacity: 0; }
   to {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    -webkit-transform: translateX(-5vw);
+            transform: translateX(-5vw);
     opacity: 1; } }
 
 @keyframes slideInFromRight {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
     opacity: 0; }
   to {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    -webkit-transform: translateX(-5vw);
+            transform: translateX(-5vw);
     opacity: 1; } }
 
 .left-logo-banner-section.animation {
@@ -103,22 +103,22 @@ p {
 
 @-webkit-keyframes slideInFromLeft {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
     opacity: 0; }
   to {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    -webkit-transform: translateX(5vw);
+            transform: translateX(5vw);
     opacity: 1; } }
 
 @keyframes slideInFromLeft {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
     opacity: 0; }
   to {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    -webkit-transform: translateX(5vw);
+            transform: translateX(5vw);
     opacity: 1; } }
 
 .left-logo-banner-section embed {
@@ -126,15 +126,40 @@ p {
 
 .whole-text-left-logo {
   opacity: 0;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s; }
+  -webkit-animation: fadeout 0.5s;
+          animation: fadeout 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes fadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 
 .left-logo-banner-section:hover .whole-text-left-logo {
-  opacity: 1;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s; }
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .text-center-banner-section {
   height: 71vh;
@@ -154,6 +179,7 @@ p {
   width: 99%; }
 
 .dots-block-section-banner {
+  padding-right: 5.8vw;
   width: 14%;
   float: left;
   height: 69vh;
@@ -166,10 +192,10 @@ p {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -218,10 +244,10 @@ p {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 85%;
   cursor: pointer; }
 
@@ -981,7 +1007,31 @@ p {
   border-bottom: 5px solid transparent;
   position: absolute;
   top: 110px;
-  right: 0; }
+  right: 0;
+  -webkit-animation: RectangleRight 2s ease-in-out infinite;
+          animation: RectangleRight 2s ease-in-out infinite; }
+
+@-webkit-keyframes RectangleRight {
+  0% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px); }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px); } }
+
+@keyframes RectangleRight {
+  0% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px); }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px); } }
 
 .client-contact-list__social a {
   font-weight: 600;
