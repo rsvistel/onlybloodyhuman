@@ -8,8 +8,9 @@ h1 {
   line-height: 6.1vw; }
 
 h2 {
-  font-size: 5vw;
-  letter-spacing: 2px; }
+  font-size: 4.2vw;
+  letter-spacing: 1px;
+  margin-left: -3px; }
 
 h3 {
   font-size: 1.7vw; }
@@ -20,12 +21,12 @@ h1, h2, h3, h5, h6 {
   text-transform: uppercase; }
 
 h6 {
-  font-size: 0.8vw; }
+  font-size: 0.9vw; }
 
 p {
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   font-family: ProximaNova;
-  line-height: 1.5vw; }
+  line-height: 1.6vw; }
 
 .video-references {
   position: absolute;
@@ -60,9 +61,6 @@ p {
   overflow: hidden;
   position: relative; }
 
-.inner-content-section-banner {
-  padding: 0 0; }
-
 /*SECTION BANNER*/
 .hamburger-menu-banner-section, .left-logo-banner-section {
   opacity: 0; }
@@ -76,22 +74,18 @@ p {
 
 @-webkit-keyframes slideInFromRight {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    right: 0;
     opacity: 0; }
   to {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    right: 5%;
     opacity: 1; } }
 
 @keyframes slideInFromRight {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    right: 0;
     opacity: 0; }
   to {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    right: 5%;
     opacity: 1; } }
 
 .left-logo-banner-section.animation {
@@ -103,26 +97,23 @@ p {
 
 @-webkit-keyframes slideInFromLeft {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    left: 0;
     opacity: 0; }
   to {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    left: 5%;
     opacity: 1; } }
 
 @keyframes slideInFromLeft {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    left: 0;
     opacity: 0; }
   to {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    left: 5%;
     opacity: 1; } }
 
 .left-logo-banner-section embed {
-  width: 3.2%; }
+  width: 3.2%;
+  max-width: 30px; }
 
 .whole-text-left-logo {
   opacity: 0;
@@ -137,7 +128,7 @@ p {
   transition: 0.2s; }
 
 .text-center-banner-section {
-  height: 71vh;
+  height: 80vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,10 +142,11 @@ p {
       -ms-flex-align: center;
           align-items: center;
   float: left;
-  width: 99%; }
+  width: 99%;
+  margin-top: -4.5%; }
 
 .dots-block-section-banner {
-  width: 14%;
+  width: 10%;
   float: left;
   height: 69vh;
   display: -webkit-box;
@@ -177,13 +169,13 @@ p {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: 5%;
   z-index: 101;
   margin-top: 5%; }
 
 .dot-section-banner {
-  height: 6px;
-  width: 6px;
+  height: 8px;
+  width: 8px;
   background-color: white;
   border: 1px white solid;
   -webkit-border-radius: 50%;
@@ -245,27 +237,29 @@ p {
   text-transform: uppercase;
   color: snow;
   margin: 2px 1px;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   font-size: 0.75vw; }
 
 .lines-job-text-center {
   font-family: "Montserrat", sans-serif;
   color: snow;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 300; }
 
 .text-left-logo {
   font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   color: snow;
   margin: 2px 0;
-  font-size: 0.7vw;
-  letter-spacing: 4px;
-  line-height: 0.8vw; }
+  font-size: 0.6vw;
+  letter-spacing: 2.5px;
+  line-height: 0.6vw; }
 
 .surname-text-left-logo {
   opacity: 0.7;
-  font-weight: 300; }
+  font-weight: 300;
+  font-family: "Helvetica Neue", sans-serif; }
 
 .left-logo-banner-section {
   display: -webkit-box;
@@ -302,6 +296,7 @@ p {
 
 .arrow-down-section-banner embed {
   width: 1.5%;
+  max-width: 30px;
   cursor: pointer;
   -webkit-animation: bottom 2s ease-in-out infinite;
           animation: bottom 2s ease-in-out infinite; }
@@ -342,7 +337,7 @@ p {
 .hamburger-menu-banner-section a:hover {
   color: tomato; }
 
-#menuToggle {
+#menuToggle, #menuToggle-mobile {
   display: block;
   position: relative;
   top: 35px;
@@ -352,7 +347,7 @@ p {
    -ms-user-select: none;
        user-select: none; }
 
-#menuToggle input {
+#menuToggle input, #menuToggle-mobile input {
   display: block;
   width: 40px;
   height: 32px;
@@ -364,7 +359,7 @@ p {
   z-index: 2;
   -webkit-touch-callout: none; }
 
-#menuToggle span {
+#menuToggle span, #menuToggle-mobile span {
   display: block;
   width: 30px;
   height: 4px;
@@ -416,11 +411,50 @@ p {
       -ms-transform: rotate(-45deg) translate(0, -1px);
           transform: rotate(-45deg) translate(0, -1px); }
 
-#menu {
+.opened--menu#menuToggle-mobile span {
+  width: 33px; }
+
+#menuToggle-mobile span:first-child {
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%; }
+
+#menuToggle-mobile span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+          transform-origin: 0% 100%; }
+
+#menuToggle-mobile input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+      -ms-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: white; }
+
+#menuToggle-mobile input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+      -ms-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2); }
+
+#menuToggle-mobile input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+      -ms-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px); }
+
+#menuToggle-mobile input:checked ~ ul {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none; }
+
+.mobile-hamburger-menu-banner-section {
+  display: none; }
+
+#menu, #menu-mobile {
   position: absolute;
   width: 300px;
   height: 100vh;
-  margin: -100px 0 0 -120px;
+  margin: -60px 0 0 -140px;
   padding: 50px;
   padding-top: 125px;
   background: #363531;
@@ -438,7 +472,10 @@ p {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
 
-#menu li {
+#menu-mobile {
+  margin: -65px 0 0 -140px; }
+
+#menu li, #menu-mobile li {
   padding: 10px 0;
   font-size: 22px; }
 
@@ -461,20 +498,20 @@ p {
           align-items: center;
   position: relative;
   height: 20vh;
-  padding: 1% 6% 0 6%; }
+  padding: 0.5% 6% 0 6%; }
 
 .logo-client-list embed {
   min-width: 9vw;
-  max-width: 10vw;
-  min-height: 3.8vw;
+  max-width: 11.5vw;
+  min-height: 4vw;
   max-height: 4.3vw; }
 
 .logo-client-list {
   width: 18%; }
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
-  min-width: 7.6vw;
-  max-width: 8.3vw; }
+  min-width: 6.6vw;
+  max-width: 7.3vw; }
 
 .logo-client-list {
   text-align: center; }
@@ -516,7 +553,7 @@ p {
 
 .whole-text-section-about {
   margin-top: -10%;
-  padding: 0 10% 0 5%; }
+  padding: 0 11% 0 6%; }
 
 .first-sentence-section-about {
   letter-spacing: 1px;
@@ -525,7 +562,7 @@ p {
 
 .jobs-section-about {
   margin-left: 3px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   font-size: 1vw; }
 
 .now-section-about {
@@ -561,7 +598,7 @@ p {
   -webkit-border-radius: 0;
           border-radius: 0;
   height: 7px;
-  width: 100%; }
+  width: 90%; }
 
 .progress-bar:after {
   content: '';
@@ -594,7 +631,8 @@ p {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  width: 90%; }
 
 .text-over-progress h6 {
   font-weight: 700;
@@ -604,14 +642,14 @@ p {
 .progress-section {
   margin-bottom: 25px; }
 
-#section-tools, .gray-half-section-tools, .photo-half-section-tools {
+#section-tools, .photo-half-section-tools {
   height: 100vh;
   min-height: 800px; }
 
 .gray-half-section-tools {
   background: #363531;
   height: 100vh;
-  padding: 3% 9%;
+  padding: 0 9%;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   color: white; }
@@ -908,8 +946,9 @@ p {
 
 .section-instagram-followers embed {
   width: 2%;
+  min-width: 16px;
   margin-right: 4px;
-  margin-bottom: -5px; }
+  margin-bottom: -3px; }
 
 /*section instagran*/
 /*section contact*/
@@ -947,7 +986,7 @@ p {
 
 .client-contact-list__center-arrow {
   text-align: center;
-  width: 92px;
+  width: 6vw;
   padding: 40px 0 25px 0; }
 
 .client-contact-list__center-arrow embed {

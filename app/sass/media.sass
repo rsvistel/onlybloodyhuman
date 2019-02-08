@@ -21,11 +21,26 @@
   h2
     font-size: 42px
     line-height: 42px
+    margin-left: 0
   h3
     font-size: 18px
     line-height: 25px
 
+  h6
+    font-size: 12px
+
   /*general*/
+
+  .hamburger-menu-banner-section
+    display: none
+
+  .mobile-hamburger-menu-banner-section
+    display: flex
+    justify-content: flex-end
+    position: absolute
+    width: 100%
+
+
   #section-contact, .section
     height: auto
 
@@ -120,15 +135,21 @@
   .job-text-center
     font-size: 7px
 
+  .section-instagram-followers a, .section-instagram-followers span
+    font-size: 11px
+
   .photo-half-section-tools
     height: 50vh
     min-height: 350px
+
+  .whole-text-left-logo
+    opacity: 1
 
 
 
 @media (max-width: 450px)
   .text-center-banner-section
-    height: 17vh
+    height: 19vh
     max-height: 140px
     margin-bottom: 10%
 
@@ -136,9 +157,9 @@
     min-height: 32vh
     max-height: 75%
 
-@media (max-width: 390px)
-  .text-center-banner-section
-     max-height: 95px
+//@media (max-width: 390px)
+//  .text-center-banner-section
+//     max-height: 95px
 
 @media (min-width: 501px) and (max-width: 600px)
   .text-center-banner-section
@@ -237,9 +258,9 @@
   .left-logo-banner-section embed
     width: 12%
 
-//@media (min-width: 1000px) and (max-width: 1100px)
-//  #section-logos
-//    padding: 1% 0 0 0
+@media (min-width: 1000px) and (max-width: 1100px)
+  #section-logos
+    padding: 0.5% 2% 0 2%
 
 @media (min-width: 769px) and (max-width: 880px)
   //#section-logos
