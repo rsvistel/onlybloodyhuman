@@ -701,9 +701,25 @@ p
 
 .section-instagram__photo
   padding: 0px
+  position: relative
+  &:hover .hover-location
+    visibility: visible
 
 .section-instagram__photo img
   width: 100%
+
+.hover-location
+  visibility: hidden
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(0,0,0,0.6)
+  display: flex
+  align-items: center
+  justify-content: center
+  color: white
 
 .section-instagram-followers embed
   width: 2%

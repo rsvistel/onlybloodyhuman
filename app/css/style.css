@@ -553,8 +553,8 @@ p {
   min-height: 800px; }
 
 .gray-half-section-tools {
-  height: 100vh;
   background: #363531;
+  height: 100vh;
   padding: 3% 9%;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -816,10 +816,35 @@ p {
   overflow: hidden; }
 
 .section-instagram__photo {
-  padding: 0px; }
+  padding: 0px;
+  position: relative; }
+  .section-instagram__photo:hover .hover-location {
+    visibility: visible; }
 
 .section-instagram__photo img {
   width: 100%; }
+
+.hover-location {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white; }
 
 .section-instagram-followers embed {
   width: 2%;
