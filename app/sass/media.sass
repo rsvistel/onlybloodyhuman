@@ -29,6 +29,9 @@
   #section-contact, .section
     height: auto
 
+  #section-contact
+    min-height: auto
+
   .gray-half-section-tools, .outdoor-section__text, .client-contact-list
     padding: 12% 10%
 
@@ -60,6 +63,7 @@
     padding: 0
     height: 30vh
     width: 100%
+    min-height: 100px
 
   .whole-text-section-about
     margin-left: 0
@@ -83,7 +87,7 @@
     margin-bottom: 0
 
   .now-section-about
-    margin-top: 5%
+    margin-top: 10%
 
   .dots-block-section-banner
     display: none
@@ -121,6 +125,7 @@
 
   .photo-half-section-tools
     height: 50vh
+    min-height: 350px
 
 @media (max-width: 450px)
   .text-center-banner-section
@@ -210,6 +215,9 @@
 
   #first-section, #section-banner
     height: auto
+
+  #section-banner
+    overflow: hidden
 
 
 @media (max-width: 600px)
@@ -443,4 +451,34 @@
 @media (max-width: 600px) and (orientation: landscape)
   .text-center-banner-section, .client-contact-list-img
     height: 65vh
+
+
+@media (max-width: 1000px)
+  p
+    font-size: 12px
+    line-height: 20px
+
+  .first-sentence-section-about, .tittle-section-about
+    font-size: 12px
+
+  .aka-name-section-about
+    font-size: 9px
+    line-height: 21px
+
+  .jobs-section-about, .tittles-section-tools
+    font-size: 15px
+    line-height: 20px
+
+  .text-left-logo
+    font-size: 10px
+    line-height: 11px
+
+  .client-contact-list__text p, .client-contact-list__quote p
+    font-size: 15px
+
+  .client-contact-list__email a
+    font-size: 20px
+
+  .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a
+    font-size: 10px
 
