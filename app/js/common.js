@@ -117,6 +117,7 @@ $(document).ready(function () {
                 bindTools();
             } else if (sections[active].attr('id') === 'section-instagram') {
                 runSubscribersCounter();
+                bindUnFixed();
             } else if (sections[active].attr('id') === 'first-section'){
                 $('.hamburger-menu-banner-section, .left-logo-banner-section').addClass('animation');
                 bindUnFixed();
