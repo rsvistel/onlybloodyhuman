@@ -74,22 +74,18 @@ p {
 
 @-webkit-keyframes slideInFromRight {
   from {
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    right: 0;
     opacity: 0; }
   to {
-    -webkit-transform: translateX(-5vw);
-            transform: translateX(-5vw);
+    right: 5%;
     opacity: 1; } }
 
 @keyframes slideInFromRight {
   from {
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    right: 0;
     opacity: 0; }
   to {
-    -webkit-transform: translateX(-5vw);
-            transform: translateX(-5vw);
+    right: 5%;
     opacity: 1; } }
 
 .left-logo-banner-section.animation {
@@ -101,22 +97,18 @@ p {
 
 @-webkit-keyframes slideInFromLeft {
   from {
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    left: 0;
     opacity: 0; }
   to {
-    -webkit-transform: translateX(5vw);
-            transform: translateX(5vw);
+    left: 5%;
     opacity: 1; } }
 
 @keyframes slideInFromLeft {
   from {
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    left: 0;
     opacity: 0; }
   to {
-    -webkit-transform: translateX(5vw);
-            transform: translateX(5vw);
+    left: 5%;
     opacity: 1; } }
 
 .left-logo-banner-section embed {
@@ -182,7 +174,7 @@ p {
   padding-right: 5.8vw;
   width: 14%;
   float: left;
-  height: 69vh;
+  height: 80vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -203,13 +195,13 @@ p {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 5%;
+  right: 0;
   z-index: 101;
   margin-top: 5%; }
 
 .dot-section-banner {
-  height: 8px;
-  width: 8px;
+  height: 0.4vw;
+  width: 0.4vw;
   background-color: white;
   border: 1px white solid;
   -webkit-border-radius: 50%;
@@ -277,7 +269,7 @@ p {
 .lines-job-text-center {
   font-family: "Montserrat", sans-serif;
   color: snow;
-  font-size: 28px;
+  font-size: 1.7vw;
   font-weight: 300; }
 
 .text-left-logo {
@@ -286,9 +278,9 @@ p {
   text-transform: uppercase;
   color: snow;
   margin: 2px 0;
-  font-size: 0.6vw;
+  font-size: 0.7vw;
   letter-spacing: 2.5px;
-  line-height: 0.6vw; }
+  line-height: 0.7vw; }
 
 .surname-text-left-logo {
   opacity: 0.7;
@@ -329,7 +321,7 @@ p {
   z-index: 101; }
 
 .arrow-down-section-banner embed {
-  width: 1.5%;
+  width: 1.2%;
   max-width: 30px;
   cursor: pointer;
   -webkit-animation: bottom 2s ease-in-out infinite;
@@ -587,7 +579,7 @@ p {
 
 .whole-text-section-about {
   margin-top: -10%;
-  padding: 0 11% 0 6%; }
+  padding: 0 12% 0 7%; }
 
 .first-sentence-section-about {
   letter-spacing: 1px;
@@ -596,7 +588,7 @@ p {
 
 .jobs-section-about {
   margin-left: 3px;
-  letter-spacing: 4px;
+  letter-spacing: 0.25vw;
   font-size: 1vw; }
 
 .now-section-about {
@@ -632,7 +624,7 @@ p {
   -webkit-border-radius: 0;
           border-radius: 0;
   height: 7px;
-  width: 90%; }
+  width: 100%; }
 
 .progress-bar:after {
   content: '';
@@ -665,8 +657,7 @@ p {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 90%; }
+          justify-content: space-between; }
 
 .text-over-progress h6 {
   font-weight: 700;
