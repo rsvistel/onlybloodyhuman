@@ -849,6 +849,28 @@ p {
   width: 40px;
   height: 35px; }
 
+.outdoor-section__image .numberCircle {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 2px white solid;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif; }
+
 .outdoor-section__image p {
   text-align: center;
   padding-top: 10px;
