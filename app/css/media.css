@@ -326,3 +326,8 @@
 @media (max-width: 600px) and (orientation: landscape) {
   .text-center-banner-section, .client-contact-list-img {
     height: 65vh; } }
+
+@media (min-width: 2500px) {
+  .section-instagram__photo {
+    width: 25.2vw;
+    height: 25vw; } }
