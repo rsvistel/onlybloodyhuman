@@ -29,6 +29,9 @@
   #section-contact, .section
     height: auto
 
+  #section-contact
+    min-height: auto
+
   .gray-half-section-tools, .outdoor-section__text, .client-contact-list
     padding: 12% 10%
 
@@ -60,6 +63,7 @@
     padding: 0
     height: 30vh
     width: 100%
+    min-height: 100px
 
   .whole-text-section-about
     margin-left: 0
@@ -83,7 +87,7 @@
     margin-bottom: 0
 
   .now-section-about
-    margin-top: 5%
+    margin-top: 10%
 
   .dots-block-section-banner
     display: none
@@ -105,9 +109,6 @@
     max-width: 90px
 
   .logo-client-list embed
-    width: 110px
-
-  .logo-client-list embed
     height: 50px
 
   .logo-client-list
@@ -121,6 +122,9 @@
 
   .photo-half-section-tools
     height: 50vh
+    min-height: 350px
+
+
 
 @media (max-width: 450px)
   .text-center-banner-section
@@ -211,6 +215,20 @@
   #first-section, #section-banner
     height: auto
 
+  #section-banner
+    overflow: hidden
+  //
+  //.logo-client-list embed
+  //  min-width: 10vw
+  //  max-width: 11vw
+  //  min-height: 8.8vw
+  //  max-height: 9vw
+  .logo-client-list embed
+    min-width: 80px
+    max-width: 90px
+    min-height: 30px
+    max-height: 45px
+
 
 @media (max-width: 600px)
   #menuToggle
@@ -219,13 +237,13 @@
   .left-logo-banner-section embed
     width: 12%
 
-@media (min-width: 1000px) and (max-width: 1100px)
-  #section-logos
-    padding: 1% 0 0 0
+//@media (min-width: 1000px) and (max-width: 1100px)
+//  #section-logos
+//    padding: 1% 0 0 0
 
 @media (min-width: 769px) and (max-width: 880px)
-  #section-logos
-    padding: 1% 0 0 0
+  //#section-logos
+  //  padding: 1% 0 0 0
 
   .logo-client-list
     padding: 0
@@ -245,10 +263,6 @@
     width: initial
 
 @media (min-width: 601px) and (max-width: 767px)
-  .logo-client-list embed
-    width: 55px
-    height: 50px
-
   .text-center-banner-section
     height: 35vh
     max-height: 255px
@@ -284,8 +298,8 @@
   #section-contact, .gray-half-section-tools
     height: auto
 
-  .logo-client-list embed
-    width: 90px
+  //.logo-client-list embed
+  //  width: 90px
 
   .text-center-banner-section, .dots-block-section-banner
     height: 345px
@@ -444,7 +458,37 @@
   .text-center-banner-section, .client-contact-list-img
     height: 65vh
 
+@media (max-width: 1000px)
+  p
+    font-size: 12px
+    line-height: 20px
+
+  .first-sentence-section-about, .tittle-section-about
+    font-size: 12px
+
+  .aka-name-section-about
+    font-size: 9px
+    line-height: 21px
+
+  .jobs-section-about, .tittles-section-tools
+    font-size: 15px
+    line-height: 20px
+
+  .text-left-logo
+    font-size: 10px
+    line-height: 11px
+
+  .client-contact-list__text p, .client-contact-list__quote p
+    font-size: 15px
+
+  .client-contact-list__email a
+    font-size: 20px
+
+  .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a
+    font-size: 10px
+
 @media (min-width: 2500px)
   .section-instagram__photo
     width: 25.2vw
     height: 25vw
+

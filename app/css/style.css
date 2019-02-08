@@ -5,7 +5,7 @@
 
 h1 {
   font-size: 8vw;
-  line-height: 80px; }
+  line-height: 6.1vw; }
 
 h2 {
   font-size: 5vw;
@@ -25,7 +25,7 @@ h6 {
 p {
   font-size: 0.8vw;
   font-family: ProximaNova;
-  line-height: 22px; }
+  line-height: 1.5vw; }
 
 .video-references {
   position: absolute;
@@ -41,7 +41,6 @@ p {
 
 .section {
   height: 100vh;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch; }
 
 ::-webkit-scrollbar {
@@ -52,12 +51,10 @@ p {
   background-color: transparent; }
 
 #first-section {
-  height: 100vh;
-  overflow: hidden; }
+  height: 100vh; }
 
 #section-banner {
   height: 80vh;
-  overflow: hidden;
   position: relative; }
 
 .inner-content-section-banner {
@@ -235,7 +232,7 @@ p {
 
 .text-near-dots {
   color: snow;
-  font-size: 0.55vw;
+  font-size: 0.6vw;
   width: 40%;
   text-align: right;
   cursor: pointer; }
@@ -261,7 +258,7 @@ p {
   margin: 2px 0;
   font-size: 0.7vw;
   letter-spacing: 4px;
-  line-height: 11px; }
+  line-height: 0.8vw; }
 
 .surname-text-left-logo {
   opacity: 0.7;
@@ -385,6 +382,9 @@ p {
   background: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   opacity: 0.55s ease; }
 
+.opened--menu#menuToggle span {
+  width: 33px; }
+
 #menuToggle span:first-child {
   -webkit-transform-origin: 0% 0%;
       -ms-transform-origin: 0% 0%;
@@ -461,17 +461,17 @@ p {
   padding: 1% 6% 0 6%; }
 
 .logo-client-list embed {
-  min-width: 120px;
-  max-width: 150px;
-  min-height: 30px;
-  max-height: 65px; }
+  min-width: 9vw;
+  max-width: 10vw;
+  min-height: 3.8vw;
+  max-height: 4.3vw; }
 
 .logo-client-list {
   width: 18%; }
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
-  min-width: 100px;
-  max-width: 110px; }
+  min-width: 7.6vw;
+  max-width: 8.3vw; }
 
 .logo-client-list {
   text-align: center; }
@@ -481,8 +481,7 @@ p {
 #section-about {
   background-image: url("../img/section-about/grain_texture.jpg");
   color: #363531;
-  font-family: "Montserrat", sans-serif;
-  overflow: hidden; }
+  font-family: "Montserrat", sans-serif; }
 
 #section-about .row {
   display: -webkit-box;
@@ -602,9 +601,6 @@ p {
 .progress-section {
   margin-bottom: 25px; }
 
-#section-tools {
-  overflow: hidden; }
-
 #section-tools, .gray-half-section-tools, .photo-half-section-tools {
   height: 100vh;
   min-height: 800px; }
@@ -638,7 +634,7 @@ p {
 
 .tittles-section-tools {
   font-weight: 700;
-  line-height: 25px;
+  line-height: 1.9vw;
   margin-left: 7px;
   font-size: 1.25vw; }
 
@@ -713,8 +709,7 @@ p {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden; }
+          align-items: center; }
 
 .outdoor-section__text {
   width: 30%;
@@ -915,7 +910,6 @@ p {
   min-height: 100vh; }
 
 #section-contact {
-  overflow: hidden;
   height: 100vh;
   min-height: 800px; }
 
