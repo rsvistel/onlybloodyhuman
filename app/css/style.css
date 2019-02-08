@@ -812,17 +812,18 @@ p {
   font-size: 1vw;
   display: block; }
 
-.section-instagram {
-  overflow: hidden; }
-
 .section-instagram__photo {
+  overflow: hidden;
+  width: 25.3vw;
+  height: 25vw;
   padding: 0px;
   position: relative; }
   .section-instagram__photo:hover .hover-location {
     visibility: visible; }
 
 .section-instagram__photo img {
-  width: 100%; }
+  width: 100%;
+  min-height: 100%; }
 
 .hover-location {
   visibility: hidden;
