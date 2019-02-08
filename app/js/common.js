@@ -132,12 +132,12 @@ $(document).ready(function () {
             var nearDots = $(this).find('.text-near-dots');
             var DotsEmbed = $(this).find('embed');
              if ($(this).hasClass('hover--menu')) {
-                 nearDots.animate({'opacity': '0'}, 200);
-                 DotsEmbed.animate({'opacity': '0'}, 200);
+                 nearDots.animate({'opacity': '0'}, 400);
+                 DotsEmbed.animate({'opacity': '0'}, 400);
               $('.text-dots-block').removeClass('hover--menu');
              } else {
-                 nearDots.animate({'opacity': '1'}, 200);
-                 DotsEmbed.animate({'opacity': '1'}, 200);
+                 nearDots.animate({'opacity': '1'}, 400);
+                 DotsEmbed.animate({'opacity': '1'}, 400);
                  $('.text-dots-block').addClass('hover--menu');
              }
          }

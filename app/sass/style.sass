@@ -89,10 +89,10 @@ p
 
 @keyframes slideInFromRight
   from
-    transform: translateX(0px)
+    transform: translateX(0vw)
     opacity: 0
   to
-    transform: translateX(-50px)
+    transform: translateX(-5vw)
     opacity: 1
 
 .left-logo-banner-section.animation
@@ -102,10 +102,10 @@ p
 
 @keyframes slideInFromLeft
   from
-    transform: translateX(0px)
+    transform: translateX(0vw)
     opacity: 0
   to
-    transform: translateX(50px)
+    transform: translateX(5vw)
     opacity: 1
 
 
@@ -114,12 +114,24 @@ p
 
 .whole-text-left-logo
   opacity: 0
-  transition: 0.2s
+  animation: fadeout 0.5s
+  animation-fill-mode: forwards
+
+@keyframes fadeout
+  from
+    opacity: 1
+  to
+    opacity: 0
 
 .left-logo-banner-section:hover .whole-text-left-logo
-  opacity: 1
-  transition: 0.2s
+  animation: fadein 1s
+  animation-fill-mode: forwards
 
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
 .text-center-banner-section
   height: 71vh
   //max-height: 530px
@@ -130,13 +142,14 @@ p
   width: 99%
 
 .dots-block-section-banner
+  padding-right: 5.8vw
   width: 14%
   float: left
   height: 69vh
   //max-height: 530px
   display: flex
   flex-direction: column
-  align-items: center
+  align-items: flex-end
   justify-content: center
   position: absolute
   top: 0
@@ -170,7 +183,7 @@ p
 .text-dots-block
   display: flex
   align-items: center
-  justify-content: flex-start
+  justify-content: flex-end
   width: 85%
   cursor: pointer
 
@@ -752,10 +765,6 @@ p
   width: 100%
   min-height: 100%
 
-
-
-
-
 .hover-location
   visibility: hidden
   position: absolute
@@ -843,6 +852,18 @@ p
   position: absolute
   top: 110px
   right: 0
+  animation: RectangleRight 2s ease-in-out infinite
+
+
+@keyframes RectangleRight
+  0%
+    transform: translateX(8px)
+
+  50%
+    transform: translateX(0px)
+
+  100%
+    transform: translateX(8px)
 
 .client-contact-list__social a
   //font-size: 12px
