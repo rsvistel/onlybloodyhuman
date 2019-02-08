@@ -111,8 +111,12 @@ $(document).ready(function () {
         $(document).unbind('wheel');
         setTimeout(function () {
             sections[active].css('overflow-y', 'scroll');
+            $("span.countup").html("1k");
             if (sections[active].attr('id') === 'section-tools') {
                 bindTools();
+            } else if (sections[active].attr('id') === 'section-instagram') {
+                runSubscribersCounter();
+                bindUnFixed();
             } else {
                 bindUnFixed();
             }
@@ -193,15 +197,37 @@ $(document).ready(function () {
     });
 
 
-    var count = 1;
-    countdown = setInterval(function(){
-        $("span.countup").html(count + "k");
-        count++;
-        if (count == 50) {
-            count = 1;
+    function runSubscribersCounter() {
+        if ($("span.countup").isInViewport()) {
+            var count = 1;
+            countdown = setInterval(function () {
+                $("span.countup").html(count + "k");
+                count++;
+                if (count === 50) clearInterval(countdown);
+            }, 30);
+        } else {
+            $("#section-instagram").bind("scroll", function() {
+                if ($("span.countup").isInViewport()) {
+                    $("#section-instagram").unbind("scroll")
+                    var count = 1;
+                    countdown = setInterval(function () {
+                        $("span.countup").html(count + "k");
+                        count++;
+                        if (count === 50) clearInterval(countdown);
+                    }, 30);
+                }
+            });
         }
+    }
 
-    }, 300);
+    $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
 
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
 
 });
