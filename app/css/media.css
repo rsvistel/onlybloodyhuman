@@ -144,7 +144,14 @@
 
 @media (max-width: 1024px) {
   .outdoor-section__text {
-    top: 50%; } }
+    top: 50%; }
+  .text-near-dots {
+    font-size: 0.75vw;
+    width: 75%; }
+  .text-dots-block {
+    width: 100%; }
+  .dot-section-banner {
+    margin: 8px 0; } }
 
 @media (max-width: 768px) {
   .outdoor-section {
@@ -267,8 +274,6 @@
   .whole-text-section-about {
     margin-top: 0;
     padding: 0; }
-  .dots-block-section-banner {
-    margin-top: 5%; }
   #section-about .row {
     display: -webkit-box;
     display: -webkit-flex;

@@ -208,7 +208,7 @@ p {
   border: 1px white solid;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  margin: 7px 0;
+  margin: 0.7vw 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -258,7 +258,8 @@ p {
   font-size: 0.6vw;
   width: 60%;
   text-align: right;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 0; }
 
 .job-text-center {
   font-family: "Montserrat", sans-serif;
@@ -480,7 +481,7 @@ p {
 .mobile-hamburger-menu-banner-section {
   display: none; }
 
-#menu, #menu-mobile {
+#menu {
   position: absolute;
   width: 30vw;
   height: 125vh;
@@ -503,7 +504,26 @@ p {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
 
 #menu-mobile {
-  margin: -65px 0 0 -140px; }
+  position: absolute;
+  width: 300px;
+  height: 125vh;
+  margin: -65px 0 0 -140px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #363531;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
 
 #menu li, #menu-mobile li {
   padding: 10px 0;
@@ -1181,7 +1201,8 @@ p {
 
 .footer-client p {
   padding-top: 20px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  font-size: 0.77vw; }
 
 .footer-client span {
   font-size: 1.45vw;
