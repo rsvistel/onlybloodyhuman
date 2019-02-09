@@ -121,7 +121,9 @@
     height: 50vh;
     min-height: 350px; }
   .whole-text-left-logo {
-    opacity: 1; } }
+    opacity: 1; }
+  .photo-man-section-about {
+    margin-left: 0; } }
 
 @media (max-width: 450px) {
   .text-center-banner-section {
@@ -265,8 +267,6 @@
   .whole-text-section-about {
     margin-top: 0;
     padding: 0; }
-  .text-near-dots {
-    width: 60%; }
   .dots-block-section-banner {
     margin-top: 5%; }
   #section-about .row {
@@ -314,9 +314,7 @@
     min-width: 90px;
     max-width: 100px; }
   #section-tools, .section-instagram {
-    height: auto; }
-  .text-near-dots {
-    width: 50%; } }
+    height: auto; } }
 
 @media (min-width: 1200px) and (max-width: 1600px) {
   .outdoor-section {
@@ -364,9 +362,4 @@
 
 @media (min-width: 2000px) {
   .text-left-logo {
-    font-size: 0.6vw; }
-  #menu, #menu-mobile {
-    position: absolute;
-    width: 500px;
-    height: 115vh;
-    margin: -75px 0 0 -180px; } }
+    font-size: 0.6vw; } }

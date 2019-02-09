@@ -482,9 +482,9 @@ p {
 
 #menu, #menu-mobile {
   position: absolute;
-  width: 300px;
-  height: 115vh;
-  margin: -75px 0 0 -140px;
+  width: 30vw;
+  height: 125vh;
+  margin: -73px 0 0 -8vw;
   padding: 50px;
   padding-top: 125px;
   background: #363531;
