@@ -726,8 +726,7 @@ p {
           align-items: center; }
 
 #section-tools, .photo-half-section-tools {
-  height: 100vh;
-  min-height: 800px; }
+  height: 100vh; }
 
 .gray-half-section-tools {
   background: #363531;
