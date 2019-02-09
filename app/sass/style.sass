@@ -47,7 +47,6 @@ p
   height: auto
   min-width: 100%
   z-index: -1
-  min-height: 84vh
 
 .video-section
   position: relative
@@ -76,6 +75,11 @@ p
   position: relative
 
 /*SECTION BANNER*/
+
+.video-in-section-banner
+  display: flex
+  justify-content: center
+
 .hamburger-menu-banner-section, .left-logo-banner-section
   opacity: 0
 
@@ -111,8 +115,8 @@ p
 
 
 .left-logo-banner-section embed
-  width: 3.2%
-  max-width: 30px
+  width: 3.2vw
+  max-width: 25px
 
 .whole-text-left-logo
   opacity: 0
@@ -256,7 +260,7 @@ p
   width: 100%
   bottom: 2%
   position: absolute
-  z-index: 101
+  z-index: 5
 
 
 .arrow-down-section-banner embed
@@ -571,6 +575,9 @@ p
 //Section tools
 //#section-tools
   //overflow: hidden
+#section-tools .row
+  display: flex
+  align-items: center
 
 #section-tools, .photo-half-section-tools
   height: 100vh
@@ -665,6 +672,7 @@ p
   height: 100vh
   display: flex
   align-items: center
+  justify-content: center
   overflow: hidden
 
 .outdoor-section__text

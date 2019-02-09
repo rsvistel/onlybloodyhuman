@@ -61,6 +61,8 @@
   #section-contact .row
     display: block
 
+  #section-tools .row
+    display: block
   .client-contact-list__center-arrow
     text-align: center
     padding: 20px 0 15px 0
@@ -148,30 +150,36 @@
     margin-left: 0
 
   .footer-client p
-    font-size: 
+    font-size: 11px
+
+  .footer-client span
+    font-size: 14px
 
 
 @media (max-width: 450px)
   .text-center-banner-section
-    height: 19vh
+    height: 18vh
     max-height: 140px
     margin-bottom: 10%
 
   .video-references
-    min-height: 32vh
     max-height: 75%
-
+    min-width: 100%
+    max-width: 130%
+@media (max-width: 450px) and (max-height: 737px)
+  .video-references
+    width: 100%
 //@media (max-width: 390px)
 //  .text-center-banner-section
 //     max-height: 95px
 
 @media (min-width: 501px) and (max-width: 600px)
   .text-center-banner-section
-    height: 47vh
+    height: 35vh
 
 @media (min-width: 451px) and (max-width: 500px)
   .text-center-banner-section
-    max-height: 270px
+    max-height: 200px
 
 @media (max-width: 1024px)
   .outdoor-section__text
@@ -246,7 +254,7 @@
     min-height: auto
 
   .video-references
-    max-height: 150%
+    max-height: 160%
 
   #first-section, #section-banner
     height: auto
@@ -266,13 +274,24 @@
     max-height: 45px
 
 
+
+
 @media (max-width: 600px)
   #menuToggle
     left: 0
 
   .left-logo-banner-section embed
-    width: 12%
+    width: 5vw
+    max-width: 20px
 
+  .section-instagram__photo
+    width: 26.3vw
+    height: 26.3vw
+
+//@media (min-width: 601px) and (max-width: 1000px)
+//  .section-instagram__photo
+//    width: 26.5vw
+//    height: 26vw
 @media (min-width: 1000px) and (max-width: 1100px)
   #section-logos
     padding: 0.5% 2% 0 2%
@@ -312,7 +331,7 @@
   #menuToggle
     left: 0
 
-@media (min-width: 769px) and (max-width: 1000px)
+@media (min-width: 769px) and (max-width: 999px)
   //.logo-client-list
   //  width: 14%
   //  padding: 0
@@ -323,8 +342,11 @@
   .img-photo-man-section-about
     width: 100%
 
+
   .photo-man-section-about
     justify-content: center
+    width: 100%
+    margin-left: 0
 
   //.whole-text-section-about
   //  margin-left: 60px
