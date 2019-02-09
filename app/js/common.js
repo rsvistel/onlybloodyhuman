@@ -190,14 +190,18 @@ $(document).ready(function () {
         }
         if ($(this).attr('data-clicked') === 'no'){
             $(this).attr('data-clicked', 'yes');
+
             setTimeout(function () {
                 $('.outdoor-section__image').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'},200);
 
             },200);
 
-        }else { $('.outdoor-section__image').removeClass('active');
-            $('.icon-' + dataName).addClass('active').animate({'opacity': '1'},1000);}
+        }else if ($('.icon-' + dataName).hasClass('active')&& ($(this).attr('data-clicked') === 'yes')){
+        }
+        $('.outdoor-section__image').removeClass('active');
+        $('.icon-' + dataName).addClass('active').animate({'opacity': '1'},200);
+
 
 
 
