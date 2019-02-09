@@ -815,6 +815,20 @@ p {
   opacity: 0; }
 
 /*Outdoor section*/
+.video-section-cover {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
 .outdoor-section {
   position: relative;
   height: 100vh;
