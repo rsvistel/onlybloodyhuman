@@ -709,7 +709,7 @@ p {
 
 .text-over-progress h6 {
   font-weight: 700;
-  font-size: 80%;
+  font-size: 0.75vw;
   margin-bottom: 6px; }
 
 .progress-section {
@@ -803,17 +803,10 @@ p {
   text-align: center; }
 
 .under-line-block .img-under-line-block embed {
-  min-width: 220px;
-  max-width: 240px;
-  min-height: 50px;
-  max-height: 85px;
+  min-width: 10.5vw;
+  max-width: 12vw;
+  height: 7vw;
   margin: 7% 0 7% -5%; }
-
-.under-line-block .img-under-line-block.icon-movi embed {
-  min-width: 250px;
-  max-width: 300px;
-  min-height: 80px;
-  max-height: 110px; }
 
 .text-under-img-section-tools {
   padding: 0 15%; }
@@ -1164,7 +1157,7 @@ p {
   font-weight: 600; }
 
 .client-contact-list__social--icon {
-  margin: 0;
+  margin: 0 0 0.5vw 0;
   font-size: 0.8vw;
   text-transform: lowercase; }
 
@@ -1228,7 +1221,7 @@ p {
   font-size: 0.77vw; }
 
 .footer-client span {
-  font-size: 1.45vw;
+  font-size: 1.4vw;
   letter-spacing: 3px;
   line-height: 6px; }
 

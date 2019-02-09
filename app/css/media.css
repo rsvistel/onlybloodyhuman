@@ -384,4 +384,6 @@
 
 @media (min-width: 2000px) {
   .text-left-logo {
-    font-size: 0.6vw; } }
+    font-size: 0.6vw; }
+  .img-photo-man-section-about {
+    width: 145%; } }
