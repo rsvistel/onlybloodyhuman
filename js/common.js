@@ -132,12 +132,12 @@ $(document).ready(function () {
             var nearDots = $(this).find('.text-near-dots');
             var DotsEmbed = $(this).find('embed');
              if ($(this).hasClass('hover--menu')) {
-                 nearDots.animate({'opacity': '0'}, 200);
-                 DotsEmbed.animate({'opacity': '0'}, 200);
+                 nearDots.animate({'opacity': '0'}, 400);
+                 DotsEmbed.animate({'opacity': '0'}, 400);
               $('.text-dots-block').removeClass('hover--menu');
              } else {
-                 nearDots.animate({'opacity': '1'}, 200);
-                 DotsEmbed.animate({'opacity': '1'}, 200);
+                 nearDots.animate({'opacity': '1'}, 400);
+                 DotsEmbed.animate({'opacity': '1'}, 400);
                  $('.text-dots-block').addClass('hover--menu');
              }
          }
@@ -179,21 +179,25 @@ $(document).ready(function () {
     }
 
     $('.outdoor-section-block button').click(function() {
-        $('.outdoor-section__image').animate({'opacity': '0'},200);
-        var dataName = $(this).parent().data('name');
-        if (dataName.toLowerCase() === 'travel') {
-            animateArrow('16.66%')
-        } else if (dataName.toLowerCase() === 'outdoor') {
-            animateArrow('50%')
-        } else {
-            animateArrow('83.33%')
+        if (!$(this).hasClass('active')) {
+            $('.outdoor-section__image').animate({'opacity': '0'}, 200);
+            var dataName = $(this).parent().data('name');
+            if (dataName.toLowerCase() === 'travel') {
+                animateArrow('16.66%')
+            } else if (dataName.toLowerCase() === 'outdoor') {
+                animateArrow('50%')
+            } else {
+                animateArrow('83.33%')
+            }
+
+            setTimeout(function () {
+                $('.outdoor-section__image').removeClass('active');
+                $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
+                $('.outdoor-section-block button').removeClass('active');
+                $('.outdoor-section-block .outdoor-section__' + dataName + ' button').addClass('active');
+
+            }, 200);
         }
-
-       setTimeout(function () {
-        $('.outdoor-section__image').removeClass('active');
-        $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'},200);
-
-         },200);
 
         function animateArrow(prop) {
             $('#arrow-skills').animate({'left': prop}, 400);
@@ -212,7 +216,7 @@ $(document).ready(function () {
             });
         }
         function animateCounter() {
-            $("#section-instagram").unbind("scroll")
+            $("#section-instagram").unbind("scroll");
             var count = 1;
             countdown = setInterval(function () {
                 $("span.countup").html(count + "k");
