@@ -693,7 +693,7 @@ p
   text-align: right
 
 .outdoor-section__text--header h3
-  margin: 0 0 25px 0
+  margin: 0 0 5% 0
   text-align: right
 
 .outdoor-section__text--main
@@ -702,7 +702,7 @@ p
   text-align: right
 
 .outdoor-section__text--main p
-  margin: 30px 0px 10px 0px
+  margin: 7% 0 0 0
 
 .outdoor-section-block
   display: flex
@@ -720,7 +720,7 @@ p
   border: none
   border-top: 2px solid #ffff
   margin: 0
-  padding-bottom: 10px
+  padding-bottom: 2vh
 
 .outdoor-section__text
   text-align: left
@@ -734,34 +734,29 @@ p
 
 .outdoor-section__image
   visibility: hidden
-  padding: 3% 15% 0 15%
+  padding: 0.4vw 4.5vw 0 4.5vw
   position: absolute
   z-index: 1
   &:last-child
    position: static
+  width: 100%
+
+.outdoor-section__image .col-sm-3
+  padding-right: 0
+  padding-left: 0
 
 .outdoor-section__image.active
   visibility: visible
 
 .arrow-down-icon
-  padding: 0 9%
+  padding: 0 2.9vw 1.1vw 2.9vw
 
 #arrow-skills
   position: relative
-  width: 10px
+  width: 0.8vw
   transform: translateX(-5px)
   left: 50%
 
-//.arrow-none
-// visibility: hidden
-// opacity: 0
-// transition: visibility 0.1s linear,opacity 0.3s linear
-//
-//.arrow-none.active
-//  visibility: visible
-//  opacity: 1
-//  transition: transform 0.5s linear
-//  transform: translate(2px)
 
 .outdoor-section__icons
   position: relative
@@ -770,13 +765,14 @@ p
   justify-content: center
 
 .outdoor-section__image embed
-  width: 40px
-  height: 35px
+  width: 3vw
+  height: 3vw
 
 .outdoor-section__image .numberCircle
+  font-size: 1.1vw
   border-radius: 50%
-  width: 40px
-  height: 40px
+  width: 3vw
+  height: 3vw
   background: none
   border: 2px white solid
   color: #ffffff
@@ -784,11 +780,17 @@ p
   justify-content: center
   align-items: center
   font-family: $primary-font
+  margin: 0 auto
+  font-weight: 500
+
+.outdoor-section__image .numberCircle + p
+  padding-top: 1vw
 
 .outdoor-section__image p
   text-align: center
-  padding-top: 10px
+  padding-top: 0.5vw
   line-height: normal
+  white-space: pre-line
 
 .outdoor-section
   text-align: center
@@ -829,7 +831,6 @@ p
 
 .section-instagram-followers span
   font-size: 1.5vw
-
 
 .section-instagram-followers a
   color: #ffffff
@@ -902,7 +903,7 @@ p
 
 .client-contact-list__center-arrow
   text-align: center
-  width: 6.5vw
+  width: 6.2vw
   padding: 40px 0 25px 0
 
 .client-contact-list__center-arrow embed
@@ -910,33 +911,33 @@ p
 
 .client-contact-list__quote p
   font-family: $primary-font
-  margin: 4px
-  padding: 2px
-  //font-size: 14px
+  margin-bottom: 8vw
+  margin-left: 0.5vw
   font-size: 1vw
+
 .client-contact-list__social
-  padding-top: 15px
+  padding-top: 10vw
 
 .client-contact-list__email
   position: relative
 
 .client-contact-list__email a
   display: inline-block
-  padding: 90px 0px
   color: $primary-color
   text-transform: lowercase
   letter-spacing: 1px
   text-decoration: underline
+  margin-left: 0.5vw
   //font-size: 24pt
   font-size: 2.2vw
 
 .client-contact-list__email--triangle-left
   height: 0
-  border-top: 5px solid transparent
-  border-right: 5px solid #e7bf5d
-  border-bottom: 5px solid transparent
+  border-top: 0.6vw solid transparent
+  border-right: 0.6vw solid #e7bf5d
+  border-bottom: 0.6vw solid transparent
   position: absolute
-  top: 110px
+  top: 1vw
   right: 0
   animation: RectangleRight 2s ease-in-out infinite
 
@@ -969,8 +970,8 @@ p
 
 .client-contact-list__social--icon embed
   vertical-align: middle
-  width: 30px
-  height: 30px
+  width: 2.5vw
+  height: 2.5vw
 
 .client-contact-list__social--icon.audio a
   text-transform: uppercase
