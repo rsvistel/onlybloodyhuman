@@ -272,8 +272,6 @@
   .dots-block-section-banner {
     width: 17%;
     margin-top: 5%; }
-  .text-dots-block {
-    width: 40%; }
   #section-about .row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -327,6 +325,10 @@
     width: 50%; }
   .dots-block-section-banner {
     width: 17%; } }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .whole-text-section-about {
+    padding: 0 10% 0 5%; } }
 
 @media (min-width: 1200px) and (max-width: 1600px) {
   .outdoor-section {
