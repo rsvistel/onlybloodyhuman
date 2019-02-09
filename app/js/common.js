@@ -218,7 +218,7 @@ $(document).ready(function () {
             });
         }
         function animateCounter() {
-            $("#section-instagram").unbind("scroll")
+            $("#section-instagram").unbind("scroll");
             var count = 1;
             countdown = setInterval(function () {
                 $("span.countup").html(count + "k");
