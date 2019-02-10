@@ -64,7 +64,6 @@ $(document).ready(function () {
                     }
                 }
             }
-
             function changeTool(current_icon, new_icon, current_class, new_class, new_bg) {
                 current_icon.animate({'opacity': '0'}, 200);
                 setTimeout(function () {
@@ -73,7 +72,6 @@ $(document).ready(function () {
                 }, 200);
                 $('.photo-half-section-tools')
                     .append('<div class="after"></div>');
-                    // .css('background-image', 'url("' + new_bg +'")');
                 $('.photo-half-section-tools .after')
                     .css('background-image', 'url("' + new_bg +'")')
                     .animate({'opacity': '1'}, 500);
@@ -169,6 +167,14 @@ $(document).ready(function () {
                 checkActiveDot();
             }
         }
+        if (active > 2) {
+            $('.img-under-line-block').hide();
+            $('.icon-dji, .icon-camera').hide().animate({'opacity': '0'});
+            $('.icon-movi').show().animate({'opacity': '1'});
+            $('.photo-half-section-tools').css('background-image', 'url("img/section-tools/movi_pro.jpg")');
+            $('#section-tools').removeClass('tools-dji tools-camera').addClass('tools-movi');
+        }
+
         if ($(this).hasClass('instagram-counter')) {
             setTimeout(function () {
                 animateCounter();
