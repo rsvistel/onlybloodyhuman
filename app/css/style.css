@@ -235,8 +235,35 @@ p {
       -ms-transform: scale(1.6);
           transform: scale(1.6); }
 
+body .text-near-dots {
+  opacity: 0;
+  -webkit-transition: ease-in 0.3s;
+  -o-transition: ease-in 0.3s;
+  transition: ease-in 0.3s; }
+
+body .text-dots-block embed {
+  opacity: 0;
+  -webkit-transition: ease-in 0.3s;
+  -o-transition: ease-in 0.3s;
+  transition: ease-in 0.3s; }
+
+body.opened--menu .text-near-dots {
+  opacity: 1; }
+
+body.opened--menu .text-dots-block embed {
+  opacity: 1; }
+
 .text-near-dots, .text-dots-block embed {
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: linear 0.2s;
+  -o-transition: linear 0.2s;
+  transition: linear 0.2s; }
+
+.text-dots-block:hover .text-near-dots {
+  opacity: 1; }
+
+.text-dots-block:hover embed {
+  opacity: 1; }
 
 .text-dots-block {
   display: -webkit-box;
