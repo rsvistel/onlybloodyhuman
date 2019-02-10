@@ -128,8 +128,18 @@
     margin-left: 0; }
   .footer-client p {
     font-size: 11px; }
-  .footer-client span {
-    font-size: 14px; } }
+  .footer-client span, .lines-job-text-center {
+    font-size: 14px; }
+  .left-logo-banner-section {
+    margin-top: 15px;
+    margin-bottom: 10px; }
+  #menuToggle-mobile {
+    top: 0;
+    margin-top: 18px; }
+  #menuToggle-mobile span {
+    width: 1.5vw;
+    height: 3.5px;
+    min-width: 27px; } }
 
 @media (max-width: 450px) {
   .text-center-banner-section {
@@ -139,7 +149,8 @@
   .video-references {
     max-height: 75%;
     min-width: 100%;
-    max-width: 130%; } }
+    max-width: 130%;
+    min-height: auto; } }
 
 @media (max-width: 450px) and (max-height: 737px) {
   .video-references {
@@ -213,7 +224,43 @@
     min-width: 80px;
     max-width: 90px;
     min-height: 30px;
-    max-height: 45px; } }
+    max-height: 45px; }
+  .under-line-block .img-under-line-block embed {
+    min-width: 110px;
+    max-width: 120px;
+    height: 80px; }
+  .video-section-cover {
+    height: 60vw; }
+  .section-outdoor-professional {
+    min-height: auto; }
+  .outdoor-section__image embed {
+    width: 48%;
+    height: 30px; }
+  #arrow-skills {
+    width: 4%;
+    max-width: 20px; }
+  .outdoor-section__image .numberCircle {
+    width: 43%;
+    height: 30px;
+    font-size: 9px; }
+  .client-contact-list__social--icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .client-contact-list__social embed {
+    width: 40px;
+    height: 25px; }
+  .client-contact-list__social a {
+    margin-right: 5px; }
+  .client-contact-list__text p {
+    margin-left: 5px; }
+  .inner-content-section-banner {
+    margin-top: 0; } }
 
 @media (max-width: 600px) {
   #menuToggle {
@@ -241,7 +288,9 @@
   .section-outdoor-professional {
     width: initial; }
   .dots-block-section-banner {
-    padding-right: 6.3vw; } }
+    padding-right: 6.3vw; }
+  .client-contact-list__text p {
+    margin-bottom: 10px; } }
 
 @media (min-width: 601px) and (max-width: 767px) {
   .text-center-banner-section {
@@ -270,8 +319,6 @@
 @media (min-width: 768px) and (max-width: 1000px) {
   #section-contact, .gray-half-section-tools {
     height: auto; }
-  .text-center-banner-section, .dots-block-section-banner {
-    height: 345px; }
   h1 {
     font-size: 92px; }
   .arrow-down-section-banner {
@@ -335,8 +382,19 @@
   .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
     min-width: 90px;
     max-width: 100px; }
+  .logo-client-list-discovery {
+    max-width: 145px; }
   #section-tools, .section-instagram {
     height: auto; } }
+
+@media (min-width: 451px) and (max-width: 768px) {
+  .logo-client-list embed {
+    min-width: 90px;
+    max-width: 100px;
+    min-height: 40px;
+    max-height: 50px; }
+  .video-references {
+    min-height: 50vh; } }
 
 @media (min-width: 1200px) and (max-width: 1600px) {
   .outdoor-section {
@@ -375,15 +433,15 @@
   .client-contact-list__email a {
     font-size: 20px; }
   .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a {
-    font-size: 10px; } }
-
-@media (min-width: 2500px) {
-  .section-instagram__photo {
-    width: 25.2vw;
-    height: 25vw; } }
+    font-size: 10px; }
+  .text-over-progress h6 {
+    font-size: 11px;
+    margin-bottom: 6px; }
+  .progress-line {
+    height: 7px; } }
 
 @media (min-width: 2000px) {
   .text-left-logo {
     font-size: 0.6vw; }
   .img-photo-man-section-about {
-    width: 145%; } }
+    width: 135%; } }
