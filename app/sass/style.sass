@@ -20,7 +20,6 @@ h1
 h2
   //font-size: 72px
   font-size: 4.2vw
-  letter-spacing: 1px
   margin-left: -3px
 
 h3
@@ -86,6 +85,7 @@ p
 
 .hamburger-menu-banner-section.animation
   right: 0
+  top: 5px
   animation: 1s ease-out  slideInFromRight
   animation-fill-mode: forwards
 
@@ -99,7 +99,7 @@ p
     right: 0
     opacity: 0
   to
-    right: 5%
+    right: 3.5%
     opacity: 1
 
 @keyframes hideInToRight
@@ -125,7 +125,7 @@ p
     left: 0
     opacity: 0
   to
-    left: 5%
+    left: 3.5%
     opacity: 1
 
 @keyframes hideInToLeft
@@ -139,7 +139,7 @@ p
 
 .left-logo-banner-section embed
   width: 3.2vw
-  max-width: 25px
+  max-width: 3%
 
 .whole-text-left-logo
   opacity: 0
@@ -163,7 +163,6 @@ p
     opacity: 1
 .text-center-banner-section
   height: 80vh
-  //max-height: 530px
   display: flex
   justify-content: center
   align-items: center
@@ -177,7 +176,6 @@ p
   float: left
   margin-top: 10vh
   height: 66vh
-  //max-height: 530px
   display: flex
   flex-direction: column
   align-items: flex-end
@@ -187,7 +185,6 @@ p
   bottom: 0
   right: 0
   z-index: 101
-
 
 .dot-section-banner
   height: 0.4vw
@@ -209,9 +206,29 @@ p
   background: transparent
   transform: scale(1.6)
 
+body .text-near-dots
+  opacity: 0
+  transition: ease-in 0.3s
+
+body .text-dots-block embed
+  opacity: 0
+  transition: ease-in 0.3s
+
+body.opened--menu .text-near-dots
+  opacity: 1
+
+body.opened--menu .text-dots-block embed
+  opacity: 1
+
 .text-near-dots, .text-dots-block embed
   opacity: 0
+  transition: linear 0.2s
 
+.text-dots-block:hover .text-near-dots
+  opacity: 1
+
+.text-dots-block:hover embed
+  opacity: 1
 
 .text-dots-block
   display: flex
@@ -257,10 +274,10 @@ p
   color: snow
   margin: 2px 0
   //font-size: 10px
-  font-size: 0.7vw
+  font-size: 0.6vw
   letter-spacing: 2.5px
   //line-height: 11px
-  line-height: 0.8vw
+  line-height: 0.6vw
 
 .surname-text-left-logo
   opacity: 0.7
@@ -271,7 +288,6 @@ p
 .left-logo-banner-section
   display: flex
   align-items: center
-  margin-top: 30px
 
 .whole-text-left-logo
   flex-direction: column
@@ -287,7 +303,8 @@ p
 
 
 .arrow-down-section-banner embed
-  width: 1.2%
+  width: 1.1vw
+  min-width: 17px
   max-width: 30px
   cursor: pointer
   animation: bottom 2s ease-in-out infinite
@@ -299,7 +316,8 @@ p
     transform: translateY(8px)
 
 
-
+.inner-content-section-banner
+  margin-top: 40px
 
 //hamburger menu
 .hamburger-menu-banner-section
@@ -316,7 +334,6 @@ p
 #menuToggle, #menuToggle-mobile
   display: block
   position: relative
-  top: 35px
   z-index: 1
   -webkit-user-select: none
   user-select: none
@@ -446,35 +463,30 @@ p
   background-color: $primary-color
   display: flex
   align-items: center
-  //justify-content: center
   position: relative
-  //height: 140px
   height: 20vh
-  padding: 0.5% 6% 0 6%
-
-//#section-logos .row
-//  display: flex
-//  align-items: center
-
+  padding: 0.5% 4% 0 4%
 
 .logo-client-list embed
-  //min-width: 120px
-  //max-width: 150px
-  //min-height: 30px
-  //max-height: 65px
   min-width: 9vw
   max-width: 11vw
   min-height: 4vw
-  max-height: 4.2vw
+  max-height: 4.7vw
+
 .logo-client-list
   width: 18%
 
-.logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed
+.logo-client-list-bbc embed, .logo-client-list-ecco embed
   min-width: 6.6vw
-  max-width: 7vw
+  max-width: 7.5vw
+
+.logo-client-list-nrs embed
+  min-width: 5vw
+  max-width: 6vw
 
 .logo-client-list-discovery embed
-  max-width: 12vw
+  max-width: 13vw
+
 .logo-client-list
   text-align: center
 
@@ -504,7 +516,7 @@ p
 
 .whole-text-section-about
   //margin-top: -10%
-  padding: 5% 12% 5% 7%
+  padding: 5% 10% 5% 7%
   display: flex
   flex-direction: column
   justify-content: center
@@ -516,11 +528,11 @@ p
 
 .jobs-section-about
   margin-left: 3px
-  letter-spacing: 0.25vw
+  letter-spacing: 0.2vw
   font-size: 1vw
 
 .now-section-about
-  margin-top: 25%
+  margin-top: 20%
   margin-bottom: 40px
 
 .tittle-section-about
@@ -553,7 +565,7 @@ p
 .progress-line
   background: #8a8b8e
   border-radius: 0
-  height: 7px
+  height: 0.4vw
   width: 100%
   position: relative
 
@@ -566,21 +578,39 @@ p
   z-index: 80
   width: 0
 
-//.progress-line-gray-94
-//  width: 94%
-//  position: absolute
-//
-//.progress-line-gray-79
-//  width: 79%
-//
-//.progress-line-gray-87
-//  width: 87%
-//
-//.progress-line-gray-67
-//  width: 67%
-//
-//.progress-line-gray-82
-//  width: 82%
+.percentage-progress
+  transform: translateX(50%)
+
+.progress-line-gray-94
+  width: 94%
+  position: absolute
+
+.percentage-progress-94
+  margin-right: 6%
+
+.progress-line-gray-79
+  width: 79%
+
+.percentage-progress-79
+  margin-right: 21%
+
+.progress-line-gray-87
+  width: 87%
+
+.percentage-progress-87
+  margin-right: 13%
+
+.progress-line-gray-67
+  width: 67%
+
+.percentage-progress-67
+  margin-right: 33%
+
+.progress-line-gray-82
+  width: 82%
+
+.percentage-progress-82
+  margin-right: 18%
 
 .text-over-progress
   display: flex
@@ -590,8 +620,8 @@ p
 .text-over-progress h6
   font-weight: 700
   //font-size: 11px
-  font-size: 0.75vw
-  margin-bottom: 6px
+  font-size: 0.6vw
+  margin-bottom: 0.7vw
 
 .progress-section
   margin-bottom: 25px
@@ -600,8 +630,6 @@ p
 //Section About
 
 //Section tools
-//#section-tools
-  //overflow: hidden
 #section-tools .row
   display: flex
   align-items: center
@@ -637,7 +665,6 @@ p
 
 .tittles-section-tools
   font-weight: 700
-  //line-height: 25px
   line-height: 1.9vw
   margin-left: 7px
   font-size: 1.25vw
@@ -668,20 +695,15 @@ p
 
 .over-line-block
   padding-right: 15%
+
 .img-under-line-block, .text-under-img-section-tools
   text-align: center
 
 .under-line-block .img-under-line-block embed
   min-width: 10.5vw
   max-width: 12vw
-  //min-height: 5vw
-  //max-height: 7vw
   height: 7vw
   margin: 7% 0 7% -5%
-
-//.under-line-block .img-under-line-block.icon-movi embed
-//  min-width: 10vw
-//  max-width: 11vw
 
 .text-under-img-section-tools
   padding: 0 15%
@@ -878,14 +900,16 @@ p
   padding: 0px
   position: relative
   &:hover .hover-location
-    visibility: visible
+    opacity: 1
+
 
 .section-instagram__photo img
   width: 100%
   min-height: 100%
 
 .hover-location
-  visibility: hidden
+  opacity: 0
+  transition: 0.3s linear
   position: absolute
   top: 0
   left: 0
