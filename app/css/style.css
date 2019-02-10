@@ -33,7 +33,8 @@ p {
   top: 0;
   min-height: 100vh;
   min-width: 100%;
-  z-index: -1; }
+  z-index: -1;
+  pointer-events: none; }
 
 .video-section {
   position: relative;
@@ -713,34 +714,37 @@ p {
 .text-bottom-section-about {
   margin-bottom: 10%; }
 
-.progress-bar {
+.progress-line {
   background: #8a8b8e;
   -webkit-border-radius: 0;
           border-radius: 0;
   height: 7px;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
-.progress-bar:after {
-  content: '';
+.progress-line-gray {
   display: block;
   background: #2c2e31;
   height: 100%;
   -webkit-border-radius: 0;
-          border-radius: 0; }
+          border-radius: 0;
+  position: absolute;
+  z-index: 80; }
 
-.progress-bar-94:after {
-  width: 94%; }
+.progress-line-gray-94 {
+  width: 94%;
+  position: absolute; }
 
-.progress-bar-79:after {
+.progress-line-gray-79 {
   width: 79%; }
 
-.progress-bar-87:after {
+.progress-line-gray-87 {
   width: 87%; }
 
-.progress-bar-67:after {
+.progress-line-gray-67 {
   width: 67%; }
 
-.progress-bar-82:after {
+.progress-line-gray-82 {
   width: 82%; }
 
 .text-over-progress {
