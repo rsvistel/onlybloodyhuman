@@ -90,6 +90,17 @@ $(document).ready(function () {
         });
     }
 
+    function bindAbout() {
+        $("#section-instagram").bind("scroll", function() {
+            if ($(".progress-bar").isInViewport()) {
+                animateStat($(this))
+            }
+        });
+        function animateStat() {
+
+        }
+    }
+
     function bindScroll() {
         $(document).bind('wheel', function (e) {
             var delta = e.originalEvent.deltaY;
@@ -109,7 +120,7 @@ $(document).ready(function () {
         }
         checkActiveDot();
         $(document).unbind('wheel');
-        $('.hamburger-menu-banner-section, .left-logo-banner-section').removeClass('animation');
+        $('.hamburger-menu-banner-section, .left-logo-banner-section').addClass('animation-hide').removeClass('animation');
         setTimeout(function () {
             sections[active].css('overflow-y', 'scroll');
             $("span.countup").html("1k");
@@ -119,8 +130,10 @@ $(document).ready(function () {
                 runSubscribersCounter();
                 bindUnFixed();
             } else if (sections[active].attr('id') === 'first-section'){
-                $('.hamburger-menu-banner-section, .left-logo-banner-section').addClass('animation');
+                $('.hamburger-menu-banner-section, .left-logo-banner-section').removeClass('animation-hide').addClass('animation');
                 bindUnFixed();
+            } else if (sections[active].attr('id') === 'section-about') {
+                bindAbout();
             } else {
                 bindUnFixed();
             }

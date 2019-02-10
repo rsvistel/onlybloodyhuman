@@ -81,6 +81,13 @@ p {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
+.hamburger-menu-banner-section.animation-hide {
+  right: 0;
+  -webkit-animation: 1s ease-out  hideInToRight;
+          animation: 1s ease-out  hideInToRight;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
 @-webkit-keyframes slideInFromRight {
   from {
     right: 0;
@@ -97,10 +104,33 @@ p {
     right: 5%;
     opacity: 1; } }
 
+@-webkit-keyframes hideInToRight {
+  from {
+    right: 5%;
+    opacity: 1; }
+  to {
+    right: 0;
+    opacity: 0; } }
+
+@keyframes hideInToRight {
+  from {
+    right: 5%;
+    opacity: 1; }
+  to {
+    right: 0;
+    opacity: 0; } }
+
 .left-logo-banner-section.animation {
   left: 0;
   -webkit-animation: 1s ease-out   slideInFromLeft;
           animation: 1s ease-out   slideInFromLeft;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.left-logo-banner-section.animation-hide {
+  left: 0;
+  -webkit-animation: 1s ease-out   hideInToLeft;
+          animation: 1s ease-out   hideInToLeft;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
@@ -119,6 +149,22 @@ p {
   to {
     left: 5%;
     opacity: 1; } }
+
+@-webkit-keyframes hideInToLeft {
+  from {
+    left: 5%;
+    opacity: 1; }
+  to {
+    left: 0;
+    opacity: 0; } }
+
+@keyframes hideInToLeft {
+  from {
+    left: 5%;
+    opacity: 1; }
+  to {
+    left: 0;
+    opacity: 0; } }
 
 .left-logo-banner-section embed {
   width: 3.2vw;
