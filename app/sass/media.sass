@@ -152,7 +152,7 @@
   .footer-client p
     font-size: 11px
 
-  .footer-client span
+  .footer-client span, .lines-job-text-center
     font-size: 14px
 
   .left-logo-banner-section
@@ -161,7 +161,7 @@
 
   #menuToggle-mobile
     top: 0
-    margin-top: 18\px
+    margin-top: 18px
 
   #menuToggle-mobile span
     width: 1.5vw
@@ -184,9 +184,6 @@
 @media (max-width: 450px) and (max-height: 737px)
   .video-references
     width: 100%
-//@media (max-width: 390px)
-//  .text-center-banner-section
-//     max-height: 95px
 
 @media (min-width: 501px) and (max-width: 600px)
   .text-center-banner-section
@@ -209,14 +206,6 @@
 
   .dot-section-banner
     margin: 8px 0
-
-
-  //#first-section
-    //min-height: 100vh
-    //height: auto
-    //overflow-x: hidden
-
-
 
 @media (max-width: 768px)
   .outdoor-section
@@ -276,19 +265,53 @@
 
   #section-banner
     overflow: hidden
-  //
-  //.logo-client-list embed
-  //  min-width: 10vw
-  //  max-width: 11vw
-  //  min-height: 8.8vw
-  //  max-height: 9vw
+
   .logo-client-list embed
     min-width: 80px
     max-width: 90px
     min-height: 30px
     max-height: 45px
 
+  .under-line-block .img-under-line-block embed
+    min-width: 110px
+    max-width: 120px
+    height: 80px
 
+  .video-section-cover
+    height: 60vw
+
+  .section-outdoor-professional
+    min-height: auto
+
+  .outdoor-section__image embed
+    width: 48%
+    height: 30px
+
+  #arrow-skills
+    width: 4%
+    max-width: 20px
+
+  .outdoor-section__image .numberCircle
+    width: 43%
+    height: 30px
+    font-size: 9px
+
+  .client-contact-list__social--icon
+    display: flex
+    align-items: center
+
+  .client-contact-list__social embed
+    width: 40px
+    height: 25px
+
+  .client-contact-list__social a
+    margin-right: 5px
+
+  .client-contact-list__text p
+    margin-left: 5px
+
+  .inner-content-section-banner
+    margin-top: 0
 
 
 @media (max-width: 600px)
@@ -303,26 +326,15 @@
     width: 26.3vw
     height: 26.3vw
 
-//@media (min-width: 601px) and (max-width: 1000px)
-//  .section-instagram__photo
-//    width: 26.5vw
-//    height: 26vw
 @media (min-width: 1000px) and (max-width: 1100px)
   #section-logos
     padding: 0.5% 2% 0 2%
 
 @media (min-width: 769px) and (max-width: 880px)
-  //#section-logos
-  //  padding: 1% 0 0 0
-
   .logo-client-list
     padding: 0
 
 @media (min-width: 769px) and (max-width: 1200px)
-  //#section-about
-  //  height: auto
-  //  padding-top: 10%
-
   .section-contact
     height: auto
 
@@ -334,6 +346,9 @@
 
   .dots-block-section-banner
     padding-right: 6.3vw
+
+  .client-contact-list__text p
+    margin-bottom: 10px
 
 @media (min-width: 601px) and (max-width: 767px)
   .text-center-banner-section
@@ -347,47 +362,23 @@
     left: 0
 
 @media (min-width: 769px) and (max-width: 999px)
-  //.logo-client-list
-  //  width: 14%
-  //  padding: 0
-
-  //.whole-text-section-about
-  //  width: 45%
-
   .img-photo-man-section-about
     width: 100%
-
 
   .photo-man-section-about
     justify-content: center
     width: 100%
     margin-left: 0
 
-  //.whole-text-section-about
-  //  margin-left: 60px
-
   #first-section, #section-banner
     height: auto
-
-//@media (min-width: 769px) and (max-width: 992px)
-//  .img-photo-man-section-about
-//    width: 250%
 
 @media (min-width: 768px) and (max-width: 1000px)
   #section-contact, .gray-half-section-tools
     height: auto
 
-  //.logo-client-list embed
-  //  width: 90px
-
-  .text-center-banner-section, .dots-block-section-banner
-    height: 345px
-
   h1
     font-size: 92px
-
-  //h2
-  //  font-size: 40px
 
   .arrow-down-section-banner
     margin-bottom: 1%
@@ -414,9 +405,6 @@
     display: flex
     flex-direction: column-reverse
 
-  //#section-about
-  //  padding-top: 3%
-
   .now-section-about, .tittle-section-about-margin
     margin-top: 10%
 
@@ -434,29 +422,6 @@
   .video-references, .section-outdoor-professional
     max-height: 800px
 
-
-
-//
-//@media (min-width: 1200px)
-  //#first-section
-  //  min-height: 770px
-  //  max-height: 790px
-
-  //.section-contact
-  //  height: auto
-  //#first-section, #section-tools, .photo-half-section-tools, .outdoor-section
-  //  min-height: 770px
-  //  max-height: 790px
-//
-//  .section-fixed, #section-contact, .client-contact-list-img
-//    min-height: 770px
-//    max-height: 960px
-//  .text-center-banner-section, .dots-block-section-banner
-//    max-height: 700px
-//
-//  #section-about
-//    max-height: 1680px
-
 @media (min-width: 1000px) and (max-width: 1200px)
   .img-photo-man-section-about
     width: 190%
@@ -470,16 +435,6 @@
 
   .job-section-about
     font-size: 55px
-
-  //#section-banner
-  //  height: 83.5%
-
-  //.text-center-banner-section, .dots-block-section-banner
-  //  max-height: 420px
-
-  //.logo-client-list
-  //  width: 14%
-  //  padding: 0
 
   .whole-text-section-about
     margin-top: 5%
@@ -495,12 +450,12 @@
     min-width: 90px
     max-width: 100px
 
+  .logo-client-list-discovery
+    max-width: 145px
+
+
   #section-tools, .section-instagram
     height: auto
-
-//@media (min-width: 1200px) and (max-width: 1400px)
-//  .whole-text-section-about
-//    padding: 0 10% 0 5%
 
 @media (min-width: 451px) and (max-width: 768px)
   .logo-client-list embed
@@ -511,7 +466,6 @@
 
   .video-references
     min-height: 50vh
-
 
 @media (min-width: 1200px) and (max-width: 1600px)
   .outdoor-section
@@ -561,20 +515,18 @@
   .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a
     font-size: 10px
 
-@media (min-width: 2500px)
-  .section-instagram__photo
-    width: 25.2vw
-    height: 25vw
+  .text-over-progress h6
+    font-size: 11px
+    margin-bottom: 6px
+
+  .progress-line
+    height: 7px
+
 
 @media (min-width: 2000px)
   .text-left-logo
     font-size: 0.6vw
 
   .img-photo-man-section-about
-    width: 145%
+    width: 135%
 
-  //#menu, #menu-mobile
-  //  position: absolute
-  //  width: 500px
-  //  height: 115vh
-  //  margin: -75px 0 0 -180px

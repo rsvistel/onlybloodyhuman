@@ -9,7 +9,6 @@ h1 {
 
 h2 {
   font-size: 4.2vw;
-  letter-spacing: 1px;
   margin-left: -3px; }
 
 h3 {
@@ -77,6 +76,7 @@ p {
 
 .hamburger-menu-banner-section.animation {
   right: 0;
+  top: 5px;
   -webkit-animation: 1s ease-out  slideInFromRight;
           animation: 1s ease-out  slideInFromRight;
   -webkit-animation-fill-mode: forwards;
@@ -87,7 +87,7 @@ p {
     right: 0;
     opacity: 0; }
   to {
-    right: 5%;
+    right: 3.5%;
     opacity: 1; } }
 
 @keyframes slideInFromRight {
@@ -95,7 +95,7 @@ p {
     right: 0;
     opacity: 0; }
   to {
-    right: 5%;
+    right: 3.5%;
     opacity: 1; } }
 
 .left-logo-banner-section.animation {
@@ -110,7 +110,7 @@ p {
     left: 0;
     opacity: 0; }
   to {
-    left: 5%;
+    left: 3.5%;
     opacity: 1; } }
 
 @keyframes slideInFromLeft {
@@ -118,12 +118,12 @@ p {
     left: 0;
     opacity: 0; }
   to {
-    left: 5%;
+    left: 3.5%;
     opacity: 1; } }
 
 .left-logo-banner-section embed {
   width: 3.2vw;
-  max-width: 25px; }
+  max-width: 3%; }
 
 .whole-text-left-logo {
   opacity: 0;
@@ -291,9 +291,9 @@ p {
   text-transform: uppercase;
   color: snow;
   margin: 2px 0;
-  font-size: 0.7vw;
+  font-size: 0.6vw;
   letter-spacing: 2.5px;
-  line-height: 0.8vw; }
+  line-height: 0.6vw; }
 
 .surname-text-left-logo {
   opacity: 0.7;
@@ -308,8 +308,7 @@ p {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center;
-  margin-top: 30px; }
+          align-items: center; }
 
 .whole-text-left-logo {
   -webkit-box-orient: vertical;
@@ -334,7 +333,8 @@ p {
   z-index: 5; }
 
 .arrow-down-section-banner embed {
-  width: 1.2%;
+  width: 1.1vw;
+  min-width: 17px;
   max-width: 30px;
   cursor: pointer;
   -webkit-animation: bottom 2s ease-in-out infinite;
@@ -355,6 +355,9 @@ p {
   to {
     -webkit-transform: translateY(8px);
             transform: translateY(8px); } }
+
+.inner-content-section-banner {
+  margin-top: 40px; }
 
 .hamburger-menu-banner-section {
   display: -webkit-box;
@@ -379,7 +382,6 @@ p {
 #menuToggle, #menuToggle-mobile {
   display: block;
   position: relative;
-  top: 35px;
   z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -558,23 +560,27 @@ p {
           align-items: center;
   position: relative;
   height: 20vh;
-  padding: 0.5% 6% 0 6%; }
+  padding: 0.5% 4% 0 4%; }
 
 .logo-client-list embed {
   min-width: 9vw;
   max-width: 11vw;
   min-height: 4vw;
-  max-height: 4.2vw; }
+  max-height: 4.7vw; }
 
 .logo-client-list {
   width: 18%; }
 
-.logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
+.logo-client-list-bbc embed, .logo-client-list-ecco embed {
   min-width: 6.6vw;
-  max-width: 7vw; }
+  max-width: 7.5vw; }
+
+.logo-client-list-nrs embed {
+  min-width: 5vw;
+  max-width: 6vw; }
 
 .logo-client-list-discovery embed {
-  max-width: 12vw; }
+  max-width: 13vw; }
 
 .logo-client-list {
   text-align: center; }
@@ -615,7 +621,7 @@ p {
   width: 185%; }
 
 .whole-text-section-about {
-  padding: 5% 12% 5% 7%;
+  padding: 5% 10% 5% 7%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -637,11 +643,11 @@ p {
 
 .jobs-section-about {
   margin-left: 3px;
-  letter-spacing: 0.25vw;
+  letter-spacing: 0.2vw;
   font-size: 1vw; }
 
 .now-section-about {
-  margin-top: 25%;
+  margin-top: 20%;
   margin-bottom: 40px; }
 
 .tittle-section-about {
@@ -672,7 +678,7 @@ p {
   background: #8a8b8e;
   -webkit-border-radius: 0;
           border-radius: 0;
-  height: 7px;
+  height: 0.4vw;
   width: 100%;
   position: relative; }
 
@@ -685,21 +691,41 @@ p {
   position: absolute;
   z-index: 80; }
 
+.percentage-progress {
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%); }
+
 .progress-line-gray-94 {
   width: 94%;
   position: absolute; }
 
+.percentage-progress-94 {
+  margin-right: 6%; }
+
 .progress-line-gray-79 {
   width: 79%; }
+
+.percentage-progress-79 {
+  margin-right: 21%; }
 
 .progress-line-gray-87 {
   width: 87%; }
 
+.percentage-progress-87 {
+  margin-right: 13%; }
+
 .progress-line-gray-67 {
   width: 67%; }
 
+.percentage-progress-67 {
+  margin-right: 33%; }
+
 .progress-line-gray-82 {
   width: 82%; }
+
+.percentage-progress-82 {
+  margin-right: 18%; }
 
 .text-over-progress {
   display: -webkit-box;
@@ -713,8 +739,8 @@ p {
 
 .text-over-progress h6 {
   font-weight: 700;
-  font-size: 0.75vw;
-  margin-bottom: 6px; }
+  font-size: 0.6vw;
+  margin-bottom: 0.7vw; }
 
 .progress-section {
   margin-bottom: 25px; }
