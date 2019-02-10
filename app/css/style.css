@@ -716,10 +716,11 @@ body.opened--menu .text-dots-block embed {
 .jobs-section-about {
   margin-left: 3px;
   letter-spacing: 0.2vw;
-  font-size: 1vw; }
+  font-size: 1vw;
+  margin-top: 0; }
 
 .now-section-about {
-  margin-top: 20%;
+  margin-top: 25%;
   margin-bottom: 40px; }
 
 .tittle-section-about {
@@ -813,7 +814,7 @@ body.opened--menu .text-dots-block embed {
 .text-over-progress h6 {
   font-weight: 700;
   font-size: 0.75vw;
-  margin-bottom: 0.7vw; }
+  margin-bottom: 0.6vw; }
 
 .progress-section {
   margin-bottom: 25px; }
