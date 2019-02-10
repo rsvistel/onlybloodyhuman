@@ -90,17 +90,6 @@ $(document).ready(function () {
         });
     }
 
-    function bindAbout() {
-        $("#section-instagram").bind("scroll", function() {
-            if ($(".progress-bar").isInViewport()) {
-                animateStat($(this))
-            }
-        });
-        function animateStat() {
-
-        }
-    }
-
     function bindScroll() {
         $(document).bind('wheel', function (e) {
             var delta = e.originalEvent.deltaY;
@@ -121,6 +110,7 @@ $(document).ready(function () {
         checkActiveDot();
         $(document).unbind('wheel');
         $('.hamburger-menu-banner-section, .left-logo-banner-section').addClass('animation-hide').removeClass('animation');
+        $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
         setTimeout(function () {
             sections[active].css('overflow-y', 'scroll');
             $("span.countup").html("1k");
@@ -134,6 +124,7 @@ $(document).ready(function () {
                 bindUnFixed();
             } else if (sections[active].attr('id') === 'section-about') {
                 bindAbout();
+                bindUnFixed();
             } else {
                 bindUnFixed();
             }
@@ -179,6 +170,9 @@ $(document).ready(function () {
             if (dots[i].find('h6').html() === thisElement.find('h6').html()) {
                 $('html, body').animate({scrollTop: sections[i].offset().top}, 1000);
                 active = i;
+                // for (var b = 0; b < i; b++) {
+                //     sections[b].scrollTop = sections[b].scrollHeight;
+                // }
                 checkActiveDot();
             }
         }
@@ -217,6 +211,27 @@ $(document).ready(function () {
         }
     });
 
+    function bindAbout() {
+        $("#section-about").bind("scroll", function() {
+            $(".progress-line").each(function () {
+                if ($(this).isInViewport()) {
+                    animateStat($(this))
+                }
+            });
+        });
+        function animateStat(item) {
+            if (!item.find('.progress-line-gray').hasClass('animated')) {
+                var width;
+                var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
+                for (var i = 0; i < classListArray.length; i++) {
+                    if (classListArray[i].includes('progress-line-gray-')) {
+                        width = classListArray[i].replace('progress-line-gray-', '')
+                    }
+                }
+                item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
+            }
+        }
+    }
 
     function runSubscribersCounter() {
         if ($("span.countup").isInViewport()) {

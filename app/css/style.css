@@ -729,23 +729,8 @@ p {
   -webkit-border-radius: 0;
           border-radius: 0;
   position: absolute;
-  z-index: 80; }
-
-.progress-line-gray-94 {
-  width: 94%;
-  position: absolute; }
-
-.progress-line-gray-79 {
-  width: 79%; }
-
-.progress-line-gray-87 {
-  width: 87%; }
-
-.progress-line-gray-67 {
-  width: 67%; }
-
-.progress-line-gray-82 {
-  width: 82%; }
+  z-index: 80;
+  width: 0; }
 
 .text-over-progress {
   display: -webkit-box;
