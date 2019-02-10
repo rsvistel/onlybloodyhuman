@@ -871,14 +871,16 @@ body.opened--menu .text-dots-block embed
   padding: 0px
   position: relative
   &:hover .hover-location
-    visibility: visible
+    opacity: 1
+
 
 .section-instagram__photo img
   width: 100%
   min-height: 100%
 
 .hover-location
-  visibility: hidden
+  opacity: 0
+  transition: 0.3s linear
   position: absolute
   top: 0
   left: 0
