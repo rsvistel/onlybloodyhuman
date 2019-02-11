@@ -168,6 +168,9 @@ $(document).ready(function () {
             if (dots[i].find('h6').html() === thisElement.find('h6').html()) {
                 $('html, body').animate({scrollTop: sections[i].offset().top}, 1000);
                 active = i;
+                for (var b = 0; b < active; b++) {
+                    sections[b].scrollTop(sections[b][0].scrollHeight);
+                }
                 // for (var b = 0; b < i; b++) {
                 //     sections[b].scrollTop = sections[b].scrollHeight;
                 // }
