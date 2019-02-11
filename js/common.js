@@ -107,7 +107,7 @@ $(document).ready(function () {
         }
         checkActiveDot();
         $(document).unbind('wheel');
-        $('.hamburger-menu-banner-section, .left-logo-banner-section').addClass('animation-hide').removeClass('animation');
+        // $('.hamburger-menu-banner-section, .left-logo-banner-section').addClass('animation-hide').removeClass('animation');
         $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
         setTimeout(function () {
             sections[active].css('overflow-y', 'scroll');
@@ -118,7 +118,7 @@ $(document).ready(function () {
                 runSubscribersCounter();
                 bindUnFixed();
             } else if (sections[active].attr('id') === 'first-section'){
-                $('.hamburger-menu-banner-section, .left-logo-banner-section').removeClass('animation-hide').addClass('animation');
+                // $('.hamburger-menu-banner-section, .left-logo-banner-section').removeClass('animation-hide').addClass('animation');
                 bindUnFixed();
             } else if (sections[active].attr('id') === 'section-about') {
                 bindAbout();
@@ -168,6 +168,9 @@ $(document).ready(function () {
             if (dots[i].find('h6').html() === thisElement.find('h6').html()) {
                 $('html, body').animate({scrollTop: sections[i].offset().top}, 1000);
                 active = i;
+                for (var b = 0; b < active; b++) {
+                    sections[b].scrollTop(sections[b][0].scrollHeight);
+                }
                 // for (var b = 0; b < i; b++) {
                 //     sections[b].scrollTop = sections[b].scrollHeight;
                 // }

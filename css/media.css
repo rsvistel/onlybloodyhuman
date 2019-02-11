@@ -110,7 +110,7 @@
     min-width: 70px;
     max-width: 90px; }
   .logo-client-list embed {
-    height: 50px; }
+    height: 55px; }
   .logo-client-list {
     padding: 0; }
   .job-section-about, .first-sentence-section-about, .aka-name-section-about, .jobs-section-about {
@@ -118,10 +118,7 @@
   .job-text-center {
     font-size: 7px; }
   .section-instagram-followers a, .section-instagram-followers span {
-    font-size: 11px; }
-  .photo-half-section-tools {
-    height: 50vh;
-    min-height: 350px; }
+    font-size: 16px; }
   .whole-text-left-logo {
     opacity: 1; }
   .photo-man-section-about {
@@ -139,7 +136,9 @@
   #menuToggle-mobile span {
     width: 1.5vw;
     height: 3.5px;
-    min-width: 27px; } }
+    min-width: 27px; }
+  .inner-content-section-banner1 {
+    margin-top: 0; } }
 
 @media (max-width: 450px) {
   .text-center-banner-section {
@@ -224,7 +223,7 @@
     min-width: 80px;
     max-width: 90px;
     min-height: 30px;
-    max-height: 45px; }
+    max-height: 50px; }
   .under-line-block .img-under-line-block embed {
     min-width: 110px;
     max-width: 120px;
@@ -260,7 +259,9 @@
   .client-contact-list__text p {
     margin-left: 5px; }
   .inner-content-section-banner {
-    margin-top: 0; } }
+    margin-top: 0; }
+  .outdoor-section__text--main p {
+    text-align: start; } }
 
 @media (max-width: 600px) {
   #menuToggle {
@@ -269,8 +270,12 @@
     width: 5vw;
     max-width: 20px; }
   .section-instagram__photo {
-    width: 26.3vw;
-    height: 26.3vw; } }
+    width: 50%;
+    height: 50vw; }
+  .logo-client-list-discovery embed, .logo-client-list-gsk embed {
+    min-width: 110px;
+    max-width: 130px;
+    height: 60vw; } }
 
 @media (min-width: 1000px) and (max-width: 1100px) {
   #section-logos {
@@ -288,7 +293,7 @@
   .section-outdoor-professional {
     width: initial; }
   .dots-block-section-banner {
-    padding-right: 6.3vw; }
+    padding-right: 4.7%; }
   .client-contact-list__text p {
     margin-bottom: 10px; } }
 
@@ -393,6 +398,9 @@
     max-width: 100px;
     min-height: 40px;
     max-height: 50px; }
+  .logo-client-list-discovery embed {
+    min-width: 110px;
+    max-width: 130px; }
   .video-references {
     min-height: 50vh; } }
 
@@ -444,4 +452,10 @@
   .text-left-logo {
     font-size: 0.6vw; }
   .img-photo-man-section-about {
-    width: 135%; } }
+    width: 130%;
+    margin-right: 1vw; } }
+
+@media (max-width: 767px) {
+  .photo-half-section-tools {
+    height: 50vh;
+    min-height: 350px; } }

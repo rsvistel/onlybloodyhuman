@@ -80,65 +80,63 @@ p
   display: flex
   justify-content: center
 
-.hamburger-menu-banner-section, .left-logo-banner-section
-  opacity: 0
+//.hamburger-menu-banner-section, .left-logo-banner-section
+//  opacity: 1
+//
+//.hamburger-menu-banner-section.animation
+//  right: 0
+//  top: 5px
+//  animation: 1s ease-out  slideInFromRight
+//  animation-fill-mode: forwards
 
-.hamburger-menu-banner-section.animation
+#menuToggle
+  position: fixed
   right: 0
-  top: 5px
-  animation: 1s ease-out  slideInFromRight
-  animation-fill-mode: forwards
+  opacity: 1
+  padding-right: 4.2%
 
-.hamburger-menu-banner-section.animation-hide
-  right: 0
-  animation: 1s ease-out  hideInToRight
-  animation-fill-mode: forwards
+#menuToggle span:last-child
+  margin-bottom: 0
 
-@keyframes slideInFromRight
-  from
-    right: 0
-    opacity: 0
-  to
-    right: 3.5%
-    opacity: 1
+#menuToggle span:first-child
+  margin-top: 5px
+//@keyframes hideInToRight
+//  from
+//    right: 3.5%
+//    opacity: 1
+//  to
+//    right: 0
+//    opacity: 0
 
-@keyframes hideInToRight
-  from
-    right: 3.5%
-    opacity: 1
-  to
-    right: 0
-    opacity: 0
-
-.left-logo-banner-section.animation
-  left: 0
-  animation: 1s ease-out   slideInFromLeft
-  animation-fill-mode: forwards
-
-.left-logo-banner-section.animation-hide
-  left: 0
-  animation: 1s ease-out   hideInToLeft
-  animation-fill-mode: forwards
-
-@keyframes slideInFromLeft
-  from
-    left: 0
-    opacity: 0
-  to
-    left: 3.5%
-    opacity: 1
-
-@keyframes hideInToLeft
-  from
-    left: 3.5%
-    opacity: 1
-  to
-    left: 0
-    opacity: 0
-
-
+//.left-logo-banner-section.animation
+//  left: 0
+//  animation: 1s ease-out   slideInFromLeft
+//  animation-fill-mode: forwards
+//
+//.left-logo-banner-section.animation-hide
+//  left: 0
+//  animation: 1s ease-out   hideInToLeft
+//  animation-fill-mode: forwards
+//
+//@keyframes slideInFromLeft
+//  from
+//    left: 0
+//    opacity: 0
+//  to
+//    left: 3.5%
+//    opacity: 1
+//
+//@keyframes hideInToLeft
+//  from
+//    left: 3.5%
+//    opacity: 1
+//  to
+//    left: 0
+//    opacity: 0
+//
+//
 .left-logo-banner-section embed
-  max-width: 3.5%
+  max-width: 3%
 
 .whole-text-left-logo
   opacity: 0
@@ -160,6 +158,7 @@ p
     opacity: 0
   to
     opacity: 1
+
 .text-center-banner-section
   height: 80vh
   display: flex
@@ -167,23 +166,24 @@ p
   align-items: center
   float: left
   width: 99%
-  margin-top: -4.5%
+
 
 .dots-block-section-banner
-  padding-right: 5.6vw
+  //padding-right: 5.6vw
+  padding-right: 4.2%
   width: 14%
   float: left
   margin-top: 10vh
-  height: 66vh
+  height: 63vh
   display: flex
   flex-direction: column
   align-items: flex-end
   justify-content: center
-  position: absolute
+  position: fixed
   top: 0
   bottom: 0
   right: 0
-  z-index: 101
+  z-index: 99999
 
 .dot-section-banner
   height: 0.4vw
@@ -283,8 +283,8 @@ body.opened--menu .text-dots-block embed
   font-weight: 300
   font-family: "Helvetica Neue", sans-serif
 
-
 .left-logo-banner-section
+  padding-left: 4.2%
   display: flex
   align-items: center
 
@@ -315,11 +315,16 @@ body.opened--menu .text-dots-block embed
     transform: translateY(8px)
 
 
-.inner-content-section-banner
+.inner-content-section-banner1
+  position: fixed
+  width: 100%
   margin-top: 40px
+  z-index: 9999
+
 
 //hamburger menu
 .hamburger-menu-banner-section
+  padding-right: 4.5%
   display: flex
   justify-content: flex-end
 .hamburger-menu-banner-section a
@@ -332,10 +337,11 @@ body.opened--menu .text-dots-block embed
 
 #menuToggle, #menuToggle-mobile
   display: block
-  position: relative
+  position: fixed
   z-index: 1
   -webkit-user-select: none
   user-select: none
+
 
 #menuToggle input, #menuToggle-mobile input
   display: block
@@ -367,7 +373,9 @@ body.opened--menu .text-dots-block embed
   opacity: 0.55s ease
 
 .opened--menu#menuToggle span
-  width: 33px
+  width: 2.2vw
+  min-width: 30px
+  max-width: 35px
 
 #menuToggle span:first-child
   transform-origin: 0% 0%
@@ -507,8 +515,8 @@ body.opened--menu .text-dots-block embed
   display: flex
   align-items: flex-end
   justify-content: center
-  margin-right: 70px
-  margin-left: 35px
+  margin-right: 80px
+  margin-left: 25px
 
 .img-photo-man-section-about
   width: 185%
@@ -530,6 +538,9 @@ body.opened--menu .text-dots-block embed
   font-size: 1vw
   margin-top: 0
 
+.job-section-about-producer
+  letter-spacing: -2px
+
 .now-section-about
   margin-top: 25%
   margin-bottom: 40px
@@ -547,7 +558,6 @@ body.opened--menu .text-dots-block embed
 
 .aka-name-section-about
   font-style: italic
-  //font-size: 8px
   font-size: 0.55vw
   font-family: $secondary-font
   text-transform: initial
@@ -617,10 +627,10 @@ body.opened--menu .text-dots-block embed
 
 
 .text-over-progress h6
-  font-weight: 700
+  font-weight: 600
   //font-size: 11px
   font-size: 0.75vw
-  margin-bottom: 0.6vw
+  margin-bottom: 0.45vw
 
 .progress-section
   margin-bottom: 25px
