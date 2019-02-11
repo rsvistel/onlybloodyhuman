@@ -139,7 +139,9 @@
   #menuToggle-mobile span {
     width: 1.5vw;
     height: 3.5px;
-    min-width: 27px; } }
+    min-width: 27px; }
+  .inner-content-section-banner1 {
+    margin-top: 0; } }
 
 @media (max-width: 450px) {
   .text-center-banner-section {
