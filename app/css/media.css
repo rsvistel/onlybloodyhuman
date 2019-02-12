@@ -453,7 +453,10 @@
     font-size: 0.6vw; }
   .img-photo-man-section-about {
     width: 130%;
-    margin-right: 1vw; } }
+    margin-right: 1vw; }
+  .gray-half-section-tools {
+    display: block;
+    padding: 14% 9% 8% 9%; } }
 
 @media (max-width: 767px) {
   .photo-half-section-tools {
