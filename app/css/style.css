@@ -75,7 +75,7 @@ p {
   position: fixed;
   right: 0;
   opacity: 1;
-  padding-right: 4.2%; }
+  padding-right: 3.5%; }
 
 #menuToggle span:last-child {
   margin-bottom: 0; }
@@ -138,10 +138,10 @@ p {
       -ms-flex-align: center;
           align-items: center;
   float: left;
-  width: 99%; }
+  width: 100%; }
 
 .dots-block-section-banner {
-  padding-right: 4.2%;
+  padding-right: 3.5%;
   width: 14%;
   float: left;
   margin-top: 10vh;
@@ -351,7 +351,6 @@ body.opened--menu .text-dots-block embed {
   z-index: 9999; }
 
 .hamburger-menu-banner-section {
-  padding-right: 4.5%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -383,10 +382,11 @@ body.opened--menu .text-dots-block embed {
 #menuToggle input, #menuToggle-mobile input {
   display: block;
   width: 30px;
-  height: 32px;
+  width: 3vw;
+  height: 4.1vh;
   position: absolute;
-  top: -7px;
-  left: -5px;
+  top: -0.3vw;
+  left: -0.2vw;
   cursor: pointer;
   opacity: 0;
   z-index: 2;
@@ -395,14 +395,14 @@ body.opened--menu .text-dots-block embed {
 #menuToggle span, #menuToggle-mobile span {
   display: block;
   width: 2.2vw;
-  min-width: 30px;
-  max-width: 35px;
+  min-width: 2.5vw;
+  max-width: 2.5vw;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
   background: #ffffff;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 22px;
+          border-radius: 22px;
   z-index: 1;
   -webkit-transform-origin: 4px 0px;
       -ms-transform-origin: 4px 0px;
@@ -417,8 +417,8 @@ body.opened--menu .text-dots-block embed {
 
 .opened--menu#menuToggle span {
   width: 2.2vw;
-  min-width: 30px;
-  max-width: 35px; }
+  min-width: 2.5vw;
+  max-width: 2.5vw; }
 
 #menuToggle span:first-child {
   -webkit-transform-origin: 0% 0%;
@@ -1053,7 +1053,7 @@ body.opened--menu .text-dots-block embed {
   font-family: "Montserrat", sans-serif;
   background-color: #363531;
   color: #ffffff;
-  padding: 50px;
+  padding: 3% 9%;
   font-weight: bold; }
 
 .section-instagram-followers span {
@@ -1067,12 +1067,15 @@ body.opened--menu .text-dots-block embed {
 
 .section-instagram__photo {
   overflow: hidden;
-  width: 25%;
-  height: 25vw;
+  width: 16.6%;
+  height: 16.6vw;
   padding: 0px;
   position: relative; }
   .section-instagram__photo:hover .hover-location {
     opacity: 1; }
+
+.section-instagram__photo embed {
+  width: 2vw; }
 
 .section-instagram__photo img {
   width: 100%;
@@ -1101,7 +1104,12 @@ body.opened--menu .text-dots-block embed {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white; }
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .section-instagram-followers embed {
   width: 2%;
@@ -1264,7 +1272,7 @@ body.opened--menu .text-dots-block embed {
 .footer-section {
   background-color: #363531;
   color: #ffffff;
-  padding: 20px 0 40px 0;
+  padding: 2% 0 5% 0;
   font-weight: 600; }
 
 .footer-client {
@@ -1275,18 +1283,20 @@ body.opened--menu .text-dots-block embed {
   font-family: "Montserrat", sans-serif; }
 
 .footer-client p {
-  padding-top: 20px;
-  letter-spacing: 1px;
-  font-size: 0.77vw; }
+  padding-top: 2vh;
+  letter-spacing: 0.1vw;
+  font-size: 0.77vw;
+  margin-bottom: 0.2vw; }
 
 .footer-client span {
   font-size: 1.4vw;
-  letter-spacing: 3px;
-  line-height: 6px; }
+  letter-spacing: 0.2vw;
+  line-height: 0.6vw; }
 
 .footer-section img {
   display: block;
   margin: 0 auto;
-  width: 75px; }
+  padding-top: 2vh;
+  width: 3vw; }
 
 /*footer*/

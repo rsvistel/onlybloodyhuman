@@ -443,15 +443,15 @@
             var userFeed = new Instafeed({
                 get: 'user',
                 userId: '314886036',
-                limit: 8,
+                limit: 12,
                 resolution: 'standard_resolution',
                 accessToken: '314886036.845c61e.3de4192780f14774b2e7dd78cd66a334',
                 sortBy: 'most-recent',
 //                template: '<div class="col-lg-3 instaimg"><a href="{{i<div class="col-lg-3 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/><p>{{location}}</p></a></div>mage}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/><p>{{location}}</p></a></div>',
                 template: '<div class ="col-sm-3 col-xs-6 section-instagram__photo">\n' +
                 '            <img src="{{image}}">\n' +
-                '<div class="hover-location"><span>{{location}}</span></div>' +
-                '</div>',
+                '<div class="hover-location"><div class = "location"><embed src ="img/instagram/location_pin.svg"/></div><span>{{location}}</span>  </div>' +
+            '</div>',
             });
 
 
