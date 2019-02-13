@@ -157,10 +157,10 @@ p {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -383,7 +383,6 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle input, #menuToggle-mobile input {
   display: block;
-  width: 30px;
   width: 3vw;
   height: 4.1vh;
   position: absolute;
@@ -396,10 +395,8 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle span, #menuToggle-mobile span {
   display: block;
-  width: 2.2vw;
-  min-width: 2.5vw;
-  max-width: 2.5vw;
-  height: 0.6vh;
+  width: 2.5vw;
+  height: 0.25vw;
   margin-bottom: 0.4vw;
   position: relative;
   background: #ffffff;
@@ -417,10 +414,8 @@ body.opened--menu .text-dots-block embed {
   background: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   opacity: 0.55s ease; }
 
-.opened--menu#menuToggle span {
-  width: 2.2vw;
-  min-width: 2.5vw;
-  max-width: 2.5vw; }
+.opened--menu #menuToggle span {
+  width: 2.4vw; }
 
 #menuToggle span:first-child {
   -webkit-transform-origin: 0% 0%;
@@ -493,7 +488,7 @@ body.opened--menu .text-dots-block embed {
   position: absolute;
   width: 30vw;
   height: 125vh;
-  margin: -73px 0 0 -8vw;
+  margin: -8vw 0 0 -8vw;
   padding: 50px;
   padding-top: 125px;
   background: #363531;
@@ -617,7 +612,7 @@ body.opened--menu .text-dots-block embed {
   width: 185%; }
 
 .whole-text-section-about {
-  padding: 5% 10% 5% 7%;
+  padding: 5% 15% 5% 6%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -643,7 +638,8 @@ body.opened--menu .text-dots-block embed {
   margin-top: 0; }
 
 .job-section-about-producer {
-  letter-spacing: -2px; }
+  letter-spacing: -2px;
+  margin-bottom: 0.5vw; }
 
 .now-section-about {
   margin-top: 25%;
@@ -739,7 +735,7 @@ body.opened--menu .text-dots-block embed {
 
 .text-over-progress h6 {
   font-weight: 600;
-  font-size: 0.75vw;
+  font-size: 0.60vw;
   margin-bottom: 0.45vw; }
 
 .progress-section {
@@ -789,7 +785,8 @@ body.opened--menu .text-dots-block embed {
   font-weight: 700;
   line-height: 2vw;
   margin-left: 7px;
-  font-size: 1.6vw; }
+  font-size: 1.6vw;
+  margin-bottom: 0.5vw; }
 
 .large-tittle-section-tools {
   margin: 0; }
@@ -798,8 +795,7 @@ body.opened--menu .text-dots-block embed {
   text-transform: initial;
   opacity: 0.8;
   margin-left: 7px;
-  font-size: 0.7vw;
-  line-height: 1.3vw; }
+  font-size: 0.9vw; }
 
 .tittles-margin-section-tools {
   margin-bottom: 75px;
@@ -843,7 +839,9 @@ body.opened--menu .text-dots-block embed {
   margin: 7% 0 7% 0; }
 
 .text-under-img-section-tools {
-  padding: 0 15%; }
+  padding: 0 15%;
+  font-size: 0.7vw;
+  line-height: 1.3vw; }
 
 .icon-dji, .icon-movi {
   display: none;
@@ -1070,7 +1068,8 @@ body.opened--menu .text-dots-block embed {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 0.8vw;
-  display: block; }
+  display: block;
+  line-height: 0.5vw; }
 
 .section-instagram__photo {
   overflow: hidden;

@@ -179,7 +179,7 @@ p
   height: 63vh
   display: flex
   flex-direction: column
-  align-items: flex-end
+  align-items: center
   justify-content: center
   position: fixed
   top: 0
@@ -346,7 +346,7 @@ body.opened--menu .text-dots-block embed
 
 #menuToggle input, #menuToggle-mobile input
   display: block
-  width: 30px
+  //width: 30px
   width: 3vw
   height: 4.1vh
   position: absolute
@@ -360,10 +360,8 @@ body.opened--menu .text-dots-block embed
 
 #menuToggle span, #menuToggle-mobile span
   display: block
-  width: 2.2vw
-  min-width: 2.5vw
-  max-width: 2.5vw
-  height: 0.6vh
+  width: 2.5vw
+  height: 0.25vw
   margin-bottom: 0.4vw
   position: relative
   background: #ffffff
@@ -374,10 +372,8 @@ body.opened--menu .text-dots-block embed
   background: 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
   opacity: 0.55s ease
 
-.opened--menu#menuToggle span
-  width: 2.2vw
-  min-width: 2.5vw
-  max-width: 2.5vw
+.opened--menu #menuToggle span
+  width: 2.4vw
 
 #menuToggle span:first-child
   transform-origin: 0% 0%
@@ -431,7 +427,7 @@ body.opened--menu .text-dots-block embed
   position: absolute
   width: 30vw
   height: 125vh
-  margin: -73px 0 0 -8vw
+  margin: -8vw 0 0 -8vw
   padding: 50px
   padding-top: 125px
   background: $primary-color
@@ -525,7 +521,7 @@ body.opened--menu .text-dots-block embed
 
 .whole-text-section-about
   //margin-top: -10%
-  padding: 5% 10% 5% 7%
+  padding: 5% 15% 5% 6%
   display: flex
   flex-direction: column
   justify-content: center
@@ -542,6 +538,7 @@ body.opened--menu .text-dots-block embed
 
 .job-section-about-producer
   letter-spacing: -2px
+  margin-bottom: 0.5vw
 
 .now-section-about
   margin-top: 25%
@@ -631,7 +628,7 @@ body.opened--menu .text-dots-block embed
 .text-over-progress h6
   font-weight: 600
   //font-size: 11px
-  font-size: 0.75vw
+  font-size: 0.60vw
   margin-bottom: 0.45vw
 
 .progress-section
@@ -679,6 +676,7 @@ body.opened--menu .text-dots-block embed
   line-height: 2vw
   margin-left: 7px
   font-size: 1.6vw
+  margin-bottom: 0.5vw
 
 .large-tittle-section-tools
   margin: 0
@@ -687,8 +685,7 @@ body.opened--menu .text-dots-block embed
   text-transform: initial
   opacity: 0.8
   margin-left: 7px
-  font-size: 0.7vw
-  line-height: 1.3vw
+  font-size: 0.9vw
 
 .tittles-margin-section-tools
   margin-bottom: 75px
@@ -723,6 +720,8 @@ body.opened--menu .text-dots-block embed
 
 .text-under-img-section-tools
   padding: 0 15%
+  font-size: 0.7vw
+  line-height: 1.3vw
 
 .icon-dji, .icon-movi
   display: none
@@ -908,6 +907,7 @@ body.opened--menu .text-dots-block embed
   text-transform: uppercase
   font-size: 0.8vw
   display: block
+  line-height: 0.5vw
 
 .section-instagram__photo
   overflow: hidden
