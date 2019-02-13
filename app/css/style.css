@@ -352,6 +352,10 @@ body.opened--menu .text-dots-block embed {
   margin-top: 40px;
   z-index: 9999; }
 
+.hamburger-menu-banner-section.animation {
+  height: 4vh;
+  margin-top: 0.5vh; }
+
 .hamburger-menu-banner-section {
   display: -webkit-box;
   display: -webkit-flex;
@@ -384,7 +388,7 @@ body.opened--menu .text-dots-block embed {
 #menuToggle input, #menuToggle-mobile input {
   display: block;
   width: 3vw;
-  height: 4.1vh;
+  height: 4vh;
   position: absolute;
   top: -0.3vw;
   left: -0.2vw;
@@ -395,17 +399,19 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle span, #menuToggle-mobile span {
   display: block;
-  width: 2.5vw;
-  height: 0.25vw;
-  margin-bottom: 0.4vw;
+  width: 2.2vw;
+  min-width: 2.5vw;
+  max-width: 2.5vw;
+  height: 0.6vh;
+  margin-bottom: 0.45vw;
   position: relative;
   background: #ffffff;
   -webkit-border-radius: 3vw;
           border-radius: 3vw;
   z-index: 1;
-  -webkit-transform-origin: 0.4vw 0;
-      -ms-transform-origin: 0.4vw 0;
-          transform-origin: 0.4vw 0;
+  -webkit-transform-origin: 0.2vw 0;
+      -ms-transform-origin: 0.2vw 0;
+          transform-origin: 0.2vw 0;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -784,9 +790,8 @@ body.opened--menu .text-dots-block embed {
 .tittles-section-tools {
   font-weight: 700;
   line-height: 2vw;
-  margin-left: 7px;
-  font-size: 1.6vw;
-  margin-bottom: 0.5vw; }
+  margin-left: 0.6vw;
+  font-size: 1.6vw; }
 
 .large-tittle-section-tools {
   margin: 0; }
@@ -794,18 +799,22 @@ body.opened--menu .text-dots-block embed {
 .text-under-tittles-section-tools {
   text-transform: initial;
   opacity: 0.8;
-  margin-left: 7px;
-  font-size: 0.9vw; }
+  margin-left: 0.6vw;
+  font-size: 0.7vw;
+  line-height: 1.3vw; }
 
 .tittles-margin-section-tools {
-  margin-bottom: 75px;
-  margin-top: 15px; }
+  margin-top: 2.5vh;
+  margin-bottom: 12.5vh; }
 
 #section-tools hr {
   border: 1.1px solid #eee;
   width: 100%;
-  margin-top: 15%;
-  margin-bottom: 2px; }
+  margin-top: 13%;
+  margin-bottom: 0.2vw;
+  margin-left: 0.6vw;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .under-line-block {
   display: -webkit-box;
@@ -824,7 +833,8 @@ body.opened--menu .text-dots-block embed {
 
 .under-line-block embed {
   width: 2.2%;
-  margin-bottom: 2px; }
+  margin-bottom: 0.1vh;
+  max-width: 210px; }
 
 .over-line-block {
   padding-right: 15%; }

@@ -264,8 +264,6 @@
     text-align: start; } }
 
 @media (max-width: 600px) {
-  #menuToggle {
-    left: 0; }
   .left-logo-banner-section embed {
     width: 5vw;
     max-width: 20px; }
@@ -303,10 +301,6 @@
     max-height: 255px; }
   .client-contact-list-img {
     height: 40vh; } }
-
-@media (max-width: 800px) {
-  #menuToggle {
-    left: 0; } }
 
 @media (min-width: 769px) and (max-width: 999px) {
   .img-photo-man-section-about {
