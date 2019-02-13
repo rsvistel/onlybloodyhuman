@@ -248,15 +248,51 @@ $(document).ready(function () {
             }
         }
     }
-  
+
     function animateCounter() {
         $("#section-instagram").unbind("scroll");
         var count = 1;
+        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+        var followers;
+        $.ajax({
+            method: 'GET',
+            url: url,
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            success: function (response) {
+                followers = parseFloat(getRepString(response.data.counts.followed_by));
+            }
+        });
         countdown = setInterval(function () {
             $("span.countup").html(count + "k");
-            count++;
-            if (count === 50) clearInterval(countdown);
-        }, 30);
+            count += 0.1;
+            count = parseFloat(count.toFixed(1));
+            if (count >= parseFloat(followers+0.1)) clearInterval(countdown);
+        }, 5);
+
+        function getRepString (rep) {
+            rep = rep+'';
+            if (rep < 1000) return rep;
+            if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+            return (rep/1000).toFixed(rep % 1000 != 0);
+        }
+
+        $(document).bind('wheel', function (e) {
+            var delta = e.originalEvent.deltaY;
+            if (delta > 0) {
+                if (sections[active][0].scrollHeight - sections[active].scrollTop()-1 <= sections[active].outerHeight() && active < sections.length-1) {
+                    setTimeout(function () {
+                        clearInterval(countdown)
+                    },1000);
+                }
+            } else {
+                if (sections[active].scrollTop() === 0 && active > 0) {
+                    setTimeout(function () {
+                        clearInterval(countdown)
+                    },1000);
+                }
+            }
+        });
     }
   
     function runSubscribersCounter() {
