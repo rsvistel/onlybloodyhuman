@@ -528,7 +528,7 @@ body.opened--menu .text-dots-block embed
 
 .whole-text-section-about
   //margin-top: -10%
-  padding: 5% 10% 5% 7%
+  padding: 5% 15% 5% 6%
   display: flex
   flex-direction: column
   justify-content: center
@@ -681,19 +681,22 @@ body.opened--menu .text-dots-block embed
 .tittles-section-tools
   font-weight: 700
   line-height: 2vw
-  margin: 0 0.6vw
+  margin: 0 0.6vw 0 0
   font-size: 1.6vw
 
 .large-tittle-section-tools
   margin: 0
+  margin-left: -0.5vw
 
 .text-under-tittles-section-tools
   text-transform: initial
   opacity: 0.8
-  margin: 0 0.6vw
+  margin: 0 0.6vw 0 0
   font-size: 0.75vw
   padding: 1% 0
   line-height: 1.5vw
+  &.text-under-img-section-tools
+    margin: 0 0.6vw
 
 .tittles-margin-section-tools
   margin-top: 2.5vh
@@ -929,9 +932,10 @@ body.opened--menu .text-dots-block embed
   overflow: hidden
   width: 16.6%
   height: 16.6vw
-  padding: 0px
+  padding: 0
   position: relative
-  border: 1px solid #f0f2f2
+  border: 0.5px solid #f0f2f2
+  border-bottom-width: 1px
   &:hover .hover-location
     opacity: 1
 
@@ -1107,7 +1111,7 @@ body.opened--menu .text-dots-block embed
 .footer-section
   background-color: $primary-color
   color: #ffffff
-  padding: 1.9vw 0 1.3vw 0
+  padding: 1.9vw 0 3.3vw 0
   font-weight: 600
 
 .footer-client
