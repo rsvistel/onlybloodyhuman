@@ -15,7 +15,7 @@ $secondary-font: ProximaNova
 h1
   //font-size: 115px
   font-size: 9vw
-  line-height: 7.5vw
+  line-height: 7vw
   text-indent: -3px
   letter-spacing: -1px
 
@@ -138,7 +138,7 @@ p
 //
 //
 .left-logo-banner-section embed
-  max-width: 3%
+  max-width: 2.6%
 
 .whole-text-left-logo
   opacity: 0
@@ -545,6 +545,7 @@ body.opened--menu .text-dots-block embed
 
 .job-section-about-producer
   letter-spacing: -2px
+  margin-bottom: 0.5vw
 
 .now-section-about
   margin-top: 25%
@@ -634,7 +635,7 @@ body.opened--menu .text-dots-block embed
 .text-over-progress h6
   font-weight: 600
   //font-size: 11px
-  font-size: 0.75vw
+  font-size: 0.6vw
   margin-bottom: 0.45vw
 
 .progress-section
@@ -680,7 +681,7 @@ body.opened--menu .text-dots-block embed
 .tittles-section-tools
   font-weight: 700
   line-height: 2vw
-  margin-left: 0.6vw
+  margin: 0 0.6vw
   font-size: 1.6vw
 
 .large-tittle-section-tools
@@ -689,13 +690,14 @@ body.opened--menu .text-dots-block embed
 .text-under-tittles-section-tools
   text-transform: initial
   opacity: 0.8
-  margin-left: 0.6vw
-  font-size: 0.7vw
-  line-height: 1.3vw
+  margin: 0 0.6vw
+  font-size: 0.75vw
+  padding: 1% 0
+  line-height: 1.5vw
 
 .tittles-margin-section-tools
   margin-top: 2.5vh
-  margin-bottom: 12.5vh
+  margin-bottom: 11.5vh
 
 #section-tools hr
   border: 1.1px solid #eee
@@ -703,6 +705,7 @@ body.opened--menu .text-dots-block embed
   margin-top: 13%
   margin-bottom: 0.2vw
   margin-left: 0.6vw
+  margin-right: 0.6vw
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
   box-sizing: border-box
@@ -731,6 +734,8 @@ body.opened--menu .text-dots-block embed
 
 .text-under-img-section-tools
   padding: 1% 15%
+  font-size: 0.7vw
+  line-height: 1.3vw
 
 .icon-dji, .icon-movi
   display: none
@@ -916,6 +921,7 @@ body.opened--menu .text-dots-block embed
   text-transform: uppercase
   font-size: 0.8vw
   display: block
+  line-height: 0.3vw
 
 .section-instagram__photo
   overflow: hidden
@@ -927,8 +933,14 @@ body.opened--menu .text-dots-block embed
   &:hover .hover-location
     opacity: 1
 
+.section-instagram__photo:nth-child(-n+6)
+  border-top: none
+
+.section-instagram__photo:nth-child(n+6)
+  border-bottom: none
+
 .section-instagram__photo embed
-  width: 2vw
+  width: 1.2vw
 
 .section-instagram__photo img
   width: 100%
@@ -950,9 +962,9 @@ body.opened--menu .text-dots-block embed
   flex-direction: column
 
 .section-instagram-followers embed
-  width: 1.65%
+  width: 1.8%
   min-width: 16px
-  margin-right: 6px
+  margin-right: 0.85vw
 
 .logo-inst-text
   display: flex
@@ -1093,7 +1105,7 @@ body.opened--menu .text-dots-block embed
 .footer-section
   background-color: $primary-color
   color: #ffffff
-  padding: 24px 0 16px 0
+  padding: 1.9vw 0 1.3vw 0
   font-weight: 600
 
 .footer-client
@@ -1105,15 +1117,17 @@ body.opened--menu .text-dots-block embed
 
 .footer-client p
   padding-top: 2vh
-  letter-spacing: 0.1vw
-  font-size: 0.77vw
+  letter-spacing: 0.05vw
+  font-size: 0.55vw
   margin-bottom: 0.2vw
+  font-family: $primary-font
+  line-height: 1.2vw
+
 
 .footer-client span
-  //font-size: 16pt
-  font-size: 1.4vw
-  letter-spacing: 0.2vw
-  line-height: 0.6vw
+  letter-spacing: 0.28vw
+  font-size: 1.2vw
+  line-height: 0.3vw
 
 .footer-section img
   display: block
