@@ -1072,8 +1072,10 @@ body.opened--menu .text-dots-block embed {
   font-family: "Montserrat", sans-serif;
   background-color: #363531;
   color: #ffffff;
-  padding: 3% 9%;
-  font-weight: bold; }
+  padding-left: 9%;
+  font-weight: bold;
+  margin-top: 5%;
+  margin-bottom: 5%; }
 
 .section-instagram-followers span {
   font-size: 1.8vw; }
