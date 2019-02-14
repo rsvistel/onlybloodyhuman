@@ -476,9 +476,7 @@
   #menuToggle span {
     width: 2vw;
     min-width: 1.8vw;
-    max-width: 2.1vw; }
-  .left-logo-banner-section {
-    margin-top: 0; } }
+    max-width: 2.1vw; } }
 
 @media (max-width: 767px) {
   .photo-half-section-tools {

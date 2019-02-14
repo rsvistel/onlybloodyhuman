@@ -298,8 +298,7 @@ body.opened--menu .text-dots-block embed {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center;
-  margin-top: 0.1vw; }
+          align-items: center; }
 
 .whole-text-left-logo {
   -webkit-box-orient: vertical;
@@ -399,9 +398,9 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle span, #menuToggle-mobile span {
   display: block;
-  width: 2.2vw;
-  min-width: 2.25vw;
-  max-width: 2.33vw;
+  width: 2.1vw;
+  min-width: 2.1vw;
+  max-width: 2.35vw;
   height: 0.5vh;
   margin-bottom: 16%;
   position: relative;
