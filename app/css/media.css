@@ -357,7 +357,15 @@
     height: 75vh;
     max-height: 800px; }
   .video-references, .section-outdoor-professional {
-    max-height: 800px; } }
+    max-height: 800px; }
+  #menuToggle span {
+    width: 3.2vw;
+    max-width: 3.2vw;
+    height: 0.5vh; }
+  .opened--menu #menuToggle span {
+    width: 3.5vw;
+    min-width: 2.9vw;
+    max-width: 5vw; } }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .img-photo-man-section-about {
@@ -384,6 +392,12 @@
     max-width: 145px; }
   #section-tools, .section-instagram {
     height: auto; } }
+
+@media (min-width: 1000px) and (max-width: 1250px) {
+  #menuToggle span {
+    width: 3vw;
+    min-width: 2.6vw;
+    max-width: 3.1vw; } }
 
 @media (min-width: 451px) and (max-width: 768px) {
   .logo-client-list embed {
@@ -454,7 +468,17 @@
     margin-right: 1vw; }
   .gray-half-section-tools {
     display: block;
-    padding: 14% 9% 8% 9%; } }
+    padding: 14% 9% 8% 9%; }
+  .opened--menu #menuToggle span {
+    width: 1.9vw;
+    min-width: 1.8vw;
+    max-width: 1.9vw; }
+  #menuToggle span {
+    width: 2vw;
+    min-width: 1.8vw;
+    max-width: 2.1vw; }
+  .left-logo-banner-section {
+    margin-top: 0; } }
 
 @media (max-width: 767px) {
   .photo-half-section-tools {
