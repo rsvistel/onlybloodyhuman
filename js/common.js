@@ -187,7 +187,7 @@ $(document).ready(function () {
 
         if ($(this).hasClass('instagram-counter')) {
             setTimeout(function () {
-                animateCounter();
+                runSubscribersCounter()
             },700);
 
         }
@@ -264,11 +264,12 @@ $(document).ready(function () {
             }
         });
         countdown = setInterval(function () {
-            $("span.countup").html(count + "k");
-            count += 0.1;
-            count = parseFloat(count.toFixed(1));
-            if (count >= parseFloat(followers+0.1)) clearInterval(countdown);
-        }, 5);
+            if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
+                $("span.countup").html(count + "k");
+                count += 0.1;
+                count = parseFloat(count.toFixed(1));
+            }
+        }, 3);
 
         function getRepString (rep) {
             rep = rep+'';
@@ -277,22 +278,20 @@ $(document).ready(function () {
             return (rep/1000).toFixed(rep % 1000 != 0);
         }
 
-        $(document).bind('wheel', function (e) {
-            var delta = e.originalEvent.deltaY;
-            if (delta > 0) {
-                if (sections[active][0].scrollHeight - sections[active].scrollTop()-1 <= sections[active].outerHeight() && active < sections.length-1) {
-                    setTimeout(function () {
-                        clearInterval(countdown)
-                    },1000);
-                }
-            } else {
-                if (sections[active].scrollTop() === 0 && active > 0) {
-                    setTimeout(function () {
-                        clearInterval(countdown)
-                    },1000);
-                }
-            }
-        });
+        // $(document).bind('wheel', function (e) {
+        //     var delta = e.originalEvent.deltaY;
+        //     if (delta > 0) {
+        //         if ($('#section-instagram')[0].scrollHeight - sections[active].scrollTop()-1 <= $('#section-instagram').outerHeight() && active < sections.length-1) {
+        //             clearInterval(countdown);
+        //             count = 1
+        //         }
+        //     } else {
+        //         if ($('#section-instagram').scrollTop() === 0 && active > 0) {
+        //             clearInterval(countdown);
+        //             count = 1
+        //         }
+        //     }
+        // });
     }
   
     function runSubscribersCounter() {
