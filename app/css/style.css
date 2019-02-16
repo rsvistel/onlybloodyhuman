@@ -5,7 +5,7 @@
 
 h1 {
   font-size: 9vw;
-  line-height: 7vw;
+  line-height: 8vw;
   text-indent: -3px;
   letter-spacing: -1px; }
 
@@ -616,10 +616,10 @@ body.opened--menu .text-dots-block embed {
   margin-left: 25px; }
 
 .img-photo-man-section-about {
-  width: 185%; }
+  width: 180%; }
 
 .whole-text-section-about {
-  padding: 5% 15% 5% 6%;
+  padding: 5% 15% 4% 6%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -809,7 +809,7 @@ body.opened--menu .text-dots-block embed {
     margin: 0 0.6vw; }
 
 .tittles-margin-section-tools {
-  margin-top: 2.5vh;
+  margin-top: 0.9vh;
   margin-bottom: 11.5vh; }
 
 #section-tools hr {
