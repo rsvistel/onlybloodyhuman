@@ -44,9 +44,9 @@ $(document).ready(function () {
             if (delta > 0) {
                 if (sections[active][0].scrollHeight - sections[active].scrollTop()-1 <= sections[active].outerHeight() && active < sections.length-1) {
                     if (sections[active].hasClass('tools-camera')) {
-                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', 'img/section-tools/dji_inspire.jpg');
+                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', 'img/section-tools/dji_inspire.jpg', false);
                     } else if (sections[active].hasClass('tools-dji')) {
-                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', 'img/section-tools/movi_pro.jpg');
+                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', 'img/section-tools/movi_pro.jpg', false);
                     } else if (sections[active].hasClass('tools-movi')) {
                         sections[active].css('overflow', 'hidden');
                         scroll('down');
@@ -55,16 +55,16 @@ $(document).ready(function () {
             } else {
                 if (sections[active].scrollTop() === 0 && active > 0) {
                     if (sections[active].hasClass('tools-movi')) {
-                        changeTool($('.icon-movi'), $('.icon-dji'), 'tools-movi', 'tools-dji', 'img/section-tools/dji_inspire.jpg');
+                        changeTool($('.icon-movi'), $('.icon-dji'), 'tools-movi', 'tools-dji', 'img/section-tools/dji_inspire.jpg', true);
                     } else if (sections[active].hasClass('tools-dji')) {
-                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', 'img/section-tools/red_camera.jpg');
+                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', 'img/section-tools/red_camera.jpg', true);
                     } else if (sections[active].hasClass('tools-camera')) {
                         sections[active].css('overflow', 'hidden');
                         scroll('up');
                     }
                 }
             }
-            function changeTool(current_icon, new_icon, current_class, new_class, new_bg) {
+            function changeTool(current_icon, new_icon, current_class, new_class, new_bg, up) {
                 current_icon.animate({'opacity': '0'}, 200);
                 setTimeout(function () {
                     current_icon.hide();
@@ -72,16 +72,27 @@ $(document).ready(function () {
                 }, 200);
                 $('.photo-half-section-tools')
                     .append('<div class="after"></div>');
-                $('.photo-half-section-tools .after')
-                    .css('background-image', 'url("' + new_bg +'")')
-                    .animate({'opacity': '1'}, 500);
+                if (up) {
+                    $('.photo-half-section-tools .after')
+                        .css('top', '-100%')
+                        .css('background-image', 'url("' + new_bg +'")')
+                        .animate({'top': '0'}, 500);
+                } else {
+                    $('.photo-half-section-tools .after')
+                        .css('top', '100%')
+                        .css('background-image', 'url("' + new_bg +'")')
+                        .animate({'top': '0'}, 500);
+                }
                 setTimeout(function () {
                     $('.photo-half-section-tools').css('background-image', 'url("' + new_bg +'")');
                     setTimeout(function () {
                         $('.photo-half-section-tools .after').remove();
                     },50);
                 }, 500);
-                $('#section-tools').removeClass(current_class).addClass(new_class);
+                $('#section-tools').removeClass(current_class).addClass(new_class).css('overflow', 'hidden');
+                setTimeout(function () {
+                    $('#section-tools').css('overflow-y', 'scroll');
+                }, 500);
                 $(document).unbind('wheel');
                 setTimeout(function () { bindTools() }, 1000);
             }
