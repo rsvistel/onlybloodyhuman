@@ -5,7 +5,7 @@
 
 h1 {
   font-size: 9vw;
-  line-height: 7vw;
+  line-height: 8vw;
   text-indent: -3px;
   letter-spacing: -1px; }
 
@@ -143,7 +143,7 @@ p {
   width: 100%; }
 
 .dots-block-section-banner {
-  padding-right: 3.5%;
+  padding-right: 4.3%;
   width: 14%;
   float: left;
   margin-top: 10vh;
@@ -398,11 +398,11 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle span, #menuToggle-mobile span {
   display: block;
-  width: 2.1vw;
-  min-width: 2.1vw;
-  max-width: 2.35vw;
-  height: 0.5vh;
-  margin-bottom: 16%;
+  width: 1.9vw;
+  min-width: 1.9vw;
+  max-width: 2.1vw;
+  height: 0.45vh;
+  margin-bottom: 13%;
   position: relative;
   background: #ffffff;
   -webkit-border-radius: 3vw;
@@ -420,9 +420,9 @@ body.opened--menu .text-dots-block embed {
   opacity: 0.55s ease; }
 
 .opened--menu #menuToggle span {
-  width: 2.4vw;
-  min-width: 2.3vw;
-  max-width: 2.4vw; }
+  width: 1.8vw;
+  min-width: 1.7vw;
+  max-width: 2vw; }
 
 #menuToggle span:first-child {
   -webkit-transform-origin: 0% 0%;
@@ -616,10 +616,10 @@ body.opened--menu .text-dots-block embed {
   margin-left: 25px; }
 
 .img-photo-man-section-about {
-  width: 185%; }
+  width: 180%; }
 
 .whole-text-section-about {
-  padding: 5% 15% 5% 6%;
+  padding: 5% 15% 4% 6%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -810,7 +810,7 @@ body.opened--menu .text-dots-block embed {
     margin: 0 0.6vw; }
 
 .tittles-margin-section-tools {
-  margin-top: 2.5vh;
+  margin-top: 0.9vh;
   margin-bottom: 11.5vh; }
 
 #section-tools hr {
@@ -850,9 +850,9 @@ body.opened--menu .text-dots-block embed {
   text-align: center; }
 
 .under-line-block .img-under-line-block embed {
-  min-width: 10.5vw;
-  max-width: 12vw;
-  height: 7vw;
+  min-width: 9.5vw;
+  max-width: 11vw;
+  height: 6vw;
   margin: 7% 0 7% 0; }
 
 .text-under-img-section-tools {

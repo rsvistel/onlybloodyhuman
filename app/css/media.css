@@ -126,7 +126,8 @@
   .footer-client p {
     font-size: 11px; }
   .footer-client span, .lines-job-text-center {
-    font-size: 14px; }
+    font-size: 14px;
+    line-height: 30px; }
   .left-logo-banner-section {
     margin-top: 15px;
     margin-bottom: 10px; }
@@ -137,18 +138,25 @@
     width: 1.5vw;
     height: 3.5px;
     min-width: 27px; }
-  .inner-content-section-banner1 {
-    margin-top: 0; } }
+  .inner-content-section-banner {
+    margin-top: 0; }
+  .footer-section img {
+    width: 6vw;
+    padding: 0 0 2vw 0; } }
 
 @media (max-width: 450px) {
   .text-center-banner-section {
-    max-height: 140px;
-    margin-bottom: 10%; }
+    max-height: 175px; }
   .video-references {
     max-height: 75%;
     min-width: 100%;
     max-width: 130%;
-    min-height: auto; } }
+    min-height: auto; }
+  .footer-client p {
+    font-size: 9px; }
+  .footer-client span {
+    font-size: 12px;
+    line-height: 25px; } }
 
 @media (max-width: 450px) and (max-height: 737px) {
   .video-references {
@@ -171,7 +179,9 @@
   .text-dots-block {
     width: 100%; }
   .dot-section-banner {
-    margin: 8px 0; } }
+    margin: 8px 0; }
+  .section-instagram-followers a {
+    line-height: 1.5vw; } }
 
 @media (max-width: 768px) {
   .outdoor-section {
@@ -260,7 +270,9 @@
   .inner-content-section-banner {
     margin-top: 0; }
   .outdoor-section__text--main p {
-    text-align: start; } }
+    text-align: start; }
+  .section-instagram-followers a {
+    line-height: 3vw; } }
 
 @media (max-width: 600px) {
   .left-logo-banner-section embed {
@@ -272,7 +284,9 @@
   .logo-client-list-discovery embed, .logo-client-list-gsk embed {
     min-width: 110px;
     max-width: 130px;
-    height: 60vw; } }
+    height: 60vw; }
+  .section-instagram-followers a {
+    line-height: 5vw; } }
 
 @media (min-width: 1000px) and (max-width: 1100px) {
   #section-logos {
@@ -297,7 +311,7 @@
 @media (min-width: 601px) and (max-width: 767px) {
   .text-center-banner-section {
     height: 35vh;
-    max-height: 255px; }
+    max-height: 275px; }
   .client-contact-list-img {
     height: 40vh; } }
 
@@ -363,9 +377,9 @@
     max-width: 3.2vw;
     height: 0.5vh; }
   .opened--menu #menuToggle span {
-    width: 3.5vw;
-    min-width: 2.9vw;
-    max-width: 5vw; } }
+    width: 3.2vw;
+    min-width: 3vw;
+    max-width: 3.4vw; } }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .img-photo-man-section-about {
@@ -395,9 +409,13 @@
 
 @media (min-width: 1000px) and (max-width: 1250px) {
   #menuToggle span {
-    width: 3vw;
-    min-width: 2.6vw;
-    max-width: 3.1vw; } }
+    width: 2.5vw;
+    min-width: 2.4vw;
+    max-width: 2.7vw; }
+  .opened--menu #menuToggle span {
+    width: 2.4vw;
+    min-width: 2.2vw;
+    max-width: 2.5vw; } }
 
 @media (min-width: 451px) and (max-width: 768px) {
   .logo-client-list embed {
@@ -459,19 +477,21 @@
   .text-left-logo {
     font-size: 0.6vw; }
   .img-photo-man-section-about {
-    width: 145%;
+    width: 140%;
     margin-right: 1vw; }
   .gray-half-section-tools {
     display: block;
     padding: 14% 9% 8% 9%; }
   .opened--menu #menuToggle span {
-    width: 1.9vw;
-    min-width: 1.8vw;
-    max-width: 1.9vw; }
+    width: 1.5vw;
+    min-width: 1.4vw;
+    max-width: 1.6vw; }
   #menuToggle span {
-    width: 2vw;
-    min-width: 1.8vw;
-    max-width: 2.1vw; } }
+    width: 1.5vw;
+    min-width: 1.4vw;
+    max-width: 1.6vw; }
+  .hamburger-menu-banner-section.animation {
+    padding-top: 0.3%; } }
 
 @media (max-width: 767px) {
   .photo-half-section-tools {
@@ -479,3 +499,15 @@
     min-height: 350px; }
   .under-line-block embed {
     width: 3.2%; } }
+
+@media (min-width: 1550px) and (max-width: 1999px) {
+  #menuToggle span {
+    width: 1.7vw;
+    min-width: 1.7vw;
+    max-width: 2vw; }
+  .opened--menu #menuToggle span {
+    width: 1.5vw;
+    min-width: 1.5vw;
+    max-width: 1.8vw; }
+  .hamburger-menu-banner-section.animation {
+    padding-top: 0.35%; } }
