@@ -21,12 +21,13 @@ h1
 
 h2
   //font-size: 72px
-  font-size: 4.2vw
+  font-size: 4.8vw
   margin-left: -3px
+  letter-spacing: 0.05vw
 
 h3
   //font-size: 24px
-  font-size: 1.7vw
+  font-size: 1.55vw
 
 h1, h2, h3, h5, h6
   font-weight: 700
@@ -34,7 +35,7 @@ h1, h2, h3, h5, h6
   text-transform: uppercase
 
 h6
-  font-size: 0.9vw
+  font-size: 0.8vw
 
 p
   //font-size: 12px
@@ -326,12 +327,41 @@ body.opened--menu .text-dots-block embed
 
 
 //hamburger menu
-.hamburger-menu-banner-section.animation
-  height: 4vh
+.bar1, .bar2, .bar3
+  width: 1.9vw
+  min-width: 1.9vw
+  max-width: 2.1vw
+  height: 0.47vh
+  background-color: white
+  margin: 0.35% 0
+  transition: 0.4s
+  cursor: pointer
+  border-radius: 5px
+
+.change .bar1, .change .bar2, .change .bar3
+  margin: 0.53% 0
+
+.change .bar1
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px)
+  transform: rotate(-45deg) translate(-9px, 6px)
+
+.change .bar2
+  opacity: 0
+
+.change .bar3
+  -webkit-transform: rotate(45deg) translate(-8px, -8px)
+  transform: rotate(45deg) translate(-8px, -8px)
+
+//
+//.hamburger-menu-banner-section.animation
+//  height: 4vh
 
 .hamburger-menu-banner-section
   display: flex
-  justify-content: flex-end
+  flex-direction: column
+  align-items: flex-end
+  padding-right: 4.3%
+
 .hamburger-menu-banner-section a
   text-decoration: none
   color: #232323
@@ -778,13 +808,13 @@ body.opened--menu .text-dots-block embed
   overflow: hidden
 
 .outdoor-section__text
-  width: 30%
+  width: 26.5%
   text-align: right
   position: absolute
-  right: 10%
+  right: 13%
   z-index: 1
   overflow: hidden
-  top: 50%
+  top: 53%
   transform: translateY(-50%)
 
 .outdoor-section__text
@@ -805,11 +835,11 @@ body.opened--menu .text-dots-block embed
   text-align: right
 
 .outdoor-section__text--main p
-  margin: 7% 0 0 0
+  margin: 6% 0 0 0
 
 .outdoor-section-block
   display: flex
-  padding: 10% 9% 3% 9%
+  padding: 9.5% 9% 1.5% 9%
   text-align: center
 
 .outdoor-section__travel
@@ -822,8 +852,8 @@ body.opened--menu .text-dots-block embed
 .outdoor-section hr
   border: none
   border-top: 2px solid #f0f2f2
-  margin: 0
-  padding-bottom: 2vh
+  padding-bottom: 1.4vh
+  margin: 0 1.5vw
 
 .outdoor-section__text
   text-align: left
@@ -844,6 +874,9 @@ body.opened--menu .text-dots-block embed
    position: static
   width: 100%
 
+.outdoor-section__image.icon-travel
+  padding: 0.8vw
+
 .outdoor-section__image .col-sm-3
   padding-right: 0
   padding-left: 0
@@ -852,7 +885,7 @@ body.opened--menu .text-dots-block embed
   visibility: visible
 
 .arrow-down-icon
-  padding: 0 2.9vw 1.1vw 2.9vw
+  padding: 0 2.9vw 0.8vw 2.9vw
 
 #arrow-skills
   position: relative
@@ -871,20 +904,29 @@ body.opened--menu .text-dots-block embed
   width: 3vw
   height: 3vw
 
+.icon-avalanche embed
+  width: 2.4vw
+
+.icon-desert embed, .icon-jungle embed
+  width: 2.2vw
+
+.icon-wilderness embed
+  width: 2.6vw
+
 .outdoor-section__image .numberCircle
-  font-size: 1.1vw
+  font-size: 0.9vw
   border-radius: 50%
-  width: 3vw
-  height: 3vw
+  width: 2.1vw
+  height: 2.1vw
   background: none
-  border: 2px white solid
+  border: 0.2vw #f0f2f2 solid
   color: #ffffff
   display: flex
   justify-content: center
   align-items: center
   font-family: $primary-font
   margin: 0 auto
-  font-weight: 500
+  font-weight: 600
 
 .outdoor-section__image .numberCircle + p
   padding-top: 1vw
@@ -894,6 +936,7 @@ body.opened--menu .text-dots-block embed
   padding-top: 0.5vw
   line-height: normal
   white-space: pre-line
+  font-size: 0.8vw
 
 .outdoor-section
   text-align: center
