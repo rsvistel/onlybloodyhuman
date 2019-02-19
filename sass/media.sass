@@ -105,8 +105,8 @@
   .now-section-about
     margin-top: 10%
 
-  .dots-block-section-banner
-    display: none
+  //.dots-block-section-banner
+  //  display: none
 
   .text-under-img-section-tools, .over-line-block
     padding: 0
@@ -157,14 +157,15 @@
     margin-bottom: 10px
 
   #menuToggle-mobile
+    right: 0
     top: 0
-    margin-top: 18px
+    margin-top: 4.2%
+    margin-right: 4.2%
 
   #menuToggle-mobile span
     width: 1.5vw
     height: 3.5px
     min-width: 27px
-
 
   .inner-content-section-banner
     margin-top: 0
@@ -173,10 +174,43 @@
     width: 6vw
     padding: 0 0 2vw 0
 
+@media (max-width: 768px)
+  .dots-block-section-banner
+    height: 45vh
+  #menu-mobile
+    height: 70vh
+  #menuToggle-mobile input
+    width: 5vw
+    height: 5vh
+    left: -0.3vw
+
+@media (max-width: 768px)
+  .left-logo-banner-section
+    margin-top: 2%
+    margin-left: 8%
+  .inner-content-section-banner-fixed
+    margin: 0
+    top: 10px
+    width: 50%
+
+  .left-logo-banner-section embed
+    width: 5vw
+    max-width: 20px
 
 @media (max-width: 450px)
+
   .text-center-banner-section
     max-height: 175px
+
+  .left-logo-banner-section
+    margin-top: 2%
+    margin-left: 8%
+
+  .inner-content-section-banner-fixed
+    margin: 0
+    position: absolute
+    top: 10px
+    width: 50%
 
   .video-references
     max-height: 75%
@@ -465,6 +499,15 @@
     min-width: 3vw
     max-width: 3.4vw
 
+  .bar1, .bar2, .bar3
+    width: 3vw
+    max-width: 3vw
+    height: 0.5vh
+
+  .change .bar1, .change .bar2, .change .bar3
+    margin: 1% 0
+
+
 @media (min-width: 1000px) and (max-width: 1200px)
   .img-photo-man-section-about
     width: 190%
@@ -502,15 +545,16 @@
 
 
 @media (min-width: 1000px) and (max-width: 1250px)
-  #menuToggle span
+  #menuToggle span, .bar1, .bar2, .bar3
     width: 2.5vw
     min-width: 2.4vw
     max-width: 2.7vw
 
-  .opened--menu #menuToggle span
+  .opened--menu #menuToggle span, .change .bar1, .change .bar2, .change .bar3
     width: 2.4vw
     min-width: 2.2vw
     max-width: 2.5vw
+    margin: 0.78%
 
 @media (min-width: 451px) and (max-width: 768px)
   .logo-client-list embed
@@ -527,7 +571,7 @@
   .video-references
     min-height: 50vh
 
-@media (min-width: 1200px) and (max-width: 1600px)
+//@media (min-width: 1200px) and (max-width: 1600px)
   //.outdoor-section
   //  min-height: 670px
   //  max-height: 900px
@@ -609,13 +653,17 @@
     max-width: 1.6vw
 
 
-  #menuToggle span
-    width: 1.5vw
+  #menuToggle span, .bar1, .bar2, .bar3
+    width: 1.7vw
     min-width: 1.4vw
-    max-width: 1.6vw
+    max-width: 1.8vw
+    height: 0.5vh
 
   .hamburger-menu-banner-section.animation
     padding-top: 0.3%
+
+  .change .bar1, .change .bar2, .change .bar3
+    margin: 0.3% 0
 
 @media (max-width: 767px)
   .photo-half-section-tools
@@ -627,7 +675,7 @@
 
 
 @media (min-width: 1550px) and (max-width: 1999px)
-  #menuToggle span
+  #menuToggle span, .bar1, .bar2, .bar3
     width: 1.7vw
     min-width: 1.7vw
     max-width: 2vw
