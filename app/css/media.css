@@ -379,7 +379,13 @@
   .opened--menu #menuToggle span {
     width: 3.2vw;
     min-width: 3vw;
-    max-width: 3.4vw; } }
+    max-width: 3.4vw; }
+  .bar1, .bar2, .bar3 {
+    width: 3vw;
+    max-width: 3vw;
+    height: 0.5vh; }
+  .change .bar1, .change .bar2, .change .bar3 {
+    margin: 1% 0; } }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .img-photo-man-section-about {
@@ -408,14 +414,15 @@
     height: auto; } }
 
 @media (min-width: 1000px) and (max-width: 1250px) {
-  #menuToggle span {
+  #menuToggle span, .bar1, .bar2, .bar3 {
     width: 2.5vw;
     min-width: 2.4vw;
     max-width: 2.7vw; }
-  .opened--menu #menuToggle span {
+  .opened--menu #menuToggle span, .change .bar1, .change .bar2, .change .bar3 {
     width: 2.4vw;
     min-width: 2.2vw;
-    max-width: 2.5vw; } }
+    max-width: 2.5vw;
+    margin: 0.78%; } }
 
 @media (min-width: 451px) and (max-width: 768px) {
   .logo-client-list embed {
@@ -486,12 +493,15 @@
     width: 1.5vw;
     min-width: 1.4vw;
     max-width: 1.6vw; }
-  #menuToggle span {
-    width: 1.5vw;
+  #menuToggle span, .bar1, .bar2, .bar3 {
+    width: 1.7vw;
     min-width: 1.4vw;
-    max-width: 1.6vw; }
+    max-width: 1.8vw;
+    height: 0.5vh; }
   .hamburger-menu-banner-section.animation {
-    padding-top: 0.3%; } }
+    padding-top: 0.3%; }
+  .change .bar1, .change .bar2, .change .bar3 {
+    margin: 0.3% 0; } }
 
 @media (max-width: 767px) {
   .photo-half-section-tools {
@@ -501,7 +511,7 @@
     width: 3.2%; } }
 
 @media (min-width: 1550px) and (max-width: 1999px) {
-  #menuToggle span {
+  #menuToggle span, .bar1, .bar2, .bar3 {
     width: 1.7vw;
     min-width: 1.7vw;
     max-width: 2vw; }
