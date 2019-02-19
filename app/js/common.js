@@ -156,7 +156,7 @@ $(document).ready(function () {
     //      }
     //     })
     // });
-    $('#menuToggle').click(function () {
+    $('#menuToggle, #menuToggle-mobile').click(function () {
         if ($('body').hasClass('opened--menu')) {
             // $('.text-near-dots, .text-dots-block embed').animate({'opacity': '0'}, 400);
             $('body').removeClass('opened--menu');

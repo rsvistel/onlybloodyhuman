@@ -346,7 +346,7 @@ body.opened--menu .text-dots-block embed {
     -webkit-transform: translateY(8px);
             transform: translateY(8px); } }
 
-.inner-content-section-banner1 {
+.inner-content-section-banner-fixed {
   position: fixed;
   width: 100%;
   margin-top: 40px;
@@ -650,7 +650,7 @@ body.opened--menu .text-dots-block embed {
 
 .now-section-about {
   margin-top: 30%;
-  margin-bottom: 1.2vw; }
+  margin-bottom: 0.6vw; }
 
 .tittle-section-about {
   margin-top: 25px; }
@@ -814,7 +814,7 @@ body.opened--menu .text-dots-block embed {
   margin-bottom: 11.5vh; }
 
 #section-tools hr {
-  border: 1.1px solid #eee;
+  border: 1.1px solid #f0f2f2;
   width: 100%;
   margin-top: 13%;
   margin-bottom: 0.2vw;
@@ -852,8 +852,22 @@ body.opened--menu .text-dots-block embed {
 .under-line-block .img-under-line-block embed {
   min-width: 9.5vw;
   max-width: 11vw;
-  height: 6vw;
-  margin: 7% 0 7% 0; }
+  margin: 7% 0 5% 0; }
+
+.icon-camera embed {
+  height: 5vw; }
+
+.icon-dji embed {
+  height: 4vw; }
+
+.icon-movi embed {
+  height: 5.5vw; }
+
+.under-line-block {
+  margin-bottom: 4vh; }
+
+.over-line-block {
+  margin-bottom: 5vh; }
 
 .text-under-img-section-tools {
   padding: 1% 15%;
@@ -952,7 +966,7 @@ body.opened--menu .text-dots-block embed {
 
 .outdoor-section hr {
   border: none;
-  border-top: 2px solid #ffff;
+  border-top: 2px solid #f0f2f2;
   margin: 0;
   padding-bottom: 2vh; }
 
@@ -1181,19 +1195,20 @@ body.opened--menu .text-dots-block embed {
   display: flex; }
 
 .client-contact-list {
-  background-color: #f0f2f6;
+  background-image: url("../img/section-about/grain_texture.jpg");
   width: 50%;
-  padding: 1% 0 1% 9%;
+  padding: 4% 0 1% 9%;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: bold; }
 
 .client-contact-list__text p {
-  font-size: 1.6vw;
-  margin-left: 10px;
+  font-size: 1.8vw;
+  margin-left: 0.65vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  line-height: 1vw; }
 
 .client-contact-list__text h1 {
   display: block;
@@ -1201,21 +1216,23 @@ body.opened--menu .text-dots-block embed {
 
 .client-contact-list__center-arrow {
   text-align: center;
-  width: 6.2vw;
-  padding: 30px 0 25px 0; }
+  width: 7vw;
+  padding: 1.8vw 0 1.8vw 0; }
 
 .client-contact-list__center-arrow embed {
-  width: 15px; }
+  width: 1.3vw; }
 
 .client-contact-list__quote p {
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 6vw;
+  margin-bottom: 6.5vw;
   margin-left: 0.5vw;
   font-size: 1vw;
-  letter-spacing: 0.05vw; }
+  letter-spacing: 0.05vw;
+  font-weight: 700; }
 
 .client-contact-list__social {
-  padding-top: 8vw; }
+  padding-top: 6.5vw;
+  letter-spacing: 0.02vw; }
 
 .client-contact-list__email {
   position: relative; }
@@ -1224,19 +1241,19 @@ body.opened--menu .text-dots-block embed {
   display: inline-block;
   color: #363531;
   text-transform: lowercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.25vw;
   text-decoration: underline;
   margin-left: 0.5vw;
-  font-size: 2.2vw;
-  font-weight: 600; }
+  font-size: 2.6vw;
+  font-weight: 500; }
 
 .client-contact-list__email--triangle-left {
   height: 0;
   border-top: 0.6vw solid transparent;
-  border-right: 0.6vw solid #e7bf5d;
+  border-right: 0.6vw solid #f4bb53;
   border-bottom: 0.6vw solid transparent;
   position: absolute;
-  top: 1vw;
+  top: 1.5vw;
   right: 0;
   -webkit-animation: RectangleRight 2s ease-in-out infinite;
           animation: RectangleRight 2s ease-in-out infinite; }
@@ -1264,36 +1281,47 @@ body.opened--menu .text-dots-block embed {
             transform: translateX(8px); } }
 
 .client-contact-list__social a {
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
   color: #363531; }
 
 .client-contact-list__social span {
-  font-weight: 600; }
+  font-weight: 500; }
 
 .client-contact-list__social--icon {
-  font-size: 0.8vw;
+  font-size: 0.7vw;
   text-transform: lowercase; }
+
+.client-contact-list__img {
+  width: 2.5vw;
+  text-align: center;
+  margin-left: 0.5vw;
+  margin-right: 1vw;
+  margin-bottom: 0.7vw;
+  display: inline-block; }
 
 .client-contact-list__social--icon embed {
   vertical-align: middle;
-  width: 2.5vw;
-  height: 2.5vw; }
+  height: 1.3vw; }
+
+.client-contact-list__social--icon.audio embed {
+  width: 1.8vw; }
+
+.client-contact-list__social--icon.instagram embed {
+  width: 2.2vw; }
+
+.client-contact-list__social--icon.telephone embed {
+  width: 2.5vw; }
 
 .client-contact-list__social--icon.audio a {
-  text-transform: uppercase;
-  letter-spacing: 1px; }
-
-.client-contact-list__social embed {
-  width: 40px;
-  padding: 5px 15px 5px 5px; }
+  text-transform: uppercase; }
 
 .client-contact-list-img {
   background-image: url("../img/contact-section/phone.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   width: 50%;
   padding: 0;
   height: 100vh;
