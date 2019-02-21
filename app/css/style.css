@@ -39,7 +39,7 @@ h1 {
   letter-spacing: -1px; }
 
 h2 {
-  font-size: 4.8vw;
+  font-size: 4.4vw;
   margin-left: -3px;
   letter-spacing: 0.05vw; }
 
@@ -874,7 +874,7 @@ body.opened--menu .text-dots-block embed {
 
 .tittles-margin-section-tools {
   margin-top: 0.9vh;
-  margin-bottom: 11.5vh; }
+  margin-bottom: 7vh; }
 
 #section-tools hr {
   border: 1.1px solid #f0f2f2;
@@ -917,6 +917,21 @@ body.opened--menu .text-dots-block embed {
   max-width: 11vw;
   margin: 7% 0 5% 0; }
 
+.img-under-line-block {
+  height: 8vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .icon-camera embed {
   height: 5vw; }
 
@@ -924,13 +939,13 @@ body.opened--menu .text-dots-block embed {
   height: 4vw; }
 
 .icon-movi embed {
-  height: 5.5vw; }
+  height: 6.5vw; }
 
 .under-line-block {
   margin-bottom: 4vh; }
 
 .over-line-block {
-  margin-bottom: 5vh; }
+  margin-bottom: 8vh; }
 
 .text-under-img-section-tools {
   padding: 1% 15%;
@@ -1017,7 +1032,7 @@ body.opened--menu .text-dots-block embed {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 9.5% 9% 1.5% 9%;
+  padding: 9.5% 2.9vw 1.5% 2.9vw;
   text-align: center; }
 
 .outdoor-section__travel {
@@ -1053,7 +1068,7 @@ body.opened--menu .text-dots-block embed {
     position: static; }
 
 .outdoor-section__image.icon-travel {
-  padding: 0.8vw; }
+  padding: 0.8vw 4.5vw 0 4.5vw; }
 
 .outdoor-section__image .col-sm-3 {
   padding-right: 0;
@@ -1068,9 +1083,9 @@ body.opened--menu .text-dots-block embed {
 #arrow-skills {
   position: relative;
   width: 0.8vw;
-  -webkit-transform: translateX(-5px);
-      -ms-transform: translateX(-5px);
-          transform: translateX(-5px);
+  -webkit-transform: translateX(-0.4vw);
+      -ms-transform: translateX(-0.4vw);
+          transform: translateX(-0.4vw);
   left: 50%; }
 
 .outdoor-section__icons {
@@ -1097,6 +1112,15 @@ body.opened--menu .text-dots-block embed {
 
 .icon-wilderness embed {
   width: 2.6vw; }
+
+.icon-alpinizm embed, .icon-surf embed {
+  width: 2.6vw; }
+
+.icon-paraglide embed {
+  width: 2.3vw; }
+
+.icon-ski embed {
+  width: 1.85vw; }
 
 .outdoor-section__image .numberCircle {
   font-size: 0.9vw;
@@ -1128,7 +1152,7 @@ body.opened--menu .text-dots-block embed {
 
 .outdoor-section__image p {
   text-align: center;
-  padding-top: 0.5vw;
+  padding-top: 0.2vw;
   line-height: normal;
   white-space: pre-line;
   font-size: 0.8vw; }
@@ -1234,10 +1258,12 @@ body.opened--menu .text-dots-block embed {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  padding: 5%; }
   .hover-location .location {
-    width: 1.2vw;
-    height: 1.2vw; }
+    width: 1vw;
+    height: 1vw;
+    margin-bottom: 0.7vw; }
 
 .section-instagram-followers embed {
   width: 1.8%;
@@ -1371,7 +1397,6 @@ body.opened--menu .text-dots-block embed {
 .client-contact-list__img {
   width: 2.5vw;
   text-align: center;
-  margin-left: 0.5vw;
   margin-right: 1vw;
   margin-bottom: 0.7vw;
   display: inline-block; }
@@ -1384,10 +1409,10 @@ body.opened--menu .text-dots-block embed {
   width: 1.8vw; }
 
 .client-contact-list__social--icon.instagram embed {
-  width: 2.2vw; }
+  width: 2vw; }
 
 .client-contact-list__social--icon.telephone embed {
-  width: 2.5vw; }
+  width: 2.3vw; }
 
 .client-contact-list__social--icon.audio a {
   text-transform: uppercase; }
