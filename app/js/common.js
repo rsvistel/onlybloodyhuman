@@ -10,7 +10,7 @@ $(document).ready(function () {
     }
 
     if(isDesktop) {
-        $('body').css('overflow', 'hidden');
+        // $('body').css('overflow', 'hidden');
         bindScroll();
     }
 
@@ -93,11 +93,11 @@ $(document).ready(function () {
                     },50);
                 }, 500);
                 $('#section-tools').removeClass(current_class).addClass(new_class).css('overflow', 'hidden');
-                setTimeout(function () {
-                    $('#section-tools').css('overflow-y', 'scroll');
-                }, 500);
+                // setTimeout(function () {
+                //     $('#section-tools').css('overflow-y', 'scroll');
+                // }, 500);
                 $(document).unbind('wheel');
-                setTimeout(function () { bindTools() }, 1000);
+                setTimeout(function () { bindTools(); }, 1000);
             }
         });
     }
@@ -112,6 +112,7 @@ $(document).ready(function () {
 
     function scroll(param) {
         var speed = 1000;
+        $('body').css('overflow', 'hidden');
         if (param === 'up' && active > 0) {
             $('html, body').animate({scrollTop: sections[active-1].offset().top}, speed);
             active--;
@@ -124,9 +125,11 @@ $(document).ready(function () {
         // $('.hamburger-menu-banner-section, .left-logo-banner-section').addClass('animation-hide').removeClass('animation');
         $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
         setTimeout(function () {
+            $('body').css('overflow-y', 'auto');
             sections[active].css('overflow-y', 'scroll');
             $("span.countup").html("1k");
             if (sections[active].attr('id') === 'section-tools') {
+                $('body').css('overflow', 'hidden');
                 bindTools();
             } else if (sections[active].attr('id') === 'section-instagram') {
                 runSubscribersCounter();
