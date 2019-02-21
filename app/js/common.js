@@ -67,8 +67,8 @@ $(document).ready(function () {
             function changeTool(current_icon, new_icon, current_class, new_class, new_bg, up) {
                 current_icon.animate({'opacity': '0'}, 200);
                 setTimeout(function () {
-                    current_icon.hide();
-                    new_icon.show().animate({'opacity': '1'}, 200);
+                    current_icon.css('display', 'none');
+                    new_icon.css('display', 'flex').animate({'opacity': '1'}, 200);
                 }, 200);
                 $('.photo-half-section-tools')
                     .append('<div class="after"></div>');
