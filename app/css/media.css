@@ -57,7 +57,9 @@
   .client-contact-list__center-arrow {
     text-align: center;
     padding: 20px 0 15px 0;
-    width: 65px; }
+    width: 15vw; }
+  .client-contact-list__center-arrow embed {
+    width: 2.5vw; }
   .client-contact-list__email--triangle-left {
     display: none; }
   .client-contact-list__email a {
@@ -99,7 +101,9 @@
   .text-under-img-section-tools, .over-line-block {
     padding: 0; }
   .arrow-down-section-banner embed {
-    width: 3%; }
+    width: 3%;
+    min-width: 12px;
+    max-width: 15px; }
   #menu {
     height: 140vh; }
   #first-section {
@@ -132,12 +136,13 @@
   #menuToggle-mobile {
     right: 0;
     top: 0;
-    margin-top: 4.2%;
-    margin-right: 4.2%; }
+    margin-top: 5.3%;
+    margin-right: 8%; }
   #menuToggle-mobile span {
     width: 1.5vw;
     height: 3.5px;
-    min-width: 27px; }
+    min-width: 27px;
+    margin-bottom: 45%; }
   .inner-content-section-banner {
     margin-top: 0; }
   .footer-section img {
@@ -148,13 +153,11 @@
   .dots-block-section-banner {
     height: 45vh; }
   #menu-mobile {
-    height: 70vh; }
+    height: 120vh; }
   #menuToggle-mobile input {
     width: 5vw;
     height: 5vh;
-    left: -0.3vw; } }
-
-@media (max-width: 768px) {
+    left: -0.3vw; }
   .left-logo-banner-section {
     margin-top: 2%;
     margin-left: 8%; }
@@ -164,17 +167,15 @@
     width: 50%; }
   .left-logo-banner-section embed {
     width: 5vw;
-    max-width: 20px; } }
+    max-width: 20px; }
+  .img-under-line-block {
+    height: 18vw; } }
 
 @media (max-width: 450px) {
   .text-center-banner-section {
     max-height: 175px; }
-  .left-logo-banner-section {
-    margin-top: 2%;
-    margin-left: 8%; }
   .inner-content-section-banner-fixed {
     margin: 0;
-    position: absolute;
     top: 10px;
     width: 50%; }
   .video-references {
@@ -186,7 +187,9 @@
     font-size: 9px; }
   .footer-client span {
     font-size: 12px;
-    line-height: 25px; } }
+    line-height: 25px; }
+  .img-under-line-block {
+    height: 25vw; } }
 
 @media (max-width: 450px) and (max-height: 737px) {
   .video-references {
@@ -203,15 +206,14 @@
 @media (max-width: 1024px) {
   .outdoor-section__text {
     top: 50%; }
-  .text-near-dots {
-    font-size: 0.75vw;
-    width: 75%; }
   .text-dots-block {
-    width: 100%; }
+    width: 200%; }
   .dot-section-banner {
     margin: 8px 0; }
   .section-instagram-followers a {
-    line-height: 1.5vw; } }
+    line-height: 1.5vw; }
+  .arrow-down-section-banner {
+    margin-left: 0; } }
 
 @media (max-width: 768px) {
   .outdoor-section {
@@ -235,8 +237,6 @@
     margin: 0 0px 10px 0px; }
   .section-outdoor-professional {
     position: static; }
-  .outdoor-section-block {
-    padding: 10% 0 0 0; }
   .outdoor-section-block button {
     padding: 0; }
   .outdoor-section__image {
@@ -289,10 +289,13 @@
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center; }
-  .client-contact-list__social embed {
-    width: 40px;
+            align-items: center;
+    margin-bottom: 5px; }
+  .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.audio embed {
+    width: 4vw;
     height: 25px; }
+  .client-contact-list__img {
+    margin-right: 4%; }
   .client-contact-list__social a {
     margin-right: 5px; }
   .client-contact-list__text p {
@@ -302,7 +305,15 @@
   .outdoor-section__text--main p {
     text-align: start; }
   .section-instagram-followers a {
-    line-height: 3vw; } }
+    line-height: 3vw; }
+  .dot-section-banner {
+    width: 1.3vw;
+    height: 1.3vw;
+    min-width: initial;
+    max-width: initial; }
+  .text-near-dots {
+    font-size: 7px;
+    width: 75%; } }
 
 @media (max-width: 600px) {
   .left-logo-banner-section embed {
@@ -464,7 +475,10 @@
     min-width: 110px;
     max-width: 130px; }
   .video-references {
-    min-height: 50vh; } }
+    min-height: 50vh; }
+  .dot-section-banner {
+    width: 0.8vw;
+    height: 0.8vw; } }
 
 @media (max-width: 768px) and (orientation: landscape) {
   .text-center-banner-section {
@@ -495,6 +509,8 @@
     line-height: 11px; }
   .client-contact-list__text p, .client-contact-list__quote p {
     font-size: 15px; }
+  .client-contact-list__text p {
+    line-height: 20px; }
   .client-contact-list__email a {
     font-size: 20px; }
   .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a {
@@ -504,11 +520,21 @@
     margin-bottom: 6px; }
   .progress-line {
     height: 7px; }
-  .text-under-tittles-section-tools {
+  .text-under-tittles-section-tools, .outdoor-section__image p {
     font-size: 11px;
     line-height: 19px; }
   .text-under-img-section-tools {
-    font-size: 10px; } }
+    font-size: 10px; }
+  .outdoor-section__image .numberCircle {
+    border: 1px #f0f2f2 solid; }
+  .section-instagram__photo embed {
+    width: 4vw; }
+  .hover-location .location {
+    width: 4vw;
+    height: 3vw;
+    margin-bottom: 2vw; }
+  .hover-location {
+    text-align: center; } }
 
 @media (min-width: 2000px) {
   .text-left-logo {
