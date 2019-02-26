@@ -119,6 +119,9 @@ $(document).ready(function () {
         } else if (param === 'down' && active < sections.length-1) {
             $('html, body').animate({scrollTop: sections[active+1].offset().top}, speed);
             active++;
+        } else {
+            $('html, body').animate({scrollTop: sections[param].offset().top}, speed);
+            active = param;
         }
         checkActiveDot();
         $(document).unbind('wheel');
@@ -188,6 +191,13 @@ $(document).ready(function () {
                 for (var b = 0; b < active; b++) {
                     sections[b].scrollTop(sections[b][0].scrollHeight);
                 }
+                for (var e = active; e < dots.length; e++) {
+                    sections[e].scrollTop(0);
+                }
+                scroll(i);
+                // for (var e = active; e < dots.length; e++) {
+                //     sections[e].scrollTop();
+                // }
                 // for (var b = 0; b < i; b++) {
                 //     sections[b].scrollTop = sections[b].scrollHeight;
                 // }
@@ -286,7 +296,7 @@ $(document).ready(function () {
                 count += 0.1;
                 count = parseFloat(count.toFixed(1));
             }
-        }, 3);
+        }, 1);
 
         function getRepString (rep) {
             rep = rep+'';
