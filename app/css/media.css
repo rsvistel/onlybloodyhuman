@@ -116,7 +116,8 @@
   .job-section-about, .first-sentence-section-about, .aka-name-section-about, .jobs-section-about {
     text-align: center; }
   .job-text-center {
-    font-size: 7px; }
+    font-size: 7px;
+    z-index: 10; }
   .section-instagram-followers a, .section-instagram-followers span {
     font-size: 16px; }
   .photo-man-section-about {
@@ -125,18 +126,19 @@
     font-size: 11px; }
   .footer-client span, .lines-job-text-center {
     font-size: 14px;
-    line-height: 30px; }
+    line-height: 30px;
+    z-index: 1; }
   .left-logo-banner-section {
     margin-top: 15px;
     margin-bottom: 10px; }
   #menuToggle-mobile {
     right: 0;
     top: 0;
-    margin-top: 20px;
+    margin-top: 4%;
     margin-right: 4%; }
   #menuToggle-mobile span {
     width: 25px;
-    height: 3.5px;
+    height: 3px;
     margin-bottom: 15%;
     min-width: initial;
     max-width: initial; }
@@ -168,9 +170,14 @@
   .img-under-line-block {
     height: 18vw; }
   .dots-block-section-banner {
-    pointer-events: none; }
+    pointer-events: none;
+    display: none; }
   .opened--menu .dots-block-section-banner {
-    pointer-events: initial; }
+    pointer-events: initial;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .left-logo-banner-section embed {
     width: 4vw;
     max-width: 14px; }
@@ -178,7 +185,33 @@
     -webkit-animation: fadein 1s;
             animation: fadein 1s;
     -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; } }
+            animation-fill-mode: forwards; }
+  .icon-dji-mobile, .icon-movi-mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    opacity: 1;
+    color: white;
+    padding: 3% 10%; }
+  .under-line-block-dji, .under-line-block-movi {
+    display: block; }
+  .icon-movi-mobile {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; }
+  .icon-movi-mobile {
+    margin-top: 4%; }
+  .photo-half-section-tools-dji, .photo-half-section-tools-movi {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
 
 @media (max-width: 450px) {
   .text-center-banner-section {
@@ -222,7 +255,7 @@
   .outdoor-section__text {
     top: 50%; }
   .text-dots-block {
-    width: 200%; }
+    width: 270%; }
   .dot-section-banner {
     margin: 8px 0; }
   .section-instagram-followers a {
@@ -268,9 +301,11 @@
   #first-section {
     min-height: auto; }
   .video-references {
-    max-height: 160%; }
+    max-height: 160%;
+    z-index: 1; }
   #first-section, #section-banner {
-    height: auto; }
+    height: auto;
+    z-index: auto; }
   #section-banner {
     overflow: hidden; }
   .logo-client-list embed {
@@ -309,6 +344,8 @@
   .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.audio embed {
     width: 4vw;
     height: 25px; }
+  .client-contact-list__social--icon.audio embed {
+    height: 18px; }
   .client-contact-list__img {
     margin-right: 4%; }
   .client-contact-list__text p {
@@ -320,13 +357,13 @@
   .section-instagram-followers a {
     line-height: 3vw; }
   .dot-section-banner {
-    width: 1.3vw;
-    height: 1.3vw;
+    width: 5px;
+    height: 5px;
     min-width: initial;
     max-width: initial; }
   .text-near-dots {
     font-size: 7px;
-    width: 75%; }
+    width: 70%; }
   .arrow-down-icon {
     padding: 0 2vw 0.8vw 0; }
   .section-instagram-followers {
@@ -446,7 +483,9 @@
     max-width: 3vw;
     height: 0.5vh; }
   .change .bar1, .change .bar2, .change .bar3 {
-    margin: 1% 0; } }
+    margin: 1% 0; }
+  .gray-half-section-tools {
+    padding: 0 4% 0 5%; } }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .img-photo-man-section-about {
@@ -496,8 +535,8 @@
   .video-references {
     min-height: 50vh; }
   .dot-section-banner {
-    width: 0.8vw;
-    height: 0.8vw; }
+    width: 4.5px;
+    height: 4.5px; }
   .client-contact-list__center-arrow embed {
     width: 2vw; } }
 
@@ -510,7 +549,10 @@
     height: 100vh; }
   .section-instagram__photo {
     width: 24.67%;
-    height: 24.67vw; } }
+    height: 24.67vw; }
+  #arrow-skills {
+    width: 2.1%;
+    max-width: 20px; } }
 
 @media (max-width: 600px) and (orientation: landscape) {
   .text-center-banner-section, .client-contact-list-img {
