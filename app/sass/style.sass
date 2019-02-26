@@ -94,16 +94,16 @@ p
 
 //General
 #first-section
-  background-color: transparent
-#first-section
   height: 100vh
   overflow: hidden
+  background-color: transparent
 
 #section-banner
-  //height: 82%
+  background-image: url("../img/first-section/reel_placeholder.jpg")
   height: 80vh
   overflow: hidden
   position: relative
+  z-index: 1
 
 /*SECTION BANNER*/
 
@@ -201,7 +201,7 @@ p
 
 .dots-block-section-banner
   //padding-right: 4vw
-  padding-right: 4.3%
+  padding-right: 4.1%
   width: 14%
   float: left
   margin-top: 10vh
@@ -485,7 +485,7 @@ body.opened--menu .text-dots-block embed
 
 .mobile-hamburger-menu-banner-section
   display: none
-
+  z-index: 15
 //Menu mobile
 
 #menu
@@ -752,6 +752,15 @@ body.opened--menu .text-dots-block embed
     background-repeat: no-repeat
     background-position: center
 
+.photo-half-section-tools-dji, .photo-half-section-tools-movi
+  display: none
+
+.photo-half-section-tools-dji
+  background-image: url("http://localhost:3000/img/section-tools/dji_inspire.jpg")
+
+.photo-half-section-tools-movi
+  background-image: url("http://localhost:3000/img/section-tools/movi_pro.jpg")
+
 .tittles-section-tools
   font-weight: 700
   line-height: 2vw
@@ -791,6 +800,9 @@ body.opened--menu .text-dots-block embed
   display: flex
   flex-direction: column
   align-items: center
+
+.under-line-block-dji, .under-line-block-movi
+  display: none
 
 .under-line-block embed
   width: 2.2%
