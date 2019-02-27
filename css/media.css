@@ -137,7 +137,7 @@
     margin-top: 4%;
     margin-right: 4%; }
   #menuToggle-mobile span {
-    width: 25px;
+    width: 22px;
     height: 3px;
     margin-bottom: 15%;
     min-width: initial;
@@ -171,13 +171,10 @@
     height: 18vw; }
   .dots-block-section-banner {
     pointer-events: none;
-    display: none; }
+    visibility: hidden; }
   .opened--menu .dots-block-section-banner {
     pointer-events: initial;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
+    visibility: initial; }
   .left-logo-banner-section embed {
     width: 4vw;
     max-width: 14px; }
@@ -197,21 +194,29 @@
             order: 1;
     opacity: 1;
     color: white;
-    padding: 3% 10%; }
+    padding: 0 10%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%; }
   .under-line-block-dji, .under-line-block-movi {
-    display: block; }
+    display: block;
+    margin-bottom: 3vh; }
   .icon-movi-mobile {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2; }
-  .icon-movi-mobile {
-    margin-top: 4%; }
   .photo-half-section-tools-dji, .photo-half-section-tools-movi {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex; }
+  .icon-movi-mobile {
+    margin-top: 2%; }
+  .photo-half-section-tools, .gray-half-section-tools {
+    width: 100%; } }
 
 @media (max-width: 450px) {
   .text-center-banner-section {
@@ -237,7 +242,11 @@
   .client-contact-list__center-arrow embed {
     width: 2.7vw; }
   .client-contact-list__center-arrow {
-    width: 20%; } }
+    width: 20%; }
+  .icon-movi-mobile {
+    margin-top: 4%; }
+  .icon-dji-mobile, .icon-movi-mobile {
+    padding: 3% 10% 1% 10%; } }
 
 @media (max-width: 450px) and (max-height: 737px) {
   .video-references {
@@ -326,7 +335,7 @@
     height: 30px; }
   #arrow-skills {
     width: 3%;
-    max-width: 20px; }
+    max-width: 16px; }
   .outdoor-section__image .numberCircle {
     width: 35px;
     height: 35px;
@@ -347,7 +356,7 @@
   .client-contact-list__social--icon.audio embed {
     height: 18px; }
   .client-contact-list__img {
-    margin-right: 4%; }
+    margin-right: 3%; }
   .client-contact-list__text p {
     margin-left: 5px; }
   .inner-content-section-banner {
@@ -368,7 +377,9 @@
     padding: 0 2vw 0.8vw 0; }
   .section-instagram-followers {
     margin-top: 7%;
-    margin-bottom: 8%; } }
+    margin-bottom: 8%; }
+  .text-under-tittles-section-tools.text-under-img-section-tools {
+    margin-top: 5px; } }
 
 @media (max-width: 600px) {
   .section-instagram__photo {
@@ -587,10 +598,10 @@
   .progress-line {
     height: 7px; }
   .text-under-tittles-section-tools, .outdoor-section__image p {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 19px; }
   .text-under-img-section-tools {
-    font-size: 10px; }
+    font-size: 11px; }
   .outdoor-section__image .numberCircle {
     border: 1.5px #f0f2f2 solid; }
   .section-instagram__photo embed {
@@ -643,9 +654,6 @@
     padding-top: 0.35%; } }
 
 @media (max-width: 320px) {
-  #menuToggle-mobile span {
-    width: 20px;
-    height: 3px; }
   .hover-location span {
     font-size: 11px; }
   .arrow-down-icon {

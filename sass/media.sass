@@ -162,7 +162,7 @@
     margin-right: 4%
 
   #menuToggle-mobile span
-    width: 25px
+    width: 22px
     height: 3px
     margin-bottom: 15%
     min-width: initial
@@ -205,11 +205,11 @@
 
   .dots-block-section-banner
     pointer-events: none
-    display: none
+    visibility: hidden
 
   .opened--menu .dots-block-section-banner
     pointer-events: initial
-    display: flex
+    visibility: initial
 
   .left-logo-banner-section embed
     width: 4vw
@@ -224,19 +224,25 @@
     order: 1
     opacity: 1
     color: white
-    padding: 3% 10%
+    padding: 0 10%
+    justify-content: center
+    width: 100%
 
   .under-line-block-dji, .under-line-block-movi
     display: block
+    margin-bottom: 3vh
 
   .icon-movi-mobile
     order: 2
 
-  .icon-movi-mobile
-    margin-top: 4%
-
   .photo-half-section-tools-dji, .photo-half-section-tools-movi
     display: flex
+
+  .icon-movi-mobile
+    margin-top: 2%
+
+  .photo-half-section-tools, .gray-half-section-tools
+    width: 100%
 
 
 
@@ -276,6 +282,11 @@
   .client-contact-list__center-arrow
     width: 20%
 
+  .icon-movi-mobile
+    margin-top: 4%
+
+  .icon-dji-mobile, .icon-movi-mobile
+    padding: 3% 10% 1% 10%
 
 
 
@@ -392,7 +403,7 @@
 
   #arrow-skills
     width: 3%
-    max-width: 20px
+    max-width: 16px
 
   .outdoor-section__image .numberCircle
     width: 35px
@@ -412,7 +423,7 @@
     height: 18px
 
   .client-contact-list__img
-    margin-right: 4%
+    margin-right: 3%
 
   .client-contact-list__text p
     margin-left: 5px
@@ -443,6 +454,8 @@
     margin-top: 7%
     margin-bottom: 8%
 
+  .text-under-tittles-section-tools.text-under-img-section-tools
+    margin-top: 5px
 
 
 
@@ -727,11 +740,11 @@
     height: 7px
 
   .text-under-tittles-section-tools, .outdoor-section__image p
-    font-size: 11px
+    font-size: 12px
     line-height: 19px
 
   .text-under-img-section-tools
-    font-size: 10px
+    font-size: 11px
 
   .outdoor-section__image .numberCircle
     border: 1.5px #f0f2f2 solid
@@ -798,10 +811,6 @@
     padding-top: 0.35%
 
 @media (max-width: 320px)
-  #menuToggle-mobile span
-    width: 20px
-    height: 3px
-
   .hover-location span
     font-size: 11px
 
