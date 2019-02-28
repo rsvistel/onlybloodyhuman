@@ -39,7 +39,8 @@
     position: absolute;
     width: 100%; }
   #section-contact, .section {
-    height: auto; }
+    height: auto;
+    min-height: auto; }
   #section-contact {
     min-height: auto; }
   .gray-half-section-tools, .outdoor-section__text, .client-contact-list {
@@ -85,7 +86,7 @@
     -webkit-flex-direction: column-reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse; }
-  #section-about, #section-tools, .gray-half-section-tools, #section-logos {
+  #section-about, #section-tools, .gray-half-section-tools, #section-logos, .client-contact-list {
     height: auto;
     overflow: hidden; }
   .img-photo-man-section-about {
@@ -134,7 +135,7 @@
   #menuToggle-mobile {
     right: 0;
     top: 0;
-    margin-top: 4%;
+    margin-top: 5%;
     margin-right: 4%; }
   #menuToggle-mobile span {
     width: 22px;
@@ -335,7 +336,7 @@
     height: 30px; }
   #arrow-skills {
     width: 3%;
-    max-width: 16px; }
+    max-width: 15px; }
   .outdoor-section__image .numberCircle {
     width: 35px;
     height: 35px;
@@ -398,7 +399,8 @@
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .section-contact {
-    height: auto; }
+    height: auto;
+    min-height: auto; }
   .outdoor-section__text {
     width: 40%; }
   .section-outdoor-professional {
@@ -447,7 +449,9 @@
     font-size: 0.9vw; }
   .dot-section-banner {
     width: 0.5vw;
-    height: 0.5vw; } }
+    height: 0.5vw; }
+  .client-contact-list__email--triangle-left {
+    display: none; } }
 
 @media (min-width: 769px) and (max-width: 1000px) {
   .logo-client-list embed {
@@ -530,13 +534,22 @@
 
 @media (min-width: 1000px) and (max-width: 1250px) {
   #menuToggle span, .bar1, .bar2, .bar3, .opened--menu #menuToggle span {
-    width: 2vw;
-    min-width: 2vw;
-    max-width: 2.2vw; } }
+    width: 25px;
+    min-width: 0;
+    max-width: 32px;
+    height: 4px; } }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   .section-outdoor-professional {
     width: initial; } }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  #menuToggle span, .opened--menu #menuToggle span {
+    width: 2vw;
+    min-width: 1.9vw;
+    max-width: 2.1vw; }
+  .section-contact {
+    overflow: initial; } }
 
 @media (min-width: 451px) and (max-width: 768px) {
   .logo-client-list embed {
@@ -553,7 +566,15 @@
     width: 4.5px;
     height: 4.5px; }
   .client-contact-list__center-arrow embed {
-    width: 2vw; } }
+    width: 2vw; }
+  #menuToggle-mobile {
+    margin-top: 3.5%; }
+  .client-contact-list__social--icon {
+    margin-bottom: 10px; }
+  .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.audio embed {
+    height: 17px; }
+  .client-contact-list__social--icon.audio embed {
+    height: 20px; } }
 
 @media (max-width: 768px) and (orientation: landscape) {
   .text-center-banner-section {
@@ -671,7 +692,7 @@
   #menuToggle span, .opened--menu #menuToggle span {
     width: 2.9vw;
     max-width: 2.9vw;
-    height: 0.5vh; } }
+    height: 3.5px; } }
 
 @media (min-height: 1450px) {
   .section-outdoor-professional {
@@ -686,3 +707,7 @@
   .hover-location .location {
     height: 2vw;
     margin-bottom: 1.5vw; } }
+
+@media (min-width: 601px) and (max-width: 768px) {
+  #menuToggle-mobile {
+    margin-top: 3%; } }
