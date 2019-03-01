@@ -410,7 +410,9 @@
   .client-contact-list__text p {
     margin-bottom: 10px; }
   .left-logo-banner-section embed {
-    max-width: 3.2%; } }
+    max-width: 3.2%; }
+  .icon-camera embed {
+    height: 7vw; } }
 
 @media (min-width: 601px) and (max-width: 767px) {
   .text-center-banner-section {
@@ -440,7 +442,8 @@
   #section-contact, .gray-half-section-tools {
     height: auto; }
   h1 {
-    font-size: 92px; }
+    font-size: 92px;
+    line-height: 9vw; }
   .arrow-down-section-banner {
     margin-bottom: 1%; }
   .footer-client p {
