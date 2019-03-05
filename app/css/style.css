@@ -634,6 +634,9 @@ body.opened--menu .text-dots-block embed {
 .logo-client-list-gsk embed {
   max-height: 5vw; }
 
+.logo-client-list-gsk {
+  padding-left: 2%; }
+
 .logo-client-list-merrel embed {
   max-height: 5.2vw; }
 
@@ -652,7 +655,8 @@ body.opened--menu .text-dots-block embed {
   max-width: 6vw; }
 
 .logo-client-list-discovery embed {
-  max-width: 14vw; }
+  max-width: 14vw;
+  padding: 0 4%; }
 
 .logo-client-list-nrs, .logo-client-list-merrel {
   padding-left: 0; }
@@ -661,7 +665,8 @@ body.opened--menu .text-dots-block embed {
   text-align: center; }
 
 .logo-client-list-ecco {
-  padding-right: 0; }
+  padding-right: 0;
+  padding-left: 2%; }
 
 /*SECTION LOGOS*/
 /*SECTION about*/
@@ -691,8 +696,8 @@ body.opened--menu .text-dots-block embed {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 9%;
-  margin-left: 25px; }
+  margin-right: 5%;
+  margin-left: 5%; }
 
 .img-photo-man-section-about {
   width: 180%; }
@@ -959,7 +964,8 @@ body.opened--menu .text-dots-block embed {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin: 0.5vw 0; }
 
 .icon-camera embed {
   height: 5vw; }
@@ -968,7 +974,7 @@ body.opened--menu .text-dots-block embed {
   height: 4vw; }
 
 .icon-movi embed {
-  height: 6.5vw; }
+  height: 6vw; }
 
 .under-line-block {
   margin-bottom: 4vh; }
