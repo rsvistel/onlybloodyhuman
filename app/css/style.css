@@ -79,6 +79,15 @@ p {
   width: 0;
   background: transparent; }
 
+.owl-stage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.owl-nav {
+  display: none; }
+
 #first-section {
   height: 100vh;
   overflow: hidden;
@@ -644,7 +653,7 @@ body.opened--menu .text-dots-block embed {
   max-height: 5.2vw; }
 
 .logo-client-list {
-  width: 18%; }
+  width: 100%; }
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed {
   min-width: 6.6vw;
@@ -655,8 +664,12 @@ body.opened--menu .text-dots-block embed {
   max-width: 6vw; }
 
 .logo-client-list-discovery embed {
-  max-width: 14vw;
+  max-width: 13vw;
   padding: 0 4%; }
+
+.logo-client-list-discovery {
+  padding-left: 0;
+  margin-right: 4%; }
 
 .logo-client-list-nrs, .logo-client-list-merrel {
   padding-left: 0; }
@@ -665,8 +678,7 @@ body.opened--menu .text-dots-block embed {
   text-align: center; }
 
 .logo-client-list-ecco {
-  padding-right: 0;
-  padding-left: 2%; }
+  padding-right: 0; }
 
 /*SECTION LOGOS*/
 /*SECTION about*/
@@ -1386,14 +1398,17 @@ body.opened--menu .text-dots-block embed {
 
 .client-contact-list__email--triangle-left {
   height: 0;
-  border-top: 0.6vw solid transparent;
-  border-right: 0.6vw solid #f4bb53;
-  border-bottom: 0.6vw solid transparent;
+  text-align: end;
   position: absolute;
-  top: 1.5vw;
   right: 0;
+  margin-top: -2.8vw; }
+
+.client-contact-list__email--triangle-left img {
+  width: 0.6vw;
   -webkit-animation: RectangleRight 2s ease-in-out infinite;
-          animation: RectangleRight 2s ease-in-out infinite; }
+          animation: RectangleRight 2s ease-in-out infinite;
+  right: 0;
+  top: -20%; }
 
 @-webkit-keyframes RectangleRight {
   0% {

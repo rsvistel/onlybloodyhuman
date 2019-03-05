@@ -13,9 +13,12 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
+    <link href="owl-carousel/dist/assets/owl.carousel.css">
+    <link href="owl-carousel/dist/assets/owl.carousel.min.css">
+    <link href="owl-carousel/dist/assets/owl.theme.default.min.css">
+
 </head>
 <body>
 
@@ -123,7 +126,7 @@
             <!--<div class="container">-->
                 <!--<div class="row">-->
                     <div class="col-md-2 col-sm-2 item logo-client-list">
-                        <embed src="img/section-logos/Red Bull.svg">
+                        <embed src="img/section-logos/Red-Bull.svg">
                     </div>
 
                     <div class="col-md-2 col-sm-2 item logo-client-list logo-client-list-bbc">
@@ -398,7 +401,9 @@
             <div class = "client-contact-list__quote"><p>let’s bring<br> your story <br>to life</p></div>
 
             <div class = "client-contact-list__email"><a href="mailto:hi@jfdd.co.uk">hi@jfdd.co.uk</a>
-                <div class = "client-contact-list__email--triangle-left" ></div>
+                <div class = "client-contact-list__email--triangle-left">
+                    <img src="img/contact-section/arrow-contact.png">
+                </div>
             </div>
 
             <div class = "client-contact-list__social">
@@ -453,29 +458,9 @@
 
         });
 
-
-        $('.owl-carousel').owlCarousel({
-            loop:false,
-            margin:10,
-            responsiveClass:true,
-            autoplay: true,
-            autoplayTimeout:5000,
-            nav: false,
-            dots: false,
-            responsive:{
-                0:{
-                    items:8,
-                },
-                600:{
-                    items:1,
-                },
-                1000:{
-                    items:1,
-                    autoplay: false
-                }
-            }
-        });
     </script>
+       <script src="owl-carousel/docs/assets/vendors/jquery.min.js"></script>
+       <script src="owl-carousel/dist/owl.carousel.js"></script>
 
        <script>
            function myFunction(x) {

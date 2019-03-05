@@ -93,6 +93,20 @@ p
   background: transparent
 
 //General
+
+//.logo-client-list embed
+//    padding: 0
+//
+.owl-stage
+  display: flex
+
+.owl-nav
+  display: none
+
+//.owl-item
+//  display: flex
+//  justify-content: center
+
 #first-section
   height: 100vh
   overflow: hidden
@@ -514,7 +528,8 @@ body.opened--menu .text-dots-block embed
   max-height: 5.2vw
 
 .logo-client-list
-  width: 18%
+  //width: 18%
+  width: 100%
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed
   min-width: 6.6vw
@@ -525,9 +540,12 @@ body.opened--menu .text-dots-block embed
   max-width: 6vw
 
 .logo-client-list-discovery embed
-  max-width: 14vw
+  max-width: 13vw
   padding: 0 4%
 
+.logo-client-list-discovery
+  padding-left: 0
+  margin-right: 4%
 .logo-client-list-nrs, .logo-client-list-merrel
   padding-left: 0
 
@@ -536,7 +554,6 @@ body.opened--menu .text-dots-block embed
 
 .logo-client-list-ecco
   padding-right: 0
-  padding-left: 2%
 /*SECTION LOGOS*/
 
 /*SECTION about*/
@@ -1155,14 +1172,24 @@ body.opened--menu .text-dots-block embed
 
 .client-contact-list__email--triangle-left
   height: 0
-  border-top: 0.6vw solid transparent
-  border-right: 0.6vw solid #f4bb53
-  //border-image-source: url("../img/contact-section/arrow-contact.jpf")
-  border-bottom: 0.6vw solid transparent
+  text-align: end
   position: absolute
-  top: 1.5vw
   right: 0
+  margin-top: -2.8vw
+  //border-top: 0.6vw solid transparent
+  ////border-right: 0.6vw solid #f4bb53
+  ////border-image-source: url("../img/contact-section/arrow-contact.jpf")
+  //border-bottom: 0.6vw solid transparent
+  //position: absolute
+  //top: 1.5vw
+  //right: 0
+  //animation: RectangleRight 2s ease-in-out infinite
+
+.client-contact-list__email--triangle-left img
+  width: 0.6vw
   animation: RectangleRight 2s ease-in-out infinite
+  right: 0
+  top: -20%
 
 
 @keyframes RectangleRight
