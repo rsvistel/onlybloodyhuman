@@ -344,4 +344,36 @@ $(document).ready(function () {
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
 
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            450: {
+                items: 2,
+            },
+            767: {
+                items: 4,
+            },
+            1000: {
+                items: 7,
+                autoplay: false,
+                loop: false
+            }
+        }
+    })
+
 });
+
+
+
+
+
