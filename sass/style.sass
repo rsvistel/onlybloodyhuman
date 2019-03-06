@@ -93,9 +93,24 @@ p
   background: transparent
 
 //General
+
+//.logo-client-list embed
+//    padding: 0
+//
+.owl-stage
+  display: flex
+
+.owl-nav
+  display: none
+
+//.owl-item
+//  display: flex
+//  justify-content: center
+
 #first-section
   height: 100vh
   overflow: hidden
+  overflow-y: scroll
   background-color: transparent
 
 #section-banner
@@ -112,15 +127,6 @@ p
   display: flex
   justify-content: center
 
-//.hamburger-menu-banner-section, .left-logo-banner-section
-//  opacity: 1
-//
-//.hamburger-menu-banner-section.animation
-//  right: 0
-//  top: 5px
-//  animation: 1s ease-out  slideInFromRight
-//  animation-fill-mode: forwards
-
 #menuToggle
   position: fixed
   right: 0
@@ -132,41 +138,7 @@ p
 
 #menuToggle span:first-child
   margin-top: 5px
-//@keyframes hideInToRight
-//  from
-//    right: 3.5%
-//    opacity: 1
-//  to
-//    right: 0
-//    opacity: 0
 
-//.left-logo-banner-section.animation
-//  left: 0
-//  animation: 1s ease-out   slideInFromLeft
-//  animation-fill-mode: forwards
-//
-//.left-logo-banner-section.animation-hide
-//  left: 0
-//  animation: 1s ease-out   hideInToLeft
-//  animation-fill-mode: forwards
-//
-//@keyframes slideInFromLeft
-//  from
-//    left: 0
-//    opacity: 0
-//  to
-//    left: 3.5%
-//    opacity: 1
-//
-//@keyframes hideInToLeft
-//  from
-//    left: 3.5%
-//    opacity: 1
-//  to
-//    left: 0
-//    opacity: 0
-//
-//
 .left-logo-banner-section embed
   max-width: 2.6%
 
@@ -409,8 +381,8 @@ body.opened--menu .text-dots-block embed
 
 #menuToggle input, #menuToggle-mobile input
   display: block
-  width: 3vw
-  height: 4vh
+  width: 2vw
+  height: 3.5vh
   position: absolute
   top: -0.3vw
   left: -0.2vw
@@ -442,10 +414,10 @@ body.opened--menu .text-dots-block embed
   max-width: 1.8vw
 
 #menuToggle span:first-child
-  transform-origin: 0% 0%
+  transform-origin: 0
 
 #menuToggle span:nth-last-child(2)
-  transform-origin: 0% 100%
+  transform-origin: 0 100%
 
 #menuToggle input:checked ~ span
   opacity: 1
@@ -464,10 +436,10 @@ body.opened--menu .text-dots-block embed
   width: 33px
 
 #menuToggle-mobile span:first-child
-  transform-origin: 0% 0%
+  transform-origin: 0
 
 #menuToggle-mobile span:nth-last-child(2)
-  transform-origin: 0% 100%
+  transform-origin: 0 100%
 
 #menuToggle-mobile input:checked ~ span
   opacity: 1
@@ -494,12 +466,13 @@ body.opened--menu .text-dots-block embed
   width: 30vw
   height: 125vh
   margin: -10vw 0 0 -8vw
-  padding: 50px
-  padding-top: 125px
+  padding: 125px 50px 50px 50px
+  //padding: 50px
+  //padding-top: 125px
   background: $primary-color
   list-style-type: none
   -webkit-font-smoothing: antialiased
-  transform-origin: 0% 0%
+  transform-origin: 0
   transform: translate(100%, 0)
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
 
@@ -508,12 +481,13 @@ body.opened--menu .text-dots-block embed
   width: 300px
   height: 125vh
   margin: -65px 0 0 -140px
-  padding: 50px
-  padding-top: 125px
+  padding: 125px 50px 50px 50px
+  //padding: 50px
+  //padding-top: 125px
   background: $primary-color
   list-style-type: none
   -webkit-font-smoothing: antialiased
-  transform-origin: 0% 0%
+  transform-origin: 0
   transform: translate(100%, 0)
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
 
@@ -547,16 +521,18 @@ body.opened--menu .text-dots-block embed
 .logo-client-list-gsk embed
   max-height: 5vw
 
-.logo-client-list-merrel embed
-  max-height: 5.2vw
+.logo-client-list-gsk
+  padding-left: 2%
 
 .logo-client-list-merrel embed
   max-height: 5.2vw
 
-
+.logo-client-list-merrel embed
+  max-height: 5.2vw
 
 .logo-client-list
-  width: 18%
+  //width: 18%
+  width: 100%
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed
   min-width: 6.6vw
@@ -567,8 +543,12 @@ body.opened--menu .text-dots-block embed
   max-width: 6vw
 
 .logo-client-list-discovery embed
-  max-width: 14vw
+  max-width: 13vw
+  padding: 0 4%
 
+.logo-client-list-discovery
+  padding-left: 0
+  margin-right: 4%
 .logo-client-list-nrs, .logo-client-list-merrel
   padding-left: 0
 
@@ -594,8 +574,8 @@ body.opened--menu .text-dots-block embed
   display: flex
   align-items: flex-end
   justify-content: center
-  margin-right: 9%
-  margin-left: 25px
+  margin-right: 5%
+  margin-left: 5%
 
 .img-photo-man-section-about
   width: 180%
@@ -769,8 +749,7 @@ body.opened--menu .text-dots-block embed
   font-size: 1.6vw
 
 .large-tittle-section-tools
-  margin: 0
-  margin-left: -0.5vw
+  margin: 0 0 0 -0.5vw
 
 .text-under-tittles-section-tools
   text-transform: initial
@@ -789,10 +768,7 @@ body.opened--menu .text-dots-block embed
 #section-tools hr
   border: 1.1px solid #f0f2f2
   width: 100%
-  margin-top: 14%
-  margin-bottom: 0.2vw
-  margin-left: 0.6vw
-  margin-right: 0.6vw
+  margin: 14% 0.6vw 0.2vw 0.6vw
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
   box-sizing: border-box
@@ -823,11 +799,13 @@ body.opened--menu .text-dots-block embed
   max-width: 11vw
   margin: 7% 0 5% 0
 
+
 .img-under-line-block
   height: 8vw
   display: flex
   justify-content: center
   align-items: center
+  margin: 0.5vw 0
 
 .icon-camera embed
   height: 5vw
@@ -836,7 +814,7 @@ body.opened--menu .text-dots-block embed
   height: 4vw
 
 .icon-movi embed
-  height: 6.5vw
+  height: 6vw
 
 .under-line-block
   margin-bottom: 4vh
@@ -914,9 +892,19 @@ body.opened--menu .text-dots-block embed
 .outdoor-section__travel
   padding: 0
 
+.outdoor-section-block button  p
+  font-size: 0.8vw
+  font-weight: 700
+  font-family: $primary-font
+  text-transform: uppercase
+  margin-top: 0.8vw
+  margin-bottom: 0.8vw
+  line-height: 1.1
+
 .outdoor-section-block button
   border: none
   background: none
+
 
 .outdoor-section hr
   border: none
@@ -944,7 +932,7 @@ body.opened--menu .text-dots-block embed
   width: 100%
 
 .outdoor-section__image.icon-travel
-  padding: 0.8vw 4.5vw 0 4.5vw
+  padding: 0.6vw 4.5vw 0 4.2vw
 
 .outdoor-section__image .col-sm-3
   padding-right: 0
@@ -996,8 +984,8 @@ body.opened--menu .text-dots-block embed
 .outdoor-section__image .numberCircle
   font-size: 0.9vw
   border-radius: 50%
-  width: 2.1vw
-  height: 2.1vw
+  width: 2.5vw
+  height: 2.5vw
   background: none
   border: 0.2vw #f0f2f2 solid
   color: #ffffff
@@ -1193,13 +1181,24 @@ body.opened--menu .text-dots-block embed
 
 .client-contact-list__email--triangle-left
   height: 0
-  border-top: 0.6vw solid transparent
-  border-right: 0.6vw solid #f4bb53
-  border-bottom: 0.6vw solid transparent
+  text-align: end
   position: absolute
-  top: 1.5vw
   right: 0
+  margin-top: -2.8vw
+  //border-top: 0.6vw solid transparent
+  ////border-right: 0.6vw solid #f4bb53
+  ////border-image-source: url("../img/contact-section/arrow-contact.jpf")
+  //border-bottom: 0.6vw solid transparent
+  //position: absolute
+  //top: 1.5vw
+  //right: 0
+  //animation: RectangleRight 2s ease-in-out infinite
+
+.client-contact-list__email--triangle-left img
+  width: 0.6vw
   animation: RectangleRight 2s ease-in-out infinite
+  right: 0
+  top: -20%
 
 
 @keyframes RectangleRight

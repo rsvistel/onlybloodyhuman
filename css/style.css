@@ -79,9 +79,19 @@ p {
   width: 0;
   background: transparent; }
 
+.owl-stage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.owl-nav {
+  display: none; }
+
 #first-section {
   height: 100vh;
   overflow: hidden;
+  overflow-y: scroll;
   background-color: transparent; }
 
 #section-banner {
@@ -450,8 +460,8 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle input, #menuToggle-mobile input {
   display: block;
-  width: 3vw;
-  height: 4vh;
+  width: 2vw;
+  height: 3.5vh;
   position: absolute;
   top: -0.3vw;
   left: -0.2vw;
@@ -489,14 +499,14 @@ body.opened--menu .text-dots-block embed {
   max-width: 1.8vw; }
 
 #menuToggle span:first-child {
-  -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-          transform-origin: 0% 0%; }
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0; }
 
 #menuToggle span:nth-last-child(2) {
-  -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-          transform-origin: 0% 100%; }
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%; }
 
 #menuToggle input:checked ~ span {
   opacity: 1;
@@ -520,14 +530,14 @@ body.opened--menu .text-dots-block embed {
   width: 33px; }
 
 #menuToggle-mobile span:first-child {
-  -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-          transform-origin: 0% 0%; }
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0; }
 
 #menuToggle-mobile span:nth-last-child(2) {
-  -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-          transform-origin: 0% 100%; }
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%; }
 
 #menuToggle-mobile input:checked ~ span {
   opacity: 1;
@@ -561,14 +571,13 @@ body.opened--menu .text-dots-block embed {
   width: 30vw;
   height: 125vh;
   margin: -10vw 0 0 -8vw;
-  padding: 50px;
-  padding-top: 125px;
+  padding: 125px 50px 50px 50px;
   background: #363531;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0;
   -webkit-transform: translate(100%, 0);
       -ms-transform: translate(100%, 0);
           transform: translate(100%, 0);
@@ -583,14 +592,13 @@ body.opened--menu .text-dots-block embed {
   width: 300px;
   height: 125vh;
   margin: -65px 0 0 -140px;
-  padding: 50px;
-  padding-top: 125px;
+  padding: 125px 50px 50px 50px;
   background: #363531;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0;
   -webkit-transform: translate(100%, 0);
       -ms-transform: translate(100%, 0);
           transform: translate(100%, 0);
@@ -634,6 +642,9 @@ body.opened--menu .text-dots-block embed {
 .logo-client-list-gsk embed {
   max-height: 5vw; }
 
+.logo-client-list-gsk {
+  padding-left: 2%; }
+
 .logo-client-list-merrel embed {
   max-height: 5.2vw; }
 
@@ -641,7 +652,7 @@ body.opened--menu .text-dots-block embed {
   max-height: 5.2vw; }
 
 .logo-client-list {
-  width: 18%; }
+  width: 100%; }
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed {
   min-width: 6.6vw;
@@ -652,7 +663,12 @@ body.opened--menu .text-dots-block embed {
   max-width: 6vw; }
 
 .logo-client-list-discovery embed {
-  max-width: 14vw; }
+  max-width: 13vw;
+  padding: 0 4%; }
+
+.logo-client-list-discovery {
+  padding-left: 0;
+  margin-right: 4%; }
 
 .logo-client-list-nrs, .logo-client-list-merrel {
   padding-left: 0; }
@@ -691,8 +707,8 @@ body.opened--menu .text-dots-block embed {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 9%;
-  margin-left: 25px; }
+  margin-right: 5%;
+  margin-left: 5%; }
 
 .img-photo-man-section-about {
   width: 180%; }
@@ -884,8 +900,7 @@ body.opened--menu .text-dots-block embed {
   font-size: 1.6vw; }
 
 .large-tittle-section-tools {
-  margin: 0;
-  margin-left: -0.5vw; }
+  margin: 0 0 0 -0.5vw; }
 
 .text-under-tittles-section-tools {
   text-transform: initial;
@@ -904,10 +919,7 @@ body.opened--menu .text-dots-block embed {
 #section-tools hr {
   border: 1.1px solid #f0f2f2;
   width: 100%;
-  margin-top: 14%;
-  margin-bottom: 0.2vw;
-  margin-left: 0.6vw;
-  margin-right: 0.6vw;
+  margin: 14% 0.6vw 0.2vw 0.6vw;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -959,7 +971,8 @@ body.opened--menu .text-dots-block embed {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin: 0.5vw 0; }
 
 .icon-camera embed {
   height: 5vw; }
@@ -968,7 +981,7 @@ body.opened--menu .text-dots-block embed {
   height: 4vw; }
 
 .icon-movi embed {
-  height: 6.5vw; }
+  height: 6vw; }
 
 .under-line-block {
   margin-bottom: 4vh; }
@@ -1064,6 +1077,15 @@ body.opened--menu .text-dots-block embed {
 .outdoor-section__travel {
   padding: 0; }
 
+.outdoor-section-block button p {
+  font-size: 0.8vw;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin-top: 0.8vw;
+  margin-bottom: 0.8vw;
+  line-height: 1.1; }
+
 .outdoor-section-block button {
   border: none;
   background: none; }
@@ -1094,7 +1116,7 @@ body.opened--menu .text-dots-block embed {
     position: static; }
 
 .outdoor-section__image.icon-travel {
-  padding: 0.8vw 4.5vw 0 4.5vw; }
+  padding: 0.6vw 4.5vw 0 4.2vw; }
 
 .outdoor-section__image .col-sm-3 {
   padding-right: 0;
@@ -1152,8 +1174,8 @@ body.opened--menu .text-dots-block embed {
   font-size: 0.9vw;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  width: 2.1vw;
-  height: 2.1vw;
+  width: 2.5vw;
+  height: 2.5vw;
   background: none;
   border: 0.2vw #f0f2f2 solid;
   color: #ffffff;
@@ -1380,14 +1402,17 @@ body.opened--menu .text-dots-block embed {
 
 .client-contact-list__email--triangle-left {
   height: 0;
-  border-top: 0.6vw solid transparent;
-  border-right: 0.6vw solid #f4bb53;
-  border-bottom: 0.6vw solid transparent;
+  text-align: end;
   position: absolute;
-  top: 1.5vw;
   right: 0;
+  margin-top: -2.8vw; }
+
+.client-contact-list__email--triangle-left img {
+  width: 0.6vw;
   -webkit-animation: RectangleRight 2s ease-in-out infinite;
-          animation: RectangleRight 2s ease-in-out infinite; }
+          animation: RectangleRight 2s ease-in-out infinite;
+  right: 0;
+  top: -20%; }
 
 @-webkit-keyframes RectangleRight {
   0% {

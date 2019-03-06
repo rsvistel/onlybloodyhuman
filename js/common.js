@@ -11,7 +11,10 @@ $(document).ready(function () {
 
     if(isDesktop) {
         // $('body').css('overflow', 'hidden');
-        bindScroll();
+        // bindScroll()
+        $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+        bindUnFixed();
+        bindAbout();
     }
 
     // Init Sections Array
@@ -137,10 +140,10 @@ $(document).ready(function () {
             } else if (sections[active].attr('id') === 'section-instagram') {
                 runSubscribersCounter();
                 bindUnFixed();
-            } else if (sections[active].attr('id') === 'first-section'){
+            // } else if (sections[active].attr('id') === 'first-section'){
                 // $('.hamburger-menu-banner-section, .left-logo-banner-section').removeClass('animation-hide').addClass('animation');
-                bindUnFixed();
-            } else if (sections[active].attr('id') === 'section-about') {
+                // bindUnFixed();
+            } else if (sections[active].attr('id') === 'first-section') {
                 bindAbout();
                 bindUnFixed();
             } else {
@@ -165,7 +168,7 @@ $(document).ready(function () {
     //      }
     //     })
     // });
-    $('#menuToggle, #menuToggle-mobile').click(function () {
+    $('#menuToggle input, #menuToggle-mobile').click(function () {
         if ($('body').hasClass('opened--menu')) {
             // $('.text-near-dots, .text-dots-block embed').animate({'opacity': '0'}, 400);
             $('body').removeClass('opened--menu');
@@ -255,7 +258,7 @@ $(document).ready(function () {
     });
 
     function bindAbout() {
-        $("#section-about").bind("scroll", function() {
+        $("#first-section").bind("scroll", function() {
             $(".progress-line").each(function () {
                 if ($(this).isInViewport()) {
                     animateStat($(this))
@@ -344,4 +347,36 @@ $(document).ready(function () {
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
 
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            450: {
+                items: 2,
+            },
+            767: {
+                items: 4,
+            },
+            1000: {
+                items: 7,
+                autoplay: false,
+                loop: false
+            }
+        }
+    })
+
 });
+
+
+
+
+
