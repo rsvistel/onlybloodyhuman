@@ -181,7 +181,8 @@ p {
       -ms-flex-align: center;
           align-items: center;
   float: left;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
 
 .dots-block-section-banner {
   padding-right: 4.1%;
