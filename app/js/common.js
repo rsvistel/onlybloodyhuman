@@ -11,7 +11,10 @@ $(document).ready(function () {
 
     if(isDesktop) {
         // $('body').css('overflow', 'hidden');
-        bindScroll();
+        // bindScroll()
+        $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+        bindUnFixed();
+        bindAbout();
     }
 
     // Init Sections Array
@@ -137,10 +140,10 @@ $(document).ready(function () {
             } else if (sections[active].attr('id') === 'section-instagram') {
                 runSubscribersCounter();
                 bindUnFixed();
-            } else if (sections[active].attr('id') === 'first-section'){
+            // } else if (sections[active].attr('id') === 'first-section'){
                 // $('.hamburger-menu-banner-section, .left-logo-banner-section').removeClass('animation-hide').addClass('animation');
-                bindUnFixed();
-            } else if (sections[active].attr('id') === 'section-about') {
+                // bindUnFixed();
+            } else if (sections[active].attr('id') === 'first-section') {
                 bindAbout();
                 bindUnFixed();
             } else {
@@ -255,7 +258,7 @@ $(document).ready(function () {
     });
 
     function bindAbout() {
-        $("#section-about").bind("scroll", function() {
+        $("#first-section").bind("scroll", function() {
             $(".progress-line").each(function () {
                 if ($(this).isInViewport()) {
                     animateStat($(this))
