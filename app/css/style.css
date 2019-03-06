@@ -459,8 +459,8 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle input, #menuToggle-mobile input {
   display: block;
-  width: 3vw;
-  height: 4vh;
+  width: 2vw;
+  height: 3.5vh;
   position: absolute;
   top: -0.3vw;
   left: -0.2vw;
@@ -498,14 +498,14 @@ body.opened--menu .text-dots-block embed {
   max-width: 1.8vw; }
 
 #menuToggle span:first-child {
-  -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-          transform-origin: 0% 0%; }
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0; }
 
 #menuToggle span:nth-last-child(2) {
-  -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-          transform-origin: 0% 100%; }
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%; }
 
 #menuToggle input:checked ~ span {
   opacity: 1;
@@ -529,14 +529,14 @@ body.opened--menu .text-dots-block embed {
   width: 33px; }
 
 #menuToggle-mobile span:first-child {
-  -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-          transform-origin: 0% 0%; }
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0; }
 
 #menuToggle-mobile span:nth-last-child(2) {
-  -webkit-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-          transform-origin: 0% 100%; }
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%; }
 
 #menuToggle-mobile input:checked ~ span {
   opacity: 1;
@@ -570,14 +570,13 @@ body.opened--menu .text-dots-block embed {
   width: 30vw;
   height: 125vh;
   margin: -10vw 0 0 -8vw;
-  padding: 50px;
-  padding-top: 125px;
+  padding: 125px 50px 50px 50px;
   background: #363531;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0;
   -webkit-transform: translate(100%, 0);
       -ms-transform: translate(100%, 0);
           transform: translate(100%, 0);
@@ -592,14 +591,13 @@ body.opened--menu .text-dots-block embed {
   width: 300px;
   height: 125vh;
   margin: -65px 0 0 -140px;
-  padding: 50px;
-  padding-top: 125px;
+  padding: 125px 50px 50px 50px;
   background: #363531;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  -webkit-transform-origin: 0% 0%;
-      -ms-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0;
   -webkit-transform: translate(100%, 0);
       -ms-transform: translate(100%, 0);
           transform: translate(100%, 0);
@@ -901,8 +899,7 @@ body.opened--menu .text-dots-block embed {
   font-size: 1.6vw; }
 
 .large-tittle-section-tools {
-  margin: 0;
-  margin-left: -0.5vw; }
+  margin: 0 0 0 -0.5vw; }
 
 .text-under-tittles-section-tools {
   text-transform: initial;
@@ -921,10 +918,7 @@ body.opened--menu .text-dots-block embed {
 #section-tools hr {
   border: 1.1px solid #f0f2f2;
   width: 100%;
-  margin-top: 14%;
-  margin-bottom: 0.2vw;
-  margin-left: 0.6vw;
-  margin-right: 0.6vw;
+  margin: 14% 0.6vw 0.2vw 0.6vw;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -1082,6 +1076,15 @@ body.opened--menu .text-dots-block embed {
 .outdoor-section__travel {
   padding: 0; }
 
+.outdoor-section-block button p {
+  font-size: 0.8vw;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin-top: 0.8vw;
+  margin-bottom: 0.8vw;
+  line-height: 1.1; }
+
 .outdoor-section-block button {
   border: none;
   background: none; }
@@ -1112,7 +1115,7 @@ body.opened--menu .text-dots-block embed {
     position: static; }
 
 .outdoor-section__image.icon-travel {
-  padding: 0.8vw 4.5vw 0 4.5vw; }
+  padding: 0.6vw 4.5vw 0 4.2vw; }
 
 .outdoor-section__image .col-sm-3 {
   padding-right: 0;
@@ -1170,8 +1173,8 @@ body.opened--menu .text-dots-block embed {
   font-size: 0.9vw;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  width: 2.1vw;
-  height: 2.1vw;
+  width: 2.5vw;
+  height: 2.5vw;
   background: none;
   border: 0.2vw #f0f2f2 solid;
   color: #ffffff;
