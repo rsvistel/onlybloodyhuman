@@ -356,6 +356,7 @@ $(document).ready(function () {
         autoplayTimeout: 3000,
         nav: false,
         dots: false,
+        lazyLoad: false,
         responsive: {
             0: {
                 items: 1,
