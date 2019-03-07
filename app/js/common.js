@@ -407,7 +407,21 @@ $(document).ready(function () {
                 loop: false
             }
         }
-    })
+    });
+
+    [].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.onload = function() {
+            img.removeAttribute('data-src');
+        };
+    });
+
+    [].forEach.call(document.querySelectorAll('embed[data-src]'),    function(embed) {
+        embed.setAttribute('src', embed.getAttribute('data-src'));
+        embed.onload = function() {
+            embed.removeAttribute('data-src');
+        };
+    });
 
 });
 

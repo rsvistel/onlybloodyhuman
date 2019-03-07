@@ -191,7 +191,8 @@ p {
           align-items: center;
   float: left;
   width: 100%;
-  z-index: 1; }
+  z-index: 101;
+  position: absolute; }
 
 .dots-block-section-banner {
   padding-right: 4.1%;
@@ -673,12 +674,12 @@ body.opened--menu .text-dots-block embed {
   max-width: 6vw; }
 
 .logo-client-list-discovery embed {
-  max-width: 13vw;
-  padding: 0 4%; }
+  max-width: 14vw;
+  padding: 0 4% 0 0; }
 
 .logo-client-list-discovery {
   padding-left: 0;
-  margin-right: 4%; }
+  margin-right: 15%; }
 
 .logo-client-list-nrs, .logo-client-list-merrel {
   padding-left: 0; }
