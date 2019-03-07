@@ -123,6 +123,14 @@ p
 
 /*SECTION BANNER*/
 
+.logo-client-list embed
+  opacity: 0.9
+  transition: ease-in-out 0.3s
+
+.logo-client-list:hover embed
+  opacity: 1
+
+
 .video-in-section-banner
   display: flex
   justify-content: center
@@ -591,6 +599,16 @@ body.opened--menu .text-dots-block embed
   flex-direction: column
   justify-content: center
 
+
+.highlight-hover h2
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #ddd 50%)
+  background-position: -0% 0
+  background-size: 200% auto
+  transition: background-position 0.3s ease-out
+
+.highlight-hover:hover h2
+  background-position: -99.99% 0
+
 .first-sentence-section-about
   letter-spacing: 1px
   margin-bottom: 0
@@ -792,7 +810,7 @@ body.opened--menu .text-dots-block embed
 
 .over-line-block
   padding-right: 15%
-  margin-top: -2%
+  margin-top: 4vh
 
 .img-under-line-block, .text-under-img-section-tools
   text-align: center
@@ -1059,6 +1077,7 @@ body.opened--menu .text-dots-block embed
   display: block
   line-height: 0.3vw
   height: 2vh
+  width: 10vw
 
 .section-instagram__photo
   overflow: hidden
@@ -1152,6 +1171,13 @@ body.opened--menu .text-dots-block embed
   text-align: center
   width: 7vw
   padding: 1.8vw 0 1.8vw 0
+  animation: bottom 1.5s ease-in-out infinite
+
+@keyframes bottom
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(4px)
 
 .client-contact-list__center-arrow embed
   width: 1.3vw
@@ -1170,6 +1196,16 @@ body.opened--menu .text-dots-block embed
 
 .client-contact-list__email
   position: relative
+
+.client-contact-list__email a
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #ddd 50%);
+  background-position: -0% 0
+  background-size: 200% auto
+  color: #222
+  transition: background-position 0.3s ease-out
+
+.client-contact-list__email:hover a
+  background-position: -99.99% 0
 
 .client-contact-list__email a
   display: inline-block
