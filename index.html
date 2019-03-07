@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
-    <link href="owl-carousel/dist/assets/owl.carousel.min.css">
-    <link href="owl-carousel/dist/assets/owl.theme.default.min.css">
+    <link  rel="stylesheet" href="owl-carousel/dist/assets/owl.carousel.css">
+    <link  rel="stylesheet" href="owl-carousel/dist/assets/owl.carousel.min.css">
+    <link  rel="stylesheet" href="owl-carousel/dist/assets/owl.theme.default.min.css">
 
 </head>
 <body>
@@ -63,7 +61,7 @@
 
 
                <div class="col-md-6 col-sm-6 col-xs-6 hamburger-menu-banner-section animation">
-                   <nav role="navigation">
+
                        <div id="menuToggle">
                            <input type="checkbox" />
 
@@ -79,7 +77,6 @@
                                <!--<a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>-->
                            </ul>
                        </div>
-                   </nav>
                    <!--<div class="col-md-6 col-sm-6 col-xs-6 hamburger-menu-banner-section animation" onclick="myFunction(this)">-->
                    <!--<div class="hamburger-menu-banner-section">-->
                    <!--<div id="menuToggle">-->
@@ -96,6 +93,7 @@
 
        </div>
     <!--First Section-->
+    <div id="intro-trigger"></div>
     <div id="first-section" class="section">
         <div id="section-banner" class="video-section">
             <div class="video-in-section-banner">
@@ -171,7 +169,7 @@
             <div class="col-md-6 col-xs-12 whole-text-section-about">
                 <h6 class="first-sentence-section-about">Hey Hey, I’m Jamie</h6>
                 <p class="aka-name-section-about">A.K.A. OnlyBloodyHuman</p>
-                <h2 class="job-section-about job-section-about-producer">producer</h2>
+                <div class = "highlight-hover"><h2 class="job-section-about job-section-about-producer">producer</h2></div>
                 <h5 class="jobs-section-about">Writer | Director </h5>
                 <h3 class="now-section-about">Now<br>
                     Let’s jump<br>
@@ -299,13 +297,13 @@
         <div class = "row ">
             <div class = "outdoor-section-block">
             <div class = "col-sm-4 col-xs-4 outdoor-section__travel" data-name = "travel">
-                <button type="button"><p>travel</p></button>
+                <button type="button"><span>travel</span></button>
             </div>
             <div class = "col-sm-4 col-xs-4 outdoor-section__outdoor" data-name = "outdoor">
-                <button type="button"><p>outdoor</p></button>
+                <button type="button"><span>outdoor</span></button>
             </div>
             <div class = "col-sm-4 col-xs-4 outdoor-section__safety" data-name = "safety">
-                <button type="button"><p>safety</p></button>
+                <button type="button"><span>safety</span></button>
             </div>
             </div>
             <hr>
@@ -385,7 +383,6 @@
     </div>
 
 <!--Outdoor Section-->
-
 <!--Contact Section-->
 <div class="section-contact">
 <div id = "section-contact">
@@ -402,7 +399,7 @@
 
             <div class = "client-contact-list__email"><a href="mailto:hi@jfdd.co.uk">hi@jfdd.co.uk</a>
                 <div class = "client-contact-list__email--triangle-left">
-                    <img src="img/contact-section/arrow-contact.png">
+                    <img src="img/contact-section/arrow-contact.png" alt="arrow-contact">
                 </div>
             </div>
 
@@ -414,6 +411,7 @@
             </div>
         </div>
 
+        <div id="contact-trigger"></div>
         <div class = "client-contact-list-img">
              <!--<img src = "img/contact-section/phone.jpg">-->
         </div>
@@ -460,7 +458,7 @@
         });
 
     </script>
-       <!--<script src="owl-carousel/docs/assets/vendors/jquery.min.js"></script>-->
+       <script src="owl-carousel/docs/assets/vendors/jquery.min.js"></script>
        <script src="owl-carousel/dist/owl.carousel.js"></script>
 
        <script>
