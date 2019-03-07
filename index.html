@@ -5,7 +5,7 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css" >
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -15,7 +15,6 @@
     <link  rel="stylesheet" href="owl-carousel/dist/assets/owl.carousel.css">
     <link  rel="stylesheet" href="owl-carousel/dist/assets/owl.carousel.min.css">
     <link  rel="stylesheet" href="owl-carousel/dist/assets/owl.theme.default.min.css">
-
 </head>
 <body>
 
@@ -451,7 +450,15 @@
                 '<div class="hover-location"><div class = "location"><embed src ="img/instagram/location_pin.png"/></div><span>{{location}}</span>  </div>' +
             '</div>',
 
+
                 after: function() {
+                    [].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
+                        img.setAttribute('src', img.getAttribute('data-src'));
+                        img.onload = function() {
+                            img.removeAttribute('data-src');
+                        };
+                    });
+
                     !function(window){
                         var $q = function(q, res){
                                 if (document.querySelectorAll) {
