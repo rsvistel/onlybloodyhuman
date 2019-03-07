@@ -752,9 +752,9 @@ body.opened--menu .text-dots-block embed {
   background-position: -0% 0;
   -webkit-background-size: 200% auto;
           background-size: 200% auto;
-  -webkit-transition: background-position 0.3s ease-out;
-  -o-transition: background-position 0.3s ease-out;
-  transition: background-position 0.3s ease-out; }
+  -webkit-transition: background-position 0.1s ease-out;
+  -o-transition: background-position 0.1s ease-out;
+  transition: background-position 0.1s ease-out; }
 
 .highlight-hover:hover h2 {
   background-position: -99.99% 0; }
@@ -1440,9 +1440,9 @@ body.opened--menu .text-dots-block embed {
   -webkit-background-size: 200% auto;
           background-size: 200% auto;
   color: #222;
-  -webkit-transition: background-position 0.3s ease-out;
-  -o-transition: background-position 0.3s ease-out;
-  transition: background-position 0.3s ease-out; }
+  -webkit-transition: background-position 0.1s ease-out;
+  -o-transition: background-position 0.1s ease-out;
+  transition: background-position 0.1s ease-out; }
 
 .client-contact-list__email:hover a {
   background-position: -99.99% 0; }
