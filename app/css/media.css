@@ -216,6 +216,16 @@
   .photo-half-section-tools, .gray-half-section-tools {
     width: 100%; } }
 
+@media (min-width: 2000px) {
+  .over-line-block {
+    margin-top: -2%; } }
+
+@media (min-width: 2470px) {
+  #menuToggle input:checked ~ span {
+    -webkit-transform: rotate(45deg) translate(-3px, -1px);
+        -ms-transform: rotate(45deg) translate(-3px, -1px);
+            transform: rotate(45deg) translate(-3px, -1px); } }
+
 @media (max-width: 450px) {
   .inner-content-section-banner-fixed {
     margin: 0;
