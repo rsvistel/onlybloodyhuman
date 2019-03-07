@@ -79,6 +79,24 @@ p {
   width: 0;
   background: transparent; }
 
+img {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
+img[data-src] {
+  opacity: 0; }
+
+embed {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
+embed[data-src] {
+  opacity: 0; }
+
 .owl-stage {
   display: -webkit-box;
   display: -webkit-flex;
