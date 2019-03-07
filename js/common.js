@@ -393,7 +393,7 @@ $(document).ready(function () {
         dots: false,
         responsive: {
             0: {
-                items: 2,
+                items: 1,
             },
             450: {
                 items: 2,
@@ -416,12 +416,12 @@ $(document).ready(function () {
     //     };
     // });
 
-    [].forEach.call(document.querySelectorAll('embed[data-src]'),    function(embed) {
-        embed.setAttribute('src', embed.getAttribute('data-src'));
-        embed.onload = function() {
-            embed.removeAttribute('data-src');
-        };
-    });
+    // [].forEach.call(document.querySelectorAll('embed[data-src]'),    function(embed) {
+    //     embed.setAttribute('src', embed.getAttribute('data-src'));
+    //     embed.onload = function() {
+    //         embed.removeAttribute('data-src');
+    //     };
+    // });
 
 });
 
