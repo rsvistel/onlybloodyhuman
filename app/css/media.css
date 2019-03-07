@@ -418,7 +418,7 @@
             justify-content: center;
     width: 100%;
     margin-left: 0; }
-  #first-section, #section-banner {
+  #first-section {
     height: auto; }
   .client-contact-list__img embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.telephone embed {
     height: 1.65vw; } }
@@ -505,7 +505,7 @@
     padding: 0 20px 0 60px; }
   .logo-client-list embed {
     min-width: 115px;
-    max-width: 125px;
+    max-width: 140px;
     min-height: 32px;
     max-height: 50px; }
   .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
@@ -645,7 +645,9 @@
   .logo-client-list {
     width: 100%; }
   .outdoor-section-block button p {
-    font-size: 11px; } }
+    font-size: 11px; }
+  .outdoor-section-block button span {
+    font-size: 10px; } }
 
 @media (min-width: 1000px) {
   .owl-item {
