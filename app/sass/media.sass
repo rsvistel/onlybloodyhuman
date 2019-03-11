@@ -249,9 +249,49 @@
   .over-line-block
     margin-top: -2%
 
+
+@media (min-width: 870px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-5%, -35%)
+@media (min-width: 1070px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-5%, -10%)
+@media (min-width: 1170px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-1%, -10%)
+@media (min-width: 1270px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-15%, -125%)
+@media (min-width: 1470px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-10%, -10%)
+@media (min-width: 1670px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-10%, -10%)
+@media (min-width: 1870px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-10%, -55%)
+@media (min-width: 2070px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-8%, -40%)
 @media (min-width: 2470px )
   #menuToggle input:checked ~ span
-    transform: rotate(45deg) translate(-3px, -1px)
+    transform: rotate(45deg) translate(-10%, -60%)
+@media (min-width: 2970px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-15%, -70%)
+@media (min-width: 3970px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-15%, -90%)
+@media (min-width: 4070px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-15%, -125%)
+@media (min-width: 4670px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-15%, -155%)
+@media (min-width: 4870px )
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-17%, -170%)
 @media (max-width: 450px)
   //.text-center-banner-section
   //  max-height: 175px
@@ -327,6 +367,15 @@
   .arrow-down-section-banner
     margin-left: 0
 
+
+@media (max-width: 768px)
+  .highlight-hover h2
+    background-image: none
+
+  .client-contact-list__email a
+    background-image: none
+
+
 @media (max-width: 768px)
   .outdoor-section
     position: static
@@ -379,6 +428,7 @@
     //max-height: 160%
     z-index: 1
     height: 81vh
+    display: none
 
   #first-section, #section-banner
     z-index: auto
