@@ -416,12 +416,12 @@ $(document).ready(function () {
     //     };
     // });
 
-    [].forEach.call(document.querySelectorAll('embed[data-src]'),    function(embed) {
-        embed.setAttribute('src', embed.getAttribute('data-src'));
-        embed.onload = function() {
-            embed.removeAttribute('data-src');
-        };
-    });
+    // [].forEach.call(document.querySelectorAll('embed[data-src]'),    function(embed) {
+    //     embed.setAttribute('src', embed.getAttribute('data-src'));
+    //     embed.onload = function() {
+    //         embed.removeAttribute('data-src');
+    //     };
+    // });
 
 });
 
