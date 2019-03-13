@@ -189,9 +189,9 @@
     height: 120vh
 
   #menuToggle-mobile input
-    width: 7vw
-    height: 5vh
-    left: -0.3vw
+    width: 5vw
+    height: 3vh
+    left: -0.6vw
 
   .left-logo-banner-section
     margin-top: 2%
@@ -251,8 +251,11 @@
 @media (min-width: 2000px )
   .over-line-block
     margin-top: -2%
-
-
+@media (min-width: 5000px )
+  .over-line-block
+    margin-top: -6vh
+  .under-line-block
+    margin-bottom: -6vh
 @media (max-width: 450px)
   //.text-center-banner-section
   //  max-height: 175px
@@ -366,6 +369,9 @@
 
   .outdoor-section__image
     padding: 3% 5% 0 5%
+
+  .outdoor-section__image.icon-travel
+    padding: 0.6vw 6vw 0 6vw
 
   .section-instagram
     height: auto
@@ -690,8 +696,10 @@
     //max-width: 2.2vw
     //height: 3p
     width: 25px
-    height: 3px
-    margin-bottom: 4px
+
+  #menuToggle input:checked ~ span
+    transform: rotate(45deg) translate(-1.5px, -1px)
+
 
 @media (min-width: 1200px) and (max-width: 1500px)
   .section-contact
@@ -863,10 +871,10 @@
 
   .opened--menu #menuToggle span, #menuToggle span
     width: 35px
-    height: 4px
+    height: 6px
 
   .hamburger-menu-banner-section.animation
-    padding-top: 0.4%
+    padding-top: 0.1%
 
   .change .bar1, .change .bar2, .change .bar3
     margin: 0.3% 0
@@ -874,37 +882,45 @@
 
 @media (min-width: 2500px)
   .opened--menu #menuToggle span
-    width: 42px
-    height: 6px
+    width: 40px
+    height: 7px
 
   #menuToggle span, .bar1, .bar2, .bar3
-    width: 42px
-    height: 6px
+    width: 40px
+    height: 7px
 @media (min-width: 3000px)
   .opened--menu #menuToggle span
-    width: 50px
-    height: 7px
+    width: 45px
+    height: 8px
   #menuToggle span, .bar1, .bar2, .bar3
-    width: 50px
-    height: 7px
+    width: 45px
+    height: 8px
 @media (min-width: 4000px)
   .opened--menu #menuToggle span
-    width: 60px
-    height: 8px
+    width: 50px
+    height: 9px
 
   #menuToggle span, .bar1, .bar2, .bar3
-    width: 60px
-    height: 8px
+    width: 50px
+    height: 9px
 
 @media (min-width: 4500px)
   .opened--menu #menuToggle span
+    width: 60px
+    height: 12px
+
+  #menuToggle span, .bar1, .bar2, .bar3
+    width: 60px
+    height: 12px
+
+@media (min-width: 5000px)
+  .opened--menu #menuToggle span
     width: 65px
-    height: 9px
+    height: 13px
 
   #menuToggle span, .bar1, .bar2, .bar3
     width: 65px
-    height: 9px
-
+    height: 13px
 
 @media (max-width: 767px)
   .photo-half-section-tools
