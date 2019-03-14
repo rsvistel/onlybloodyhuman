@@ -157,7 +157,8 @@
   #menuToggle-mobile input {
     width: 5vw;
     height: 3vh;
-    left: -0.6vw; }
+    left: -0.6vw;
+    top: -2vw; }
   .left-logo-banner-section {
     margin-top: 2%;
     margin-left: 8%; }
@@ -537,7 +538,7 @@
     height: 3px;
     margin-bottom: 3px; }
   #menuToggle, #menuToggle mobile {
-    margin-top: 6px; } }
+    margin-top: 2px; } }
 
 @media (min-width: 1200px) and (max-width: 1550px) {
   .section-outdoor-professional {
