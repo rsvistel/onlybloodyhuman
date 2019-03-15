@@ -123,13 +123,14 @@ p
   z-index: 1
 
 /*SECTION BANNER*/
-
-.logo-client-list
-  opacity: 0.9
-  transition: ease-in-out 0.3s
-
-.logo-client-list:hover
-  opacity: 1
+//.logo-client-list embed
+//  opacity: 0.5
+//  transition: ease-in-out 0.3s
+//
+//.logo-client-list:hover embed
+//  opacity: 1
+//.logo-client-list:hover embed svg
+//  opacity: 1
 
 
 .video-in-section-banner
@@ -185,7 +186,7 @@ p
 
 .dots-block-section-banner
   //padding-right: 4vw
-  padding-right: 4.1%
+  padding-right: 4.4%
   width: 14%
   float: left
   margin-top: 10vh
@@ -542,8 +543,12 @@ body.opened--menu .text-dots-block embed
   max-height: 5.2vw
 
 .logo-client-list
-  //width: 18%
   width: 100%
+  svg
+    position: relative
+    &:hover
+      transform: none
+
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed
   min-width: 6.6vw
