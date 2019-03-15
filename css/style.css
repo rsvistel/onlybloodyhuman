@@ -104,15 +104,6 @@ p {
   z-index: 1; }
 
 /*SECTION BANNER*/
-.logo-client-list {
-  opacity: 0.9;
-  -webkit-transition: ease-in-out 0.3s;
-  -o-transition: ease-in-out 0.3s;
-  transition: ease-in-out 0.3s; }
-
-.logo-client-list:hover {
-  opacity: 1; }
-
 .video-in-section-banner {
   display: -webkit-box;
   display: -webkit-flex;
@@ -195,7 +186,7 @@ p {
   position: absolute; }
 
 .dots-block-section-banner {
-  padding-right: 4.1%;
+  padding-right: 4.4%;
   width: 14%;
   float: left;
   margin-top: 10vh;
@@ -448,7 +439,8 @@ body.opened--menu .text-dots-block embed {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-right: 4.3%; }
+  padding-right: 4.3%;
+  margin-top: 3px; }
 
 .hamburger-menu-banner-section a {
   text-decoration: none;
@@ -483,11 +475,9 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle span, #menuToggle-mobile span {
   display: block;
-  width: 1.7vw;
-  min-width: 1.7vw;
-  max-width: 1.9vw;
-  height: 0.45vh;
-  margin-bottom: 13%;
+  width: 25px;
+  height: 3.5px;
+  margin-bottom: 3.5px;
   position: relative;
   background: #ffffff;
   -webkit-border-radius: 3vw;
@@ -505,9 +495,7 @@ body.opened--menu .text-dots-block embed {
   opacity: 0.55s ease; }
 
 .opened--menu #menuToggle span {
-  width: 1.7vw;
-  min-width: 1.7vw;
-  max-width: 1.8vw; }
+  width: 22px; }
 
 #menuToggle span:first-child {
   -webkit-transform-origin: 0;
@@ -664,6 +652,12 @@ body.opened--menu .text-dots-block embed {
 
 .logo-client-list {
   width: 100%; }
+  .logo-client-list svg {
+    position: relative; }
+    .logo-client-list svg:hover {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
 
 .logo-client-list-bbc embed, .logo-client-list-ecco embed {
   min-width: 6.6vw;
@@ -1064,7 +1058,7 @@ body.opened--menu .text-dots-block embed {
   right: 13%;
   z-index: 1;
   overflow: hidden;
-  top: 53%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
