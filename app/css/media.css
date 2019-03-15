@@ -47,8 +47,6 @@
     padding: 12% 10%; }
   .whole-text-section-about {
     padding: 12% 8% 0 8%; }
-  #section-logos {
-    padding: 7% 8% 3% 8%; }
   .client-contact-list {
     width: 100%; }
   #section-contact .row {
@@ -86,8 +84,10 @@
     -webkit-flex-direction: column-reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse; }
-  #section-about, #section-tools, .gray-half-section-tools, #section-logos, .client-contact-list {
+  #section-about, #section-tools, .gray-half-section-tools, .client-contact-list {
     height: auto;
+    overflow: hidden; }
+  #section-logos {
     overflow: hidden; }
   .img-photo-man-section-about {
     width: 100%;
@@ -107,9 +107,6 @@
     height: 140vh; }
   #first-section {
     overflow: initial; }
-  .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
-    min-width: 70px;
-    max-width: 90px; }
   .logo-client-list embed {
     height: 55px; }
   .logo-client-list {
@@ -135,12 +132,12 @@
   #menuToggle-mobile {
     right: 0;
     top: 0;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-right: 4%; }
   #menuToggle-mobile span {
     width: 22px;
     height: 3px;
-    margin-bottom: 15%;
+    margin-bottom: 3.5px;
     min-width: initial;
     max-width: initial; }
   .inner-content-section-banner {
@@ -159,8 +156,9 @@
     height: 120vh; }
   #menuToggle-mobile input {
     width: 5vw;
-    height: 5vh;
-    left: -0.3vw; }
+    height: 3vh;
+    left: -0.6vw;
+    top: -2vw; }
   .left-logo-banner-section {
     margin-top: 2%;
     margin-left: 8%; }
@@ -217,20 +215,25 @@
   .icon-movi-mobile {
     margin-top: 2%; }
   .photo-half-section-tools, .gray-half-section-tools {
-    width: 100%; } }
+    width: 100%; }
+  .text-center-banner-section {
+    z-index: initial; } }
+
+@media (min-width: 2000px) {
+  .over-line-block {
+    margin-top: -2%; } }
+
+@media (min-width: 5000px) {
+  .over-line-block {
+    margin-top: -6vh; }
+  .under-line-block {
+    margin-bottom: -6vh; } }
 
 @media (max-width: 450px) {
-  .text-center-banner-section {
-    max-height: 175px; }
   .inner-content-section-banner-fixed {
     margin: 0;
     top: 10px;
     width: 50%; }
-  .video-references {
-    max-height: 75%;
-    min-width: 100%;
-    max-width: 130%;
-    min-height: auto; }
   .footer-client p {
     font-size: 9px; }
   .footer-client span {
@@ -249,29 +252,25 @@
   .icon-dji-mobile, .icon-movi-mobile {
     padding: 3% 10% 1% 10%; } }
 
-@media (max-width: 450px) and (max-height: 737px) {
-  .video-references {
-    width: 100%; } }
-
-@media (min-width: 501px) and (max-width: 600px) {
-  .text-center-banner-section {
-    height: 35vh; } }
-
-@media (min-width: 451px) and (max-width: 500px) {
-  .text-center-banner-section {
-    max-height: 200px; } }
-
 @media (max-width: 1024px) {
   .outdoor-section__text {
     top: 50%; }
   .text-dots-block {
     width: 270%; }
   .dot-section-banner {
-    margin: 8px 0; }
+    margin: 8px 0;
+    width: 0.6vw;
+    height: 0.6vw; }
   .section-instagram-followers a {
     line-height: 1.5vw; }
   .arrow-down-section-banner {
     margin-left: 0; } }
+
+@media (max-width: 768px) {
+  .highlight-hover h2 {
+    background-image: none; }
+  .client-contact-list__email a {
+    background-image: none; } }
 
 @media (max-width: 768px) {
   .outdoor-section {
@@ -299,6 +298,8 @@
     padding: 0; }
   .outdoor-section__image {
     padding: 3% 5% 0 5%; }
+  .outdoor-section__image.icon-travel {
+    padding: 0.6vw 6vw 0 6vw; }
   .section-instagram {
     height: auto; }
   .logo-client-list {
@@ -306,23 +307,22 @@
     width: 50%;
     float: left;
     text-align: center; }
-  #section-logos {
-    display: block; }
   #first-section {
-    min-height: auto; }
+    min-height: auto;
+    height: auto; }
   .video-references {
-    max-height: 160%;
-    z-index: 1; }
+    z-index: 1;
+    height: 81vh;
+    display: none; }
   #first-section, #section-banner {
-    height: auto;
     z-index: auto; }
   #section-banner {
     overflow: hidden; }
   .logo-client-list embed {
-    min-width: 80px;
-    max-width: 90px;
+    min-width: 115px;
+    max-width: 125px;
     min-height: 30px;
-    max-height: 50px; }
+    max-height: 60px; }
   .under-line-block .img-under-line-block embed {
     min-width: 110px;
     max-width: 120px;
@@ -380,15 +380,17 @@
     margin-top: 7%;
     margin-bottom: 8%; }
   .text-under-tittles-section-tools.text-under-img-section-tools {
-    margin-top: 5px; } }
+    margin-top: 5px; }
+  .logo-client-list-ecco embed {
+    max-width: 110px; } }
 
 @media (max-width: 600px) {
   .section-instagram__photo {
     width: 50%;
     height: 50vw; }
   .logo-client-list-discovery embed, .logo-client-list-gsk embed {
-    min-width: 110px;
-    max-width: 130px;
+    min-width: 130px;
+    max-width: 150px;
     height: 60vw; }
   .section-instagram-followers a {
     line-height: 5vw; } }
@@ -412,12 +414,11 @@
   .left-logo-banner-section embed {
     max-width: 3.2%; }
   .icon-camera embed {
-    height: 7vw; } }
+    height: 7vw; }
+  #menu {
+    margin: -10vw 0 0 -10vw; } }
 
 @media (min-width: 601px) and (max-width: 767px) {
-  .text-center-banner-section {
-    height: 35vh;
-    max-height: 275px; }
   .client-contact-list-img {
     height: 40vh; }
   .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.audio embed {
@@ -433,7 +434,7 @@
             justify-content: center;
     width: 100%;
     margin-left: 0; }
-  #first-section, #section-banner {
+  #first-section {
     height: auto; }
   .client-contact-list__img embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.telephone embed {
     height: 1.65vw; } }
@@ -458,13 +459,13 @@
 
 @media (min-width: 769px) and (max-width: 1000px) {
   .logo-client-list embed {
-    min-width: 80px;
-    max-width: 90px;
+    min-width: 100px;
+    max-width: 120px;
     min-height: 30px;
-    max-height: 40px; }
+    max-height: 60px; }
   .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
-    min-width: 73px;
-    max-width: 80px; }
+    min-width: 83px;
+    max-width: 90px; }
   #section-tools, .section {
     height: auto; }
   .whole-text-section-about {
@@ -493,13 +494,13 @@
   .video-references, .section-outdoor-professional {
     max-height: 800px; }
   #menuToggle span, .opened--menu #menuToggle span {
-    width: 2.4vw;
-    max-width: 2.5vw;
-    height: 0.5vh; }
+    width: 22px;
+    height: 3px; }
   .bar1, .bar2, .bar3 {
-    width: 3vw;
-    max-width: 3vw;
-    height: 0.5vh; }
+    width: 22px;
+    height: 3px; }
+  #menuToggle, menuToggle mobile {
+    margin-top: 0; }
   .change .bar1, .change .bar2, .change .bar3 {
     margin: 1% 0; }
   .gray-half-section-tools {
@@ -507,8 +508,7 @@
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .img-photo-man-section-about {
-    width: 190%;
-    margin-top: -5%; }
+    width: 190%; }
   #section-contact, .client-contact-list-img {
     height: auto; }
   .photo-man-section-about {
@@ -520,7 +520,7 @@
     padding: 0 20px 0 60px; }
   .logo-client-list embed {
     min-width: 115px;
-    max-width: 125px;
+    max-width: 140px;
     min-height: 32px;
     max-height: 50px; }
   .logo-client-list-bbc embed, .logo-client-list-ecco embed, .logo-client-list-nrs embed {
@@ -535,22 +535,25 @@
   .text-near-dots {
     font-size: 0.7vw; } }
 
-@media (min-width: 1000px) and (max-width: 1250px) {
+@media (min-width: 1000px) and (max-width: 1200px) {
   #menuToggle span, .bar1, .bar2, .bar3, .opened--menu #menuToggle span {
-    width: 25px;
-    min-width: 0;
-    max-width: 32px;
-    height: 4px; } }
+    width: 23px;
+    height: 3px;
+    margin-bottom: 3px; }
+  #menuToggle, #menuToggle mobile {
+    margin-top: 0; } }
+
+@media (min-width: 1200px) and (max-width: 1550px) {
+  .section-outdoor-professional {
+    width: initial; }
+  #menuToggle span, .opened--menu #menuToggle span {
+    width: 25px; }
+  #menuToggle input:checked ~ span {
+    -webkit-transform: rotate(45deg) translate(-1.5px, -1px);
+        -ms-transform: rotate(45deg) translate(-1.5px, -1px);
+            transform: rotate(45deg) translate(-1.5px, -1px); } }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
-  .section-outdoor-professional {
-    width: initial; } }
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-  #menuToggle span, .opened--menu #menuToggle span {
-    width: 2vw;
-    min-width: 1.9vw;
-    max-width: 2.1vw; }
   .section-contact {
     overflow: initial; } }
 
@@ -626,7 +629,7 @@
   .progress-line {
     height: 7px; }
   .text-under-tittles-section-tools, .outdoor-section__image p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 19px; }
   .text-under-img-section-tools {
     font-size: 11px; }
@@ -639,7 +642,45 @@
     height: 3vw;
     margin-bottom: 2vw; }
   .hover-location {
-    text-align: center; } }
+    text-align: center; }
+  .logo-client-list embed {
+    padding: 0; }
+  .owl-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  #section-logos {
+    padding: 0; }
+  .logo-client-list {
+    width: 100%; }
+  .outdoor-section-block button p {
+    font-size: 11px; }
+  .outdoor-section-block button span {
+    font-size: 12px; } }
+
+@media (min-width: 1000px) {
+  .owl-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 @media (min-width: 2000px) {
   .text-left-logo {
@@ -648,21 +689,58 @@
     width: 140%;
     margin-right: 1vw; }
   .gray-half-section-tools {
-    display: block;
-    padding: 14% 9% 8% 9%; }
-  .opened--menu #menuToggle span {
-    width: 1.6vw;
-    min-width: 1.4vw;
-    max-width: 1.6vw; }
-  #menuToggle span, .bar1, .bar2, .bar3 {
-    width: 1.5vw;
-    min-width: 1.4vw;
-    max-width: 1.5vw;
-    height: 0.5vh; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 9% 9% 8% 9%; }
+  .opened--menu #menuToggle span, #menuToggle span {
+    width: 35px;
+    height: 6px; }
   .hamburger-menu-banner-section.animation {
-    padding-top: 0.3%; }
+    padding-top: 0.1%; }
   .change .bar1, .change .bar2, .change .bar3 {
     margin: 0.3% 0; } }
+
+@media (min-width: 2500px) {
+  .opened--menu #menuToggle span {
+    width: 40px;
+    height: 7px; }
+  #menuToggle span, .bar1, .bar2, .bar3 {
+    width: 40px;
+    height: 7px; } }
+
+@media (min-width: 3000px) {
+  .opened--menu #menuToggle span {
+    width: 45px;
+    height: 8px; }
+  #menuToggle span, .bar1, .bar2, .bar3 {
+    width: 45px;
+    height: 8px; } }
+
+@media (min-width: 4000px) {
+  .opened--menu #menuToggle span {
+    width: 50px;
+    height: 9px; }
+  #menuToggle span, .bar1, .bar2, .bar3 {
+    width: 50px;
+    height: 9px; } }
+
+@media (min-width: 4500px) {
+  .opened--menu #menuToggle span {
+    width: 60px;
+    height: 12px; }
+  #menuToggle span, .bar1, .bar2, .bar3 {
+    width: 60px;
+    height: 12px; } }
+
+@media (min-width: 5000px) {
+  .opened--menu #menuToggle span {
+    width: 65px;
+    height: 13px; }
+  #menuToggle span, .bar1, .bar2, .bar3 {
+    width: 65px;
+    height: 13px; } }
 
 @media (max-width: 767px) {
   .photo-half-section-tools {
@@ -671,15 +749,14 @@
 
 @media (min-width: 1550px) and (max-width: 1999px) {
   #menuToggle span, .bar1, .bar2, .bar3 {
-    width: 1.7vw;
-    min-width: 1.7vw;
-    max-width: 2vw; }
+    width: 29.5px;
+    margin-bottom: 4px;
+    height: 4px; }
   .opened--menu #menuToggle span {
-    width: 1.5vw;
-    min-width: 1.5vw;
-    max-width: 1.8vw; }
+    width: 29.5px;
+    height: 4px; }
   .hamburger-menu-banner-section.animation {
-    padding-top: 0.35%; } }
+    padding-top: 0.45%; } }
 
 @media (max-width: 320px) {
   .hover-location span {
@@ -691,11 +768,7 @@
   .logo-client-list {
     padding: 0; }
   .under-line-block embed {
-    width: 3.2%; }
-  #menuToggle span, .opened--menu #menuToggle span {
-    width: 2.9vw;
-    max-width: 2.9vw;
-    height: 3.5px; } }
+    width: 3.2%; } }
 
 @media (min-height: 1450px) {
   .section-outdoor-professional {
@@ -714,3 +787,13 @@
 @media (min-width: 601px) and (max-width: 768px) {
   #menuToggle-mobile {
     margin-top: 3%; } }
+
+@media (max-width: 450px) {
+  .logo-client-list embed {
+    min-width: 100px;
+    max-width: 105px;
+    max-height: 60px; }
+  .logo-client-list-discovery embed {
+    max-width: 175px; }
+  .logo-client-list-merrel embed {
+    height: 60px; } }
