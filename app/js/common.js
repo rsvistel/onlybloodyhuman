@@ -15,7 +15,7 @@ $(document).ready(function () {
                 $(this).removeClass('active')
             });
             dots[1].addClass('active')
-        } else if ($('#first-section').scrollTop === 0) {
+        } else if ($('#first-section').scrollTop() === 0) {
             $('.text-dots-block').each(function () {
                 $(this).removeClass('active')
             });
@@ -95,6 +95,10 @@ $(document).ready(function () {
                 }
             }
             function changeTool(current_icon, new_icon, current_class, new_class, new_bg, up) {
+                $('.text-dots-block').each(function () {
+                    $(this).removeClass('active')
+                });
+                dots[2].addClass('active');
                 current_icon.animate({'opacity': '0'}, 300);
                 setTimeout(function () {
                     current_icon.css('display', 'none');
@@ -164,6 +168,10 @@ $(document).ready(function () {
             if (sections[active].attr('id') === 'section-tools') {
                 $('body').css('overflow', 'hidden');
                 bindTools();
+                $('.text-dots-block').each(function () {
+                    $(this).removeClass('active')
+                });
+                dots[2].addClass('active')
             } else if (sections[active].attr('id') === 'section-instagram') {
                 runSubscribersCounter();
                 bindUnFixed();
@@ -217,37 +225,72 @@ $(document).ready(function () {
         var thisElement = $(this);
         for (var i = 0; i < dots.length; i++) {
             if (dots[i].find('h6').html() === thisElement.find('h6').html()) {
-                $('html, body').animate({scrollTop: sections[i].offset().top}, 1000);
-                active = i;
-                for (var b = 0; b < active; b++) {
-                    sections[b].scrollTop(sections[b][0].scrollHeight);
+                var x = dots[i].find('h6').html();
+                switch (x) {
+                    case 'intro':
+                        if (!thisElement.hasClass('active')) {
+                            scroll(0);
+                        }
+                        break;
+                    case 'about':
+                        if (!thisElement.hasClass('active')) {
+                            scroll(0);
+                            $('#first-section').animate({scrollTop: $('#section-about').offset().top}, 1000);
+                        }
+                        break;
+                    case 'tools':
+                        if (!thisElement.hasClass('active')) {
+                            scroll(1);
+                        }
+                        break;
+                    case 'skills':
+                        if (!thisElement.hasClass('active')) {
+                            scroll(2);
+                        }
+                        break;
+                    case 'contact':
+                        if (!thisElement.hasClass('active')) {
+                            scroll(2);
+                            $('#section-instagram').animate({scrollTop: $('#contact-trigger').offset().top}, 1000);
+                        }
+                        break;
                 }
-                for (var e = active; e < dots.length; e++) {
-                    sections[e].scrollTop(0);
-                }
-                scroll(i);
+                // $('html, body').animate({scrollTop: sections[i].offset().top}, 1000);
+                // active = i;
+                // for (var b = 0; b < active; b++) {
+                //     sections[b].scrollTop(sections[b][0].scrollHeight);
+                // }
+                // for (var e = active; e < sections.length; e++) {
+                //     sections[e].scrollTop(0);
+                // }
+                // if (active > 1) {
+                //     $('.img-under-line-block').hide();
+                //     $('.icon-dji, .icon-camera').hide().animate({'opacity': '0'});
+                //     $('.icon-movi').show().animate({'opacity': '1'});
+                //     $('.photo-half-section-tools').css('background-image', 'url("img/section-tools/movi_pro.jpg")');
+                //     $('#section-tools').removeClass('tools-dji tools-camera').addClass('tools-movi');
+                // } else {
+                //     $('.img-under-line-block').hide();
+                //     $('.icon-dji, .icon-movi').hide().animate({'opacity': '0'});
+                //     $('.icon-camera').show().animate({'opacity': '1'});
+                //     $('.photo-half-section-tools').css('background-image', 'url("img/section-tools/red_camera.jpg")');
+                //     $('#section-tools').removeClass('tools-dji tools-movi').addClass('tools-camera');
+                // }
+                // scroll(i);
                 // for (var e = active; e < dots.length; e++) {
                 //     sections[e].scrollTop();
-                // }
+                // // }
                 // for (var b = 0; b < i; b++) {
                 //     sections[b].scrollTop = sections[b].scrollHeight;
                 // }
-                checkActiveDot();
+                // checkActiveDot();
             }
-        }
-        if (active > 2) {
-            $('.img-under-line-block').hide();
-            $('.icon-dji, .icon-camera').hide().animate({'opacity': '0'});
-            $('.icon-movi').show().animate({'opacity': '1'});
-            $('.photo-half-section-tools').css('background-image', 'url("img/section-tools/movi_pro.jpg")');
-            $('#section-tools').removeClass('tools-dji tools-camera').addClass('tools-movi');
         }
 
         if ($(this).hasClass('instagram-counter')) {
             setTimeout(function () {
                 runSubscribersCounter()
             },700);
-
         }
 
 
