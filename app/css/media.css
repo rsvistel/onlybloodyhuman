@@ -257,7 +257,9 @@
   .text-dots-block {
     width: 270%; }
   .dot-section-banner {
-    margin: 8px 0; }
+    margin: 8px 0;
+    width: 0.6vw;
+    height: 0.6vw; }
   .section-instagram-followers a {
     line-height: 1.5vw; }
   .arrow-down-section-banner {
@@ -411,7 +413,9 @@
   .left-logo-banner-section embed {
     max-width: 3.2%; }
   .icon-camera embed {
-    height: 7vw; } }
+    height: 7vw; }
+  #menu {
+    margin: -10vw 0 0 -10vw; } }
 
 @media (min-width: 601px) and (max-width: 767px) {
   .client-contact-list-img {
@@ -503,8 +507,7 @@
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .img-photo-man-section-about {
-    width: 190%;
-    margin-top: -5%; }
+    width: 190%; }
   #section-contact, .client-contact-list-img {
     height: auto; }
   .photo-man-section-about {
@@ -625,7 +628,7 @@
   .progress-line {
     height: 7px; }
   .text-under-tittles-section-tools, .outdoor-section__image p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 19px; }
   .text-under-img-section-tools {
     font-size: 11px; }
@@ -661,7 +664,7 @@
   .outdoor-section-block button p {
     font-size: 11px; }
   .outdoor-section-block button span {
-    font-size: 10px; } }
+    font-size: 12px; } }
 
 @media (min-width: 1000px) {
   .owl-item {
@@ -786,8 +789,10 @@
 
 @media (max-width: 450px) {
   .logo-client-list embed {
-    min-width: 80px;
-    max-width: 90px;
-    max-height: 50px; }
+    min-width: 100px;
+    max-width: 105px;
+    max-height: 60px; }
   .logo-client-list-discovery embed {
-    max-width: 120px; } }
+    max-width: 175px; }
+  .logo-client-list-merrel embed {
+    height: 60px; } }
