@@ -82,11 +82,11 @@ $(document).ready(function () {
                 }
             }
             function changeTool(current_icon, new_icon, current_class, new_class, new_bg, up) {
-                current_icon.animate({'opacity': '0'}, 300);
+                current_icon.animate({'opacity': '0'}, 500);
                 setTimeout(function () {
-                    current_icon.css('display', 'none');
-                    new_icon.css('display', 'flex').animate({'opacity': '1'}, 300);
-                }, 350);
+                    // current_icon.css('display', 'none');
+                    new_icon.css('display', 'flex').animate({'opacity': '1'}, 500);
+                }, 0);
                 $('.photo-half-section-tools')
                     .append('<div class="after"></div>');
                 if (up) {
@@ -136,6 +136,9 @@ $(document).ready(function () {
         } else if (param === 'down' && active < sections.length-1) {
             $('html, body').animate({scrollTop: sections[active+1].offset().top}, speed);
             active++;
+        } else {
+            $('html, body').animate({scrollTop: sections[param].offset().top}, speed);
+            active = param;
         }
         checkActiveDot();
         $(document).unbind('wheel');
@@ -201,14 +204,15 @@ $(document).ready(function () {
         if (isDesktop) {
             for (var i = 0; i < dots.length; i++) {
                 if (dots[i].find('h6').html() === thisElement.find('h6').html()) {
-                    $('html, body').animate({scrollTop: sections[i].offset().top}, 1000);
+                    // $('html, body').animate({scrollTop: sections[i].offset().top}, 1000);
+                    scroll(i);
                     active = i;
                     for (var b = 0; b < active; b++) {
                         sections[b].scrollTop(sections[b][0].scrollHeight);
                     }
-                    // for (var b = 0; b < i; b++) {
-                    //     sections[b].scrollTop = sections[b].scrollHeight;
-                    // }
+                    for (var y = active+1; y < sections.length; y++) {
+                        sections[y].scrollTop(0);
+                    }
                     checkActiveDot();
                 }
             }
@@ -218,6 +222,12 @@ $(document).ready(function () {
                 $('.icon-movi').show().animate({'opacity': '1'});
                 $('.photo-half-section-tools').css('background-image', 'url("img/section-tools/movi_pro.jpg")');
                 $('#section-tools').removeClass('tools-dji tools-camera').addClass('tools-movi');
+            } else {
+                $('.img-under-line-block').hide();
+                $('.icon-dji, .icon-movi').hide().animate({'opacity': '0'});
+                $('.icon-camera').show().animate({'opacity': '1'});
+                $('.photo-half-section-tools').css('background-image', 'url("/img/section-tools/red_camera.jpg")');
+                $('#section-tools').removeClass('tools-dji tools-movi').addClass('tools-camera');
             }
 
             if ($(this).hasClass('instagram-counter')) {
