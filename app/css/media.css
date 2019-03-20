@@ -851,8 +851,7 @@
 @media (max-width: 450px) {
   .under-line-block-dji, .under-line-block-movi {
     display: block;
-    margin-bottom: 45% !important;
-    width: 105vw; }
+    margin-bottom: 45% !important; }
   .under-line-block-movi .text-under-tittles-section-tools {
     margin-top: 28% !important; }
   .under-line-block {
@@ -863,8 +862,7 @@
 @media (max-width: 768px) {
   .icon-dji-mobile, .under-line-block-movi {
     display: block;
-    margin-bottom: 28% !important;
-    width: 105vw; }
+    margin-bottom: 28% !important; }
   .under-line-block-dji {
     margin-bottom: 28% !important; }
   .under-line-block-movi .text-under-tittles-section-tools {
