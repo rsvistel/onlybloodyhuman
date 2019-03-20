@@ -46,7 +46,8 @@
   .gray-half-section-tools, .outdoor-section__text, .client-contact-list {
     padding: 12% 10%; }
   .whole-text-section-about {
-    padding: 12% 8% 0 8%; }
+    padding: 12% 8% 0 8%;
+    width: 100%; }
   .client-contact-list {
     width: 100%; }
   #section-contact .row {
@@ -119,7 +120,9 @@
   .section-instagram-followers a, .section-instagram-followers span {
     font-size: 16px; }
   .photo-man-section-about {
-    margin-left: 0; }
+    margin-left: 0;
+    height: 100vh;
+    width: 100%; }
   .footer-client p {
     font-size: 11px; }
   .footer-client span, .lines-job-text-center {
@@ -307,6 +310,15 @@
     width: 50%;
     float: left;
     text-align: center; }
+  .owl-stage {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   #first-section {
     min-height: auto;
     height: auto; }
@@ -382,7 +394,7 @@
   .text-under-tittles-section-tools.text-under-img-section-tools {
     margin-top: 5px; }
   .logo-client-list-ecco embed {
-    max-width: 110px; } }
+    max-width: 110px !important; } }
 
 @media (max-width: 600px) {
   .section-instagram__photo {
@@ -433,6 +445,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
+    height: 200vh;
     margin-left: 0; }
   #first-section {
     height: auto; }
@@ -506,18 +519,23 @@
   .gray-half-section-tools {
     padding: 0 4% 0 5%; } }
 
+@media (min-width: 420px) and (max-width: 767px) {
+  .photo-man-section-about {
+    height: 150vh;
+    background-position: top; } }
+
 @media (min-width: 1000px) and (max-width: 1200px) {
   .img-photo-man-section-about {
     width: 190%; }
   #section-contact, .client-contact-list-img {
     height: auto; }
   .photo-man-section-about {
-    margin: 0 50px; }
+    height: auto; }
   .job-section-about {
     font-size: 55px; }
   .whole-text-section-about {
     margin-top: 5%;
-    padding: 0 20px 0 60px; }
+    padding: 0 60px 0 60px; }
   .logo-client-list embed {
     min-width: 115px;
     max-width: 140px;
@@ -797,3 +815,38 @@
     max-width: 175px; }
   .logo-client-list-merrel embed {
     height: 60px; } }
+
+@media (min-width: 1000px) {
+  #section-logos {
+    padding: 0.5% 7% 0 7%;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .logo-client-list {
+    width: auto !important;
+    padding: 0 5.45%; }
+  .logo-client-list embed {
+    min-width: 6vw;
+    padding-left: 0; }
+  .logo-client-list-red_bull {
+    padding-left: 0 !important; }
+  .logo-client-list-discovery {
+    padding-left: 0 !important; }
+  .logo-client-list-gsk embed {
+    max-height: 5vw;
+    padding-left: 0; }
+  .logo-client-list-ecco {
+    padding-left: 2%; }
+  .logo-client-list-nrs {
+    padding-right: 0 !important; }
+  .owl-item {
+    width: auto !important;
+    margin-right: 0 !important; }
+  .owl-stage {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; } }

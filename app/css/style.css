@@ -88,6 +88,16 @@ p {
 .owl-nav {
   display: none; }
 
+.owl-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 #first-section {
   height: 100vh;
   overflow: hidden;
@@ -540,9 +550,9 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle-mobile input:checked ~ span {
   opacity: 1;
-  -webkit-transform: rotate(45deg) translate(-2px, -1px);
-      -ms-transform: rotate(45deg) translate(-2px, -1px);
-          transform: rotate(45deg) translate(-2px, -1px);
+  -webkit-transform: rotate(45deg) translate(-1.5px, -1.5px);
+      -ms-transform: rotate(45deg) translate(-1.5px, -1.5px);
+          transform: rotate(45deg) translate(-1.5px, -1.5px);
   background: white; }
 
 #menuToggle-mobile input:checked ~ span:nth-last-child(3) {
@@ -641,7 +651,8 @@ body.opened--menu .text-dots-block embed {
 .logo-client-list-gsk embed {
   max-height: 5vw; }
 
-.logo-client-list-gsk {
+.logo-client-list-gsk embed {
+  max-height: 5vw;
   padding-left: 2%; }
 
 .logo-client-list-merrel embed {
@@ -668,12 +679,11 @@ body.opened--menu .text-dots-block embed {
   max-width: 6vw; }
 
 .logo-client-list-discovery embed {
-  max-width: 14vw;
-  padding: 0 4% 0 0; }
+  max-width: 14vw; }
 
 .logo-client-list-discovery {
   padding-left: 0;
-  margin-right: 15%; }
+  padding-right: 5.45%; }
 
 .logo-client-list-nrs, .logo-client-list-merrel {
   padding-left: 0; }
@@ -704,39 +714,17 @@ body.opened--menu .text-dots-block embed {
   display: flex; }
 
 .photo-man-section-about {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-right: 5%;
-  margin-left: 5%; }
-
-.img-photo-man-section-about {
-  width: 180%; }
+  background-image: url("../img/section-about/jamie1.jpg");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  height: auto; }
 
 .whole-text-section-about {
   padding: 5% 15% 4% 6%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  width: 50%; }
 
 .highlight-hover h2 {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, #ddd));
@@ -1136,7 +1124,7 @@ body.opened--menu .text-dots-block embed {
 
 .outdoor-section__image {
   visibility: hidden;
-  padding: 0.4vw 4.5vw 0 4.5vw;
+  padding: 0.4vw 4.2vw 0 4.2vw;
   position: absolute;
   z-index: 1;
   width: 100%; }
@@ -1144,7 +1132,7 @@ body.opened--menu .text-dots-block embed {
     position: static; }
 
 .outdoor-section__image.icon-travel {
-  padding: 0.6vw 4.5vw 0 4.2vw; }
+  padding: 0.6vw 4vw 0 4.2vw; }
 
 .outdoor-section__image .col-sm-3 {
   padding-right: 0;
@@ -1366,7 +1354,7 @@ body.opened--menu .text-dots-block embed {
 #section-contact {
   overflow: hidden;
   height: 100vh;
-  min-height: 800px; }
+  min-height: 600px; }
 
 #section-contact .row {
   display: -webkit-box;
@@ -1546,7 +1534,7 @@ body.opened--menu .text-dots-block embed {
   width: 50%;
   padding: 0;
   height: 100vh;
-  min-height: 800px; }
+  min-height: 600px; }
 
 .client-contact-list, .gray-half-section-tools {
   display: -webkit-box;

@@ -100,14 +100,28 @@ p
 //
 .owl-stage
   display: flex
-
+  //justify-content: space-around
+  //width: 1066px!important
+//.logo-client-list-red_bull
+//  padding-left: 0!important
 .owl-nav
   display: none
-
+.owl-item
+  display: flex
+  justify-content: center
 //.owl-item
 //  display: flex
 //  justify-content: center
 
+//.logo-client-list
+//  width: auto!important
+//  padding: 0 5.45%
+
+//.owl-item
+//  width: auto!important
+//  margin-right: 0!important
+//.owl-stage
+//  width: auto!important
 #first-section
   height: 100vh
   overflow: hidden
@@ -455,7 +469,7 @@ body.opened--menu .text-dots-block embed
 
 #menuToggle-mobile input:checked ~ span
   opacity: 1
-  transform: rotate(45deg) translate(-2px, -1px)
+  transform: rotate(45deg) translate(-1.5px, -1.5px)
   background: white
 
 #menuToggle-mobile input:checked ~ span:nth-last-child(3)
@@ -520,6 +534,7 @@ body.opened--menu .text-dots-block embed
   background-color: $primary-color
   display: flex
   align-items: center
+  //justify-content: space-around
   position: relative
   height: 20vh
   padding: 0.5% 4% 0 4%
@@ -529,12 +544,16 @@ body.opened--menu .text-dots-block embed
   max-width: 11vw
   min-height: 4vw
   max-height: 4.7vw
+  //padding-left: 0
 
 .logo-client-list-gsk embed
   max-height: 5vw
 
-.logo-client-list-gsk
+.logo-client-list-gsk embed
+  max-height: 5vw
   padding-left: 2%
+//.logo-client-list-gsk
+//  padding-left: 2%
 
 .logo-client-list-merrel embed
   max-height: 5.2vw
@@ -560,14 +579,17 @@ body.opened--menu .text-dots-block embed
 
 .logo-client-list-discovery embed
   max-width: 14vw
-  padding: 0 4% 0 0
+  //padding: 0 4% 0 0
 
 .logo-client-list-discovery
   padding-left: 0
-  margin-right: 15%
+  padding-right: 5.45%
+  //margin-right: 15%
+
 
 .logo-client-list-nrs, .logo-client-list-merrel
   padding-left: 0
+
 
 .logo-client-list
   text-align: center
@@ -591,21 +613,29 @@ body.opened--menu .text-dots-block embed
 //  align-items: flex-end
 
 .photo-man-section-about
-  display: flex
-  align-items: flex-end
-  justify-content: center
-  margin-right: 5%
-  margin-left: 5%
+  background-image: url("../img/section-about/jamie1.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  width: 50%
+  height: auto
+  //display: flex
+  //align-items: flex-end
+  //justify-content: center
+  //margin-right: 5%
+  //margin-left: 5%
+  //width: 180%
 
-.img-photo-man-section-about
-  width: 180%
+//.photo-man-section-about
+//  width: 180%
 
 .whole-text-section-about
   //margin-top: -10%
   padding: 5% 15% 4% 6%
-  display: flex
-  flex-direction: column
-  justify-content: center
+  width: 50%
+  //display: flex
+  //flex-direction: column
+  //justify-content: center
 
 
 .highlight-hover h2
@@ -958,7 +988,7 @@ body.opened--menu .text-dots-block embed
 
 .outdoor-section__image
   visibility: hidden
-  padding: 0.4vw 4.5vw 0 4.5vw
+  padding: 0.4vw 4.2vw 0 4.2vw
   position: absolute
   z-index: 1
   &:last-child
@@ -966,7 +996,7 @@ body.opened--menu .text-dots-block embed
   width: 100%
 
 .outdoor-section__image.icon-travel
-  padding: 0.6vw 4.5vw 0 4.2vw
+  padding: 0.6vw 4vw 0 4.2vw
 
 .outdoor-section__image .col-sm-3
   padding-right: 0
@@ -1153,7 +1183,7 @@ body.opened--menu .text-dots-block embed
 #section-contact
   overflow: hidden
   height: 100vh
-  min-height: 800px
+  min-height: 600px
 #section-contact .row
   display: flex
 
@@ -1210,7 +1240,7 @@ body.opened--menu .text-dots-block embed
   position: relative
 
 .client-contact-list__email a
-  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #ddd 50%);
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #ddd 50%)
   background-position: -0% 0
   background-size: 200% auto
   color: #222
@@ -1318,7 +1348,7 @@ body.opened--menu .text-dots-block embed
   width: 50%
   padding: 0
   height: 100vh
-  min-height: 800px
+  min-height: 600px
 
 .client-contact-list, .gray-half-section-tools
   display: flex
