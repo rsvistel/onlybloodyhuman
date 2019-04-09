@@ -10,6 +10,10 @@
   .outdoor-section {
     height: 75vh; } }
 
+@media (min-height: 900px) {
+  .section-outdoor-professional {
+    width: auto; } }
+
 @media (max-width: 768px) {
   /*general*/
   h1 {
@@ -713,6 +717,10 @@
   .opened--menu #menuToggle span, #menuToggle span {
     width: 35px;
     height: 6px; }
+  #menuToggle input:checked ~ span {
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+        -ms-transform: rotate(45deg) translate(-2px, -1px);
+            transform: rotate(45deg) translate(-2px, -1px); }
   .hamburger-menu-banner-section.animation {
     padding-top: 0.1%; }
   .change .bar1, .change .bar2, .change .bar3 {
