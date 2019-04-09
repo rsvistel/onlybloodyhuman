@@ -34,6 +34,10 @@ $(document).ready(function () {
             if ($(window).scrollTop() === 0) {
                 $('.text-dots-block').removeClass('active');
                 dots[0].addClass('active')
+                $('.whole-text-left-logo').css('opacity', '1')
+
+            }else{
+                $('.whole-text-left-logo').css('opacity', '0')
             }
         })
     }
@@ -190,6 +194,10 @@ $(document).ready(function () {
             // $('.text-near-dots, .text-dots-block embed').animate({'opacity': '1'}, 400);
             $('body').addClass('opened--menu');
         }
+    });
+    $("#menuToggle input , #menuToggle-mobile input").click(function(){
+        $(".list-icon, .cross-icon").toggle();
+
     });
 
     // Init Dots Array
