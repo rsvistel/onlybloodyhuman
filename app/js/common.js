@@ -34,6 +34,10 @@ $(document).ready(function () {
             if ($(window).scrollTop() === 0) {
                 $('.text-dots-block').removeClass('active');
                 dots[0].addClass('active')
+                $('.whole-text-left-logo').css('opacity', '1')
+
+            }else{
+                $('.whole-text-left-logo').css('opacity', '0')
             }
         })
     }

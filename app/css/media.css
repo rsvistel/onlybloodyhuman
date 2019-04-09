@@ -52,7 +52,7 @@
   .gray-half-section-tools, .outdoor-section__text, .client-contact-list {
     padding: 12% 10%; }
   .whole-text-section-about {
-    padding: 12% 8% 0 8%;
+    padding: 16% 10% 0 10%;
     width: 100%; }
   .client-contact-list {
     width: 100%; }
@@ -103,7 +103,7 @@
   .text-bottom-section-about {
     margin-bottom: 0; }
   .now-section-about {
-    margin-top: 10%; }
+    margin-top: 24%; }
   .text-under-img-section-tools, .over-line-block {
     padding: 0; }
   .arrow-down-section-banner embed {
@@ -141,7 +141,7 @@
   #menuToggle-mobile {
     right: 0;
     top: 0;
-    margin-top: 4%;
+    margin-top: 5%;
     margin-right: 9%; }
   #menuToggle-mobile span {
     width: 22px;
@@ -160,7 +160,7 @@
     font-size: 7px;
     line-height: 7px; }
   .dots-block-section-banner {
-    height: 75vh;
+    height: 55vh;
     margin-top: 15vh;
     padding-right: 5.3%; }
   #menu-mobile {
@@ -189,8 +189,8 @@
     width: 4vw;
     max-width: 14px; }
   .left-logo-banner-section .whole-text-left-logo {
-    -webkit-animation: fadein 1s;
-            animation: fadein 1s;
+    -webkit-animation: none;
+            animation: none;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
   .icon-dji-mobile, .icon-movi-mobile {
@@ -228,7 +228,11 @@
   .photo-half-section-tools, .gray-half-section-tools {
     width: 100%; }
   .text-center-banner-section {
-    z-index: initial; } }
+    z-index: initial; }
+  .job-section-about-producer {
+    font-size: 50px;
+    margin-bottom: 2vw;
+    margin-top: 8vw; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -393,7 +397,7 @@
     min-width: initial;
     max-width: initial; }
   .text-near-dots {
-    font-size: 7px;
+    font-size: 10px;
     width: 70%; }
   .arrow-down-icon {
     padding: 0 2vw 0.8vw 0; }
@@ -629,9 +633,12 @@
     height: 33vw; } }
 
 @media (max-width: 1000px) {
+  .text-under-tittles-section-tools {
+    font-size: 3.5vw;
+    line-height: 5.4vw; }
   p {
-    font-size: 12px;
-    line-height: 20px; }
+    font-size: 3.5vw;
+    line-height: 5.4vw; }
   .first-sentence-section-about, .tittle-section-about {
     font-size: 12px; }
   .aka-name-section-about {
@@ -653,7 +660,7 @@
     margin-bottom: 6px; }
   .progress-line {
     height: 7px; }
-  .text-under-tittles-section-tools, .outdoor-section__image p {
+  .outdoor-section__image p {
     font-size: 13px;
     line-height: 19px; }
   .text-under-img-section-tools {
