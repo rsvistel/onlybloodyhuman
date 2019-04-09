@@ -190,9 +190,7 @@
     max-width: 14px; }
   .left-logo-banner-section .whole-text-left-logo {
     -webkit-animation: none;
-            animation: none;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; }
+            animation: none; }
   .icon-dji-mobile, .icon-movi-mobile {
     display: -webkit-box;
     display: -webkit-flex;
