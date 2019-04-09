@@ -191,6 +191,10 @@ $(document).ready(function () {
             $('body').addClass('opened--menu');
         }
     });
+    $("#menuToggle input , #menuToggle-mobile input").click(function(){
+        $(".list-icon, .cross-icon").toggle();
+
+    });
 
     // Init Dots Array
     dots = [];
