@@ -14,6 +14,18 @@ $(document).ready(function () {
         bindScroll();
     } else {
         bindMobile();
+        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+        var followers;
+        $.ajax({
+            method: 'GET',
+            url: url,
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            success: function (response) {
+                followers = parseFloat(getRepString(response.data.counts.followed_by));
+                $('.countup').html(parseInt(parseFloat(followers)) + 'k');
+            }
+        });
     }
 
     // Init Sections Array
@@ -33,7 +45,7 @@ $(document).ready(function () {
             }
             if ($(window).scrollTop() === 0) {
                 $('.text-dots-block').removeClass('active');
-                dots[0].addClass('active')
+                dots[0].addClass('active');
                 $('.whole-text-left-logo').css('opacity', '1')
 
             }else{
@@ -330,13 +342,6 @@ $(document).ready(function () {
             }
         }, 3);
 
-        function getRepString (rep) {
-            rep = rep+'';
-            if (rep < 1000) return rep;
-            if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-            return (rep/1000).toFixed(rep % 1000 != 0);
-        }
-
         // $(document).bind('wheel', function (e) {
         //     var delta = e.originalEvent.deltaY;
         //     if (delta > 0) {
@@ -351,6 +356,13 @@ $(document).ready(function () {
         //         }
         //     }
         // });
+    }
+
+    function getRepString (rep) {
+        rep = rep+'';
+        if (rep < 1000) return rep;
+        if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+        return (rep/1000).toFixed(rep % 1000 != 0);
     }
 
     function runSubscribersCounter() {
@@ -388,13 +400,13 @@ $(document).ready(function () {
         dots: false,
         responsive: {
             0: {
-                items: 1,
+                items: 1
             },
             450: {
-                items: 2,
+                items: 2
             },
             767: {
-                items: 4,
+                items: 4
             },
             1000: {
                 items: 7,
