@@ -288,6 +288,14 @@
     opacity: 1; } }
 
 @media (max-width: 768px) {
+  #section-tools hr {
+    border: none;
+    border-top: 1px solid #f0f2f2;
+    margin: 3% 5% 0 5%; }
+  #section-tools .row.test {
+    display: block; }
+  #section-tools .row.test1 {
+    display: none; }
   .outdoor-section {
     position: static;
     display: block;
@@ -309,7 +317,7 @@
     margin: 0 0px 10px 0px; }
   .section-outdoor-professional {
     position: static; }
-  .outdoor-section-block button {
+  .outdoor-section-block button, .block-tools-section {
     padding: 0; }
   .outdoor-section__image {
     padding: 3% 5% 0 5%; }
@@ -356,10 +364,23 @@
     height: 60vw; }
   .section-outdoor-professional {
     min-height: auto; }
+  .img {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   .outdoor-section__image embed {
     width: 48%;
     height: 30px; }
-  #arrow-skills {
+  .tools-section__image embed {
+    width: 48%;
+    height: 100px; }
+  #arrow-skills, #arrow-tools {
     width: 3%;
     max-width: 15px; }
   .outdoor-section__image .numberCircle {
@@ -694,9 +715,9 @@
     padding: 0; }
   .logo-client-list {
     width: 100%; }
-  .outdoor-section-block button p {
+  .outdoor-section-block button p, .block-tools-section button p {
     font-size: 11px; }
-  .outdoor-section-block button span {
+  .outdoor-section-block button span, .block-tools-section button span {
     font-size: 12px; } }
 
 @media (min-width: 1000px) {

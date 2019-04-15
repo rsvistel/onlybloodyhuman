@@ -1011,7 +1011,22 @@ body.opened--menu .text-dots-block embed {
   display: none;
   opacity: 0; }
 
+#section-tools .row.test {
+  display: none; }
+
 /*Outdoor section*/
+.outdoor-section-block button {
+  opacity: 0.5;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
+.outdoor-section-block button:hover {
+  opacity: 1; }
+
+.outdoor-section-block button.active {
+  opacity: 1; }
+
 .video-section-cover {
   height: 100vh;
   display: -webkit-box;
@@ -1082,7 +1097,7 @@ body.opened--menu .text-dots-block embed {
 .outdoor-section__text--main p {
   margin: 6% 0 0 0; }
 
-.outdoor-section-block {
+.outdoor-section-block, .block-tools-section {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1093,7 +1108,7 @@ body.opened--menu .text-dots-block embed {
 .outdoor-section__travel {
   padding: 0; }
 
-.outdoor-section-block button span {
+.outdoor-section-block button span, .block-tools-section button span {
   font-size: 0.8vw;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
@@ -1102,11 +1117,11 @@ body.opened--menu .text-dots-block embed {
   margin-bottom: 0.8vw;
   line-height: 1.1; }
 
-.outdoor-section-block button {
+.outdoor-section-block button, .block-tools-section button {
   border: none;
   background: none; }
 
-.outdoor-section hr {
+.outdoor-section hr, .test hr {
   border: none;
   border-top: 2px solid #f0f2f2;
   padding-bottom: 1.4vh;
@@ -1144,7 +1159,7 @@ body.opened--menu .text-dots-block embed {
 .arrow-down-icon {
   padding: 0 2.9vw 0.8vw 2.9vw; }
 
-#arrow-skills {
+#arrow-skills, #arrow-tools {
   position: relative;
   width: 0.8vw;
   -webkit-transform: translateX(-0.4vw);
