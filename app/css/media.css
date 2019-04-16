@@ -22,11 +22,10 @@
     font-size: 80px;
     line-height: 60px; }
   h2 {
-    font-size: 42px;
-    line-height: 42px;
+    font-size: 50px;
     margin-left: 0; }
   h3 {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 25px; }
   h6 {
     font-size: 12px; }
@@ -49,12 +48,10 @@
     min-height: auto; }
   #section-contact {
     min-height: auto; }
-  .outdoor-section__text, .client-contact-list {
-    padding: 12% 10%; }
-  .gray-half-section-tools {
-    padding: 12% 10% 0 10%; }
+  .gray-half-section-tools, .outdoor-section__text, .client-contact-list {
+    padding: 16% 12%; }
   .whole-text-section-about {
-    padding: 16% 10% 0 10%;
+    padding: 16% 12% 0 12%;
     width: 100%; }
   .client-contact-list {
     width: 100%; }
@@ -73,7 +70,7 @@
   .client-contact-list-img {
     background-position: bottom;
     padding: 0;
-    height: 30vh;
+    height: 44vh;
     width: 100%;
     min-height: 100px; }
   .whole-text-section-about {
@@ -132,10 +129,10 @@
     height: 100vh;
     width: 100%; }
   .footer-client p {
-    font-size: 11px; }
+    font-size: 6px; }
   .footer-client span, .lines-job-text-center {
     font-size: 14px;
-    line-height: 30px;
+    line-height: 23px;
     z-index: 1; }
   .left-logo-banner-section {
     margin-top: 15px;
@@ -155,9 +152,11 @@
     height: 3vh; }
   .inner-content-section-banner {
     margin-top: 0; }
-  .footer-section img {
-    width: 6vw;
-    padding: 0 0 2vw 0; }
+  .footer-section {
+    padding: 2.5vw 0 3.5vw 0; }
+    .footer-section img {
+      width: 6vw;
+      padding: 0 0 2vw 0; }
   .text-left-logo {
     font-size: 7px;
     line-height: 7px; }
@@ -166,7 +165,8 @@
     margin-top: 15vh;
     padding-right: 5.3%; }
   #menu-mobile {
-    height: 120vh; }
+    height: 120vh;
+    margin: -65px 0 0 -200px; }
   #menuToggle-mobile input {
     width: 5vw;
     height: 3vh;
@@ -232,7 +232,9 @@
   .job-section-about-producer {
     font-size: 50px;
     margin-bottom: 2vw;
-    margin-top: 8vw; } }
+    margin-top: 8vw; }
+  .section-instagram__photo:nth-last-child(-n+4) {
+    display: none; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -249,11 +251,6 @@
     margin: 0;
     top: 10px;
     width: 50%; }
-  .footer-client p {
-    font-size: 9px; }
-  .footer-client span {
-    font-size: 12px;
-    line-height: 25px; }
   .img-under-line-block {
     height: 25vw; }
   .under-line-block embed {
@@ -269,7 +266,10 @@
   .outdoor-section__text {
     top: 50%; }
   .text-dots-block {
-    width: 270%; }
+    width: 300%;
+    margin-bottom: 30%; }
+    .text-dots-block embed {
+      width: 12px; }
   .dot-section-banner {
     margin: 8px 0;
     width: 0.6vw;
@@ -326,7 +326,7 @@
   .outdoor-section__image {
     padding: 3% 5% 0 5%; }
   .outdoor-section__image.icon-travel {
-    padding: 0.6vw 6vw 0 6vw; }
+    padding: 2vw 6vw 0 6vw; }
   .section-instagram {
     height: auto; }
   .logo-client-list {
@@ -397,7 +397,7 @@
   .outdoor-section__image .numberCircle {
     width: 35px;
     height: 35px;
-    font-size: 10px; }
+    font-size: 14px; }
   .client-contact-list__social--icon {
     display: -webkit-box;
     display: -webkit-flex;
@@ -407,14 +407,17 @@
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 5px; }
+    margin-bottom: 6px;
+    height: 22px; }
   .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.audio embed {
-    width: 4vw;
+    width: 4.5vw;
     height: 25px; }
   .client-contact-list__social--icon.audio embed {
     height: 18px; }
   .client-contact-list__img {
-    margin-right: 3%; }
+    margin-right: 6.5%; }
+  .client-contact-list__social--icon.telephone embed {
+    width: 4.9vw; }
   .client-contact-list__text p {
     margin-left: 5px; }
   .inner-content-section-banner {
@@ -424,12 +427,12 @@
   .section-instagram-followers a {
     line-height: 3vw; }
   .dot-section-banner {
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     min-width: initial;
     max-width: initial; }
   .text-near-dots {
-    font-size: 10px;
+    font-size: 13px;
     width: 70%; }
   .arrow-down-icon {
     padding: 0 2vw 0.8vw 0; }
@@ -437,9 +440,13 @@
     margin-top: 7%;
     margin-bottom: 8%; }
   .text-under-tittles-section-tools.text-under-img-section-tools {
-    margin-top: 5px; }
+    margin-top: 5px;
+    margin-left: 5%; }
   .logo-client-list-ecco embed {
-    max-width: 110px !important; } }
+    max-width: 110px !important; }
+  .section-instagram-followers a {
+    font-size: 10px;
+    line-height: 3vw; } }
 
 @media (max-width: 600px) {
   .section-instagram__photo {
@@ -448,9 +455,7 @@
   .logo-client-list-discovery embed, .logo-client-list-gsk embed {
     min-width: 130px;
     max-width: 150px;
-    height: 60vw; }
-  .section-instagram-followers a {
-    line-height: 5vw; } }
+    height: 60vw; } }
 
 @media (min-width: 1000px) and (max-width: 1100px) {
   #section-logos {
@@ -629,8 +634,8 @@
   .video-references {
     min-height: 50vh; }
   .dot-section-banner {
-    width: 4.5px;
-    height: 4.5px; }
+    width: 5.5px;
+    height: 5.5px; }
   .client-contact-list__center-arrow embed {
     width: 2vw; }
   #menuToggle-mobile {
@@ -664,6 +669,8 @@
     height: 33vw; } }
 
 @media (max-width: 1000px) {
+  p, .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p {
+    font-size: 3.1vw;
   .gray-half-section-tools.gray-half-section-tools__image {
     padding: 0;
     width: 100%; }
@@ -742,7 +749,7 @@
   .client-contact-list__text p {
     line-height: 20px; }
   .client-contact-list__email a {
-    font-size: 20px; }
+    font-size: 30px; }
   .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a {
     font-size: 10px; }
   .text-over-progress h6 {
@@ -761,7 +768,7 @@
   .text-under-img-section-tools {
     font-size: 11px; }
   .outdoor-section__image .numberCircle {
-    border: 1.5px #f0f2f2 solid; }
+    border: 3px #f0f2f2 solid; }
   .section-instagram__photo embed {
     width: 4vw; }
   .hover-location .location {
@@ -892,7 +899,13 @@
   .hover-location span {
     font-size: 11px; }
   .arrow-down-icon {
-    padding: auto; } }
+    padding: auto; }
+  .whole-text-section-about {
+    padding: 16% 10% 0 10%; }
+  .gray-half-section-tools, .outdoor-section__text, .client-contact-list {
+    padding: 16% 10%; }
+  .text-dots-block {
+    width: 340%; } }
 
 @media (min-width: 769px) and (max-width: 880px) {
   .logo-client-list {
