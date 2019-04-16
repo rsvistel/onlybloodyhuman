@@ -3,7 +3,7 @@
     height: 80vh;
     max-height: 800px;
     padding: 4% 9%; }
-  .nav-icon img {
+  .nav-icon embed {
     height: 3vh; }
   .text-under-img-section-tools {
     padding: 0 2%; }
@@ -49,8 +49,10 @@
     min-height: auto; }
   #section-contact {
     min-height: auto; }
-  .gray-half-section-tools, .outdoor-section__text, .client-contact-list {
+  .outdoor-section__text, .client-contact-list {
     padding: 12% 10%; }
+  .gray-half-section-tools {
+    padding: 12% 10% 0 10%; }
   .whole-text-section-about {
     padding: 16% 10% 0 10%;
     width: 100%; }
@@ -149,7 +151,7 @@
     margin-bottom: 3.5px;
     min-width: initial;
     max-width: initial; }
-  .nav-icon img {
+  .nav-icon embed {
     height: 3vh; }
   .inner-content-section-banner {
     margin-top: 0; }
@@ -261,9 +263,7 @@
   .client-contact-list__center-arrow {
     width: 20%; }
   .icon-movi-mobile {
-    margin-top: 4%; }
-  .icon-dji-mobile, .icon-movi-mobile {
-    padding: 3% 10% 1% 10%; } }
+    margin-top: 4%; } }
 
 @media (max-width: 1024px) {
   .outdoor-section__text {
@@ -288,13 +288,15 @@
     opacity: 1; } }
 
 @media (max-width: 768px) {
+  .tools-section__image {
+    padding: 0; }
   #section-tools hr {
     border: none;
     border-top: 1px solid #f0f2f2;
-    margin: 3% 5% 0 5%; }
-  #section-tools .row.test {
+    margin: 1.5% 0 0 0; }
+  #section-tools .row.section-tools-mobile__button {
     display: block; }
-  #section-tools .row.test1 {
+  #section-tools .row.section-tools-mobile {
     display: none; }
   .outdoor-section {
     position: static;
@@ -317,8 +319,10 @@
     margin: 0 0px 10px 0px; }
   .section-outdoor-professional {
     position: static; }
-  .outdoor-section-block button, .block-tools-section {
+  .outdoor-section-block button {
     padding: 0; }
+  .block-tools-section button {
+    padding-top: 4%; }
   .outdoor-section__image {
     padding: 3% 5% 0 5%; }
   .outdoor-section__image.icon-travel {
@@ -377,9 +381,16 @@
   .outdoor-section__image embed {
     width: 48%;
     height: 30px; }
-  .tools-section__image embed {
-    width: 48%;
-    height: 100px; }
+  .icon-camera embed {
+    height: 11vh;
+    margin: 7% 0; }
+  .block-tools-section {
+    padding: 9.5% 0 0 0; }
+  .icon-dji-mobile, .icon-movi-mobile {
+    padding: 3% 10% 1% 10%;
+    height: 13vh;
+    margin: 7% 0;
+    padding: 0; }
   #arrow-skills, #arrow-tools {
     width: 3%;
     max-width: 15px; }
@@ -536,8 +547,7 @@
   .photo-man-section-about {
     padding: 0 10%; }
   .outdoor-section {
-    height: 75vh;
-    max-height: 800px; }
+    height: 75vh; }
   .video-references, .section-outdoor-professional {
     max-height: 800px; }
   #menuToggle span, .opened--menu #menuToggle span {
@@ -654,6 +664,65 @@
     height: 33vw; } }
 
 @media (max-width: 1000px) {
+  .gray-half-section-tools.gray-half-section-tools__image {
+    padding: 0;
+    width: 100%; }
+  #section-tools hr {
+    border: none;
+    border-top: 1px solid #f0f2f2;
+    margin: 1.5% 0 0 0; }
+  .outdoor-section__image embed {
+    width: 48%;
+    height: 30px; }
+  .icon-camera embed {
+    height: 11vh;
+    margin: 7% 0; }
+  .block-tools-section {
+    padding: 9.5% 2.5% 0 0.5%; }
+  .icon-dji-mobile, .icon-movi-mobile {
+    padding: 3% 10% 1% 10%;
+    height: 13vh;
+    margin: 7% 0 7% 1%;
+    padding: 0; }
+  #arrow-skills, #arrow-tools {
+    width: 3%;
+    max-width: 15px; }
+  .gray-half-section-tools {
+    width: 100%;
+    padding: 12% 10% 0 12%; }
+  .outdoor-section {
+    height: auto; }
+  .outdoor-section__text {
+    padding: 9% 10% 0 12%; }
+  .outdoor-section__text--main p {
+    text-align: start; }
+  .outdoor-section__text--header h2 {
+    text-align: center; }
+  .outdoor-section__text--header h3 {
+    text-align: center;
+    margin: 0; }
+  .outdoor-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .outdoor-section__text {
+    width: 100%;
+    position: static;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .section-outdoor-professional {
+    position: static; }
+  #section-tools .row.section-tools-mobile__button {
+    display: block; }
+  #section-tools .row.section-tools-mobile {
+    display: none; }
   .text-under-tittles-section-tools {
     font-size: 3.5vw;
     line-height: 5.4vw; }
@@ -684,6 +753,11 @@
   .outdoor-section__image p {
     font-size: 13px;
     line-height: 19px; }
+  .tools-section__image p {
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: initial;
+    margin: 0 15% 10% 15%; }
   .text-under-img-section-tools {
     font-size: 11px; }
   .outdoor-section__image .numberCircle {
@@ -899,7 +973,7 @@
     margin-bottom: 35%; }
   .text-under-tittles-section-tools.text-under-img-section-tools {
     margin-top: 25%; }
-  .img-under-line-block.icon-dji-mobile embed {
+  .icon-dji-mobile embed {
     margin-top: 8vw; }
   .under-line-block.under-line-block-dji .text-under-tittles-section-tools {
     margin-left: 15px;
@@ -909,8 +983,7 @@
 
 @media (min-width: 450px) and (max-width: 768px) {
   .icon-dji-mobile, .under-line-block-movi {
-    display: block;
-    margin-bottom: 28% !important; }
+    display: block; }
   .under-line-block-dji {
     margin-bottom: 28% !important; }
   .under-line-block-movi .text-under-tittles-section-tools {
@@ -919,7 +992,5 @@
     margin-bottom: 20%; }
   .text-under-tittles-section-tools.text-under-img-section-tools {
     margin-top: 17%; }
-  .icon-movi-mobile {
-    margin-top: 0; }
   .photo-man-section-about {
     background-position: top; } }

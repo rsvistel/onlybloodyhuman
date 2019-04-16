@@ -17,8 +17,8 @@
         <input type="checkbox"  class="test"/>
 
         <div class = "nav-icon">
-            <img src="img/cross.svg" class="cross-icon">
-            <img src="img/list-button.svg" class="list-icon">
+            <embed src="img/close.svg" class="cross-icon">
+            <embed src="img/menu.svg" class="list-icon">
         </div>
 
         <ul id="menu-mobile"></ul>
@@ -51,8 +51,8 @@
             <div id="menuToggle">
                 <input type="checkbox" />
                 <div class = "nav-icon">
-                <img src="img/cross.svg" class="cross-icon">
-                <img src="img/list-button.svg" class="list-icon">
+                <embed src="img/close.svg" class="cross-icon">
+                <embed src="img/menu.svg" class="list-icon">
                 </div>
                 <!--<span></span>-->
                 <!--<span></span>-->
@@ -232,7 +232,7 @@
 
 <!--Section Tools-->
 <div id="section-tools" class="section section-fixed tools-camera">
-    <div class="row test1">
+    <div class="row section-tools-mobile">
         <div class="col-md-6 col-sm-6 gray-half-section-tools">
             <div class="over-line-block">
                 <h4 class="tittles-section-tools">the</h4>
@@ -274,7 +274,7 @@
     </div>
 
 
-    <div class = "row test">
+    <div class = "row section-tools-mobile__button">
         <div class="col-md-6 col-sm-6 gray-half-section-tools">
             <div class="over-line-block">
                 <h4 class="tittles-section-tools">the</h4>
@@ -286,7 +286,7 @@
             </div>
             <div class = "block-tools-section">
                 <div class = "col-sm-4 col-xs-4 block-tools-section__camera" data-name = "camera">
-                    <button type="button"><span>camera</span></button>
+                    <button type="button" class = "active"><span>camera</span></button>
                 </div>
                 <div class = "col-sm-4 col-xs-4 block-tools-section__drone" data-name = "drone">
                     <button type="button"><span>drone</span></button>
@@ -299,20 +299,21 @@
             <div class = "arrow-down-icon">
                 <embed id="arrow-tools" src="img/outdoor-section/arrow-down.svg">
             </div>
-
+        </div>
+        <div class= "gray-half-section-tools gray-half-section-tools__image">
             <div class = "outdoor-section__icons">
-                <div class ="outdoor-section__image icon-camera tools-section__image">
-                    <embed src="img/section-tools/camera.svg">
+                <div class ="icon-camera active tools-section__image">
+                    <embed src="img/section-tools/camera.svg" class="icon-camera">
                     <p>RED Digital Cinema Cameras coupled with cinema prime lens, shooting up to 8K RAW footage - the aesthetic is unmatched</p>
                     <img src="img/section-tools/red_camera.jpg">
                 </div>
-                <div class ="outdoor-section__image icon-drone active tools-section__image">
-                    <embed src="img/section-tools/helicopter.svg">
+                <div class =" icon-drone tools-section__image">
+                    <embed src="img/section-tools/helicopter.svg" class="icon-dji-mobile">
                     <p>With DJI Inspire 2 drones + Zenmuse X7 Super 35 cameras, we possess the ability to deliver unrivalled aerial cinematography in all conditions</p>
                     <img src="img/section-tools/dji_inspire.jpg">
                 </div>
-                <div class ="outdoor-section__image icon-gimbal tools-section__image">
-                    <embed src="img/section-tools/movi.svg">
+                <div class =" icon-gimbal tools-section__image">
+                    <embed src="img/section-tools/movi.svg" class = "icon-movi-mobile">
                     <p>Freefly MōVI Pro stabilised gimbals, alongside an array of jibs, sliders and dollies, mean smooth shots in any environment</p>
                     <img src="img/section-tools/movi_pro.jpg"></div>
             </div>

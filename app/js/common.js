@@ -300,7 +300,7 @@ $(document).ready(function () {
 
     $('.block-tools-section button').click(function() {
         if (!$(this).hasClass('active')) {
-            $('.outdoor-section__image').animate({'opacity': '0'}, 200);
+            $('.tools-section__image').animate({'opacity': '0'}, 200);
             var dataName = $(this).parent().data('name');
             if (dataName.toLowerCase() === 'camera') {
                 animateArrow('16.66%')
@@ -311,10 +311,10 @@ $(document).ready(function () {
             }
 
             setTimeout(function () {
-                $('.outdoor-section__image').removeClass('active');
+                $('.tools-section__image').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
                 $('.block-tools-section button').removeClass('active');
-                $('.block-tools-section .outdoor-section__' + dataName + ' button').addClass('active');
+                $('.block-tools-section .block-tools-section__' + dataName + ' button').addClass('active');
 
             }, 200);
         }
