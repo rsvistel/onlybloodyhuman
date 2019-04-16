@@ -473,7 +473,7 @@
   .section-outdoor-professional {
     width: initial; }
   .dots-block-section-banner {
-    padding-right: 4.7%; }
+    padding-right: 3.7%; }
   .client-contact-list__text p {
     margin-bottom: 10px; }
   .left-logo-banner-section embed {
@@ -560,7 +560,10 @@
   #menuToggle, menuToggle mobile {
     margin-top: 0; }
   .change .bar1, .change .bar2, .change .bar3 {
-    margin: 1% 0; } }
+    margin: 1% 0; }
+  p {
+    font-size: 13px;
+    line-height: 22px; } }
 
 @media (min-width: 420px) and (max-width: 767px) {
   .photo-man-section-about {
@@ -662,7 +665,7 @@
     height: 33vw; } }
 
 @media (max-width: 1000px) {
-  p, .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p {
+  .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p {
     font-size: 3.1vw; }
   .gray-half-section-tools.gray-half-section-tools__image {
     padding: 0;
@@ -680,7 +683,6 @@
   .block-tools-section {
     padding: 9.5% 2.5% 0 0.5%; }
   .icon-dji-mobile, .icon-movi-mobile {
-    padding: 3% 10% 1% 10%;
     height: 13vh;
     margin: 7% 0 7% 1%;
     padding: 0; }
@@ -689,7 +691,7 @@
     max-width: 15px; }
   .gray-half-section-tools {
     width: 100%;
-    padding: 12% 10% 0 12%; }
+    padding: 16% 12% 0 12%; }
   .outdoor-section {
     height: auto; }
   .outdoor-section__text {
@@ -724,11 +726,8 @@
   #section-tools .row.section-tools-mobile {
     display: none; }
   .text-under-tittles-section-tools {
-    font-size: 3.5vw;
-    line-height: 5.4vw; }
-  p {
-    font-size: 3.5vw;
-    line-height: 5.4vw; }
+    font-size: 14px;
+    line-height: 22px; }
   .first-sentence-section-about, .tittle-section-about {
     font-size: 12px; }
   .aka-name-section-about {
@@ -744,7 +743,7 @@
   .client-contact-list__email a {
     font-size: 30px; }
   .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a {
-    font-size: 10px; }
+    font-size: 11px; }
   .text-over-progress h6 {
     font-size: 11px;
     margin-bottom: 6px; }
@@ -757,7 +756,7 @@
     font-size: 13px;
     line-height: 21px;
     text-transform: initial;
-    margin: 0 15% 10% 15%; }
+    padding: 0 12% 10% 12%; }
   .text-under-img-section-tools {
     font-size: 11px; }
   .outdoor-section__image .numberCircle {
@@ -985,7 +984,10 @@
     margin-left: 15px;
     padding-left: 30px; }
   .photo-man-section-about {
-    background-position: top; } }
+    background-position: top; }
+  p {
+    font-size: 3.5vw;
+    line-height: 5.4vw; } }
 
 @media (min-width: 450px) and (max-width: 768px) {
   .icon-dji-mobile, .under-line-block-movi {
@@ -999,7 +1001,12 @@
   .text-under-tittles-section-tools.text-under-img-section-tools {
     margin-top: 17%; }
   .photo-man-section-about {
-    background-position: top; } }
+    background-position: top; }
+  p {
+    font-size: 14px;
+    line-height: 22px; }
+  .client-contact-list__img {
+    margin-right: 4%; } }
 
 @media (min-width: 768px) and (max-width: 1366px) {
   .text-near-dots {
