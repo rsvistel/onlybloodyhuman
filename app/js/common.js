@@ -298,6 +298,32 @@ $(document).ready(function () {
         }
     });
 
+    $('.block-tools-section button').click(function() {
+        if (!$(this).hasClass('active')) {
+            $('.tools-section__image').animate({'opacity': '0'}, 200);
+            var dataName = $(this).parent().data('name');
+            if (dataName.toLowerCase() === 'camera') {
+                animateArrow('16.66%')
+            } else if (dataName.toLowerCase() === 'drone') {
+                animateArrow('50%')
+            } else {
+                animateArrow('83.33%')
+            }
+
+            setTimeout(function () {
+                $('.tools-section__image').removeClass('active');
+                $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
+                $('.block-tools-section button').removeClass('active');
+                $('.block-tools-section .block-tools-section__' + dataName + ' button').addClass('active');
+
+            }, 200);
+        }
+
+        function animateArrow(prop) {
+            $('#arrow-tools').animate({'left': prop}, 400);
+        }
+    });
+
     function bindAbout() {
         $("#section-about").bind("scroll", function() {
             $(".progress-line").each(function () {

@@ -901,9 +901,19 @@ body.opened--menu .text-dots-block embed
 //  justify-content: center
 //  align-items: flex-start
 
+#section-tools .row.section-tools-mobile__button
+  display: none
+
 //Section tools
 
 /*Outdoor section*/
+.outdoor-section-block button, .block-tools-section button
+  opacity: 0.5
+  transition: 0.2s
+.outdoor-section-block button:hover, .block-tools-section button:hover
+  opacity: 1
+.outdoor-section-block button.active, .block-tools-section button.active
+  opacity: 1
 .video-section-cover
   height: 100vh
   display: flex
@@ -949,7 +959,7 @@ body.opened--menu .text-dots-block embed
 .outdoor-section__text--main p
   margin: 6% 0 0 0
 
-.outdoor-section-block
+.outdoor-section-block, .block-tools-section
   display: flex
   padding: 9.5% 2.9vw 1.5% 2.9vw
   text-align: center
@@ -957,7 +967,7 @@ body.opened--menu .text-dots-block embed
 .outdoor-section__travel
   padding: 0
 
-.outdoor-section-block button  span
+.outdoor-section-block button  span, .block-tools-section button span
   font-size: 0.8vw
   font-weight: 700
   font-family: $primary-font
@@ -966,12 +976,11 @@ body.opened--menu .text-dots-block embed
   margin-bottom: 0.8vw
   line-height: 1.1
 
-.outdoor-section-block button
+.outdoor-section-block button, .block-tools-section button
   border: none
   background: none
 
-
-.outdoor-section hr
+.outdoor-section hr, .section-tools-mobile__button hr
   border: none
   border-top: 2px solid #f0f2f2
   padding-bottom: 1.4vh
@@ -984,10 +993,10 @@ body.opened--menu .text-dots-block embed
 .outdoor-section button
   overflow: hidden
 
-.outdoor-section button:focus
+.outdoor-section button:focus, .block-tools-section button:focus
   outline: 0
 
-.outdoor-section__image
+.outdoor-section__image, .tools-section__image
   visibility: hidden
   padding: 0.4vw 4.2vw 0 4.2vw
   position: absolute
@@ -1003,7 +1012,7 @@ body.opened--menu .text-dots-block embed
   padding-right: 0
   padding-left: 0
 
-.outdoor-section__image.active
+.outdoor-section__image.active, .tools-section__image.active
   visibility: visible
 
 .arrow-down-icon
@@ -1014,7 +1023,11 @@ body.opened--menu .text-dots-block embed
   width: 0.8vw
   transform: translateX(-0.4vw)
   left: 50%
-
+#arrow-tools
+  position: relative
+  width: 0.8vw
+  transform: translateX(-0.4vw)
+  left: 16.66%
 .outdoor-section__icons
   position: relative
   text-align: center
@@ -1044,7 +1057,6 @@ body.opened--menu .text-dots-block embed
   width: 1.85vw
 
 
-
 .outdoor-section__image .numberCircle
   font-size: 0.9vw
   border-radius: 50%
@@ -1063,7 +1075,7 @@ body.opened--menu .text-dots-block embed
 .outdoor-section__image .numberCircle + p
   padding-top: 1vw
 
-.outdoor-section__image p
+.outdoor-section__image p, .tools-section__image p
   text-align: center
   padding-top: 0.2vw
   line-height: normal
@@ -1084,7 +1096,7 @@ body.opened--menu .text-dots-block embed
   min-height: 100vh
   width: 100vw
 
-.outdoor-section__image img
+.outdoor-section__image img, .tools-section__image img
   width: 100%
 /*Outdoor section*/
 
@@ -1394,7 +1406,7 @@ body.opened--menu .text-dots-block embed
   width: 2.4vw
 
 /*footer*/
-.nav-icon img
+.nav-icon embed
   height: 4vh
   position: absolute
   top: 0
