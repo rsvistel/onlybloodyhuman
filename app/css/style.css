@@ -1011,7 +1011,22 @@ body.opened--menu .text-dots-block embed {
   display: none;
   opacity: 0; }
 
+#section-tools .row.section-tools-mobile__button {
+  display: none; }
+
 /*Outdoor section*/
+.outdoor-section-block button, .block-tools-section button {
+  opacity: 0.5;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
+.outdoor-section-block button:hover, .block-tools-section button:hover {
+  opacity: 1; }
+
+.outdoor-section-block button.active, .block-tools-section button.active {
+  opacity: 1; }
+
 .video-section-cover {
   height: 100vh;
   display: -webkit-box;
@@ -1082,7 +1097,7 @@ body.opened--menu .text-dots-block embed {
 .outdoor-section__text--main p {
   margin: 6% 0 0 0; }
 
-.outdoor-section-block {
+.outdoor-section-block, .block-tools-section {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1093,7 +1108,7 @@ body.opened--menu .text-dots-block embed {
 .outdoor-section__travel {
   padding: 0; }
 
-.outdoor-section-block button span {
+.outdoor-section-block button span, .block-tools-section button span {
   font-size: 0.8vw;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
@@ -1102,11 +1117,11 @@ body.opened--menu .text-dots-block embed {
   margin-bottom: 0.8vw;
   line-height: 1.1; }
 
-.outdoor-section-block button {
+.outdoor-section-block button, .block-tools-section button {
   border: none;
   background: none; }
 
-.outdoor-section hr {
+.outdoor-section hr, .section-tools-mobile__button hr {
   border: none;
   border-top: 2px solid #f0f2f2;
   padding-bottom: 1.4vh;
@@ -1119,16 +1134,16 @@ body.opened--menu .text-dots-block embed {
 .outdoor-section button {
   overflow: hidden; }
 
-.outdoor-section button:focus {
+.outdoor-section button:focus, .block-tools-section button:focus {
   outline: 0; }
 
-.outdoor-section__image {
+.outdoor-section__image, .tools-section__image {
   visibility: hidden;
   padding: 0.4vw 4.2vw 0 4.2vw;
   position: absolute;
   z-index: 1;
   width: 100%; }
-  .outdoor-section__image:last-child {
+  .outdoor-section__image:last-child, .tools-section__image:last-child {
     position: static; }
 
 .outdoor-section__image.icon-travel {
@@ -1138,7 +1153,7 @@ body.opened--menu .text-dots-block embed {
   padding-right: 0;
   padding-left: 0; }
 
-.outdoor-section__image.active {
+.outdoor-section__image.active, .tools-section__image.active {
   visibility: visible; }
 
 .arrow-down-icon {
@@ -1151,6 +1166,14 @@ body.opened--menu .text-dots-block embed {
       -ms-transform: translateX(-0.4vw);
           transform: translateX(-0.4vw);
   left: 50%; }
+
+#arrow-tools {
+  position: relative;
+  width: 0.8vw;
+  -webkit-transform: translateX(-0.4vw);
+      -ms-transform: translateX(-0.4vw);
+          transform: translateX(-0.4vw);
+  left: 16.66%; }
 
 .outdoor-section__icons {
   position: relative;
@@ -1214,7 +1237,7 @@ body.opened--menu .text-dots-block embed {
 .outdoor-section__image .numberCircle + p {
   padding-top: 1vw; }
 
-.outdoor-section__image p {
+.outdoor-section__image p, .tools-section__image p {
   text-align: center;
   padding-top: 0.2vw;
   line-height: normal;
@@ -1235,7 +1258,7 @@ body.opened--menu .text-dots-block embed {
   min-height: 100vh;
   width: 100vw; }
 
-.outdoor-section__image img {
+.outdoor-section__image img, .tools-section__image img {
   width: 100%; }
 
 /*Outdoor section*/
@@ -1589,7 +1612,7 @@ body.opened--menu .text-dots-block embed {
   width: 2.4vw; }
 
 /*footer*/
-.nav-icon img {
+.nav-icon embed {
   height: 4vh;
   position: absolute;
   top: 0;
