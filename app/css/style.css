@@ -1614,6 +1614,7 @@ body.opened--menu .text-dots-block embed {
 /*footer*/
 .nav-icon embed {
   height: 4vh;
+  width: 4vh;
   position: absolute;
   top: 0;
   bottom: 0;
