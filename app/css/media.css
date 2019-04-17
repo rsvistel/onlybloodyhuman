@@ -400,7 +400,6 @@
   .block-tools-section {
     padding: 9.5% 0 0 0; }
   .icon-dji-mobile, .icon-movi-mobile {
-    padding: 3% 10% 1% 10%;
     height: 13vh;
     margin: 7% 0;
     padding: 0; }
@@ -506,7 +505,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
-    height: 200vh;
+    height: 248vh;
     margin-left: 0; }
   #first-section {
     height: auto; }
@@ -575,7 +574,13 @@
     margin: 1% 0; }
   p {
     font-size: 13px;
-    line-height: 22px; } }
+    line-height: 22px; }
+  .outdoor-section__image .numberCircle {
+    width: 3.8vw;
+    height: 3.8vw;
+    font-size: 15px; }
+  .outdoor-section__image.icon-travel {
+    padding-top: 1.8vw; } }
 
 @media (min-width: 420px) and (max-width: 767px) {
   .photo-man-section-about {
@@ -1020,15 +1025,19 @@
   .client-contact-list__img {
     margin-right: 4%; } }
 
-@media (min-width: 768px) and (max-width: 1366px) {
+@media (min-width: 768px) and (max-width: 1250px) {
   .text-near-dots {
     font-size: 15px;
     width: 70%; }
   .text-dots-block {
     width: 170%;
-    margin-bottom: 20%; }
+    margin-bottom: 30%; }
   .dot-section-banner {
     width: 7px;
     height: 7px; }
   #menu {
     margin: -10vw 0 0 -20vw; } }
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .text-dots-block {
+    margin-bottom: 20%; } }
