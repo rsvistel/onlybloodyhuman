@@ -21,7 +21,7 @@
   /*general*/
   h1 {
     font-size: 80px;
-    line-height: 60px; }
+    line-height: 65px; }
   h2 {
     font-size: 50px;
     margin-left: 0; }
@@ -682,7 +682,17 @@
     height: 24.67vw; }
   #arrow-skills {
     width: 2.1%;
-    max-width: 20px; } }
+    max-width: 20px; }
+  .text-near-dots {
+    font-size: 13px; }
+  .dots-block-section-banner {
+    margin-top: 30vh; }
+  .photo-man-section-about {
+    height: 300vh; }
+  #section-banner {
+    height: 75vh; }
+  #section-logos {
+    height: 25vh; } }
 
 @media (max-width: 600px) and (orientation: landscape) {
   .text-center-banner-section, .client-contact-list-img {
@@ -817,6 +827,18 @@
     font-size: 11px; }
   .outdoor-section-block button span, .block-tools-section button span {
     font-size: 12px; } }
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .icon-dji-mobile, .icon-movi-mobile, .icon-camera embed {
+    margin: 3% 0; }
+  .icon-camera embed, .icon-dji-mobile {
+    height: 14vw; }
+  .icon-movi-mobile {
+    height: 100px; }
+  .outdoor-section-block, .block-tools-section {
+    padding: 9.5% 0 1.5% 0; }
+  .arrow-down-icon {
+    padding: 0 0.5vw 0.8vw 0; } }
 
 @media (min-width: 1000px) {
   .owl-item {
@@ -1033,7 +1055,7 @@
   .client-contact-list__img {
     margin-right: 4%; } }
 
-@media (min-width: 768px) and (max-width: 1250px) {
+@media (min-width: 768px) and (max-width: 1100px) {
   .text-near-dots {
     font-size: 15px;
     width: 70%; }
