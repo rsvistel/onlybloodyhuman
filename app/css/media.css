@@ -934,6 +934,11 @@
     height: 4px; } }
 
 @media (max-width: 320px) {
+  .icon-camera embed {
+    height: 13vh; }
+  .icon-movi-mobile {
+    height: 14vh;
+    margin: 6% 0 7% 0; }
   .hover-location span {
     font-size: 11px; }
   .arrow-down-icon {
