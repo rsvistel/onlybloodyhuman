@@ -3,9 +3,6 @@
     height: 80vh;
     max-height: 800px;
     padding: 4% 9%; }
-  .nav-icon embed {
-    height: 3vh;
-    width: 3vh; }
   .text-under-img-section-tools {
     padding: 0 2%; }
   #section-tools, .section, .section-instagram {
@@ -150,8 +147,8 @@
     min-width: initial;
     max-width: initial; }
   .nav-icon embed {
-    height: 3vh;
-    width: 3vh; }
+    width: 3.5vh;
+    max-width: 3.5vh; }
   .inner-content-section-banner {
     margin-top: 0; }
   .footer-section {
@@ -470,10 +467,18 @@
   #section-logos {
     padding: 0.5% 2% 0 2%; } }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 900px) and (max-width: 1000px) {
   .nav-icon embed {
-    height: 3vh;
-    width: 3vh; }
+    max-width: 47%; }
+  .hamburger-menu-banner-section {
+    margin-top: 0; } }
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .nav-icon embed {
+    width: 4vh;
+    max-width: 50%; } }
+
+@media (min-width: 769px) and (max-width: 1200px) {
   .section-contact {
     height: auto;
     min-height: auto; }
@@ -513,6 +518,8 @@
     height: 1.65vw; } }
 
 @media (min-width: 768px) and (max-width: 1000px) {
+  .hamburger-menu-banner-section {
+    margin-top: 0; }
   .block-tools-section {
     padding: 9.5% 0.5% 0 0; }
   .outdoor-section-block {
@@ -590,14 +597,26 @@
   .outdoor-section-block {
     padding: 9.5% 0 1.5% 0; }
   .outdoor-section__text--header h2 {
-    line-height: 50px; } }
-
-@media (min-width: 420px) and (max-width: 767px) {
+    line-height: 50px; }
   .photo-man-section-about {
     height: 150vh;
     background-position: top; } }
 
-@media (min-width: 1000px) and (max-width: 1200px) {
+@media (min-width: 3500px) {
+  .nav-icon embed {
+    width: 3.9vh;
+    max-width: 50%; } }
+
+@media (min-width: 4000px) {
+  .nav-icon embed {
+    max-width: 1.5vw;
+    width: 1.5vw; } }
+
+@media (min-width: 1100px) and (max-width: 1500px) {
+  .hamburger-menu-banner-section {
+    margin-top: 0; } }
+
+@media (min-width: 4000px) {
   .img-photo-man-section-about {
     width: 190%; }
   #section-contact, .client-contact-list-img {
@@ -647,6 +666,12 @@
 @media (min-width: 1200px) and (max-width: 1500px) {
   .section-contact {
     overflow: initial; } }
+
+@media (min-width: 1500px) and (max-width: 1800px) {
+  .hamburger-menu-banner-section {
+    margin-top: 0; }
+  .nav-icon embed {
+    width: 4vh; } }
 
 @media (min-width: 451px) and (max-width: 768px) {
   .logo-client-list embed {
@@ -851,8 +876,6 @@
     -webkit-transform: rotate(45deg) translate(-2px, -1px);
         -ms-transform: rotate(45deg) translate(-2px, -1px);
             transform: rotate(45deg) translate(-2px, -1px); }
-  .hamburger-menu-banner-section.animation {
-    padding-top: 0.1%; }
   .change .bar1, .change .bar2, .change .bar3 {
     margin: 0.3% 0; } }
 
@@ -908,19 +931,24 @@
     height: 4px; }
   .opened--menu #menuToggle span {
     width: 29.5px;
-    height: 4px; }
-  .hamburger-menu-banner-section.animation {
-    padding-top: 0.45%; } }
+    height: 4px; } }
 
 @media (max-width: 320px) {
+  .icon-camera embed {
+    height: 13vh; }
+  .icon-movi-mobile {
+    height: 14vh;
+    margin: 6% 0 7% 0; }
   .hover-location span {
     font-size: 11px; }
   .arrow-down-icon {
     padding: auto; }
   .whole-text-section-about {
     padding: 16% 10% 0 10%; }
-  .gray-half-section-tools, .outdoor-section__text, .client-contact-list {
+  .outdoor-section__text, .client-contact-list {
     padding: 16% 10%; }
+  .gray-half-section-tools {
+    padding: 16% 10% 0 10%; }
   .text-dots-block {
     width: 500%; } }
 
@@ -1015,6 +1043,8 @@
     line-height: 5.4vw; } }
 
 @media (min-width: 450px) and (max-width: 768px) {
+  #menuToggle-mobile {
+    margin-top: 3%; }
   .icon-dji-mobile, .under-line-block-movi {
     display: block; }
   .under-line-block-dji {
