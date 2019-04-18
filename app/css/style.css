@@ -626,8 +626,6 @@ body.opened--menu .text-dots-block embed {
       -ms-transform: none;
           transform: none; }
 
-/*SECTION BANNER*/
-/*SECTION LOGOS*/
 #section-logos {
   background-color: #363531;
   display: -webkit-box;
@@ -694,8 +692,6 @@ body.opened--menu .text-dots-block embed {
 .logo-client-list-ecco {
   padding-right: 0; }
 
-/*SECTION LOGOS*/
-/*SECTION about*/
 #about-trigger {
   position: relative;
   top: 1vh; }
@@ -1014,7 +1010,6 @@ body.opened--menu .text-dots-block embed {
 #section-tools .row.section-tools-mobile__button {
   display: none; }
 
-/*Outdoor section*/
 .outdoor-section-block button, .block-tools-section button {
   opacity: 0.5;
   -webkit-transition: 0.2s;
@@ -1611,7 +1606,6 @@ body.opened--menu .text-dots-block embed {
   padding-top: 1.4vh;
   width: 2.4vw; }
 
-/*footer*/
 .nav-icon embed {
   width: 4.9vh;
   max-width: 45%;

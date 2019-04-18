@@ -800,7 +800,20 @@
 
   .client-contact-list__social--icon.audio embed
     height: 20px
-
+@media (max-width: 825px) and (orientation: landscape)
+  .dots-block-section-banner
+    margin-top: 20vh
+    height: 63vh
+  .nav-icon embed
+    width: 5vh
+  .icon-camera
+    height: 20vh!important
+    margin: 4% 0 4% 0!important
+  .icon-dji-mobile, .icon-movi-mobile
+    height: 20vh!important
+    margin: 4% 0 4% 0!important
+  .arrow-down-icon
+    padding: 0 1.5% 0.8vw 0
 @media (max-width: 768px) and (orientation: landscape)
   .nav-icon embed
     width: 5.5vh
@@ -808,7 +821,7 @@
     height: 5.5vh
   .text-center-banner-section
     height: 100vh
-
+    height: -webkit-fill-available
   .client-contact-list-img
     height: 60vh
 
@@ -1040,12 +1053,8 @@
   #menuToggle input:checked ~ span
     transform: rotate(45deg) translate(-2px, -1px)
 
-  //.hamburger-menu-banner-section.animation
-  //  padding-top: 0.1%
-
   .change .bar1, .change .bar2, .change .bar3
     margin: 0.3% 0
-
 
 @media (min-width: 2500px)
   .opened--menu #menuToggle span
