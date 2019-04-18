@@ -473,7 +473,7 @@ body.opened--menu .text-dots-block embed {
 
 #menuToggle input, #menuToggle-mobile input {
   display: block;
-  width: 2vw;
+  width: 2.5vw;
   height: 4.5vh;
   position: absolute;
   top: -0.3vw;
@@ -1607,13 +1607,15 @@ body.opened--menu .text-dots-block embed {
   width: 2.4vw; }
 
 .nav-icon embed {
-  width: 4.9vh;
+  width: 2vw;
   max-width: 45%;
   position: absolute;
   top: 0;
   bottom: 0;
   pointer-events: none; }
 
-.cross-icon {
+.nav-icon .cross-icon {
   display: none;
-  z-index: 1; }
+  z-index: 1;
+  width: 1.85vw;
+  max-width: 30%; }
