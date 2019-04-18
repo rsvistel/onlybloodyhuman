@@ -695,13 +695,29 @@
   .client-contact-list__social--icon.audio embed {
     height: 20px; } }
 
+@media (max-width: 825px) and (orientation: landscape) {
+  .dots-block-section-banner {
+    margin-top: 20vh;
+    height: 63vh; }
+  .nav-icon embed {
+    width: 5vh; }
+  .icon-camera {
+    height: 20vh !important;
+    margin: 4% 0 4% 0 !important; }
+  .icon-dji-mobile, .icon-movi-mobile {
+    height: 20vh !important;
+    margin: 4% 0 4% 0 !important; }
+  .arrow-down-icon {
+    padding: 0 1.5% 0.8vw 0; } }
+
 @media (max-width: 768px) and (orientation: landscape) {
   .nav-icon embed {
     width: 5.5vh;
     max-width: 5.5vh;
     height: 5.5vh; }
   .text-center-banner-section {
-    height: 100vh; }
+    height: 100vh;
+    height: -webkit-fill-available; }
   .client-contact-list-img {
     height: 60vh; }
   .photo-half-section-tools {
