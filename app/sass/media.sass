@@ -754,6 +754,9 @@
   #menuToggle, #menuToggle mobile
     margin-top: 0
 
+  .outdoor-section-block button span, .outdoor-section__image p
+    font-size: 1vw
+
 @media (min-width: 1200px) and (max-width: 1550px)
   .section-outdoor-professional
     width: initial
@@ -800,20 +803,7 @@
 
   .client-contact-list__social--icon.audio embed
     height: 20px
-@media (max-width: 825px) and (orientation: landscape)
-  .dots-block-section-banner
-    margin-top: 20vh
-    height: 63vh
-  .nav-icon embed
-    width: 5vh
-  .icon-camera
-    height: 20vh!important
-    margin: 4% 0 4% 0!important
-  .icon-dji-mobile, .icon-movi-mobile
-    height: 20vh!important
-    margin: 4% 0 4% 0!important
-  .arrow-down-icon
-    padding: 0 1.5% 0.8vw 0
+
 @media (max-width: 768px) and (orientation: landscape)
   .nav-icon embed
     width: 5.5vh
@@ -1136,8 +1126,19 @@
     padding: 16% 10%
   .gray-half-section-tools
     padding: 16% 10% 0 10%
+
   .text-dots-block
     width: 500%
+
+  .outdoor-section__image p
+    font-size: 11px
+    line-height: 17px
+
+  .outdoor-section-block
+    padding: 9.5% 0 1.5% 0
+
+  .outdoor-section__image
+    padding: 3% 3% 0 3%
 @media (min-width: 769px) and (max-width: 880px)
   .logo-client-list
     padding: 0
@@ -1289,4 +1290,33 @@
 @media (min-width: 1024px) and (max-width: 1250px)
   .text-dots-block
     margin-bottom: 20%
+
+@media (max-width: 825px) and (orientation: landscape)
+  .dots-block-section-banner
+    margin-top: 20vh
+    height: 63vh
+  .nav-icon embed
+    width: 5vh
+  //.icon-camera embed
+  //  height: 20vh
+  //  margin: 4% 0 4% 0
+  //.icon-dji-mobile
+  //  height: 20vh
+  //  margin: 4% 0 4% 0
+  //
+  //.icon-movi-mobile
+  //  height: 28vh
+  //  margin: 4% 0 4% 0
+
+  .icon-dji-mobile, .icon-movi-mobile, .icon-camera embed
+    margin: 3% 0
+
+  .icon-camera embed, .icon-dji-mobile
+    height: 14vw
+
+  .icon-movi-mobile
+    height: 100px
+
+  .arrow-down-icon
+    padding: 0 1.5% 0.8vw 0
 
