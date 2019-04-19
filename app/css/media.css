@@ -239,7 +239,9 @@
     margin-bottom: 2vw;
     margin-top: 8vw; }
   .section-instagram__photo:nth-last-child(-n+4) {
-    display: none; } }
+    display: none; }
+  .arrow-down-icon {
+    padding: 0 2.5vw 0.8vw 0.5vw; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -443,8 +445,6 @@
     height: 8px;
     min-width: initial;
     max-width: initial; }
-  .arrow-down-icon {
-    padding: 0 2.5vw 0.8vw 0; }
   .section-instagram-followers {
     margin-top: 7%;
     margin-bottom: 8%; }
@@ -534,8 +534,6 @@
     padding: 9.5% 0.5% 0 0; }
   .outdoor-section-block {
     padding: 9.5% 0 1.5% 0; }
-  .arrow-down-icon {
-    padding: 0 1% 0.8vw 0; }
   .tools-section__image {
     padding: 0.4vw 0 0 0; }
   #section-contact, .gray-half-section-tools {
@@ -610,7 +608,15 @@
     line-height: 50px; }
   .photo-man-section-about {
     height: 150vh;
-    background-position: top; } }
+    background-position: top; }
+  .arrow-down-icon {
+    padding: 0 1% 0.8vw 0; }
+  .outdoor-section-block {
+    padding: 9.5% 0.5% 1.5% 0.5%; }
+  .outdoor-section__image.icon-travel {
+    padding: 0.6vw 4vw 0 4.4vw; }
+  .block-tools-section {
+    padding: 9.5% 0.5% 0 0.5%; } }
 
 @media (min-width: 3500px) {
   .nav-icon embed {
@@ -896,7 +902,10 @@
   .outdoor-section-block button p, .block-tools-section button p {
     font-size: 11px; }
   .outdoor-section-block button span, .block-tools-section button span {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .outdoor-section hr {
+    border-top: 1px solid #f0f2f2;
+    margin: 1.5% 0 0 0; } }
 
 @media (max-width: 768px) and (orientation: landscape) {
   #menuToggle-mobile {
@@ -937,16 +946,7 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
-  .opened--menu #menuToggle span, #menuToggle span {
-    width: 35px;
-    height: 6px; }
-  #menuToggle input:checked ~ span {
-    -webkit-transform: rotate(45deg) translate(-2px, -1px);
-        -ms-transform: rotate(45deg) translate(-2px, -1px);
-            transform: rotate(45deg) translate(-2px, -1px); }
-  .change .bar1, .change .bar2, .change .bar3 {
-    margin: 0.3% 0; } }
+    display: flex; } }
 
 @media (min-width: 2500px) {
   .opened--menu #menuToggle span {
@@ -1167,7 +1167,7 @@
   .text-dots-block {
     margin-bottom: 20%; } }
 
-@media (min-width: 2000px) {
+@media (min-width: 1900px) {
   .nav-icon embed {
     width: 1.7vw;
     top: 0; } }
