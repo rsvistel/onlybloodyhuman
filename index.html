@@ -10,15 +10,13 @@
 </head>
 <body>
 
-
 <div class="col-xs-12 mobile-hamburger-menu-banner-section animation">
-
     <div id="menuToggle-mobile">
         <input type="checkbox"  class="test"/>
 
         <div class = "nav-icon">
-            <img src="img/cross.svg" class="cross-icon">
-            <img src="img/list-button.svg" class="list-icon">
+            <embed src="img/close.svg" class="cross-icon">
+            <embed src="img/menu.svg" class="list-icon">
         </div>
 
         <ul id="menu-mobile"></ul>
@@ -44,39 +42,19 @@
             </div>
         </div>
 
-
-
         <div class="col-md-6 col-sm-6 col-xs-6 hamburger-menu-banner-section animation">
 
             <div id="menuToggle">
                 <input type="checkbox" />
                 <div class = "nav-icon">
-                <img src="img/cross.svg" class="cross-icon">
-                <img src="img/list-button.svg" class="list-icon">
+                <embed src="img/close.svg" class="cross-icon">
+                <embed src="img/menu.svg" class="list-icon">
                 </div>
-                <!--<span></span>-->
-                <!--<span></span>-->
-                <!--<span></span>-->
+
 
                 <ul id="menu">
-                    <!--<a href="#"><li>Home</li></a>-->
-                    <!--<a href="#"><li>About</li></a>-->
-                    <!--<a href="#"><li>Info</li></a>-->
-                    <!--<a href="#"><li>Contact</li></a>-->
-                    <!--<a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>-->
                 </ul>
             </div>
-            <!--<div class="col-md-6 col-sm-6 col-xs-6 hamburger-menu-banner-section animation" onclick="myFunction(this)">-->
-            <!--<div class="hamburger-menu-banner-section">-->
-            <!--<div id="menuToggle">-->
-            <!--<div class="bar1"></div>-->
-            <!--<div class="bar2"></div>-->
-            <!--<div class="bar3"></div>-->
-            <!--<div id="menu"></div>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
-
         </div>
     </div>
 
@@ -85,7 +63,7 @@
 <div id="first-section" class="section section-fixed">
     <div id="section-banner" class="video-section">
         <div class="video-in-section-banner">
-            <video src="img/first-section/video/reel.mp4" class="video-references" autoplay loop muted></video>
+            <video src="img/first-section/video/reel.mp4" class="video-references" playsinline autoplay loop muted></video>
         </div>
         <div class="row arrow-down-section-banner">
             <embed src="img/section-tools/arrow-down.svg">
@@ -104,11 +82,7 @@
         </div>
     </div>
 
-
-    <!--Section Logos-->
     <div id="section-logos" class="owl-carousel">
-        <!--<div class="container">-->
-        <!--<div class="row">-->
         <div class="col-md-2 col-sm-2 item logo-client-list logo-client-list-red_bull">
             <embed src="img/section-logos/Red-Bull.svg">
         </div>
@@ -137,20 +111,13 @@
         <div class="col-md-3 col-sm-2 item logo-client-list logo-client-list-nrs">
             <embed src="img/section-logos/NRS.svg">
         </div>
-        <!--</div>-->
-        <!--</div>-->
     </div>
-    <!--Section Logos-->
-    </div>
-<!--First Section-->
 
-<!--Section About-->
+    </div>
+
 <div id="section-about" class="section">
-     <!--class="section"-->
-    <!--<div class="container">-->
         <div class="row">
             <div class=" photo-man-section-about">
-                <!--<img class="img-photo-man-section-about" src="img/section-about/jamie.jpg" alt = "photo_man">-->
             </div>
 
             <div class=" whole-text-section-about">
@@ -228,11 +195,9 @@
             </div>
         </div>
 </div>
-<!--Section About-->
 
-<!--Section Tools-->
 <div id="section-tools" class="section section-fixed tools-camera">
-    <div class="row">
+    <div class="row section-tools-mobile">
         <div class="col-md-6 col-sm-6 gray-half-section-tools">
             <div class="over-line-block">
                 <h4 class="tittles-section-tools">the</h4>
@@ -272,11 +237,61 @@
         </div>
         <div class="col-md-6 col-sm-6 photo-half-section-tools photo-half-section-tools-movi"></div>
     </div>
+
+
+    <div class = "row section-tools-mobile__button">
+        <div class="col-md-6 col-sm-6 gray-half-section-tools">
+            <div class="over-line-block">
+                <h4 class="tittles-section-tools">the</h4>
+                <h1 class="large-tittle-section-tools">best</h1>
+                <h4 class="tittles-section-tools tittles-margin-section-tools">tools on the<br>
+                    planet</h4>
+                <p class="text-under-tittles-section-tools">Alongside world class talent, I match the latest, most versatile, high spec motion and sound equipment. </p>
+                <p class="text-under-tittles-section-tools">By conscious selection, productions strike an ideal balance between light, agile and able in the field, and the capture of remarkable, dynamic cinema from the land, mountain, sea and sky.</p>
+            </div>
+            <div class = "block-tools-section">
+                <div class = "col-sm-4 col-xs-4 block-tools-section__camera" data-name = "camera">
+                    <button type="button" class = "active"><span>camera</span></button>
+                </div>
+                <div class = "col-sm-4 col-xs-4 block-tools-section__drone" data-name = "drone">
+                    <button type="button"><span>drone</span></button>
+                </div>
+                <div class = "col-sm-4 col-xs-4 block-tools-section__gimbal" data-name = "gimbal">
+                    <button type="button"><span>gimbal</span></button>
+                </div>
+            </div>
+            <hr>
+            <div class = "arrow-down-icon">
+                <embed id="arrow-tools" src="img/outdoor-section/arrow-down.svg">
+            </div>
+        </div>
+        <div class= "gray-half-section-tools gray-half-section-tools__image">
+            <div class = "outdoor-section__icons">
+                <div class ="icon-camera active tools-section__image">
+                    <div class="img-div-outdoor-section__icons">
+                      <embed src="img/section-tools/camera-mobile.svg" class="icon-camera">
+                    </div>
+                    <p>RED Digital Cinema Cameras coupled with cinema prime lens, shooting up to 8K RAW footage - the aesthetic is unmatched</p>
+                    <img src="img/section-tools/red_camera.jpg">
+                </div>
+                <div class =" icon-drone tools-section__image">
+                    <div class="img-div-outdoor-section__icons img-div-outdoor-section__icons-dji">
+                       <embed src="img/section-tools/helicopter-mobile.svg" class="icon-dji-mobile">
+                    </div>
+                    <p>With DJI Inspire 2 drones + Zenmuse X7 Super 35 cameras, we possess the ability to deliver unrivalled aerial cinematography in all conditions</p>
+                    <img src="img/section-tools/dji_inspire.jpg">
+                </div>
+                <div class =" icon-gimbal tools-section__image">
+                    <div class="img-div-outdoor-section__icons img-div-outdoor-section__icons-movi">
+                      <embed src="img/section-tools/movi-mobile.svg" class = "icon-movi-mobile">
+                    </div>
+                    <p>Freefly MōVI Pro stabilised gimbals, alongside an array of jibs, sliders and dollies, mean smooth shots in any environment</p>
+                    <img src="img/section-tools/movi_pro.jpg"></div>
+            </div>
+        </div>
+    </div>
 </div>
-<!--Section Tools-->
 
-
-<!--Outdoor Section-->
 <div id="section-instagram" class="section">
     <div class="outdoor-section">
         <div class = "outdoor-section__text">
@@ -289,7 +304,7 @@
                         <button type="button"><span>travel</span></button>
                     </div>
                     <div class = "col-sm-4 col-xs-4 outdoor-section__outdoor" data-name = "outdoor">
-                        <button type="button"><span>outdoor</span></button>
+                        <button type="button" class = "active"><span>outdoor</span></button>
                     </div>
                     <div class = "col-sm-4 col-xs-4 outdoor-section__safety" data-name = "safety">
                         <button type="button"><span>safety</span></button>
@@ -372,6 +387,7 @@
     </div>
 </div>
 <!--Outdoor Section-->
+
 <!--Contact Section-->
 <div class="section-contact section">
 <div id = "section-contact">
@@ -401,24 +417,18 @@
 
                 <div id="contact-trigger"></div>
                 <div class = "client-contact-list-img">
-                    <!--<img src = "img/contact-section/phone.jpg">-->
                 </div>
 
             </div>
 
         </div>
 
-        <!--Contact Section-->
-
-        <!-- Footer-->
         <div class = "footer-section">
             <div class ="footer-client"><p>made in</p><span>London</span> </div>
             <img src = "img/footer/flag.png" alt = "flag">
         </div>
-        <!-- Footer-->
     </div>
 </div>
-<!--<div id="instafeed"></div>-->
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -427,7 +437,6 @@
 <script src="js/instafeed.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-
 
         var userFeed = new Instafeed({
             get: 'user',
@@ -446,24 +455,17 @@
             }
         });
 
-
         userFeed.run();
-
 
     });
 
 </script>
 <script src="owl-carousel/dist/owl-carousel.min.js"></script>
-<!--<script src="js/lazy-load.js"></script>-->
 
 <script>
     function myFunction(x) {
         x.classList.toggle("change");
     }
 </script>
-
-
-
-
 </body>
 </html>

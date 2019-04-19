@@ -3,8 +3,7 @@
     height: 80vh
     max-height: 800px
     padding: 4% 9%
-  .nav-icon img
-    height: 3vh
+
   .text-under-img-section-tools
     padding: 0 2%
 
@@ -21,13 +20,12 @@
   /*general*/
   h1
     font-size: 80px
-    line-height: 60px
+    line-height: 65px
   h2
-    font-size: 42px
-    line-height: 42px
+    font-size: 50px
     margin-left: 0
   h3
-    font-size: 18px
+    font-size: 17px
     line-height: 25px
 
   h6
@@ -52,14 +50,11 @@
     min-height: auto
 
   .gray-half-section-tools, .outdoor-section__text, .client-contact-list
-    padding: 12% 10%
+    padding: 16% 12%
 
   .whole-text-section-about
-    padding: 16% 10% 0 10%
+    padding: 16% 12% 0 12%
     width: 100%
-  //
-  //#section-logos
-  //  padding: 7% 8% 3% 8%
 
   .client-contact-list
     width: 100%
@@ -84,7 +79,7 @@
   .client-contact-list-img
     background-position: bottom
     padding: 0
-    height: 30vh
+    height: 44vh
     width: 100%
     min-height: 100px
 
@@ -151,11 +146,11 @@
     width: 100%
 
   .footer-client p
-    font-size: 11px
+    font-size: 6px
 
   .footer-client span, .lines-job-text-center
     font-size: 14px
-    line-height: 30px
+    line-height: 23px
     z-index: 1
 
   .left-logo-banner-section
@@ -166,7 +161,7 @@
     right: 0
     top: 0
     margin-top: 5%
-    margin-right: 9%
+    margin-right: 10.5%
 
   #menuToggle-mobile span
     width: 22px
@@ -174,15 +169,23 @@
     margin-bottom: 3.5px
     min-width: initial
     max-width: initial
-  .nav-icon img
-    height: 3vh
+
+  .nav-icon embed
+    width: 3.5vh
+    max-width: 3.5vh
+
+  .nav-icon .cross-icon
+    width: 3vh
+    max-width: initial
 
   .inner-content-section-banner
     margin-top: 0
 
-  .footer-section img
-    width: 6vw
-    padding: 0 0 2vw 0
+  .footer-section
+    padding: 2.5vw 0 3.5vw 0
+    img
+      width: 6vw
+      padding: 0 0 2vw 0
 
   .text-left-logo
     font-size: 7px
@@ -195,16 +198,17 @@
 
   #menu-mobile
     height: 120vh
+    margin: -65px 0 0 -200px
 
   #menuToggle-mobile input
     width: 5vw
-    height: 3vh
+    height: 8vh
     left: -0.6vw
     top: -2vw
 
   .left-logo-banner-section
     margin-top: 2%
-    margin-left: 8%
+    margin-left: 10%
   .inner-content-section-banner-fixed
     margin: 0
     top: 10px
@@ -227,6 +231,7 @@
 
   .left-logo-banner-section .whole-text-left-logo
     animation: none
+    transition: 0.5s ease-in-out
 
   .icon-dji-mobile, .icon-movi-mobile
     display: flex
@@ -255,41 +260,35 @@
 
   .text-center-banner-section
     z-index: initial
+
   .job-section-about-producer
     font-size: 50px
     margin-bottom: 2vw
     margin-top: 8vw
 
+  .section-instagram__photo:nth-last-child(-n+4)
+    display: none
+
+  .arrow-down-icon
+    padding: 0 2.5vw 0.8vw 0.5vw
 @media (min-width: 2000px )
   .over-line-block
     margin-top: -2%
+
 @media (min-width: 5000px )
   .over-line-block
     margin-top: -6%
-    //margin-top: -2vh
+
   .under-line-block
     margin-bottom: -6%
-@media (max-width: 450px)
-  //.text-center-banner-section
-  //  max-height: 175px
 
+@media (max-width: 450px)
+  #menuToggle-mobile
+    margin-top: 4%
   .inner-content-section-banner-fixed
     margin: 0
     top: 10px
     width: 50%
-
-  //.video-references
-  //  max-height: 75%
-  //  min-width: 100%
-  //  max-width: 130%
-  //  min-height: auto
-
-  .footer-client p
-    font-size: 9px
-
-  .footer-client span
-    font-size: 12px
-    line-height: 25px
 
   .img-under-line-block
     height: 25vw
@@ -309,35 +308,26 @@
   .icon-dji-mobile, .icon-movi-mobile
     padding: 3% 10% 1% 10%
 
-
-
-//
-//@media (max-width: 450px) and (max-height: 737px)
-//  .video-references
-//    width: 100%
-
-//@media (min-width: 501px) and (max-width: 600px)
-//  .text-center-banner-section
-//    height: 35vh
-
-//
-//@media (min-width: 451px) and (max-width: 500px)
-//  .text-center-banner-section
-//    max-height: 200px
-
-
 @media (max-width: 1024px)
   .outdoor-section__text
     top: 50%
 
   .text-dots-block
-    width: 270%
+    width: 470%
+    margin-bottom: 70%
+    embed
+      width: 16px
+
+  .text-near-dots
+    font-size: 20px
+    width: 70%
 
   .dot-section-banner
     margin: 8px 0
-    width: 0.6vw
-    height: 0.6vw
 
+  .dot-section-banner
+    width: 8px
+    height: 8px
   .section-instagram-followers a
     line-height: 1.5vw
 
@@ -357,6 +347,20 @@
 
 
 @media (max-width: 768px)
+  .tools-section__image
+    padding: 0
+
+  #section-tools hr
+    border: none
+    border-top: 1px solid #f0f2f2
+    margin: 1.5% 0 0 0
+
+  #section-tools .row.section-tools-mobile__button
+    display: block
+
+  #section-tools .row.section-tools-mobile
+    display: none
+
   .outdoor-section
     position: static
     display: block
@@ -385,11 +389,14 @@
   .outdoor-section-block button
     padding: 0
 
+  .block-tools-section button
+    padding-top: 4%
+
   .outdoor-section__image
     padding: 3% 5% 0 5%
 
   .outdoor-section__image.icon-travel
-    padding: 0.6vw 6vw 0 6vw
+    padding: 2vw 6vw 0 6vw
 
   .section-instagram
     height: auto
@@ -402,15 +409,12 @@
   .owl-stage
     display: flex
     justify-content: center
-  //#section-logos
-  //  display: block
 
   #first-section
     min-height: auto
     height: auto
 
   .video-references
-    //max-height: 160%
     z-index: 1
     height: 81vh
     display: none
@@ -440,33 +444,52 @@
   .section-outdoor-professional
     min-height: auto
 
+  .img
+    display: flex
+    flex-direction: column
+
   .outdoor-section__image embed
     width: 48%
     height: 30px
 
-  #arrow-skills
+  .icon-camera embed
+    height: 13vh
+    margin: 7% 0
+
+  .block-tools-section
+    padding: 9.5% 2.5% 0 0.5%
+  .icon-dji-mobile, .icon-movi-mobile
+    height: 13vh
+    margin: 7% 0
+    padding: 0
+
+  #arrow-skills, #arrow-tools
     width: 3%
     max-width: 15px
 
   .outdoor-section__image .numberCircle
     width: 35px
     height: 35px
-    font-size: 10px
+    font-size: 14px
 
   .client-contact-list__social--icon
     display: flex
     align-items: center
-    margin-bottom: 5px
+    margin-bottom: 6px
+    height: 22px
 
   .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.audio embed
-    width: 4vw
+    width: 4.5vw
     height: 25px
 
   .client-contact-list__social--icon.audio embed
     height: 18px
 
   .client-contact-list__img
-    margin-right: 3%
+    margin-right: 6.5%
+
+  .client-contact-list__social--icon.telephone embed
+    width: 4.9vw
 
   .client-contact-list__text p
     margin-left: 5px
@@ -481,17 +504,10 @@
     line-height: 3vw
 
   .dot-section-banner
-    width: 5px
-    height: 5px
+    width: 8px
+    height: 8px
     min-width: initial
     max-width: initial
-
-  .text-near-dots
-    font-size: 10px
-    width: 70%
-
-  .arrow-down-icon
-    padding: 0 2vw 0.8vw 0
 
   .section-instagram-followers
     margin-top: 7%
@@ -499,10 +515,14 @@
 
   .text-under-tittles-section-tools.text-under-img-section-tools
     margin-top: 5px
-
+    margin-left: 5%
 
   .logo-client-list-ecco embed
     max-width: 110px!important
+
+  .section-instagram-followers a
+    font-size: 10px
+    line-height: 3vw
 
 
 @media (max-width: 600px)
@@ -510,19 +530,33 @@
     width: 50%
     height: 50vw
 
-
   .logo-client-list-discovery embed, .logo-client-list-gsk embed
     min-width: 130px
     max-width: 150px
     height: 60vw
 
-  .section-instagram-followers a
-    line-height: 5vw
-
 @media (min-width: 1000px) and (max-width: 1100px)
+  .nav-icon embed
+    top: 0
   #section-logos
     padding: 0.5% 2% 0 2%
 
+@media (min-width: 1000px) and (max-width: 1250px)
+  .text-near-dots
+    font-size: 1vw
+@media (min-width: 900px) and (max-width: 1000px)
+  .nav-icon embed
+    max-width: 47%
+  .hamburger-menu-banner-section
+    margin-top: 0
+@media (min-width: 768px) and (max-width: 900px)
+  .nav-icon embed
+    width: 4vh
+    max-width: 50%
+
+  .nav-icon .cross-icon
+    max-width: 50%
+    width: 2.1vw
 @media (min-width: 769px) and (max-width: 1200px)
   .section-contact
     height: auto
@@ -535,7 +569,7 @@
     width: initial
 
   .dots-block-section-banner
-    padding-right: 4.7%
+    padding-right: 3.7%
 
   .client-contact-list__text p
     margin-bottom: 10px
@@ -546,14 +580,8 @@
   .icon-camera embed
     height: 7vw
 
-  #menu
-    margin: -10vw 0 0 -10vw
 
 @media (min-width: 601px) and (max-width: 767px)
-  //.text-center-banner-section
-  //  height: 35vh
-  //  max-height: 450px
-
   .client-contact-list-img
     height: 40vh
 
@@ -567,9 +595,8 @@
   .photo-man-section-about
     justify-content: center
     width: 100%
-    height: 200vh
+    height: 248vh
     margin-left: 0
-    //height: auto
 
   #first-section
     height: auto
@@ -578,6 +605,18 @@
     height: 1.65vw
 
 @media (min-width: 768px) and (max-width: 1000px)
+  .nav-icon embed
+    top: 0
+  .hamburger-menu-banner-section
+    margin-top: 0
+  .block-tools-section
+    padding: 9.5% 0.5% 0 0
+  .outdoor-section-block
+    padding: 9.5% 0 1.5% 0
+
+
+  .tools-section__image
+    padding: 0.4vw 0 0 0
   #section-contact, .gray-half-section-tools
     height: auto
 
@@ -590,13 +629,6 @@
 
   .footer-client p
     font-size: 8px
-
-  .text-near-dots
-    font-size: 0.9vw
-
-  .dot-section-banner
-    width: 0.5vw
-    height: 0.5vw
 
   .client-contact-list__email--triangle-left
     display: none
@@ -632,23 +664,19 @@
 
   .photo-man-section-about
     padding: 0 10%
-    //height: auto
 
   .outdoor-section
     height: 75vh
-    max-height: 800px
 
   .video-references, .section-outdoor-professional
     max-height: 800px
 
   #menuToggle span, .opened--menu #menuToggle span
     width: 22px
-    //max-width: 2.5vw
     height: 3px
 
   .bar1, .bar2, .bar3
     width: 22px
-      //max-width: 2.5vw
     height: 3px
 
   #menuToggle, menuToggle mobile
@@ -657,15 +685,57 @@
   .change .bar1, .change .bar2, .change .bar3
     margin: 1% 0
 
-  //.gray-half-section-tools
-  //  padding: 0 4% 0 5%
+  p
+    font-size: 13px
+    line-height: 22px
 
-@media (min-width: 420px) and (max-width: 767px)
+  .outdoor-section__image .numberCircle
+    width: 3.8vw
+    height: 3.8vw
+    font-size: 15px
+
+  .outdoor-section__image.icon-travel
+    padding-top: 1.8vw
+
+
+  .outdoor-section-block
+    padding: 9.5% 0 1.5% 0
+
+  .outdoor-section__text--header h2
+    line-height: 50px
+
+
   .photo-man-section-about
     height: 150vh
     background-position: top
 
-@media (min-width: 1000px) and (max-width: 1200px)
+  .arrow-down-icon
+    padding: 0 1% 0.8vw 0
+
+  .outdoor-section-block
+    padding: 9.5% 0.5% 1.5% 0.5%
+
+  .outdoor-section__image.icon-travel
+    padding: 0.6vw 4vw 0 4.4vw
+
+  .block-tools-section
+    padding: 9.5% 0.5% 0 0.5%
+
+@media (min-width: 3500px)
+  .nav-icon embed
+    width: 3.9vh
+    max-width: 50%
+
+@media (min-width: 4000px)
+  .nav-icon embed
+    max-width: 1.5vw
+    width: 1.5vw
+
+@media (min-width: 1100px) and (max-width: 1500px)
+  .hamburger-menu-banner-section
+    margin-top: 0
+
+@media (min-width: 4000px)
   .img-photo-man-section-about
     width: 190%
 
@@ -673,7 +743,6 @@
     height: auto
 
   .photo-man-section-about
-    //margin: 0 50px
     height: auto
 
   .job-section-about
@@ -696,7 +765,6 @@
   .logo-client-list-discovery
     max-width: 145px
 
-
   #section-tools, .section-instagram
     height: auto
 
@@ -708,34 +776,34 @@
 
 
 @media (min-width: 1000px) and (max-width: 1200px)
+
   #menuToggle span, .bar1, .bar2, .bar3, .opened--menu #menuToggle span
     width: 23px
     height: 3px
     margin-bottom: 3px
+
   #menuToggle, #menuToggle mobile
     margin-top: 0
+
+  .outdoor-section-block button span, .outdoor-section__image p
+    font-size: 1vw
 
 @media (min-width: 1200px) and (max-width: 1550px)
   .section-outdoor-professional
     width: initial
 
   #menuToggle span, .opened--menu #menuToggle span
-    //min-width: 1.9vw
-    //max-width: 2.2vw
-    //height: 3p
     width: 25px
 
   #menuToggle input:checked ~ span
     transform: rotate(45deg) translate(-1.5px, -1px)
 
-
 @media (min-width: 1200px) and (max-width: 1500px)
   .section-contact
     overflow: initial
-
-  //.hamburger-menu-banner-section animation
-  //  margin-top: 3px
-
+@media (min-width: 1500px) and (max-width: 1800px)
+  .hamburger-menu-banner-section
+    margin-top: 0
 
 @media (min-width: 451px) and (max-width: 768px)
   .logo-client-list embed
@@ -744,17 +812,12 @@
     min-height: 40px
     max-height: 50px
 
-
   .logo-client-list-discovery embed
     min-width: 110px
     max-width: 130px
 
   .video-references
     min-height: 50vh
-
-  .dot-section-banner
-    width: 4.5px
-    height: 4.5px
 
   .client-contact-list__center-arrow embed
     width: 2vw
@@ -772,8 +835,20 @@
     height: 20px
 
 @media (max-width: 768px) and (orientation: landscape)
+  .outdoor-section__image.icon-travel
+    padding: 2vw 4vw 0 5vw
+  .dots-block-section-banner
+    padding-right: 8.3%
+  .nav-icon .cross-icon
+    width: 5vh
+    max-width: initial
+  .nav-icon embed
+    width: 5.5vh
+    max-width: 5.5vh
+    height: 5.5vh
   .text-center-banner-section
     height: 100vh
+    height: -webkit-fill-available
 
   .client-contact-list-img
     height: 60vh
@@ -789,6 +864,24 @@
     width: 2.1%
     max-width: 20px
 
+  .text-near-dots
+    font-size: 13px
+
+  .dots-block-section-banner
+    margin-top: 30vh
+
+  .photo-man-section-about
+    height: 300vh
+
+  #section-banner
+    height: 70vh
+
+  #section-logos
+    height: 30vh
+
+  .section-instagram__photo:nth-last-child(-n+4)
+    display: block
+
 @media (max-width: 600px) and (orientation: landscape)
   .text-center-banner-section, .client-contact-list-img
     height: 65vh
@@ -798,12 +891,92 @@
     height: 33vw
 
 @media (max-width: 1000px)
+  .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p
+    font-size: 3.1vw
+
+  .gray-half-section-tools.gray-half-section-tools__image
+    padding: 0
+    width: 100%
+
+  #section-tools hr
+    border: none
+    border-top: 1px solid #f0f2f2
+    margin: 1.5% 0 0 0
+
+  .outdoor-section__image embed
+    width: 48%
+    height: 30px
+
+  .icon-camera embed
+    height: 11.5vh
+    margin: 0
+
+  .icon-dji-mobile, .icon-movi-mobile
+    padding: 0
+    margin: 0
+
+  .icon-movi-mobile
+    height: 12.5vh
+    margin: 0
+
+  .icon-dji-mobile
+    height: 10vh
+
+  .img-div-outdoor-section__icons
+    min-height: 80px
+    max-height: 80px
+    margin: 3% 0 7% 0
+    display: flex
+    align-items: center
+    justify-content: center
+
+  #arrow-skills, #arrow-tools
+    width: 3%
+    max-width: 15px
+
+  .gray-half-section-tools
+    width: 100%
+    padding: 16% 12% 0 12%
+
+  .outdoor-section
+    height: auto
+
+  .outdoor-section__text
+    padding: 9% 10% 0 12%
+
+  .outdoor-section__text--main p
+   text-align: start
+
+  .outdoor-section__text--header h2
+    text-align: center
+
+  .outdoor-section__text--header h3
+    text-align: center
+    margin: 0
+
+  .outdoor-section
+    flex-direction: column
+
+  .outdoor-section__text
+    width: 100%
+    position: static
+    -webkit-transform: none
+    -ms-transform: none
+    transform: none
+    justify-content: flex-start
+
+  .section-outdoor-professional
+    position: static
+
+  #section-tools .row.section-tools-mobile__button
+    display: block
+
+  #section-tools .row.section-tools-mobile
+    display: none
+
   .text-under-tittles-section-tools
-    font-size: 3.5vw
-    line-height: 5.4vw
-  p
-    font-size: 3.5vw
-    line-height: 5.4vw
+    font-size: 14px
+    line-height: 22px
 
   .first-sentence-section-about, .tittle-section-about
     font-size: 12px
@@ -823,10 +996,10 @@
     line-height: 20px
 
   .client-contact-list__email a
-    font-size: 20px
+    font-size: 30px
 
   .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a
-    font-size: 10px
+    font-size: 11px
 
   .text-over-progress h6
     font-size: 11px
@@ -839,11 +1012,18 @@
     font-size: 13px
     line-height: 19px
 
+  .tools-section__image p
+    font-size: 13px
+    line-height: 21px
+    text-transform: initial
+    margin: 0 11% 10% 11%
+    height: 60px
+
   .text-under-img-section-tools
     font-size: 11px
 
   .outdoor-section__image .numberCircle
-    border: 1.5px #f0f2f2 solid
+    border: 3px #f0f2f2 solid
 
   .section-instagram__photo embed
     width: 4vw
@@ -870,18 +1050,40 @@
   .logo-client-list
     width: 100%
 
-  .outdoor-section-block button p
+  .outdoor-section-block button p, .block-tools-section button p
     font-size: 11px
 
-  .outdoor-section-block button span
+  .outdoor-section-block button span, .block-tools-section button span
     font-size: 12px
+
+  .outdoor-section hr
+    border-top: 1px solid #f0f2f2
+    margin: 1.5% 0 0 0
+
+
+@media (max-width: 768px) and (orientation: landscape)
+  #menuToggle-mobile
+    margin-top: 2.5%
+  .icon-dji-mobile, .icon-movi-mobile, .icon-camera embed
+    margin: 3% 0
+
+  .icon-camera embed, .icon-dji-mobile
+    height: 14vw
+
+  .icon-movi-mobile
+    height: 100px
+
+  .outdoor-section-block, .block-tools-section
+    padding: 9.5% 1% 0 1%
+
+  .arrow-down-icon
+    padding: 0 1.5% 0.8vw 0
 
 @media (min-width: 1000px)
   .owl-item
     display: flex
     justify-content: center
     align-items: center
-
 
 @media (min-width: 2000px)
   .text-left-logo
@@ -893,21 +1095,6 @@
 
   .gray-half-section-tools
     display: flex
-    //padding: 9% 9% 8% 9%
-
-  .opened--menu #menuToggle span, #menuToggle span
-    width: 35px
-    height: 6px
-
-  #menuToggle input:checked ~ span
-    transform: rotate(45deg) translate(-2px, -1px)
-    
-  .hamburger-menu-banner-section.animation
-    padding-top: 0.1%
-
-  .change .bar1, .change .bar2, .change .bar3
-    margin: 0.3% 0
-
 
 @media (min-width: 2500px)
   .opened--menu #menuToggle span
@@ -917,13 +1104,16 @@
   #menuToggle span, .bar1, .bar2, .bar3
     width: 40px
     height: 7px
+
 @media (min-width: 3000px)
   .opened--menu #menuToggle span
     width: 45px
     height: 8px
+
   #menuToggle span, .bar1, .bar2, .bar3
     width: 45px
     height: 8px
+
 @media (min-width: 4000px)
   .opened--menu #menuToggle span
     width: 50px
@@ -956,31 +1146,49 @@
     height: 50vh
     min-height: 350px
 
-
 @media (min-width: 1550px) and (max-width: 1999px)
   #menuToggle span, .bar1, .bar2, .bar3
     width: 29.5px
     margin-bottom: 4px
-    //min-width: 1.7vw
-    //max-width: 2vw
     height: 4px
 
   .opened--menu #menuToggle span
     width: 29.5px
-    //min-width: 1.4vw
-    //max-width: 1.8vw
     height: 4px
 
-  .hamburger-menu-banner-section.animation
-    padding-top: 0.45%
-
 @media (max-width: 320px)
+  .icon-camera embed
+    height: 13vh
+  .icon-movi-mobile
+    height: 14vh
+    margin: 6% 0 7% 0
+
   .hover-location span
     font-size: 11px
 
   .arrow-down-icon
     padding: auto
 
+  .whole-text-section-about
+    padding: 16% 10% 0 10%
+
+  .outdoor-section__text, .client-contact-list
+    padding: 16% 10%
+  .gray-half-section-tools
+    padding: 16% 10% 0 10%
+
+  .text-dots-block
+    width: 500%
+
+  .outdoor-section__image p
+    font-size: 11px
+    line-height: 17px
+
+  .outdoor-section-block
+    padding: 9.5% 0 1.5% 0
+
+  .outdoor-section__image
+    padding: 3% 3% 0 3%
 @media (min-width: 769px) and (max-width: 880px)
   .logo-client-list
     padding: 0
@@ -988,13 +1196,10 @@
   .under-line-block embed
     width: 3.2%
 
-  //#menuToggle span, .opened--menu #menuToggle span
-  //  width: 2.9vw
-  //  max-width: 2.9vw
-  //  height: 3.5px
 @media (min-height: 1450px)
   .section-outdoor-professional
     width: auto
+
 @media (min-width: 601px) and (max-width: 1000px)
   .section-instagram__photo
     width: 24.67%
@@ -1027,66 +1232,167 @@
   #section-logos
     padding: 0.5% 7% 0 7%
     justify-content: space-around
+
   .logo-client-list
     width: auto!important
     padding: 0 5.45%
+
   .logo-client-list embed
     min-width: 6vw
     padding-left: 0
+
   .logo-client-list-red_bull
     padding-left: 0!important
+
   .logo-client-list-discovery
     padding-left: 0!important
+
   .logo-client-list-gsk embed
     max-height: 5vw
     padding-left: 0
+
   .logo-client-list-ecco
     padding-left: 2%
+
   .logo-client-list-nrs
     padding-right: 0!important
+
   .owl-item
     width: auto!important
     margin-right: 0!important
+
   .owl-stage
     display: flex
     justify-content: space-around
+
 
 @media (max-width: 450px)
   .under-line-block-dji, .under-line-block-movi
     display: block
     margin-bottom: 45%!important
-    //width: 105vw
+
   .under-line-block-movi .text-under-tittles-section-tools
     margin-top: 28%!important
+
   .under-line-block
     margin-bottom: 35%
+
   .text-under-tittles-section-tools.text-under-img-section-tools
     margin-top: 25%
-  .img-under-line-block.icon-dji-mobile embed
+
+  .icon-dji-mobile embed
     margin-top: 8vw
+
   .under-line-block.under-line-block-dji .text-under-tittles-section-tools
     margin-left: 15px
     padding-left: 30px
+
   .photo-man-section-about
     background-position: top
 
+  p
+    font-size: 3.5vw
+    line-height: 5.4vw
+
 @media (min-width: 450px) and (max-width: 768px)
+  #menuToggle-mobile
+    margin-top: 3%
   .icon-dji-mobile, .under-line-block-movi
     display: block
-    margin-bottom: 28%!important
-    //width: 105vw
-
   .under-line-block-dji
     margin-bottom: 28%!important
 
   .under-line-block-movi .text-under-tittles-section-tools
     margin-top: 18%!important
+
   .under-line-block
     margin-bottom: 20%
+
   .text-under-tittles-section-tools.text-under-img-section-tools
     margin-top: 17%
-  .icon-movi-mobile
-    margin-top: 0
+
   .photo-man-section-about
     background-position: top
+
+  p
+    font-size: 14px
+    line-height: 22px
+
+  .client-contact-list__img
+    margin-right: 4%
+
+  .icon-camera embed
+    height: 10.5vh
+
+  .icon-movi-mobile
+    height: 11.5vh
+    margin: 0
+
+  .icon-dji-mobile
+    height: 9vh
+
+  .tools-section__image p
+    margin: 0 11% 6% 11%
+  .img-div-outdoor-section__icons
+    margin: 3% 0 4% 0
+
+@media (min-width: 768px) and (max-width: 1100px)
+  .text-near-dots
+    font-size: 15px
+    width: 70%
+
+  .text-dots-block
+    width: 170%
+    margin-bottom: 30%
+
+  .dot-section-banner
+    width: 7px
+    height: 7px
+
+  #menu
+    margin: -10vw 0 0 -20vw
+
+@media (min-width: 1024px) and (max-width: 1250px)
+  .text-dots-block
+    margin-bottom: 20%
+@media (min-width: 1900px)
+  .nav-icon embed
+    width: 1.7vw
+    top: 0
+@media (min-width: 3000px)
+  .nav-icon embed
+    width: 1.7vw
+    top: 0.1vw
+@media (max-width: 825px) and (orientation: landscape)
+  .outdoor-section__image.icon-travel
+    padding: 1vw 4vw 0 5vw
+  .outdoor-section-block, .block-tools-section
+    padding: 9.5% 1% 0 1%
+  .dots-block-section-banner
+    margin-top: 25vh
+    height: 63vh
+
+  .nav-icon embed
+    width: 5.5vh
+
+  .icon-dji-mobile, .icon-movi-mobile, .icon-camera embed
+    margin: 3% 0
+
+  .icon-camera embed, .icon-dji-mobile
+    height: 68px
+
+  .icon-movi-mobile
+    height: 70px
+
+  .arrow-down-icon
+    padding: 0 1.5% 0.8vw 0
+
+@media (min-width: 769px) and (max-width: 1000px)
+  .tools-section__image p
+    margin: 0 11% 4% 11%
+
+  .img-div-outdoor-section__icons
+    margin: 3% 0 4% 0
+
+
 
