@@ -472,6 +472,10 @@
   #section-logos {
     padding: 0.5% 2% 0 2%; } }
 
+@media (min-width: 1000px) and (max-width: 1250px) {
+  .text-near-dots {
+    font-size: 1vw; } }
+
 @media (min-width: 900px) and (max-width: 1000px) {
   .nav-icon embed {
     max-width: 47%; }
