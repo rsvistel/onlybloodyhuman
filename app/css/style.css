@@ -135,7 +135,7 @@ p {
 #menuToggle span:first-child {
   margin-top: 5px; }
 
-.left-logo-banner-section embed {
+.left-logo-banner-section embed, .left-logo-banner-section object {
   max-width: 2.6%; }
 
 .whole-text-left-logo {
@@ -532,23 +532,23 @@ body.opened--menu .text-dots-block embed {
   height: 20vh;
   padding: 0.5% 4% 0 4%; }
 
-.logo-client-list embed {
+.logo-client-list object {
   min-width: 9vw;
   max-width: 11vw;
   min-height: 4vw;
   max-height: 4.7vw; }
 
-.logo-client-list-gsk embed {
+.logo-client-list-gsk object {
   max-height: 5vw; }
 
-.logo-client-list-gsk embed {
+.logo-client-list-gsk object {
   max-height: 5vw;
   padding-left: 2%; }
 
-.logo-client-list-merrel embed {
+.logo-client-list-merrel object {
   max-height: 5.2vw; }
 
-.logo-client-list-merrel embed {
+.logo-client-list-merrel object {
   max-height: 5.2vw; }
 
 .logo-client-list {
@@ -560,15 +560,15 @@ body.opened--menu .text-dots-block embed {
           -ms-transform: none;
               transform: none; }
 
-.logo-client-list-bbc embed, .logo-client-list-ecco embed {
+.logo-client-list-bbc object, .logo-client-list-ecco object {
   min-width: 6.6vw;
   max-width: 7.5vw; }
 
-.logo-client-list-nrs embed {
+.logo-client-list-nrs object {
   min-width: 5vw;
   max-width: 6vw; }
 
-.logo-client-list-discovery embed {
+.logo-client-list-discovery object {
   max-width: 14vw; }
 
 .logo-client-list-discovery {

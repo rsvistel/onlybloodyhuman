@@ -9,6 +9,16 @@ $(document).ready(function () {
         isDesktop = false
     }
 
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+        $(".ie-image").each(function () {
+            var route = $(this).attr("data");
+            route = route.slice(0,-4);
+            $(this).attr("data", route + '-ie.svg')
+        })
+    }
+
     if(isDesktop) {
         bindScroll();
     } else {
@@ -371,8 +381,6 @@ $(document).ready(function () {
 
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
-
-
 
     $('.owl-carousel').owlCarousel({
         loop: true,
