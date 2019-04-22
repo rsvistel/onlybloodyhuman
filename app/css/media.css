@@ -363,8 +363,7 @@
     height: auto; }
   .video-references {
     z-index: 1;
-    height: 81vh;
-    display: none; }
+    height: 81vh; }
   #first-section, #section-banner {
     z-index: auto; }
   #section-banner {
