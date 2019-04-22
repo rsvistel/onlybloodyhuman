@@ -922,7 +922,9 @@
   .outdoor-section-block, .block-tools-section {
     padding: 9.5% 1% 0 1%; }
   .arrow-down-icon {
-    padding: 0 1.5% 0.8vw 0; } }
+    padding: 0 1.5% 0.8vw 0; }
+  .video-references {
+    min-height: initial; } }
 
 @media (min-width: 1000px) {
   .owl-item {
@@ -1192,10 +1194,12 @@
     width: 5.5vh; }
   .icon-dji-mobile, .icon-movi-mobile, .icon-camera embed {
     margin: 3% 0; }
-  .icon-camera embed, .icon-dji-mobile {
-    height: 68px; }
+  .icon-camera embed {
+    height: 75px; }
+  .icon-dji-mobile {
+    height: 65px; }
   .icon-movi-mobile {
-    height: 70px; }
+    height: 80px; }
   .arrow-down-icon {
     padding: 0 1.5% 0.8vw 0; } }
 
