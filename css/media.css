@@ -363,7 +363,8 @@
     height: auto; }
   .video-references {
     z-index: 1;
-    height: 81vh; }
+    height: 81vh;
+    left: 0; }
   #first-section, #section-banner {
     z-index: auto; }
   #section-banner {
@@ -924,7 +925,8 @@
   .arrow-down-icon {
     padding: 0 1.5% 0.8vw 0; }
   .video-references {
-    min-height: initial; } }
+    min-height: initial;
+    height: auto; } }
 
 @media (min-width: 1000px) {
   .owl-item {
