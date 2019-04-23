@@ -42,7 +42,6 @@ $(document).ready(function () {
         });
     }
 
-    // Init Sections Array
     sections = [];
     $('.section').each(function () {
         sections.push($(this))
@@ -411,7 +410,11 @@ $(document).ready(function () {
             }
         }
     });
-
+    $(window).on("resize", function(){
+        if($(window).width() < 768){
+            $('.client-contact-list-img').css("background-image", "url(/img/contact-section/phone-mobile.jpg)");
+        }
+    })
 });
 
 
