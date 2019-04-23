@@ -135,7 +135,7 @@ p {
 #menuToggle span:first-child {
   margin-top: 5px; }
 
-.left-logo-banner-section embed, .left-logo-banner-section object {
+.left-logo-banner-section object {
   max-width: 2.6%; }
 
 .whole-text-left-logo {
@@ -853,7 +853,7 @@ body.opened--menu .text-dots-block embed {
 .img-under-line-block, .text-under-img-section-tools {
   text-align: center; }
 
-.under-line-block .img-under-line-block embed {
+.under-line-block .img-under-line-block embed, .img-under-line-block object {
   min-width: 9.5vw;
   max-width: 11vw;
   margin: 7% 0 5% 0; }
@@ -876,13 +876,13 @@ body.opened--menu .text-dots-block embed {
   left: 0;
   right: 0; }
 
-.icon-camera embed {
+.icon-camera object {
   height: 5vw; }
 
-.icon-dji embed {
+.icon-dji object {
   height: 4vw; }
 
-.icon-movi embed {
+.icon-movi object {
   height: 6vw; }
 
 .under-line-block {
