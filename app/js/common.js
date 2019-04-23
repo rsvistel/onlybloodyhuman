@@ -9,6 +9,21 @@ $(document).ready(function () {
         isDesktop = false
     }
 
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+        $(".ecco-image").css({"marginLeft": "6vw"});
+        $(".ie-tools").css({"position": "static"});
+        $(".ie-image-logo").css({"width": "6vw"});
+        $(".section-outdoor-professional").css({"left": "0"});
+        $(".video-references").css({"left": "0"});
+        $(".ie-image").each(function () {
+            var route = $(this).attr("data");
+            route = route.slice(0,-4);
+            $(this).attr("data", route + '-ie.svg')
+        })
+    }
+
     if(isDesktop) {
         bindScroll();
     } else {
@@ -32,7 +47,6 @@ $(document).ready(function () {
     $('.section').each(function () {
         sections.push($(this))
     });
-    // Init Sections Array
 
     function bindMobile() {
         $(window).scroll(function () {
@@ -371,8 +385,6 @@ $(document).ready(function () {
 
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
-
-
 
     $('.owl-carousel').owlCarousel({
         loop: true,
