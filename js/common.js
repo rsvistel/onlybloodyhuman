@@ -194,11 +194,10 @@ $(document).ready(function () {
         }
     });
     $("#menuToggle input , #menuToggle-mobile input").click(function(){
-        $(".list-icon, .cross-icon").toggle();
+        $(".list-icon, .cross-icon").fadeToggle(500);
 
     });
 
-    // Init Dots Array
     dots = [];
     $('.text-dots-block').each(function () {
         dots.push($(this))

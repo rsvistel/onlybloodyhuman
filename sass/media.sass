@@ -139,7 +139,6 @@
 
   .photo-man-section-about
     margin-left: 0
-    height: 100vh
     width: 100%
     content: url("../img/section-about/jamie-mobile.jpg")
 
@@ -171,6 +170,7 @@
   .nav-icon embed
     width: 3.5vh
     max-width: 3.5vh
+    top: 0
 
   .nav-icon .cross-icon
     width: 3vh
@@ -193,10 +193,10 @@
     height: 55vh
     margin-top: 15vh
     padding-right: 5.3%
-
+    justify-content: flex-start
   #menu-mobile
     height: 120vh
-    margin: -65px 0 0 -200px
+    margin: -65px 0 0 -130px
 
   #menuToggle-mobile input
     width: 5vw
@@ -268,7 +268,9 @@
     display: none
 
   .arrow-down-icon
-    padding: 0 2.5vw 0.8vw 0.5vw
+    padding: 0 3vw 0.8vw 1vw
+  .block-tools-section
+    padding: 0
 @media (min-width: 2000px )
   .over-line-block
     margin-top: -2%
@@ -312,16 +314,13 @@
 
   .text-dots-block
     width: 470%
-    margin-bottom: 70%
+    margin-bottom: 50%
     embed
-      width: 16px
+      width: 10px
 
   .text-near-dots
-    font-size: 20px
+    font-size: 15px
     width: 70%
-
-  .dot-section-banner
-    margin: 8px 0
 
   .dot-section-banner
     width: 8px
@@ -452,7 +451,8 @@
     margin: 7% 0
 
   .block-tools-section
-    padding: 9.5% 2.5% 0 0.5%
+    padding: 9.5% 2.9vw 1.5% 2.9vw
+
   .icon-dji-mobile, .icon-movi-mobile
     height: 13vh
     margin: 7% 0
@@ -499,13 +499,13 @@
     line-height: 3vw
 
   .dot-section-banner
-    width: 8px
-    height: 8px
+    width: 7px
+    height: 7px
     min-width: initial
     max-width: initial
 
   .section-instagram-followers
-    margin-top: 7%
+    margin-top: 8%
     margin-bottom: 8%
 
   .text-under-tittles-section-tools.text-under-img-section-tools
@@ -598,14 +598,16 @@
     height: 1.65vw
 
 @media (min-width: 768px) and (max-width: 1000px)
+  .arrow-down-icon
+    padding: 0 1vw 0.8vw 1vw
   .nav-icon embed
     top: 0
   .hamburger-menu-banner-section
     margin-top: 0
   .block-tools-section
-    padding: 9.5% 0.5% 0 0
+    padding: 9.5% 1.5% 0 1.5%
   .outdoor-section-block
-    padding: 9.5% 0 1.5% 0
+    padding: 9.5% 1.5% 1.5% 1.5%
 
   .tools-section__image
     padding: 0.4vw 0 0 0
@@ -701,7 +703,7 @@
     background-position: top
 
   .arrow-down-icon
-    padding: 0 1% 0.8vw 0
+    padding: 0 1% 0.8vw 0.1%
 
   .outdoor-section-block
     padding: 9.5% 0.5% 1.5% 0.5%
@@ -912,6 +914,7 @@
     height: 10vh
 
   .img-div-outdoor-section__icons
+    padding: 0 5% 0 5%
     min-height: 80px
     max-height: 80px
     margin: 3% 0 7% 0
@@ -925,7 +928,7 @@
 
   .gray-half-section-tools
     width: 100%
-    padding: 16% 12% 0 12%
+    padding: 16% 12% 0% 12%
 
   .outdoor-section
     height: auto
@@ -1095,6 +1098,8 @@
     min-height: 350px
 
 @media (max-width: 320px)
+  .nav-icon embed
+    top: 3px
   .icon-camera embed
     height: 13vh
   .icon-movi-mobile
@@ -1270,25 +1275,25 @@
   .img-div-outdoor-section__icons
     margin: 3% 0 4% 0
 
+  .nav-icon embed
+    width: 3vh
+
 @media (min-width: 768px) and (max-width: 1100px)
   .text-near-dots
-    font-size: 15px
+    font-size: 13px
     width: 70%
 
   .text-dots-block
     width: 170%
-    margin-bottom: 30%
+    margin-bottom: 10%
 
   .dot-section-banner
-    width: 7px
-    height: 7px
+    width: 5.5px
+    height: 5.5px
 
   #menu
     margin: -10vw 0 0 -20vw
 
-@media (min-width: 1024px) and (max-width: 1250px)
-  .text-dots-block
-    margin-bottom: 20%
 @media (min-width: 1900px)
   .nav-icon embed
     width: 1.7vw
@@ -1303,7 +1308,7 @@
   .outdoor-section-block, .block-tools-section
     padding: 9.5% 1% 0 1%
   .dots-block-section-banner
-    margin-top: 25vh
+    margin-top: 15vh
     height: 63vh
 
   .nav-icon embed
