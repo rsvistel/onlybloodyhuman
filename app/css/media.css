@@ -122,7 +122,6 @@
     font-size: 16px; }
   .photo-man-section-about {
     margin-left: 0;
-    height: 100vh;
     width: 100%;
     content: url("../img/section-about/jamie-mobile.jpg"); }
   .footer-client p {
@@ -1110,20 +1109,16 @@
 
 @media (min-width: 768px) and (max-width: 1100px) {
   .text-near-dots {
-    font-size: 15px;
+    font-size: 13px;
     width: 70%; }
   .text-dots-block {
     width: 170%;
-    margin-bottom: 30%; }
+    margin-bottom: 10%; }
   .dot-section-banner {
-    width: 7px;
-    height: 7px; }
+    width: 5.5px;
+    height: 5.5px; }
   #menu {
     margin: -10vw 0 0 -20vw; } }
-
-@media (min-width: 1024px) and (max-width: 1250px) {
-  .text-dots-block {
-    margin-bottom: 20%; } }
 
 @media (min-width: 1900px) {
   .nav-icon embed {
