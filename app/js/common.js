@@ -194,7 +194,7 @@ $(document).ready(function () {
         }
     });
     $("#menuToggle input , #menuToggle-mobile input").click(function(){
-        $(".list-icon, .cross-icon").fadeToggle(300);
+        $(".list-icon, .cross-icon").fadeToggle(500);
 
     });
 
