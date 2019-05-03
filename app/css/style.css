@@ -372,7 +372,8 @@ body.opened--menu .text-dots-block embed {
   width: 100%;
   bottom: 2%;
   position: absolute;
-  z-index: 5; }
+  z-index: 5;
+  margin-left: 0; }
 
 .arrow-down-section-banner embed {
   width: 1.1vw;
