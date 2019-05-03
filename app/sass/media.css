@@ -24,8 +24,9 @@
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 80px;
+    font-size: 23.5vw;
     line-height: 65px;
+    text-indent: -4px;
   }
 
   h2 {
@@ -627,10 +628,6 @@
 
   .client-contact-list__social--icon.instagram embed {
     width: 4.3vw;
-  }
-
-  .client-contact-list__text p {
-    margin-left: 5px;
   }
 
   .inner-content-section-banner {
@@ -1291,7 +1288,6 @@
 
   .client-contact-list__text p {
     line-height: 20px;
-    margin-left: 0;
   }
 
   .client-contact-list__email a {
@@ -1614,7 +1610,7 @@
   }
 
   p {
-    font-size: 3.5vw;
+    font-size: 3.1vw;
     line-height: 5.4vw;
   }
 }
