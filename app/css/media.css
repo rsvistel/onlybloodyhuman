@@ -247,7 +247,9 @@
   .arrow-down-icon {
     padding: 0 3vw 0.8vw 1vw; }
   .block-tools-section {
-    padding: 0; } }
+    padding: 0; }
+  .outdoor-section-block {
+    padding: 9.5% 1.9vw 1.5% 1.9vw; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -404,7 +406,7 @@
     height: 13vh;
     margin: 7% 0; }
   .block-tools-section {
-    padding: 9.5% 2.9vw 1.5% 2.9vw; }
+    padding: 9.5% 1.5vw 1.5% 1.5vw; }
   .icon-dji-mobile, .icon-movi-mobile {
     height: 13vh;
     margin: 7% 0;
