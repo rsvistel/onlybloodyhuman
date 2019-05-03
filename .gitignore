@@ -2,4 +2,7 @@
 .idea/modules.xml
 .idea/onlybloodyhuman.iml
 .idea/vcs.xml
+.idea/encodings.xml
+.idea/workspace.xml
+/node_modules
 css/style.css.map
