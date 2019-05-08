@@ -249,7 +249,9 @@
   .block-tools-section {
     padding: 0; }
   .outdoor-section-block {
-    padding: 0; } }
+    padding: 0; }
+  .client-contact-list__text p {
+    margin-left: 0; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -405,6 +407,10 @@
   .icon-camera embed {
     height: 13vh;
     margin: 7% 0; }
+  .block-tools-section {
+    padding: 9.5% 0 1.5% 0; }
+  .outdoor-section-block {
+    padding: 9.5% 0 1.5% 0; }
   .icon-dji-mobile, .icon-movi-mobile {
     height: 13vh;
     margin: 7% 0;
