@@ -372,7 +372,8 @@ body.opened--menu .text-dots-block embed {
   width: 100%;
   bottom: 2%;
   position: absolute;
-  z-index: 5; }
+  z-index: 5;
+  margin-left: 0; }
 
 .arrow-down-section-banner embed {
   width: 1.1vw;
@@ -991,9 +992,6 @@ body.opened--menu .text-dots-block embed {
   display: flex;
   padding: 9.5% 2.9vw 1.5% 2.9vw;
   text-align: center; }
-
-.outdoor-section__travel {
-  padding: 0; }
 
 .outdoor-section-block button span, .block-tools-section button span {
   font-size: 0.8vw;
