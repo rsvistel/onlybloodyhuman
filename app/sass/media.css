@@ -24,7 +24,7 @@
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 23.5vw;
+    font-size: 24vw;
     line-height: 65px;
     text-indent: -4px;
   }
@@ -361,6 +361,10 @@
 
   .client-contact-list__text p {
     margin-left: 0;
+  }
+
+  .client-contact-list__text h1 {
+    text-indent: -7px;
   }
 }
 @media (min-width: 2000px) {
@@ -1167,7 +1171,8 @@
 }
 @media (max-width: 1000px) {
   .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p {
-    font-size: 3.1vw;
+    font-size: 3.5vw;
+    line-height: 5.4vw;
   }
 
   .outdoor-section__text .row {
@@ -1274,11 +1279,6 @@
 
   #section-tools .row.section-tools-mobile {
     display: none;
-  }
-
-  .text-under-tittles-section-tools {
-    font-size: 14px;
-    line-height: 22px;
   }
 
   .first-sentence-section-about, .tittle-section-about {
@@ -1627,7 +1627,7 @@
   }
 
   p {
-    font-size: 3.1vw;
+    font-size: 3.5vw;
     line-height: 5.4vw;
   }
 }
