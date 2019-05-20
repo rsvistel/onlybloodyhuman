@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fd583240-821b-46b3-8bbe-af76a7c51b06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/media.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/media.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/media.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/media.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/media.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/media.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -18,13 +16,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="onlybloodyhuman" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/sass/media.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="468" column="26" lean-forward="true" selection-start-line="468" selection-start-column="26" selection-end-line="468" selection-end-column="26" />
+            <state relative-caret-position="230">
+              <caret line="976" column="22" lean-forward="true" selection-start-line="976" selection-start-column="22" selection-end-line="976" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="366" column="16" selection-start-line="366" selection-start-column="16" selection-end-line="366" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -32,17 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/sass/style.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="862" column="14" lean-forward="true" selection-start-line="862" selection-start-column="14" selection-end-line="862" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="516">
+              <caret line="1177" selection-start-line="1177" selection-end-line="1177" />
             </state>
           </provider>
         </entry>
@@ -51,10 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tittles-section-tools</find>
-      <find>.job-section-about</find>
-      <find>.tittles-section-tools</find>
-      <find>max-width: 1000px</find>
       <find>.row</find>
       <find>.outdoor-section__text</find>
       <find>.outdoor-section__image</find>
@@ -81,6 +78,10 @@
       <find>arrow-tools</find>
       <find>arrow</find>
       <find>.client-contact-list__text p</find>
+      <find>client-contact-list__text</find>
+      <find>3.1vw</find>
+      <find>.text-under-tittles-section-tools</find>
+      <find>3.5vw</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,15 +220,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43717000" />
+    <option name="totallyTimeSpent" value="44534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987715" visible="true" weight="0.18252291" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974705" visible="true" weight="0.18252291" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.5025295" side_tool="true" weight="0.18252291" />
       <window_info id="Gulp" order="3" sideWeight="0.5012285" side_tool="true" weight="0.18957011" />
       <window_info id="npm" order="4" sideWeight="0.5012285" side_tool="true" weight="0.18957011" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -239,7 +240,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2862408" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.28554216" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -293,22 +294,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="293" column="33" selection-start-line="293" selection-start-column="33" selection-end-line="293" selection-end-column="33" />
+        <state relative-caret-position="630">
+          <caret line="366" column="16" selection-start-line="366" selection-start-column="16" selection-end-line="366" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/sass/style.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="862" column="14" lean-forward="true" selection-start-line="862" selection-start-column="14" selection-end-line="862" selection-end-column="14" />
+        <state relative-caret-position="516">
+          <caret line="1177" selection-start-line="1177" selection-end-line="1177" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/sass/media.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="468" column="26" lean-forward="true" selection-start-line="468" selection-start-column="26" selection-end-line="468" selection-end-column="26" />
+        <state relative-caret-position="230">
+          <caret line="976" column="22" lean-forward="true" selection-start-line="976" selection-start-column="22" selection-end-line="976" selection-end-column="22" />
         </state>
       </provider>
     </entry>
