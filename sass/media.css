@@ -24,7 +24,7 @@
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 23.5vw;
+    font-size: 24vw;
     line-height: 65px;
     text-indent: -4px;
   }
@@ -41,6 +41,11 @@
 
   h6 {
     font-size: 12px;
+  }
+
+  p {
+    font-size: 3.5vw;
+    line-height: 5.4vw;
   }
 
   .hamburger-menu-banner-section {
@@ -356,6 +361,10 @@
 
   .client-contact-list__text p {
     margin-left: 0;
+  }
+
+  .client-contact-list__text h1 {
+    text-indent: -7px;
   }
 }
 @media (min-width: 2000px) {
@@ -1162,7 +1171,8 @@
 }
 @media (max-width: 1000px) {
   .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p {
-    font-size: 3.1vw;
+    font-size: 3.5vw;
+    line-height: 5.4vw;
   }
 
   .outdoor-section__text .row {
@@ -1271,11 +1281,6 @@
     display: none;
   }
 
-  .text-under-tittles-section-tools {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
   .first-sentence-section-about, .tittle-section-about {
     font-size: 12px;
   }
@@ -1328,7 +1333,7 @@
     font-size: 12px;
     line-height: 19px;
     text-transform: initial;
-    margin: 0 20% 10% 20%;
+    margin: 0 19% 10% 19%;
     height: 60px;
   }
 
@@ -1622,7 +1627,7 @@
   }
 
   p {
-    font-size: 3.1vw;
+    font-size: 3.5vw;
     line-height: 5.4vw;
   }
 }
