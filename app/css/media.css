@@ -831,7 +831,7 @@
   .outdoor-section {
     height: auto; }
   .outdoor-section__text {
-    padding: 16% 10% 16% 9%; }
+    padding: 16% 12% 16% 12%; }
   .outdoor-section__text--main p {
     text-align: start; }
   .outdoor-section__text--header h2 {
@@ -1182,4 +1182,6 @@
   .tools-section__image p {
     margin: 0 11% 4% 11%; }
   .img-div-outdoor-section__icons {
-    margin: 3% 0 4% 0; } }
+    margin: 3% 0 4% 0; }
+  .block-tools-section-tablet {
+    display: block; } }
