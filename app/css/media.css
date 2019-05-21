@@ -1182,6 +1182,8 @@
   .tools-section__image p {
     margin: 0 11% 4% 11%; }
   .img-div-outdoor-section__icons {
-    margin: 3% 0 4% 0; }
+    margin: 3% 0 4% 0; } }
+
+@media (min-width: 1000px) and (max-width: 1300px) {
   .block-tools-section-tablet {
     display: block; } }
