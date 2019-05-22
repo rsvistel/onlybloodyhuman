@@ -314,15 +314,17 @@ $(document).ready(function () {
             $('.test3 div').animate({'opacity': '0'}, 200);
             var dataName = $(this).parent().data('name');
             if (dataName.toLowerCase() === 'camera') {
-                animateArrow('26.66%')
+                animateArrow('26.66%');
+                changeTool('img/section-tools/red_camera.jpg')
             } else if (dataName.toLowerCase() === 'drone') {
-                animateArrow('50%')
+                animateArrow('50%');
+                changeTool('img/section-tools/dji_inspire.jpg')
             } else {
-                animateArrow('83.33%')
+                animateArrow('83.33%');
+                changeTool('img/section-tools/movi_pro.jpg')
             }
 
             setTimeout(function () {
-
                 $('.test3 div').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
                 $('.block-tools-section-tablet button').removeClass('active');
@@ -333,6 +335,22 @@ $(document).ready(function () {
 
         function animateArrow(prop) {
             $('#arrow-tools-tablet').animate({'left': prop}, 400);
+        }
+
+        function changeTool(new_bg) {
+            $('.photo-half-section-tools')
+                .append('<div class="after"></div>');
+            $('.photo-half-section-tools .after')
+                .css('top', '100%')
+                .css('background-image', 'url("' + new_bg +'")');
+            $('.photo-half-section-tools').animate({'top': '-100vh'}, 500);
+            setTimeout(function () {
+                $('.photo-half-section-tools').css('background-image', 'url("' + new_bg +'")');
+                setTimeout(function () {
+                    $('.photo-half-section-tools .after').remove();
+                    $('.photo-half-section-tools').css('top', '0');
+                },50);
+            }, 500);
         }
 
     });
