@@ -311,10 +311,10 @@ $(document).ready(function () {
 
     $('.block-tools-section-tablet button').click(function() {
         if (!$(this).hasClass('active')) {
-            $('.test').animate({'opacity': '0'}, 200);
+            $('.test3 div').animate({'opacity': '0'}, 200);
             var dataName = $(this).parent().data('name');
             if (dataName.toLowerCase() === 'camera') {
-                animateArrow('16.66%')
+                animateArrow('26.66%')
             } else if (dataName.toLowerCase() === 'drone') {
                 animateArrow('50%')
             } else {
@@ -322,7 +322,8 @@ $(document).ready(function () {
             }
 
             setTimeout(function () {
-                $('.test').removeClass('active');
+
+                $('.test3 div').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
                 $('.block-tools-section-tablet button').removeClass('active');
                 $('.block-tools-section-tablet .block-tools-section__' + dataName + ' button').addClass('active');
@@ -331,11 +332,10 @@ $(document).ready(function () {
         }
 
         function animateArrow(prop) {
-            $('#arrow-tools').animate({'left': prop}, 400);
+            $('#arrow-tools-tablet').animate({'left': prop}, 400);
         }
+
     });
-
-
 
 
 
