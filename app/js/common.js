@@ -311,10 +311,10 @@ $(document).ready(function () {
 
     $('.block-tools-section-tablet button').click(function() {
         if (!$(this).hasClass('active')) {
-            $('.test3 div').animate({'opacity': '0'}, 200);
+            $('.tools-tablet div').animate({'opacity': '0'}, 200);
             var dataName = $(this).parent().data('name');
             if (dataName.toLowerCase() === 'camera') {
-                animateArrow('26.66%');
+                animateArrow('16.66%');
                 changeTool('img/section-tools/red_camera.jpg')
             } else if (dataName.toLowerCase() === 'drone') {
                 animateArrow('50%');
@@ -325,7 +325,7 @@ $(document).ready(function () {
             }
 
             setTimeout(function () {
-                $('.test3 div').removeClass('active');
+                $('.tools-tablet div').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
                 $('.block-tools-section-tablet button').removeClass('active');
                 $('.block-tools-section-tablet .block-tools-section__' + dataName + ' button').addClass('active');
