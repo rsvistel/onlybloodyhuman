@@ -1219,7 +1219,9 @@
   .client-contact-list__text p {
     font-size: 17px; }
   .text-under-img-section-tools, .outdoor-section__image p {
-    font-size: 2.8vw; } }
+    font-size: 2.8vw; }
+  .tittles-section-tools {
+    margin-top: 1vw; } }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .block-tools-section-tablet {
