@@ -1200,7 +1200,7 @@
   .outdoor-section__text {
     padding: 16% 12% 2% 12%; }
   p, .text-over-progress h6, .outdoor-section-block button span, .block-tools-section button span, .tools-section__image p, .text-under-tittles-section-tools {
-    font-size: 14.5px;
+    font-size: 2vw;
     line-height: 25px; }
   h3 {
     font-size: 2vw; }
@@ -1250,4 +1250,3 @@
     left: 16.66%; }
   .block-tools-section.block-tools-section-tablet {
     padding: 9.5% 0 1.5% 0; } }
-
