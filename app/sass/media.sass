@@ -908,6 +908,8 @@
     height: 33vw
 
 @media (max-width: 1000px)
+  .block-tools-section
+    display: block
   .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p
     font-size: 3.5vw
     line-height: 5.4vw
@@ -1426,3 +1428,23 @@
 
   .text-under-img-section-tools, .outdoor-section__image p
     font-size: 2.8vw
+
+@media (min-width: 1000px) and (max-width: 1200px)
+  .block-tools-section-tablet
+    display: flex
+    width: 100%
+  #section-tools .hr-tablet
+    margin: 0
+  .icon-dji, .icon-movi
+    display: flex
+    opacity: 0
+  .under-line-block
+    align-items: end
+  #arrow-tools-tablet
+    position: relative
+    width: 0.8vw
+    transform: translateX(-0.4vw)
+    left: 16.66%
+  .block-tools-section.block-tools-section-tablet
+    padding: 9.5% 0 1.5% 0
+
