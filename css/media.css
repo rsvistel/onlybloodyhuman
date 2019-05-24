@@ -1134,7 +1134,14 @@
   .img-div-outdoor-section__icons {
     margin: 3% 0 4% 0; }
   .nav-icon embed {
-    width: 3vh; } }
+    width: 3vh; }
+  .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p {
+    font-size: 14px;
+    line-height: 22px; }
+  h1 {
+    font-size: 11vw; }
+  .tittles-section-tools {
+    margin-top: 1vw; } }
 
 @media (min-width: 768px) and (max-width: 1100px) {
   .text-near-dots {
