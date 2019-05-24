@@ -464,6 +464,10 @@ $(document).ready(function () {
             $('.client-contact-list-img').css("background-image", "url(/img/contact-section/phone-mobile.jpg)");
         }
     })
+    if($(window).width() < 768) {
+        $('video.section-outdoor-professional').removeAttr("autoplay");
+        $('video.section-outdoor-professional').play();
+    }
 });
 
 
