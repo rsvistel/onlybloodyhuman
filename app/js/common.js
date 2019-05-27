@@ -468,10 +468,11 @@ $(document).ready(function () {
         $('video.section-outdoor-professional').removeAttr("autoplay");
         $('video.section-outdoor-professional').play();
     }
+
+    if($(window).width() > 768) {
+        $('video.section-outdoor-professional').removeAttr("controls");
+    }
 });
-
-
-
 
 
 
