@@ -169,9 +169,10 @@ $(document).ready(function () {
             $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
         }
         setTimeout(function () {
+
             $('body').css('overflow-y', 'auto');
             sections[active].css('overflow-y', 'scroll');
-            $("span.countup").html("1k");
+            //$("span.countup").html("1k");
             if (sections[active].attr('id') === 'section-tools') {
                 $('body').css('overflow', 'hidden');
                 bindTools();
@@ -233,7 +234,7 @@ $(document).ready(function () {
                 $('.img-under-line-block').hide();
                 $('.icon-dji, .icon-movi').hide().animate({'opacity': '0'});
                 $('.icon-camera').show().animate({'opacity': '1'});
-                $('.photo-half-section-tools').css('background-image', 'url("/img/section-tools/red_camera.jpg")');
+                $('.photo-half-section-tools').css('background-image', 'url("../app/img/section-tools/red_camera.jpg")');
                 $('#section-tools').removeClass('tools-dji tools-movi').addClass('tools-camera');
             }
 
@@ -362,6 +363,7 @@ $(document).ready(function () {
     function bindAbout() {
         $("#section-about").bind("scroll", function() {
             if (progressLine == false) {
+                $("span.countup").html("1k");
                 $(".progress-line").each(function () {
                     if ($(this).isInViewport()) {
                         animateStat($(this))
@@ -421,20 +423,26 @@ $(document).ready(function () {
     function runSubscribersCounter() {
         if ($("span.countup").isInViewport()) {
             if (progressLine == false) {
+                $("span.countup").html("1k");
                 animateCounter();
                 setTimeout(function () {
                     progressLine = true;
-                }, 1500);
+                }, 500);
             }
         } else {
-            $("#section-instagram").bind("scroll", function() {
-                if ($("span.countup").isInViewport()) {
-                    animateCounter()
+            $("#section-instagram").bind("scroll", function () {
+                //if (progressLine == false) {
+                    if ($("span.countup").isInViewport()) {
+                        animateCounter();
+                        // setTimeout(function () {
+                        //     progressLine = true;
+                        // }, 1500);
+                   // }
                 }
             });
         }
-
     }
+
 
     $.fn.isInViewport = function() {
         var elementTop = $(this).offset().top;
