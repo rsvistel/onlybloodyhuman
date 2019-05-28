@@ -420,7 +420,12 @@ $(document).ready(function () {
 
     function runSubscribersCounter() {
         if ($("span.countup").isInViewport()) {
-            animateCounter()
+            if (progressLine == false) {
+                animateCounter();
+                setTimeout(function () {
+                    progressLine = true;
+                }, 1500);
+            }
         } else {
             $("#section-instagram").bind("scroll", function() {
                 if ($("span.countup").isInViewport()) {
