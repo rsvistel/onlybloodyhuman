@@ -2,6 +2,7 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 $(document).ready(function () {
+    var progressLine = false;
     active = 0;
     isDesktop = true;
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -164,7 +165,9 @@ $(document).ready(function () {
         }
         checkActiveDot();
         $(document).unbind('wheel');
-        $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+        if (progressLine == false) {
+            $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+        }
         setTimeout(function () {
             $('body').css('overflow-y', 'auto');
             sections[active].css('overflow-y', 'scroll');
@@ -356,16 +359,20 @@ $(document).ready(function () {
     });
 
 
-
-
     function bindAbout() {
         $("#section-about").bind("scroll", function() {
-            $(".progress-line").each(function () {
-                if ($(this).isInViewport()) {
-                    animateStat($(this))
-                }
-            });
+            if (progressLine == false) {
+                $(".progress-line").each(function () {
+                    if ($(this).isInViewport()) {
+                        animateStat($(this))
+                    }
+                });
+                setTimeout(function () {
+                    progressLine = true;
+                }, 1500);
+            }
         });
+
         function animateStat(item) {
             if (!item.find('.progress-line-gray').hasClass('animated')) {
                 var width;
