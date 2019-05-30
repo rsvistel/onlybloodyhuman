@@ -1237,7 +1237,7 @@
   .img-div-outdoor-section__icons {
     margin: 3% 0 6% 0; } }
 
-@media (min-width: 1000px) and (max-width: 1200px) {
+@media (min-width: 1000px) and (max-width: 1300px) {
   .block-tools-section-tablet {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1267,7 +1267,7 @@
   .block-tools-section.block-tools-section-tablet {
     padding: 9.5% 0 1.5% 0; } }
 
-@media (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1300px) and (orientation: landscape) {
   p {
     font-size: 1.1vw;
     line-height: 1.9vw; }
@@ -1288,7 +1288,8 @@
     font-size: 0.75vw; }
   .text-near-dots {
     font-size: 1.2vw;
-    width: 70%; }
+    width: 70%;
+    line-height: 1.3; }
   .first-sentence-section-about {
     letter-spacing: 1.2px;
     font-size: 1vw; }
@@ -1369,4 +1370,16 @@
   .arrow-down-icon {
     padding: 0 2vw 0.8vw 2vw; }
   .section-instagram-followers a {
-    height: 1.3vh; } }
+    height: 1.3vh; }
+  .whole-text-left-logo {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out; }
+  #menu {
+    margin: -5vw 0 0 -10vw; }
+  .text-dots-block {
+    margin-bottom: 12%; }
+  #section-about.section {
+    height: auto; } }

@@ -431,14 +431,14 @@ $(document).ready(function () {
             }
         } else {
             $("#section-instagram").bind("scroll", function () {
-                //$("span.countup").html("1k");
-                //if (progressLine == false) {
                     if ($("span.countup").isInViewport()) {
+                        //if (progressLine == false) {
+                            //$("span.countup").html("1k");
                         animateCounter();
                         //setTimeout(function () {
                         //progressLine = true;
-                        //}, 1500);
-                        //}}
+                        //}, 500);
+                        //}
                     }
             });
         }
@@ -493,7 +493,11 @@ $(document).ready(function () {
     if($(window).width() > 768) {
         $('video.section-outdoor-professional').removeAttr("controls");
     }
+
+
+    if($(window).width() < 1300) {
+        bindMobile();
+
+    }
 });
-
-
 
