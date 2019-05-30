@@ -427,18 +427,19 @@ $(document).ready(function () {
                 animateCounter();
                 setTimeout(function () {
                     progressLine = true;
-                }, 500);
+                }, 200);
             }
         } else {
             $("#section-instagram").bind("scroll", function () {
+                //$("span.countup").html("1k");
                 //if (progressLine == false) {
                     if ($("span.countup").isInViewport()) {
                         animateCounter();
-                        // setTimeout(function () {
-                        //     progressLine = true;
-                        // }, 1500);
-                   // }
-                }
+                        //setTimeout(function () {
+                        //progressLine = true;
+                        //}, 1500);
+                        //}}
+                    }
             });
         }
     }
