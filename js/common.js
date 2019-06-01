@@ -2,6 +2,7 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 $(document).ready(function () {
+    var progressLine = false;
     active = 0;
     isDesktop = true;
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -164,11 +165,14 @@ $(document).ready(function () {
         }
         checkActiveDot();
         $(document).unbind('wheel');
-        $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+        if (progressLine == false) {
+            $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+        }
         setTimeout(function () {
+
             $('body').css('overflow-y', 'auto');
             sections[active].css('overflow-y', 'scroll');
-            $("span.countup").html("1k");
+            //$("span.countup").html("1k");
             if (sections[active].attr('id') === 'section-tools') {
                 $('body').css('overflow', 'hidden');
                 bindTools();
@@ -230,7 +234,7 @@ $(document).ready(function () {
                 $('.img-under-line-block').hide();
                 $('.icon-dji, .icon-movi').hide().animate({'opacity': '0'});
                 $('.icon-camera').show().animate({'opacity': '1'});
-                $('.photo-half-section-tools').css('background-image', 'url("/img/section-tools/red_camera.jpg")');
+                $('.photo-half-section-tools').css('background-image', 'url("../app/img/section-tools/red_camera.jpg")');
                 $('#section-tools').removeClass('tools-dji tools-movi').addClass('tools-camera');
             }
 
@@ -356,16 +360,21 @@ $(document).ready(function () {
     });
 
 
-
-
     function bindAbout() {
         $("#section-about").bind("scroll", function() {
-            $(".progress-line").each(function () {
-                if ($(this).isInViewport()) {
-                    animateStat($(this))
-                }
-            });
+            if (progressLine == false) {
+                $("span.countup").html("1k");
+                $(".progress-line").each(function () {
+                    if ($(this).isInViewport()) {
+                        animateStat($(this))
+                    }
+                });
+                setTimeout(function () {
+                    progressLine = true;
+                }, 1500);
+            }
         });
+
         function animateStat(item) {
             if (!item.find('.progress-line-gray').hasClass('animated')) {
                 var width;
@@ -413,16 +422,28 @@ $(document).ready(function () {
 
     function runSubscribersCounter() {
         if ($("span.countup").isInViewport()) {
-            animateCounter()
+            if (progressLine == false) {
+                $("span.countup").html("1k");
+                animateCounter();
+                setTimeout(function () {
+                    progressLine = true;
+                }, 200);
+            }
         } else {
-            $("#section-instagram").bind("scroll", function() {
-                if ($("span.countup").isInViewport()) {
-                    animateCounter()
-                }
+            $("#section-instagram").bind("scroll", function () {
+                    if ($("span.countup").isInViewport()) {
+                        //if (progressLine == false) {
+                            //$("span.countup").html("1k");
+                        animateCounter();
+                        //setTimeout(function () {
+                        //progressLine = true;
+                        //}, 500);
+                        //}
+                    }
             });
         }
-
     }
+
 
     $.fn.isInViewport = function() {
         var elementTop = $(this).offset().top;
@@ -472,7 +493,11 @@ $(document).ready(function () {
     if($(window).width() > 768) {
         $('video.section-outdoor-professional').removeAttr("controls");
     }
+
+
+    if($(window).width() < 1300) {
+        bindMobile();
+
+    }
 });
-
-
 
