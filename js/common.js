@@ -495,8 +495,8 @@ $(document).ready(function () {
     }
 
 
-    if($(window).width() < 1300) {
-        //('.whole-text-left-logo').css('opacity', '0');
+    if($(window).width() < 1112) {
+
         bindMobile();
         $('.left-logo-banner-section object').click(function () {
             $('.whole-text-left-logo').animate({'opacity': '1'}, 200);
