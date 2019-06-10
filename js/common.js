@@ -62,7 +62,10 @@ $(document).ready(function () {
                 $('.whole-text-left-logo').css('opacity', '1')
 
             }else{
-                $('.whole-text-left-logo').css('opacity', '0')
+                $('.whole-text-left-logo').css('opacity', '0');
+                $('.left-logo-banner-section object').on("touchstart", function () {
+                    $('.whole-text-left-logo').animate({'opacity': '1'});
+                });
             }
         })
     }
@@ -484,7 +487,7 @@ $(document).ready(function () {
         if($(window).width() < 768){
             $('.client-contact-list-img').css("background-image", "url(/img/contact-section/phone-mobile.jpg)");
         }
-    })
+    });
     if($(window).width() < 768) {
         $('video.section-outdoor-professional').removeAttr("autoplay");
         $('video.section-outdoor-professional').play();
@@ -495,13 +498,12 @@ $(document).ready(function () {
     }
 
 
-    if($(window).width() < 1112) {
-
-        bindMobile();
-        $('.left-logo-banner-section object').click(function () {
+    if($(window).width() < 1366) {
+        $('.left-logo-banner-section object').on("touchstart", function () {
             $('.whole-text-left-logo').animate({'opacity': '1'}, 200);
         });
-
+         bindMobile();
     }
+
 });
 
