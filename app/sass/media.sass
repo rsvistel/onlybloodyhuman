@@ -89,6 +89,8 @@
   .whole-text-section-about
     margin-left: 0
     margin-top: 0
+  #menuToggle .nav-icon embed
+    display: block
 
   #section-about .row
     display: flex
@@ -430,7 +432,7 @@
 
   .video-references
     z-index: 1
-    height: 81vh
+    height: 80vh
     left: 0
 
   #first-section, #section-banner
@@ -1471,7 +1473,6 @@
   .block-tools-section.block-tools-section-tablet
     padding: 9.5% 0 1.5% 0
 
-
 @media (min-width: 825px) and (max-width: 1112px) and (orientation: landscape)
   p
     font-size: 1.1vw
@@ -1581,12 +1582,23 @@
     transition: 0.5s ease-in-out
     opacity: 1
   #menu
-    margin: -5vw 0 0 -10vw
+    margin: -5vw 0 0 -11vw
   .text-dots-block
     margin-bottom: 12%
   #section-about.section
     height: auto
-@media (min-width: 768px) and (max-width: 811px) and (orientation: landscape)
+@media (min-width: 320px) and (max-width: 480px)
+  .mobile-vertical-image
+    display: block
+  .tablet-image
+    display: none
+  .client-contact-list-img
+    background-image: url(../img/contact-section/phone-mobile-vertical.jpg)
+  .video-desktop
+    display: none
+  .video-mobile-vertical
+    display: block
+@media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)
   p
     font-size: 1.1vw
     line-height: 1.9vw
@@ -1695,19 +1707,26 @@
     transition: 0.5s ease-in-out
     opacity: 1
   #menu
-    margin: -5vw 0 0 -10vw
+    margin: -5vw 0 0 -11vw
   .text-dots-block
     margin-bottom: 12%
   #section-about.section
     height: auto
-@media (min-width: 320px) and (max-width: 480px)
-  .mobile-vertical-image
-    display: block
-  .tablet-image
-    display: none
-  .client-contact-list-img
-    background-image: url(../img/contact-section/phone-mobile-vertical.jpg)
-  .video-desktop
-    display: none
-  .video-mobile-vertical
-    display: block
+  .block-tools-section-tablet
+    display: flex
+    width: 100%
+  .block-tools-section.block-tools-section-tablet
+    padding: 9.5% 0 1.5% 0
+  #section-tools .hr-tablet
+    margin: 0
+  .under-line-block
+    align-items: end
+  .icon-dji, .icon-movi
+    display: flex
+  #arrow-tools-tablet
+    position: relative
+    width: 0.8vw
+    transform: translateX(-0.4vw)
+    left: 16.66%
+  .outdoor-section__text
+    width: 40%
