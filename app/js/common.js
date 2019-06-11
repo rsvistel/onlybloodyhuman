@@ -59,7 +59,7 @@ $(document).ready(function () {
             if ($(window).scrollTop() === 0) {
                 $('.text-dots-block').removeClass('active');
                 dots[0].addClass('active');
-                $('.whole-text-left-logo').css('opacity', '1')
+                $('.whole-text-left-logo').css('opacity', '1');
 
             }else{
                 $('.whole-text-left-logo').css('opacity', '0');
@@ -489,8 +489,10 @@ $(document).ready(function () {
         }
     });
     if($(window).width() < 768) {
+        var videoFile = 'img/first-section/video/reel_mobile.mp4';
+        $('.video-in-section-banner video').attr('src', videoFile);
         $('video.section-outdoor-professional').removeAttr("autoplay");
-        $('video.section-outdoor-professional').play();
+        //$('video.section-outdoor-professional').play();
     }
 
     if($(window).width() > 768) {
@@ -504,6 +506,11 @@ $(document).ready(function () {
         });
          bindMobile();
     }
+
+    // if ($(window).width() < 768) {
+    //     //var videoFile = 'img/first-section/video/reel_mobile.mp4';
+    //     $("video-references").html('<source src="mg/first-section/video/reel_mobile.mp4" type="video/mp4"></source>' );
+    // }
 
 });
 
