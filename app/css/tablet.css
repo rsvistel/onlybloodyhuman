@@ -1,0 +1,397 @@
+@media (min-width: 768px) and (max-width: 1000px) and (orientation: portrait) {
+  font-size: 2vw;
+  font-size: 5.3vw;
+  p {
+    font-size: 2vw; }
+  .job-text-center {
+    font-size: 1.15vw; }
+  .lines-job-text-center {
+    font-size: 2vw; }
+  .video-section-cover {
+    height: auto; }
+  .first-sentence-section-about, .tittle-section-about {
+    font-size: 16px; }
+  .text-under-img-section-tools, .outdoor-section__image p {
+    font-size: 2.8vw; }
+  .tittles-section-tools {
+    margin-top: 1vw; }
+  .text-under-img-section-tools, .outdoor-section__image p {
+    font-size: 1.8vw;
+    line-height: 2.8vw; }
+  .section-outdoor-professional {
+    min-height: initial; }
+  .section-outdoor-professional {
+    max-height: 500px; }
+  .outdoor-section__text {
+    padding: 16% 12% 2% 12%; }
+  p, .text-over-progress h6, .outdoor-section-block button span, .block-tools-section button span, .tools-section__image p, .text-under-tittles-section-tools {
+    font-size: 2vw;
+    line-height: 25px; }
+  .outdoor-section hr {
+    margin: 0.5% 0 0 0; }
+    .outdoor-section hr .img-div-outdoor-section__icons {
+      margin: 3% 0 6% 0; }
+  .client-contact-list__social--icon.audio embed {
+    height: 27px; }
+  .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed {
+    height: 21px; }
+  .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a {
+    font-size: 15px; }
+  .client-contact-list__text p {
+    font-size: 17px; }
+  .client-contact-list__social--icon {
+    margin-bottom: 1.5vw; } }
+
+@media (min-width: 1000px) and (max-width: 1112px) {
+  .left-logo-banner-section object {
+    max-width: 3.2%; }
+  .dots-block-section-banner {
+    padding-right: 3.7%; }
+  .text-near-dots {
+    font-size: 13px;
+    width: 70%; }
+  .text-dots-block {
+    width: 170%;
+    margin-bottom: 10%; }
+  .dot-section-banner {
+    width: 5.5px;
+    height: 5.5px; }
+  #menu {
+    margin: -10vw 0 0 -20vw; }
+  #section-tools .hr-tablet {
+    margin: 0; }
+  .icon-dji, .icon-movi {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0; }
+  .under-line-block {
+    -webkit-box-align: end;
+    -webkit-align-items: end;
+        -ms-flex-align: end;
+            align-items: end; }
+  #arrow-tools-tablet {
+    position: relative;
+    width: 0.8vw;
+    -webkit-transform: translateX(-0.4vw);
+        -ms-transform: translateX(-0.4vw);
+            transform: translateX(-0.4vw);
+    left: 16.66%; }
+  .block-tools-section.block-tools-section-tablet {
+    padding: 9.5% 0 1.5% 0; }
+  .block-tools-section-tablet {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  #section-tools .hr-tablet {
+    margin: 0; }
+  .under-line-block {
+    -webkit-box-align: end;
+    -webkit-align-items: end;
+        -ms-flex-align: end;
+            align-items: end; }
+  #arrow-tools-tablet {
+    position: relative;
+    width: 0.8vw;
+    -webkit-transform: translateX(-0.4vw);
+        -ms-transform: translateX(-0.4vw);
+            transform: translateX(-0.4vw);
+    left: 16.66%; }
+  .block-tools-section.block-tools-section-tablet {
+    padding: 9.5% 0 1.5% 0; }
+  .icon-camera embed {
+    height: 7vw; }
+  .tools-section__image p {
+    margin: 0 11% 4% 11%; }
+  .outdoor-section__text {
+    width: 40%; }
+  section-outdoor-professional {
+    width: initial; }
+  img-div-outdoor-section__icons {
+    margin: 3% 0 4% 0; }
+  .section-contact {
+    height: auto;
+    min-height: auto; }
+  .client-contact-list__text p {
+    margin-bottom: 10px; } }
+
+@media (min-width: 825px) and (max-width: 1112px) and (orientation: landscape) {
+  h1 {
+    font-size: 10.1vw;
+    line-height: 9.6vw; }
+  h2 {
+    font-size: 5.7vw; }
+  h3 {
+    font-size: 1.9vw; }
+  h6 {
+    font-size: 1vw; }
+  p {
+    font-size: 1.1vw;
+    line-height: 1.9vw; }
+  p {
+    font-size: 1.1vw;
+    line-height: 1.9vw; }
+  .job-text-center {
+    font-size: 0.9vw; }
+  h2 {
+    font-size: 5.7vw; }
+  menuToggle input, #menuToggle-mobile input {
+    width: 3vw;
+    height: 5.4vh; }
+  .whole-text-left-logo {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    opacity: 1; }
+  #menu {
+    margin: -5vw 0 0 -11vw; }
+  .text-near-dots {
+    font-size: 1.2vw;
+    width: 70%;
+    line-height: 1.3; }
+  .text-dots-block {
+    margin-bottom: 12%; }
+  .job-section-about-producer {
+    letter-spacing: -3px; }
+  h6 {
+    font-size: 1vw; }
+  h3 {
+    font-size: 1.9vw; }
+  .logo-client-list object {
+    min-width: 7.2vw; }
+  .jobs-section-about {
+    font-size: 1.2vw;
+    letter-spacing: 0.3vw; }
+  .text-over-progress h6 {
+    font-size: 0.75vw; }
+  .first-sentence-section-about {
+    letter-spacing: 1.2px;
+    font-size: 1vw; }
+  .aka-name-section-about {
+    font-size: 0.7vw; }
+  .text-under-tittles-section-tools {
+    font-size: 1.1vw;
+    line-height: 1.9vw; }
+  h1 {
+    font-size: 10.1vw;
+    line-height: 9.6vw;
+    letter-spacing: -1.2px; }
+  .tittles-section-tools {
+    line-height: 2.4vw;
+    font-size: 2vw; }
+  .under-line-block .img-under-line-block embed, .img-under-line-block object {
+    min-width: 11.4vw;
+    max-width: 13.2vw; }
+  .icon-movi object {
+    height: 7.2vw; }
+  .outdoor-section-block button span, .block-tools-section button span {
+    font-size: 1vw;
+    line-height: 1.3vw; }
+  .section-instagram-followers span {
+    font-size: 2.1vw; }
+  .section-instagram-followers a {
+    font-size: 1vw;
+    line-height: 0.4vw; }
+  .arrow-down-icon {
+    padding: 0 2vw 0.8vw 2vw; }
+  .outdoor-section__image .numberCircle {
+    font-size: 1.08vw;
+    width: 2.5vw;
+    height: 2.5vw; }
+  .outdoor-section__image.icon-travel {
+    padding: 0.4vw 4.2vw 0 4.2vw; }
+  .icon-alpinizm embed, .icon-surf embed {
+    width: 3.1vw; }
+  .outdoor-section-block button span, .outdoor-section__image p {
+    font-size: 1.2vw; }
+    .outdoor-section-block button span .section-instagram-followers embed, .outdoor-section__image p .section-instagram-followers embed {
+      width: 2.1%;
+      min-width: 19px; }
+  .client-contact-list__text p {
+    font-size: 2.1vw;
+    line-height: 1.2vw; }
+  .client-contact-list__quote p {
+    font-size: 1.2vw;
+    letter-spacing: 0.06vw; }
+  .client-contact-list__email a {
+    letter-spacing: 0.3vw;
+    font-size: 3.1vw; }
+  .client-contact-list__social {
+    letter-spacing: 0.003vw; }
+  .client-contact-list__social--icon {
+    font-size: 0.8vw; }
+  .footer-client p {
+    letter-spacing: 0.04vw;
+    font-size: 0.66vw;
+    line-height: 1.5vw; }
+  .footer-client span {
+    letter-spacing: 0.3vw;
+    font-size: 1.4vw;
+    line-height: 1.2vw; }
+  .client-contact-list__social--icon.audio embed {
+    width: 2.1vw; }
+  .client-contact-list__social--icon.instagram embed {
+    width: 2.6vw;
+    height: 1.4vw; }
+  .client-contact-list__social--icon.telephone embed {
+    width: 3vw;
+    height: 1.4vw; }
+  .footer-section img {
+    width: 2.8vw; }
+  .section-instagram-followers a {
+    height: 1.3vh; }
+  #section-about.section {
+    height: auto; } }
+
+@media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  p {
+    font-size: 1.1vw;
+    line-height: 1.9vw; }
+  .job-text-center {
+    font-size: 0.9vw; }
+  h2 {
+    font-size: 5.7vw; }
+  .jobs-section-about {
+    font-size: 1.2vw;
+    letter-spacing: 0.3vw; }
+  .job-section-about-producer {
+    letter-spacing: -3px; }
+  h6 {
+    font-size: 1vw; }
+  h3 {
+    font-size: 1.9vw; }
+  h1 {
+    font-size: 10.1vw;
+    line-height: 9.6vw;
+    letter-spacing: -1.2px; }
+  .logo-client-list object {
+    min-width: 7.2vw; }
+  #menuToggle input, #menuToggle-mobile input {
+    width: 3vw;
+    height: 5.4vh; }
+  #menu {
+    margin: -5vw 0 0 -11vw; }
+  .text-dots-block {
+    margin-bottom: 12%; }
+  .section-instagram-followers a {
+    height: 1.3vh; }
+  .whole-text-left-logo {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    opacity: 1; }
+  .text-near-dots {
+    font-size: 1.2vw;
+    width: 70%;
+    line-height: 1.3; }
+  .text-over-progress h6 {
+    font-size: 0.75vw; }
+  .first-sentence-section-about {
+    letter-spacing: 1.2px;
+    font-size: 1vw; }
+  .aka-name-section-about {
+    font-size: 0.7vw; }
+  #section-about.section {
+    height: auto; }
+  .text-under-tittles-section-tools {
+    font-size: 1.1vw;
+    line-height: 1.9vw; }
+  .tittles-section-tools {
+    line-height: 2.4vw;
+    font-size: 2vw; }
+  .under-line-block .img-under-line-block embed, .img-under-line-block object {
+    min-width: 11.4vw;
+    max-width: 13.2vw; }
+  .icon-movi object {
+    height: 7.2vw; }
+  .block-tools-section-tablet {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .block-tools-section.block-tools-section-tablet {
+    padding: 9.5% 0 1.5% 0; }
+  #section-tools .hr-tablet {
+    margin: 0; }
+  .under-line-block {
+    -webkit-box-align: end;
+    -webkit-align-items: end;
+        -ms-flex-align: end;
+            align-items: end; }
+  .icon-dji, .icon-movi {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  #arrow-tools-tablet {
+    position: relative;
+    width: 0.8vw;
+    -webkit-transform: translateX(-0.4vw);
+        -ms-transform: translateX(-0.4vw);
+            transform: translateX(-0.4vw);
+    left: 16.66%; }
+  .outdoor-section__text {
+    width: 40%; }
+  .outdoor-section-block button span, .block-tools-section button span {
+    font-size: 1vw;
+    line-height: 1.3vw; }
+  .section-instagram-followers span {
+    font-size: 2.1vw; }
+  .section-instagram-followers a {
+    font-size: 1vw;
+    line-height: 0.4vw; }
+  .outdoor-section__image .numberCircle {
+    font-size: 1.08vw;
+    width: 2.5vw;
+    height: 2.5vw; }
+  .outdoor-section__image.icon-travel {
+    padding: 0.4vw 4.2vw 0 4.2vw; }
+  .icon-alpinizm embed, .icon-surf embed {
+    width: 3.1vw; }
+  .outdoor-section-block button span, .outdoor-section__image p {
+    font-size: 1.2vw; }
+  .section-instagram-followers embed {
+    width: 2.1%;
+    min-width: 19px; }
+  .arrow-down-icon {
+    padding: 0 2vw 0.8vw 2vw; }
+  /*contact-section*/
+  .client-contact-list__text p {
+    font-size: 2.1vw;
+    line-height: 1.2vw; }
+  .client-contact-list__quote p {
+    font-size: 1.2vw;
+    letter-spacing: 0.06vw; }
+  .client-contact-list__email a {
+    letter-spacing: 0.3vw;
+    font-size: 3.1vw; }
+  .client-contact-list__social {
+    letter-spacing: 0.003vw; }
+  .client-contact-list__social--icon {
+    font-size: 0.8vw; }
+  .footer-client p {
+    letter-spacing: 0.04vw;
+    font-size: 0.66vw;
+    line-height: 1.5vw; }
+  .footer-client span {
+    letter-spacing: 0.3vw;
+    font-size: 1.4vw;
+    line-height: 1.2vw; }
+  .client-contact-list__social--icon.audio embed {
+    width: 2.1vw; }
+  .client-contact-list__social--icon.instagram embed {
+    width: 2.6vw;
+    height: 1.4vw; }
+  .client-contact-list__social--icon.telephone embed {
+    width: 3vw;
+    height: 1.4vw; }
+  .footer-section img {
+    width: 2.8vw; } }
