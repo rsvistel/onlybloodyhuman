@@ -108,11 +108,15 @@
     height: 7vw; }
   .tools-section__image p {
     margin: 0 11% 4% 11%; }
+  .arrow-down-icon {
+    padding: 0 2vw 0.8vw 2vw; }
+  .outdoor-section-block {
+    padding: 9.5% 2vw 1.5% 2vw; }
   .outdoor-section__text {
     width: 40%; }
-  section-outdoor-professional {
+  .section-outdoor-professional {
     width: initial; }
-  img-div-outdoor-section__icons {
+  .img-div-outdoor-section__icons {
     margin: 3% 0 4% 0; }
   .section-contact {
     height: auto;
@@ -191,6 +195,8 @@
     max-width: 13.2vw; }
   .icon-movi object {
     height: 7.2vw; }
+  .outdoor-section-block {
+    padding: 9.5% 2vw 1.5% 2vw; }
   .outdoor-section-block button span, .block-tools-section button span {
     font-size: 1vw;
     line-height: 1.3vw; }
@@ -200,7 +206,7 @@
     font-size: 1vw;
     line-height: 0.4vw; }
   .arrow-down-icon {
-    padding: 0 2vw 0.8vw 2vw; }
+    padding: 0 2.1vw 0.8vw 2.1vw; }
   .outdoor-section__image .numberCircle {
     font-size: 1.08vw;
     width: 2.5vw;
@@ -340,6 +346,8 @@
         -ms-transform: translateX(-0.4vw);
             transform: translateX(-0.4vw);
     left: 16.66%; }
+  .outdoor-section-block {
+    padding: 9.5% 2vw 1.5% 2vw; }
   .outdoor-section__text {
     width: 40%; }
   .outdoor-section-block button span, .block-tools-section button span {
