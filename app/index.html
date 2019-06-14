@@ -257,9 +257,11 @@
                 <div class = "col-sm-4 col-xs-4 block-tools-section__camera" data-name = "camera">
                     <button type="button" class = "active"><span>camera</span></button>
                 </div>
+
                 <div class = "col-sm-4 col-xs-4 block-tools-section__drone" data-name = "drone">
                     <button type="button"><span>drone</span></button>
                 </div>
+
                 <div class = "col-sm-4 col-xs-4 block-tools-section__gimbal" data-name = "gimbal">
                     <button type="button"><span>gimbal</span></button>
                 </div>
@@ -277,7 +279,7 @@
                     </div>
                     <p>RED Digital Cinema Cameras coupled with cinema prime lens, shooting up to 8K RAW footage - the aesthetic is unmatched</p>
                     <img src="img/section-tools/red_camera.jpg" alt="camera" class = "tablet-image">
-                    <img src="img/section-tools/red_camera-mobile.jpg" alt="camera" class = "mobile-vertical-image">
+                    <img data-src="img/section-tools/red_camera-mobile.jpg" alt="camera" class = "mobile-vertical-image lazy">
                 </div>
                 <div class =" icon-drone tools-section__image">
                     <div class="img-div-outdoor-section__icons img-div-outdoor-section__icons-dji">
@@ -285,7 +287,7 @@
                     </div>
                     <p>With DJI Inspire 2 drones + Zenmuse X7 Super 35 cameras, we possess the ability to deliver unrivalled aerial cinematography in all conditions</p>
                     <img src="img/section-tools/dji_inspire.jpg" alt="dji-inspire" class = "tablet-image">
-                    <img src="img//section-tools/dji_inspire-mobile.jpg" alt="camera" class = "mobile-vertical-image">
+                    <img data-src="img//section-tools/dji_inspire-mobile.jpg" alt="camera" class = "mobile-vertical-image lazy">
                 </div>
                 <div class =" icon-gimbal tools-section__image">
                     <div class="img-div-outdoor-section__icons img-div-outdoor-section__icons-movi">
@@ -293,7 +295,7 @@
                     </div>
                     <p>Freefly MōVI Pro stabilised gimbals, alongside an array of jibs, sliders and dollies, mean smooth shots in any environment</p>
                     <img src="img/section-tools/movi_pro.jpg" alt="movi" class = "tablet-image">
-                    <img src="img//section-tools/movi_pro-mobile.jpg" alt="camera" class = "mobile-vertical-image">
+                    <img data-src="img//section-tools/movi_pro-mobile.jpg" alt="camera" class = "mobile-vertical-image lazy">
                 </div>
             </div>
         </div>
@@ -431,14 +433,14 @@
 
         <div class = "footer-section">
             <div class ="footer-client"><p>made in</p><span>London</span> </div>
-            <img src = "img/footer/flag.png" alt = "flag">
+            <img class="lazy" data-src = "img/footer/flag.png" alt = "flag">
         </div>
 </div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/common.js"></script>
-
+<script src="js/lazy-load.js"></script>
 <script src="js/instafeed.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
