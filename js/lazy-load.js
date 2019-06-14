@@ -1,5 +1,5 @@
-if($(window).width() < 768) {
-    $(document).ready(function () {
+$(document).ready(function () {
+    if($(window).width() < 768) {
         var lazyloadImages;
 
         if ("IntersectionObserver" in window) {
@@ -48,5 +48,5 @@ if($(window).width() < 768) {
             $(document).on("scroll", lazyload);
             $(window).on("resize", lazyload);
         }
-    })
-}
+    }
+})
