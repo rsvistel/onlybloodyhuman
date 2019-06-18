@@ -207,6 +207,19 @@
     -webkit-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out; }
+  .whole-text-left-logo {
+    margin-left: 20px; }
+  .left-logo-banner-section object {
+    position: absolute;
+    pointer-events: none; }
+  .wrap {
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .icon-dji-mobile, .icon-movi-mobile {
     display: -webkit-box;
     display: -webkit-flex;
@@ -504,8 +517,7 @@
     width: 4vh;
     max-width: 25px; }
   .nav-icon .cross-icon {
-    max-width: 50%;
-    width: 2.1vw; } }
+    width: 2vh; } }
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .section-contact {
@@ -559,6 +571,19 @@
     padding: 0.4vw 0 0 0; }
   #section-contact, .gray-half-section-tools {
     height: auto; }
+  .whole-text-left-logo {
+    margin-left: 20px; }
+  .left-logo-banner-section object {
+    position: absolute;
+    pointer-events: none; }
+  .wrap {
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   h1 {
     font-size: 92px;
     line-height: 9vw; }
@@ -771,6 +796,19 @@
     display: block; } }
 
 @media (max-width: 600px) and (orientation: landscape) {
+  .whole-text-left-logo {
+    margin-left: 20px; }
+  .left-logo-banner-section object {
+    position: absolute;
+    pointer-events: none; }
+  .wrap {
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .text-center-banner-section, .client-contact-list-img {
     height: 65vh; }
   .section-instagram__photo {
@@ -941,6 +979,19 @@
     margin-top: 2.5%; }
   .icon-dji-mobile, .icon-movi-mobile, .icon-camera embed {
     margin: 3% 0; }
+  .whole-text-left-logo {
+    margin-left: 20px; }
+  .left-logo-banner-section object {
+    position: absolute;
+    pointer-events: none; }
+  .wrap {
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .icon-camera embed, .icon-dji-mobile {
     height: 14vw; }
   .icon-movi-mobile {

@@ -1,4 +1,4 @@
-if($(window).width() < 768) {
+if($(window).width() < 1000) {
     $(document).ready(function () {
         var lazyloadImages;
 
