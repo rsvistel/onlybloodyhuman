@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    if($(window).width() < 768) {
+if($(window).width() < 1000) {
+    $(document).ready(function () {
         var lazyloadImages;
 
         if ("IntersectionObserver" in window) {
@@ -48,5 +48,5 @@ $(document).ready(function () {
             $(document).on("scroll", lazyload);
             $(window).on("resize", lazyload);
         }
-    }
-})
+    })
+}

@@ -617,6 +617,7 @@ body.opened--menu .text-dots-block embed {
   width: 50%; }
 
 .highlight-hover h2 {
+  text-indent: -4px;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, #ddd));
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 50%, #ddd 50%);
   background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 50%, #ddd 50%);
@@ -1295,7 +1296,7 @@ body.opened--menu .text-dots-block embed {
 .client-contact-list__center-arrow {
   text-align: center;
   width: 7vw;
-  padding: 1.8vw 0 1.8vw 0;
+  padding: 1.6vw 0 2vw 0;
   -webkit-animation: bottom 1.5s ease-in-out infinite;
           animation: bottom 1.5s ease-in-out infinite; }
 
