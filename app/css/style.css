@@ -157,6 +157,24 @@ p {
   to {
     opacity: 0; } }
 
+.left-logo-banner-section:hover .whole-text-left-logo {
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 .text-center-banner-section {
   height: 80vh;
   display: -webkit-box;
