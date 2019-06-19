@@ -202,13 +202,13 @@
     width: 4vw;
     max-width: 14px; }
   .left-logo-banner-section .whole-text-left-logo {
-    -webkit-animation: none;
-            animation: none;
+    -webkit-animation: none !important;
+            animation: none !important;
     -webkit-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out; }
   .whole-text-left-logo {
-    margin-left: 20px; }
+    margin-left: 22px; }
   .left-logo-banner-section object {
     position: absolute;
     pointer-events: none; }
@@ -572,7 +572,7 @@
   #section-contact, .gray-half-section-tools {
     height: auto; }
   .whole-text-left-logo {
-    margin-left: 20px; }
+    margin-left: 23px; }
   .left-logo-banner-section object {
     position: absolute;
     pointer-events: none; }
@@ -797,7 +797,7 @@
 
 @media (max-width: 600px) and (orientation: landscape) {
   .whole-text-left-logo {
-    margin-left: 20px; }
+    margin-left: 22px; }
   .left-logo-banner-section object {
     position: absolute;
     pointer-events: none; }
@@ -980,7 +980,7 @@
   .icon-dji-mobile, .icon-movi-mobile, .icon-camera embed {
     margin: 3% 0; }
   .whole-text-left-logo {
-    margin-left: 20px; }
+    margin-left: 22px; }
   .left-logo-banner-section object {
     position: absolute;
     pointer-events: none; }
