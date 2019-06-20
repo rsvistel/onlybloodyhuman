@@ -1506,8 +1506,16 @@ body.opened--menu .text-dots-block embed {
   width: 1.56vw;
   max-width: 33%; }
 
+.current-color, .change-color {
+  -webkit-transition: ease-in 2s;
+  -o-transition: ease-in 2s;
+  transition: ease-in 2s; }
+
 .block-tools-section {
   display: none; }
 
 .mobile-vertical-image {
+  display: none; }
+
+.change-color {
   display: none; }

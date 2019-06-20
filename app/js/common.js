@@ -53,16 +53,32 @@ $(document).ready(function () {
             for (var i = 0; i < sections.length; i++) {
                 if (sections[i].isInViewport()) {
                     $('.text-dots-block').removeClass('active');
-                    dots[i].addClass('active')
+                    dots[i].addClass('active');
+                }
+                if (sections[1].isInViewport()) {
+                    changeColorDownMobile();
+                }else if (sections[2].isInViewport()){
+                   changeColorUpMobile();
+                }else if (sections[5].isInViewport()){
+                    changeColorDownMobile();
+                }else if (sections[3].isInViewport()){
+                    changeColorUpMobile();
+                }else{
+                    changeColorUpMobile();
                 }
             }
+
             if ($(window).scrollTop() === 0) {
                 $('.text-dots-block').removeClass('active');
                 dots[0].addClass('active');
+                  changeColorUp();
                 $('.whole-text-left-logo').css('opacity', '1');
 
             }else{
+                // changeColorDown();
                 $('.whole-text-left-logo').css('opacity', '0');
+
+
             }
         })
     }
@@ -176,16 +192,21 @@ $(document).ready(function () {
             if (sections[active].attr('id') === 'section-tools') {
                 $('body').css('overflow', 'hidden');
                 bindTools();
+                changeColorUp();
             } else if (sections[active].attr('id') === 'section-instagram') {
                 runSubscribersCounter();
                 bindUnFixed();
+                changeColorUp();
             } else if (sections[active].attr('id') === 'first-section'){
                 bindUnFixed();
+                changeColorUp();
             } else if (sections[active].attr('id') === 'section-about') {
                 bindAbout();
+                changeColorDown();
                 bindUnFixed();
             } else {
                 bindUnFixed();
+                changeColorDown();
             }
         }, speed);
     }
@@ -359,7 +380,28 @@ $(document).ready(function () {
 
     });
 
-
+    function changeColorDown() {
+        $('.change-color').fadeToggle(500);
+        $('.current-color').css('display','none');
+        $('.change-color').css('display','block');
+        $('.text-left-logo').css('color','grey');
+    }
+    function changeColorUp() {
+        $('.current-color').fadeToggle(500);
+        $('.change-color').css('display','none');
+        $('.current-color').css('display','block');
+        $('.text-left-logo').css('color','snow');
+    }
+    function changeColorDownMobile() {
+        $('.current-color').css('display','none');
+        $('.change-color').css('display','block');
+        $('.text-left-logo').css('color','grey');
+    }
+    function changeColorUpMobile() {
+        $('.change-color').css('display','none');
+        $('.current-color').css('display','block');
+        $('.text-left-logo').css('color','snow');
+    }
     function bindAbout() {
         $("#section-about").bind("scroll", function() {
             if (progressLine == false) {
@@ -432,13 +474,7 @@ $(document).ready(function () {
         } else {
             $("#section-instagram").bind("scroll", function () {
                     if ($("span.countup").isInViewport()) {
-                        //if (progressLine == false) {
-                            //$("span.countup").html("1k");
                         animateCounter();
-                        //setTimeout(function () {
-                        //progressLine = true;
-                        //}, 500);
-                        //}
                     }
             });
         }
@@ -507,5 +543,7 @@ $(document).ready(function () {
         });
         bindMobile();
     }
+
+
 });
 

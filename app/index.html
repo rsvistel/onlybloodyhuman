@@ -13,9 +13,13 @@
 
 <div class="col-xs-12 mobile-hamburger-menu-banner-section animation">
     <div id="menuToggle-mobile">
-        <input type="checkbox"s/>
-        <div class = "nav-icon">
-            <embed src="img/close.svg" class="cross-icon">
+        <input type="checkbox"/>
+        <div class = "nav-icon change-color">
+            <embed src="img/gray-close.svg" class="cross-icon ">
+            <embed src="img/grey-menu.svg" class="list-icon">
+        </div>
+        <div class = "nav-icon current-color">
+            <embed src="img/close.svg" class="cross-icon ">
             <embed src="img/menu.svg" class="list-icon">
         </div>
 
@@ -34,8 +38,9 @@
 <div class = "wrap">
 <div class="inner-content-section-banner-fixed">
     <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-6 left-logo-banner-section animation left-logo-banner-section-ie">
-            <object data="img/first-section/logo-banner.svg" class="ie-image ie-image-logo"></object>
+        <div class="col-md-6 col-sm-6 col-xs-6 left-logo-banner-section animation left-logo-banner-section-ie ">
+            <object data="img/first-section/logo-banner.svg" class="ie-image ie-image-logo current-color"></object>
+            <object data="img/gray-logo.svg" class="ie-image ie-image-logo change-color"></object>
             <div class="whole-text-left-logo whole-text-left-logo-ie">
                 <p class="text-left-logo">jamie</p>
                 <p class="text-left-logo surname-text-left-logo">Fulbrook</p>
@@ -46,9 +51,13 @@
 
             <div id="menuToggle">
                 <input type="checkbox" />
-                <div class = "nav-icon">
-                <embed src="img/close.svg" class="cross-icon">
-                <embed src="img/menu.svg" class="list-icon">
+                <div class = "nav-icon current-color">
+                    <embed src="img/close.svg" class="cross-icon">
+                    <embed src="img/menu.svg" class="list-icon">
+                </div>
+                <div class = "nav-icon change-color">
+                    <embed src="img/gray-close.svg" class="cross-icon">
+                    <embed src="img/grey-menu.svg" class="list-icon">
                 </div>
                 <ul id="menu">
                 </ul>
@@ -108,7 +117,7 @@
         </div>
     </div>
 </div>
-<div id="section-about" class="section">
+<div id="section-about" class="section about">
         <div class="row">
             <div class=" photo-man-section-about">
             </div>
@@ -213,7 +222,7 @@
                     </div>
                 </div>
                 <hr class = "hr-tablet">
-                <div class="arrow-down-icon"><embed src="img/section-tools/arrow-down.svg" id="arrow-tools-tablet"></div>
+               <embed src="img/section-tools/arrow-down.svg" id="arrow-tools-tablet">
                 <div style="position: relative; height: 8vw; width: 100%" class = "ie-tools tools-tablet">
                     <div class="icon-camera active"><span class="img-under-line-block img-under-line-block-ie icon-camera"><object data="img/section-tools/camera.svg" class="ie-image"></object></span></div>
                     <div class="icon-drone"><span class="img-under-line-block img-under-line-block-ie icon-dji icon-drone"><object data="img/section-tools/helicopter.svg" class="ie-image"></object></span></div>
@@ -379,7 +388,6 @@
         <div class="video-section-cover">
             <video  class="section-outdoor-professional" autoplay loop muted controls poster="img/outdoor-section/professional_placeholder.jpg">
                 <source src="img/outdoor-section/professional.mp4" type="video/mp4">
-                <source src="img/outdoor-section/professional.mp4" type="video/ogg">
             </video>
         </div>
     </div>
