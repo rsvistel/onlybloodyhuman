@@ -56,15 +56,15 @@ $(document).ready(function () {
                     dots[i].addClass('active');
                 }
                 if (sections[1].isInViewport()) {
-                    changeColorDownMobile();
+                    changeColorDown();
                 }else if (sections[2].isInViewport()){
-                   changeColorUpMobile();
+                   changeColorUp();
                 }else if (sections[5].isInViewport()){
-                    changeColorDownMobile();
+                    changeColorDown();
                 }else if (sections[3].isInViewport()){
-                    changeColorUpMobile();
+                    changeColorUp();
                 }else{
-                    changeColorUpMobile();
+                    changeColorUp();
                 }
             }
 
@@ -381,26 +381,16 @@ $(document).ready(function () {
     });
 
     function changeColorDown() {
-        $('.change-color').fadeToggle(500);
-        $('.current-color').css('display','none');
-        $('.change-color').css('display','block');
-        $('.text-left-logo').css('color','grey');
+        $('.current-color').css('opacity','0.3');
+        $('.current-color').css('height' , '0');
+        $('.change-color').css('opacity','1');
+        $('.change-color').css('height','auto');
     }
     function changeColorUp() {
-        $('.current-color').fadeToggle(500);
-        $('.change-color').css('display','none');
-        $('.current-color').css('display','block');
-        $('.text-left-logo').css('color','snow');
-    }
-    function changeColorDownMobile() {
-        $('.current-color').css('display','none');
-        $('.change-color').css('display','block');
-        $('.text-left-logo').css('color','grey');
-    }
-    function changeColorUpMobile() {
-        $('.change-color').css('display','none');
-        $('.current-color').css('display','block');
-        $('.text-left-logo').css('color','snow');
+        $('.change-color').css('opacity','0.3');
+        $('.change-color').css('height' , '0');
+        $('.current-color').css('opacity','1');
+        $('.current-color').css('height','auto');
     }
     function bindAbout() {
         $("#section-about").bind("scroll", function() {

@@ -1507,9 +1507,9 @@ body.opened--menu .text-dots-block embed {
   max-width: 33%; }
 
 .current-color, .change-color {
-  -webkit-transition: ease-in 2s;
-  -o-transition: ease-in 2s;
-  transition: ease-in 2s; }
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s; }
 
 .block-tools-section {
   display: none; }
@@ -1518,4 +1518,4 @@ body.opened--menu .text-dots-block embed {
   display: none; }
 
 .change-color {
-  display: none; }
+  opacity: 0; }
