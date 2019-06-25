@@ -331,7 +331,6 @@ body.opened--menu .text-dots-block embed {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  color: snow;
   margin: 2px 0;
   font-size: 0.6vw;
   letter-spacing: 2.5px;
@@ -1503,8 +1502,9 @@ body.opened--menu .text-dots-block embed {
 .nav-icon .cross-icon {
   display: none;
   z-index: 1;
-  width: 1.56vw;
-  max-width: 33%; }
+  width: 1.43vw;
+  max-width: 33%;
+  margin-left: 3px; }
 
 .current-color, .change-color {
   -webkit-transition: opacity 1s;

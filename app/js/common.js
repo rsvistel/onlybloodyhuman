@@ -2,6 +2,8 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 $(document).ready(function () {
+    $('.change-color').css('height' , '0');
+    $('.text-left-logo').css('color', 'white');
     var progressLine = false;
     active = 0;
     isDesktop = true;
@@ -381,16 +383,20 @@ $(document).ready(function () {
     });
 
     function changeColorDown() {
-        $('.current-color').css('opacity','0.3');
+        $('.text-left-logo').css('color', '#363531');
+        $('.current-color').css('opacity','0');
         $('.current-color').css('height' , '0');
         $('.change-color').css('opacity','1');
         $('.change-color').css('height','auto');
     }
     function changeColorUp() {
-        $('.change-color').css('opacity','0.3');
+        $('.text-left-logo').css('color', 'white');
+        $('.change-color').css('opacity','0');
         $('.change-color').css('height' , '0');
         $('.current-color').css('opacity','1');
         $('.current-color').css('height','auto');
+
+
     }
     function bindAbout() {
         $("#section-about").bind("scroll", function() {
