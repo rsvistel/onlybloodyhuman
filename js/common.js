@@ -59,28 +59,26 @@ $(document).ready(function () {
                 }
                 if (sections[1].isInViewport()) {
                     changeColorDown();
-                }else if (sections[2].isInViewport()){
-                   changeColorUp();
-                }else if (sections[5].isInViewport()){
-                    changeColorDown();
-                }else if (sections[3].isInViewport()){
+                } else if (sections[2].isInViewport()) {
                     changeColorUp();
-                }else{
+                } else if (sections[3].isInViewport()) {
                     changeColorUp();
                 }
-            }
+                else {
+                    changeColorLastSection();
+                }
 
+            }
+            if ($(window).scrollTop() < 200) {
+                changeColorUp();
+            }
             if ($(window).scrollTop() === 0) {
                 $('.text-dots-block').removeClass('active');
                 dots[0].addClass('active');
-                  changeColorUp();
                 $('.whole-text-left-logo').css('opacity', '1');
 
             }else{
-                // changeColorDown();
                 $('.whole-text-left-logo').css('opacity', '0');
-
-
             }
         })
     }
@@ -208,7 +206,7 @@ $(document).ready(function () {
                 bindUnFixed();
             } else {
                 bindUnFixed();
-                changeColorDown();
+                changeColorLastSection();
             }
         }, speed);
     }
@@ -395,7 +393,15 @@ $(document).ready(function () {
         $('.change-color').css('height' , '0');
         $('.current-color').css('opacity','1');
         $('.current-color').css('height','auto');
-
+    }
+    function changeColorLastSection() {
+        $('.text-left-logo').css('color', '#363531');
+        $('.current-color.test1').css('opacity','0');
+        $('.current-color.test1').css('height' , '0');
+        $('.change-color.test .cross-icon').css('opacity','1');
+        $('.change-color.test .cross-icon').css('height','auto');
+        $('.change-color.test').css('opacity','1');
+        $('.change-color.test').css('height','auto');
 
     }
     function bindAbout() {
