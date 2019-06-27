@@ -1519,3 +1519,27 @@ body.opened--menu .text-dots-block embed {
 
 .change-color {
   opacity: 0; }
+
+.dots-section-gray {
+  background-color: #363531;
+  border: 1px solid #363531; }
+
+.dots-section-white {
+  background-color: snow;
+  border: 1px solid snow; }
+
+.text-gray {
+  color: #363531; }
+
+.text-white {
+  color: snow; }
+
+.text-dots-block:hover .text-near-dots.text-gray {
+  color: #363531; }
+
+.embed-arrow {
+  margin: 0 5.5% 3.5% 5%; }
+
+.embed-arrow embed {
+  width: 10px;
+  height: 8px; }
