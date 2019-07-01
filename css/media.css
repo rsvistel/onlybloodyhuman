@@ -131,7 +131,7 @@
   .photo-man-section-about {
     margin-left: 0;
     width: 100%;
-    content: url("../img/section-about/jamie-mobile.jpg"); }
+    content: url("../img/s2-about/jamie_mob.jpg"); }
   .footer-client p {
     font-size: 6px; }
   .footer-client span, .lines-job-text-center {
@@ -157,8 +157,9 @@
     max-width: 3vh;
     top: 0; }
   .nav-icon .cross-icon {
-    width: 3vh;
-    max-width: initial; }
+    width: 2.4vh;
+    max-width: initial;
+    margin-left: 2px; }
   .inner-content-section-banner {
     margin-top: 0; }
   .footer-section {
@@ -172,7 +173,7 @@
   .dots-block-section-banner {
     height: 55vh;
     margin-top: 15vh;
-    padding-right: 5.3%;
+    padding-right: 6.7%;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
@@ -398,7 +399,8 @@
   #first-section, #section-banner {
     z-index: auto; }
   #section-banner {
-    overflow: hidden; }
+    overflow: hidden;
+    background-image: url("../img/s1-intro/reel_placeholder_mob.jpg"); }
   .logo-client-list object {
     min-width: 115px;
     max-width: 125px;
@@ -444,6 +446,8 @@
     width: 35px;
     height: 35px;
     font-size: 14px; }
+  .outdoor-section__image .col-sm-3 .countries {
+    font-size: 13px; }
   .client-contact-list__social--icon {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1252,6 +1256,6 @@
   .tablet-image {
     display: none; }
   .client-contact-list-img {
-    background-image: url(../img/contact-section/phone-mobile-vertical.jpg); }
+    background-image: url("../img/s6-contact/phone_mob.jpg"); }
   .video-mobile-vertical {
     display: block; } }
