@@ -108,9 +108,9 @@ $(document).ready(function () {
             if (delta > 0) {
                 if (sections[active][0].scrollHeight - sections[active].scrollTop()-1 <= sections[active].outerHeight() && active < sections.length-1) {
                     if (sections[active].hasClass('tools-camera')) {
-                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', 'img/section-tools/dji_inspire.jpg', false);
+                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', 'img/s3-tools/drone_dsk.jpg', false);
                     } else if (sections[active].hasClass('tools-dji')) {
-                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', 'img/section-tools/movi_pro.jpg', false);
+                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', 'img/s3-tools/gimbal_dsk.jpg', false);
                     } else if (sections[active].hasClass('tools-movi')) {
                         sections[active].css('overflow', 'hidden');
                         scroll('down');
@@ -119,9 +119,9 @@ $(document).ready(function () {
             } else {
                 if (sections[active].scrollTop() === 0 && active > 0) {
                     if (sections[active].hasClass('tools-movi')) {
-                        changeTool($('.icon-movi'), $('.icon-dji'), 'tools-movi', 'tools-dji', 'img/section-tools/dji_inspire.jpg', true);
+                        changeTool($('.icon-movi'), $('.icon-dji'), 'tools-movi', 'tools-dji', 'img/s3-tools/drone_dsk.jpg', true);
                     } else if (sections[active].hasClass('tools-dji')) {
-                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', 'img/section-tools/red_camera.jpg', true);
+                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', 'img/s3-tools/camera_dsk.jpg', true);
                     } else if (sections[active].hasClass('tools-camera')) {
                         sections[active].css('overflow', 'hidden');
                         scroll('up');
@@ -240,13 +240,13 @@ $(document).ready(function () {
     }
     function whiteArrow() {
         var parent = $('.dots-block-section-banner embed').parent();
-        var whiteArrow = "<embed src='img/first-section/arrow-down.svg'>";
+        var whiteArrow = "<embed src='img/general/icon_arrow-down_light.svg''>";
         $('.dots-block-section-banner embed').remove();
         parent.append(whiteArrow);
     };
     function grayArrow() {
         var parent = $('.dots-block-section-banner embed').parent();
-        var grayArrow = "<embed src='img/arrow-down-gray.svg'>";
+        var grayArrow = "<embed src='img/general/icon_arrow-down_dark.svg'>";
         $('.dots-block-section-banner embed').remove();
         parent.append(grayArrow);
     };
@@ -301,13 +301,13 @@ $(document).ready(function () {
                 $('.img-under-line-block').hide();
                 $('.icon-dji, .icon-camera').hide().animate({'opacity': '0'});
                 $('.icon-movi').show().animate({'opacity': '1'});
-                $('.photo-half-section-tools').css('background-image', 'url("img/section-tools/movi_pro.jpg")');
+                $('.photo-half-section-tools').css('background-image', 'url("img/s3-tools/gimbal_dsk.jpg")');
                 $('#section-tools').removeClass('tools-dji tools-camera').addClass('tools-movi');
             } else {
                 $('.img-under-line-block').hide();
                 $('.icon-dji, .icon-movi').hide().animate({'opacity': '0'});
                 $('.icon-camera').show().animate({'opacity': '1'});
-                $('.photo-half-section-tools').css('background-image', 'url("../app/img/section-tools/red_camera.jpg")');
+                $('.photo-half-section-tools').css('background-image', 'url("../app/img/s3-tools/camera_dsk.jp")');
                 $('#section-tools').removeClass('tools-dji tools-movi').addClass('tools-camera');
             }
 
@@ -392,13 +392,13 @@ $(document).ready(function () {
             var dataName = $(this).parent().data('name');
             if (dataName.toLowerCase() === 'camera') {
                 animateArrow('16.66%');
-                changeTool('img/section-tools/red_camera.jpg')
+                changeTool('img/s3-tools/camera_dsk.jpg')
             } else if (dataName.toLowerCase() === 'drone') {
                 animateArrow('50%');
-                changeTool('img/section-tools/dji_inspire.jpg')
+                changeTool('img/s3-tools/drone_dsk.jpg')
             } else {
                 animateArrow('83.33%');
-                changeTool('img/section-tools/movi_pro.jpg')
+                changeTool('img/s3-tools/gimbal_dsk.jpg')
             }
 
             setTimeout(function () {
@@ -579,11 +579,11 @@ $(document).ready(function () {
     });
     $(window).on("resize", function(){
         if($(window).width() < 768){
-            $('.client-contact-list-img').css("background-image", "url(/img/contact-section/phone-mobile.jpg)");
+            $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.jpg)");
         }
     });
     if($(window).width() < 768) {
-        var videoFile = 'img/first-section/video/reel_mobile.mp4';
+        var videoFile = 'img/video/reel_mob_588.mp4';
         $('.video-in-section-banner video').attr('src', videoFile);
         $('video.section-outdoor-professional').removeAttr("autoplay");
         //$('video.section-outdoor-professional').play();
