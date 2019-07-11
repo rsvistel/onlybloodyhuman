@@ -570,8 +570,8 @@ $(document).ready(function () {
             767: {
                 items: 3
             },
-            1000: {
-                items: 7,
+            1000:{
+                item: 7,
                 autoplay: false,
                 loop: false
             }
