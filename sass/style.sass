@@ -409,9 +409,6 @@ body.opened--menu .text-dots-block embed
 .logo-client-list-merrel object
   max-height: 5.2vw
 
-.logo-client-list-merrel object
-  max-height: 5.2vw
-
 .logo-client-list
   width: 100%
 
@@ -472,10 +469,15 @@ body.opened--menu .text-dots-block embed
 
 .highlight-hover h2
   text-indent: -4px
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #ddd 50%)
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(227, 195, 117, 0)), color-stop(50%, #df6f43))
+  background-image: -webkit-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #df6f43 50%)
+  background-image: -o-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #df6f43 50%)
+  background-image: linear-gradient(to right, rgba(227, 195, 117, 0) 50%, #df6f43 50%)
   background-position: -0% 0
   background-size: 200% auto
-  transition: background-position 0.1s ease-out
+  -webkit-transition: background-position 0.4s ease-in-out
+  -o-transition: background-position 0.4s ease-in-out
+  transition: background-position 0.4s ease-in-out
 
 .highlight-hover:hover h2
   background-position: -99.99% 0
@@ -493,6 +495,9 @@ body.opened--menu .text-dots-block embed
 .job-section-about-producer
   letter-spacing: -2px
   margin-bottom: 0.2vw
+  text-indent: 13px
+  margin-left: -22px
+  margin-right: 10px
 
 .now-section-about
   margin-top: 30%
@@ -1071,11 +1076,16 @@ body.opened--menu .text-dots-block embed
   position: relative
 
 .client-contact-list__email a
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #ddd 50%)
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(227, 195, 117, 0)), color-stop(50%, #eecb65))
+  background-image: -webkit-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #eecb65 50%)
+  background-image: -o-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #eecb65 50%)
+  background-image: linear-gradient(to right, rgba(227, 195, 117, 0) 50%, #eecb65 50%)
   background-position: -0% 0
   background-size: 200% auto
   color: #222
-  transition: background-position 0.1s ease-out
+  -webkit-transition: background-position 0.4s ease-in-out
+  -o-transition: background-position 0.4s ease-in-out
+  transition: background-position 0.4s ease-in-out
 
 .client-contact-list__email:hover a
   background-position: -99.99% 0
@@ -1086,9 +1096,10 @@ body.opened--menu .text-dots-block embed
   text-transform: lowercase
   letter-spacing: 0.25vw
   text-decoration: underline
-  margin-left: 0.5vw
+  margin-left: 0
   font-size: 2.6vw
   font-weight: 500
+  padding: 0 15px
 
 .client-contact-list__email--triangle-left
   height: 0
@@ -1216,7 +1227,9 @@ body.opened--menu .text-dots-block embed
   max-width: 33%
   margin-left: 3px
 .current-color, .change-color
-  transition: opacity 1s
+  transition: opacity 3s
+  -o-transition: opacity 3s
+  -webkit-transition: opacity 3s
 
 .block-tools-section
   display: none
@@ -1233,6 +1246,10 @@ body.opened--menu .text-dots-block embed
 .dots-section-white
   background-color: snow
   border: 1px solid snow
+.dots-section-white, .dots-section-gray
+  -webkit-transition: opacity 3s
+  -o-transition: opacity 3s
+  transition: opacity 3s
 .text-gray
   color: #363531
 .text-white
