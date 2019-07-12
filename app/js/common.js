@@ -327,7 +327,7 @@ $(document).ready(function () {
                 $('.img-under-line-block').hide();
                 $('.icon-dji, .icon-movi').hide().animate({'opacity': '0'});
                 $('.icon-camera').show().animate({'opacity': '1'});
-                $('.photo-half-section-tools').css('background-image', 'url("../img/s3-tools/camera_dsk.jpg")');
+                $('.photo-half-section-tools').css('background-image', 'url("img/s3-tools/camera_dsk.jpg")');
                 $('#section-tools').removeClass('tools-dji tools-movi').addClass('tools-camera');
             }
 
