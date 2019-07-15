@@ -393,9 +393,12 @@
     min-height: auto;
     height: auto; }
   .video-references {
+    z-index: 1; } }
+
+@media (max-width: 1000px) and (min-width: 768px) {
+  .video-references {
     z-index: 1;
-    height: 80vh;
-    left: 0; }
+    height: 80vh; }
   #first-section, #section-banner {
     z-index: auto; }
   #section-banner {
@@ -1007,9 +1010,7 @@
   .arrow-down-icon {
     padding: 0 1.5% 0.8vw 0; }
   .video-references {
-    height: auto;
-    width: 100%;
-    min-height: 81vh; } }
+    min-height: 100vh; } }
 
 @media (min-width: 1000px) {
   .owl-item {
