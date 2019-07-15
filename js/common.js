@@ -62,14 +62,30 @@ $(document).ready(function () {
                     $('.dot-section-banner').removeClass('dots-section-gray');
                 } else if  ( sections[2].isInViewport() && $(window).scrollTop() > sections[2].offset().top) {
                     changeColorUp();
+                    $('.dot-section-banner').removeClass('dots-section-gray');
                 }else if  ( sections[3].isInViewport() && $(window).scrollTop() > sections[3].offset().top) {
                     changeColorUp();
+                    $('.dot-section-banner').removeClass('dots-section-gray');
                 }else if ( sections[4].isInViewport() && $(window).scrollTop() > sections[4].offset().top) {
                     changeColorDown();
                 }
                 else {
                     changeColorDown();
-                    $('.dot-section-banner').removeClass('dots-section-gray');
+                    // $('.dot-section-banner').removeClass('dots-section-gray');
+                    $('#menuToggle input, #menuToggle-mobile input').click(function () {
+                        if ($('body').hasClass('opened--menu')) {
+                            $('.dot-section-banner').removeClass('dots-section-gray');
+                            $('.text-near-dots').removeClass('text-gray');
+                            $('.text-left-logo').css('color', '#363531');
+                            whiteArrow();
+
+                        } else {
+                            $('.dot-section-banner').addClass('dots-section-gray');
+                            $('.text-near-dots').addClass('text-gray');
+                            $('.text-left-logo').css('color', '#363531');
+                            grayArrow();
+                        }
+                    });
                 }
 
             }
@@ -187,7 +203,7 @@ $(document).ready(function () {
         if (progressLine == false) {
             $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
         }
-        var test =sections[active].attr('id');
+        // var test =sections[active].attr('id');
         switch (sections[active].attr('id')) {
             case "section-tools":
                 changeColorUp();
@@ -459,6 +475,7 @@ $(document).ready(function () {
         $('.change-color').css('opacity','1');
         $('.change-color').css('height','auto');
         $('.dot-section-banner').addClass('dots-section-gray');
+        $('.dots-section-gray').css('transition','2s');
         $('.dot-section-banner').removeClass('dots-section-white');
     }
     function changeColorUp() {
@@ -608,6 +625,7 @@ $(document).ready(function () {
 
     if($(window).width() > 768) {
         $('video.section-outdoor-professional').removeAttr("controls");
+
     }
 
 
@@ -621,7 +639,6 @@ $(document).ready(function () {
         });
         bindMobile();
     }
-
 
 });
 

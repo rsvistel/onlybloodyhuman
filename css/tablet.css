@@ -399,9 +399,6 @@
     opacity: 1; }
   #menu {
     margin: -5vw 0 0 -11vw; }
-  .video-references {
-    min-height: 80vh;
-    height: 81vh; }
   .text-near-dots {
     font-size: 1.1vw;
     width: 70%;
@@ -808,7 +805,7 @@
     display: none; } }
 
 /* iPad Pro Portrait(Big) */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   #section-instagram {
     height: auto; }
   #menuToggle input {

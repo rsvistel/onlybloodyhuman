@@ -61,7 +61,7 @@ p {
 .video-references {
   position: absolute;
   top: 0;
-  min-height: 100vh;
+  min-height: 80vh;
   min-width: 100%;
   z-index: -1;
   pointer-events: none; }
@@ -1512,9 +1512,9 @@ body.opened--menu .text-dots-block embed {
   margin-left: 3px; }
 
 .current-color, .change-color {
-  transition: opacity 2s;
-  -o-transition: opacity 2s;
-  -webkit-transition: opacity 2s; }
+  transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  -webkit-transition: opacity 1.5s; }
 
 .block-tools-section {
   display: none; }
