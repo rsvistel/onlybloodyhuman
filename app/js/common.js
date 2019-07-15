@@ -475,7 +475,7 @@ $(document).ready(function () {
         $('.change-color').css('opacity','1');
         $('.change-color').css('height','auto');
         $('.dot-section-banner').addClass('dots-section-gray');
-        $('.dots-section-gray').css('transition','1.5s');
+        $('.dots-section-gray').css('transition','2s');
         $('.dot-section-banner').removeClass('dots-section-white');
     }
     function changeColorUp() {
