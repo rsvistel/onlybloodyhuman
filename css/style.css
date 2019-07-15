@@ -1512,9 +1512,9 @@ body.opened--menu .text-dots-block embed {
   margin-left: 3px; }
 
 .current-color, .change-color {
-  transition: opacity 1.5s;
-  -o-transition: opacity 1.5s;
-  -webkit-transition: opacity 1.5s; }
+  transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s; }
 
 .block-tools-section {
   display: none; }
