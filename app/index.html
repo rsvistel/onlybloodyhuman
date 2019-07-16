@@ -127,7 +127,7 @@
         <div class=" photo-man-section-about">
         </div>
 
-        <div class=" whole-text-section-about">
+        <div class="whole-text-section-about">
             <h6 class="first-sentence-section-about">Hey Hey, I’m Jamie</h6>
             <p class="aka-name-section-about">a.k.a. made by jam</p>
             <div class = "highlight-hover"><h2 class="job-section-about job-section-about-producer">producer</h2></div>
@@ -443,17 +443,17 @@
         </div>
 
     </div>
+    </div>
 
-    <div class = "footer-section">
+    <div class = "footer-section section fp-auto-height">
         <div class ="footer-client"><p>made in</p><span>London</span> </div>
         <img src = "img/footer/flag.png" alt = "flag">
     </div>
 </div>
-</div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!--<script src="js/common.js"></script>-->
+<!-- <script src="js/common.js"></script> -->
 <script src="js/lazy-load.js"></script>
 <script src="js/instafeed.min.js"></script>
 <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
@@ -484,8 +484,11 @@
     $(document).ready(function() {
 	$('#fullpage').fullpage({
         autoScrolling:true,
-        scrollingSpeed: 700,
+        scrollingSpeed: 1000,
         scrollHorizontally: true,
+        scrollOverflow: true,
+        // offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
+        offsetSections: true,
 	});
 
 	$.fn.fullpage.setAllowScrolling(true);
