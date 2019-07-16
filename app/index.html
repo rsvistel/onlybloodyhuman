@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
     <link rel="stylesheet" href="css/tablet.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css">
 </head>
 <body>
 
@@ -29,12 +30,13 @@
 </div>
 
 <div class="dots-block-section-banner">
-    <div class="text-dots-block active"><h6 class="text-near-dots ">intro</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg" ></span><span class="dot-section-banner "></span></div>
-    <div class="text-dots-block"><h6 class="text-near-dots">about</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block"><h6 class="text-near-dots">tools</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block active"><h6 class="text-near-dots">intro</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg" ></span><span class="dot-section-banner "></span></div>
+    <div class="text-dots-block"><h6 class="text-near-dots" href='#section-about'>about</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block"><h6 class="text-near-dots" href="#section-contact">tools</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
     <div class="text-dots-block instagram-counter"><h6 class="text-near-dots">skills</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
     <div class="text-dots-block"><h6 class="text-near-dots">contact</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
 </div>
+
 <div class = "wrap">
     <div class="inner-content-section-banner-fixed">
         <div class="row">
@@ -67,6 +69,8 @@
         </div>
     </div>
 </div>
+
+<div id="fullpage" class="fullpage-wrapper">
 <div id="first-section" class="section section-fixed">
     <div id="section-banner" class="video-section">
         <div class="video-in-section-banner">
@@ -406,7 +410,7 @@
     </div>
 </div>
 
-<div class="section-contact section">
+<div id="section-contact" class="section-contact section">
     <div id = "section-contact">
         <div class = "row">
 
@@ -445,12 +449,15 @@
         <img src = "img/footer/flag.png" alt = "flag">
     </div>
 </div>
+</div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/common.js"></script>
+<!--<script src="js/common.js"></script>-->
 <script src="js/lazy-load.js"></script>
 <script src="js/instafeed.min.js"></script>
+<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="js/fullpage.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
 
@@ -471,6 +478,18 @@
         });
         userFeed.run();
     });
+
+</script>
+<script>
+    $(document).ready(function() {
+	$('#fullpage').fullpage({
+        autoScrolling:true,
+        scrollingSpeed: 700,
+        scrollHorizontally: true,
+	});
+
+	$.fn.fullpage.setAllowScrolling(true);
+});
 
 </script>
 <script src="owl-carousel/dist/owl-carousel.min.js"></script>
