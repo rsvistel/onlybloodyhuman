@@ -1188,7 +1188,7 @@ body.opened--menu .text-dots-block embed {
   padding: 0;
   position: relative;
   border: 0.5px solid #f0f2f2;
-  border-bottom-width: 1px; }
+  border-bottom-width: 0.5px; }
   .section-instagram__photo:hover .hover-location {
     opacity: 1; }
 
@@ -1197,9 +1197,6 @@ body.opened--menu .text-dots-block embed {
 
 .section-instagram__photo:nth-child(-n+6) {
   border-top: none; }
-
-.section-instagram__photo:nth-child(n+6) {
-  border-bottom: none; }
 
 .section-instagram__photo embed {
   width: 1.2vw; }
@@ -1512,9 +1509,9 @@ body.opened--menu .text-dots-block embed {
   margin-left: 3px; }
 
 .current-color, .change-color {
-  transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s; }
+  transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  -webkit-transition: opacity 1.5s; }
 
 .block-tools-section {
   display: none; }
