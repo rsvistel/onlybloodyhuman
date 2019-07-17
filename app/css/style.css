@@ -1165,7 +1165,9 @@ body.opened--menu .text-dots-block embed {
   background-color: #363531;
   color: #ffffff;
   font-weight: bold;
-  margin-top: 4%; }
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-left: 9%; }
 
 .section-instagram-followers span {
   font-size: 1.8vw; }
@@ -1242,7 +1244,7 @@ body.opened--menu .text-dots-block embed {
     height: 1vw;
     margin-bottom: 0.7vw; }
 
-.section-instagram-followers embed {
+.section-instagram-followers #instagram-counter-icon {
   width: 1.8%;
   min-width: 16px;
   margin-right: 0.55vw; }
