@@ -758,6 +758,8 @@
     width: 1.6vw; }
   .section-instagram__photo .hover-location span {
     font-size: .9vw; }
+  .section-instagram__photo:nth-child(5), .section-instagram__photo:nth-child(6) {
+    border-top: 1px solid #f0f2f2; }
   .arrow-down-icon {
     padding: 0 4vw .8vw 4vw;
     width: 100%; }
