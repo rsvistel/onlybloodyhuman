@@ -128,6 +128,19 @@
     z-index: 10; }
   .section-instagram-followers a, .section-instagram-followers span {
     font-size: 16px; }
+  .client-contact-list__social--icon.audio embed {
+    height: 18px;
+    width: 4.5vw; }
+  .client-contact-list__img {
+    margin-right: 8%; }
+  .client-contact-list__social--icon.instagram embed {
+    width: 4.3vw;
+    height: 25px; }
+  .client-contact-list__social--icon.telephone embed {
+    width: 4.9vw;
+    height: 25px; }
+  .client-contact-list__social--icon {
+    margin-bottom: 8px; }
   .photo-man-section-about {
     margin-left: 0;
     width: 100%;
@@ -263,18 +276,28 @@
     font-size: 50px;
     margin-bottom: 1vw;
     margin-top: 8vw; }
+  .block-tools-section {
+    padding: 9.5% 0 1.5% 0; }
   .section-instagram__photo:nth-last-child(-n+4) {
     display: none; }
   .arrow-down-icon {
     padding: 0 1vw 0.8vw 0; }
-  .block-tools-section {
-    padding: 0; }
   .outdoor-section-block {
-    padding: 0; }
+    padding: 9.5% 0 1.5% 0; }
+  .section-instagram-followers {
+    margin-top: 8%;
+    margin-bottom: 8%; }
+  .section-instagram-followers a, .section-instagram-followers span {
+    font-size: 16px; }
+  .section-instagram-followers a {
+    font-size: 10px;
+    line-height: 3vw; }
   .client-contact-list__text p {
     margin-left: 0; }
   .client-contact-list__text h1 {
-    text-indent: -7px; } }
+    text-indent: -7px; }
+  .video-section-cover {
+    height: 60vw; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -320,8 +343,6 @@
   .dot-section-banner {
     width: 8px;
     height: 8px; }
-  .section-instagram-followers a {
-    line-height: 1.5vw; }
   .arrow-down-section-banner {
     margin-left: 0; } }
 
@@ -905,7 +926,8 @@
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .section-outdoor-professional {
-    position: static; }
+    position: static;
+    min-height: auto; }
   #section-tools .row.section-tools-mobile__button {
     display: block; }
   #section-tools .row.section-tools-mobile {
@@ -945,7 +967,10 @@
   .text-under-img-section-tools {
     font-size: 11px; }
   .outdoor-section__image .numberCircle {
-    border: 3px #f0f2f2 solid; }
+    border: 3px #f0f2f2 solid;
+    width: 35px;
+    height: 35px;
+    font-size: 14px; }
   .section-instagram__photo embed {
     width: 4vw; }
   .section-instagram__photo span {

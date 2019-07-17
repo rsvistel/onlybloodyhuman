@@ -475,7 +475,7 @@ $(document).ready(function () {
         $('.change-color').css('opacity','1');
         $('.change-color').css('height','auto');
         $('.dot-section-banner').addClass('dots-section-gray');
-        $('.dots-section-gray').css('transition','2s');
+        $('.dots-section-gray').css('transition','3s');
         $('.dot-section-banner').removeClass('dots-section-white');
     }
     function changeColorUp() {
@@ -484,6 +484,7 @@ $(document).ready(function () {
         $('.change-color').css('height' , '0');
         $('.current-color').css('opacity','1');
         $('.current-color').css('height','auto');
+        $('.dots-section-gray').css('transition','3s');
         $('.dot-section-banner').removeClass('dots-section-gray');
         $('.dot-section-banner').addClass('dots-section-white');
     }

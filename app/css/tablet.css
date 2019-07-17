@@ -372,6 +372,8 @@
     margin: 3px 1px 0 5px; }
   .dots-block-section-banner {
     padding-right: 4.4%; }
+  .arrow-down-section-banner embed {
+    width: 1.1vw; }
   h2 {
     font-size: 5.7vw; }
   .whole-text-left-logo {
@@ -806,6 +808,52 @@
 
 /* iPad Pro Portrait(Big) */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #section-tools .row.section-tools-mobile {
+    display: none; }
+  #section-tools .row.section-tools-mobile__button {
+    display: block; }
+  .gray-half-section-tools {
+    width: 100%;
+    padding: 16% 12% 0% 12%; }
+  .gray-half-section-tools.gray-half-section-tools__image {
+    padding: 0;
+    width: 100%; }
+  #section-tools .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .block-tools-section {
+    display: block; }
+  #section-tools hr, .outdoor-section hr {
+    border-top: 2px solid #f0f2f2;
+    margin: 0 5%;
+    width: 90%;
+    padding: 0; }
+  .outdoor-section__image img, .tools-section__image img {
+    width: 100%; }
+  .mobile-vertical-image {
+    display: none; }
+  .tablet-image {
+    display: block; }
+  .img-div-outdoor-section__icons {
+    margin: 1.4% 12% 3%; }
+  .icon-dji-mobile {
+    height: 6.4vh; }
+  .gray-half-section-tools {
+    max-height: 930px; }
+  .tools-section__image {
+    padding: 0; }
+  .img-div-outdoor-section__icons {
+    margin: 30% 0 4% 0; }
+  .large-tittle-section-tools {
+    margin: 4vw 0 0;
+    font-size: 20vw;
+    text-indent: -12px; }
+  .tittles-section-tools {
+    line-height: 1.2;
+    margin-top: 4vh; }
   #section-instagram {
     height: auto; }
   #menuToggle input {
@@ -890,10 +938,6 @@
     line-height: 1.6vw; }
   .progress-line {
     height: 1.3vw; }
-  .tittles-margin-section-tools {
-    margin-bottom: 5vh; }
-  .over-line-block {
-    margin-top: -30%; }
   .under-line-block .img-under-line-block embed, .img-under-line-block object {
     margin: 3% 0 5% 0; }
   .client-contact-list__quote p {
