@@ -202,7 +202,7 @@
         </div>
     </div>
 </div>
-<div id="section-tools" class="section section-fixed tools-camera">
+<div id="section-tools" class="section section-fixed tools-camera fp-auto-height">
     <div class="row section-tools-mobile">
         <div class="col-md-6 col-sm-6 gray-half-section-tools">
             <div class="over-line-block">
@@ -226,7 +226,7 @@
                         <button type="button"><span>gimbal</span></button>
                     </div>
                 </div>
-                <hr class = "hr-tablet">
+                <hr class="hr-tablet">
                 <embed src="img/general/icon_arrow-down_light.svg" id="arrow-tools-tablet">
                 <div style="position: relative; height: 8vw; width: 100%" class = "ie-tools tools-tablet">
                     <div class="icon-camera active"><span class="img-under-line-block img-under-line-block-ie icon-camera"><object data="img/s3-tools/icon_camera.svg" class="ie-image"></object></span></div>
@@ -257,7 +257,7 @@
         <div class="col-md-6 col-sm-6 photo-half-section-tools photo-half-section-tools-movi"></div>
     </div>
 
-    <div class = "row section-tools-mobile__button">
+    <div class="row section-tools-mobile__button">
         <div class="col-md-6 col-sm-6 gray-half-section-tools">
             <div class="over-line-block">
                 <h4 class="tittles-section-tools">the</h4>
@@ -316,28 +316,27 @@
     </div>
 </div>
 
-<div id="section-instagram" class="section">
-    <div class="outdoor-section">
-        <div class = "outdoor-section__text">
+<div id="section-instagram" class="section fp-auto-height">
+    <div class="outdoor-section fp-auto-height">
+        <div class = "outdoor-section__text fp-auto-height">
             <div class = "outdoor-section__text--header"><h2>outdoor</h2><h3>professional</h3></div>
             <div class = "outdoor-section__text--main"><p>Having had the good fortune to spend the last two decades exploring the far reaches of our planet, I specialise in executing productions in rough terrain, unfamiliar cultures and remote, hard to reach locations.</p>
                 <p>I live, breathe and work in the outdoors, and alongside an adventure film-making team, I can take your ideas to places others simply cannot.</div>
             <div class = "row ">
                 <div class = "outdoor-section-block">
-                    <div class = "col-sm-4 col-xs-4 outdoor-section__travel" data-name = "travel">
+                    <div class = "col-sm-4 col-xs-4 outdoor-section__travel" data-name="travel">
                         <button type="button"><span>travel</span></button>
                     </div>
-                    <div class = "col-sm-4 col-xs-4 outdoor-section__outdoor" data-name = "outdoor">
+                    <div class = "col-sm-4 col-xs-4 outdoor-section__outdoor" data-name="outdoor">
                         <button type="button" class = "active"><span>outdoor</span></button>
                     </div>
-                    <div class = "col-sm-4 col-xs-4 outdoor-section__safety" data-name = "safety">
+                    <div class = "col-sm-4 col-xs-4 outdoor-section__safety" data-name="safety">
                         <button type="button"><span>safety</span></button>
                     </div>
                 </div>
                 <hr>
                 <div class = "arrow-down-icon">
                     <embed id="arrow-skills" src="img/general/icon_arrow-down_light.svg">
-
                 </div>
                 <div class = "outdoor-section__icons">
                     <div class ="outdoor-section__image icon-travel">
@@ -390,14 +389,14 @@
             </div>
         </div>
 
-        <div class="video-section-cover">
+        <div class="video-section-cover fp-auto-height">
             <video  class="section-outdoor-professional" autoplay loop muted controls poster="img/s4-outdoor/pro_placeholder.jpg">
                 <source src="img/video/pro_dsk_720.mp4" type="video/mp4">
             </video>
         </div>
     </div>
 
-    <div class = "section-instagram">
+    <div class="section-instagram fp-auto-height">
         <div class = "section-instagram-followers">
             <div class="logo-inst-text">
                 <embed src="img/s5-instagram/icon_instagram_light.svg">
@@ -410,8 +409,7 @@
     </div>
 </div>
 
-<div id="section-contact" class="section-contact section">
-    <div id = "section-contact">
+<div id="section-contact" class="section-contact section fp-auto-height">
         <div class = "row">
 
             <div class = "client-contact-list">
@@ -439,14 +437,11 @@
             <div id="contact-trigger"></div>
             <div class = "client-contact-list-img">
             </div>
-
         </div>
-
-    </div>
     </div>
 
     <div class = "footer-section section fp-auto-height">
-        <div class ="footer-client"><p>made in</p><span>London</span> </div>
+        <div class ="footer-client"><p>made in</p><span>London</span></div>
         <img src = "img/footer/flag.png" alt = "flag">
     </div>
 </div>
@@ -484,11 +479,12 @@
     $(document).ready(function() {
 	$('#fullpage').fullpage({
         autoScrolling:true,
-        scrollingSpeed: 1000,
+        scrollingSpeed: 700,
         scrollHorizontally: true,
         scrollOverflow: true,
-        // offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
+        offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
         offsetSections: true,
+        verticalCentered:false,
 	});
 
 	$.fn.fullpage.setAllowScrolling(true);

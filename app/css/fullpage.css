@@ -85,10 +85,10 @@ html.fp-enabled,
     overflow: hidden;
     position: relative;
 }
-.fp-scroller{
+.fp-scroller {
     overflow: hidden;
 }
-.iScrollIndicator{
+.iScrollIndicator {
     border: 0 !important;
 }
 .fp-notransition {
