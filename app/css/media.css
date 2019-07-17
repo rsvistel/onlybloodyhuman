@@ -279,7 +279,11 @@
   .block-tools-section {
     padding: 9.5% 0 1.5% 0; }
   .section-instagram__photo:nth-last-child(-n+4) {
-    display: none; }
+    display: block; }
+  .section-instagram__photo:nth-child(5) {
+    border-top: 1px; }
+  .section-instagram__photo:nth-child(4) {
+    border-top: 1px; }
   .arrow-down-icon {
     padding: 0 1vw 0.8vw 0; }
   .outdoor-section-block {
@@ -823,7 +827,11 @@
   #section-logos {
     height: 30vh; }
   .section-instagram__photo:nth-last-child(-n+4) {
-    display: block; } }
+    display: none; }
+  .section-instagram__photo:nth-child(5) {
+    border-top: 1px; }
+  .section-instagram__photo:nth-child(4) {
+    border-top: 1px; } }
 
 @media (max-width: 600px) and (orientation: landscape) {
   .whole-text-left-logo {
