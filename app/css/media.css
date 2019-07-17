@@ -279,11 +279,9 @@
   .block-tools-section {
     padding: 9.5% 0 1.5% 0; }
   .section-instagram__photo:nth-last-child(-n+4) {
-    display: block; }
+    display: none; }
   .section-instagram__photo:nth-child(5) {
-    border-top: 1px; }
-  .section-instagram__photo:nth-child(4) {
-    border-top: 1px; }
+    border-top: 0.5px solid #f0f2f2; }
   .arrow-down-icon {
     padding: 0 1vw 0.8vw 0; }
   .outdoor-section-block {
@@ -525,6 +523,16 @@
   .section-instagram__photo {
     width: 50%;
     height: 50vw; }
+  .section-instagram__photo:nth-child(5) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(6) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(6) {
+    border-bottom: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(3) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(4) {
+    border-top: 0.5px solid #f0f2f2; }
   .logo-client-list-discovery object, .logo-client-list-gsk object {
     min-width: 130px;
     max-width: 150px;
@@ -827,11 +835,15 @@
   #section-logos {
     height: 30vh; }
   .section-instagram__photo:nth-last-child(-n+4) {
-    display: none; }
+    display: block; }
   .section-instagram__photo:nth-child(5) {
-    border-top: 1px; }
-  .section-instagram__photo:nth-child(4) {
-    border-top: 1px; } }
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(6) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(2) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(1) {
+    border-top: 0.5px solid #f0f2f2; } }
 
 @media (max-width: 600px) and (orientation: landscape) {
   .whole-text-left-logo {
@@ -1117,6 +1129,14 @@
   .section-instagram__photo {
     width: 24.67%;
     height: 24.67vw; }
+  .section-instagram__photo:nth-child(5) {
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(6) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(2) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(1) {
+    border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo embed {
     width: 3vw; }
   .hover-location .location {
