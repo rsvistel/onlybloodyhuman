@@ -523,16 +523,18 @@
   .section-instagram__photo {
     width: 50%;
     height: 50vw; }
-  .section-instagram__photo:nth-child(5) {
-    border-top: 0.5px solid #f0f2f2; }
-  .section-instagram__photo:nth-child(6) {
-    border-top: 0.5px solid #f0f2f2; }
-  .section-instagram__photo:nth-child(6) {
+  .section-instagram__photo:nth-child(2) {
     border-bottom: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(3) {
     border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(4) {
+    border-top: 0.5px solid #f0f2f2;
+    border-bottom: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(5) {
     border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(6) {
+    border-top: 0.5px solid #f0f2f2;
+    border-bottom: 0.5px solid #f0f2f2; }
   .logo-client-list-discovery object, .logo-client-list-gsk object {
     min-width: 130px;
     max-width: 150px;
@@ -1129,12 +1131,22 @@
   .section-instagram__photo {
     width: 24.67%;
     height: 24.67vw; }
-  .section-instagram__photo:nth-child(5) {
+  .section-instagram__photo:nth-child(n+6) {
+    border-bottom: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(12) {
     border-bottom: none; }
+  .section-instagram__photo:nth-child(11) {
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(10) {
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(9) {
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(5) {
+    border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(6) {
     border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(2) {
-    border-top: 0.5px solid #f0f2f2; }
+    border-bottom: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(1) {
     border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo embed {

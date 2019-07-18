@@ -175,8 +175,7 @@
   .section-instagram__photo .hover-location span {
     font-size: 1.44vw; }
   .section-instagram__photo:nth-child(5) {
-    border-bottom: none; }
-  .section-instagram__photo:nth-child(5) {
+    border-bottom: none;
     border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(6) {
     border-top: 0.5px solid #f0f2f2; }
@@ -569,14 +568,12 @@
     height: 1.3vh; }
   #section-about.section {
     height: auto; }
-  .section-instagram__photo:nth-child(5) {
-    border-bottom: none; }
   .section-instagram__photo:nth-child(6) {
-    border-top: 0.5px solid #f0f2f2; }
+    border-bottom: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(2) {
-    border-top: 0.5px solid #f0f2f2; }
+    border-bottom: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(1) {
-    border-top: 0.5px solid #f0f2f2; } }
+    border-bottom: 0.5px solid #f0f2f2; } }
 
 /* iPad Pro (Big) */
 @media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
