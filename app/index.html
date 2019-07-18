@@ -30,11 +30,11 @@
 </div>
 
 <div class="dots-block-section-banner">
-    <div class="text-dots-block active"><h6 class="text-near-dots">intro</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner "></span></div>
-    <div class="text-dots-block"><h6 class="text-near-dots" href='#section-about'>about</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block"><h6 class="text-near-dots" href="#section-contact">tools</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block active" data-menuanchor="firstPage1"><h6 class="text-near-dots">intro</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner "></span></div>
+    <div class="text-dots-block" data-menuanchor="firstPage2"><h6 class="text-near-dots" href='#section-about'>about</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block" data-menuanchor="firstPage3"><h6 class="text-near-dots" href="#section-contact">tools</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
     <div class="text-dots-block instagram-counter"><h6 class="text-near-dots">skills</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block"><h6 class="text-near-dots">contact</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block" data-menuanchor="3rdPage"><h6 class="text-near-dots">contact</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
 </div>
 
 <div class = "wrap">
@@ -70,11 +70,11 @@
     </div>
 </div>
 
-<div id="fullpage" class="fullpage-wrapper">
+<div id="fullpage" class="fullpage-wrapper ">
 <div id="first-section" class="section section-fixed">
     <div id="section-banner" class="video-section">
         <div class="video-in-section-banner">
-            <video src="img/video/reel_dsk_576.mp4" class="video-references" playsinline autoplay loop muted></video>
+            <video src="img/video/reel_dsk_576.mp4" class="video-references" playsinline autoplay loop muted data-keepplaying></video>
         </div>
         <div class="row arrow-down-section-banner">
             <embed src="img/general/icon_arrow-down_light.svg">
@@ -390,7 +390,7 @@
         </div>
 
         <div class="video-section-cover fp-auto-height">
-            <video  class="section-outdoor-professional" autoplay loop muted controls poster="img/s4-outdoor/pro_placeholder.jpg">
+            <video  class="section-outdoor-professional" autoplay loop muted controls data-keepplaying poster="img/s4-outdoor/pro_placeholder.jpg">
                 <source src="img/video/pro_dsk_720.mp4" type="video/mp4">
             </video>
         </div>
@@ -451,6 +451,7 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- <script src="js/common.js"></script> -->
  <script src="js/fix.js"></script>
+<script src="js/script.js"></script>
 <script src="js/lazy-load.js"></script>
 <script src="js/instafeed.min.js"></script>
 <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
@@ -488,13 +489,19 @@
     });
     $(document).ready(function() {
 	$('#fullpage').fullpage({
-        autoScrolling:true,
+        autoScrolling: true,
         scrollingSpeed: 700,
-        scrollHorizontally: true,
+        anchors: ['firstPage1', 'firstPage2', 'firstPage3','secondPage', '3rdPage', '4thpage'],
+        menu: '.dots-block-section-banner',
+        css3: true,
+        //lockAnchors: true,
+        // scrollBar:true,
+        // animateAnchor:true,
+        // scrollHorizontally: true,
         scrollOverflow: true,
         offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
         offsetSections: true,
-        verticalCentered:false,
+        //verticalCentered:false,
         onLeave: function(index, nextIndex, direction){
             $('.text-dots-block').removeClass('active');
             console.log(nextIndex.index);
@@ -520,7 +527,7 @@
         }
 	});
 
-	$.fn.fullpage.setAllowScrolling(true);
+    $.fn.fullpage.setAllowScrolling(true);
 });
 
 </script>
