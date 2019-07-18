@@ -1187,8 +1187,7 @@ body.opened--menu .text-dots-block embed {
   height: 16.6667vw;
   padding: 0;
   position: relative;
-  border: 0.5px solid #f0f2f2;
-  border-bottom-width: 1px; }
+  border: 0.5px solid #f0f2f2; }
   .section-instagram__photo:hover .hover-location {
     opacity: 1; }
 
