@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
     <link rel="stylesheet" href="css/tablet.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css">
 </head>
 <body>
 
@@ -29,12 +30,13 @@
 </div>
 
 <div class="dots-block-section-banner">
-    <div class="text-dots-block active"><h6 class="text-near-dots ">intro</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg" ></span><span class="dot-section-banner "></span></div>
-    <div class="text-dots-block"><h6 class="text-near-dots">about</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block"><h6 class="text-near-dots">tools</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block active"><h6 class="text-near-dots">intro</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg" ></span><span class="dot-section-banner "></span></div>
+    <div class="text-dots-block"><h6 class="text-near-dots" href='#section-about'>about</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block"><h6 class="text-near-dots" href="#section-contact">tools</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
     <div class="text-dots-block instagram-counter"><h6 class="text-near-dots">skills</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
     <div class="text-dots-block"><h6 class="text-near-dots">contact</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
 </div>
+
 <div class = "wrap">
     <div class="inner-content-section-banner-fixed">
         <div class="row">
@@ -67,6 +69,8 @@
         </div>
     </div>
 </div>
+
+<div id="fullpage" class="fullpage-wrapper">
 <div id="first-section" class="section section-fixed">
     <div id="section-banner" class="video-section">
         <div class="video-in-section-banner">
@@ -123,7 +127,7 @@
         <div class=" photo-man-section-about">
         </div>
 
-        <div class=" whole-text-section-about">
+        <div class="whole-text-section-about">
             <h6 class="first-sentence-section-about">Hey Hey, I’m Jamie</h6>
             <p class="aka-name-section-about">a.k.a. made by jam</p>
             <div class = "highlight-hover"><h2 class="job-section-about job-section-about-producer">producer</h2></div>
@@ -198,7 +202,7 @@
         </div>
     </div>
 </div>
-<div id="section-tools" class="section section-fixed tools-camera">
+<div id="section-tools" class="section section-fixed tools-camera fp-auto-height">
     <div class="row section-tools-mobile">
         <div class="col-md-6 col-sm-6 gray-half-section-tools">
             <div class="over-line-block">
@@ -222,7 +226,7 @@
                         <button type="button"><span>gimbal</span></button>
                     </div>
                 </div>
-                <hr class = "hr-tablet">
+                <hr class="hr-tablet">
                 <embed src="img/general/icon_arrow-down_light.svg" id="arrow-tools-tablet">
                 <div style="position: relative; height: 8vw; width: 100%" class = "ie-tools tools-tablet">
                     <div class="icon-camera active"><span class="img-under-line-block img-under-line-block-ie icon-camera"><object data="img/s3-tools/icon_camera.svg" class="ie-image"></object></span></div>
@@ -253,7 +257,7 @@
         <div class="col-md-6 col-sm-6 photo-half-section-tools photo-half-section-tools-movi"></div>
     </div>
 
-    <div class = "row section-tools-mobile__button">
+    <div class="row section-tools-mobile__button">
         <div class="col-md-6 col-sm-6 gray-half-section-tools">
             <div class="over-line-block">
                 <h4 class="tittles-section-tools">the</h4>
@@ -314,26 +318,25 @@
 
 <div id="section-instagram" class="section">
     <div class="outdoor-section">
-        <div class = "outdoor-section__text">
+        <div class = "outdoor-section__text fp-auto-height">
             <div class = "outdoor-section__text--header"><h2>outdoor</h2><h3>professional</h3></div>
             <div class = "outdoor-section__text--main"><p>Having had the good fortune to spend the last two decades exploring the far reaches of our planet, I specialise in executing productions in rough terrain, unfamiliar cultures and remote, hard to reach locations.</p>
                 <p>I live, breathe and work in the outdoors, and alongside an adventure film-making team, I can take your ideas to places others simply cannot.</div>
             <div class = "row ">
                 <div class = "outdoor-section-block">
-                    <div class = "col-sm-4 col-xs-4 outdoor-section__travel" data-name = "travel">
+                    <div class = "col-sm-4 col-xs-4 outdoor-section__travel" data-name="travel">
                         <button type="button"><span>travel</span></button>
                     </div>
-                    <div class = "col-sm-4 col-xs-4 outdoor-section__outdoor" data-name = "outdoor">
+                    <div class = "col-sm-4 col-xs-4 outdoor-section__outdoor" data-name="outdoor">
                         <button type="button" class = "active"><span>outdoor</span></button>
                     </div>
-                    <div class = "col-sm-4 col-xs-4 outdoor-section__safety" data-name = "safety">
+                    <div class = "col-sm-4 col-xs-4 outdoor-section__safety" data-name="safety">
                         <button type="button"><span>safety</span></button>
                     </div>
                 </div>
                 <hr>
                 <div class = "arrow-down-icon">
                     <embed id="arrow-skills" src="img/general/icon_arrow-down_light.svg">
-
                 </div>
                 <div class = "outdoor-section__icons">
                     <div class ="outdoor-section__image icon-travel">
@@ -386,17 +389,17 @@
             </div>
         </div>
 
-        <div class="video-section-cover">
+        <div class="video-section-cover fp-auto-height">
             <video  class="section-outdoor-professional" autoplay loop muted controls poster="img/s4-outdoor/pro_placeholder.jpg">
                 <source src="img/video/pro_dsk_720.mp4" type="video/mp4">
             </video>
         </div>
     </div>
 
-    <div class = "section-instagram">
+    <div class="section-instagram">
         <div class = "section-instagram-followers">
             <div class="logo-inst-text">
-                <embed src="img/s5-instagram/icon_instagram_light.svg">
+                <img id="instagram-counter-icon" src="img/s5-instagram/icon_instagram_light.png">
                 <span class = "countup">48k</span>
             </div>
             <a href="https://www.instagram.com/made.by.jam/?hl=uk" target="_blank">@made.by.jam</a>
@@ -406,8 +409,7 @@
     </div>
 </div>
 
-<div class="section-contact section">
-    <div id = "section-contact">
+<div id="section-contact" class="section-contact section fp-auto-height">
         <div class = "row">
 
             <div class = "client-contact-list">
@@ -435,22 +437,22 @@
             <div id="contact-trigger"></div>
             <div class = "client-contact-list-img">
             </div>
-
         </div>
-
     </div>
 
-    <div class = "footer-section">
-        <div class ="footer-client"><p>made in</p><span>London</span> </div>
+    <div class = "footer-section section fp-auto-height">
+        <div class ="footer-client"><p>made in</p><span>London</span></div>
         <img src = "img/footer/flag.png" alt = "flag">
     </div>
 </div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/common.js"></script>
+<!-- <script src="js/common.js"></script> -->
 <script src="js/lazy-load.js"></script>
 <script src="js/instafeed.min.js"></script>
+<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="js/fullpage.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
 
@@ -471,6 +473,22 @@
         });
         userFeed.run();
     });
+
+</script>
+<script>
+    $(document).ready(function() {
+	$('#fullpage').fullpage({
+        autoScrolling:true,
+        scrollingSpeed: 700,
+        scrollHorizontally: true,
+        scrollOverflow: true,
+        offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
+        offsetSections: true,
+        verticalCentered:false,
+	});
+
+	$.fn.fullpage.setAllowScrolling(true);
+});
 
 </script>
 <script src="owl-carousel/dist/owl-carousel.min.js"></script>
