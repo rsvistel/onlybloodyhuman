@@ -78,7 +78,6 @@ $(document).ready(function () {
                             $('.text-near-dots').removeClass('text-gray');
                             $('.text-left-logo').css('color', '#363531');
                             whiteArrow();
-
                         } else {
                             $('.dot-section-banner').addClass('dots-section-gray');
                             $('.text-near-dots').addClass('text-gray');
@@ -626,7 +625,6 @@ $(document).ready(function () {
 
     if($(window).width() > 768) {
         $('video.section-outdoor-professional').removeAttr("controls");
-
     }
 
 
