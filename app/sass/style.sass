@@ -173,14 +173,29 @@ p
   bottom: 0
   right: 0
   z-index: 99999
+  &.black-mode
+    .text-near-dots
+      color: #363531
+    .dot-section-banner
+      background-color: #363531
+      border-color: #363531
+    embed
+      &:first-child
+        display: none
+      &:last-child
+        display: block
+  embed
+    &:first-child
+      display: block
+    &:last-child
+      display: none
 
 .dot-section-banner
-  height: 0.4vw
-  width: 0.4vw
+  height: calc(0.4vw + 1px)
+  width: calc(0.4vw + 1px)
   max-width: 8px
   max-height: 8px
   background-color: white
-  border: 1px white solid
   border-radius: 50%
   margin: 0.7vw 0
   transition: 0.3s
@@ -191,8 +206,9 @@ p
   transform: scale(1.8)
 
 .text-dots-block:hover .dot-section-banner, .text-dots-block.active .dot-section-banner
-  background: transparent
+  background: transparent!important
   transform: scale(1.6)
+  border: 1px white solid
 
 body .text-near-dots
   opacity: 0
@@ -326,6 +342,11 @@ body.opened--menu .text-dots-block embed
   z-index: 1
   -webkit-user-select: none
   user-select: none
+  &.black-mode
+    .black-button
+      opacity: 1
+  .black-button
+    opacity: 0
 
 #menuToggle input, #menuToggle-mobile input
   display: block
@@ -742,6 +763,7 @@ body.opened--menu .text-dots-block embed
   overflow: hidden
   position: relative
   width: 100%
+  z-index: -1
 
 .outdoor-section
   position: relative

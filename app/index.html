@@ -19,7 +19,7 @@
             <embed src="img/general/icon_close_light.svg" class="cross-icon ">
             <embed src="img/general/icon_menu_dark.svg" class="list-icon">
         </div>
-        <div class = "nav-icon current-color gray-logo">
+        <div class = "nav-icon current-color gray-logo black-mode">
             <embed src="img/general/icon_close_light.svg" class="cross-icon ">
             <embed src="img/general/icon_menu_light.svg" class="list-icon">
         </div>
@@ -30,11 +30,11 @@
 </div>
 
 <div class="dots-block-section-banner">
-    <div class="text-dots-block active" data-menuanchor="firstPage1"><a class="text-near-dots" href='#firstPage1'>intro</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg" ></span><span class="dot-section-banner "></span></div>
-    <div class="text-dots-block" data-menuanchor="firstPage2"><a class="text-near-dots" href="#firstPage2">about</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block" data-menuanchor="firstPage3"><a class="text-near-dots" href="#firstPage3">tools</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block instagram-counter" data-menuanchor="secondPage"><a class="text-near-dots" href="#secondPage">skills</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block" data-menuanchor="3rdPage"><a class="text-near-dots" href="#3rdPage">contact</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block active" data-menuanchor="firstPage1"><h6 class="text-near-dots">intro</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner "></span></div>
+    <div class="text-dots-block" data-menuanchor="firstPage2"><h6 class="text-near-dots" href='#section-about'>about</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block" data-menuanchor="firstPage3"><h6 class="text-near-dots" href="#section-contact">tools</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block instagram-counter"><h6 class="text-near-dots">skills</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block" data-menuanchor="3rdPage"><h6 class="text-near-dots">contact</h6><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"><embed src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
 </div>
 
 <div class = "wrap">
@@ -53,11 +53,11 @@
 
                 <div id="menuToggle">
                     <input type="checkbox" />
-                    <div class = "nav-icon current-color gray-logo">
+                    <div class = "nav-icon white-button">
                         <embed src="img/general/icon_close_light.svg" class="cross-icon">
                         <embed src="img/general/icon_menu_light.svg" class="list-icon">
                     </div>
-                    <div class = "nav-icon change-color">
+                    <div class = "nav-icon black-button">
                         <embed src="img/general/icon_close_light.svg" class="cross-icon">
                         <embed src="img/general/icon_menu_dark.svg" class="list-icon">
                     </div>
@@ -122,7 +122,7 @@
         </div>
     </div>
 </div>
-<div id="section-about" class="section about">
+<div id="section-about" class="section about black-right">
     <div class="row">
         <div class=" photo-man-section-about">
         </div>
@@ -202,7 +202,7 @@
         </div>
     </div>
 </div>
-<div id="section-tools" class="section section-fixed tools-camera fp-auto-height">
+<div id="section-tools" class="section section-fixed tools-camera black-right">
     <div class="row section-tools-mobile">
         <div class="col-md-6 col-sm-6 gray-half-section-tools">
             <div class="over-line-block">
@@ -447,8 +447,10 @@
 </div>
 
 <script src="js/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- <script src="js/common.js"></script> -->
+ <script src="js/fix.js"></script>
 <script src="js/script.js"></script>
 <script src="js/lazy-load.js"></script>
 <script src="js/instafeed.min.js"></script>
@@ -477,6 +479,14 @@
 
 </script>
 <script>
+    sections = [];
+    $('.section').each(function () {
+        sections.push($(this))
+    });
+    dots = [];
+    $('.text-dots-block').each(function () {
+        dots.push($(this))
+    });
     $(document).ready(function() {
 	$('#fullpage').fullpage({
         autoScrolling: true,
@@ -491,8 +501,30 @@
         scrollOverflow: true,
         offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
         offsetSections: true,
-        // scrollToSectionTop: true,
-        // verticalCentered:false,
+        //verticalCentered:false,
+        onLeave: function(index, nextIndex, direction){
+            $('.text-dots-block').removeClass('active');
+            console.log(nextIndex.index);
+            console.log(dots.length-1);
+            if (nextIndex.index > dots.length-1) {
+                dots[dots.length-1].addClass('active');
+            } else {
+                dots[nextIndex.index].addClass('active');
+            }
+            if (sections[nextIndex.index].hasClass('black-right')) {
+                swapColor(false)
+            } else {
+                swapColor(true)
+            }
+            function swapColor(white) {
+                var color;
+                var opacity;
+                if (white) { color = '#fff'; opacity = 0 } else { color = '#363531'; opacity = 1 }
+                $('.dots-block-section-banner .text-dots-block:not(.active) .dot-section-banner').animate({backgroundColor: color});
+                $('.dots-block-section-banner .dot-section-banner').animate({borderColor: color});
+                $('#menuToggle .black-button').animate({opacity: opacity},700);
+            }
+        }
 	});
 
     $.fn.fullpage.setAllowScrolling(true);
