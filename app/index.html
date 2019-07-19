@@ -122,7 +122,7 @@
         </div>
     </div>
 </div>
-<div id="section-about" class="section about black-right">
+<div id="section-about" class="section about black-right black-left">
     <div class="row">
         <div class=" photo-man-section-about">
         </div>
@@ -409,7 +409,7 @@
     </div>
 </div>
 
-<div id="section-contact" class="section-contact section fp-auto-height">
+<div id="section-contact" class="section-contact section fp-auto-height black-left">
         <div class = "row">
 
             <div class = "client-contact-list">
@@ -440,7 +440,7 @@
         </div>
     </div>
 
-    <div class = "footer-section section fp-auto-height">
+    <div class = "footer-section section fp-auto-height black-left">
         <div class ="footer-client"><p>made in</p><span>London</span></div>
         <img src = "img/footer/flag.png" alt = "flag">
     </div>
@@ -491,7 +491,7 @@
 	$('#fullpage').fullpage({
         autoScrolling: true,
         scrollingSpeed: 700,
-        anchors: ['intro', 'about', 'tools','skills', 'contact'],
+        anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
         menu: '.dots-block-section-banner',
         css3: true,
         //lockAnchors: true,
@@ -504,8 +504,6 @@
         //verticalCentered:false,
         onLeave: function(index, nextIndex, direction){
             $('.text-dots-block').removeClass('active');
-            console.log(nextIndex.index);
-            console.log(dots.length-1);
             if (nextIndex.index > dots.length-1) {
                 dots[dots.length-1].addClass('active');
             } else {
@@ -515,6 +513,16 @@
                 swapColor(false)
             } else {
                 swapColor(true)
+            }
+
+            if (sections[nextIndex.index].hasClass('black-left')) {
+                $('object.change-color').css('opacity', 1);
+                $('object.current-color').css('opacity', 0);
+                $('.whole-text-left-logo').css('color', '#333')
+            } else {
+                $('object.change-color').css('opacity', 0);
+                $('object.current-color').css('opacity', 1);
+                $('.whole-text-left-logo').css('color', '#fff')
             }
             function swapColor(white) {
                 var color;
