@@ -187,14 +187,16 @@ a:focus, a:hover
       border-color: #363531
     embed
       &:first-child
-        display: none
+        visibility: hidden
       &:last-child
-        display: block
+        visibility: visible
   embed
     &:first-child
-      display: block
+      visibility: visible
+      position: absolute
+      margin: 3.5% 6% 3% 0
     &:last-child
-      display: none
+      visibility: hidden
 
 .dot-section-banner
   height: calc(0.4vw + 1px)
@@ -204,8 +206,9 @@ a:focus, a:hover
   background-color: white
   border-radius: 50%
   margin: 0.7vw 0
-  transition: .1s
+  //transition: .1s
   cursor: pointer
+  transition: all .1s linear, background-color .3s linear, border-color .7s linear
 
 .dot-section-banner:hover
   background: transparent
@@ -215,6 +218,7 @@ a:focus, a:hover
   background: transparent!important
   transform: scale(1.6)
   border: 1px white solid
+  transition: .1s
 
 body .text-near-dots
   opacity: 0

@@ -235,13 +235,15 @@ a:focus, a:hover {
     background-color: #363531;
     border-color: #363531; }
   .dots-block-section-banner.black-mode embed:first-child {
-    display: none; }
+    visibility: hidden; }
   .dots-block-section-banner.black-mode embed:last-child {
-    display: block; }
+    visibility: visible; }
   .dots-block-section-banner embed:first-child {
-    display: block; }
+    visibility: visible;
+    position: absolute;
+    margin: 3.5% 6% 3% 0; }
   .dots-block-section-banner embed:last-child {
-    display: none; }
+    visibility: hidden; }
 
 .dot-section-banner {
   height: -webkit-calc(0.4vw + 1px);
@@ -254,10 +256,10 @@ a:focus, a:hover {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   margin: 0.7vw 0;
-  -webkit-transition: .1s;
-  -o-transition: .1s;
-  transition: .1s;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all .1s linear, background-color .3s linear, border-color .7s linear;
+  -o-transition: all .1s linear, background-color .3s linear, border-color .7s linear;
+  transition: all .1s linear, background-color .3s linear, border-color .7s linear; }
 
 .dot-section-banner:hover {
   background: transparent;
@@ -270,7 +272,10 @@ a:focus, a:hover {
   -webkit-transform: scale(1.6);
       -ms-transform: scale(1.6);
           transform: scale(1.6);
-  border: 1px white solid; }
+  border: 1px white solid;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s; }
 
 body .text-near-dots {
   opacity: 0;

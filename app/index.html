@@ -30,11 +30,11 @@
 </div>
 
 <div class="dots-block-section-banner">
-    <div class="text-dots-block active" data-menuanchor="intro"><a class="text-near-dots" href='#intro'>intro</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg" ></span><span class="dot-section-banner "></span></div>
-    <div class="text-dots-block" data-menuanchor="about"><a class="text-near-dots" href="#about">about</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block" data-menuanchor="tools"><a class="text-near-dots" href="#tools">tools</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block instagram-counter" data-menuanchor="skills"><a class="text-near-dots" href="#skills">skills</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
-    <div class="text-dots-block" data-menuanchor="contact"><a class="text-near-dots" href="#contact">contact</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block active" data-menuanchor="intro"><a class="text-near-dots" href='#intro'>intro</a><span class = "embed-arrow"><embed class="light-arrow" src="img/general/icon_arrow-down_light.svg"><embed class="dark-arrow" src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner "></span></div>
+    <div class="text-dots-block" data-menuanchor="about"><a class="text-near-dots" href="#about">about</a><span class = "embed-arrow"><embed class="light-arrow" src="img/general/icon_arrow-down_light.svg"><embed class="dark-arrow" src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block" data-menuanchor="tools"><a class="text-near-dots" href="#tools">tools</a><span class = "embed-arrow"><embed class="light-arrow" src="img/general/icon_arrow-down_light.svg"><embed class="dark-arrow" src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block instagram-counter" data-menuanchor="skills"><a class="text-near-dots" href="#skills">skills</a><span class = "embed-arrow"><embed class="light-arrow" src="img/general/icon_arrow-down_light.svg"><embed class="dark-arrow" src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block" data-menuanchor="contact"><a class="text-near-dots" href="#contact">contact</a><span class = "embed-arrow"><embed class="light-arrow" src="img/general/icon_arrow-down_light.svg"><embed class="dark-arrow" src="img/general/icon_arrow-down_dark.svg"></span><span class="dot-section-banner"></span></div>
 </div>
 
 <div class = "wrap">
@@ -409,7 +409,7 @@
     </div>
 </div>
 
-<div id="section-contact" class="section-contact section fp-auto-height black-left">
+<div id="section-contact" class="section-contact section black-left">
         <div class = "row">
 
             <div class = "client-contact-list">
@@ -510,9 +510,9 @@
                 dots[nextIndex.index].addClass('active');
             }
             if (sections[nextIndex.index].hasClass('black-right')) {
-                swapColor(false)
+                swapColor(false);
             } else {
-                swapColor(true)
+                swapColor(true);
             }
 
             if (sections[nextIndex.index].hasClass('black-left')) {
@@ -527,9 +527,20 @@
             function swapColor(white) {
                 var color;
                 var opacity;
-                if (white) { color = '#fff'; opacity = 0 } else { color = '#363531'; opacity = 1 }
-                $('.dots-block-section-banner .text-dots-block:not(.active) .dot-section-banner').animate({backgroundColor: color});
-                $('.dots-block-section-banner .dot-section-banner').animate({borderColor: color});
+                if (white) {
+                    color = '#fff';
+                    opacity = 0;
+                    $('.light-arrow').css('visibility', 'visible');
+                    $('.dark-arrow').css('visibility', 'hidden')
+                } else {
+                    color = '#363531';
+                    opacity = 1;
+                    $('.dark-arrow').css('visibility', 'visible');
+                    $('.light-arrow').css('visibility', 'hidden')
+                }
+                $('.dots-block-section-banner .text-dots-block:not(.active) .dot-section-banner').css('background-color', color);
+                $('.text-near-dots').css('color', color);
+                $('.dots-block-section-banner .dot-section-banner').css('border-color', color);
                 $('#menuToggle .black-button').animate({opacity: opacity},700);
             }
         }

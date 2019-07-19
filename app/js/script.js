@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    $('.change-color').css('height' , '0');
-    $('.text-left-logo').css('color', 'white');
-    active = 0;
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
