@@ -352,7 +352,7 @@
   .section-outdoor-professional {
     min-height: auto; }
   .video-section-cover {
-    height: auto; }
+    z-index: 1; }
   .highlight-hover h2 {
     background-image: none; }
   .client-contact-list__email a {
@@ -375,7 +375,6 @@
     position: static;
     display: block;
     height: auto;
-    background-color: #363531;
     margin-bottom: -5px; }
   .outdoor-section__text {
     width: 100%;
