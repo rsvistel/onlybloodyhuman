@@ -58,6 +58,10 @@ p {
   font-family: ProximaNova;
   line-height: 1.6vw; }
 
+a:focus, a:hover {
+  color: snow;
+  text-decoration: underline; }
+
 .video-references {
   position: absolute;
   top: 0;
@@ -319,6 +323,12 @@ body.opened--menu .text-dots-block embed {
           transform: rotate(90deg);
   margin: 0 7% 0 5%;
   pointer-events: none; }
+
+.text-dots-block .text-near-dots {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none; }
 
 .text-near-dots {
   color: snow;
@@ -1572,6 +1582,3 @@ body.opened--menu .text-dots-block embed {
 .embed-arrow embed {
   width: 14px;
   height: 8px; }
-
-.fp-viewing-3 {
-  height: 500px; }
