@@ -35,6 +35,8 @@
     <div class="text-dots-block" data-menuanchor="tools"><a class="text-near-dots" href="#tools">tools</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
     <div class="text-dots-block instagram-counter" data-menuanchor="skills"><a class="text-near-dots" href="#skills">skills</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
     <div class="text-dots-block" data-menuanchor="contact"><a class="text-near-dots" href="#contact">contact</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block"><a class="text-near-dots offScroll">Off</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
+    <div class="text-dots-block"><a class="text-near-dots onScroll">On</a><span class = "embed-arrow"><embed src="img/general/icon_arrow-down_light.svg"></span><span class="dot-section-banner"></span></div>
 </div>
 
 <div class = "wrap">
@@ -526,6 +528,12 @@
             }
         }
 	});
+    $(document).on('click', '.offScroll', function(){
+        $.fn.fullpage.setAllowScrolling(false);
+    });
+    $(document).on('click', '.onScroll', function(){
+        $.fn.fullpage.setAllowScrolling(true);
+    });
 
     $.fn.fullpage.setAllowScrolling(true);
 });
