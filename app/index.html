@@ -449,13 +449,12 @@
 <script src="js/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
 <script src="js/bootstrap.min.js"></script>
-<!-- <script src="js/common.js"></script> -->
+<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="js/fullpage.js"></script>
  <script src="js/fix.js"></script>
 <script src="js/script.js"></script>
 <script src="js/lazy-load.js"></script>
 <script src="js/instafeed.min.js"></script>
-<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
-<script type="text/javascript" src="js/fullpage.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
 
@@ -476,78 +475,6 @@
         });
         userFeed.run();
     });
-
-</script>
-<script>
-    sections = [];
-    $('.section').each(function () {
-        sections.push($(this))
-    });
-    dots = [];
-    $('.text-dots-block').each(function () {
-        dots.push($(this))
-    });
-    $(document).ready(function() {
-	$('#fullpage').fullpage({
-        autoScrolling: true,
-        scrollingSpeed: 700,
-        anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
-        menu: '.dots-block-section-banner',
-        css3: true,
-        //lockAnchors: true,
-        // scrollBar:true,
-        // animateAnchor:true,
-        // scrollHorizontally: true,
-        scrollOverflow: true,
-        offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
-        offsetSections: true,
-        //verticalCentered:false,
-        onLeave: function(index, nextIndex, direction){
-            $('.text-dots-block').removeClass('active');
-            if (nextIndex.index > dots.length-1) {
-                dots[dots.length-1].addClass('active');
-            } else {
-                dots[nextIndex.index].addClass('active');
-            }
-            if (sections[nextIndex.index].hasClass('black-right')) {
-                swapColor(false);
-            } else {
-                swapColor(true);
-            }
-
-            if (sections[nextIndex.index].hasClass('black-left')) {
-                $('object.change-color').css('opacity', 1);
-                $('object.current-color').css('opacity', 0);
-                $('.whole-text-left-logo').css('color', '#333')
-            } else {
-                $('object.change-color').css('opacity', 0);
-                $('object.current-color').css('opacity', 1);
-                $('.whole-text-left-logo').css('color', '#fff')
-            }
-            function swapColor(white) {
-                var color;
-                var opacity;
-                if (white) {
-                    color = '#fff';
-                    opacity = 0;
-                    $('.light-arrow').css('visibility', 'visible');
-                    $('.dark-arrow').css('visibility', 'hidden')
-                } else {
-                    color = '#363531';
-                    opacity = 1;
-                    $('.dark-arrow').css('visibility', 'visible');
-                    $('.light-arrow').css('visibility', 'hidden')
-                }
-                $('.dots-block-section-banner .text-dots-block:not(.active) .dot-section-banner').css('background-color', color);
-                $('.text-near-dots').css('color', color);
-                $('.dots-block-section-banner .dot-section-banner').css('border-color', color);
-                $('#menuToggle .black-button').animate({opacity: opacity},700);
-            }
-        }
-	});
-
-    $.fn.fullpage.setAllowScrolling(true);
-});
 
 </script>
 <script src="owl-carousel/dist/owl-carousel.min.js"></script>
