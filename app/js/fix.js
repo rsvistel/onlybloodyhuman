@@ -71,6 +71,15 @@ $(document).ready(function () {
                 $('object.current-color').css('opacity', 1);
                 $('.whole-text-left-logo').css('color', '#fff')
             }
+            if ($(window).width() < 768) {
+                if (sections[nextIndex.index].hasClass('black-right')){
+                    $('.change-color').css('opacity', '1');
+                    $('.current-color').css('opacity', '0');
+                }else{
+                    $('.change-color').css('opacity', '0');
+                    $('.current-color').css('opacity', '1');
+                }
+            }
         }
     });
 
