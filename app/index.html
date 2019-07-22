@@ -318,7 +318,7 @@
 
 <div id="section-instagram" class="section">
     <div class="outdoor-section">
-        <div class = "outdoor-section__text fp-auto-height">
+        <div class = "outdoor-section__text">
             <div class = "outdoor-section__text--header"><h2>outdoor</h2><h3>professional</h3></div>
             <div class = "outdoor-section__text--main"><p>Having had the good fortune to spend the last two decades exploring the far reaches of our planet, I specialise in executing productions in rough terrain, unfamiliar cultures and remote, hard to reach locations.</p>
                 <p>I live, breathe and work in the outdoors, and alongside an adventure film-making team, I can take your ideas to places others simply cannot.</div>
@@ -455,6 +455,7 @@
 <script src="js/lazy-load.js"></script>
 <script src="js/instafeed.min.js"></script>
 <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="js/easings.min.js"></script>
 <script type="text/javascript" src="js/fullpage.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -490,10 +491,11 @@
     $(document).ready(function() {
 	$('#fullpage').fullpage({
         //autoScrolling: true,
-        scrollingSpeed: 700,
+        //scrollingSpeed: 1000,
         anchors: ['intro', 'about', 'tools','skills', 'contact'],
         menu: '.dots-block-section-banner',
         css3: true,
+        //easing: "ceaseInOutCubic",
         //lockAnchors: true,
         // scrollBar:true,
         // animateAnchor:true,
@@ -528,6 +530,7 @@
 	});
 
     //$.fn.fullpage.setAllowScrolling(true);
+    //$.fn.fullpage.reBuild();
 });
 
 </script>
