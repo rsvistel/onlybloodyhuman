@@ -1,51 +1,5 @@
 $(document).ready(function () {
 
-    sections = [];
-    $('.section').each(function () {
-        sections.push($(this))
-    });
-    dots = [];
-    $('.text-dots-block').each(function () {
-        dots.push($(this))
-    });
-    $('#fullpage').fullpage({
-        autoScrolling: true,
-        scrollingSpeed: 700,
-        anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
-        menu: '.dots-block-section-banner',
-        css3: true,
-        scrollOverflow: true,
-        offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
-        offsetSections: true,
-        onLeave: function (index, nextIndex, direction) {
-            $('.text-dots-block').removeClass('active');
-            if (nextIndex.index > dots.length - 1) {
-                dots[dots.length - 1].addClass('active');
-            } else {
-                dots[nextIndex.index].addClass('active');
-            }
-            if (sections[nextIndex.index].hasClass('black-right')) {
-                swapColor(false);
-                $('body').addClass('black-mode')
-            } else {
-                swapColor(true);
-                $('body').removeClass('black-mode')
-            }
-
-            if (sections[nextIndex.index].hasClass('black-left')) {
-                $('object.change-color').css('opacity', 1);
-                $('object.current-color').css('opacity', 0);
-                $('.whole-text-left-logo').css('color', '#333')
-            } else {
-                $('object.change-color').css('opacity', 0);
-                $('object.current-color').css('opacity', 1);
-                $('.whole-text-left-logo').css('color', '#fff')
-            }
-        }
-    });
-
-    $.fn.fullpage.setAllowScrolling(true);
-
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -71,6 +25,56 @@ $(document).ready(function () {
             }
         }
     });
+
+    sections = [];
+    $('.section').each(function () {
+        sections.push($(this))
+    });
+    dots = [];
+    $('.text-dots-block').each(function () {
+        dots.push($(this))
+    });
+
+    $('#fullpage').fullpage({
+        autoScrolling: true,
+        scrollingSpeed: 700,
+        anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
+        menu: '.dots-block-section-banner',
+        css3: true,
+        scrollOverflow: true,
+        offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
+        offsetSections: true,
+        onLeave: function (index, nextIndex, direction) {
+            $('.text-dots-block').removeClass('active');
+            if (nextIndex.index > dots.length - 1) {
+                dots[dots.length - 1].addClass('active');
+            } else if(sections[nextIndex.index].attr("id") === "section-tools") {
+                $.fn.fullpage.setAllowScrolling(false);
+                setTimeout(function(){ bindTools() }, 700)
+            } else {
+                dots[nextIndex.index].addClass('active');
+            }
+            if (sections[nextIndex.index].hasClass('black-right')) {
+                swapColor(false);
+                $('body').addClass('black-mode')
+            } else {
+                swapColor(true);
+                $('body').removeClass('black-mode')
+            }
+
+            if (sections[nextIndex.index].hasClass('black-left')) {
+                $('object.change-color').css('opacity', 1);
+                $('object.current-color').css('opacity', 0);
+                $('.whole-text-left-logo').css('color', '#333')
+            } else {
+                $('object.change-color').css('opacity', 0);
+                $('object.current-color').css('opacity', 1);
+                $('.whole-text-left-logo').css('color', '#fff')
+            }
+        }
+    });
+
+    $.fn.fullpage.setAllowScrolling(true);
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
@@ -160,5 +164,49 @@ $(document).ready(function () {
         $('.text-near-dots').css('color', color);
         $('.dots-block-section-banner .dot-section-banner').css('border-color', color);
         $('#menuToggle .black-button').animate({opacity: opacity}, 700);
+    }
+    function bindTools() {
+        $(document).bind('wheel', function (e) {
+            var delta = e.originalEvent.deltaY;
+            if (delta > 0) {
+                if ($('#section-tools').hasClass('tools-camera')) {
+                    changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false);
+                } else if ($('#section-tools').hasClass('tools-dji')) {
+                    changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false);
+                } else if ($('#section-tools').hasClass('tools-movi')) {
+                    $(document).unbind('wheel');
+                    $.fn.fullpage.setAllowScrolling(true);
+                }
+            } else {
+                if ($('#section-tools').hasClass('tools-movi')) {
+                    changeTool($('.icon-movi'), $('.icon-dji'), 'tools-movi', 'tools-dji', '2', true);
+                } else if ($('#section-tools').hasClass('tools-dji')) {
+                    changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true);
+                } else if ($('#section-tools').hasClass('tools-camera')) {
+                    $(document).unbind('wheel');
+                    $.fn.fullpage.setAllowScrolling(true);
+                }
+            }
+        });
+    }
+    function changeTool(current_icon, new_icon, current_class, new_class, number, up) {
+        current_icon.animate({'opacity': '0'}, 500);
+        setTimeout(function () {
+            new_icon.css('display', 'flex').animate({'opacity': '1'}, 500);
+        }, 0);
+        if (up) {
+            $('.tool-image.active').animate({'top': '100vh'}, 500).removeClass('active');
+            $('.after-'+number)
+                .animate({'top': '0'}, 500)
+                .addClass('active');
+        } else {
+            $('.tool-image.active').animate({'top': '-100vh'}, 500).removeClass('active');
+            $('.after-'+number)
+                .animate({'top': '0'}, 500)
+                .addClass('active');
+        }
+        $('#section-tools').removeClass(current_class).addClass(new_class).css('overflow', 'hidden');
+        $(document).unbind('wheel');
+        setTimeout(function () { bindTools(); }, 1000);
     }
 });
