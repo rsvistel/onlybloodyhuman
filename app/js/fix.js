@@ -51,8 +51,37 @@ $(document).ready(function () {
             } else if(sections[nextIndex.index].attr("id") === "section-tools") {
                 $.fn.fullpage.setAllowScrolling(false, 'all');
                 setTimeout(function(){ bindTools() }, 700)
-            } else if(sections[nextIndex.index].attr("id") === "section-about") {
+            }  else if(sections[nextIndex.index].attr("id") === "section-about" && index.index === nextIndex.index-1) {
                 $.fn.fullpage.setAllowScrolling(false);
+                var i = $(window).height();
+    
+                let test = $('#section-about').outerHeight();
+                var sect = i - test;
+                //console.log(sect);
+                //console.log(test);
+
+                let tools = $('#section-tools').outerHeight() / 100 * 20;
+                console.log(tools);
+                // var top = $("#first-section").offset()
+                // alert(top);
+                //var roundedTop = Math.round(top);
+                $(window).bind('wheel', function (e) {
+                    //var translate3d = 'translate(0px, -' + roundedTop + 'px, 0px)';
+                    if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ sect +')') {
+                        var delta = e.originalEvent.deltaY;
+                        if (delta > 0) {
+                            i = i + event.deltaY*3;
+                            $('#fullpage').css('transform', 'translate3d(0px, -'+ i +'px, 0px)');
+                            if (i > ($('#section-tools').outerHeight() / 100 * 20 )) {
+                                $.fn.fullpage.setAllowScrolling(true);
+                                $(window).unbind('wheel');
+                            }
+                        } else {
+                            i--;
+                            $('#fullpage').css('transform', 'translate3d(0px, -'+ i +'px, 0px)')
+                        }
+                    }
+                });
             } else {
                 dots[nextIndex.index].addClass('active');
             }
@@ -74,14 +103,14 @@ $(document).ready(function () {
                 $('.whole-text-left-logo').css('color', '#fff')
             }
         },
-        onLeave: function(origin, destination, direction){
-            if(origin.index == 2 || destination.index == 2) {
-                fullpage_api.setAutoScrolling(false);
-            }
-            else {
-                 fullpage_api.setAutoScrolling(true);
-            }
-        }
+        // onLeave: function(origin, destination, direction){
+        //     if(origin.index == 2 || destination.index == 2) {
+        //         fullpage_api.setAutoScrolling(false);
+        //     }
+        //     else {
+        //          fullpage_api.setAutoScrolling(true);
+        //     }
+        // }
     });
 
     $.fn.fullpage.setAllowScrolling(true);
