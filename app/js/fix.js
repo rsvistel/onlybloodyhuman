@@ -72,7 +72,7 @@ $(document).ready(function () {
                 $('.whole-text-left-logo').css('color', '#fff')
             }
             if ($(window).width() < 768) {
-                if (sections[nextIndex.index].hasClass('black-right')){
+                if (sections[nextIndex.index].hasClass('mobile-swap-color')){
                     $('.change-color').css('opacity', '1');
                     $('.current-color').css('opacity', '0');
                 }else{
