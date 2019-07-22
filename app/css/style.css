@@ -957,7 +957,8 @@ body.opened--menu .text-dots-block embed {
   opacity: 1; }
 
 .outdoor-section-block button.active, .block-tools-section button.active {
-  opacity: 1; }
+  opacity: 1;
+  color: #FFFFFF; }
 
 .video-section-cover {
   height: 100vh;
@@ -1591,8 +1592,14 @@ body.opened--menu .text-dots-block embed {
   color: #363531; }
 
 .embed-arrow {
-  margin: 3% 6% 3.5% 5%; }
+  padding: 3% 6% 3.5% 5%; }
 
 .embed-arrow embed {
   width: 14px;
   height: 8px; }
+
+.test {
+  display: contents; }
+
+.text-dots-block:hover a {
+  text-decoration: none; }
