@@ -140,14 +140,16 @@ a:focus, a:hover {
   margin-top: 5px; }
 
 .left-logo-banner-section object {
-  max-width: 2.6%; }
+  max-width: 2.3%;
+  position: absolute; }
 
 .whole-text-left-logo {
   opacity: 0;
   -webkit-animation: fadeout 0.5s;
           animation: fadeout 0.5s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
+          animation-fill-mode: forwards;
+  color: #fff; }
 
 @-webkit-keyframes fadeout {
   from {
@@ -233,13 +235,15 @@ a:focus, a:hover {
     background-color: #363531;
     border-color: #363531; }
   .dots-block-section-banner.black-mode embed:first-child {
-    display: none; }
+    visibility: hidden; }
   .dots-block-section-banner.black-mode embed:last-child {
-    display: block; }
+    visibility: visible; }
   .dots-block-section-banner embed:first-child {
-    display: block; }
+    visibility: visible;
+    position: absolute;
+    margin: 3.5% 6% 3% 0; }
   .dots-block-section-banner embed:last-child {
-    display: none; }
+    visibility: hidden; }
 
 .dot-section-banner {
   height: -webkit-calc(0.4vw + 1px);
@@ -252,10 +256,10 @@ a:focus, a:hover {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   margin: 0.7vw 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all .1s linear, background-color .3s linear, border-color .7s linear;
+  -o-transition: all .1s linear, background-color .3s linear, border-color .7s linear;
+  transition: all .1s linear, background-color .3s linear, border-color .7s linear; }
 
 .dot-section-banner:hover {
   background: transparent;
@@ -268,7 +272,10 @@ a:focus, a:hover {
   -webkit-transform: scale(1.6);
       -ms-transform: scale(1.6);
           transform: scale(1.6);
-  border: 1px white solid; }
+  border: 1px white solid;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s; }
 
 body .text-near-dots {
   opacity: 0;
@@ -383,7 +390,8 @@ body.opened--menu .text-dots-block embed {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 10px; }
+  margin-left: -webkit-calc(10px + 2.6%);
+  margin-left: calc(10px + 2.6%); }
 
 .arrow-down-section-banner {
   display: -webkit-box;
@@ -802,18 +810,24 @@ body.opened--menu .text-dots-block embed {
   background-repeat: no-repeat;
   background-position: center;
   position: relative; }
-  .photo-half-section-tools .after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    height: 100vh;
-    -webkit-background-size: cover;
-            background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
+
+.after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  height: 100vh;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .after.after-2 {
+    top: 100%;
+    background-image: url("../img/s3-tools/drone_dsk.jpg"); }
+  .after.after-3 {
+    top: 200%;
+    background-image: url("../img/s3-tools/gimbal_dsk.jpg"); }
 
 .photo-half-section-tools-dji, .photo-half-section-tools-movi {
   display: none; }
@@ -1541,9 +1555,9 @@ body.opened--menu .text-dots-block embed {
   margin-left: 3px; }
 
 .current-color, .change-color {
-  transition: opacity 3s;
-  -o-transition: opacity 3s;
-  -webkit-transition: opacity 3s; }
+  transition: opacity .7s;
+  -o-transition: opacity .7s;
+  -webkit-transition: opacity .7s; }
 
 .block-tools-section {
   display: none; }
