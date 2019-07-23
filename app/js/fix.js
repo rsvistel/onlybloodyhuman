@@ -48,9 +48,13 @@ $(document).ready(function () {
             $('.text-dots-block').removeClass('active');
             if (nextIndex.index > dots.length - 1) {
                 dots[dots.length - 1].addClass('active');
+
             } else if(sections[nextIndex.index].attr("id") === "section-tools") {
-                $.fn.fullpage.setAllowScrolling(false);
-                setTimeout(function(){ bindTools() }, 700)
+                if (!($(window).width() < 1025)){
+                    $.fn.fullpage.setAllowScrolling(false);
+                    setTimeout(function(){ bindTools() }, 700)
+                }
+
             } else {
                 dots[nextIndex.index].addClass('active');
             }
@@ -71,6 +75,38 @@ $(document).ready(function () {
                 $('object.current-color').css('opacity', 1);
                 $('.whole-text-left-logo').css('color', '#fff')
             }
+            if ($(window).width() < 1025) {
+                $('.inner-content-section-banner-fixed').on("click", function () {
+                    $('.whole-text-left-logo').animate({'opacity': '1'});
+                    setTimeout(function(){
+                        $('.whole-text-left-logo').animate({'opacity': '0'});
+                    }, 3000);
+                });
+                if (nextIndex.index == 0) {
+                    $('.whole-text-left-logo').css('opacity', '1');
+                }else {
+                    $('.whole-text-left-logo').css('opacity', '0');
+                }
+                if (sections[nextIndex.index].hasClass('mobile-swap-color')){
+                    $('.change-color').css('opacity', '1');
+                    $('.current-color').css('opacity', '0');
+                }else{
+                    $('.change-color').css('opacity', '0');
+                    $('.current-color').css('opacity', '1');
+                }
+            }
+
+            for (var b = 0; b < nextIndex.index; b++) {
+                var heightWindows = $(window).height();
+                var height = sections[b].find('.fp-scroller').outerHeight();
+                var change = heightWindows - height;
+                sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ change +')');
+            }
+            for (var y = nextIndex.index+1; y < sections.length; y++) {
+                sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+            }
+            // changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false);
+            // changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false);
         }
     });
 
@@ -87,9 +123,16 @@ $(document).ready(function () {
             swapColor(true)
         }
     });
+    $('.text-dots-block').click(function () {
+        if ($('body').hasClass('opened--menu')) {
+            $('body').removeClass('opened--menu');
+            $(".cross-icon, .list-icon").fadeToggle(500);
+            $('#menuToggle input, #menuToggle-mobile input').prop('checked', false);
+        }
+    });
     $("#menuToggle input , #menuToggle-mobile input").click(function(){
         $(".list-icon, .cross-icon").fadeToggle(500);
-        $('.text-left-logo').css('color', 'snow');
+        // $('.text-left-logo').css('color', 'snow');
     });
 
     $(window).on("resize", function () {
@@ -134,12 +177,18 @@ $(document).ready(function () {
             }
 
             setTimeout(function () {
-                $('.outdoor-section__image, .tools-section__image').removeClass('active');
+                $('.outdoor-section__image').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
-                $('.outdoor-section-block button, .block-tools-section button').removeClass('active');
-                $('.outdoor-section-block .outdoor-section__' + dataName + ' button', '.block-tools-section .block-tools-section__' + dataName + ' button').addClass('active');
-
+                $('.outdoor-section-block button').removeClass('active');
+                $('.outdoor-section-block .outdoor-section__' + dataName + ' button').addClass('active');
             }, 200);
+            setTimeout(function () {
+                $('.tools-section__image').removeClass('active');
+                $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
+                $('.block-tools-section button').removeClass('active');
+                $('.block-tools-section .block-tools-section__' + dataName + ' button').addClass('active');
+            }, 200);
+
         }
 
         function animateArrow(prop) {
@@ -209,4 +258,50 @@ $(document).ready(function () {
         $(document).unbind('wheel');
         setTimeout(function () { bindTools(); }, 1000);
     }
+
+    $('.block-tools-section-tablet button').click(function() {
+        if (!$(this).hasClass('active')) {
+            $('.tools-tablet div').animate({'opacity': '0'}, 200);
+            var dataName = $(this).parent().data('name');
+            if (dataName.toLowerCase() === 'camera') {
+                animateArrow('16.66%');
+                changeTool('img/s3-tools/camera_dsk.jpg')
+            } else if (dataName.toLowerCase() === 'drone') {
+                animateArrow('50%');
+                changeTool('img/s3-tools/drone_dsk.jpg')
+            } else {
+                animateArrow('83.33%');
+                changeTool('img/s3-tools/gimbal_dsk.jpg')
+            }
+
+            setTimeout(function () {
+                $('.tools-tablet div').removeClass('active');
+                $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
+                $('.block-tools-section-tablet button').removeClass('active');
+                $('.block-tools-section-tablet .block-tools-section__' + dataName + ' button').addClass('active');
+
+            }, 200);
+        }
+
+        function animateArrow(prop) {
+            $('#arrow-tools-tablet').animate({'left': prop}, 400);
+        }
+
+        function changeTool(new_bg) {
+            $('.photo-half-section-tools')
+                .append('<div class="after"></div>');
+            $('.photo-half-section-tools .after')
+                .css('top', '100%')
+                .css('background-image', 'url("' + new_bg +'")');
+            $('.photo-half-section-tools').animate({'top': '-100vh'}, 500);
+            setTimeout(function () {
+                $('.photo-half-section-tools').css('background-image', 'url("' + new_bg +'")');
+                setTimeout(function () {
+                    $('.photo-half-section-tools .after').remove();
+                    $('.photo-half-section-tools').css('top', '0');
+                },50);
+            }, 500);
+        }
+
+    });
 });
