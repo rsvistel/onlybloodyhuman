@@ -42,8 +42,8 @@ $(document).ready(function () {
         menu: '.dots-block-section-banner',
         css3: true,
         scrollOverflow: true,
-        offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
-        offsetSections: true,
+        //offsetSectionsKey: 'Y29kZXBlbi5pb196MDZiMlptYzJWMFUyVmpkR2x2Ym5NPWhPNA==',
+        //offsetSections: true,
         onLeave: function (index, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
             if (nextIndex.index > dots.length - 1) {
@@ -51,10 +51,43 @@ $(document).ready(function () {
 
             } else if(sections[nextIndex.index].attr("id") === "section-tools") {
                 if (!($(window).width() < 1025)){
-                    $.fn.fullpage.setAllowScrolling(false);
-                    setTimeout(function(){ bindTools() }, 700)
+                  $.fn.fullpage.setAllowScrolling(false);
+                  setTimeout(function(){ bindTools() }, 700)
                 }
-
+            }  else if(sections[nextIndex.index].attr("id") === "section-about" && index.index === nextIndex.index-1) {
+                $.fn.fullpage.setAllowScrolling(false);
+                var i = $(window).height();
+                let test = $('#section-about .fp-scroller').outerHeight();
+                var sect = i - test;
+                $(window).bind('wheel', function (e) {
+                    if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ Math.round(sect) +')') {
+                        var delta = e.originalEvent.deltaY;
+                        $('#section-about').css('pointer-events', 'none');
+                        if (delta > 0) {
+                            i = i + event.deltaY*3;
+                            $('#fullpage').css('transform', 'translate3d(0px, -'+ i +'px, 0px)');
+                            if (i > $('#section-tools').outerHeight() / 100 * 20 + $(window).height()) {
+                                $.fn.fullpage.setAllowScrolling(true);
+                                $('#section-about').css('pointer-events', 'auto');
+                                $(window).unbind('wheel');
+                            }
+                        }
+                        else {
+                            i = i + event.deltaY*3;
+                            if(i <= $(window).height()) {
+                                $('#section-about').css('pointer-events', 'auto');
+                                $('#fullpage').css('transform', 'translate3d(0px, -'+ $(window).height() +'px, 0px)');
+                            }
+                            else {
+                                $('#fullpage').css('transform', 'translate3d(0px, -'+ i +'px, 0px)');
+                            }
+                        }
+                    } else if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ 0 +')') {
+                            $.fn.fullpage.setAllowScrolling(true);
+                        } else {
+                            $.fn.fullpage.setAllowScrolling(false);
+                        }
+                });
             } else {
                 dots[nextIndex.index].addClass('active');
             }
