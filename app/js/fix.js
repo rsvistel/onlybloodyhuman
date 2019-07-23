@@ -57,28 +57,24 @@ $(document).ready(function () {
     
                 let test = $('#section-about').outerHeight();
                 var sect = i - test;
-                //console.log(sect);
-                //console.log(test);
-
-                let tools = $('#section-tools').outerHeight() / 100 * 20;
-                console.log(tools);
+                // let tools = (($('#section-tools').outerHeight() / 100 * 20 ) + 714);
+                // console.log(tools);
                 // var top = $("#first-section").offset()
                 // alert(top);
                 //var roundedTop = Math.round(top);
                 $(window).bind('wheel', function (e) {
-                    //var translate3d = 'translate(0px, -' + roundedTop + 'px, 0px)';
                     if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ sect +')') {
                         var delta = e.originalEvent.deltaY;
                         if (delta > 0) {
                             i = i + event.deltaY*3;
                             $('#fullpage').css('transform', 'translate3d(0px, -'+ i +'px, 0px)');
-                            if (i > ($('#section-tools').outerHeight() / 100 * 20 )) {
+                            if (i > $('#section-tools').outerHeight() / 100 * 20 + $(window).height()) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 $(window).unbind('wheel');
                             }
-                        } else {
-                            i--;
-                            $('#fullpage').css('transform', 'translate3d(0px, -'+ i +'px, 0px)')
+                            console.log($('#section-tools').outerHeight() / 100 * 20 + $(window).height());
+                        // } else if (sections[nextIndex.index].attr("id") === "section-about" || $(window).scrollTop()) {
+                        //         $.fn.fullpage.setAllowScrolling(true);
                         }
                     }
                 });
@@ -104,12 +100,12 @@ $(document).ready(function () {
             }
         },
         // onLeave: function(origin, destination, direction){
-        //     if(origin.index == 2 || destination.index == 2) {
-        //         fullpage_api.setAutoScrolling(false);
+        //     if(origin.index == 1 || direction == 'up') {
+        //         fullpage_api.setAutoScrolling(true);
         //     }
-        //     else {
-        //          fullpage_api.setAutoScrolling(true);
-        //     }
+        //     // else {
+        //     //      fullpage_api.setAutoScrolling(true);
+        //     // }
         // }
     });
 
