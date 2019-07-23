@@ -54,7 +54,7 @@ $(document).ready(function () {
                   $.fn.fullpage.setAllowScrolling(false);
                   setTimeout(function(){ bindTools() }, 700)
                 }
-            }  else if(sections[nextIndex.index].attr("id") === "section-about" && index.index === nextIndex.index-1) {
+            }  else if(sections[nextIndex.index].attr("id") === "section-about") {
                 $.fn.fullpage.setAllowScrolling(false);
                 var i = $(window).height();
                 let test = $('#section-about .fp-scroller').outerHeight();
