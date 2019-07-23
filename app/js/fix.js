@@ -55,16 +55,23 @@ $(document).ready(function () {
                 $.fn.fullpage.setAllowScrolling(false);
                 var i = $(window).height();
     
-                let test = $('#section-about').outerHeight();
+                let test = $('#section-about .fp-scroller').outerHeight();
+                // test = Math.floor(test);
+                // console.log(test);
                 var sect = i - test;
+                // console.log(i);
+                //console.log(sect);
+                // console.log($('#section-tools').outerHeight() / 100 * 20 + $(window).height());
                 // let tools = (($('#section-tools').outerHeight() / 100 * 20 ) + 714);
                 // console.log(tools);
                 // var top = $("#first-section").offset()
                 // alert(top);
                 //var roundedTop = Math.round(top);
                 $(window).bind('wheel', function (e) {
-                    if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ sect +')') {
+                    if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ Math.round(sect) +')') {
                         var delta = e.originalEvent.deltaY;
+                        $('#section-about').css('pointer-events', 'none');
+                        console.log(delta);
                         if (delta > 0) {
                             i = i + event.deltaY*3;
                             $('#fullpage').css('transform', 'translate3d(0px, -'+ i +'px, 0px)');
@@ -72,9 +79,14 @@ $(document).ready(function () {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 $(window).unbind('wheel');
                             }
-                            console.log($('#section-tools').outerHeight() / 100 * 20 + $(window).height());
-                        // } else if (sections[nextIndex.index].attr("id") === "section-about" || $(window).scrollTop()) {
-                        //         $.fn.fullpage.setAllowScrolling(true);
+                            else {
+                                i = i - event.deltaY*3;
+                                //console.log(i);
+                                if(i === 0) {
+                                    $('#section-about').css('pointer-events', 'auto');
+                                }
+                                $('#fullpage').css('transform', 'translate3d(0px, -'+ i +'px, 0px)')
+                            }
                         }
                     }
                 });
