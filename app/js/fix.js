@@ -43,6 +43,7 @@ $(document).ready(function () {
         css3: true,
         scrollOverflow: true,
         responsiveWidth: 760,
+        //verticalCentered: false,
         onLeave: function (index, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
             if (nextIndex.index > dots.length - 1) {
