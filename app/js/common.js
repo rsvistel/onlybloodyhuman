@@ -196,12 +196,12 @@ $(document).ready(function () {
         } else {
             $('html, body').animate({scrollTop: sections[param].offset().top}, speed);
             active = param;
-        }
-        checkActiveDot();
-        $(document).unbind('wheel');
+        }$(document).unbind('wheel');
         if (progressLine == false) {
             $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
         }
+        checkActiveDot();
+
         // var test =sections[active].attr('id');
         switch (sections[active].attr('id')) {
             case "section-tools":
