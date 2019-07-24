@@ -93,7 +93,7 @@ $(document).ready(function () {
                          }
                      }
 
-                    if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ Math.round(sect) +')') {
+                    if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ Math.round(differSect) +')') {
                         var delta = e.originalEvent.deltaY;
                         $('#section-about').css('pointer-events', 'none');
                         if (delta > 0) {
@@ -107,7 +107,7 @@ $(document).ready(function () {
                         }
                         else {
                             windowHeight = windowHeight + event.deltaY*3;
-                            if(i <= $(window).height()) {
+                            if(windowHeight <= $(window).height()) {
                                 $('#section-about').css('pointer-events', 'auto');
                                 $('#fullpage').css('transform', 'translate3d(0px, -'+ $(window).height() +'px, 0px)');
                             }
