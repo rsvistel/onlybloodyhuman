@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+   var progressLine = false;
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -59,7 +59,41 @@ $(document).ready(function () {
                 var i = $(window).height();
                 let test = $('#section-about .fp-scroller').outerHeight();
                 var sect = i - test;
+                 $(window).unbind('wheel');
+                if (progressLine == false) {
+                    $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+                }
                 $(window).bind('wheel', function (e) {
+                     if (progressLine == false) {
+                         $(".progress-line").each(function () {
+                             var test1 = $(this).offset().top;
+                             var height = $(window).height() * 2;
+                             var res = test1 - height;
+                             console.log(res);
+                             var current_pull = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
+                             console.log(current_pull);
+                             if (current_pull < res) {
+                                 animateStat($(this))
+                             }
+                         });
+                         setTimeout(function () {
+                             progressLine = true;
+                         }, 3000);
+
+                         function animateStat(item) {
+                             if (!item.find('.progress-line-gray').hasClass('animated')) {
+                                 var width;
+                                 var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
+                                 for (var i = 0; i < classListArray.length; i++) {
+                                     if (classListArray[i].includes('progress-line-gray-')) {
+                                         width = classListArray[i].replace('progress-line-gray-', '')
+                                     }
+                                 }
+                                 item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
+                             }
+                         }
+                     }
+
                     if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ Math.round(sect) +')') {
                         var delta = e.originalEvent.deltaY;
                         $('#section-about').css('pointer-events', 'none');
@@ -88,6 +122,7 @@ $(document).ready(function () {
                             $.fn.fullpage.setAllowScrolling(false);
                         }
                 });
+
             } else {
                 dots[nextIndex.index].addClass('active');
             }
@@ -144,6 +179,10 @@ $(document).ready(function () {
     });
 
     $.fn.fullpage.setAllowScrolling(true);
+    // $(window).unbind('wheel');
+    // if (progressLine == false) {
+    //     $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+    // }
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
@@ -337,4 +376,6 @@ $(document).ready(function () {
         }
 
     });
+
+
 });
