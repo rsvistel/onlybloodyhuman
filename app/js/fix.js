@@ -64,8 +64,6 @@ $(document).ready(function () {
                     $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
                 }
                 $(window).bind('wheel', function (e) {
-                    if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, '+ Math.round(differSect) +')') {
-                $(window).bind('wheel', function (e) {
                      if (progressLine == false) {
                          $(".progress-line").each(function () {
                              var diff = $(this).offset().top;
