@@ -38,7 +38,7 @@ $(document).ready(function () {
     $('#fullpage').fullpage({
         autoScrolling: true,
         scrollingSpeed: 700,
-        anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
+        anchors: ['intro', 'about', 'tools', 'skills', 'contact'],
         menu: '.dots-block-section-banner',
         css3: true,
         scrollOverflow: true,
@@ -125,6 +125,16 @@ $(document).ready(function () {
 
             } else {
                 dots[nextIndex.index].addClass('active');
+                if (dots[nextIndex.index].hasClass('active')) {
+                    $('.light-arrow').css('visibility', 'hidden');
+                    $('.dark-arrow').css('visibility', 'hidden');
+                }
+
+                // if ($('.text-dots-block').hasClass('active')) {
+                //     $('.light-arrow').css('visibility', 'hidden');
+                //     $('.dark-arrow').css('visibility', 'hidden');
+                // }
+                // console.log('active');
             }
             if (sections[nextIndex.index].hasClass('black-right')) {
                 swapColor(false);
@@ -277,7 +287,7 @@ $(document).ready(function () {
         }
     });
 
-    function swapColor(white) {
+     function swapColor(white) {
         var color;
         var opacity;
         if (white) {
