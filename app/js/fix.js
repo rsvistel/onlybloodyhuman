@@ -1,5 +1,11 @@
 $(document).ready(function () {
    var progressLine = false;
+   var insta = false;
+    isDesktop = true;
+    if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
+        || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) {
+        isDesktop = false
+    }
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -47,6 +53,7 @@ $(document).ready(function () {
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
+            // $('.light-arrow, .dark-arrow').css('visibility', 'hidden');
             if (nextIndex.index > dots.length - 1) {
                 dots[dots.length - 1].addClass('active');
 
@@ -60,9 +67,11 @@ $(document).ready(function () {
                 var windowHeight = $(window).height();
                 var sectAboutHeight = $('#section-about .fp-scroller').outerHeight();
                 var differSect = windowHeight - sectAboutHeight;
-                $(window).unbind('wheel');
-                  if (progressLine == false) {
-                    $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+                if (isDesktop) {
+                    $(window).unbind('wheel');
+                    if (progressLine == false) {
+                        $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+                    }
                 }
                 $(window).bind('wheel', function (e) {
                      if (progressLine == false) {
@@ -123,7 +132,50 @@ $(document).ready(function () {
                         }
                 });
 
-            } else {
+            } else if(sections[nextIndex.index].attr("id") === "section-instagram"){
+                    $(window).bind('wheel', function (e) {
+                        if (insta == false) {
+                            // if (isDesktop) {
+                            $("span.countup").html("1k");
+                            // }
+                            var topSecInsta = $('#section-instagram').offset().top;
+                            var heighttest = $(window).height();
+                            var resInsta = topSecInsta - heighttest;
+                            var current_transform1 = parseInt($('#section-instagram .fp-scroller').css('transform').split(',')[5]);
+                            current_transform1 = Math.abs(current_transform1);
+                            if (current_transform1 > resInsta) {
+                                animateCounter();
+                            }
+                            setTimeout(function () {
+                                insta = true;
+                            }, 200);
+
+                            function animateCounter() {
+                                 $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
+                                var count = 1;
+                                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+                                var followers;
+                                $.ajax({
+                                    method: 'GET',
+                                    url: url,
+                                    dataType: 'jsonp',
+                                    jsonp: 'callback',
+                                    success: function (response) {
+                                        followers = parseFloat(getRepString(response.data.counts.followed_by));
+                                    }
+                                });
+                                countdown = setInterval(function () {
+                                    if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
+                                        $("span.countup").html(count + "k");
+                                        count += 0.1;
+                                        count = parseFloat(count.toFixed(1));
+                                    }
+                                }, 3);
+                            }
+                        }
+                    });
+
+            }else {
                 dots[nextIndex.index].addClass('active');
             }
             if (sections[nextIndex.index].hasClass('black-right')) {
@@ -228,17 +280,43 @@ $(document).ready(function () {
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
 
-    $('.outdoor-section-block button, .block-tools-section button').click(function () {
+    // $('.outdoor-section-block button, .block-tools-section button').click(function () {
+    //     if (!$(this).hasClass('active')) {
+    //         $('.outdoor-section__image, .tools-section__image').animate({'opacity': '0'}, 200);
+    //         var dataName = $(this).parent().data('name');
+    //         if (dataName.toLowerCase() === 'travel') {
+    //             animateArrow('16.66%')
+    //         } else if (dataName.toLowerCase() === 'outdoor') {
+    //             animateArrow('50%')
+    //         } else if (dataName.toLowerCase() === 'camera') {
+    //             animateArrow('16.66%')
+    //         } else if (dataName.toLowerCase() === 'drone') {
+    //             animateArrow('50%')
+    //         } else {
+    //             animateArrow('83.33%')
+    //         }
+    //
+    //         setTimeout(function () {
+    //             $('.outdoor-section__image').removeClass('active');
+    //             $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
+    //             $('.outdoor-section-block button').removeClass('active');
+    //             $('.outdoor-section-block .outdoor-section__' + dataName + ' button').addClass('active');
+    //         }, 200);
+    //         setTimeout(function () {
+    //             $('.tools-section__image').removeClass('active');
+    //             $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
+    //             $('.block-tools-section button').removeClass('active');
+    //             $('.block-tools-section .block-tools-section__' + dataName + ' button').addClass('active');
+    //         }, 200);
+    //
+    //     }
+    $('.outdoor-section-block button').click(function() {
         if (!$(this).hasClass('active')) {
-            $('.outdoor-section__image, .tools-section__image').animate({'opacity': '0'}, 200);
+            $('.outdoor-section__image').animate({'opacity': '0'}, 200);
             var dataName = $(this).parent().data('name');
             if (dataName.toLowerCase() === 'travel') {
                 animateArrow('16.66%')
             } else if (dataName.toLowerCase() === 'outdoor') {
-                animateArrow('50%')
-            } else if (dataName.toLowerCase() === 'camera') {
-                animateArrow('16.66%')
-            } else if (dataName.toLowerCase() === 'drone') {
                 animateArrow('50%')
             } else {
                 animateArrow('83.33%')
@@ -249,28 +327,46 @@ $(document).ready(function () {
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
                 $('.outdoor-section-block button').removeClass('active');
                 $('.outdoor-section-block .outdoor-section__' + dataName + ' button').addClass('active');
+
             }, 200);
+        }
+        function animateArrow(prop) {
+            $('#arrow-skills').animate({'left': prop}, 400);
+        }
+    });
+    $('.block-tools-section button').click(function() {
+        if (!$(this).hasClass('active')) {
+            $('.tools-section__image').animate({'opacity': '0'}, 200);
+            var dataName = $(this).parent().data('name');
+            if (dataName.toLowerCase() === 'camera') {
+                animateArrow('16.66%')
+            } else if (dataName.toLowerCase() === 'drone') {
+                animateArrow('50%')
+            } else {
+                animateArrow('83.33%')
+            }
+
             setTimeout(function () {
                 $('.tools-section__image').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
                 $('.block-tools-section button').removeClass('active');
                 $('.block-tools-section .block-tools-section__' + dataName + ' button').addClass('active');
+
             }, 200);
-
         }
-
         function animateArrow(prop) {
-            $('#arrow-skills, #arrow-tools').animate({'left': prop}, 400);
+            $('#arrow-tools').animate({'left': prop}, 400);
         }
     });
+
     function swapColor(white) {
         var color;
         var opacity;
         if (white) {
             color = '#fff';
             opacity = 0;
-            $('.light-arrow').css('visibility', 'visible');
-            $('.dark-arrow').css('visibility', 'hidden')
+                $('.light-arrow').css('visibility', 'visible');
+                $('.dark-arrow').css('visibility', 'hidden')
         } else {
             color = '#363531';
             opacity = 1;
@@ -371,6 +467,23 @@ $(document).ready(function () {
             }, 500);
         }
     });
-
+    var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+    var followers;
+    $.ajax({
+        method: 'GET',
+        url: url,
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        success: function (response) {
+            followers = parseFloat(getRepString(response.data.counts.followed_by));
+            $('.countup').html(parseInt(parseFloat(followers)) + 'k');
+        }
+    });
+    function getRepString (rep) {
+        rep = rep+'';
+        if (rep < 1000) return rep;
+        if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+        return (rep/1000).toFixed(rep % 1000 != 0);
+    }
 
 });

@@ -304,9 +304,6 @@ body.opened--menu .text-dots-block embed {
 .text-dots-block:hover .text-near-dots {
   opacity: 1; }
 
-.text-dots-block:hover embed {
-  opacity: 1; }
-
 .text-dots-block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1598,7 +1595,7 @@ body.opened--menu .text-dots-block embed {
   width: 14px;
   height: 8px; }
 
-.test {
+.dots-display {
   display: contents; }
 
 .text-dots-block:hover a {

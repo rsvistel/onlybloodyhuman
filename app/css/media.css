@@ -1339,3 +1339,7 @@
     background-image: url("../img/s6-contact/phone_mob.jpg"); }
   .video-mobile-vertical {
     display: block; } }
+
+@media (min-width: 768px) {
+  .text-dots-block:hover embed {
+    opacity: 1; } }
