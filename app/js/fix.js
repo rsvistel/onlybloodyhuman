@@ -42,8 +42,9 @@ $(document).ready(function () {
         menu: '.dots-block-section-banner',
         css3: true,
         scrollOverflow: true,
-        responsiveWidth: 760,
+        responsiveWidth: 770,
         verticalCentered: false,
+        lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
             if (nextIndex.index > dots.length - 1) {
