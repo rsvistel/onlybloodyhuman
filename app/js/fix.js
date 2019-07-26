@@ -134,16 +134,21 @@ $(document).ready(function () {
 
             } else if(sections[nextIndex.index].attr("id") === "section-instagram"){
                     $(window).bind('wheel', function (e) {
-                        if (insta == false) {
-                            // if (isDesktop) {
-                            $("span.countup").html("1k");
-                            // }
-                            var topSecInsta = $('#section-instagram').offset().top;
+                         if (insta == false) {
+                            if (isDesktop) {
+                                $("span.countup").html("1k");
+                            }
+                            var topSecInsta = $('#section-instagram span.countup').offset().top;
+                            console.log(topSecInsta);
                             var heighttest = $(window).height();
+                            console.log(heighttest);
                             var resInsta = topSecInsta - heighttest;
+                            console.log(resInsta);
+                            // var current_transform1 = $('#section-instagram .fp-scroller').css('transform');
                             var current_transform1 = parseInt($('#section-instagram .fp-scroller').css('transform').split(',')[5]);
-                            current_transform1 = Math.abs(current_transform1);
-                            if (current_transform1 > resInsta) {
+                            current_transform1 = (current_transform1);
+                            console.log(current_transform1);
+                            if (current_transform1 < resInsta) {
                                 animateCounter();
                             }
                             setTimeout(function () {
