@@ -125,16 +125,6 @@ $(document).ready(function () {
 
             } else {
                 dots[nextIndex.index].addClass('active');
-                if (dots[nextIndex.index].hasClass('active')) {
-                    $('.light-arrow').css('visibility', 'hidden');
-                    $('.dark-arrow').css('visibility', 'hidden');
-                }
-
-                // if ($('.text-dots-block').hasClass('active')) {
-                //     $('.light-arrow').css('visibility', 'hidden');
-                //     $('.dark-arrow').css('visibility', 'hidden');
-                // }
-                // console.log('active');
             }
             if (sections[nextIndex.index].hasClass('black-right')) {
                 swapColor(false);
