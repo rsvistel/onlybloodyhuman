@@ -1340,6 +1340,17 @@
   .video-mobile-vertical {
     display: block; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .text-dots-block:hover embed {
+    opacity: 1; }
+  .text-dots-block:hover .text-near-dots {
     opacity: 1; } }
+
+@media (min-width: 768px) {
+  .dots-block-section-banner embed:first-child {
+    margin: 3.5% 6% 3% 0; } }
+
+@media (max-width: 375px) {
+  .outdoor-section__image .numberCircle {
+    width: 37px;
+    height: 37px; } }

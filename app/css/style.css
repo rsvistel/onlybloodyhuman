@@ -301,9 +301,6 @@ body.opened--menu .text-dots-block embed {
   -o-transition: linear 0.2s;
   transition: linear 0.2s; }
 
-.text-dots-block:hover .text-near-dots {
-  opacity: 1; }
-
 .text-dots-block {
   display: -webkit-box;
   display: -webkit-flex;
