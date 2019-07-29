@@ -966,8 +966,7 @@ body.opened--menu .text-dots-block embed {
           justify-content: center;
   overflow: hidden;
   position: relative;
-  width: 100%;
-  z-index: -1; }
+  width: 100%; }
 
 .outdoor-section {
   position: relative;
@@ -1179,8 +1178,10 @@ body.opened--menu .text-dots-block embed {
   text-align: center; }
 
 .section-outdoor-professional {
+  position: absolute;
   top: 0;
   height: auto;
+  min-width: 100%;
   min-height: 100vh;
   width: 100vw; }
 
@@ -1482,7 +1483,6 @@ body.opened--menu .text-dots-block embed {
   background-position: bottom;
   width: 50%;
   padding: 0;
-  height: 100vh;
   min-height: 600px; }
 
 .client-contact-list, .gray-half-section-tools {

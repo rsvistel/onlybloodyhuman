@@ -42,12 +42,12 @@ $(document).ready(function () {
     $('.text-dots-block').each(function () {
         dots.push($(this))
     });
-    $( function() {
-        var scrollO = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
-        if (scrollO.matches) {;
-            scrolloverflowed = false;
-        }
-      });
+    // $( function() {
+    //     var scrollO = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
+    //     if (scrollO.matches) {;
+    //         scrolloverflowed = false;
+    //     }
+    //   });
     $('#fullpage').fullpage({
         autoScrolling: true,
         scrollingSpeed: 700,
@@ -240,23 +240,19 @@ $(document).ready(function () {
     $( function() {
         var isIPad = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
         if (isIPad.matches) {
-            $(' #section-about, #section-about .fp-slide, #section-about .fp-tableCell, #section-about .fp-scrollable').css( 'height', 'auto !important');
-            $(' #section-instagram #section-instagram .fp-slide, #section-instagram .fp-tableCell, #section-instagram .fp-scrollable').css( 'height', 'auto !important');
+            //$(' #section-about, #section-about .fp-slide, #section-about .fp-tableCell, #section-about .fp-scrollable').css( 'height', 'auto !important');
+            //$(' #section-instagram #section-instagram .fp-slide, #section-instagram .fp-tableCell, #section-instagram .fp-scrollable').css( 'height', 'auto !important');
             //$('.section').css( 'height', 'auto');
            //scrolloverflowed = false;
            //$.fn.fullpage.setAutoScrolling(false);
            //$.fn.fullpage.fitToSection();
-           $.fn.fullpage.setAutoScrolling(false);
-           $.fn.fullpage.setFitToSection(false);
-           $.fn.fullpage.setAllowScrolling(true);
+        //    $.fn.fullpage.setAutoScrolling(false);
+        //    $.fn.fullpage.setFitToSection(false);
+        //    $.fn.fullpage.setAllowScrolling(true);
+           fullpage_api.setResponsive(true);
         }
       });
     $.fn.fullpage.setAllowScrolling(true);
-
-
- 
-
-
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
