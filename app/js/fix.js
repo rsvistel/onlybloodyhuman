@@ -235,6 +235,8 @@ $(document).ready(function () {
         var isIPad = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
         if (isIPad.matches) {
            fullpage_api.setResponsive(true);
+           $.fn.fullpage.setAllowScrolling(false);
+           $.fn.fullpage.setAutoScrolling(false);
         }
       });
     $.fn.fullpage.setAllowScrolling(true);
@@ -406,6 +408,7 @@ $(document).ready(function () {
             }
         });
     }
+
     function changeTool(current_icon, new_icon, current_class, new_class, number, up) {
         current_icon.animate({'opacity': '0'}, 500);
         setTimeout(function () {
@@ -427,19 +430,20 @@ $(document).ready(function () {
         setTimeout(function () { bindTools(); }, 1000);
     }
 
-    $('.block-tools-section-tablet button').click(function() {
+    $('.block-tools-section-tablet button').bind('click', function () {
         if (!$(this).hasClass('active')) {
             $('.tools-tablet div').animate({'opacity': '0'}, 200);
             var dataName = $(this).parent().data('name');
+            console.log('click')
             if (dataName.toLowerCase() === 'camera') {
                 animateArrow('16.66%');
-                changeTool('img/s3-tools/camera_dsk.jpg')
+                changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', false);
             } else if (dataName.toLowerCase() === 'drone') {
                 animateArrow('50%');
-                changeTool('img/s3-tools/drone_dsk.jpg')
+                changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false);
             } else {
                 animateArrow('83.33%');
-                changeTool('img/s3-tools/gimbal_dsk.jpg')
+                changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false);
             }
 
             setTimeout(function () {
@@ -453,22 +457,6 @@ $(document).ready(function () {
 
         function animateArrow(prop) {
             $('#arrow-tools-tablet').animate({'left': prop}, 400);
-        }
-
-        function changeTool(new_bg) {
-            $('.photo-half-section-tools')
-                .append('<div class="after"></div>');
-            $('.photo-half-section-tools .after')
-                .css('top', '100%')
-                .css('background-image', 'url("' + new_bg +'")');
-            $('.photo-half-section-tools').animate({'top': '-100vh'}, 500);
-            setTimeout(function () {
-                $('.photo-half-section-tools').css('background-image', 'url("' + new_bg +'")');
-                setTimeout(function () {
-                    $('.photo-half-section-tools .after').remove();
-                    $('.photo-half-section-tools').css('top', '0');
-                },50);
-            }, 500);
         }
     });
     var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
