@@ -246,6 +246,14 @@ $(document).ready(function () {
         }
       });
       $( function() {
+        var isIPadS = window.matchMedia('(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)');
+        if (isIPadS.matches) {
+           fullpage_api.setResponsive(true);
+           $.fn.fullpage.setAllowScrolling(false);
+           $.fn.fullpage.setAutoScrolling(false);
+        }
+      });
+      $( function() {
         var isIPhone = window.matchMedia('(min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)');
         if (isIPhone.matches) {
            fullpage_api.setResponsive(true);
