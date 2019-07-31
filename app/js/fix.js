@@ -230,12 +230,19 @@ $(document).ready(function () {
         },
     });
     $( function() {
-        var isIPad = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
+        var isIPad = window.matchMedia('(min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)');
         if (isIPad.matches) {
            fullpage_api.setResponsive(true);
            $.fn.fullpage.setAllowScrolling(false);
            $.fn.fullpage.setAutoScrolling(false);
-           $(document).off('wheel', bindTools);
+        }
+      });
+      $( function() {
+        var isIPad = window.matchMedia('(min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)');
+        if (isIPad.matches) {
+           fullpage_api.setResponsive(true);
+           $.fn.fullpage.setAllowScrolling(false);
+           $.fn.fullpage.setAutoScrolling(false);
         }
       });
       $( function() {
@@ -434,7 +441,16 @@ $(document).ready(function () {
         }
         $('#section-tools').removeClass(current_class).addClass(new_class).css('overflow', 'hidden');
         $(document).unbind('wheel');
-        setTimeout(function () { bindTools(); }, 1000);
+        var isIPad = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
+        if (!isIPad) {
+                console.log(isIPad)
+            //$(document).unbind('wheel', bindTools);
+            //setTimeout(function () { bindTools(); }, 1000);
+        } else {
+            setTimeout(function () { bindTools(); }, 1000);
+          
+            //setTimeout(function () { bindTools(); }, 1000);
+        }
     }
 
     function changeToolTablet(current_icon, new_icon, current_class, new_class, number, up) {
@@ -453,7 +469,6 @@ $(document).ready(function () {
                 .animate({'top': '0'}, 500)
                 .addClass('active');
         }
-        //$('#section-tools').removeClass(current_class).addClass(new_class).css('overflow', 'hidden');
     }
 
     $('.block-tools-section-tablet button').bind('click', function () {
