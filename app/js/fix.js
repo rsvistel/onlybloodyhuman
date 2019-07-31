@@ -47,7 +47,7 @@ $(document).ready(function () {
         menu: '.dots-block-section-banner',
         css3: true,
         scrollOverflow: true,
-        responsiveWidth: 1000,
+        responsiveWidth: 900,
         verticalCentered: false,
         allowPageScroll: true,
         lazyLoading: false,
@@ -235,7 +235,7 @@ $(document).ready(function () {
            fullpage_api.setResponsive(true);
            $.fn.fullpage.setAllowScrolling(false);
            $.fn.fullpage.setAutoScrolling(false);
-           $.fn.fullpage.setMouseWheelScrolling(false);
+           $(document).off('wheel', bindTools);
         }
       });
       $( function() {
@@ -244,7 +244,6 @@ $(document).ready(function () {
            fullpage_api.setResponsive(true);
            $.fn.fullpage.setAllowScrolling(false);
            $.fn.fullpage.setAutoScrolling(false);
-           $.fn.fullpage.setMouseWheelScrolling(false);
         }
       });
     $.fn.fullpage.setAllowScrolling(true);
@@ -320,7 +319,7 @@ $(document).ready(function () {
             $('#arrow-skills').animate({'left': prop}, 400);
         }
     });
-  
+
     $('.block-tools-section button').click(function () {
         if (!$(this).hasClass('active')) {
             $('.tools-section__image').animate({'opacity': '0'}, 200);
@@ -438,19 +437,38 @@ $(document).ready(function () {
         setTimeout(function () { bindTools(); }, 1000);
     }
 
+    function changeToolTablet(current_icon, new_icon, current_class, new_class, number, up) {
+        //current_icon.animate({'opacity': '0'}, 500);
+        setTimeout(function () {
+            new_icon.css('display', 'flex').animate({'opacity': '1'}, 500);
+        }, 0);
+        if (up) {
+            $('.tool-image.active').animate({'top': '100vh'}, 500).removeClass('active');
+            $('.after-'+number)
+                .animate({'top': '0'}, 500)
+                .addClass('active');
+        } else {
+            $('.tool-image.active').animate({'top': '-100vh'}, 500).removeClass('active');
+            $('.after-'+number)
+                .animate({'top': '0'}, 500)
+                .addClass('active');
+        }
+        //$('#section-tools').removeClass(current_class).addClass(new_class).css('overflow', 'hidden');
+    }
+
     $('.block-tools-section-tablet button').bind('click', function () {
         if (!$(this).hasClass('active')) {
             $('.tools-tablet div').animate({'opacity': '0'}, 200);
             var dataName = $(this).parent().data('name');
             if (dataName.toLowerCase() === 'camera') {
                 animateArrow('16.66%');
-                changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true);
+                changeToolTablet($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true);
             } else if (dataName.toLowerCase() === 'drone') {
                 animateArrow('50%');
-                changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false);
+                changeToolTablet($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false);
             } else {
                 animateArrow('83.33%');
-                changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false);
+                changeToolTablet($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false);
             }
 
             setTimeout(function () {
