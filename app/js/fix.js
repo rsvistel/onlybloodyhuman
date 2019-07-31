@@ -47,7 +47,7 @@ $(document).ready(function () {
         menu: '.dots-block-section-banner',
         css3: true,
         scrollOverflow: true,
-        responsiveWidth: 900,
+        responsiveWidth: 1000,
         verticalCentered: false,
         allowPageScroll: true,
         lazyLoading: false,
@@ -230,37 +230,50 @@ $(document).ready(function () {
         },
     });
     $( function() {
-        var isIPadL = window.matchMedia('(min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)');
-        if (isIPadL.matches) {
-           fullpage_api.setResponsive(true);
-           $.fn.fullpage.setAllowScrolling(false);
-           $.fn.fullpage.setAutoScrolling(false);
+    // var isTouchCapable = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
+    // //var isPhoneDevice = "ontouchstart" in document.documentElement;
+    //     if (isTouchCapable) {
+    //         fullpage_api.setResponsive(true);
+    //     }
+    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+    if (isTouch){
+            fullpage_api.setResponsive(true);
+        } else {
+            console.log('false');
         }
-      });
-      $( function() {
-        var isIPadP = window.matchMedia('(min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)');
-        if (isIPadP.matches) {
-           fullpage_api.setResponsive(true);
-           $.fn.fullpage.setAllowScrolling(false);
-           $.fn.fullpage.setAutoScrolling(false);
-        }
-      });
-      $( function() {
-        var isIPadS = window.matchMedia('(min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)');
-        if (isIPadS.matches) {
-           fullpage_api.setResponsive(true);
-           $.fn.fullpage.setAllowScrolling(false);
-           $.fn.fullpage.setAutoScrolling(false);
-        }
-      });
-      $( function() {
-        var isIPhone = window.matchMedia('(min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)');
-        if (isIPhone.matches) {
-           fullpage_api.setResponsive(true);
-           $.fn.fullpage.setAllowScrolling(false);
-           $.fn.fullpage.setAutoScrolling(false);
-        }
-      });
+    });
+    // $( function() {
+    //     var isIPadL = window.matchMedia('(min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)');
+    //     if (isIPadL.matches) {
+    //        fullpage_api.setResponsive(true);
+    //        $.fn.fullpage.setAllowScrolling(false);
+    //        $.fn.fullpage.setAutoScrolling(false);
+    //     }
+    //   });
+    //   $( function() {
+    //     var isIPadP = window.matchMedia('(min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)');
+    //     if (isIPadP.matches) {
+    //        fullpage_api.setResponsive(true);
+    //        $.fn.fullpage.setAllowScrolling(false);
+    //        $.fn.fullpage.setAutoScrolling(false);
+    //     }
+    //   });
+    //   $( function() {
+    //     var isIPadS = window.matchMedia('(min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)');
+    //     if (isIPadS.matches) {
+    //        fullpage_api.setResponsive(true);
+    //        $.fn.fullpage.setAllowScrolling(false);
+    //        $.fn.fullpage.setAutoScrolling(false);
+    //     }
+    //   });
+    //   $( function() {
+    //     var isIPhone = window.matchMedia('(min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)');
+    //     if (isIPhone.matches) {
+    //        fullpage_api.setResponsive(true);
+    //        $.fn.fullpage.setAllowScrolling(false);
+    //        $.fn.fullpage.setAutoScrolling(false);
+    //     }
+    //   });
     $.fn.fullpage.setAllowScrolling(true);
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
@@ -406,8 +419,10 @@ $(document).ready(function () {
     // $( ".text-dots-block.active .embed-arrow " ).hover(function() {
     //     $('.text-dots-block embed').css('opacity', '1');
     // });
-    var isIPadL = window.matchMedia('(min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)');
-    if (!isIPadL.matches) {
+    //var isIPadL = window.matchMedia('(min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)');
+    //if (!isIPadL.matches) {
+    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+    if (!isTouch) {
     function bindTools() {
         $(document).bind('wheel', function (e) {
             var delta = e.originalEvent.deltaY;
