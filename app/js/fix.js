@@ -438,40 +438,19 @@ $(document).ready(function () {
         setTimeout(function () { bindTools(); }, 1000);
     }
 
-    function changeTooll(current_icon, new_icon, current_class, new_class, number, up) {
-        //current_icon.animate({'opacity': '0'}, 500);
-        setTimeout(function () {
-            new_icon.css('display', 'flex').animate({'opacity': '1'}, 500);
-        }, 0);
-        if (up) {
-            $('.tool-image.active').animate({'top': '100vh'}, 500).removeClass('active');
-            $('.after-'+number)
-                .animate({'top': '0'}, 500)
-                .addClass('active');
-        } else {
-            $('.tool-image.active').animate({'top': '-100vh'}, 500).removeClass('active');
-            $('.after-'+number)
-                .animate({'top': '0'}, 500)
-                .addClass('active');
-        }
-        $('#section-tools').removeClass(current_class).addClass(new_class).css('overflow', 'hidden');
-        //$(document).unbind('wheel');
-        //setTimeout(function () { bindTools(); }, 1000);
-    }
-
     $('.block-tools-section-tablet button').bind('click', function () {
         if (!$(this).hasClass('active')) {
             $('.tools-tablet div').animate({'opacity': '0'}, 200);
             var dataName = $(this).parent().data('name');
             if (dataName.toLowerCase() === 'camera') {
                 animateArrow('16.66%');
-                changeTooll($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true);
+                changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true);
             } else if (dataName.toLowerCase() === 'drone') {
                 animateArrow('50%');
-                changeTooll($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false);
+                changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false);
             } else {
                 animateArrow('83.33%');
-                changeTooll($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false);
+                changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false);
             }
 
             setTimeout(function () {
