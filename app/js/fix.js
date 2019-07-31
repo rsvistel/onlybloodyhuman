@@ -246,7 +246,7 @@ $(document).ready(function () {
         }
       });
       $( function() {
-        var isIPadS = window.matchMedia('(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)');
+        var isIPadS = window.matchMedia('(min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)');
         if (isIPadS.matches) {
            fullpage_api.setResponsive(true);
            $.fn.fullpage.setAllowScrolling(false);
@@ -406,6 +406,8 @@ $(document).ready(function () {
     // $( ".text-dots-block.active .embed-arrow " ).hover(function() {
     //     $('.text-dots-block embed').css('opacity', '1');
     // });
+    var isIPadL = window.matchMedia('(min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)');
+    if (!isIPadL.matches) {
     function bindTools() {
         $(document).bind('wheel', function (e) {
             var delta = e.originalEvent.deltaY;
@@ -430,6 +432,7 @@ $(document).ready(function () {
             }
         });
     }
+    }
 
     function changeTool(current_icon, new_icon, current_class, new_class, number, up) {
         current_icon.animate({'opacity': '0'}, 500);
@@ -449,16 +452,7 @@ $(document).ready(function () {
         }
         $('#section-tools').removeClass(current_class).addClass(new_class).css('overflow', 'hidden');
         $(document).unbind('wheel');
-        var isIPad = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
-        if (!isIPad) {
-                console.log(isIPad)
-            //$(document).unbind('wheel', bindTools);
-            //setTimeout(function () { bindTools(); }, 1000);
-        } else {
-            setTimeout(function () { bindTools(); }, 1000);
-          
-            //setTimeout(function () { bindTools(); }, 1000);
-        }
+        setTimeout(function () { bindTools(); }, 1000);
     }
 
     function changeToolTablet(current_icon, new_icon, current_class, new_class, number, up) {
