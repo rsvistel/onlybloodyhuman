@@ -230,16 +230,16 @@ $(document).ready(function () {
         },
     });
     $( function() {
-        var isIPad = window.matchMedia('(min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)');
-        if (isIPad.matches) {
+        var isIPadL = window.matchMedia('(min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)');
+        if (isIPadL.matches) {
            fullpage_api.setResponsive(true);
            $.fn.fullpage.setAllowScrolling(false);
            $.fn.fullpage.setAutoScrolling(false);
         }
       });
       $( function() {
-        var isIPad = window.matchMedia('(min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)');
-        if (isIPad.matches) {
+        var isIPadP = window.matchMedia('(min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)');
+        if (isIPadP.matches) {
            fullpage_api.setResponsive(true);
            $.fn.fullpage.setAllowScrolling(false);
            $.fn.fullpage.setAutoScrolling(false);
