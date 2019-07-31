@@ -777,7 +777,21 @@
   .section-instagram__photo:nth-child(2) {
     border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(1) {
-    border-top: 0.5px solid #f0f2f2; }
+    border-top: 0.5px solid #f0f2f2; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .section {
+    height: auto !important; }
+  #section-about,
+  #section-about .fp-slide,
+  #section-about .fp-tableCell,
+  #section-about .fp-scrollable {
+    height: auto !important; }
+  #section-tools,
+  #section-tools .fp-slide,
+  #section-tools .fp-tableCell,
+  #section-tools .fp-scrollable {
+    height: auto !important; }
   /*contact-section */
   .client-contact-list__text p {
     font-size: 2vw;
