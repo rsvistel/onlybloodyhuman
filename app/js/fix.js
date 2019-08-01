@@ -230,17 +230,15 @@ $(document).ready(function () {
         },
     });
     $( function() {
-    // var isTouchCapable = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
-    // //var isPhoneDevice = "ontouchstart" in document.documentElement;
-    //     if (isTouchCapable) {
-    //         fullpage_api.setResponsive(true);
-    //     }
-    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
-    if (isTouch){
-            fullpage_api.setResponsive(true);
-        } else {
-            console.log('false');
+    var isTouchCapable = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
+    //var isPhoneDevice = "ontouchstart" in document.documentElement;
+        if (isTouchCapable) {
+            $.fn.fullpage.setResponsive(true);
         }
+    // var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+    // if (isTouch){
+    //         $.fn.fullpage.setResponsive(true);
+    //     }
     });
     // $( function() {
     //     var isIPadL = window.matchMedia('(min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)');
