@@ -336,14 +336,16 @@ $(document).ready(function () {
         if (white) {
             color = '#fff';
             opacity = 0;
+                $('.dark-arrow').css('transition', 'opacity .5s linear');
                 $('.light-arrow').css('visibility', 'visible');
-                $('.dark-arrow').css('visibility', 'hidden')
+                $('.dark-arrow').css('visibility', 'hidden');
         } else {
             color = '#363531';
             opacity = 1;
+            $('.light-arrow').css('transition', 'opacity .5s linear');
             $('.dark-arrow').css('visibility', 'visible');
-            $('.light-arrow').css('visibility', 'hidden')
-        }
+            $('.light-arrow').css('visibility', 'hidden');
+     }
         $('.dots-block-section-banner .text-dots-block:not(.active) .dot-section-banner').css('background-color', color);
         $('.text-near-dots').css('color', color);
         $('.dots-block-section-banner .dot-section-banner').css('border-color', color);
@@ -378,7 +380,7 @@ $(document).ready(function () {
     function changeTool(current_icon, new_icon, current_class, new_class, number, up, fast) {
         var speed;
         if(fast) {
-            speed = 250;
+            speed = 300;
         } else {
             speed = 500;
         }
@@ -413,9 +415,9 @@ $(document).ready(function () {
             if (dataName.toLowerCase() === 'camera') {
                 animateArrow('16.66%');
                 if($('.block-tools-section-tablet button.active').parent().data('name').toLowerCase() === 'gimbal') {
-                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', true,  false);
+                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', true,  true);
                         setTimeout( function() {
-                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true, true);
+                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true, false);
                         }, 700);
                 } else {
                         changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true, false);
@@ -430,9 +432,9 @@ $(document).ready(function () {
             } else if  (dataName.toLowerCase() === 'gimbal') {
                 animateArrow('83.33%');
                 if($('.block-tools-section-tablet button.active').parent().data('name').toLowerCase() === 'camera') {
-                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false, false);
+                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false, true);
                         setTimeout( function() {
-                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false, true);
+                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false, false);
                         }, 700);
 
                 } else {
