@@ -65,7 +65,7 @@ $(document).ready(function () {
                   setTimeout(function(){ bindTools() }, 700)
                 }
             }  else if(sections[nextIndex.index].attr("id") === "section-about") {
-                $.fn.fullpage.setAllowScrolling(false);
+                //$.fn.fullpage.setAllowScrolling(false);
                 var windowHeight = $(window).height();
                 var sectAboutHeight = $('#section-about .fp-scroller').outerHeight();
                 var differSect = windowHeight - sectAboutHeight;
@@ -105,32 +105,32 @@ $(document).ready(function () {
                             }
                         }
 
-                        if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(differSect) + ')') {
-                            var delta = e.originalEvent.deltaY;
-                            $('#section-about').css('pointer-events', 'none');
-                            if (delta > 0) {
-                                windowHeight = windowHeight + event.deltaY * 3;
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeight + 'px, 0px)');
-                                if (windowHeight > $('#section-tools').outerHeight() / 100 * 20 + $(window).height()) {
-                                    $.fn.fullpage.setAllowScrolling(true);
-                                    $('#section-about').css('pointer-events', 'auto');
-                                    $(window).unbind('wheel');
-                                }
-                            } else {
-                                windowHeight = windowHeight + event.deltaY * 3;
-                                if (windowHeight <= $(window).height()) {
-                                    $('#section-about').css('pointer-events', 'auto');
-                                    $('#fullpage').css('transform', 'translate3d(0px, -' + $(window).height() + 'px, 0px)');
-                                } else {
-                                    $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeight + 'px, 0px)');
-                                }
-                            }
-                        }
-                         else if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                                $.fn.fullpage.setAllowScrolling(true);
-                            } else {
-                                $.fn.fullpage.setAllowScrolling(false);
-                            }
+                       // if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(differSect) + ')') {
+                        //     var delta = e.originalEvent.deltaY;
+                        //     $('#section-about').css('pointer-events', 'none');
+                        //     if (delta > 0) {
+                        //         windowHeight = windowHeight + event.deltaY * 3;
+                        //         $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeight + 'px, 0px)');
+                        //         if (windowHeight > $('#section-tools').outerHeight() / 100 * 20 + $(window).height()) {
+                                     //$.fn.fullpage.setAllowScrolling(true);
+                        //             $('#section-about').css('pointer-events', 'auto');
+                        //             $(window).unbind('wheel');
+                        //         }
+                        //     } else {
+                        //         windowHeight = windowHeight + event.deltaY * 3;
+                        //         if (windowHeight <= $(window).height()) {
+                        //             $('#section-about').css('pointer-events', 'auto');
+                        //             $('#fullpage').css('transform', 'translate3d(0px, -' + $(window).height() + 'px, 0px)');
+                        //         } else {
+                        //             $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeight + 'px, 0px)');
+                        //         }
+                        //     }
+                        //}
+                        //  else if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                        //         $.fn.fullpage.setAllowScrolling(true);
+                        //     } else {
+                        //         $.fn.fullpage.setAllowScrolling(false);
+                        //     }
                     });
                 }
             } else if(sections[nextIndex.index].attr("id") === "section-instagram") {
