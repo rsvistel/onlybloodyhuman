@@ -1301,8 +1301,7 @@ body.opened--menu .text-dots-block embed {
 
 #section-contact {
   overflow: hidden;
-  height: 100vh;
-  min-height: 600px; }
+  height: 100vh; }
 
 #section-contact .row {
   display: -webkit-box;
