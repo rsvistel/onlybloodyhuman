@@ -53,7 +53,6 @@ $(document).ready(function () {
         allowPageScroll: true,
         lazyLoading: false,
 
-
         onLeave: function (index, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
             if (nextIndex.index > dots.length - 1) {
@@ -64,7 +63,7 @@ $(document).ready(function () {
                   $.fn.fullpage.setAllowScrolling(false);
                   setTimeout(function(){ bindTools() }, 700)
                 }
-            }  else if(sections[nextIndex.index].attr("id") === "section-about") {
+            }  else if(sections[nextIndex.index].attr("id") === "section-about" ) {
                 //$.fn.fullpage.setAllowScrolling(false);
                 var windowHeight = $(window).height();
                 var sectAboutHeight = $('#section-about .fp-scroller').outerHeight();
@@ -175,7 +174,7 @@ $(document).ready(function () {
                         }
                     }
                 });
-            }else {
+            } else {
                 dots[nextIndex.index].addClass('active');
             }
             if (sections[nextIndex.index].hasClass('black-right')) {
@@ -221,12 +220,38 @@ $(document).ready(function () {
                 var height = sections[b].find('.fp-scroller').outerHeight();
                 var change = heightWindows - height;
                 sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ change +')');
+                // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
+
             }
             for (var y = nextIndex.index+1; y < sections.length; y++) {
                 sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+                // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
         },
+        afterLoad: function(origin){
+            if(origin.anchor == 'contact'){
+                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+                var followers;
+                $.ajax({
+                    method: 'GET',
+                    url: url,
+                    dataType: 'jsonp',
+                    jsonp: 'callback',
+                    success: function (response) {
+                        followers = parseFloat(getRepString(response.data.counts.followed_by));
+                        $('.countup').html((parseFloat(followers)) + 'k');
+                    }
+                });
+                function getRepString (rep) {
+                    rep = rep+'';
+                    if (rep < 1000) return rep;
+                    if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+                    return (rep/1000).toFixed(rep % 1000 != 0);
+                }
+            }
+        }
     });
+
     $( function() {
         if (isTouchCapable) {
             $.fn.fullpage.setResponsive(true);
@@ -472,6 +497,28 @@ $(document).ready(function () {
         if (rep < 1000) return rep;
         if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
         return (rep/1000).toFixed(rep % 1000 != 0);
+    }
+    function animateCounter() {
+        $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
+        var count = 1;
+        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+        var followers;
+        $.ajax({
+            method: 'GET',
+            url: url,
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            success: function (response) {
+                followers = parseFloat(getRepString(response.data.counts.followed_by));
+            }
+        });
+        countdown = setInterval(function () {
+            if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
+                $("span.countup").html(count + "k");
+                count += 0.1;
+                count = parseFloat(count.toFixed(1));
+            }
+        }, 3);
     }
 
 });
