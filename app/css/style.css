@@ -1479,7 +1479,15 @@ body.opened--menu .text-dots-block embed {
   background-repeat: no-repeat;
   background-position: bottom;
   width: 50%;
-  padding: 0; }
+  padding: 0;
+  height: auto !important;
+  min-height: 100vh; }
+
+#section-tools,
+#section-tools .fp-slide,
+#section-tools .fp-tableCell,
+#section-tools .fp-scrollable {
+  height: auto !important; }
 
 .client-contact-list, .gray-half-section-tools {
   display: -webkit-box;
