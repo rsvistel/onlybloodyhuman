@@ -128,7 +128,7 @@ $(document).ready(function () {
                          else if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
                                 $.fn.fullpage.setAllowScrolling(true);
                             } else {
-                                // $.fn.fullpage.setAllowScrolling(false);
+                                $.fn.fullpage.setAllowScrolling(false);
                             }
                     });
                 }
@@ -145,7 +145,7 @@ $(document).ready(function () {
                         if (delta1 > 0) {
                             windowHeight1 = windowHeight1 + event.deltaY * 16;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeight1 + 'px, 0px)');
-                            if (windowHeight1 > $('#section-contact').outerHeight() / 100 * 25 + $(window).height()) {
+                            if (windowHeight1 > $('#section-contact').outerHeight() / 100 * 20 + $(window).height()) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                  $('#section-instagram').css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
@@ -161,10 +161,44 @@ $(document).ready(function () {
                         }
                     }
                     else if ($('#section-instagram .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        $.fn.fullpage.setAllowScrolling(true);
-                    } else {
-                        // $.fn.fullpage.setAllowScrolling(false);
-                    }
+                    //     console.log(barr);
+                    //     var windowHeightTop = $(window).height();
+                    //     console.log(windowHeightTop)
+                    //     var sectAboutHeightTop = $('#section-tools').height();
+                    //     console.log(sectAboutHeightTop)
+                    //     var differSect1Top = windowHeightTop - sectAboutHeightTop;
+                         $('#fullpage').css('transform', 'translate3d(0px,-2500px, 0px)');
+                         $.fn.fullpage.setAllowScrolling(true);
+                    //     $(window).bind('wheel', function (e) {
+                    //         if ($('#section-instagram .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                    //             var delta1 = e.originalEvent.deltaY;
+                    //            // $('#section-instagram').css('pointer-events', 'none');
+                    //             if (delta1 < 0) {
+                    //                 windowHeightTop = windowHeightTop + event.deltaY * 16;
+                    //                 //$('#fullpage').css('transform', 'translate3d(0px, topSecInsta, 0px)');
+                    //                 //$('#fullpage').css('transform', 'translate3d(0px, -' + windowHeightTop + 'px, 0px)');
+                    //                 if (windowHeight1 > $('#section-tools').outerHeight() / 100 * 20 + $(window).height()) {
+                    //                     $.fn.fullpage.setAllowScrolling(true);
+                    //                      $('#section-instagram').css('pointer-events', 'auto');
+                    //                     $(window).unbind('wheel');
+                    //                 }
+                    //             } else {
+                    //                 windowHeight1 = windowHeight1 + event.deltaY * 16;
+                    //                 if (windowHeight1 <= $(window).height()) {
+                    //                      $('#section-instagram').css('pointer-events', 'auto');
+                    //                     $('#fullpage').css('transform', 'translate3d(0px, -' + $(window).height() + 'px, 0px)');
+                    //                 } else {
+                    //                     $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeight1 + 'px, 0px)');
+                    //                 }
+                    //             }
+                    //         }
+                    //     //$.fn.fullpage.setAllowScrolling(true);
+                    // // } else {
+                    // //     $.fn.fullpage.setAllowScrolling(false);
+                    // // }
+
+                    // });
+                     }
                     if (insta == false) {
                         if (isDesktop) {
                             $("span.countup").html("1k");
