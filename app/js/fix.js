@@ -268,7 +268,7 @@ $(document).ready(function () {
             // }
 
             if((nextIndex == 1) || (direction =='up')) {
-                var scrollToBottom = $('#section-about .fp-scroller').height() - $(window).height();
+                var scrollToBottom = $(window).height()- $('#section-about .fp-scroller').height();
                 $('#section-about .fp-scroller').css({
                   'transform' : 'translate(0px, -' + scrollToBottom + 'px) translateZ(0px)'
                 });
