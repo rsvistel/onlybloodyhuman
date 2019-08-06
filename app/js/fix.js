@@ -230,7 +230,7 @@ $(document).ready(function () {
                // console.log($('.fp-section.active').find('.fp-scrollable').data('iscrollInstance'));
                 //var height = sections[b].find('.fp-scroller').outerHeight();
                //var change = heightWindows - height;
-                console.log($.fn.fullpage.getActiveSection().item.querySelector('.fp-scrollable'));
+               //console.log($.fn.fullpage.getActiveSection().item.querySelector('.fp-scrollable'));
                 //var instance = $.fn.fullpage.getActiveSection().item.querySelector('.fp-scrollable');
                 //var instance =  $.fn.fullpage.getActiveSection().item.querySelector('.fp-scrollable')[0].fp_iscrollInstance;
                 //instance.scrollTo(0, 0, 0);
@@ -266,6 +266,13 @@ $(document).ready(function () {
             //     // var scrollToBottom = $('.fp-scroller').height() - $(window).height();
             //     // $('.fp-scroller').css({'transform' : 'translate(0px, -' + scrollToBottom + 'px) translateZ(0px)'});
             // }
+
+            if((nextIndex == 1) || (direction =='up')) {
+                var scrollToBottom = $('#section-about .fp-scroller').height() - $(window).height();
+                $('#section-about .fp-scroller').css({
+                  'transform' : 'translate(0px, -' + scrollToBottom + 'px) translateZ(0px)'
+                });
+              }
         },
         //afterLoad: function(anchorLink, index, destination, direction, nextIndex){
             //var heightWindows = $(window).height();
@@ -340,8 +347,8 @@ $(document).ready(function () {
             // //iscroll.scrollTo(0, 0, 0);
             // var section_id = "#"+jQuery(".section")[nextIndex-1].id; myScroll = new IScroll(section_id+" .fp-scrollable"); myScroll.scrollTo(0,0);
             //     console.log(section_id);
-          afterLoad: function(index, nextIndex, direction){
-            var loadedSection = $(this);
+        //   afterLoad: function(index, nextIndex, direction){
+        //     var loadedSection = $(this);
 
             // var instance = $('.fp-section.active').find('.fp-scrollable').data('iscrollInstance');
             // //instance.scrollTo(0, 377);
@@ -357,28 +364,60 @@ $(document).ready(function () {
             //   var IScroll = prevSection.find('.fp-scrollable').data('iscrollInstance');
             //   IScroll.scrollTo(0, IScroll.maxScrollY, 0)
             // }
-            if ( nextIndex.index === 1 || nextIndex.index === 4) {
-            for (var b = 0; b < nextIndex.index; b++) {
-                var heightWindows = $(window).height();
-                var height = sections[b].find('.fp-scroller').outerHeight();
-                var change = heightWindows - height;
-                console.log(heightWindows);
-                console.log(height);
-               console.log(change); 
-                $(sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ change +')'));
-               }
-               //$(sections[b].find('.fp-scroller').css('transform', 'translate(0px, ' + change + 'px) translateZ(0px)'));
-                //$(sections[b].find('.iScrollIndicator').css('transform', 'translate(0, 377px)'));
+            // for (var b = 0; b < nextIndex.index; b++) {
+            //     var heightWindows = $(window).height();
+            //     var height = sections[b].find('.fp-scroller').outerHeight();
+            //     var change = heightWindows - height;
+            //     console.log(heightWindows);
+            //     console.log(height);
+            //    console.log(change);
+            //     $(sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ change +')'));
+            //    }
+            //    //$(sections[b].find('.fp-scroller').css('transform', 'translate(0px, ' + change + 'px) translateZ(0px)'));
+            //     //$(sections[b].find('.iScrollIndicator').css('transform', 'translate(0, 377px)'));
 
-                for (var y = nextIndex.index + 1; y < sections.length; y++) {
-                    console.log(nextIndex.index + 1);
-                   $(sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + 0 + ')'));
-                   //sections[y].find('.iScrollIndicator').css('transform', 'translate(0, 0)');
-                }
+            //     for (var y = nextIndex.index + 1; y < sections.length; y++) {
+            //         console.log(nextIndex.index + 1);
+            //        $(sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + 0 + ')'));
+            //        //sections[y].find('.iScrollIndicator').css('transform', 'translate(0, 0)');
+            //     }
+        //  afterLoad: function(index, nextIndex, direction){
+        //     for (var b = 0; b < nextIndex.index; b++) {
+        //         var iScroll = $.fn.fullpage.getActiveSection().item.querySelector('.fp-scrollable');
+        //         if(iScroll && typeof iscroll !== undefined){
+        //             iScroll.on('scroll', getScroll);
+        //               IScroll.scrollTo(0, 0, 0)
+        //               console.log(IScroll);
+        //        }
+        //     }
+        //  }
+        afterLoad: function(anchorLink, index){
+            var loadedSection = $(this);
+            var nextSection = loadedSection.next();
+            var prevSection = loadedSection.prev();
+            if(nextSection.hasClass('fp-auto-height') ) {
+              var IScroll = nextSection.find('.fp-scrollable').data('iscrollInstance');
+              IScroll.scrollTo(0, 0, 0)
             }
-
-           
-         }
+            if(prevSection.hasClass('fp-auto-height') ) {
+              var IScroll = prevSection.find('.fp-scrollable').data('iscrollInstance');
+              IScroll.scrollTo(0, IScroll.maxScrollY, 0)
+            }
+          }
+        // afterLoad: function(anchorLink, index){
+        //     var loadedSection = $(this);
+        //     var nextSection = loadedSection.next();
+        //     var prevSection = loadedSection.prev();
+        //     if(nextSection.hasClass('fp-auto-height') ) {
+        //     var IScroll = nextSection.find('.fp-scrollable').data('iscrollInstance');
+        //     console.log(IScroll);
+        //       IScroll.scrollTo(0, 0, 0)
+        //     }
+        //     if(prevSection.hasClass('fp-auto-height') ) {
+        //       var IScroll = prevSection.find('.fp-scrollable').data('iscrollInstance');
+        //       IScroll.scrollTo(0, IScroll.maxScrollY, 0)
+        //     }
+        //   }
     });
     $( function() {
         if (isTouchCapable) {
