@@ -189,6 +189,7 @@ $(document).ready(function () {
                                     } else {
                                         $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeightTop + 'px, 0px)');
                                         $.fn.fullpage.setAllowScrolling(true);
+                                        $(window).unbind('wheel');
                                     }
                                 }
                     //     console.log(barr);
@@ -229,7 +230,7 @@ $(document).ready(function () {
 
                         });
                     } else {
-                        $.fn.fullpage.setAllowScrolling(false);
+                        $.fn.fullpage.setAllowScrolling(true);
                     }
                     if (insta == false) {
                         if (isDesktop) {
