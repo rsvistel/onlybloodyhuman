@@ -183,11 +183,12 @@ $(document).ready(function () {
                                     windowHeightTop = windowHeightTop + event.deltaY;
                                     if (windowHeightTop <= $(window).height()) {
                                             $('#section-instagram').css('pointer-events', 'auto');
-                                        $('#fullpage').css('transform', 'translate3d(0px, -1500px, 0px)');
+                                        $('#fullpage').css('transform', 'translate3d(0px, -1600px, 0px)');
                                         $.fn.fullpage.setAllowScrolling(true);
                                         $(window).unbind('wheel');
                                     } else {
                                         $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeightTop + 'px, 0px)');
+                                        $.fn.fullpage.setAllowScrolling(true);
                                     }
                                 }
                     //     console.log(barr);
@@ -227,7 +228,9 @@ $(document).ready(function () {
                     // // }
 
                         });
-                     }
+                    } else {
+                        $.fn.fullpage.setAllowScrolling(false);
+                    }
                     if (insta == false) {
                         if (isDesktop) {
                             $("span.countup").html("1k");
