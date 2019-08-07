@@ -154,7 +154,7 @@ $(document).ready(function () {
                                 $(window).unbind('wheel');
                             }
                         } else {
-                            windowHeight1 = windowHeight1 + event.deltaY * 16;
+                            windowHeight1 = windowHeight1 + event.deltaY * 3;
                             if (windowHeight1 <= $(window).height()) {
                                  $('#section-instagram').css('pointer-events', 'auto');
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + $(window).height() + 'px, 0px)');
@@ -230,7 +230,7 @@ $(document).ready(function () {
 
                         });
                     } else {
-                        $.fn.fullpage.setAllowScrolling(true);
+                        $.fn.fullpage.setAllowScrolling(false);
                     }
                     if (insta == false) {
                         if (isDesktop) {
