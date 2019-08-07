@@ -136,8 +136,9 @@ $(document).ready(function () {
             else if(sections[nextIndex.index].attr("id") === "section-instagram") {
                 $.fn.fullpage.setAllowScrolling(false);
                 var windowHeight1 = $(window).height();
-                var sectAboutHeight1 = $('#section-instagram .fp-scroller').outerHeight();
-                var differSect1 = windowHeight1 - sectAboutHeight1;
+                var sectHeight1 = $('#section-instagram .fp-scroller').offset().top;
+                var differSect1 = sectHeight1 - windowHeight1;
+                console.log(differSect1);
                 $(window).bind('wheel', function (e) {
                     if ($('#section-instagram .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(differSect1) + ')') {
                         var delta1 = e.originalEvent.deltaY;
