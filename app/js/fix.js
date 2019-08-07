@@ -158,6 +158,7 @@ $(document).ready(function () {
                             if (windowHeight1 <= $(window).height()) {
                                  $('#section-instagram').css('pointer-events', 'auto');
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + $(window).height() + 'px, 0px)');
+
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeight1 + 'px, 0px)');
                             }
