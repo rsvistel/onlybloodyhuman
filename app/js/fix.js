@@ -164,6 +164,7 @@ $(document).ready(function () {
                         }
                     }
                     else if ($('#section-instagram .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                        $.fn.fullpage.setAllowScrolling(false);
                         var windowHeightTop = $(window).height();
                             $(window).bind('wheel', function (e) {
                                 var delta1 = e.originalEvent.deltaY;
