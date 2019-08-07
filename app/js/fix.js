@@ -169,6 +169,7 @@ $(document).ready(function () {
             function longSectionScrolling() {
                 var sectionStartPosition;
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
+                    $.fn.fullpage.reBuild();
                     sectionStartPosition = instagramStartPosition;
                 } else {
                     sectionStartPosition = sections[nextIndex.index].offset().top;
@@ -198,10 +199,27 @@ $(document).ready(function () {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
                         }
-                    } else if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        $.fn.fullpage.setAllowScrolling(true);
-                    } else {
-                        $.fn.fullpage.setAllowScrolling(false);
+                    } else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                        console.log('top');
+                        var delta = e.originalEvent.deltaY;
+                        if (delta < 0) {
+                            sections[nextIndex.index].css('pointer-events', 'none');
+                            sectionScroll = sectionScroll + event.deltaY * 2;
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            if (sectionScroll < $(window).height() / 100 * 20 + sectionStartPosition) {
+                                $.fn.fullpage.setAllowScrolling(true);
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $(window).unbind('wheel');
+                            }
+                        } else  {
+                            //sectionScroll = sectionScroll + event.deltaY;
+                            // if (sectionScroll <= $(window).height()) {
+                            //     sections[nextIndex.index].css('pointer-events', 'auto');
+                            //     $('#fullpage').css('transform', 'translate3d(0px, -' + sections[nextIndex.index].offset().top + 'px, 0px)');
+                            // } else {
+                            //     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            // }
+                        }
                     }
                 });
             }
