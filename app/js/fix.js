@@ -42,7 +42,6 @@ $(document).ready(function () {
         dots.push($(this))
     });
     const instagramStartPosition = $("#section-instagram").offset().top;
-    console.log(instagramStartPosition);
     $('#fullpage').fullpage({
         autoScrolling: true,
         scrollingSpeed: 700,
@@ -206,7 +205,6 @@ $(document).ready(function () {
             function longSectionScrolling() {
                 var sectionStartPosition;
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
-                    $.fn.fullpage.reBuild();
                     sectionStartPosition = instagramStartPosition;
                 } else {
                     sectionStartPosition = sections[nextIndex.index].offset().top;
@@ -236,7 +234,6 @@ $(document).ready(function () {
                             }
                         }
                     } else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        console.log('top');
                         var delta = e.originalEvent.deltaY;
                         if (delta < 0) {
                             sections[nextIndex.index].css('pointer-events', 'none');
