@@ -190,17 +190,17 @@ $(document).ready(function () {
                 }
             }
 
-            for (var b = 0; b < nextIndex.index; b++) {
-                var heightWindows = $(window).height();
-                var height = sections[b].find('.fp-scroller').outerHeight();
-                var change = heightWindows - height;
-                sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ change +')');
-                // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
+            for (var sectionIndex = 0; sectionIndex < nextIndex.index; sectionIndex++) {
+                var heightWindow = $(window).height();
+                var heightScroller = sections[sectionIndex].find('.fp-scroller').outerHeight();
+                var positionBottom = heightWindow - heightScroller;
+                sections[sectionIndex].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ positionBottom +')');
+                //sections[sectionIndex].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
 
             }
-            for (var y = nextIndex.index+1; y < sections.length; y++) {
-                sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-                // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
+            for (var sectionIndexNext = nextIndex.index + 1; sectionIndexNext < sections.length; sectionIndexNext++) {
+                sections[sectionIndexNext].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+                //sections[sectionIndexNext].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
             function longSectionScrolling() {
                 var sectionStartPosition;
@@ -257,6 +257,14 @@ $(document).ready(function () {
                 });
             }
         },
+        // afterLoad: function(anchorLink, index){
+        //     var iscroll = $('.fp-section.active').find('.fp-scrollable').data('iscrollInstance');
+        //     if(iscroll && typeof iscroll !== undefined){
+        //         iscroll.on('scrollStart', function(){
+        //             $('#header').addClass("SCROLLED");
+        //         });
+        //     };
+        // },
         afterLoad: function(origin){
             if(origin.anchor == 'contact'){
                 var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
