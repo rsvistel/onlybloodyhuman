@@ -176,7 +176,6 @@ $(document).ready(function () {
                 }
                 var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
                 var sectionEnd = $(window).height() - sectionHeight;
-                console.log(sectionHeight);
                 var sectionScroll = sectionStartPosition;
                 $(window).bind('wheel', function (e) {
                     if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(sectionEnd) + ')') {
@@ -204,9 +203,9 @@ $(document).ready(function () {
                         var delta = e.originalEvent.deltaY;
                         if (delta < 0) {
                             sections[nextIndex.index].css('pointer-events', 'none');
-                            sectionScroll = sectionScroll + event.deltaY * 2;
+                            sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sectionScroll < $(window).height() / 100 * 20 + sectionStartPosition) {
+                            if (sectionScroll < sectionStartPosition - $(window).height() / 100 * 20) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
