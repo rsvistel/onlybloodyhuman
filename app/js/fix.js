@@ -204,6 +204,7 @@ $(document).ready(function () {
             }
             function longSectionScrolling() {
                 var sectionStartPosition;
+                var windowHeightScroll = $(window).height();
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
                     sectionStartPosition = instagramStartPosition;
                 } else {
@@ -236,6 +237,7 @@ $(document).ready(function () {
                     } else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
                         var delta = e.originalEvent.deltaY;
                         if (delta < 0) {
+                            console.log('top');
                             sections[nextIndex.index].css('pointer-events', 'none');
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
@@ -245,13 +247,16 @@ $(document).ready(function () {
                                 $(window).unbind('wheel');
                             }
                         } else  {
-                            //sectionScroll = sectionScroll + event.deltaY;
-                            // if (sectionScroll <= $(window).height()) {
-                            //     sections[nextIndex.index].css('pointer-events', 'auto');
-                            //     $('#fullpage').css('transform', 'translate3d(0px, -' + sections[nextIndex.index].offset().top + 'px, 0px)');
-                            // } else {
-                            //     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            // }
+                            sectionScroll = sectionScroll + event.deltaY;
+                            if (sectionScroll >= windowHeightScroll) {
+                                console.log('bottom');
+                            sections[nextIndex.index].css('pointer-events', 'auto');
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+                            $.fn.fullpage.setAllowScrolling(true);
+                            $(window).unbind('wheel');
+                            } else {
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            }
                         }
                     }
                 });
