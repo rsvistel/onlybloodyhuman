@@ -235,8 +235,8 @@ $(document).ready(function () {
                         }
                     } else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
                         var delta = e.originalEvent.deltaY;
+                        sections[nextIndex.index].css('pointer-events', 'none');
                         if (delta < 0) {
-                            sections[nextIndex.index].css('pointer-events', 'none');
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             if (sectionScroll < sectionStartPosition - $(window).height() / 100 * 20) {
