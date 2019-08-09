@@ -41,6 +41,7 @@ $(document).ready(function () {
     $('.text-dots-block').each(function () {
         dots.push($(this))
     });
+    const instagramStartPosition = $("#section-instagram").offset().top;
     $('#fullpage').fullpage({
         autoScrolling: true,
         scrollingSpeed: 700,
@@ -64,16 +65,12 @@ $(document).ready(function () {
                   setTimeout(function(){ bindTools() }, 700)
                 }
             }  else if(sections[nextIndex.index].attr("id") === "section-about" ) {
-                //$.fn.fullpage.setAllowScrolling(false);
-                var windowHeight = $(window).height();
-                var sectAboutHeight = $('#section-about .fp-scroller').outerHeight();
-                var differSect = windowHeight - sectAboutHeight;
+                $.fn.fullpage.setAllowScrolling(false);
                 if (isDesktop) {
                     $(window).unbind('wheel');
                     if (progressLine == false) {
                         $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
                     }
-
                     $(window).bind('wheel', function (e) {
                         if (progressLine == false) {
                             $(".progress-line").each(function () {
@@ -103,36 +100,13 @@ $(document).ready(function () {
                                 }
                             }
                         }
-
-                       // if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(differSect) + ')') {
-                        //     var delta = e.originalEvent.deltaY;
-                        //     $('#section-about').css('pointer-events', 'none');
-                        //     if (delta > 0) {
-                        //         windowHeight = windowHeight + event.deltaY * 3;
-                        //         $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeight + 'px, 0px)');
-                        //         if (windowHeight > $('#section-tools').outerHeight() / 100 * 20 + $(window).height()) {
-                                     //$.fn.fullpage.setAllowScrolling(true);
-                        //             $('#section-about').css('pointer-events', 'auto');
-                        //             $(window).unbind('wheel');
-                        //         }
-                        //     } else {
-                        //         windowHeight = windowHeight + event.deltaY * 3;
-                        //         if (windowHeight <= $(window).height()) {
-                        //             $('#section-about').css('pointer-events', 'auto');
-                        //             $('#fullpage').css('transform', 'translate3d(0px, -' + $(window).height() + 'px, 0px)');
-                        //         } else {
-                        //             $('#fullpage').css('transform', 'translate3d(0px, -' + windowHeight + 'px, 0px)');
-                        //         }
-                        //     }
-                        //}
-                        //  else if ($('#section-about .fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        //         $.fn.fullpage.setAllowScrolling(true);
-                        //     } else {
-                        //         $.fn.fullpage.setAllowScrolling(false);
-                        //     }
                     });
                 }
-            } else if(sections[nextIndex.index].attr("id") === "section-instagram") {
+                longSectionScrolling();
+
+            }
+            else if(sections[nextIndex.index].attr("id") === "section-instagram") {
+                $.fn.fullpage.setAllowScrolling(false);
                 $(window).bind('wheel', function (e) {
                     if (insta == false) {
                         if (isDesktop) {
@@ -174,6 +148,7 @@ $(document).ready(function () {
                         }
                     }
                 });
+                longSectionScrolling();
             } else {
                 dots[nextIndex.index].addClass('active');
             }
@@ -226,6 +201,60 @@ $(document).ready(function () {
             for (var y = nextIndex.index+1; y < sections.length; y++) {
                 sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
                 // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
+            }
+            function longSectionScrolling() {
+                var sectionStartPosition;
+                if (sections[nextIndex.index].attr('id') === "section-instagram") {
+                    sectionStartPosition = instagramStartPosition;
+                } else {
+                    sectionStartPosition = sections[nextIndex.index].offset().top;
+                }
+                var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
+                var sectionEnd = $(window).height() - sectionHeight;
+                var sectionScroll = sectionStartPosition;
+                $(window).bind('wheel', function (e) {
+                    if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(sectionEnd) + ')') {
+                        var delta = e.originalEvent.deltaY;
+                        sections[nextIndex.index].css('pointer-events', 'none');
+                        if (delta > 0) {
+                            sectionScroll = sectionScroll + event.deltaY;
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
+                                $.fn.fullpage.setAllowScrolling(true);
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $(window).unbind('wheel');
+                            }
+                        } else {
+                            sectionScroll = sectionScroll + event.deltaY;
+                            if (sectionScroll <= $(window).height()) {
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sections[nextIndex.index].offset().top + 'px, 0px)');
+                            } else {
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            }
+                        }
+                    } else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                        var delta = e.originalEvent.deltaY;
+                        if (delta < 0) {
+                            sections[nextIndex.index].css('pointer-events', 'none');
+                            sectionScroll = sectionScroll + event.deltaY;
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            if (sectionScroll < sectionStartPosition - $(window).height() / 100 * 20) {
+                                $.fn.fullpage.setAllowScrolling(true);
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $(window).unbind('wheel');
+                            }
+                        } else  {
+                            //sectionScroll = sectionScroll + event.deltaY;
+                            // if (sectionScroll <= $(window).height()) {
+                            //     sections[nextIndex.index].css('pointer-events', 'auto');
+                            //     $('#fullpage').css('transform', 'translate3d(0px, -' + sections[nextIndex.index].offset().top + 'px, 0px)');
+                            // } else {
+                            //     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            // }
+                        }
+                    }
+                });
             }
         },
         afterLoad: function(origin){
