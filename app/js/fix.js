@@ -494,32 +494,40 @@ $(document).ready(function () {
         }
     });
 function animateProgressBar() {
-    if (progressLine == false) {
-        $(".progress-line").each(function () {
-            var diff = $(this).offset().top;
-            var heightWindow = $(window).height();
-            var res = diff - heightWindow;
-            var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
-            current_transform = Math.abs(current_transform);
-            if (current_transform > res) {
-                animateStat($(this))
-            }
-        });
-        setTimeout(function () {
-            progressLine = true;
-        }, 3000);
+    // if (progressLine == false) {
+    // if (!$('.progress-line').find('.progress-line-gray').hasClass('animated')){
+    $(".progress-line").each(function () {
+        // var test = $('.progress-line').find('.progress-line-gray').addClass('active');
+        var diff = $(this).offset().top;
+        var heightWindow = $(window).height();
+        var res = diff - heightWindow;
+        var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
+        current_transform = Math.abs(current_transform);
+        if (current_transform > res) {
+            animateStat($(this))
+        }
+    });
+    setTimeout(function () {
+        progressLine = true;
+    }, 3000);
 
-        function animateStat(item) {
-            if (!item.find('.progress-line-gray').hasClass('animated')) {
-                var width;
-                var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
-                for (var i = 0; i < classListArray.length; i++) {
-                    if (classListArray[i].includes('progress-line-gray-')) {
-                        width = classListArray[i].replace('progress-line-gray-', '')
-                    }
+    function animateStat(item) {
+        if (!item.find('.progress-line-gray').hasClass('animated')) {
+            var width;
+            var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
+            for (var i = 0; i < classListArray.length; i++) {
+                $('.progress-line').find('.progress-line-gray').removeClass('active');
+                if (classListArray[i].includes('progress-line-gray-')) {
+                    width = classListArray[i].replace('progress-line-gray-', '')
                 }
-                item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
             }
+            item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
+            // progressLine = true;
+            // $(".progress-line").each(function () {
+            //     if (!(this).hasClass('animated')) {
+            //         progressLine = true;
+            //     }
+            // });
         }
     }
 }
