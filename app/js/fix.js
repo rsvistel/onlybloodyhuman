@@ -164,14 +164,20 @@ $(document).ready(function () {
             }
 
             for (var b = 0; b < nextIndex.index; b++) {
-                var heightWindows = $(window).height();
-                var height = sections[b].find('.fp-scroller').outerHeight();
-                var change = heightWindows - height;
-                sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ change +')');
+                var mainHeight = $(window).height();
+                //var heightScroller = sections[b].find('.fp-scroller').outerHeight();
+                var heightScroller = sections[nextIndex.index].find('.fp-scroller').outerHeight();
+                var positionScroller = mainHeight - heightScroller;
+                var heightIndicator = $('.iScrollIndicator').height();
+                console.log(heightIndicator);
+                var indicatorChange = heightScroller - heightIndicator;
+                console.log(indicatorChange);
+                //sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ positionScroller +')');
+                //sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
                 // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
 
             }
-            for (var y = nextIndex.index+1; y < sections.length; y++) {
+            for (var y = nextIndex.index + 1; y < sections.length; y++) {
                 sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
                 // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
@@ -225,8 +231,6 @@ $(document).ready(function () {
                                 console.log('bottom');
                             sections[nextIndex.index].css('pointer-events', 'auto');
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-                            //$.fn.fullpage.setAllowScrolling(true);
-                            //$(window).unbind('wheel');
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
