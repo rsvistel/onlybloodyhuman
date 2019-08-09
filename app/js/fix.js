@@ -72,34 +72,7 @@ $(document).ready(function () {
                         $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
                     }
                     $(window).bind('wheel', function (e) {
-                        if (progressLine == false) {
-                            $(".progress-line").each(function () {
-                                var diff = $(this).offset().top;
-                                var heightWindow = $(window).height();
-                                var res = diff - heightWindow;
-                                var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
-                                current_transform = Math.abs(current_transform);
-                                if (current_transform > res) {
-                                    animateStat($(this))
-                                }
-                            });
-                            setTimeout(function () {
-                                progressLine = true;
-                            }, 3000);
-
-                            function animateStat(item) {
-                                if (!item.find('.progress-line-gray').hasClass('animated')) {
-                                    var width;
-                                    var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
-                                    for (var i = 0; i < classListArray.length; i++) {
-                                        if (classListArray[i].includes('progress-line-gray-')) {
-                                            width = classListArray[i].replace('progress-line-gray-', '')
-                                        }
-                                    }
-                                    item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
-                                }
-                            }
-                        }
+                       animateProgressBar();
                     });
                 }
                 longSectionScrolling();
@@ -226,7 +199,7 @@ $(document).ready(function () {
                             }
                         } else {
                             sectionScroll = sectionScroll + event.deltaY;
-                            if (sectionScroll <= $(window).height()) {
+                            if (sectionScroll <= sectionStartPosition) {
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sections[nextIndex.index].offset().top + 'px, 0px)');
                             } else {
@@ -277,6 +250,8 @@ $(document).ready(function () {
                     if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
                     return (rep/1000).toFixed(rep % 1000 != 0);
                 }
+
+             animateProgressBar();
             }
         }
     });
@@ -509,6 +484,36 @@ $(document).ready(function () {
             $('#arrow-tools-tablet').animate({'left': prop}, 400);
         }
     });
+function animateProgressBar() {
+    if (progressLine == false) {
+        $(".progress-line").each(function () {
+            var diff = $(this).offset().top;
+            var heightWindow = $(window).height();
+            var res = diff - heightWindow;
+            var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
+            current_transform = Math.abs(current_transform);
+            if (current_transform > res) {
+                animateStat($(this))
+            }
+        });
+        setTimeout(function () {
+            progressLine = true;
+        }, 3000);
+
+        function animateStat(item) {
+            if (!item.find('.progress-line-gray').hasClass('animated')) {
+                var width;
+                var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
+                for (var i = 0; i < classListArray.length; i++) {
+                    if (classListArray[i].includes('progress-line-gray-')) {
+                        width = classListArray[i].replace('progress-line-gray-', '')
+                    }
+                }
+                item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
+            }
+        }
+    }
+}
     var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
     var followers;
     $.ajax({
