@@ -64,6 +64,9 @@ $(document).ready(function () {
                   $.fn.fullpage.setAllowScrolling(false);
                   setTimeout(function(){ bindTools() }, 700)
                 }
+                // if(sections[index] === 2 && direction === 'up') {
+                //     $.fn.fullpage.setAllowScrolling(true);
+                // }
             }  else if(sections[nextIndex.index].attr("id") === "section-about" ) {
                 $.fn.fullpage.setAllowScrolling(false);
                 if (isDesktop) {
