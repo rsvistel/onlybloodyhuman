@@ -212,27 +212,6 @@ $(document).ready(function () {
             //     });
             //   }
 
-            // for (var b = 0; b < nextIndex.index; b++) {
-            //     var mainHeight = $(window).height();
-            //     var heightScroller = sections[nextIndex.index].find('.fp-scroller').outerHeight();
-            //     var positionScroller = mainHeight - heightScroller;
-            //     //sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
-            //     sections[b].find('.fp-scroller').css('transform', 'translate(0px, -'+ positionScroller +'px)');
-                //sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ Math.round(positionScroller) +')');
-                // var heightIndicator = $('.iScrollIndicator').height();
-                // var indicatorChange = heightScroller - heightIndicator;
-                // console.log(heightIndicator);
-                // console.log(indicatorChange);
-                //sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ positionScroller +')');
-                //sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
-                // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
-
-            //}
-            // for (var y = nextIndex.index + 1; y < sections.length; y++) {
-            //     //sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-            //     sections[y].find('.fp-scroller').css('transform', 'translate(0px, -'+ positionScroller +'px)');
-            // }
-
             function longSectionScrolling() {
                 var sectionStartPosition;
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
@@ -249,7 +228,6 @@ $(document).ready(function () {
                         sections[nextIndex.index].css('pointer-events', 'none');
                         if (delta > 0) {
                             sectionScroll = sectionScroll + event.deltaY;
-                            //sections[nextIndex.index].css('pointer-events', 'none');
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
                                 $.fn.fullpage.setAllowScrolling(true);
