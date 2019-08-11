@@ -260,7 +260,7 @@ $(document).ready(function () {
                             sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll <= $(window).height()) {
                                sections[nextIndex.index].css('pointer-events', 'auto');
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sections[nextIndex.index].offset().top + 'px, 0px)');
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
