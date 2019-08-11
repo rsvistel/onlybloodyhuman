@@ -51,9 +51,7 @@ $(document).ready(function () {
         scrollOverflow: true,
         responsiveWidth: 1000,
         verticalCentered: false,
-        allowPageScroll: true,
         lazyLoading: false,
-
         onLeave: function (index, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
             if (nextIndex.index > dots.length - 1) {
@@ -203,23 +201,36 @@ $(document).ready(function () {
                 // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
 
+            // if((nextIndex.index == 1) && (direction =='up')) {
+            //     //$.fn.fullpage.moveSectionUp();
+            //     var iscroll = $('#section-about').find('.fp-scrollable').data('iscrollInstance');
+            //     iscroll.scrollTo(0, -200);
+            //     var scrollToBottom = $(window).height() - $('.fp-scroller').height();
+            //     console.log(scrollToBottom);
+            //     $('.fp-scroller').css({
+            //       'transform' : 'translate(0px, ' + scrollToBottom + 'px) translateZ(0px)'
+            //     });
+            //   }
+
             // for (var b = 0; b < nextIndex.index; b++) {
             //     var mainHeight = $(window).height();
             //     var heightScroller = sections[nextIndex.index].find('.fp-scroller').outerHeight();
             //     var positionScroller = mainHeight - heightScroller;
-            //     var heightIndicator = $('.iScrollIndicator').height();
-            //     sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ positionScroller +')');
-            //     console.log(heightIndicator);
-            //     var indicatorChange = heightScroller - heightIndicator;
-            //     console.log(indicatorChange);
-            //     //sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ positionScroller +')');
             //     //sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
-            //     // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
+            //     sections[b].find('.fp-scroller').css('transform', 'translate(0px, -'+ positionScroller +'px)');
+                //sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ Math.round(positionScroller) +')');
+                // var heightIndicator = $('.iScrollIndicator').height();
+                // var indicatorChange = heightScroller - heightIndicator;
+                // console.log(heightIndicator);
+                // console.log(indicatorChange);
+                //sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ positionScroller +')');
+                //sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
+                // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
 
-            // }
+            //}
             // for (var y = nextIndex.index + 1; y < sections.length; y++) {
-            //     sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-            //     // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
+            //     //sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+            //     sections[y].find('.fp-scroller').css('transform', 'translate(0px, -'+ positionScroller +'px)');
             // }
 
             function longSectionScrolling() {
@@ -238,6 +249,7 @@ $(document).ready(function () {
                         sections[nextIndex.index].css('pointer-events', 'none');
                         if (delta > 0) {
                             sectionScroll = sectionScroll + event.deltaY;
+                            //sections[nextIndex.index].css('pointer-events', 'none');
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
                                 $.fn.fullpage.setAllowScrolling(true);
@@ -247,7 +259,7 @@ $(document).ready(function () {
                         } else {
                             sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll <= $(window).height()) {
-                                sections[nextIndex.index].css('pointer-events', 'auto');
+                               sections[nextIndex.index].css('pointer-events', 'auto');
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sections[nextIndex.index].offset().top + 'px, 0px)');
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
