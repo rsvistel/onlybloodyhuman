@@ -51,20 +51,20 @@ $(document).ready(function () {
         scrollOverflow: true,
         responsiveWidth: 1000,
         verticalCentered: false,
-        allowPageScroll: true,
         lazyLoading: false,
-
         onLeave: function (index, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
             if (nextIndex.index > dots.length - 1) {
                 dots[dots.length - 1].addClass('active');
 
-            } else if(sections[nextIndex.index].attr("id") === "section-tools") {
-                if (!($(window).width() < 1025)){
-                  $.fn.fullpage.setAllowScrolling(false);
-                  setTimeout(function(){ bindTools() }, 700)
+            } else if (sections[nextIndex.index].attr("id") === "section-tools") {
+                if (!($(window).width() < 1025)) {
+                    $.fn.fullpage.setAllowScrolling(false);
+                    setTimeout(function () {
+                        bindTools()
+                    }, 700)
                 }
-            }  else if(sections[nextIndex.index].attr("id") === "section-about" ) {
+            } else if (sections[nextIndex.index].attr("id") === "section-about") {
                 $.fn.fullpage.setAllowScrolling(false);
                 if (isDesktop) {
                     $(window).unbind('wheel');
@@ -72,13 +72,43 @@ $(document).ready(function () {
                         $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
                     }
                     $(window).bind('wheel', function (e) {
-                       animateProgressBar();
+                        if (progressLine == false) {
+                            $(".progress-line").each(function () {
+                                var diff = $(this).offset().top;
+                                var heightWindow = $(window).height();
+                                var res = diff - heightWindow;
+                                var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
+                                current_transform = Math.abs(current_transform);
+                                if (current_transform > res) {
+                                    animateStat($(this))
+                                }
+                            });
+                            setTimeout(function () {
+                                progressLine = true;
+                            }, 3000);
+
+                            function animateStat(item) {
+                                if (!item.find('.progress-line-gray').hasClass('animated')) {
+                                    var width;
+                                    var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
+                                    for (var i = 0; i < classListArray.length; i++) {
+                                        if (classListArray[i].includes('progress-line-gray-')) {
+                                            width = classListArray[i].replace('progress-line-gray-', '')
+                                        }
+                                    }
+                                    item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
+                                }
+                            }
+                        }
                     });
                 }
-                longSectionScrolling();
+                if (direction === 'up') {
+                    longSectionScrollingUp();
+                } else if (direction === 'down') {
+                    longSectionScrolling();
+                }
 
-            }
-            else if(sections[nextIndex.index].attr("id") === "section-instagram") {
+            } else if (sections[nextIndex.index].attr("id") === "section-instagram") {
                 $.fn.fullpage.setAllowScrolling(false);
                 $(window).bind('wheel', function (e) {
                     if (insta == false) {
@@ -97,28 +127,6 @@ $(document).ready(function () {
                             insta = true;
                         }, 200);
 
-                        function animateCounter() {
-                            $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
-                            var count = 1;
-                            var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
-                            var followers;
-                            $.ajax({
-                                method: 'GET',
-                                url: url,
-                                dataType: 'jsonp',
-                                jsonp: 'callback',
-                                success: function (response) {
-                                    followers = parseFloat(getRepString(response.data.counts.followed_by));
-                                }
-                            });
-                            countdown = setInterval(function () {
-                                if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
-                                    $("span.countup").html(count + "k");
-                                    count += 0.1;
-                                    count = parseFloat(count.toFixed(1));
-                                }
-                            }, 3);
-                        }
                     }
                 });
                 longSectionScrolling();
@@ -145,19 +153,19 @@ $(document).ready(function () {
             if ($(window).width() < 1025) {
                 $('.inner-content-section-banner-fixed').on("click", function () {
                     $('.whole-text-left-logo').animate({'opacity': '1'});
-                    setTimeout(function(){
+                    setTimeout(function () {
                         $('.whole-text-left-logo').animate({'opacity': '0'});
                     }, 3000);
                 });
                 if (nextIndex.index == 0) {
                     $('.whole-text-left-logo').css('opacity', '1');
-                }else {
+                } else {
                     $('.whole-text-left-logo').css('opacity', '0');
                 }
-                if (sections[nextIndex.index].hasClass('mobile-swap-color')){
+                if (sections[nextIndex.index].hasClass('mobile-swap-color')) {
                     $('.change-color').css('opacity', '1');
                     $('.current-color').css('opacity', '0');
-                }else{
+                } else {
                     $('.change-color').css('opacity', '0');
                     $('.current-color').css('opacity', '1');
                 }
@@ -167,15 +175,34 @@ $(document).ready(function () {
                 var heightWindows = $(window).height();
                 var height = sections[b].find('.fp-scroller').outerHeight();
                 var change = heightWindows - height;
-                sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, '+ change +')');
+                sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + change + ')');
+                // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
+
             }
-            for (var y = nextIndex.index+1; y < sections.length; y++) {
+            for (var y = nextIndex.index + 1; y < sections.length; y++) {
                 sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+                // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
+
+            // if((nextIndex.index === 1) && (direction ==='up')) {
+            //        longSectionScrolling();
+            // //     //$.fn.fullpage.moveSectionUp();
+            // //     var iscroll = $('#section-about').find('.fp-scrollable').data('iscrollInstance');
+            // //     iscroll.scrollTo(0, -200);
+            // //     var scrollToBottom = $(window).height() - $('.fp-scroller').height();
+            // //     console.log(scrollToBottom);
+            // //     $('.fp-scroller').css({
+            // //       'transform' : 'translate(0px, ' + scrollToBottom + 'px) translateZ(0px)'
+            // //     });
+            // } else
+            // if ((nextIndex.index === 1) && (direction ==='up')) {
+            //     longSectionScrollingUp();
+            // } else if ((nextIndex.index === 1) && (direction ==='down')) {
+            //     longSectionScrolling();
+            // }
 
             function longSectionScrolling() {
                 var sectionStartPosition;
-                var windowHeightScroll = $(window).height();
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
                     sectionStartPosition = instagramStartPosition;
                 } else {
@@ -200,16 +227,15 @@ $(document).ready(function () {
                             sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll <= sectionStartPosition) {
                                 sections[nextIndex.index].css('pointer-events', 'auto');
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sections[nextIndex.index].offset().top + 'px, 0px)');
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
                         }
-                    } else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        var delta = e.originalEvent.deltaY;
-                        if (delta < 0) {
-                            console.log('top');
-                            sections[nextIndex.index].css('pointer-events', 'none');
+                    } else if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                        var delta1 = e.originalEvent.deltaY;
+                        sections[nextIndex.index].css('pointer-events', 'none');
+                        if (delta1 < 0) {
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             if (sectionScroll < sectionStartPosition - $(window).height() / 100 * 20) {
@@ -217,42 +243,86 @@ $(document).ready(function () {
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
                             }
-                        } else  {
-                            // sectionScroll = sectionScroll + event.deltaY;
-                            // if (sectionScroll >= windowHeightScroll) {
-                            // console.log('bottom');
-                            // sections[nextIndex.index].css('pointer-events', 'auto');
-                            // $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-                            // } else {
-                            //     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            // }
+                        } else {
+                            sectionScroll = sectionScroll + event.deltaY;
+                            if (sectionScroll >= sectionStartPosition) {
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+                            } else {
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            }
+                        }
+                    }
+                });
+            }
+
+            function longSectionScrollingUp() {
+                var sectionStartPositionAbout;
+                if (sections[nextIndex.index].attr('id') === "section-instagram") {
+                    sectionStartPositionAbout = instagramStartPosition;
+                } else {
+                    sectionStartPositionAbout = sections[nextIndex.index].offset().top;
+                }
+                // var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
+                // var sectionEnd = $(window).height() - sectionHeight;
+                var sectionScrollAbout = sectionStartPositionAbout;
+                $(window).bind('wheel', function (e) {
+                    if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                        var delta1 = e.originalEvent.deltaY;
+                        sections[nextIndex.index].css('pointer-events', 'none');
+                        if (delta1 < 0) {
+                            sectionScrollAbout = sectionScrollAbout + event.deltaY;
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
+                            if (sectionScrollAbout < sectionStartPositionAbout - $(window).height() / 100 * 20) {
+                                $.fn.fullpage.setAllowScrolling(true);
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $(window).unbind('wheel');
+                            }
+                        } else {
+                            sectionScrollAbout = sectionScrollAbout + event.deltaY;
+                            if (sectionScrollAbout >= sectionStartPositionAbout) {
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPositionAbout + 'px, 0px)');
+                                $.fn.fullpage.setAllowScrolling(true);
+                            } else {
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
+                                $.fn.fullpage.setAllowScrolling(true);
+                            }
                         }
                     }
                 });
             }
         },
-        afterLoad: function(origin){
-            if(origin.anchor == 'contact'){
-                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
-                var followers;
-                $.ajax({
-                    method: 'GET',
-                    url: url,
-                    dataType: 'jsonp',
-                    jsonp: 'callback',
-                    success: function (response) {
-                        followers = parseFloat(getRepString(response.data.counts.followed_by));
-                        $('.countup').html((parseFloat(followers)) + 'k');
+        afterLoad: function (origin) {
+            // $('.dots-block-section-banner').click(function () {
+                if (origin.anchor == 'contact') {
+                    // if( insta == false){
+                    //     animateCounter();
+                        // setTimeout(function () {
+                        //     insta = true;
+                        // }, 200);
                     }
-                });
-                function getRepString (rep) {
-                    rep = rep+'';
-                    if (rep < 1000) return rep;
-                    if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-                    return (rep/1000).toFixed(rep % 1000 != 0);
+                // }
+            // });
+            var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
+            var followers;
+            $.ajax({
+                method: 'GET',
+                url: url,
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                success: function (response) {
+                    followers = parseFloat(getRepString(response.data.counts.followed_by));
                 }
-
-             animateProgressBar();
+            });
+            function getRepString (rep) {
+                rep = rep+'';
+                if (rep < 1000) return rep;
+                if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+                return (rep/1000).toFixed(rep % 1000 != 0);
+            }
+            if( insta == false) {
+                animateCounter();
             }
         }
     });
@@ -485,56 +555,6 @@ $(document).ready(function () {
             $('#arrow-tools-tablet').animate({'left': prop}, 400);
         }
     });
-function animateProgressBar() {
-    // if (progressLine == false) {
-    // if (!$('.progress-line').find('.progress-line-gray').hasClass('animated')){
-    $(".progress-line").each(function () {
-        // var test = $('.progress-line').find('.progress-line-gray').addClass('active');
-        var diff = $(this).offset().top;
-        var heightWindow = $(window).height();
-        var res = diff - heightWindow;
-        var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
-        current_transform = Math.abs(current_transform);
-        if (current_transform > res) {
-            animateStat($(this))
-        }
-    });
-    setTimeout(function () {
-        progressLine = true;
-    }, 3000);
-
-    function animateStat(item) {
-        if (!item.find('.progress-line-gray').hasClass('animated')) {
-            var width;
-            var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
-            for (var i = 0; i < classListArray.length; i++) {
-                $('.progress-line').find('.progress-line-gray').removeClass('active');
-                if (classListArray[i].includes('progress-line-gray-')) {
-                    width = classListArray[i].replace('progress-line-gray-', '')
-                }
-            }
-            item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
-            // progressLine = true;
-            // $(".progress-line").each(function () {
-            //     if (!(this).hasClass('animated')) {
-            //         progressLine = true;
-            //     }
-            // });
-        }
-    }
-}
-    var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
-    var followers;
-    $.ajax({
-        method: 'GET',
-        url: url,
-        dataType: 'jsonp',
-        jsonp: 'callback',
-        success: function (response) {
-            followers = parseFloat(getRepString(response.data.counts.followed_by));
-            $('.countup').html(parseInt(parseFloat(followers)) + 'k');
-        }
-    });
     function getRepString (rep) {
         rep = rep+'';
         if (rep < 1000) return rep;
@@ -542,9 +562,9 @@ function animateProgressBar() {
         return (rep/1000).toFixed(rep % 1000 != 0);
     }
     function animateCounter() {
-        $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
+        // $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
         var count = 1;
-        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
         var followers;
         $.ajax({
             method: 'GET',
@@ -555,6 +575,12 @@ function animateProgressBar() {
                 followers = parseFloat(getRepString(response.data.counts.followed_by));
             }
         });
+        function getRepString (rep) {
+            rep = rep+'';
+            if (rep < 1000) return rep;
+            if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+            return (rep/1000).toFixed(rep % 1000 != 0);
+        }
         countdown = setInterval(function () {
             if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
                 $("span.countup").html(count + "k");
