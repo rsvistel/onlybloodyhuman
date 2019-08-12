@@ -212,32 +212,44 @@ $(document).ready(function () {
                 var sectionScroll = sectionStartPosition;
                 $(window).bind('wheel', function (e) {
                     if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(sectionEnd) + ')') {
-                        console.log('down');
+                        console.log('down sectionEnd');
                         var delta = e.originalEvent.deltaY;
                         sections[nextIndex.index].css('pointer-events', 'none');
+                        console.log( 'down sectionEnd delta', delta);
                         if (delta > 0) {
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            console.log('down sectionEnd sectionScroll', sectionScroll)
                             if (sectionScroll > sectionHeight / 100 * 20 + sectionStartPosition) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
-                            }
+                                console.log('if')
+                            } 
+                            // else if (sectionScroll < sectionHeight / 100 * 20 + sectionStartPosition){
+                            //     console.log('else')
+                            //     $.fn.fullpage.setAllowScrolling(true);
+                            //     sections[nextIndex.index].css('pointer-events', 'auto');
+                            //     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            //     $(window).unbind('wheel');
+                            // }
                         } else {
                             sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll <= sectionStartPosition) {
                                sections[nextIndex.index].css('pointer-events', 'auto');
+                               console.log('down sectionEnd sectionStartPosition', sectionStartPosition)
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
+                                console.log('down sectionEnd sectionScroll', sectionScroll)
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
                         }
                     }
                     else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        console.log('up');
+                        console.log('up 0');
                         var deltaUp = e.originalEvent.deltaY;
                         sections[nextIndex.index].css('pointer-events', 'none');
-                        console.log(deltaUp);
+                        console.log( 'up 0', deltaUp);
                         if (deltaUp < 0) {
                             sectionScroll = sectionScroll + event.deltaY;
                             console.log(sectionScroll);
@@ -248,14 +260,14 @@ $(document).ready(function () {
                                 $(window).unbind('wheel');
                             }
                         } else  {
-                            console.log('down');
+                            console.log('down 0');
                            sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll >= sectionStartPosition) {
                             sections[nextIndex.index].css('pointer-events', 'auto');
-                            console.log(sectionStartPosition);
+                            console.log('down 0', sectionStartPosition);
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
-                                console.log(sectionScroll);
+                                console.log('down 0', sectionScroll);
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
                         }
