@@ -100,11 +100,12 @@ $(document).ready(function () {
                         }
                     });
                 }
-                if (direction ==='up') {
-                    longSectionScrollingUp();
-                } else if (direction ==='down') {
-                    longSectionScrolling();
-                }
+                longSectionScrolling();
+                // if (direction ==='up') {
+                //     longSectionScrollingUp();
+                // } else if (direction ==='down') {
+                //     longSectionScrolling();
+                // }
 
             }
             else if(sections[nextIndex.index].attr("id") === "section-instagram") {
@@ -234,12 +235,13 @@ $(document).ready(function () {
                 var sectionScroll = sectionStartPosition;
                 $(window).bind('wheel', function (e) {
                     if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(sectionEnd) + ')') {
+                        console.log('down');
                         var delta = e.originalEvent.deltaY;
                         sections[nextIndex.index].css('pointer-events', 'none');
                         if (delta > 0) {
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
+                            if (sectionScroll > sectionHeight / 100 * 20 + sectionStartPosition) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
@@ -254,65 +256,72 @@ $(document).ready(function () {
                             }
                         }
                     }
-                    // else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                    //     var delta1 = e.originalEvent.deltaY;
-                    //     sections[nextIndex.index].css('pointer-events', 'none');
-                    //     if (delta1 < 0) {
-                    //         sectionScroll = sectionScroll + event.deltaY;
-                    //         $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                    //         if (sectionScroll < sectionStartPosition - $(window).height() / 100 * 20) {
-                    //             $.fn.fullpage.setAllowScrolling(true);
-                    //             sections[nextIndex.index].css('pointer-events', 'auto');
-                    //             $(window).unbind('wheel');
-                    //         }
-                    //     } else  {
-                    //        sectionScroll = sectionScroll + event.deltaY;
-                    //         if (sectionScroll >= sectionStartPosition) {
-                    //         sections[nextIndex.index].css('pointer-events', 'auto');
-                    //         $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-                    //         } else {
-                    //             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                    //         }
-                    //     }
-                    // }
-                });
-            }
-            function longSectionScrollingUp(){
-                var sectionStartPositionAbout;
-                if (sections[nextIndex.index].attr('id') === "section-instagram") {
-                    sectionStartPositionAbout = instagramStartPosition;
-                } else {
-                    sectionStartPositionAbout = sections[nextIndex.index].offset().top;
-                }
-                // var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
-                // var sectionEnd = $(window).height() - sectionHeight;
-                var sectionScrollAbout = sectionStartPositionAbout;
-                $(window).bind('wheel', function (e) {
-            if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                    var delta1 = e.originalEvent.deltaY;
-                    sections[nextIndex.index].css('pointer-events', 'none');
-                    if (delta1 < 0) {
-                        sectionScrollAbout = sectionScrollAbout + event.deltaY;
-                        $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
-                        if (sectionScrollAbout < sectionStartPositionAbout - $(window).height() / 100 * 20) {
-                            $.fn.fullpage.setAllowScrolling(true);
+                    else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                        console.log('up');
+                        var deltaUp = e.originalEvent.deltaY;
+                        sections[nextIndex.index].css('pointer-events', 'none');
+                        console.log(deltaUp);
+                        if (deltaUp < 0) {
+                            sectionScroll = sectionScroll + event.deltaY;
+                            console.log(sectionScroll);
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            if (sectionScroll < sectionStartPosition - sectionHeight / 100 * 20) {
+                                $.fn.fullpage.setAllowScrolling(true);
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $(window).unbind('wheel');
+                            }
+                        } else  {
+                            console.log('down');
+                           sectionScroll = sectionScroll + event.deltaY;
+                            if (sectionScroll >= sectionStartPosition) {
                             sections[nextIndex.index].css('pointer-events', 'auto');
-                            $(window).unbind('wheel');
-                        }
-                    } else  {
-                        sectionScrollAbout = sectionScrollAbout + event.deltaY;
-                        if (sectionScrollAbout >= sectionStartPositionAbout) {
-                            sections[nextIndex.index].css('pointer-events', 'auto');
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPositionAbout + 'px, 0px)');
-                            $.fn.fullpage.setAllowScrolling(true);
-                        } else {
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
-                            $.fn.fullpage.setAllowScrolling(true);
+                            console.log(sectionStartPosition);
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+                            } else {
+                                //$.fn.fullpage.setAllowScrolling(true);
+                                console.log(sectionScroll);
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            }
                         }
                     }
-                }
                 });
             }
+            // function longSectionScrollingUp(){
+            //     var sectionStartPositionAbout;
+            //     if (sections[nextIndex.index].attr('id') === "section-instagram") {
+            //         sectionStartPositionAbout = instagramStartPosition;
+            //     } else {
+            //         sectionStartPositionAbout = sections[nextIndex.index].offset().top;
+            //     }
+            //     // var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
+            //     // var sectionEnd = $(window).height() - sectionHeight;
+            //     var sectionScrollAbout = sectionStartPositionAbout;
+            //     $(window).bind('wheel', function (e) {
+            // if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+            //         var delta1 = e.originalEvent.deltaY;
+            //         sections[nextIndex.index].css('pointer-events', 'none');
+            //         if (delta1 < 0) {
+            //             sectionScrollAbout = sectionScrollAbout + event.deltaY;
+            //             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
+            //             if (sectionScrollAbout < sectionStartPositionAbout - $(window).height() / 100 * 20) {
+            //                 $.fn.fullpage.setAllowScrolling(true);
+            //                 sections[nextIndex.index].css('pointer-events', 'auto');
+            //                 $(window).unbind('wheel');
+            //             }
+            //         } else  {
+            //             sectionScrollAbout = sectionScrollAbout + event.deltaY;
+            //             if (sectionScrollAbout >= sectionStartPositionAbout) {
+            //                 sections[nextIndex.index].css('pointer-events', 'auto');
+            //                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPositionAbout + 'px, 0px)');
+            //                 $.fn.fullpage.setAllowScrolling(true);
+            //             } else {
+            //                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
+            //                 $.fn.fullpage.setAllowScrolling(true);
+            //             }
+            //         }
+            //     }
+            //     });
+            // }
         },
         afterLoad: function(origin){
             // if(origin.anchor == 'contact'){
