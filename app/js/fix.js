@@ -101,12 +101,6 @@ $(document).ready(function () {
                     });
                 }
                 longSectionScrolling();
-                // if (direction ==='up') {
-                //     longSectionScrollingUp();
-                // } else if (direction ==='down') {
-                //     longSectionScrolling();
-                // }
-
             }
             else if(sections[nextIndex.index].attr("id") === "section-instagram") {
                 $.fn.fullpage.setAllowScrolling(false);
@@ -206,23 +200,6 @@ $(document).ready(function () {
                 // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
 
-            // if((nextIndex.index === 1) && (direction ==='up')) {
-            //        longSectionScrolling();
-            // //     //$.fn.fullpage.moveSectionUp();
-            // //     var iscroll = $('#section-about').find('.fp-scrollable').data('iscrollInstance');
-            // //     iscroll.scrollTo(0, -200);
-            // //     var scrollToBottom = $(window).height() - $('.fp-scroller').height();
-            // //     console.log(scrollToBottom);
-            // //     $('.fp-scroller').css({
-            // //       'transform' : 'translate(0px, ' + scrollToBottom + 'px) translateZ(0px)'
-            // //     });
-            // } else
-            // if ((nextIndex.index === 1) && (direction ==='up')) {
-            //     longSectionScrollingUp();
-            // } else if ((nextIndex.index === 1) && (direction ==='down')) {
-            //     longSectionScrolling();
-            // }
-
             function longSectionScrolling() {
                 var sectionStartPosition;
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
@@ -278,7 +255,6 @@ $(document).ready(function () {
                             console.log(sectionStartPosition);
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
-                                //$.fn.fullpage.setAllowScrolling(true);
                                 console.log(sectionScroll);
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
@@ -286,42 +262,6 @@ $(document).ready(function () {
                     }
                 });
             }
-            // function longSectionScrollingUp(){
-            //     var sectionStartPositionAbout;
-            //     if (sections[nextIndex.index].attr('id') === "section-instagram") {
-            //         sectionStartPositionAbout = instagramStartPosition;
-            //     } else {
-            //         sectionStartPositionAbout = sections[nextIndex.index].offset().top;
-            //     }
-            //     // var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
-            //     // var sectionEnd = $(window).height() - sectionHeight;
-            //     var sectionScrollAbout = sectionStartPositionAbout;
-            //     $(window).bind('wheel', function (e) {
-            // if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-            //         var delta1 = e.originalEvent.deltaY;
-            //         sections[nextIndex.index].css('pointer-events', 'none');
-            //         if (delta1 < 0) {
-            //             sectionScrollAbout = sectionScrollAbout + event.deltaY;
-            //             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
-            //             if (sectionScrollAbout < sectionStartPositionAbout - $(window).height() / 100 * 20) {
-            //                 $.fn.fullpage.setAllowScrolling(true);
-            //                 sections[nextIndex.index].css('pointer-events', 'auto');
-            //                 $(window).unbind('wheel');
-            //             }
-            //         } else  {
-            //             sectionScrollAbout = sectionScrollAbout + event.deltaY;
-            //             if (sectionScrollAbout >= sectionStartPositionAbout) {
-            //                 sections[nextIndex.index].css('pointer-events', 'auto');
-            //                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPositionAbout + 'px, 0px)');
-            //                 $.fn.fullpage.setAllowScrolling(true);
-            //             } else {
-            //                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
-            //                 $.fn.fullpage.setAllowScrolling(true);
-            //             }
-            //         }
-            //     }
-            //     });
-            // }
         },
         afterLoad: function(origin){
             // if(origin.anchor == 'contact'){
