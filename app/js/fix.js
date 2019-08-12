@@ -236,7 +236,7 @@ $(document).ready(function () {
                             }
                         } else {
                             sectionScroll = sectionScroll + event.deltaY;
-                            if (sectionScroll <= $(window).height()) {
+                            if (sectionScroll <= sectionStartPosition) {
                                sections[nextIndex.index].css('pointer-events', 'auto');
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
@@ -256,7 +256,7 @@ $(document).ready(function () {
                             }
                         } else  {
                            sectionScroll = sectionScroll + event.deltaY;
-                            if (sectionScroll >= $(window).height()) {
+                            if (sectionScroll >= sectionStartPosition) {
                             sections[nextIndex.index].css('pointer-events', 'auto');
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
