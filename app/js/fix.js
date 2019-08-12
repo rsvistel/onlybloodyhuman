@@ -201,16 +201,21 @@ $(document).ready(function () {
                 // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
 
-            // if((nextIndex.index == 1) && (direction =='up')) {
-            //     //$.fn.fullpage.moveSectionUp();
-            //     var iscroll = $('#section-about').find('.fp-scrollable').data('iscrollInstance');
-            //     iscroll.scrollTo(0, -200);
-            //     var scrollToBottom = $(window).height() - $('.fp-scroller').height();
-            //     console.log(scrollToBottom);
-            //     $('.fp-scroller').css({
-            //       'transform' : 'translate(0px, ' + scrollToBottom + 'px) translateZ(0px)'
-            //     });
-            //   }
+            // if((nextIndex.index === 1) && (direction ==='up')) {
+            //        longSectionScrolling();
+            // //     //$.fn.fullpage.moveSectionUp();
+            // //     var iscroll = $('#section-about').find('.fp-scrollable').data('iscrollInstance');
+            // //     iscroll.scrollTo(0, -200);
+            // //     var scrollToBottom = $(window).height() - $('.fp-scroller').height();
+            // //     console.log(scrollToBottom);
+            // //     $('.fp-scroller').css({
+            // //       'transform' : 'translate(0px, ' + scrollToBottom + 'px) translateZ(0px)'
+            // //     });
+            // } else if ((nextIndex.index === 0) && (direction ==='up')) {
+            //     longSectionScrolling();
+            // } else if ((nextIndex.index === 1) && (direction ==='down')) {
+            //     longSectionScrolling();
+            // }
 
             function longSectionScrolling() {
                 var sectionStartPosition;
