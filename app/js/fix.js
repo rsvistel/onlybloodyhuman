@@ -293,37 +293,29 @@ $(document).ready(function () {
                 });
             }
         },
-        afterLoad: function (origin) {
-            // $('.dots-block-section-banner').click(function () {
-                if (origin.anchor == 'contact') {
-                    // if( insta == false){
-                    //     animateCounter();
-                        // setTimeout(function () {
-                        //     insta = true;
-                        // }, 200);
+        afterLoad: function () {
+                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
+                var followers;
+                $.ajax({
+                    method: 'GET',
+                    url: url,
+                    dataType: 'jsonp',
+                    jsonp: 'callback',
+                    success: function (response) {
+                        followers = parseFloat(getRepString(response.data.counts.followed_by));
                     }
-                // }
-            // });
-            var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
-            var followers;
-            $.ajax({
-                method: 'GET',
-                url: url,
-                dataType: 'jsonp',
-                jsonp: 'callback',
-                success: function (response) {
-                    followers = parseFloat(getRepString(response.data.counts.followed_by));
+                });
+
+                function getRepString(rep) {
+                    rep = rep + '';
+                    if (rep < 1000) return rep;
+                    if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+                    return (rep / 1000).toFixed(rep % 1000 != 0);
                 }
-            });
-            function getRepString (rep) {
-                rep = rep+'';
-                if (rep < 1000) return rep;
-                if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-                return (rep/1000).toFixed(rep % 1000 != 0);
-            }
-            if( insta == false) {
-                animateCounter();
-            }
+
+                if (insta == false) {
+                    animateCounter();
+                }
         }
     });
 
