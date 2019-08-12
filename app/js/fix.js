@@ -100,7 +100,11 @@ $(document).ready(function () {
                         }
                     });
                 }
-                longSectionScrolling();
+                if (direction ==='up') {
+                    longSectionScrollingUp();
+                } else if (direction ==='down') {
+                    longSectionScrolling();
+                }
 
             }
             else if(sections[nextIndex.index].attr("id") === "section-instagram") {
@@ -110,40 +114,40 @@ $(document).ready(function () {
                         if (isDesktop) {
                             $("span.countup").html("1k");
                         }
-                        var topSecInsta = $('#section-instagram span.countup').offset().top;
-                        var heighttest = $(window).height();
-                        var resInsta = topSecInsta - heighttest;
-                        var current_transform1 = parseInt($('#section-instagram .fp-scroller').css('transform').split(',')[5]);
-                        current_transform1 = (current_transform1);
-                        if (current_transform1 < resInsta) {
-                            animateCounter();
-                        }
-                        setTimeout(function () {
-                            insta = true;
-                        }, 200);
+                        // var topSecInsta = $('#section-instagram span.countup').offset().top;
+                        // var heighttest = $(window).height();
+                        // var resInsta = topSecInsta - heighttest;
+                        // var current_transform1 = parseInt($('#section-instagram .fp-scroller').css('transform').split(',')[5]);
+                        // current_transform1 = (current_transform1);
+                        // if (current_transform1 < resInsta) {
+                        //     animateCounter();
+                        // }
+                        // setTimeout(function () {
+                        //     insta = true;
+                        // }, 200);
 
-                        function animateCounter() {
-                            $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
-                            var count = 1;
-                            var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
-                            var followers;
-                            $.ajax({
-                                method: 'GET',
-                                url: url,
-                                dataType: 'jsonp',
-                                jsonp: 'callback',
-                                success: function (response) {
-                                    followers = parseFloat(getRepString(response.data.counts.followed_by));
-                                }
-                            });
-                            countdown = setInterval(function () {
-                                if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
-                                    $("span.countup").html(count + "k");
-                                    count += 0.1;
-                                    count = parseFloat(count.toFixed(1));
-                                }
-                            }, 3);
-                        }
+                        // function animateCounter() {
+                        //     $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
+                        //     var count = 1;
+                        //     var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+                        //     var followers;
+                        //     $.ajax({
+                        //         method: 'GET',
+                        //         url: url,
+                        //         dataType: 'jsonp',
+                        //         jsonp: 'callback',
+                        //         success: function (response) {
+                        //             followers = parseFloat(getRepString(response.data.counts.followed_by));
+                        //         }
+                        //     });
+                        //     countdown = setInterval(function () {
+                        //         if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
+                        //             $("span.countup").html(count + "k");
+                        //             count += 0.1;
+                        //             count = parseFloat(count.toFixed(1));
+                        //         }
+                        //     }, 3);
+                        // }
                     }
                 });
                 longSectionScrolling();
@@ -211,8 +215,9 @@ $(document).ready(function () {
             // //     $('.fp-scroller').css({
             // //       'transform' : 'translate(0px, ' + scrollToBottom + 'px) translateZ(0px)'
             // //     });
-            // } else if ((nextIndex.index === 0) && (direction ==='up')) {
-            //     longSectionScrolling();
+            // } else
+            // if ((nextIndex.index === 1) && (direction ==='up')) {
+            //     longSectionScrollingUp();
             // } else if ((nextIndex.index === 1) && (direction ==='down')) {
             //     longSectionScrolling();
             // }
@@ -248,51 +253,88 @@ $(document).ready(function () {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
                         }
-                    } else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        var delta = e.originalEvent.deltaY;
-                        sections[nextIndex.index].css('pointer-events', 'none');
-                        if (delta < 0) {
-                            sectionScroll = sectionScroll + event.deltaY;
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sectionScroll < sectionStartPosition - $(window).height() / 100 * 20) {
-                                $.fn.fullpage.setAllowScrolling(true);
-                                sections[nextIndex.index].css('pointer-events', 'auto');
-                                $(window).unbind('wheel');
-                            }
-                        } else  {
-                           sectionScroll = sectionScroll + event.deltaY;
-                            if (sectionScroll >= sectionStartPosition) {
+                    }
+                    // else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                    //     var delta1 = e.originalEvent.deltaY;
+                    //     sections[nextIndex.index].css('pointer-events', 'none');
+                    //     if (delta1 < 0) {
+                    //         sectionScroll = sectionScroll + event.deltaY;
+                    //         $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                    //         if (sectionScroll < sectionStartPosition - $(window).height() / 100 * 20) {
+                    //             $.fn.fullpage.setAllowScrolling(true);
+                    //             sections[nextIndex.index].css('pointer-events', 'auto');
+                    //             $(window).unbind('wheel');
+                    //         }
+                    //     } else  {
+                    //        sectionScroll = sectionScroll + event.deltaY;
+                    //         if (sectionScroll >= sectionStartPosition) {
+                    //         sections[nextIndex.index].css('pointer-events', 'auto');
+                    //         $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+                    //         } else {
+                    //             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                    //         }
+                    //     }
+                    // }
+                });
+            }
+            function longSectionScrollingUp(){
+                var sectionStartPositionAbout;
+                if (sections[nextIndex.index].attr('id') === "section-instagram") {
+                    sectionStartPositionAbout = instagramStartPosition;
+                } else {
+                    sectionStartPositionAbout = sections[nextIndex.index].offset().top;
+                }
+                // var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
+                // var sectionEnd = $(window).height() - sectionHeight;
+                var sectionScrollAbout = sectionStartPositionAbout;
+                $(window).bind('wheel', function (e) {
+            if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                    var delta1 = e.originalEvent.deltaY;
+                    sections[nextIndex.index].css('pointer-events', 'none');
+                    if (delta1 < 0) {
+                        sectionScrollAbout = sectionScrollAbout + event.deltaY;
+                        $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
+                        if (sectionScrollAbout < sectionStartPositionAbout - $(window).height() / 100 * 20) {
+                            $.fn.fullpage.setAllowScrolling(true);
                             sections[nextIndex.index].css('pointer-events', 'auto');
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-                            } else {
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            }
+                            $(window).unbind('wheel');
+                        }
+                    } else  {
+                        sectionScrollAbout = sectionScrollAbout + event.deltaY;
+                        if (sectionScrollAbout >= sectionStartPositionAbout) {
+                            sections[nextIndex.index].css('pointer-events', 'auto');
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPositionAbout + 'px, 0px)');
+                            $.fn.fullpage.setAllowScrolling(true);
+                        } else {
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
+                            $.fn.fullpage.setAllowScrolling(true);
                         }
                     }
+                }
                 });
             }
         },
         afterLoad: function(origin){
-            if(origin.anchor == 'contact'){
-                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
-                var followers;
-                $.ajax({
-                    method: 'GET',
-                    url: url,
-                    dataType: 'jsonp',
-                    jsonp: 'callback',
-                    success: function (response) {
-                        followers = parseFloat(getRepString(response.data.counts.followed_by));
-                        $('.countup').html((parseFloat(followers)) + 'k');
-                    }
-                });
-                function getRepString (rep) {
-                    rep = rep+'';
-                    if (rep < 1000) return rep;
-                    if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-                    return (rep/1000).toFixed(rep % 1000 != 0);
-                }
-            }
+            // if(origin.anchor == 'contact'){
+            //     var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+            //     var followers;
+            //     $.ajax({
+            //         method: 'GET',
+            //         url: url,
+            //         dataType: 'jsonp',
+            //         jsonp: 'callback',
+            //         success: function (response) {
+            //             followers = parseFloat(getRepString(response.data.counts.followed_by));
+            //             $('.countup').html((parseFloat(followers)) + 'k');
+            //         }
+            //     });
+            //     function getRepString (rep) {
+            //         rep = rep+'';
+            //         if (rep < 1000) return rep;
+            //         if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+            //         return (rep/1000).toFixed(rep % 1000 != 0);
+            //     }
+            // }
         }
     });
 
@@ -524,45 +566,45 @@ $(document).ready(function () {
             $('#arrow-tools-tablet').animate({'left': prop}, 400);
         }
     });
-    var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
-    var followers;
-    $.ajax({
-        method: 'GET',
-        url: url,
-        dataType: 'jsonp',
-        jsonp: 'callback',
-        success: function (response) {
-            followers = parseFloat(getRepString(response.data.counts.followed_by));
-            $('.countup').html(parseInt(parseFloat(followers)) + 'k');
-        }
-    });
-    function getRepString (rep) {
-        rep = rep+'';
-        if (rep < 1000) return rep;
-        if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-        return (rep/1000).toFixed(rep % 1000 != 0);
-    }
-    function animateCounter() {
-        $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
-        var count = 1;
-        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
-        var followers;
-        $.ajax({
-            method: 'GET',
-            url: url,
-            dataType: 'jsonp',
-            jsonp: 'callback',
-            success: function (response) {
-                followers = parseFloat(getRepString(response.data.counts.followed_by));
-            }
-        });
-        countdown = setInterval(function () {
-            if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
-                $("span.countup").html(count + "k");
-                count += 0.1;
-                count = parseFloat(count.toFixed(1));
-            }
-        }, 3);
-    }
+    // var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+    // var followers;
+    // $.ajax({
+    //     method: 'GET',
+    //     url: url,
+    //     dataType: 'jsonp',
+    //     jsonp: 'callback',
+    //     success: function (response) {
+    //         followers = parseFloat(getRepString(response.data.counts.followed_by));
+    //         $('.countup').html(parseInt(parseFloat(followers)) + 'k');
+    //     }
+    // });
+    // function getRepString (rep) {
+    //     rep = rep+'';
+    //     if (rep < 1000) return rep;
+    //     if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+    //     return (rep/1000).toFixed(rep % 1000 != 0);
+    // }
+    // function animateCounter() {
+    //     $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
+    //     var count = 1;
+    //     var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.845c61e.3de4192780f14774b2e7dd78cd66a334';
+    //     var followers;
+    //     $.ajax({
+    //         method: 'GET',
+    //         url: url,
+    //         dataType: 'jsonp',
+    //         jsonp: 'callback',
+    //         success: function (response) {
+    //             followers = parseFloat(getRepString(response.data.counts.followed_by));
+    //         }
+    //     });
+    //     countdown = setInterval(function () {
+    //         if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
+    //             $("span.countup").html(count + "k");
+    //             count += 0.1;
+    //             count = parseFloat(count.toFixed(1));
+    //         }
+    //     }, 3);
+    // }
 
 });
