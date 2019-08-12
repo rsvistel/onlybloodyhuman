@@ -8,7 +8,7 @@
   .text-under-img-section-tools {
     padding: 0 2%; }
   #section-tools, .section, .section-instagram {
-    height: auto; }
+    height: auto !important; }
   .outdoor-section {
     height: 75vh; } }
 
@@ -17,6 +17,15 @@
     width: auto; } }
 
 @media (max-width: 768px) {
+  .section {
+    height: auto !important; }
+  #section-tools {
+    height: auto !important; }
+  #section-tools,
+  #section-tools .fp-slide,
+  #section-tools .fp-tableCell,
+  #section-tools .fp-scrollable {
+    height: auto !important; }
   h1 {
     font-size: 24vw;
     line-height: 65px;
@@ -126,8 +135,23 @@
   .job-text-center {
     font-size: 7px;
     z-index: 10; }
+  .dots-block-section-banner embed:first-child {
+    margin: 9.5% 6% 3% 0; }
   .section-instagram-followers a, .section-instagram-followers span {
     font-size: 16px; }
+  .client-contact-list__social--icon.audio embed {
+    height: 18px;
+    width: 4.5vw; }
+  .client-contact-list__img {
+    margin-right: 8%; }
+  .client-contact-list__social--icon.instagram embed {
+    width: 4.3vw;
+    height: 25px; }
+  .client-contact-list__social--icon.telephone embed {
+    width: 4.9vw;
+    height: 25px; }
+  .client-contact-list__social--icon {
+    margin-bottom: 8px; }
   .photo-man-section-about {
     margin-left: 0;
     width: 100%;
@@ -263,18 +287,31 @@
     font-size: 50px;
     margin-bottom: 1vw;
     margin-top: 8vw; }
+  .block-tools-section {
+    padding: 9.5% 0 1.5% 0; }
   .section-instagram__photo:nth-last-child(-n+4) {
     display: none; }
+  .section-instagram__photo:nth-child(5) {
+    border-top: 0.5px solid #f0f2f2; }
   .arrow-down-icon {
     padding: 0 1vw 0.8vw 0; }
-  .block-tools-section {
-    padding: 0; }
   .outdoor-section-block {
-    padding: 0; }
+    padding: 9.5% 0 1.5% 0; }
+  .section-instagram-followers {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    padding: 0% 0 0% 9%; }
+  .section-instagram-followers a, .section-instagram-followers span {
+    font-size: 16px; }
+  .section-instagram-followers a {
+    font-size: 10px;
+    line-height: 3vw; }
   .client-contact-list__text p {
     margin-left: 0; }
   .client-contact-list__text h1 {
-    text-indent: -7px; } }
+    text-indent: -7px; }
+  .video-section-cover {
+    height: 60vw; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -320,12 +357,14 @@
   .dot-section-banner {
     width: 8px;
     height: 8px; }
-  .section-instagram-followers a {
-    line-height: 1.5vw; }
   .arrow-down-section-banner {
     margin-left: 0; } }
 
 @media (max-width: 768px) {
+  .section-outdoor-professional {
+    min-height: auto; }
+  .video-section-cover {
+    z-index: 1; }
   .highlight-hover h2 {
     background-image: none; }
   .client-contact-list__email a {
@@ -348,7 +387,6 @@
     position: static;
     display: block;
     height: auto;
-    background-color: #363531;
     margin-bottom: -5px; }
   .outdoor-section__text {
     width: 100%;
@@ -398,7 +436,7 @@
 @media (max-width: 1000px) and (min-width: 768px) {
   .video-references {
     z-index: 1;
-    height: 80vh; }
+    height: 98vh; }
   #first-section, #section-banner {
     z-index: auto; }
   #section-banner {
@@ -485,8 +523,9 @@
     min-width: initial;
     max-width: initial; }
   .section-instagram-followers {
-    margin-top: 8%;
-    margin-bottom: 8%; }
+    padding: 0 0 0% 9%;
+    margin-top: 4%;
+    margin-bottom: 2%; }
   .text-under-tittles-section-tools.text-under-img-section-tools {
     margin-top: 5px;
     margin-left: 5%; }
@@ -500,6 +539,18 @@
   .section-instagram__photo {
     width: 50%;
     height: 50vw; }
+  .section-instagram__photo:nth-child(2) {
+    border-bottom: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(3) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(4) {
+    border-top: 0.5px solid #f0f2f2;
+    border-bottom: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(5) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(6) {
+    border-top: 0.5px solid #f0f2f2;
+    border-bottom: 0.5px solid #f0f2f2; }
   .logo-client-list-discovery object, .logo-client-list-gsk object {
     min-width: 130px;
     max-width: 150px;
@@ -509,7 +560,11 @@
   .nav-icon embed {
     top: 0; }
   #section-logos {
-    padding: 0.5% 2% 0 2%; } }
+    padding: 0.5% 2% 0 2%; }
+  .nav-icon embed {
+    width: 3vw; }
+  .nav-icon .cross-icon {
+    width: 3vw; } }
 
 @media (min-width: 1000px) and (max-width: 1250px) {
   .text-near-dots {
@@ -802,7 +857,15 @@
   #section-logos {
     height: 30vh; }
   .section-instagram__photo:nth-last-child(-n+4) {
-    display: block; } }
+    display: block; }
+  .section-instagram__photo:nth-child(5) {
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(6) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(2) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(1) {
+    border-top: 0.5px solid #f0f2f2; } }
 
 @media (max-width: 600px) and (orientation: landscape) {
   .whole-text-left-logo {
@@ -905,7 +968,8 @@
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .section-outdoor-professional {
-    position: static; }
+    position: static;
+    min-height: auto; }
   #section-tools .row.section-tools-mobile__button {
     display: block; }
   #section-tools .row.section-tools-mobile {
@@ -945,7 +1009,10 @@
   .text-under-img-section-tools {
     font-size: 11px; }
   .outdoor-section__image .numberCircle {
-    border: 3px #f0f2f2 solid; }
+    border: 3px #f0f2f2 solid;
+    width: 35px;
+    height: 35px;
+    font-size: 14px; }
   .section-instagram__photo embed {
     width: 4vw; }
   .section-instagram__photo span {
@@ -1084,6 +1151,24 @@
   .section-instagram__photo {
     width: 24.67%;
     height: 24.67vw; }
+  .section-instagram__photo:nth-child(n+6) {
+    border-bottom: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(12) {
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(11) {
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(10) {
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(9) {
+    border-bottom: none; }
+  .section-instagram__photo:nth-child(5) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(6) {
+    border-top: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(2) {
+    border-bottom: 0.5px solid #f0f2f2; }
+  .section-instagram__photo:nth-child(1) {
+    border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo embed {
     width: 3vw; }
   .hover-location .location {
@@ -1224,6 +1309,14 @@
     width: 1.7vw;
     top: 0.1vw; } }
 
+@media (max-width: 768px) and (orientation: landscape) {
+  .client-contact-list {
+    width: 100%; } }
+
+@media (min-width: 768px) and (max-width: 825px) and (orientation: landscape) {
+  .client-contact-list {
+    width: 50%; } }
+
 @media (max-width: 825px) and (orientation: landscape) {
   .outdoor-section__image.icon-travel {
     padding: 1vw 4vw 0 5vw; }
@@ -1232,6 +1325,12 @@
   .dots-block-section-banner {
     margin-top: 15vh;
     height: 63vh; }
+  .section-instagram-followers {
+    padding: 1% 0 4% 9%;
+    margin-top: 3%;
+    margin-bottom: 2%; }
+  .nav-icon .cross-icon {
+    width: 5vh; }
   .nav-icon embed {
     width: 5.5vh; }
   .icon-dji-mobile, .icon-movi-mobile, .icon-camera embed {
@@ -1260,3 +1359,18 @@
     background-image: url("../img/s6-contact/phone_mob.jpg"); }
   .video-mobile-vertical {
     display: block; } }
+
+@media (min-width: 1025px) {
+  .text-dots-block:hover embed {
+    opacity: 1; }
+  .text-dots-block:hover .text-near-dots {
+    opacity: 1; } }
+
+@media (min-width: 768px) {
+  .dots-block-section-banner embed:first-child {
+    margin: 3.5% 6% 3% 0; } }
+
+@media (max-width: 375px) {
+  .outdoor-section__image .numberCircle {
+    width: 37px;
+    height: 37px; } }

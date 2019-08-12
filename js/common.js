@@ -78,7 +78,6 @@ $(document).ready(function () {
                             $('.text-near-dots').removeClass('text-gray');
                             $('.text-left-logo').css('color', '#363531');
                             whiteArrow();
-
                         } else {
                             $('.dot-section-banner').addClass('dots-section-gray');
                             $('.text-near-dots').addClass('text-gray');
@@ -197,12 +196,12 @@ $(document).ready(function () {
         } else {
             $('html, body').animate({scrollTop: sections[param].offset().top}, speed);
             active = param;
-        }
-        checkActiveDot();
-        $(document).unbind('wheel');
+        }$(document).unbind('wheel');
         if (progressLine == false) {
             $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
         }
+        checkActiveDot();
+
         // var test =sections[active].attr('id');
         switch (sections[active].attr('id')) {
             case "section-tools":
@@ -475,7 +474,7 @@ $(document).ready(function () {
         $('.change-color').css('opacity','1');
         $('.change-color').css('height','auto');
         $('.dot-section-banner').addClass('dots-section-gray');
-        $('.dots-section-gray').css('transition','2s');
+        $('.dots-section-gray').css('transition','3s');
         $('.dot-section-banner').removeClass('dots-section-white');
     }
     function changeColorUp() {
@@ -484,6 +483,7 @@ $(document).ready(function () {
         $('.change-color').css('height' , '0');
         $('.current-color').css('opacity','1');
         $('.current-color').css('height','auto');
+        $('.dots-section-gray').css('transition','3s');
         $('.dot-section-banner').removeClass('dots-section-gray');
         $('.dot-section-banner').addClass('dots-section-white');
     }
@@ -625,7 +625,6 @@ $(document).ready(function () {
 
     if($(window).width() > 768) {
         $('video.section-outdoor-professional').removeAttr("controls");
-
     }
 
 
@@ -641,4 +640,3 @@ $(document).ready(function () {
     }
 
 });
-

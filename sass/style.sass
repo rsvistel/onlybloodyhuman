@@ -62,6 +62,10 @@ p
   font-family: $secondary-font
   line-height: 1.6vw
 
+a:focus, a:hover
+    color: snow
+    text-decoration: underline
+
 .video-references
   position: absolute
   top: 0
@@ -124,12 +128,14 @@ p
   margin-top: 5px
 
 .left-logo-banner-section object
-  max-width: 2.6%
+  max-width: 2.3%
+  position: absolute
 
 .whole-text-left-logo
   opacity: 0
   animation: fadeout 0.5s
   animation-fill-mode: forwards
+  color: #fff
 
 @keyframes fadeout
   from
@@ -173,26 +179,46 @@ p
   bottom: 0
   right: 0
   z-index: 99999
+  &.black-mode
+    .text-near-dots
+      color: #363531
+    .dot-section-banner
+      background-color: #363531
+      border-color: #363531
+    embed
+      &:first-child
+        visibility: hidden
+      &:last-child
+        visibility: visible
+  embed
+    &:first-child
+      visibility: visible
+      position: absolute
+      margin: 3.5% 6% 3% 0
+    &:last-child
+      visibility: hidden
 
 .dot-section-banner
-  height: 0.4vw
-  width: 0.4vw
+  height: calc(0.4vw + 1px)
+  width: calc(0.4vw + 1px)
   max-width: 8px
   max-height: 8px
   background-color: white
-  border: 1px white solid
   border-radius: 50%
   margin: 0.7vw 0
-  transition: 0.3s
+  //transition: .1s
   cursor: pointer
+  transition: all .1s linear, background-color .3s linear, border-color .7s linear
 
 .dot-section-banner:hover
   background: transparent
   transform: scale(1.8)
 
 .text-dots-block:hover .dot-section-banner, .text-dots-block.active .dot-section-banner
-  background: transparent
+  background: transparent!important
   transform: scale(1.6)
+  border: 1px white solid
+  transition: .1s
 
 body .text-near-dots
   opacity: 0
@@ -212,11 +238,11 @@ body.opened--menu .text-dots-block embed
   opacity: 0
   transition: linear 0.2s
 
-.text-dots-block:hover .text-near-dots
-  opacity: 1
+//.text-dots-block:hover .text-near-dots
+//  opacity: 1
 
-.text-dots-block:hover embed
-  opacity: 1
+//.text-dots-block:hover embed
+//  opacity: 1
 
 .text-dots-block
   display: flex
@@ -230,6 +256,12 @@ body.opened--menu .text-dots-block embed
   transform: rotate(90deg)
   margin: 0 7% 0 5%
   pointer-events: none
+
+.text-dots-block .text-near-dots
+  font-weight: 700
+  font-family: "Montserrat", sans-serif
+  text-transform: uppercase
+  text-decoration: none
 
 .text-near-dots
   color: snow
@@ -275,7 +307,7 @@ body.opened--menu .text-dots-block embed
 
 .whole-text-left-logo
   flex-direction: column
-  margin-left: 10px
+  margin-left: calc(10px + 2.6%)
 
 .arrow-down-section-banner
   display: flex
@@ -326,6 +358,11 @@ body.opened--menu .text-dots-block embed
   z-index: 1
   -webkit-user-select: none
   user-select: none
+  &.black-mode
+    .black-button
+      opacity: 1
+  .black-button
+    opacity: 0
 
 #menuToggle input, #menuToggle-mobile input
   display: block
@@ -611,17 +648,22 @@ body.opened--menu .text-dots-block embed
   background-position: center
   position: relative
 
-  .after
-    position: absolute
-    top: 0
-    bottom: 0
-    right: 0
-    left: 0
-    z-index: 1
-    height: 100vh
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center
+.after
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  z-index: 1
+  height: 100vh
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  &.after-2
+    top: 100%
+    background-image: url("../img/s3-tools/drone_dsk.jpg")
+  &.after-3
+    top: 100%
+    background-image: url("../img/s3-tools/gimbal_dsk.jpg")
 
 .photo-half-section-tools-dji, .photo-half-section-tools-movi
   display: none
@@ -734,6 +776,7 @@ body.opened--menu .text-dots-block embed
 
 .outdoor-section-block button.active, .block-tools-section button.active
   opacity: 1
+  color: #FFFFFF
 
 .video-section-cover
   height: 100vh
@@ -742,6 +785,7 @@ body.opened--menu .text-dots-block embed
   overflow: hidden
   position: relative
   width: 100%
+  //z-index: -1
 
 .outdoor-section
   position: relative
@@ -834,6 +878,7 @@ body.opened--menu .text-dots-block embed
 
 .outdoor-section__image.active, .tools-section__image.active
   visibility: visible
+  //opacity: 1
 
 .arrow-down-icon
   padding: 0 2.9vw 0.8vw 2.9vw
@@ -937,10 +982,11 @@ body.opened--menu .text-dots-block embed
   font-family: $primary-font
   background-color: $primary-color
   color: #ffffff
-  padding-left: 9%
   font-weight: bold
-  margin-top: 4%
-  margin-bottom: 4%
+  // margin-top: 4%
+  // margin-bottom: 4%
+  // padding-left: 9%
+  padding: 4% 0 4% 9%
 
 .section-instagram-followers span
   font-size: 1.8vw
@@ -961,8 +1007,6 @@ body.opened--menu .text-dots-block embed
   padding: 0
   position: relative
   border: 0.5px solid #f0f2f2
-  border-bottom-width: 1px
-
   &:hover .hover-location
     opacity: 1
 
@@ -973,7 +1017,7 @@ body.opened--menu .text-dots-block embed
   border-top: none
 
 .section-instagram__photo:nth-child(n+6)
-  border-bottom: none
+    border-bottom: none
 
 .section-instagram__photo embed
   width: 1.2vw
@@ -1004,7 +1048,7 @@ body.opened--menu .text-dots-block embed
     height: 1vw
     margin-bottom: 0.7vw
 
-.section-instagram-followers embed
+.section-instagram-followers #instagram-counter-icon
   width: 1.8%
   min-width: 16px
   margin-right: 0.55vw
@@ -1019,7 +1063,7 @@ body.opened--menu .text-dots-block embed
 #section-contact
   overflow: hidden
   height: 100vh
-  min-height: 600px
+  //min-height: 600px
 
 #section-contact .row
   display: flex
@@ -1161,7 +1205,7 @@ body.opened--menu .text-dots-block embed
   width: 2.5vw
   height: 1.15vw
 
-.client-contact-list__social--icon.audio a
+.client-contact-list__social--icon.audiogulp a
   text-transform: uppercase
   margin-right: 5px
 
@@ -1172,8 +1216,14 @@ body.opened--menu .text-dots-block embed
   background-position: bottom
   width: 50%
   padding: 0
-  height: 100vh
-  min-height: 600px
+  height: auto
+  min-height: 100vh
+
+#section-tools,
+#section-tools .fp-slide,
+#section-tools .fp-tableCell,
+#section-tools .fp-scrollable
+  height: auto !important
 
 .client-contact-list, .gray-half-section-tools
   display: flex
@@ -1228,9 +1278,9 @@ body.opened--menu .text-dots-block embed
   margin-left: 3px
 
 .current-color, .change-color
-  transition:  opacity 1.5s
-  -o-transition:  opacity 1.5s
-  -webkit-transition: opacity 1.5s
+  transition:  opacity .7s
+  -o-transition:  opacity .7s
+  -webkit-transition: opacity .7s
 
 .block-tools-section
   display: none
@@ -1259,7 +1309,14 @@ body.opened--menu .text-dots-block embed
 .text-dots-block:hover .text-near-dots.text-gray
   color: #363531
 .embed-arrow
-  margin: 3% 6% 3.5% 5%
+  //margin: 3% 6% 3.5% 5%
+  padding: 3% 6% 3.5% 5%
 .embed-arrow embed
   width: 14px
   height: 8px
+// .fp-viewing-3
+//   height: 500px
+.dots-display
+ display: contents
+.text-dots-block:hover a
+  text-decoration: none
