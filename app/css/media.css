@@ -90,7 +90,7 @@
   #menuToggle .nav-icon embed {
     display: block; }
   .embed-arrow {
-    padding: 2% 6% 1% 5%; }
+    padding: 3.5% 6% 1% 5%; }
   #section-about .row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -171,7 +171,7 @@
     right: 0;
     top: 0;
     margin-top: 5%;
-    margin-right: 10%; }
+    margin-right: 9.5%; }
   #menuToggle-mobile span {
     width: 22px;
     height: 3px;
@@ -1393,4 +1393,4 @@
 
 @media only screen and (max-device-width: 375px) {
   #menuToggle-mobile {
-    margin-right: 11%; } }
+    margin-right: 10.5%; } }
