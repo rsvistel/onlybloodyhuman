@@ -197,7 +197,7 @@ $(document).ready(function () {
                         if (delta > 0) {
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sectionScroll > sectionHeight / 100 * 20 + sectionStartPosition) {
+                            if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
