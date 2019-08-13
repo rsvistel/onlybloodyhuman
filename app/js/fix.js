@@ -46,7 +46,7 @@ $(document).ready(function () {
     $('#fullpage').fullpage({
         autoScrolling: true,
         scrollingSpeed: 700,
-        anchors: ['intro', 'about', 'tools', 'skills', 'contact'],
+        anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
         menu: '.dots-block-section-banner',
         css3: true,
         scrollOverflow: true,
