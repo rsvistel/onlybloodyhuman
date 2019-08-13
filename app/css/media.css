@@ -1112,6 +1112,8 @@
     min-height: 350px; } }
 
 @media (max-width: 320px) {
+  .job-section-about {
+    padding-left: 7.5%; }
   .nav-icon embed {
     top: 3px; }
   .icon-camera embed {
@@ -1124,7 +1126,7 @@
   .whole-text-section-about {
     padding: 16% 10% 0 10%; }
   .outdoor-section__text, .client-contact-list {
-    padding: 16% 10%; }
+    padding: 16% 7%; }
   .gray-half-section-tools {
     padding: 16% 10% 0 10%; }
   .text-dots-block {
