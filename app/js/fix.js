@@ -127,7 +127,12 @@ $(document).ready(function () {
                     }
                 });
                 longSectionScrolling();
-            } else {
+            }
+            else if (sections[nextIndex.index].attr("id") === "section-contact") {
+                $.fn.fullpage.setAllowScrolling(true);
+                console.log('contact');
+            }
+            else {
                 dots[nextIndex.index].addClass('active');
             }
             if (sections[nextIndex.index].hasClass('black-right')) {
