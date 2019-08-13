@@ -121,7 +121,7 @@
   .text-under-tittles-section-tools {
     font-size: 1.6vw;
     line-height: 2.88vw;
-    width: 60%; }
+    width: 100%; }
   .outdoor-section hr .img-div-outdoor-section__icons {
     margin: 3% 0 6%; }
   .outdoor-section-block {
@@ -240,7 +240,10 @@
     line-height: 1.8vw; }
   .footer-section img {
     width: 3.8vw;
-    padding: 1vw 0 0; } }
+    padding: 1vw 0 0; }
+  .embed-arrow embed {
+    width: 10px;
+    height: 6px; } }
 
 @media (min-width: 1000px) and (max-width: 1112px) {
   .whole-text-left-logo {
@@ -777,7 +780,10 @@
   .section-instagram__photo:nth-child(2) {
     border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(1) {
-    border-top: 0.5px solid #f0f2f2; } }
+    border-top: 0.5px solid #f0f2f2; }
+  .embed-arrow embed {
+    width: 12px;
+    height: 7px; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .section {
