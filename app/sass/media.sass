@@ -103,7 +103,8 @@
     margin-top: 0
   #menuToggle .nav-icon embed
     display: block
-
+  .embed-arrow
+    padding: 2% 6% 1% 5%
   #section-about .row
     display: flex
     align-items: initial
@@ -191,7 +192,7 @@
     right: 0
     top: 0
     margin-top: 5%
-    margin-right: 10.5%
+    margin-right: 10%
 
   #menuToggle-mobile span
     width: 22px
@@ -953,7 +954,9 @@
   .outdoor-section__image.icon-travel
     padding: 2vw 4vw 0 5vw
   .dots-block-section-banner
-    padding-right: 8.3%
+    padding-right: 7.3%
+  .text-dots-block
+    margin-bottom: 33%
   .nav-icon .cross-icon
     width: 5vh
     max-width: initial
@@ -964,7 +967,8 @@
   .text-center-banner-section
     height: 100vh
     height: -webkit-fill-available
-
+  .dots-block-section-banner embed:first-child
+    margin: 5.5% 6% 3% 0
   .client-contact-list-img
     height: 60vh
 
@@ -1562,8 +1566,9 @@
 
   .img-div-outdoor-section__icons
     margin: 3% 0 4% 0
-
-
+@media (max-width: 320px)
+  #menuToggle-mobile
+    margin-right: 9.5%!important
 @media (min-width: 320px) and (max-width: 480px)
   .mobile-vertical-image
     display: block
@@ -1582,7 +1587,12 @@
 @media(min-width: 768px)
   .dots-block-section-banner embed:first-child
     margin: 3.5% 6% 3% 0
+  .embed-arrow
+    padding: 2.5% 6% 1% 5%
 @media (max-width: 375px)
   .outdoor-section__image .numberCircle
     width: 37px
     height: 37px
+@media only screen and (max-device-width: 375px)
+  #menuToggle-mobile
+    margin-right: 11%
