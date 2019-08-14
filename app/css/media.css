@@ -313,7 +313,8 @@
   .client-contact-list__text h1 {
     text-indent: -7px; }
   .video-section-cover {
-    height: 60vw; } }
+    height: 60vw;
+    z-index: 1; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -455,7 +456,8 @@
     height: 80px;
     margin-top: 3vw; }
   .video-section-cover {
-    height: 60vw; }
+    height: 60vw;
+    z-index: 1; }
   .section-outdoor-professional {
     min-height: auto; }
   .img {
