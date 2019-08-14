@@ -875,9 +875,9 @@
   .section-instagram__photo:nth-child(1) {
     border-top: 0.5px solid #f0f2f2; } }
 
-@media (max-width: 700px) and (orientation: landscape) {
+@media (min-width: 600px) and (max-width: 700px) {
   .dots-block-section-banner embed:first-child {
-    margin: 2.5% 6% 3% 0; } }
+    margin: 4% 6% 3% 0; } }
 
 @media (max-width: 600px) and (orientation: landscape) {
   .whole-text-left-logo {
