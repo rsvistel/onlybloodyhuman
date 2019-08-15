@@ -1,6 +1,7 @@
 $(document).ready(function () {
    var progressLine = false;
    var insta = false;
+   var autoScrolling = true;
     isDesktop = true;
     var isTouchCapable = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -43,8 +44,11 @@ $(document).ready(function () {
     });
     const instagramStartPosition = $("#section-instagram").offset().top;
     const aboutStartPosition = $("#section-about").offset().top;
+
     $('#fullpage').fullpage({
-        autoScrolling: true,
+        autoScrolling: autoScrolling,
+         easingcss3: 'cubic-bezier(0.39, 0.575, 0.565, 1)',
+        //easing: 'ease-in-out',
         scrollingSpeed: 700,
         anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
         menu: '.dots-block-section-banner',
@@ -52,7 +56,6 @@ $(document).ready(function () {
         scrollOverflow: true,
         responsiveWidth: 1000,
         verticalCentered: false,
-        lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
             if (nextIndex.index > dots.length - 1) {
@@ -66,7 +69,8 @@ $(document).ready(function () {
                     }, 700);
                 }
             } else if (sections[nextIndex.index].attr("id") === "section-about") {
-                $.fn.fullpage.setAllowScrolling(false);
+                console.log(autoScrolling, "section-about")
+                //$.fn.fullpage.setAllowScrolling(false);
                 if (isDesktop) {
                     $(window).unbind('wheel');
                     if (progressLine == false) {
@@ -104,6 +108,7 @@ $(document).ready(function () {
                     });
                 }
                 longSectionScrolling();
+                //longSectionNative();
             }
             else if (sections[nextIndex.index].attr("id") === "section-instagram") {
                 $.fn.fullpage.setAllowScrolling(false);
@@ -129,6 +134,7 @@ $(document).ready(function () {
             }
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
                 $.fn.fullpage.setAllowScrolling(true);
+                console.log('contact')
             }
             else {
                 dots[nextIndex.index].addClass('active');
@@ -180,6 +186,68 @@ $(document).ready(function () {
             for (var y = nextIndex.index + 1; y < sections.length; y++) {
                 sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
             }
+            // function longSectionNative() {
+            //     var sectionStartPosition;
+            //     if (sections[nextIndex.index].attr('id') === "section-instagram") {
+            //         sectionStartPosition = instagramStartPosition;
+            //     } else if (sections[nextIndex.index].attr('id') === "section-about") {
+            //         sectionStartPosition = aboutStartPosition;
+            //     }
+            //     var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
+            //     var sectionEnd = $(window).height() - sectionHeight;
+            //     var sectionScroll = sectionStartPosition;
+            //     $(window).bind('wheel', function (e) {
+            //         if (sections[nextIndex.index] === 1) {
+            //             console.log(autoScrolling);
+            //             var delta = e.originalEvent.deltaY;
+            //             //sections[nextIndex.index].css('pointer-events', 'none');
+            //             autoScrolling = false;
+            //             if (delta > 0) {
+            //                 sectionScroll = sectionScroll + event.deltaY;
+            //                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+            //                 if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
+            //                     autoScrolling = true;
+            //                     $.fn.fullpage.setAllowScrolling(true);
+            //                     //sections[nextIndex.index].css('pointer-events', 'auto');
+            //                     $(window).unbind('wheel');
+            //                 }
+            //             } else {
+            //                 sectionScroll = sectionScroll + event.deltaY;
+            //                 if (sectionScroll <= sectionStartPosition) {
+            //                     autoScrolling = true;
+            //                     //sections[nextIndex.index].css('pointer-events', 'auto');
+            //                     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+            //                 } else {
+            //                     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+            //                 }
+            //             }
+            //         } else  if (sections[nextIndex.index]) {
+            //             var deltaUp = e.originalEvent.deltaY;
+            //             //sections[nextIndex.index].css('pointer-events', 'none');
+            //             autoScrolling = true;
+            //             if (deltaUp < 0) {
+            //                 sectionScroll = sectionScroll + event.deltaY;
+            //                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+            //                 if (sectionScroll < sectionStartPosition - sectionHeight / 100 * 20) {
+            //                     $.fn.fullpage.setAllowScrolling(true);
+            //                     //sections[nextIndex.index].css('pointer-events', 'auto');
+            //                     autoScrolling = true;
+            //                     $(window).unbind('wheel');
+            //                 }
+            //             } else  {
+            //                sectionScroll = sectionScroll + event.deltaY;
+            //                 if (sectionScroll >= sectionStartPosition) {
+            //                 autoScrolling = true;
+            //                 //sections[nextIndex.index].css('pointer-events', 'auto');
+            //                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+            //                 } else {
+            //                     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+            //                 }
+            //             }
+            //         }
+            //     });
+            // }
+
             function longSectionScrolling() {
                 var sectionStartPosition;
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
