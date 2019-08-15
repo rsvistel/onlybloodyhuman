@@ -49,7 +49,7 @@ $(document).ready(function () {
         anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
         menu: '.dots-block-section-banner',
         css3: true,
-        scrollOverflow: true,
+        scrollOverflow: false,
         responsiveWidth: 1000,
         verticalCentered: false,
         lazyLoading: false,
@@ -275,6 +275,7 @@ $(document).ready(function () {
         }
     });
     $.fn.fullpage.setAllowScrolling(true);
+    $.fn.fullpage.destroy();
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {

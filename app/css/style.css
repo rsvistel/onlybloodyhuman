@@ -1600,3 +1600,9 @@ body.opened--menu .text-dots-block embed {
 
 .text-dots-block:hover a {
   text-decoration: none; }
+
+#section-about {
+  height: auto !important; }
+
+#section-instagram {
+  height: auto !important; }
