@@ -103,7 +103,8 @@
     margin-top: 0
   #menuToggle .nav-icon embed
     display: block
-
+  .embed-arrow
+    padding: 3.5% 6% 1% 5%
   #section-about .row
     display: flex
     align-items: initial
@@ -191,7 +192,7 @@
     right: 0
     top: 0
     margin-top: 5%
-    margin-right: 10.5%
+    margin-right: 9.5%
 
   #menuToggle-mobile span
     width: 22px
@@ -342,6 +343,7 @@
     text-indent: -7px
   .video-section-cover
     height: 60vw
+    z-index: 1
 @media (min-width: 2000px)
   .over-line-block
     margin-top: -2%
@@ -513,6 +515,7 @@
 
   .video-section-cover
     height: 60vw
+    z-index: 1
 
   .section-outdoor-professional
     min-height: auto
@@ -953,7 +956,9 @@
   .outdoor-section__image.icon-travel
     padding: 2vw 4vw 0 5vw
   .dots-block-section-banner
-    padding-right: 8.3%
+    padding-right: 7.3%
+  .text-dots-block
+    margin-bottom: 33%
   .nav-icon .cross-icon
     width: 5vh
     max-width: initial
@@ -964,7 +969,8 @@
   .text-center-banner-section
     height: 100vh
     height: -webkit-fill-available
-
+  .dots-block-section-banner embed:first-child
+    margin: 4.5% 6% 3% 0
   .client-contact-list-img
     height: 60vh
 
@@ -1008,7 +1014,9 @@
 
   .section-instagram__photo:nth-child(1)
     border-top: 0.5px solid #f0f2f2
-
+@media(min-width: 600px) and (max-width: 700px)
+  .dots-block-section-banner embed:first-child
+    margin: 4% 6% 3% 0
 @media (max-width: 600px) and (orientation: landscape)
   .whole-text-left-logo
     margin-left: 22px
@@ -1273,6 +1281,10 @@
     min-height: 350px
 
 @media (max-width: 320px)
+  .client-contact-list__email a
+    font-size: 30px
+  .job-section-about
+    padding-left: 7.5%
   .nav-icon embed
     top: 3px
   .icon-camera embed
@@ -1288,7 +1300,7 @@
     padding: 16% 10% 0 10%
 
   .outdoor-section__text, .client-contact-list
-    padding: 16% 10%
+    padding: 16% 7%
   .gray-half-section-tools
     padding: 16% 10% 0 10%
 
@@ -1558,8 +1570,9 @@
 
   .img-div-outdoor-section__icons
     margin: 3% 0 4% 0
-
-
+@media (max-width: 320px)
+  #menuToggle-mobile
+    margin-right: 9.5%!important
 @media (min-width: 320px) and (max-width: 480px)
   .mobile-vertical-image
     display: block
@@ -1578,7 +1591,12 @@
 @media(min-width: 768px)
   .dots-block-section-banner embed:first-child
     margin: 3.5% 6% 3% 0
+  .embed-arrow
+    padding: 2.5% 6% 1% 5%
 @media (max-width: 375px)
   .outdoor-section__image .numberCircle
     width: 37px
     height: 37px
+@media only screen and (max-device-width: 375px)
+  #menuToggle-mobile
+    margin-right: 10.5%

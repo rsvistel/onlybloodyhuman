@@ -966,7 +966,8 @@ body.opened--menu .text-dots-block embed {
           justify-content: center;
   overflow: hidden;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
 .outdoor-section {
   position: relative;

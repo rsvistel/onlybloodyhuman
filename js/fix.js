@@ -42,10 +42,11 @@ $(document).ready(function () {
         dots.push($(this))
     });
     const instagramStartPosition = $("#section-instagram").offset().top;
+    const aboutStartPosition = $("#section-about").offset().top;
     $('#fullpage').fullpage({
         autoScrolling: true,
         scrollingSpeed: 700,
-        anchors: ['intro', 'about', 'tools', 'skills', 'contact'],
+        anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
         menu: '.dots-block-section-banner',
         css3: true,
         scrollOverflow: true,
@@ -102,13 +103,9 @@ $(document).ready(function () {
                         }
                     });
                 }
-                if (direction === 'up') {
-                    longSectionScrollingUp();
-                } else if (direction === 'down') {
-                    longSectionScrolling();
-                }
-
-            } else if (sections[nextIndex.index].attr("id") === "section-instagram") {
+                longSectionScrolling();
+            }
+            else if (sections[nextIndex.index].attr("id") === "section-instagram") {
                 $.fn.fullpage.setAllowScrolling(false);
                 $(window).bind('wheel', function (e) {
                     if (insta == false) {
@@ -130,7 +127,12 @@ $(document).ready(function () {
                     }
                 });
                 longSectionScrolling();
-            } else {
+            }
+            else if (sections[nextIndex.index].attr("id") === "section-contact") {
+                $.fn.fullpage.setAllowScrolling(true);
+                console.log('contact');
+            }
+            else {
                 dots[nextIndex.index].addClass('active');
             }
             if (sections[nextIndex.index].hasClass('black-right')) {
@@ -183,30 +185,12 @@ $(document).ready(function () {
                 sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
                 // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
-
-            // if((nextIndex.index === 1) && (direction ==='up')) {
-            //        longSectionScrolling();
-            // //     //$.fn.fullpage.moveSectionUp();
-            // //     var iscroll = $('#section-about').find('.fp-scrollable').data('iscrollInstance');
-            // //     iscroll.scrollTo(0, -200);
-            // //     var scrollToBottom = $(window).height() - $('.fp-scroller').height();
-            // //     console.log(scrollToBottom);
-            // //     $('.fp-scroller').css({
-            // //       'transform' : 'translate(0px, ' + scrollToBottom + 'px) translateZ(0px)'
-            // //     });
-            // } else
-            // if ((nextIndex.index === 1) && (direction ==='up')) {
-            //     longSectionScrollingUp();
-            // } else if ((nextIndex.index === 1) && (direction ==='down')) {
-            //     longSectionScrolling();
-            // }
-
             function longSectionScrolling() {
                 var sectionStartPosition;
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
                     sectionStartPosition = instagramStartPosition;
-                } else {
-                    sectionStartPosition = sections[nextIndex.index].offset().top;
+                } else if (sections[nextIndex.index].attr('id') === "section-about") {
+                    sectionStartPosition = aboutStartPosition;
                 }
                 var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
                 var sectionEnd = $(window).height() - sectionHeight;
@@ -226,67 +210,31 @@ $(document).ready(function () {
                         } else {
                             sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll <= sectionStartPosition) {
-                                sections[nextIndex.index].css('pointer-events', 'auto');
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-                            } else {
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            }
-                        }
-                    } else if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        var delta1 = e.originalEvent.deltaY;
-                        sections[nextIndex.index].css('pointer-events', 'none');
-                        if (delta1 < 0) {
-                            sectionScroll = sectionScroll + event.deltaY;
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sectionScroll < sectionStartPosition - $(window).height() / 100 * 20) {
-                                $.fn.fullpage.setAllowScrolling(true);
-                                sections[nextIndex.index].css('pointer-events', 'auto');
-                                $(window).unbind('wheel');
-                            }
-                        } else {
-                            sectionScroll = sectionScroll + event.deltaY;
-                            if (sectionScroll >= sectionStartPosition) {
-                                sections[nextIndex.index].css('pointer-events', 'auto');
+                               sections[nextIndex.index].css('pointer-events', 'auto');
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
                         }
                     }
-                });
-            }
-
-            function longSectionScrollingUp() {
-                var sectionStartPositionAbout;
-                if (sections[nextIndex.index].attr('id') === "section-instagram") {
-                    sectionStartPositionAbout = instagramStartPosition;
-                } else {
-                    sectionStartPositionAbout = sections[nextIndex.index].offset().top;
-                }
-                // var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
-                // var sectionEnd = $(window).height() - sectionHeight;
-                var sectionScrollAbout = sectionStartPositionAbout;
-                $(window).bind('wheel', function (e) {
-                    if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        var delta1 = e.originalEvent.deltaY;
+                    else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                        var deltaUp = e.originalEvent.deltaY;
                         sections[nextIndex.index].css('pointer-events', 'none');
-                        if (delta1 < 0) {
-                            sectionScrollAbout = sectionScrollAbout + event.deltaY;
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
-                            if (sectionScrollAbout < sectionStartPositionAbout - $(window).height() / 100 * 20) {
+                        if (deltaUp < 0) {
+                            sectionScroll = sectionScroll + event.deltaY;
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                            if (sectionScroll < sectionStartPosition - sectionHeight / 100 * 20) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
                             }
-                        } else {
-                            sectionScrollAbout = sectionScrollAbout + event.deltaY;
-                            if (sectionScrollAbout >= sectionStartPositionAbout) {
-                                sections[nextIndex.index].css('pointer-events', 'auto');
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPositionAbout + 'px, 0px)');
-                                $.fn.fullpage.setAllowScrolling(true);
+                        } else  {
+                           sectionScroll = sectionScroll + event.deltaY;
+                            if (sectionScroll >= sectionStartPosition) {
+                            sections[nextIndex.index].css('pointer-events', 'auto');
+                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScrollAbout + 'px, 0px)');
-                                $.fn.fullpage.setAllowScrolling(true);
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
                         }
                     }

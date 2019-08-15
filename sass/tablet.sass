@@ -1,6 +1,4 @@
 @media (min-width: 768px) and (max-width: 1000px) and (orientation: portrait)
-  .left-logo-banner-section
-    margin-top: 7%
   #menuToggle-mobile
     margin-top: 5.2%
     margin-right: 9%
@@ -24,6 +22,7 @@
     font-size: 3.4vw
   .video-section-cover
     height: auto
+    z-index: 1
   .whole-text-section-about
     padding-bottom: 2%
   .first-sentence-section-about
@@ -119,7 +118,7 @@
   .text-under-tittles-section-tools
     font-size: 1.6vw
     line-height: 2.88vw
-    width: 60%
+    width: 100%
   .outdoor-section hr .img-div-outdoor-section__icons
     margin: 3% 0 6%
   .outdoor-section-block
@@ -229,6 +228,7 @@
       width: 4.5vw
   .client-contact-list-img
     height: 32vh
+    min-height: 32vh
   .footer-section
     padding: 1vw 0 4.5vw
   .footer-client
@@ -244,6 +244,9 @@
   .footer-section img
     width: 3.8vw
     padding: 1vw 0 0
+  .embed-arrow embed
+    width: 9px
+    height: 5px
 
 @media (min-width: 1000px) and (max-width: 1112px)
   .whole-text-left-logo
@@ -409,11 +412,11 @@
     margin-bottom: 5%
   .text-over-progress h6
     font-size: .77vw
-  .photo-man-section-about
-    width: 55%
-  .whole-text-section-about
-    padding: 20% 10% 4% 4%
-    width: 45%
+  // .photo-man-section-about
+  //   width: 55%
+  // .whole-text-section-about
+  //   padding: 20% 10% 4% 4%
+  //   width: 45%
   .left-logo-banner-section .whole-text-left-logo
     animation: none!important
     transition: 0.5s ease-in-out
@@ -560,7 +563,8 @@
     height: 1.3vh
   #section-about.section
     height: auto
-
+  .video-section-cover
+    z-index: 0
   .section-instagram__photo:nth-child(6)
     border-bottom: 0.5px solid #f0f2f2
 
@@ -774,6 +778,11 @@
     border-top: 0.5px solid #f0f2f2
   .section-instagram__photo:nth-child(1)
     border-top: 0.5px solid #f0f2f2
+  .embed-arrow embed
+    width: 12px
+    height: 7px
+  .video-section-cover
+    z-index: 0
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)
   //.client-contact-list-img
@@ -790,7 +799,6 @@
   #section-tools .fp-tableCell,
   #section-tools .fp-scrollable
     height: auto !important
-  ///*contact-section
   //.client-contact-list__text p
   //  font-size: 2vw
   //  line-height: .6vw
@@ -881,10 +889,12 @@
     margin-top: 4vh
   .tittles-section-tools
     font-size: 2.8vw
-  .text-under-tittles-section-tools
-    font-size: 1.6vw
-    line-height: 2.88vw
-    width: 60%
+  //.text-under-tittles-section-tools
+  //  font-size: 1.9vw
+  //  line-height: 3.5vw
+   //width: 60%
+   // font-size: 1.6vw
+   //line-height: 2.88vw
   .block-tools-section, .outdoor-section-block
     padding: 9.5% 12.5% 1.5%
   .block-tools-section button
@@ -919,6 +929,7 @@
     padding: 16% 12% 12%
   .video-section-cover
     height: auto
+    z-index: 1
   .section-outdoor-professional
     position: static
     min-height: initial
@@ -1063,8 +1074,10 @@
   .tittle-section-about h6
     font-size: 1vw
   .text-under-tittles-section-tools
-    font-size: 1.6vw
-    line-height: 2.88vw
+    //font-size: 1.6vw
+    //line-height: 2.88vw
+    font-size: 1.9vw
+    line-height: 3.5vw
   h1
     font-size: 10.1vw
     line-height: 9.6vw
@@ -1073,8 +1086,10 @@
     font-size: 1.6vw
     line-height: 2.88vw
   p
-    font-size: 1.1vw
-    line-height: 1.9vw
+    //font-size: 1.1vw
+    //line-height: 1.9vw
+    font-size: 1.9vw
+    line-height: 3.5vw
   .client-contact-list__social
     letter-spacing: .003vw
     margin-left: -8px
@@ -1110,10 +1125,8 @@
   h3
     font-size: 2.8vw
   .tittle-section-about
-    font-size: 1.44vw
-  p
+    //font-size: 1.44vw
     font-size: 1.6vw
-    line-height: 2.88vw
   .whole-text-section-about .stuff-section-about
     margin-top: 9vw
     margin-bottom: 1.6vw
@@ -1128,6 +1141,8 @@
     margin-top: -20%
   .under-line-block .img-under-line-block embed, .img-under-line-block object
     margin: 3% 0 5% 0
+  .client-contact-list__email--triangle-left embed
+    display: none
 
 @media (min-width: 769px) and (max-width: 1000px) and (orientation: portrait)
   #section-instagram
@@ -1144,3 +1159,10 @@
     flex-direction: column
   .client-contact-list, .client-contact-list-img
     width: 100%
+
+@media (min-width: 768px) and (max-width: 768px) and (orientation: portrait)
+ .left-logo-banner-section
+   margin-top: 7%
+ .dots-block-section-banner embed:first-child
+    margin: 4% 6% 3% 0
+
