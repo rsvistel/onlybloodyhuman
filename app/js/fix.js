@@ -240,7 +240,7 @@ $(document).ready(function () {
         if (insta == false) {
             if (origin.anchor == 'contact') {
                 var count = 1;
-                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
+                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.1053c8af32954563ad3ffe2415b8dc94';
                 var followers;
                 $.ajax({
                     method: 'GET',
@@ -498,7 +498,7 @@ $(document).ready(function () {
     }
     function animateCounter() {
         var count = 1;
-        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
+        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.1053c8af32954563ad3ffe2415b8dc94';
         var followers;
         $.ajax({
             method: 'GET',
