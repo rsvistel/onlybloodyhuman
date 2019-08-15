@@ -62,8 +62,8 @@ $(document).ready(function () {
                 if (!($(window).width() < 1025)) {
                     $.fn.fullpage.setAllowScrolling(false);
                     setTimeout(function () {
-                        bindTools()
-                    }, 700)
+                        bindTools();
+                    }, 700);
                 }
             } else if (sections[nextIndex.index].attr("id") === "section-about") {
                 $.fn.fullpage.setAllowScrolling(false);
@@ -123,35 +123,34 @@ $(document).ready(function () {
                         setTimeout(function () {
                             insta = true;
                         }, 200);
-
                     }
                 });
                 longSectionScrolling();
             }
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
                 $.fn.fullpage.setAllowScrolling(true);
-                console.log('contact');
             }
             else {
                 dots[nextIndex.index].addClass('active');
             }
             if (sections[nextIndex.index].hasClass('black-right')) {
                 swapColor(false);
-                $('body').addClass('black-mode')
+                $('body').addClass('black-mode');
             } else {
                 swapColor(true);
-                $('body').removeClass('black-mode')
+                $('body').removeClass('black-mode');
             }
 
             if (sections[nextIndex.index].hasClass('black-left')) {
                 $('object.change-color').css('opacity', 1);
                 $('object.current-color').css('opacity', 0);
-                $('.whole-text-left-logo').css('color', '#333')
+                $('.whole-text-left-logo').css('color', '#333');
             } else {
                 $('object.change-color').css('opacity', 0);
                 $('object.current-color').css('opacity', 1);
-                $('.whole-text-left-logo').css('color', '#fff')
+                $('.whole-text-left-logo').css('color', '#fff');
             }
+
             if ($(window).width() < 1025) {
                 $('.inner-content-section-banner-fixed').on("click", function () {
                     $('.whole-text-left-logo').animate({'opacity': '1'});
@@ -172,18 +171,14 @@ $(document).ready(function () {
                     $('.current-color').css('opacity', '1');
                 }
             }
-
             for (var b = 0; b < nextIndex.index; b++) {
                 var heightWindows = $(window).height();
                 var height = sections[b].find('.fp-scroller').outerHeight();
                 var change = heightWindows - height;
                 sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + change + ')');
-                // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
-
             }
             for (var y = nextIndex.index + 1; y < sections.length; y++) {
                 sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-                // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
             function longSectionScrolling() {
                 var sectionStartPosition;
@@ -210,7 +205,7 @@ $(document).ready(function () {
                         } else {
                             sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll <= sectionStartPosition) {
-                               sections[nextIndex.index].css('pointer-events', 'auto');
+                                sections[nextIndex.index].css('pointer-events', 'auto');
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
@@ -240,43 +235,40 @@ $(document).ready(function () {
                     }
                 });
             }
-        },
-        afterLoad: function (origin) {
-            if (insta == false) {
-                if (origin.anchor == 'contact') {
-                    var count = 1;
-                    var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
-                    var followers;
-                    $.ajax({
-                        method: 'GET',
-                        url: url,
-                        dataType: 'jsonp',
-                        jsonp: 'callback',
-                        success: function (response) {
-                            followers = parseFloat(getRepString(response.data.counts.followed_by));
-                        }
-                    });
-
-                    function getRepString(rep) {
-                        rep = rep + '';
-                        if (rep < 1000) return rep;
-                        if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-                        return (rep / 1000).toFixed(rep % 1000 != 0);
+    },
+    afterLoad: function (origin) {
+        if (insta == false) {
+            if (origin.anchor == 'contact') {
+                var count = 1;
+                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
+                var followers;
+                $.ajax({
+                    method: 'GET',
+                    url: url,
+                    dataType: 'jsonp',
+                    jsonp: 'callback',
+                    success: function (response) {
+                        followers = parseFloat(getRepString(response.data.counts.followed_by));
                     }
+                });
 
-                    countdown = setInterval(function () {
-                        if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
-                            $("span.countup").html(count + "k");
-                            count += 0.1;
-                            count = parseFloat(count.toFixed(1));
+                function getRepString(rep) {
+                    rep = rep + '';
+                    if (rep < 1000) return rep;
+                    if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+                    return (rep / 1000).toFixed(rep % 1000 != 0);
+                }
+                countdown = setInterval(function () {
+                    if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
+                        $("span.countup").html(count + "k");
+                        count += 0.1;
+                        count = parseFloat(count.toFixed(1));
                         }
                     }, 3);
-
                 }
             }
         }
     });
-
     $( function() {
         if (isTouchCapable) {
             $.fn.fullpage.setResponsive(true);
@@ -342,13 +334,11 @@ $(document).ready(function () {
                 } else {
                     animateArrow('83.33%')
                 }
-
             setTimeout(function () {
                 $('.tools-section__image').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
                 $('.block-tools-section button').removeClass('active');
                 $('.block-tools-section .block-tools-section__' + dataName + ' button').addClass('active');
-
             }, 200);
         }
         function animateArrow(prop) {
@@ -367,7 +357,6 @@ $(document).ready(function () {
                     } else {
                         animateArrow('83.33%')
                     }
-
             setTimeout(function () {
                 $('.outdoor-section__image').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
@@ -392,9 +381,9 @@ $(document).ready(function () {
         } else {
             color = '#363531';
             opacity = 1;
-            $('.light-arrow').css('transition', 'opacity .5s linear');
-            $('.dark-arrow').css('visibility', 'visible');
-            $('.light-arrow').css('visibility', 'hidden');
+                $('.light-arrow').css('transition', 'opacity .5s linear');
+                $('.dark-arrow').css('visibility', 'visible');
+                $('.light-arrow').css('visibility', 'hidden');
      }
         $('.dots-block-section-banner .text-dots-block:not(.active) .dot-section-banner').css('background-color', color);
         $('.text-near-dots').css('color', color);
@@ -465,42 +454,38 @@ $(document).ready(function () {
             if (dataName.toLowerCase() === 'camera') {
                 animateArrow('16.66%');
                 if($('.block-tools-section-tablet button.active').parent().data('name').toLowerCase() === 'gimbal') {
-                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', true,  true);
-                        setTimeout( function() {
-                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true, false);
-                        }, 700);
+                    changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', true,  true);
+                    setTimeout( function() {
+                    changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true, false);
+                    }, 700);
                 } else {
-                        changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true, false);
+                    changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true, false);
                 }
             } else if (dataName.toLowerCase() === 'drone') {
                 animateArrow('50%');
-                    if($('.block-tools-section-tablet button.active').parent().data('name').toLowerCase() === 'camera') {
-                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false, false);
-                    } else {
-                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', true, false);
+                if($('.block-tools-section-tablet button.active').parent().data('name').toLowerCase() === 'camera') {
+                    changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false, false);
+                } else {
+                    changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', true, false);
                 }
-            } else if  (dataName.toLowerCase() === 'gimbal') {
+            } else if (dataName.toLowerCase() === 'gimbal') {
                 animateArrow('83.33%');
                 if($('.block-tools-section-tablet button.active').parent().data('name').toLowerCase() === 'camera') {
-                        changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false, true);
-                        setTimeout( function() {
-                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false, false);
-                        }, 700);
-
+                    changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false, true);
+                    setTimeout( function() {
+                    changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false, false);
+                    }, 700);
                 } else {
-                        changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false, false);
+                    changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false, false);
                 }
             }
-
             setTimeout(function () {
                 $('.tools-tablet div').removeClass('active');
                 $('.icon-' + dataName).addClass('active').css('opacity', '0').animate({'opacity': '1'}, 200);
                 $('.block-tools-section-tablet button').removeClass('active');
                 $('.block-tools-section-tablet .block-tools-section__' + dataName + ' button').addClass('active');
-
             }, 200);
         }
-
         function animateArrow(prop) {
             $('#arrow-tools-tablet').animate({'left': prop}, 400);
         }
@@ -512,33 +497,32 @@ $(document).ready(function () {
         return (rep/1000).toFixed(rep % 1000 != 0);
     }
     function animateCounter() {
-            // $(sections[nextIndex.index].attr("id") === "section-instagram").unbind("wheel");
-            var count = 1;
-            var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
-            var followers;
-            $.ajax({
-                method: 'GET',
-                url: url,
-                dataType: 'jsonp',
-                jsonp: 'callback',
-                success: function (response) {
-                    followers = parseFloat(getRepString(response.data.counts.followed_by));
-                }
-            });
-
-            function getRepString(rep) {
-                rep = rep + '';
-                if (rep < 1000) return rep;
-                if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-                return (rep / 1000).toFixed(rep % 1000 != 0);
+        var count = 1;
+        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.71cbdc770f324a52b07c73fabeb2c4dd';
+        var followers;
+        $.ajax({
+            method: 'GET',
+            url: url,
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            success: function (response) {
+                followers = parseFloat(getRepString(response.data.counts.followed_by));
             }
+        });
 
-            countdown = setInterval(function () {
-                if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
-                    $("span.countup").html(count + "k");
-                    count += 0.1;
-                    count = parseFloat(count.toFixed(1));
-                }
-            }, 3);
+        function getRepString(rep) {
+            rep = rep + '';
+            if (rep < 1000) return rep;
+            if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+            return (rep / 1000).toFixed(rep % 1000 != 0);
         }
+
+        countdown = setInterval(function () {
+            if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
+                $("span.countup").html(count + "k");
+                count += 0.1;
+                count = parseFloat(count.toFixed(1));
+            }
+        }, 3);
+    }
 });
