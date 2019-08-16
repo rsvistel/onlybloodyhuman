@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    initializ();
    var progressLine = false;
    var insta = false;
     isDesktop = true;
@@ -34,252 +35,7 @@ $(document).ready(function () {
         }
     });
 
-    // initialization();
-
-    // var addCl = true;
-    // $('.job-section-about').bind('click', function () {
-    //     if (addCl) {
-    //         addCl = false;
-    //         $.fn.fullpage.destroy();
-    //         $("#section-about").css('height', 'auto', 'important');
-    //     } else if(!addCl) {
-    //         addCl = true;
-    //             $('#fullpage').fullpage({
-    //                 autoScrolling: true,
-    //                 scrollingSpeed: 700,
-    //                 //fitToSection: false,
-    //                 anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
-    //                 menu: '.dots-block-section-banner',
-    //                 css3: true,
-    //                 scrollOverflow: true,
-    //                 responsiveWidth: 1000,
-    //                 verticalCentered: false,
-    //                 lazyLoading: false,
-    //                 onLeave: function (index, nextIndex, direction) {
-    //                     $('.text-dots-block').removeClass('active');
-    //                     if (nextIndex.index > dots.length - 1) {
-    //                         dots[dots.length - 1].addClass('active');
-            
-    //                     } else if (sections[nextIndex.index].attr("id") === "section-tools") {
-    //                         if (!($(window).width() < 1025)) {
-    //                             $.fn.fullpage.setAllowScrolling(false);
-    //                             setTimeout(function () {
-    //                                 bindTools();
-    //                             }, 700);
-    //                         }
-    //                     } else if (sections[nextIndex.index].attr("id") === "section-about") {
-    //                         // scrollOverflow = false;
-    //                         // console.log(scrollOverflow);
-    //                         // console.log(index);
-    //                         // $("#section-about").css('height', 'auto', 'important');
-    //                         // $.fn.fullpage.destroy();
-    //                         $.fn.fullpage.setAllowScrolling(false);
-    //                         if (isDesktop) {
-    //                             $(window).unbind('wheel');
-    //                             if (progressLine == false) {
-    //                                 $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
-    //                             }
-    //                             $(window).bind('wheel', function (e) {
-    //                                 if (progressLine == false) {
-    //                                     $(".progress-line").each(function () {
-    //                                         var diff = $(this).offset().top;
-    //                                         var heightWindow = $(window).height();
-    //                                         var res = diff - heightWindow;
-    //                                         var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
-    //                                         current_transform = Math.abs(current_transform);
-    //                                         if (current_transform > res) {
-    //                                             animateStat($(this))
-    //                                         }
-    //                                     });
-    //                                     setTimeout(function () {
-    //                                         progressLine = true;
-    //                                     }, 3000);
-            
-    //                                     function animateStat(item) {
-    //                                         if (!item.find('.progress-line-gray').hasClass('animated')) {
-    //                                             var width;
-    //                                             var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
-    //                                             for (var i = 0; i < classListArray.length; i++) {
-    //                                                 if (classListArray[i].includes('progress-line-gray-')) {
-    //                                                     width = classListArray[i].replace('progress-line-gray-', '')
-    //                                                 }
-    //                                             }
-    //                                             item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
-    //                                         }
-    //                                     }
-    //                                 }
-    //                             });
-    //                         }
-    //                         longSectionScrolling();
-    //                     }
-    //                     else if (sections[nextIndex.index].attr("id") === "section-instagram") {
-    //                         $.fn.fullpage.setAllowScrolling(false);
-    //                         $(window).bind('wheel', function (e) {
-    //                             if (insta == false) {
-    //                                 if (isDesktop) {
-    //                                     $("span.countup").html("1k");
-    //                                 }
-    //                                 var topSecInsta = $('#section-instagram span.countup').offset().top;
-    //                                 var heighttest = $(window).height();
-    //                                 var resInsta = topSecInsta - heighttest;
-    //                                 var current_transform1 = parseInt($('#section-instagram .fp-scroller').css('transform').split(',')[5]);
-    //                                 current_transform1 = (current_transform1);
-    //                                 if (current_transform1 < resInsta) {
-    //                                     animateCounter();
-    //                                 }
-    //                                 setTimeout(function () {
-    //                                     insta = true;
-    //                                 }, 200);
-    //                             }
-    //                         });
-    //                         longSectionScrolling();
-    //                     }
-    //                     else if (sections[nextIndex.index].attr("id") === "section-contact") {
-    //                         $.fn.fullpage.setAllowScrolling(true);
-    //                     }
-    //                     else {
-    //                         dots[nextIndex.index].addClass('active');
-    //                     }
-    //                     if (sections[nextIndex.index].hasClass('black-right')) {
-    //                         swapColor(false);
-    //                         $('body').addClass('black-mode');
-    //                     } else {
-    //                         swapColor(true);
-    //                         $('body').removeClass('black-mode');
-    //                     }
-            
-    //                     if (sections[nextIndex.index].hasClass('black-left')) {
-    //                         $('object.change-color').css('opacity', 1);
-    //                         $('object.current-color').css('opacity', 0);
-    //                         $('.whole-text-left-logo').css('color', '#333');
-    //                     } else {
-    //                         $('object.change-color').css('opacity', 0);
-    //                         $('object.current-color').css('opacity', 1);
-    //                         $('.whole-text-left-logo').css('color', '#fff');
-    //                     }
-            
-    //                     if ($(window).width() < 1025) {
-    //                         $('.inner-content-section-banner-fixed').on("click", function () {
-    //                             $('.whole-text-left-logo').animate({'opacity': '1'});
-    //                             setTimeout(function () {
-    //                                 $('.whole-text-left-logo').animate({'opacity': '0'});
-    //                             }, 3000);
-    //                         });
-    //                         if (nextIndex.index == 0) {
-    //                             $('.whole-text-left-logo').css('opacity', '1');
-    //                         } else {
-    //                             $('.whole-text-left-logo').css('opacity', '0');
-    //                         }
-    //                         if (sections[nextIndex.index].hasClass('mobile-swap-color')) {
-    //                             $('.change-color').css('opacity', '1');
-    //                             $('.current-color').css('opacity', '0');
-    //                         } else {
-    //                             $('.change-color').css('opacity', '0');
-    //                             $('.current-color').css('opacity', '1');
-    //                         }
-    //                     }
-    //                     for (var b = 0; b < nextIndex.index; b++) {
-    //                         var heightWindows = $(window).height();
-    //                         var height = sections[b].find('.fp-scroller').outerHeight();
-    //                         var change = heightWindows - height;
-    //                         sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + change + ')');
-    //                     }
-    //                     for (var y = nextIndex.index + 1; y < sections.length; y++) {
-    //                         sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-    //                     }
-    //                     function longSectionScrolling() {
-    //                         var sectionStartPosition;
-    //                         if (sections[nextIndex.index].attr('id') === "section-instagram") {
-    //                             sectionStartPosition = instagramStartPosition;
-    //                         } else if (sections[nextIndex.index].attr('id') === "section-about") {
-    //                             sectionStartPosition = aboutStartPosition;
-    //                         }
-    //                         var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
-    //                         var sectionEnd = $(window).height() - sectionHeight;
-    //                         var sectionScroll = sectionStartPosition;
-    //                         $(window).bind('wheel', function (e) {
-    //                             if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(sectionEnd) + ')') {
-    //                                 var delta = e.originalEvent.deltaY;
-    //                                 sections[nextIndex.index].css('pointer-events', 'none');
-    //                                 if (delta > 0) {
-    //                                     sectionScroll = sectionScroll + event.deltaY;
-    //                                     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-    //                                     if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
-    //                                         $.fn.fullpage.setAllowScrolling(true);
-    //                                         sections[nextIndex.index].css('pointer-events', 'auto');
-    //                                         $(window).unbind('wheel');
-    //                                     }
-    //                                 } else {
-    //                                     sectionScroll = sectionScroll + event.deltaY;
-    //                                     if (sectionScroll <= sectionStartPosition) {
-    //                                         sections[nextIndex.index].css('pointer-events', 'auto');
-    //                                         $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-    //                                     } else {
-    //                                         $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-    //                                     }
-    //                                 }
-    //                             }
-    //                             else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-    //                                 var deltaUp = e.originalEvent.deltaY;
-    //                                 sections[nextIndex.index].css('pointer-events', 'none');
-    //                                 if (deltaUp < 0) {
-    //                                     sectionScroll = sectionScroll + event.deltaY;
-    //                                     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-    //                                     if (sectionScroll < sectionStartPosition - sectionHeight / 100 * 20) {
-    //                                         $.fn.fullpage.setAllowScrolling(true);
-    //                                         sections[nextIndex.index].css('pointer-events', 'auto');
-    //                                         $(window).unbind('wheel');
-    //                                     }
-    //                                 } else  {
-    //                                    sectionScroll = sectionScroll + event.deltaY;
-    //                                     if (sectionScroll >= sectionStartPosition) {
-    //                                     sections[nextIndex.index].css('pointer-events', 'auto');
-    //                                     $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-    //                                     } else {
-    //                                         $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-    //                                     }
-    //                                 }
-    //                             }
-    //                         });
-            
-    //                     }
-    //             },
-    //             afterLoad: function (origin, index) {
-    //                 if (insta == false) {
-    //                     if (origin.anchor == 'contact') {
-    //                         var count = 1;
-    //                         var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.1053c8af32954563ad3ffe2415b8dc94';
-    //                         var followers;
-    //                         $.ajax({
-    //                             method: 'GET',
-    //                             url: url,
-    //                             dataType: 'jsonp',
-    //                             jsonp: 'callback',
-    //                             success: function (response) {
-    //                                 followers = parseFloat(getRepString(response.data.counts.followed_by));
-    //                             }
-    //                         });
-            
-    //                         function getRepString(rep) {
-    //                             rep = rep + '';
-    //                             if (rep < 1000) return rep;
-    //                             if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-    //                             return (rep / 1000).toFixed(rep % 1000 != 0);
-    //                         }
-    //                         countdown = setInterval(function () {
-    //                             if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
-    //                                 $("span.countup").html(count + "k");
-    //                                 count += 0.1;
-    //                                 count = parseFloat(count.toFixed(1));
-    //                                 }
-    //                             }, 3);
-    //                         }
-    //                     }
-    //                 },
-    //             });
-    //         }
-    // });
-
+    var addCl = true;
     sections = [];
     $('.section').each(function () {
         sections.push($(this))
@@ -291,264 +47,259 @@ $(document).ready(function () {
     const instagramStartPosition = $("#section-instagram").offset().top;
     const aboutStartPosition = $("#section-about").offset().top;
 
-function initialization() {
-    $('#fullpage').fullpage({
-        autoScrolling: true,
-        scrollingSpeed: 700,
-        //fitToSection: false,
-        anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
-        menu: '.dots-block-section-banner',
-        css3: true,
-        scrollOverflow: true,
-        responsiveWidth: 1000,
-        verticalCentered: false,
-        lazyLoading: false,
-        onLeave: function (index, nextIndex, direction) {
-            $('.text-dots-block').removeClass('active');
-            if (nextIndex.index > dots.length - 1) {
-                dots[dots.length - 1].addClass('active');
-
-            } else if (sections[nextIndex.index].attr("id") === "section-tools") {
-                if (!($(window).width() < 1025)) {
-                    $.fn.fullpage.setAllowScrolling(false);
-                    setTimeout(function () {
-                        bindTools();
-                    }, 700);
-                }
-            } else if (sections[nextIndex.index].attr("id") === "section-about") {
-                // scrollOverflow = false;
-                // console.log(scrollOverflow);
-                // console.log(index);
-                // $("#section-about").css('height', 'auto', 'important');
-                // $.fn.fullpage.destroy();
-                $.fn.fullpage.setAllowScrolling(false);
-                if (isDesktop) {
-                    $(window).unbind('wheel');
-                    if (progressLine == false) {
-                        $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
-                    }
-                    $(window).bind('wheel', function (e) {
-                        if (progressLine == false) {
-                            $(".progress-line").each(function () {
-                                var diff = $(this).offset().top;
-                                var heightWindow = $(window).height();
-                                var res = diff - heightWindow;
-                                var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
-                                current_transform = Math.abs(current_transform);
-                                if (current_transform > res) {
-                                    animateStat($(this))
-                                }
-                            });
-                            setTimeout(function () {
-                                progressLine = true;
-                            }, 3000);
-
-                            function animateStat(item) {
-                                if (!item.find('.progress-line-gray').hasClass('animated')) {
-                                    var width;
-                                    var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
-                                    for (var i = 0; i < classListArray.length; i++) {
-                                        if (classListArray[i].includes('progress-line-gray-')) {
-                                            width = classListArray[i].replace('progress-line-gray-', '')
-                                        }
-                                    }
-                                    item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
-                                }
-                            }
-                        }
-                    });
-                }
-                longSectionScrolling();
-            }
-            else if (sections[nextIndex.index].attr("id") === "section-instagram") {
-                $.fn.fullpage.setAllowScrolling(false);
-                $(window).bind('wheel', function (e) {
-                    if (insta == false) {
-                        if (isDesktop) {
-                            $("span.countup").html("1k");
-                        }
-                        var topSecInsta = $('#section-instagram span.countup').offset().top;
-                        var heighttest = $(window).height();
-                        var resInsta = topSecInsta - heighttest;
-                        var current_transform1 = parseInt($('#section-instagram .fp-scroller').css('transform').split(',')[5]);
-                        current_transform1 = (current_transform1);
-                        if (current_transform1 < resInsta) {
-                            animateCounter();
-                        }
-                        setTimeout(function () {
-                            insta = true;
-                        }, 200);
-                    }
-                });
-                longSectionScrolling();
-            }
-            else if (sections[nextIndex.index].attr("id") === "section-contact") {
-                $.fn.fullpage.setAllowScrolling(true);
-            }
-            else {
-                dots[nextIndex.index].addClass('active');
-            }
-            if (sections[nextIndex.index].hasClass('black-right')) {
-                swapColor(false);
-                $('body').addClass('black-mode');
-            } else {
-                swapColor(true);
-                $('body').removeClass('black-mode');
-            }
-
-            if (sections[nextIndex.index].hasClass('black-left')) {
-                $('object.change-color').css('opacity', 1);
-                $('object.current-color').css('opacity', 0);
-                $('.whole-text-left-logo').css('color', '#333');
-            } else {
-                $('object.change-color').css('opacity', 0);
-                $('object.current-color').css('opacity', 1);
-                $('.whole-text-left-logo').css('color', '#fff');
-            }
-
-            if ($(window).width() < 1025) {
-                $('.inner-content-section-banner-fixed').on("click", function () {
-                    $('.whole-text-left-logo').animate({'opacity': '1'});
-                    setTimeout(function () {
-                        $('.whole-text-left-logo').animate({'opacity': '0'});
-                    }, 3000);
-                });
-                if (nextIndex.index == 0) {
-                    $('.whole-text-left-logo').css('opacity', '1');
-                } else {
-                    $('.whole-text-left-logo').css('opacity', '0');
-                }
-                if (sections[nextIndex.index].hasClass('mobile-swap-color')) {
-                    $('.change-color').css('opacity', '1');
-                    $('.current-color').css('opacity', '0');
-                } else {
-                    $('.change-color').css('opacity', '0');
-                    $('.current-color').css('opacity', '1');
-                }
-            }
-            for (var b = 0; b < nextIndex.index; b++) {
-                var heightWindows = $(window).height();
-                var height = sections[b].find('.fp-scroller').outerHeight();
-                var change = heightWindows - height;
-                sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + change + ')');
-            }
-            for (var y = nextIndex.index + 1; y < sections.length; y++) {
-                sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-            }
-            function longSectionScrolling() {
-                var sectionStartPosition;
-                if (sections[nextIndex.index].attr('id') === "section-instagram") {
-                    sectionStartPosition = instagramStartPosition;
-                } else if (sections[nextIndex.index].attr('id') === "section-about") {
-                    sectionStartPosition = aboutStartPosition;
-                }
-                var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
-                var sectionEnd = $(window).height() - sectionHeight;
-                var sectionScroll = sectionStartPosition;
-                $(window).bind('wheel', function (e) {
-                    if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(sectionEnd) + ')') {
-                        var delta = e.originalEvent.deltaY;
-                        sections[nextIndex.index].css('pointer-events', 'none');
-                        if (delta > 0) {
-                            sectionScroll = sectionScroll + event.deltaY;
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
-                                $.fn.fullpage.setAllowScrolling(true);
-                                sections[nextIndex.index].css('pointer-events', 'auto');
-                                $(window).unbind('wheel');
-                            }
-                        } else {
-                            sectionScroll = sectionScroll + event.deltaY;
-                            if (sectionScroll <= sectionStartPosition) {
-                                sections[nextIndex.index].css('pointer-events', 'auto');
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-                            } else {
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            }
-                        }
-                    }
-                    else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        var deltaUp = e.originalEvent.deltaY;
-                        sections[nextIndex.index].css('pointer-events', 'none');
-                        if (deltaUp < 0) {
-                            sectionScroll = sectionScroll + event.deltaY;
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sectionScroll < sectionStartPosition - sectionHeight / 100 * 20) {
-                                $.fn.fullpage.setAllowScrolling(true);
-                                sections[nextIndex.index].css('pointer-events', 'auto');
-                                $(window).unbind('wheel');
-                            }
-                        } else  {
-                           sectionScroll = sectionScroll + event.deltaY;
-                            if (sectionScroll >= sectionStartPosition) {
-                            sections[nextIndex.index].css('pointer-events', 'auto');
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-                            } else {
-                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            }
-                        }
-                    }
-                });
-
-             }
-     },
-    afterLoad: function (origin, index) {
-        if (insta == false) {
-            if (origin.anchor == 'contact') {
-                var count = 1;
-                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.1053c8af32954563ad3ffe2415b8dc94';
-                var followers;
-                $.ajax({
-                    method: 'GET',
-                    url: url,
-                    dataType: 'jsonp',
-                    jsonp: 'callback',
-                    success: function (response) {
-                        followers = parseFloat(getRepString(response.data.counts.followed_by));
-                    }
-                });
-
-                function getRepString(rep) {
-                    rep = rep + '';
-                    if (rep < 1000) return rep;
-                    if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-                    return (rep / 1000).toFixed(rep % 1000 != 0);
-                }
-                countdown = setInterval(function () {
-                    if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
-                        $("span.countup").html(count + "k");
-                        count += 0.1;
-                        count = parseFloat(count.toFixed(1));
-                        }
-                    }, 3);
-                }
-            }
-    },
-    });
-    }
-    initialization();
     $( function() {
         if (isTouchCapable) {
             $.fn.fullpage.setResponsive(true);
         }
     });
-    $.fn.fullpage.setAllowScrolling(true);
+    // $.fn.fullpage.setAllowScrolling(true);
     //$.fn.fullpage.destroy();
 
     $('.off').click(function(e){
         e.preventDefault();
-        //fullPage.js initialization
-        //  scrollOverflow = false;
-        // console.log(scrollOverflow);
         $("#section-about").css('height', 'auto', 'important');
-        $.fn.fullpage.destroy();
+        $.fn.fullpage.destroy('all');
     });
 
     $('.on').click(function(e) {
         e.preventDefault();
-        //fullPage.js initialization
-        initialization();
+        initializ();
     });
+            function initializ() {
+                $('#fullpage').fullpage({
+                    autoScrolling: true,
+                    scrollingSpeed: 700,
+                    //fitToSection: false,
+                    anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
+                    menu: '.dots-block-section-banner',
+                    css3: true,
+                    scrollOverflow: true,
+                    responsiveWidth: 1000,
+                    verticalCentered: false,
+                    lazyLoading: false,
+                    onLeave: function (index, nextIndex, direction) {
+                        $('.text-dots-block').removeClass('active');
+                        if (nextIndex.index > dots.length - 1) {
+                            dots[dots.length - 1].addClass('active');
+
+                        } else if (sections[nextIndex.index].attr("id") === "section-tools") {
+                            if (!($(window).width() < 1025)) {
+                                $.fn.fullpage.setAllowScrolling(false);
+                                setTimeout(function () {
+                                    bindTools();
+                                }, 700);
+                            }
+                        } else if (sections[nextIndex.index].attr("id") === "section-about") {
+                            // scrollOverflow = false;
+                            // console.log(scrollOverflow);
+                            // console.log(index);
+                            // $("#section-about").css('height', 'auto', 'important');
+                            // $.fn.fullpage.destroy();
+                            $.fn.fullpage.setAllowScrolling(false);
+                            if (isDesktop) {
+                                $(window).unbind('wheel');
+                                if (progressLine == false) {
+                                    $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
+                                }
+                                $(window).bind('wheel', function (e) {
+                                    if (progressLine == false) {
+                                        $(".progress-line").each(function () {
+                                            var diff = $(this).offset().top;
+                                            var heightWindow = $(window).height();
+                                            var res = diff - heightWindow;
+                                            var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
+                                            current_transform = Math.abs(current_transform);
+                                            if (current_transform > res) {
+                                                animateStat($(this))
+                                            }
+                                        });
+                                        setTimeout(function () {
+                                            progressLine = true;
+                                        }, 3000);
+
+                                        function animateStat(item) {
+                                            if (!item.find('.progress-line-gray').hasClass('animated')) {
+                                                var width;
+                                                var classListArray = item.find('.progress-line-gray').attr('class').split(' ');
+                                                for (var i = 0; i < classListArray.length; i++) {
+                                                    if (classListArray[i].includes('progress-line-gray-')) {
+                                                        width = classListArray[i].replace('progress-line-gray-', '')
+                                                    }
+                                                }
+                                                item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
+                                            }
+                                        }
+                                    }
+                                });
+                            }
+                            longSectionScrolling();
+                        }
+                        else if (sections[nextIndex.index].attr("id") === "section-instagram") {
+                            $.fn.fullpage.setAllowScrolling(false);
+                            $(window).bind('wheel', function (e) {
+                                if (insta == false) {
+                                    if (isDesktop) {
+                                        $("span.countup").html("1k");
+                                    }
+                                    var topSecInsta = $('#section-instagram span.countup').offset().top;
+                                    var heighttest = $(window).height();
+                                    var resInsta = topSecInsta - heighttest;
+                                    var current_transform1 = parseInt($('#section-instagram .fp-scroller').css('transform').split(',')[5]);
+                                    current_transform1 = (current_transform1);
+                                    if (current_transform1 < resInsta) {
+                                        animateCounter();
+                                    }
+                                    setTimeout(function () {
+                                        insta = true;
+                                    }, 200);
+                                }
+                            });
+                            longSectionScrolling();
+                        }
+                        else if (sections[nextIndex.index].attr("id") === "section-contact") {
+                            $.fn.fullpage.setAllowScrolling(true);
+                        }
+                        else {
+                            dots[nextIndex.index].addClass('active');
+                        }
+                        if (sections[nextIndex.index].hasClass('black-right')) {
+                            swapColor(false);
+                            $('body').addClass('black-mode');
+                        } else {
+                            swapColor(true);
+                            $('body').removeClass('black-mode');
+                        }
+
+                        if (sections[nextIndex.index].hasClass('black-left')) {
+                            $('object.change-color').css('opacity', 1);
+                            $('object.current-color').css('opacity', 0);
+                            $('.whole-text-left-logo').css('color', '#333');
+                        } else {
+                            $('object.change-color').css('opacity', 0);
+                            $('object.current-color').css('opacity', 1);
+                            $('.whole-text-left-logo').css('color', '#fff');
+                        }
+
+                        if ($(window).width() < 1025) {
+                            $('.inner-content-section-banner-fixed').on("click", function () {
+                                $('.whole-text-left-logo').animate({'opacity': '1'});
+                                setTimeout(function () {
+                                    $('.whole-text-left-logo').animate({'opacity': '0'});
+                                }, 3000);
+                            });
+                            if (nextIndex.index == 0) {
+                                $('.whole-text-left-logo').css('opacity', '1');
+                            } else {
+                                $('.whole-text-left-logo').css('opacity', '0');
+                            }
+                            if (sections[nextIndex.index].hasClass('mobile-swap-color')) {
+                                $('.change-color').css('opacity', '1');
+                                $('.current-color').css('opacity', '0');
+                            } else {
+                                $('.change-color').css('opacity', '0');
+                                $('.current-color').css('opacity', '1');
+                            }
+                        }
+                        for (var b = 0; b < nextIndex.index; b++) {
+                            var heightWindows = $(window).height();
+                            var height = sections[b].find('.fp-scroller').outerHeight();
+                            var change = heightWindows - height;
+                            sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + change + ')');
+                        }
+                        for (var y = nextIndex.index + 1; y < sections.length; y++) {
+                            sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+                        }
+                        function longSectionScrolling() {
+                            var sectionStartPosition;
+                            if (sections[nextIndex.index].attr('id') === "section-instagram") {
+                                sectionStartPosition = instagramStartPosition;
+                            } else if (sections[nextIndex.index].attr('id') === "section-about") {
+                                sectionStartPosition = aboutStartPosition;
+                            }
+                            var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
+                            var sectionEnd = $(window).height() - sectionHeight;
+                            var sectionScroll = sectionStartPosition;
+                            $(window).bind('wheel', function (e) {
+                                if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + Math.round(sectionEnd) + ')') {
+                                    var delta = e.originalEvent.deltaY;
+                                    sections[nextIndex.index].css('pointer-events', 'none');
+                                    if (delta > 0) {
+                                        sectionScroll = sectionScroll + event.deltaY;
+                                        $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                                        if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
+                                            $.fn.fullpage.setAllowScrolling(true);
+                                            sections[nextIndex.index].css('pointer-events', 'auto');
+                                            $(window).unbind('wheel');
+                                        }
+                                    } else {
+                                        sectionScroll = sectionScroll + event.deltaY;
+                                        if (sectionScroll <= sectionStartPosition) {
+                                            sections[nextIndex.index].css('pointer-events', 'auto');
+                                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+                                        } else {
+                                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                                        }
+                                    }
+                                }
+                                else  if (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
+                                    var deltaUp = e.originalEvent.deltaY;
+                                    sections[nextIndex.index].css('pointer-events', 'none');
+                                    if (deltaUp < 0) {
+                                        sectionScroll = sectionScroll + event.deltaY;
+                                        $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                                        if (sectionScroll < sectionStartPosition - sectionHeight / 100 * 20) {
+                                            $.fn.fullpage.setAllowScrolling(true);
+                                            sections[nextIndex.index].css('pointer-events', 'auto');
+                                            $(window).unbind('wheel');
+                                        }
+                                    } else  {
+                                        sectionScroll = sectionScroll + event.deltaY;
+                                        if (sectionScroll >= sectionStartPosition) {
+                                            sections[nextIndex.index].css('pointer-events', 'auto');
+                                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+                                        } else {
+                                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                                        }
+                                    }
+                                }
+                            });
+
+                        }
+                    },
+                    afterLoad: function (origin, index) {
+                        if (insta == false) {
+                            if (origin.anchor == 'contact') {
+                                var count = 1;
+                                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.1053c8af32954563ad3ffe2415b8dc94';
+                                var followers;
+                                $.ajax({
+                                    method: 'GET',
+                                    url: url,
+                                    dataType: 'jsonp',
+                                    jsonp: 'callback',
+                                    success: function (response) {
+                                        followers = parseFloat(getRepString(response.data.counts.followed_by));
+                                    }
+                                });
+
+                                function getRepString(rep) {
+                                    rep = rep + '';
+                                    if (rep < 1000) return rep;
+                                    if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
+                                    return (rep / 1000).toFixed(rep % 1000 != 0);
+                                }
+                                countdown = setInterval(function () {
+                                    if (parseInt(count * 1000) <= parseInt(parseFloat(followers) * 1000)) {
+                                        $("span.countup").html(count + "k");
+                                        count += 0.1;
+                                        count = parseFloat(count.toFixed(1));
+                                    }
+                                }, 3);
+                            }
+                        }
+                    },
+                });
+            }
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
