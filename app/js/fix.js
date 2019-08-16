@@ -52,8 +52,7 @@ $(document).ready(function () {
             $.fn.fullpage.setResponsive(true);
         }
     });
-    // $.fn.fullpage.setAllowScrolling(true);
-    //$.fn.fullpage.destroy();
+    
 
     $('.off').click(function(e){
         e.preventDefault();
@@ -69,7 +68,7 @@ $(document).ready(function () {
                 $('#fullpage').fullpage({
                     autoScrolling: true,
                     scrollingSpeed: 700,
-                    //fitToSection: false,
+                    fitToSection: false,
                     anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
                     menu: '.dots-block-section-banner',
                     css3: true,
@@ -299,6 +298,8 @@ $(document).ready(function () {
                         }
                     },
                 });
+                $.fn.fullpage.setAllowScrolling(true);
+                //$.fn.fullpage.destroy();
             }
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
