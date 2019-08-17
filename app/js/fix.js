@@ -378,6 +378,7 @@ $(document).ready(function () {
                 });
                 $( function() {
                     if (isTouchCapable) {
+                        $.fn.fullpage.setAutoScrolling(true);
                         $.fn.fullpage.setResponsive(true);
                     }
                 });
