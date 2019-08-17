@@ -44,7 +44,7 @@ $(document).ready(function () {
     const instagramStartPosition = $("#section-instagram").offset().top;
     const aboutStartPosition = $("#section-about").offset().top;
     $('#fullpage').fullpage({
-        autoScrolling: false,
+        autoScrolling: true,
         scrollingSpeed: 1000,
         fitToSection: false,
         anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
@@ -75,8 +75,8 @@ $(document).ready(function () {
                 }
             } else if (sections[nextIndex.index].attr("id") === "section-about") {
                 $('#section-about').css({
-                    'overflow-y' : 'scroll',
-                    'height' : '100%',
+                    'overflow-y' : 'auto',
+                    'height' : '100vh',
                 });
                 $.fn.fullpage.setAllowScrolling(true);
                 $.fn.fullpage.setAutoScrolling(false);
@@ -91,11 +91,11 @@ $(document).ready(function () {
                                 var diff = $(this).offset().top;
                                 var heightWindow = $(window).height();
                                 var res = diff - heightWindow;
-                                var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
-                                current_transform = Math.abs(current_transform);
-                                if (current_transform > res) {
-                                    animateStat($(this))
-                                }
+                                //var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
+                               // current_transform = Math.abs(current_transform);
+                                // if (current_transform > res) {
+                                //     animateStat($(this))
+                                // }
                             });
                             setTimeout(function () {
                                 progressLine = true;
@@ -117,11 +117,12 @@ $(document).ready(function () {
                     });
                 }
                 //longSectionScrolling();
+                bindScroll();
             }
             else if (sections[nextIndex.index].attr("id") === "section-instagram") {
                 $('#section-instagram').css({
                     'overflow-y' : 'scroll',
-                    'height' : '200%'
+                    'height' : '100vh'
                 });
                 $.fn.fullpage.setAllowScrolling(true);
                 $.fn.fullpage.setAutoScrolling(false);
@@ -133,11 +134,11 @@ $(document).ready(function () {
                         var topSecInsta = $('#section-instagram span.countup').offset().top;
                         var heighttest = $(window).height();
                         var resInsta = topSecInsta - heighttest;
-                        var current_transform1 = parseInt($('#section-instagram .fp-scroller').css('transform').split(',')[5]);
-                        current_transform1 = (current_transform1);
-                        if (current_transform1 < resInsta) {
-                            animateCounter();
-                        }
+                        // var current_transform1 = parseInt($('#section-instagram .fp-scroller').css('transform').split(',')[5]);
+                        // current_transform1 = (current_transform1);
+                        // if (current_transform1 < resInsta) {
+                        //     animateCounter();
+                        // }
                         setTimeout(function () {
                             insta = true;
                         }, 200);
@@ -199,6 +200,65 @@ $(document).ready(function () {
             for (var y = nextIndex.index + 1; y < sections.length; y++) {
                 sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
             }
+
+            function bindScroll() {
+                    // var elm = $("#section-about");
+                    // elm.scrollTop(elm.get(0).scrollHeight);
+                    // console.log(elm);
+                    // var scrollHeight = elm.scrollTop() + elm.height();
+                    // console.log(scrollHeight);
+
+                    // elm.scrollTop(0);
+                    // console.log(elm);
+                var sectionStartPosition;
+                if (sections[nextIndex.index].attr('id') === "section-instagram") {
+                    sectionStartPosition = instagramStartPosition;
+                } else if (sections[nextIndex.index].attr('id') === "section-about") {
+                    sectionStartPosition = aboutStartPosition;
+                }
+                //         var sidebarheight = $('#index').height();
+                var windowheight = $(window).height();
+                var sectionHeight = $(sections[nextIndex.index])[0].scrollHeight;
+                console.log(sectionHeight, 'sectionHeight');
+                var innerHeight =  $(sections[nextIndex.index]).innerHeight();
+                console.log(innerHeight, 'innerHeight');
+                var scrollTop = $(window).scrollTop();
+                console.log(scrollTop, 'scrollTop');
+                //var sectionEnd = $(window).height() - sectionHeight;
+                var sectionEnd = sectionHeight - $(window).height()
+                console.log(sectionEnd);
+                var sectionScroll = sectionStartPosition;
+                // console.log(sectionStartPosition);
+                // $(window).bind('wheel', function (e) {
+                //     if(scrollTop >= sectionEnd) {
+                //         console.log('end reached');
+                //         sections[nextIndex.index].css('pointer-events', 'none');
+                //             var delta = e.originalEvent.deltaY;
+                //             if (delta > 0) {
+                //                 sectionScroll = sectionScroll + event.deltaY;
+                //                 console.log(sectionScroll);
+                //                 $(sections[nextIndex.index]).css('height', sectionScroll);
+                //                 console.log(sectionScroll);
+                //                 // if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
+                //                 //     $.fn.fullpage.setAllowScrolling(true);
+                //                 //     sections[nextIndex.index].css('pointer-events', 'auto');
+                //                 //     $(window).unbind('wheel');
+                //                 // }
+                //             }
+                //             else {
+                //                 sectionScroll = sectionScroll + event.deltaY;
+                //                 if (sectionScroll <= sectionStartPosition) {
+                //                     sections[nextIndex.index].css('pointer-events', 'auto');
+                //                 //     $(sections[nextIndex.index]).css('height', sectionStartPosition);
+                //                 // } else {
+                //                 //     $(sections[nextIndex.index]).css('height', sectionScroll);
+                //                 // }
+                //             }
+                //         }
+                //     }
+                // });
+            }
+
             function longSectionScrolling() {
                 var sectionStartPosition;
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
@@ -258,13 +318,13 @@ $(document).ready(function () {
             //     $.fn.fullpage.setAutoScrolling(true);
             //         return true;
             //       }
-            if (origin.index == 0 && nextIndex.index == 1 && direction == 'down') {
-                $.fn.fullpage.setAllowScrolling(true);
-                $.fn.fullpage.setAutoScrolling(false);
-            } else if (origin.index == 2 && nextIndex.index == 1 && direction == 'up') {
-                    $.fn.fullpage.setAllowScrolling(true);
-                    //return true;
-                }
+            // if (origin.index == 0 && nextIndex.index == 1 && direction == 'down') {
+            //     $.fn.fullpage.setAllowScrolling(true);
+            //     $.fn.fullpage.setAutoScrolling(false);
+            // } else if (origin.index == 1 && nextIndex.index == 0 && direction == 'up') {
+            //     $.fn.fullpage.setAutoScrolling(true);
+            //         return true;
+            //     }
             //  else if (origin.index == 1 && direction == 'down') {
             //     $.fn.fullpage.setAllowScrolling(true);
             //     $.fn.fullpage.setAutoScrolling(false);
@@ -329,6 +389,25 @@ $(document).ready(function () {
         }
     });
     $.fn.fullpage.setAllowScrolling(true);
+
+    // function scroll(param) {
+    //     var speed = 1000;
+    //     $('body').css('overflow', 'hidden');
+    //     if (param === 'up') {
+    //         console.log('up');
+    //         // $('html, body').animate({scrollTop: sections[active-1].offset().top}, speed);
+    //         // active--;
+    //     } else if (param === 'down') {
+    //         console.log('down');
+    //         // $('html, body').animate({scrollTop: sections[active+1].offset().top}, speed);
+    //         // active++;
+    //     } else {
+    //         // $('html, body').animate({scrollTop: sections[param].offset().top}, speed);
+    //         // active = param;
+    //     }
+    //     $(document).unbind('wheel');
+    // }
+    // bindScroll();
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
