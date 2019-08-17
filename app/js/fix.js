@@ -44,29 +44,42 @@ $(document).ready(function () {
     const instagramStartPosition = $("#section-instagram").offset().top;
     const aboutStartPosition = $("#section-about").offset().top;
     $('#fullpage').fullpage({
-        autoScrolling: true,
-        scrollingSpeed: 700,
+        autoScrolling: false,
+        scrollingSpeed: 1000,
+        fitToSection: false,
         anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
         menu: '.dots-block-section-banner',
         css3: true,
-        scrollOverflow: true,
+        easing: 'easeInOutCubic',
+	    easingcss3: 'ease',
+        scrollOverflow: false,
         responsiveWidth: 1000,
         verticalCentered: false,
         lazyLoading: false,
-        onLeave: function (index, nextIndex, direction) {
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        onLeave: function (origin, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
             if (nextIndex.index > dots.length - 1) {
                 dots[dots.length - 1].addClass('active');
 
+            } else if (sections[nextIndex.index].attr("id") === "first-section") {
+                    $.fn.fullpage.setAllowScrolling(true);
+                    $.fn.fullpage.setAutoScrolling(true);
             } else if (sections[nextIndex.index].attr("id") === "section-tools") {
                 if (!($(window).width() < 1025)) {
                     $.fn.fullpage.setAllowScrolling(false);
+                    $.fn.fullpage.setAutoScrolling(true);
                     setTimeout(function () {
                         bindTools();
                     }, 700);
                 }
             } else if (sections[nextIndex.index].attr("id") === "section-about") {
-                $.fn.fullpage.setAllowScrolling(false);
+                $('#section-about').css({
+                    'overflow-y' : 'scroll',
+                    'height' : '100%',
+                });
+                $.fn.fullpage.setAllowScrolling(true);
+                $.fn.fullpage.setAutoScrolling(false);
                 if (isDesktop) {
                     $(window).unbind('wheel');
                     if (progressLine == false) {
@@ -103,10 +116,15 @@ $(document).ready(function () {
                         }
                     });
                 }
-                longSectionScrolling();
+                //longSectionScrolling();
             }
             else if (sections[nextIndex.index].attr("id") === "section-instagram") {
-                $.fn.fullpage.setAllowScrolling(false);
+                $('#section-instagram').css({
+                    'overflow-y' : 'scroll',
+                    'height' : '200%'
+                });
+                $.fn.fullpage.setAllowScrolling(true);
+                $.fn.fullpage.setAutoScrolling(false);
                 $(window).bind('wheel', function (e) {
                     if (insta == false) {
                         if (isDesktop) {
@@ -125,10 +143,11 @@ $(document).ready(function () {
                         }, 200);
                     }
                 });
-                longSectionScrolling();
+                //longSectionScrolling();
             }
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
-                $.fn.fullpage.setAllowScrolling(true);
+                //$.fn.fullpage.setAllowScrolling(true);
+                //$.fn.fullpage.setAutoScrolling(true);
             }
             else {
                 dots[nextIndex.index].addClass('active');
@@ -235,7 +254,36 @@ $(document).ready(function () {
                     }
                 });
             }
-    },
+            // if (origin.index == 4 && nextIndex.index == 3 && direction == 'up') {
+            //     $.fn.fullpage.setAutoScrolling(true);
+            //         return true;
+            //       }
+            if (origin.index == 0 && nextIndex.index == 1 && direction == 'down') {
+                $.fn.fullpage.setAllowScrolling(true);
+                $.fn.fullpage.setAutoScrolling(false);
+            } else if (origin.index == 2 && nextIndex.index == 1 && direction == 'up') {
+                    $.fn.fullpage.setAllowScrolling(true);
+                    //return true;
+                }
+            //  else if (origin.index == 1 && direction == 'down') {
+            //     $.fn.fullpage.setAllowScrolling(true);
+            //     $.fn.fullpage.setAutoScrolling(false);
+            //  }
+            //  else if (origin.index == 2 && direction == 'down') {
+            //     $.fn.fullpage.setAutoScrolling(true);
+            //     $.fn.fullpage.setAllowScrolling(false);
+            //  }
+            //  else if (origin.index == 4 && direction == 'down') {
+            //     $.fn.fullpage.setAutoScrolling(true);
+            //     $.fn.fullpage.setAllowScrolling(true);
+            //  }
+             //else if (origin.index == 3 && destination.index != 4) {
+            // else if (origin.index == 4 && direction == 'down') {
+            //   //fullpage_api.setAutoScrolling(true);
+            //   $.fn.fullpage.setAllowScrolling(true);
+            //   return true;
+            //  }
+        },
     afterLoad: function (origin) {
         if (insta == false) {
             if (origin.anchor == 'contact') {
@@ -248,7 +296,7 @@ $(document).ready(function () {
                     dataType: 'jsonp',
                     jsonp: 'callback',
                     success: function (response) {
-                        followers = parseFloat(getRepString(response.data.counts.followed_by));
+                        //followers = parseFloat(getRepString(response.data.counts.followed_by));
                     }
                 });
 
@@ -267,7 +315,13 @@ $(document).ready(function () {
                     }, 3);
                 }
             }
-        }
+        },
+        afterSlideLoad: function(origin, destination, direction){
+          if (origin.index == 3 && direction == 'down') {
+            fullpage_api.setAutoScrolling(false);
+            return false;
+          }
+     }
     });
     $( function() {
         if (isTouchCapable) {
