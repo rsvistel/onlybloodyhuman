@@ -1600,3 +1600,6 @@ body.opened--menu .text-dots-block embed {
 
 .text-dots-block:hover a {
   text-decoration: none; }
+
+#section-about {
+  height: 100vh !important; }

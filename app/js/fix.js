@@ -71,7 +71,6 @@ $(document).ready(function () {
                     $.fn.fullpage.setAutoScrolling(true);
                     $( function() {
                         if (isTouchCapable) {
-                            //$.fn.fullpage.setResponsive(true);
                             $.fn.fullpage.setAllowScrolling(false);
                             $.fn.fullpage.setAutoScrolling(false);
                             }
@@ -80,11 +79,6 @@ $(document).ready(function () {
                 if (!($(window).width() < 1025)) {
                     $.fn.fullpage.setAllowScrolling(false);
                     $.fn.fullpage.setAutoScrolling(true);
-                    if (isTouchCapable) {
-                        $.fn.fullpage.setResponsive(true);
-                        $.fn.fullpage.setAllowScrolling(false);
-                        $.fn.fullpage.setAutoScrolling(false);
-                    }
                     setTimeout(function () {
                         bindTools();
                     }, 700);
@@ -97,11 +91,6 @@ $(document).ready(function () {
                 });
                 $.fn.fullpage.setAllowScrolling(true);
                 $.fn.fullpage.setAutoScrolling(false);
-                if (isTouchCapable) {
-                    $.fn.fullpage.setResponsive(true);
-                    $.fn.fullpage.setAllowScrolling(false);
-                    $.fn.fullpage.setAutoScrolling(false);
-                }
                 if (isDesktop) {
                     $(window).unbind('wheel');
                     if (progressLine == false) {
@@ -148,11 +137,6 @@ $(document).ready(function () {
                 });
                 $.fn.fullpage.setAllowScrolling(true);
                 $.fn.fullpage.setAutoScrolling(false);
-                if (isTouchCapable) {
-                    $.fn.fullpage.setResponsive(true);
-                    $.fn.fullpage.setAllowScrolling(false);
-                    $.fn.fullpage.setAutoScrolling(false);
-                }
                 $(window).bind('wheel', function (e) {
                     if (insta == false) {
                         if (isDesktop) {
@@ -176,10 +160,7 @@ $(document).ready(function () {
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
                 //$.fn.fullpage.setAllowScrolling(true);
                 //$.fn.fullpage.setAutoScrolling(true);
-                if (isTouchCapable) {
-                    $.fn.fullpage.setAllowScrolling(false);
-                    $.fn.fullpage.setAutoScrolling(false);
-                }
+                $.fn.fullpage.setAllowScrolling(true);
             }
             else {
                 dots[nextIndex.index].addClass('active');
