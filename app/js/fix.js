@@ -132,8 +132,8 @@ $(document).ready(function () {
             }
             else if (sections[nextIndex.index].attr("id") === "section-instagram") {
                 $('#section-instagram').css({
-                    'overflow-y' : 'scroll',
-                    'height' : '200vh'
+                    'overflow-y' : 'auto',
+                    'height' : '100vh'
                 });
                 $.fn.fullpage.setAllowScrolling(true);
                 $.fn.fullpage.setAutoScrolling(false);
@@ -159,8 +159,8 @@ $(document).ready(function () {
             }
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
                 //$.fn.fullpage.setAllowScrolling(true);
-                //$.fn.fullpage.setAutoScrolling(true);
-                $.fn.fullpage.setAllowScrolling(true);
+                $.fn.fullpage.setAutoScrolling(true);
+               // $.fn.fullpage.setAllowScrolling(true);
             }
             else {
                 dots[nextIndex.index].addClass('active');
