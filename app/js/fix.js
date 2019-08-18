@@ -225,13 +225,6 @@ $(document).ready(function () {
                 if( top >= offsetTop + outerHeight - innerWindow) {
                     console.log('end reached');
                 }
-
-
-
-
-
-
-
                 //     // var elm = $("#section-about");
                 //     // elm.scrollTop(elm.get(0).scrollHeight);
                 //     // console.log(elm);
@@ -256,14 +249,9 @@ $(document).ready(function () {
                 // console.log(sectionHeight, 'sectionHeight');
                 // var innerHeight =  $(sections[nextIndex.index]).innerHeight();
                 // console.log(innerHeight, 'innerHeight');
-
-
-
-
                 // //var scrollTop = $(sections[nextIndex.index]).scrollTop();
                 // var scrollTop = $(window).scrollTop(0)
                 // console.log(scrollTop, 'scrollTop');
-                
                 // //var sectionEnd = $(window).height() - sectionHeight;
                 // var sectionEnd = $(window).height() - sectionHeight;
                 // console.log(sectionEnd);
