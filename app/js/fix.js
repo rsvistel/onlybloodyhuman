@@ -45,11 +45,13 @@ $(document).ready(function () {
     const aboutStartPosition = $("#section-about").offset().top;
     $('#fullpage').fullpage({
         autoScrolling: true,
+        fitToSection: true,
         scrollingSpeed: 700,
         anchors: ['intro', 'about', 'tools', 'skills', 'contact', 'contact'],
         menu: '.dots-block-section-banner',
         css3: true,
-        scrollOverflow: true,
+        scrollOverflow: false,
+        normalScrollElements: '#section-about, #section-instagram',
         responsiveWidth: 1000,
         verticalCentered: false,
         lazyLoading: false,
@@ -61,12 +63,19 @@ $(document).ready(function () {
             } else if (sections[nextIndex.index].attr("id") === "section-tools") {
                 if (!($(window).width() < 1025)) {
                     $.fn.fullpage.setAllowScrolling(false);
+                    $.fn.fullpage.setAutoScrolling(true);
                     setTimeout(function () {
                         bindTools();
                     }, 700);
                 }
             } else if (sections[nextIndex.index].attr("id") === "section-about") {
-                $.fn.fullpage.setAllowScrolling(false);
+                $('#section-about').css({
+                    'overflow-y' : 'auto',
+                    'height' : '100vh',
+                    ' -webkit-overflow-scrolling': 'touch',
+                });
+                $.fn.fullpage.setAllowScrolling(true);
+                $.fn.fullpage.setAutoScrolling(false);
                 if (isDesktop) {
                     $(window).unbind('wheel');
                     if (progressLine == false) {
@@ -78,11 +87,11 @@ $(document).ready(function () {
                                 var diff = $(this).offset().top;
                                 var heightWindow = $(window).height();
                                 var res = diff - heightWindow;
-                                var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
-                                current_transform = Math.abs(current_transform);
-                                if (current_transform > res) {
-                                    animateStat($(this))
-                                }
+                                // var current_transform = parseInt($('#section-about .fp-scroller').css('transform').split(',')[5]);
+                                // current_transform = Math.abs(current_transform);
+                                // if (current_transform > res) {
+                                //     animateStat($(this))
+                                // }
                             });
                             setTimeout(function () {
                                 progressLine = true;
@@ -103,10 +112,16 @@ $(document).ready(function () {
                         }
                     });
                 }
-                longSectionScrolling();
+                //longSectionScrolling();
             }
             else if (sections[nextIndex.index].attr("id") === "section-instagram") {
-                $.fn.fullpage.setAllowScrolling(false);
+                $('#section-about').css({
+                    'overflow-y' : 'auto',
+                    'height' : '200vh',
+                    ' -webkit-overflow-scrolling': 'touch',
+                });
+                // $.fn.fullpage.setAllowScrolling(true);
+                // $.fn.fullpage.setAutoScrolling(false);
                 $(window).bind('wheel', function (e) {
                     if (insta == false) {
                         if (isDesktop) {
@@ -125,10 +140,10 @@ $(document).ready(function () {
                         }, 200);
                     }
                 });
-                longSectionScrolling();
+                //longSectionScrolling();
             }
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
-                $.fn.fullpage.setAllowScrolling(true);
+                // $.fn.fullpage.setAllowScrolling(true);
             }
             else {
                 dots[nextIndex.index].addClass('active');
