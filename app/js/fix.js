@@ -221,7 +221,7 @@ $(document).ready(function () {
                         if (deltaUp < 0) {
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sectionScroll < sectionStartPosition - sectionHeight / 100 * 20) {
+                            if (sectionScroll < sectionStartPosition - $(window).height() / 100 * 15) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 $("#fullpage.fullpage-wrapper").removeClass('long-section');
                                 sections[nextIndex.index].css('pointer-events', 'auto');
