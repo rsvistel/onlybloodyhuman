@@ -67,6 +67,7 @@ $(document).ready(function () {
                 }
             } else if (sections[nextIndex.index].attr("id") === "section-about") {
                 $.fn.fullpage.setAllowScrolling(false);
+                setTimeout(function () {$("#fullpage.fullpage-wrapper").addClass('long-section')}, 700);
                 if (isDesktop) {
                     $(window).unbind('wheel');
                     if (progressLine == false) {
@@ -107,6 +108,7 @@ $(document).ready(function () {
             }
             else if (sections[nextIndex.index].attr("id") === "section-instagram") {
                 $.fn.fullpage.setAllowScrolling(false);
+                setTimeout(function () {$("#fullpage.fullpage-wrapper").addClass('long-section')}, 700);
                 $(window).bind('wheel', function (e) {
                     if (insta == false) {
                         if (isDesktop) {
@@ -195,15 +197,16 @@ $(document).ready(function () {
                         var delta = e.originalEvent.deltaY;
                         sections[nextIndex.index].css('pointer-events', 'none');
                         if (delta > 0) {
-                            sectionScroll = sectionScroll + event.deltaY;
+                            sectionScroll = sectionScroll + e.originalEvent.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             if (sectionScroll > $(window).height() / 100 * 20 + sectionStartPosition) {
                                 $.fn.fullpage.setAllowScrolling(true);
+                                $("#fullpage.fullpage-wrapper").removeClass('long-section');
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
                             }
                         } else {
-                            sectionScroll = sectionScroll + event.deltaY;
+                            sectionScroll = sectionScroll + e.originalEvent.deltaY;
                             if (sectionScroll <= sectionStartPosition) {
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
@@ -220,6 +223,7 @@ $(document).ready(function () {
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             if (sectionScroll < sectionStartPosition - sectionHeight / 100 * 20) {
                                 $.fn.fullpage.setAllowScrolling(true);
+                                $("#fullpage.fullpage-wrapper").removeClass('long-section');
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
                             }
