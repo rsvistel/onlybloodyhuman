@@ -191,16 +191,16 @@ $(document).ready(function () {
                 }
                 var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
                 var sectionEnd = $(window).height() - sectionHeight;
-                var sectionScroll = sectionStartPosition;
+                var sectionScroll = sectionStartPosition
                 $(window).bind('wheel', function (e) {
                     if  (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
-                        var deltaUp = e.originalEvent.deltaY;
-                        sectionScroll = sectionStartPosition;
+                        var delta = e.originalEvent.deltaY;
+                        //sectionScroll = sectionStartPosition;
                         sections[nextIndex.index].css('pointer-events', 'none');
-                        if (deltaUp < 0) {
+                        if (delta < 0) {
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sectionScroll <= sectionStartPosition - $(window).height() / 100 * 10) {
+                            if (sectionScroll <= sectionStartPosition - sectionHeight / 100 * 10) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 $("#fullpage.fullpage-wrapper").removeClass('long-section');
                                 sections[nextIndex.index].css('pointer-events', 'auto');
