@@ -195,7 +195,6 @@ $(document).ready(function () {
                 $(window).bind('wheel', function (e) {
                     if  (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
                         var deltaUp = e.originalEvent.deltaY;
-                        sectionScroll = sectionStartPosition;
                         sections[nextIndex.index].css('pointer-events', 'none');
                         if (deltaUp < 0) {
                             sectionScroll = sectionScroll + event.deltaY;
@@ -207,7 +206,7 @@ $(document).ready(function () {
                                 $(window).unbind('wheel');
                             }
                         } else  {
-                           sectionScroll = sectionScroll + event.deltaY;
+                            sectionScroll = sectionStartPosition;
                             if (sectionScroll >= sectionStartPosition) {
                             sections[nextIndex.index].css('pointer-events', 'auto');
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
