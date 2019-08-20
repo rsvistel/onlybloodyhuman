@@ -74,7 +74,7 @@ $(document).ready(function () {
                         $('.progress-line-gray').animate({'width': '0'}).removeClass('animated');
                     }
                     $(window).bind('wheel', function (e) {
-                        if (progressLine == false) {
+                        // if (progressLine == false) {
                             $(".progress-line").each(function () {
                                 var diff = $(this).offset().top;
                                 var heightWindow = $(window).height();
@@ -101,7 +101,7 @@ $(document).ready(function () {
                                     item.find('.progress-line-gray').animate({'width': width + '%'}, 1000).addClass('animated')
                                 }
                             }
-                        }
+                        // }
                     });
                 }
                 longSectionScrolling();
@@ -193,13 +193,11 @@ $(document).ready(function () {
                 var sectionEnd = $(window).height() - sectionHeight;
                 var sectionScroll = sectionStartPosition;
                 $(window).bind('wheel', function (e) {
-                    // sectionScroll = sectionStartPosition;
                     if  (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
                         var deltaUp = e.originalEvent.deltaY;
-                        sectionScroll = sectionStartPosition
+                        sectionScroll = sectionStartPosition;
                         sections[nextIndex.index].css('pointer-events', 'none');
                         if (deltaUp < 0) {
-                            //if(sectionScroll <= sectionStartPosition) {
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             if (sectionScroll <= sectionStartPosition - $(window).height() / 100 * 10) {
@@ -208,7 +206,6 @@ $(document).ready(function () {
                                 sections[nextIndex.index].css('pointer-events', 'auto');
                                 $(window).unbind('wheel');
                             }
-                        //}
                         } else  {
                            sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll >= sectionStartPosition) {
