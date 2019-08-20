@@ -207,7 +207,7 @@ $(document).ready(function () {
                                 $(window).unbind('wheel');
                             }
                         } else  {
-                           sectionScroll = sectionScroll + event.deltaY;
+                           sectionScroll = sectionStartPosition
                             if (sectionScroll >= sectionStartPosition) {
                             sections[nextIndex.index].css('pointer-events', 'auto');
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
