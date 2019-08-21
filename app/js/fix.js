@@ -200,7 +200,7 @@ $(document).ready(function () {
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                              $('#menuToggle .white-button').animate({opacity: 1}, 700);
                              $('#menuToggle .black-button').animate({opacity: 0}, 700);
-                             $('#menuToggle .white-button').css('transition', 'opacity .5s linear');
+                             $('#menuToggle .white-button').css('transition', 'opacity .4s linear');
                             if (sectionScroll <= sectionStartPosition - sectionHeight / 100 * 10) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 $("#fullpage.fullpage-wrapper").removeClass('long-section');
@@ -212,6 +212,9 @@ $(document).ready(function () {
                             if (sectionScroll >= sectionStartPosition) {
                             sections[nextIndex.index].css('pointer-events', 'auto');
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+                            $('#menuToggle .white-button').animate({opacity: 0}, 700);
+                            $('#menuToggle .black-button').animate({opacity: 1}, 700);
+                            $('#menuToggle .white-button').css('transition', 'opacity .4s linear');
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
