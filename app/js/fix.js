@@ -198,11 +198,6 @@ $(document).ready(function () {
                         if (deltaUp < 0) {
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
-                            if (sections[nextIndex.index].attr('id') === "section-about") {
-                                $('#menuToggle .white-button').animate({opacity: 1}, 700);
-                                $('#menuToggle .black-button').animate({opacity: 0}, 700);
-                                $('#menuToggle .white-button').css('transition', 'opacity .4s linear');
-                            }
                             if (sectionScroll <= sectionStartPosition - sectionHeight / 100 * 10) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 $("#fullpage.fullpage-wrapper").removeClass('long-section');
@@ -214,16 +209,6 @@ $(document).ready(function () {
                             if (sectionScroll >= sectionStartPosition) {
                             sections[nextIndex.index].css('pointer-events', 'auto');
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
-                            if (sections[nextIndex.index].attr('id') === "section-about") {
-                                $('#menuToggle .white-button').animate({opacity: 0}, 700);
-                                $('#menuToggle .black-button').animate({opacity: 1}, 700);
-                                $('#menuToggle .white-button').css('transition', 'opacity .4s linear');
-                            }
-                            if (sections[nextIndex.index].attr('id') === "section-instagram") {
-                                $('#menuToggle .white-button').animate({opacity: 1});
-                                $('#menuToggle .black-button').animate({opacity: 0});
-                                // $('#menuToggle .white-button').css('transition', 'opacity .4s linear');
-                            }
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
