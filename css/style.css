@@ -277,6 +277,11 @@ a:focus, a:hover {
   -o-transition: .1s;
   transition: .1s; }
 
+#fullpage.long-section {
+  -webkit-transition: ease !important;
+  -o-transition: ease !important;
+  transition: ease !important; }
+
 body .text-near-dots {
   opacity: 0;
   -webkit-transition: ease-in 0.3s;
