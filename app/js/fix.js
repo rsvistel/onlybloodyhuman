@@ -55,6 +55,7 @@ $(document).ready(function () {
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
             $('.text-dots-block').removeClass('active');
+            $("#fullpage.fullpage-wrapper").removeClass('long-section');
             if (nextIndex.index > dots.length - 1) {
                 dots[dots.length - 1].addClass('active');
 
