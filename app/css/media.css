@@ -529,7 +529,7 @@
   .section-instagram-followers {
     padding: 0 0 0% 9%;
     margin-top: 4%;
-    margin-bottom: 2%; }
+    margin-bottom: 4%; }
   .text-under-tittles-section-tools.text-under-img-section-tools {
     margin-top: 5px;
     margin-left: 5%; }
@@ -1331,7 +1331,10 @@
 
 @media (min-width: 768px) and (max-width: 825px) and (orientation: landscape) {
   .client-contact-list {
-    width: 50%; } }
+    width: 50%; }
+  .text-under-tittles-section-tools {
+    font-size: 13px;
+    line-height: 22px; } }
 
 @media (max-width: 825px) and (orientation: landscape) {
   .outdoor-section__image.icon-travel {
