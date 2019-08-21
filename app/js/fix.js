@@ -198,6 +198,9 @@ $(document).ready(function () {
                         if (deltaUp < 0) {
                             sectionScroll = sectionScroll + event.deltaY;
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
+                             $('#menuToggle .white-button').animate({opacity: 1}, 700);
+                             $('#menuToggle .black-button').animate({opacity: 0}, 700);
+                             $('#menuToggle .white-button').css('transition', 'opacity .5s linear');
                             if (sectionScroll <= sectionStartPosition - sectionHeight / 100 * 10) {
                                 $.fn.fullpage.setAllowScrolling(true);
                                 $("#fullpage.fullpage-wrapper").removeClass('long-section');
