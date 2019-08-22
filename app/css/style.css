@@ -41,7 +41,7 @@ h6 {
 
 p {
   font-size: 0.9vw;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6vw; }
 
 a:focus, a:hover {
@@ -685,7 +685,7 @@ body.opened--menu .text-dots-block embed {
 .aka-name-section-about {
   font-style: italic;
   font-size: 0.55vw;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   text-transform: initial;
   margin-bottom: 30px; }
 
@@ -1045,7 +1045,7 @@ body.opened--menu .text-dots-block embed {
 
 .outdoor-section__text {
   text-align: left;
-  font-family: "Montserrat"; }
+  font-family: "Montserrat", sans-serif; }
 
 .outdoor-section button {
   overflow: hidden; }
