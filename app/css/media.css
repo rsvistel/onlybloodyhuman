@@ -368,10 +368,6 @@
     min-height: auto; }
   .video-section-cover {
     z-index: 1; }
-  .highlight-hover h2 {
-    background-image: none; }
-  .client-contact-list__email a {
-    background-image: none; }
   .left-logo-banner-section .whole-text-left-logo {
     opacity: 1; } }
 
@@ -443,8 +439,7 @@
   #first-section, #section-banner {
     z-index: auto; }
   #section-banner {
-    overflow: hidden;
-    background-image: url("../img/s1-intro/reel_placeholder_mob.jpg"); }
+    overflow: hidden; }
   .logo-client-list object {
     min-width: 115px;
     max-width: 125px;
@@ -1378,8 +1373,6 @@
     display: block; }
   .tablet-image {
     display: none; }
-  .client-contact-list-img {
-    background-image: url("../img/s6-contact/phone_mob.jpg"); }
   .video-mobile-vertical {
     display: block; } }
 
