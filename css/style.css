@@ -109,7 +109,6 @@ a:focus, a:hover {
   background-color: transparent; }
 
 #section-banner {
-  background-image: url("../img/s1-intro/reel_placeholder_dsk.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   height: 80vh;
@@ -623,7 +622,6 @@ body.opened--menu .text-dots-block embed {
   top: 1vh; }
 
 #section-about {
-  background-image: url("../img/s2-about/grain_texture.jpg");
   color: #363531;
   font-family: "Montserrat", sans-serif;
   -webkit-background-size: 30% 30%;
@@ -636,7 +634,6 @@ body.opened--menu .text-dots-block embed {
   display: flex; }
 
 .photo-man-section-about {
-  background-image: url("../img/s2-about/jamie_dsk.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -650,10 +647,6 @@ body.opened--menu .text-dots-block embed {
 
 .highlight-hover h2 {
   text-indent: -4px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(227, 195, 117, 0)), color-stop(50%, #df6f43));
-  background-image: -webkit-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #df6f43 50%);
-  background-image: -o-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #df6f43 50%);
-  background-image: linear-gradient(to right, rgba(227, 195, 117, 0) 50%, #df6f43 50%);
   background-position: -0% 0;
   -webkit-background-size: 200% auto;
           background-size: 200% auto;
@@ -803,7 +796,6 @@ body.opened--menu .text-dots-block embed {
   color: white; }
 
 .photo-half-section-tools {
-  background-image: url("../img/s3-tools/camera_dsk.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -822,20 +814,12 @@ body.opened--menu .text-dots-block embed {
   background-repeat: no-repeat;
   background-position: center; }
   .after.after-2 {
-    top: 100%;
-    background-image: url("../img/s3-tools/drone_dsk.jpg"); }
+    top: 100%; }
   .after.after-3 {
-    top: 100%;
-    background-image: url("../img/s3-tools/gimbal_dsk.jpg"); }
+    top: 100%; }
 
 .photo-half-section-tools-dji, .photo-half-section-tools-movi {
   display: none; }
-
-.photo-half-section-tools-dji {
-  background-image: url("../img/s3-tools/drone_dsk.jpg"); }
-
-.photo-half-section-tools-movi {
-  background-image: url("../img/s3-tools/gimbal_dsk.jpg"); }
 
 .tittles-section-tools {
   font-weight: 700;
@@ -1314,7 +1298,6 @@ body.opened--menu .text-dots-block embed {
   display: flex; }
 
 .client-contact-list {
-  background-image: url("../img/s2-about/grain_texture.jpg");
   -webkit-background-size: 30% 30%;
           background-size: 30%;
   width: 50%;
@@ -1369,10 +1352,6 @@ body.opened--menu .text-dots-block embed {
   position: relative; }
 
 .client-contact-list__email a {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(227, 195, 117, 0)), color-stop(50%, #eecb65));
-  background-image: -webkit-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #eecb65 50%);
-  background-image: -o-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #eecb65 50%);
-  background-image: linear-gradient(to right, rgba(227, 195, 117, 0) 50%, #eecb65 50%);
   background-position: -0% 0;
   -webkit-background-size: 200% auto;
           background-size: 200% auto;
@@ -1479,7 +1458,6 @@ body.opened--menu .text-dots-block embed {
   margin-right: 5px; }
 
 .client-contact-list-img {
-  background-image: url("../img/s6-contact/phone_dsk.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
