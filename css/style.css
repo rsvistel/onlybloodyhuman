@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Regular.ttf) format("truetype"), url(../fonts/Montserrat-Regular.otf) format("opentype"); }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Medium.ttf) format("truetype"), url(../fonts/Montserrat-Medium.otf) format("opentype");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-SemiBold.ttf) format("truetype"), url(../fonts/Montserrat-SemiBold.otf) format("opentype");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Bold.ttf) format("truetype"), url(../fonts/Montserrat-Bold.otf) format("opentype");
+  font-weight: 700; }
+
 h1 {
   font-size: 9vw;
   line-height: 8vw;
@@ -14,7 +33,7 @@ h3 {
 
 h1, h2, h3, h5, h6 {
   font-weight: 700;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase; }
 
 h6 {
@@ -22,7 +41,7 @@ h6 {
 
 p {
   font-size: 0.9vw;
-  font-family: "Arial";
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6vw; }
 
 a:focus, a:hover {
@@ -312,7 +331,7 @@ body.opened--menu .text-dots-block embed {
   margin: 0; }
 
 .job-text-center {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: snow;
   margin: 2px 1px;
@@ -320,13 +339,13 @@ body.opened--menu .text-dots-block embed {
   font-size: 0.75vw; }
 
 .lines-job-text-center {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: snow;
   font-size: 1.7vw;
   font-weight: 300; }
 
 .text-left-logo {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   margin: 2px 0;
@@ -592,7 +611,7 @@ body.opened--menu .text-dots-block embed {
 #section-about {
   background-image: url("../img/s2-about/grain_texture.jpg");
   color: #363531;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-background-size: 30% 30%;
           background-size: 30%; }
 
@@ -666,7 +685,7 @@ body.opened--menu .text-dots-block embed {
 .aka-name-section-about {
   font-style: italic;
   font-size: 0.55vw;
-  font-family: "Arial";
+  font-family: "Montserrat", sans-serif;
   text-transform: initial;
   margin-bottom: 30px; }
 
@@ -766,7 +785,7 @@ body.opened--menu .text-dots-block embed {
   height: 100vh;
   padding: 0 9% 3% 9%;
   text-transform: uppercase;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white; }
 
 .photo-half-section-tools {
@@ -971,7 +990,7 @@ body.opened--menu .text-dots-block embed {
           transform: translateY(-50%); }
 
 .outdoor-section__text {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #ffffff; }
 
 .outdoor-section__text--header h2 {
@@ -1008,7 +1027,7 @@ body.opened--menu .text-dots-block embed {
 .outdoor-section-block button span, .block-tools-section button span {
   font-size: 0.8vw;
   font-weight: 700;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   margin-top: 0.8vw;
   margin-bottom: 0.8vw;
@@ -1026,7 +1045,7 @@ body.opened--menu .text-dots-block embed {
 
 .outdoor-section__text {
   text-align: left;
-  font-family: "Arial"; }
+  font-family: "Montserrat", sans-serif; }
 
 .outdoor-section button {
   overflow: hidden; }
@@ -1127,7 +1146,7 @@ body.opened--menu .text-dots-block embed {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0 auto;
   font-weight: 600; }
 
@@ -1172,7 +1191,7 @@ body.opened--menu .text-dots-block embed {
   background: #363531; }
 
 .section-instagram-followers {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #363531;
   color: #ffffff;
   font-weight: bold;
@@ -1286,14 +1305,14 @@ body.opened--menu .text-dots-block embed {
           background-size: 30%;
   width: 50%;
   padding: 4% 0 1% 9%;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: bold; }
 
 .client-contact-list__text p {
   font-size: 1.8vw;
   margin-left: 0.48vw;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   margin-bottom: 0;
   line-height: 1vw; }
@@ -1321,7 +1340,7 @@ body.opened--menu .text-dots-block embed {
   width: 1.3vw; }
 
 .client-contact-list__quote p {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 6.5vw;
   margin-left: 0.5vw;
   font-size: 1vw;
@@ -1488,14 +1507,14 @@ body.opened--menu .text-dots-block embed {
   text-transform: uppercase;
   text-align: center;
   line-height: 10px;
-  font-family: "Arial", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .footer-client p {
   padding-top: 2vh;
   letter-spacing: 0.03vw;
   font-size: 0.55vw;
   margin-bottom: 0.2vw;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.2vw; }
 
 .footer-client span {
