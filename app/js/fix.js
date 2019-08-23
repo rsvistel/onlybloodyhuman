@@ -246,7 +246,6 @@ $(document).ready(function () {
             if (origin.anchor == 'contact') {
                 var count = 1;
                 var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.72e597f8a65e4f539dd89e15b0a0e99f';
-                
                 var followers;
                 $.ajax({
                     method: 'GET',
