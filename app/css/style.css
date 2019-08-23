@@ -22,6 +22,12 @@
   font-weight: 500;
   font-style: normal; }
 
+@font-face {
+  font-family: 'ProximaNova';
+  src: url("../fonts/proximanova-light.woff2") format("woff2"), url("../fonts/proximanova-light.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
 h1 {
   font-size: 9vw;
   line-height: 8vw;
@@ -46,7 +52,7 @@ h6 {
 
 p {
   font-size: 0.9vw;
-  font-family: ProximaNova;
+  font-family: "ProximaNova";
   line-height: 1.6vw; }
 
 a:focus, a:hover {
@@ -690,7 +696,7 @@ body.opened--menu .text-dots-block embed {
 .aka-name-section-about {
   font-style: italic;
   font-size: 0.55vw;
-  font-family: ProximaNova;
+  font-family: "ProximaNova";
   text-transform: initial;
   margin-bottom: 30px; }
 
@@ -1050,7 +1056,7 @@ body.opened--menu .text-dots-block embed {
 
 .outdoor-section__text {
   text-align: left;
-  font-family: ProximaNova; }
+  font-family: "ProximaNova"; }
 
 .outdoor-section button {
   overflow: hidden; }
