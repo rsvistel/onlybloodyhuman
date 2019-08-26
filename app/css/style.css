@@ -84,7 +84,7 @@ a:focus, a:hover {
   background-color: transparent; }
 
 #section-banner {
-  background-image: url("../img/s1-intro/reel_placeholder_dsk.jpg");
+  background-image: url("../img/s1-intro/reel_placeholder_dsk.webp");
   -webkit-background-size: cover;
           background-size: cover;
   height: 80vh;
@@ -598,7 +598,7 @@ body.opened--menu .text-dots-block embed {
   top: 1vh; }
 
 #section-about {
-  background-image: url("../img/s2-about/grain_texture.jpg");
+  background-image: url("../img/s2-about/grain_texture.webp");
   color: #363531;
   font-family: "Montserrat", sans-serif;
   -webkit-background-size: 30% 30%;
