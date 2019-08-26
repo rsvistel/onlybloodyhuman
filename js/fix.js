@@ -23,13 +23,12 @@ $(document).ready(function () {
         })
     }
 
-    if (!isDesktop) {
-        $('#section-banner').css('background-image', 'url("../img/s1-intro/reel_placeholder_mob.jpg")')
-        // $(".ie-image").each(function () {
-        //     var route = $(this).attr("data");
-        //     route = route.slice(0,-4);
-        //     $(this).attr("data", route + '-ie.svg')
-        // })
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (!isChrome)  {
+        $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
+        $("#section-banner").css('background-image', 'url("../img/s1-intro/reel_placeholder_dsk.jpg")');
+        $("#section-about").css('background-image', 'url("../img/s2-about/grain_texture.jpg")');
+        $(".photo-man-section-about").css('background-image', 'url("../img/s2-about/jamie_dsk.jpg")')
     }
 
     $('.owl-carousel').owlCarousel({
@@ -330,7 +329,7 @@ $(document).ready(function () {
 
     $(window).on("resize", function () {
         if ($(window).width() < 768) {
-            $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.webp)");
+            $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.jpg)");
         }
     });
     if ($(window).width() < 768) {
