@@ -23,7 +23,7 @@ $(document).ready(function () {
         })
     }
 
-    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
     if (!isChrome)  {
         $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
         $("#section-banner").css('background-image', 'url("../img/s1-intro/reel_placeholder_dsk.jpg")');
