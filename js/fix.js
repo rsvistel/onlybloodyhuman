@@ -330,7 +330,7 @@ $(document).ready(function () {
 
     $(window).on("resize", function () {
         if ($(window).width() < 768) {
-            $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.jpg)");
+            $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.webp)");
         }
     });
     if ($(window).width() < 768) {
