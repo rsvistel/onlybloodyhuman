@@ -282,18 +282,23 @@ body.opened--menu .text-dots-block embed
 .arrow-down-section-banner
   display: flex
   justify-content: center
-  width: 100%
+  width: 1.1vw
   bottom: 2%
   position: absolute
-  z-index: 5
+  z-index: 105
   margin-left: 0
+  right: calc(50% - 1.1vw/2)
+  cursor: pointer
+  #goToAbout
+    cursor: pointer
 
-.arrow-down-section-banner embed
+.arrow-down-section-banner object
   width: 1.1vw
   min-width: 17px
   max-width: 30px
   cursor: pointer
   animation: bottom 2s ease-in-out infinite
+  pointer-events: none
 
 @keyframes bottom
   from

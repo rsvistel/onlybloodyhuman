@@ -78,6 +78,7 @@ $(document).ready(function () {
         verticalCentered: false,
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
+            if ($('body').hasClass('opened--menu')) {$('#menuToggle input').click()}
             $('.text-dots-block').removeClass('active');
             $("#fullpage.fullpage-wrapper").removeClass('long-section');
             if (nextIndex.index > dots.length - 1) {
@@ -304,6 +305,12 @@ $(document).ready(function () {
         }
     });
     $.fn.fullpage.setAllowScrolling(true);
+
+    if(!isDesktop) {
+        $('.arrow-down-section-banner').click(function () {
+            fullpage_api.moveTo('about', 1);
+        });
+    }
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
