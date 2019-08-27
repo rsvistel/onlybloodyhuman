@@ -1218,7 +1218,8 @@
     min-width: 6vw;
     padding-left: 0; }
   .logo-client-list-red_bull {
-    padding-left: 0 !important; }
+    padding-left: 0 !important;
+    padding-right: 9% !important; }
   .logo-client-list-discovery {
     padding-left: 0 !important; }
   .logo-client-list-gsk object {
