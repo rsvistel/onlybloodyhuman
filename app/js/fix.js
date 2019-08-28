@@ -306,11 +306,11 @@ $(document).ready(function () {
     });
     $.fn.fullpage.setAllowScrolling(true);
 
-    if(!isDesktop) {
-        $('.arrow-down-section-banner').click(function () {
+    // if(!isDesktop) {
+        $('#goToAbout').click(function () {
             fullpage_api.moveTo('about', 1);
         });
-    }
+    // }
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
