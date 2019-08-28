@@ -23,13 +23,12 @@ $(document).ready(function () {
         })
     }
 
-    if (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase()))  {
-        console.log('chrome')
-    } else {
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (!isChrome)  {
         $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
-        $("#section-banner").css('background-image', 'url("img/s1-intro/reel_placeholder_dsk.jpg")');
-        $("#section-about").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
-        $(".photo-man-section-about").css('background-image', 'url("img/s2-about/jamie_dsk.jpg")')
+        $("#section-banner").css('background-image', 'url("../img/s1-intro/reel_placeholder_dsk.jpg")');
+        $("#section-about").css('background-image', 'url("../img/s2-about/grain_texture.jpg")');
+        $(".photo-man-section-about").css('background-image', 'url("../img/s2-about/jamie_dsk.jpg")')
     }
 
     $('.owl-carousel').owlCarousel({
@@ -79,6 +78,7 @@ $(document).ready(function () {
         verticalCentered: false,
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
+            if ($('body').hasClass('opened--menu')) {$('#menuToggle input').click()}
             $('.text-dots-block').removeClass('active');
             $("#fullpage.fullpage-wrapper").removeClass('long-section');
             if (nextIndex.index > dots.length - 1) {
@@ -128,7 +128,7 @@ $(document).ready(function () {
                             }
                     });
                 }
-                longSectionScrolling();
+                setTimeout(function () {longSectionScrolling()}, 600);
             }
             else if (sections[nextIndex.index].attr("id") === "section-instagram") {
                 $.fn.fullpage.setAllowScrolling(false);
@@ -151,7 +151,7 @@ $(document).ready(function () {
                         }, 200);
                     }
                 });
-                longSectionScrolling();
+                setTimeout(function () {longSectionScrolling()}, 600);
             }
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
                 $.fn.fullpage.setAllowScrolling(true);
@@ -230,10 +230,10 @@ $(document).ready(function () {
                                 $(window).unbind('wheel');
                             }
                         } else  {
-                            sectionScroll = sectionStartPosition;
+                            sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll >= sectionStartPosition) {
-                            sections[nextIndex.index].css('pointer-events', 'auto');
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
@@ -305,6 +305,12 @@ $(document).ready(function () {
         }
     });
     $.fn.fullpage.setAllowScrolling(true);
+
+    if(isDesktop) {
+        $('#goToAbout').click(function () {
+            fullpage_api.moveTo('about', 1);
+        });
+    }
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
