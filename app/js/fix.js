@@ -230,7 +230,7 @@ $(document).ready(function () {
                                 $(window).unbind('wheel');
                             }
                         } else  {
-                            sectionScroll = sectionStartPosition;
+                            sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll >= sectionStartPosition) {
                             sections[nextIndex.index].css('pointer-events', 'auto');
                             $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
@@ -306,11 +306,11 @@ $(document).ready(function () {
     });
     $.fn.fullpage.setAllowScrolling(true);
 
-    // if(!isDesktop) {
+    if(isDesktop) {
         $('#goToAbout').click(function () {
             fullpage_api.moveTo('about', 1);
         });
-    // }
+    }
 
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {

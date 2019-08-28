@@ -381,8 +381,8 @@ body.opened--menu .text-dots-block embed {
   position: absolute;
   z-index: 105;
   margin-left: 0;
-  right: -webkit-calc(50% - 1.1vw/2);
-  right: calc(50% - 1.1vw/2);
+  right: -webkit-calc(51% - 1.1vw/2);
+  right: calc(51% - 1.1vw/2);
   cursor: pointer; }
   .arrow-down-section-banner #goToAbout {
     cursor: pointer; }
