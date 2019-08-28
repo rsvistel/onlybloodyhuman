@@ -24,11 +24,13 @@ $(document).ready(function () {
     }
 
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    if (!isChrome)  {
+    if (isChrome)  {
+        console.log("chrome");
+    } else {
         $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
-        $("#section-banner").css('background-image', 'url("../img/s1-intro/reel_placeholder_dsk.jpg")');
-        $("#section-about").css('background-image', 'url("../img/s2-about/grain_texture.jpg")');
-        $(".photo-man-section-about").css('background-image', 'url("../img/s2-about/jamie_dsk.jpg")')
+        $("#section-banner").css('background-image', 'url("img/s1-intro/reel_placeholder_dsk.jpg")');
+        $("#section-about").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
+        $(".photo-man-section-about").css('background-image', 'url("img/s2-about/jamie_dsk.jpg")')
     }
 
     $('.owl-carousel').owlCarousel({
