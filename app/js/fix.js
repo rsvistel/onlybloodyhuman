@@ -128,7 +128,7 @@ $(document).ready(function () {
                             }
                     });
                 }
-                longSectionScrolling();
+                setTimeout(function () {longSectionScrolling()}, 600);
             }
             else if (sections[nextIndex.index].attr("id") === "section-instagram") {
                 $.fn.fullpage.setAllowScrolling(false);
@@ -151,7 +151,7 @@ $(document).ready(function () {
                         }, 200);
                     }
                 });
-                longSectionScrolling();
+                setTimeout(function () {longSectionScrolling()}, 600);
             }
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
                 $.fn.fullpage.setAllowScrolling(true);
@@ -232,8 +232,8 @@ $(document).ready(function () {
                         } else  {
                             sectionScroll = sectionScroll + event.deltaY;
                             if (sectionScroll >= sectionStartPosition) {
-                            sections[nextIndex.index].css('pointer-events', 'auto');
-                            $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
+                                sections[nextIndex.index].css('pointer-events', 'auto');
+                                $('#fullpage').css('transform', 'translate3d(0px, -' + sectionStartPosition + 'px, 0px)');
                             } else {
                                 $('#fullpage').css('transform', 'translate3d(0px, -' + sectionScroll + 'px, 0px)');
                             }
