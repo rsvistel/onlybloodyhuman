@@ -322,7 +322,7 @@ body.opened--menu .text-dots-block embed {
 .job-text-center {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: snow;
+  color: white;
   margin: 2px 1px;
   letter-spacing: 6px;
   font-size: 0.75vw; }
@@ -674,7 +674,7 @@ body.opened--menu .text-dots-block embed {
 
 #section-about p {
   text-transform: initial;
-  color: #4b4b56;
+  color: #545461;
   margin-bottom: 15px; }
 
 .aka-name-section-about {
@@ -1416,7 +1416,12 @@ body.opened--menu .text-dots-block embed {
 .client-contact-list__social a {
   font-weight: 500;
   text-decoration: underline;
-  color: #363531; }
+  color: #363531;
+  text-transform: lowercase;
+  margin-right: 5px; }
+
+.client-contact-list__social--icon.audio a {
+  text-transform: uppercase; }
 
 .client-contact-list__social span {
   font-weight: 500; }
@@ -1446,6 +1451,9 @@ body.opened--menu .text-dots-block embed {
 
 .client-contact-list__social--icon.audio embed {
   width: 1.8vw; }
+
+.client-contact-list__social--icon.audio a {
+  text-transform: uppercase; }
 
 .client-contact-list__social--icon.instagram embed {
   width: 2.2vw;
@@ -1578,7 +1586,7 @@ body.opened--menu .text-dots-block embed {
   padding: 3% 6% 3.5% 5%; }
 
 .embed-arrow embed {
-  width: 14px;
+  width: 0.8vw;
   height: 8px; }
 
 .dots-display {
