@@ -1452,7 +1452,7 @@ body.opened--menu .text-dots-block embed {
 .client-contact-list__social--icon.audio embed {
   width: 1.8vw; }
 
-client-contact-list__social--icon.audio a {
+.client-contact-list__social--icon.audio a {
   text-transform: uppercase; }
 
 .client-contact-list__social--icon.instagram embed {
