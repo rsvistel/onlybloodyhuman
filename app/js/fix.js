@@ -80,6 +80,16 @@ $(document).ready(function () {
         verticalCentered: false,
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
+            if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-camera')) {
+                setTimeout(function () { changeTool($('.icon-camera'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)}, 400);
+            }
+            else if ((nextIndex.index <= 1) && $('#section-tools').hasClass('tools-movi')) {
+                setTimeout(function () { changeTool($('.icon-movi'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true)}, 400);
+            }
+            // else if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-dji')) {
+            //     //setTimeout(function () { changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)}, 400);
+            //     console.log('tools-dji');
+            // }
             if ($('body').hasClass('opened--menu')) {$('#menuToggle input').click()}
             $('.text-dots-block').removeClass('active');
             $("#fullpage.fullpage-wrapper").removeClass('long-section');
@@ -155,8 +165,9 @@ $(document).ready(function () {
                 });
                 setTimeout(function () {longSectionScrolling()}, 600);
             }
+
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
-                $.fn.fullpage.setAllowScrolling(true);
+                // $.fn.fullpage.setAllowScrolling(true);
             }
             else {
                 dots[nextIndex.index].addClass('active');
@@ -268,11 +279,11 @@ $(document).ready(function () {
                 });
             }
     },
-    afterLoad: function (origin) {
+    afterLoad: function (origin, direction) {
         if (insta == false) {
             if (origin.anchor == 'contact') {
                 var count = 1;
-                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.72e597f8a65e4f539dd89e15b0a0e99f';
+                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.dc9b2db2c58e48349642da1ca0ac393b';
                 var followers;
                 $.ajax({
                     method: 'GET',
@@ -299,6 +310,9 @@ $(document).ready(function () {
                     }, 3);
                 }
             }
+            // if (origin.anchor ==  'skills' && direction == 'up'){
+            //     $.fn.fullpage.setAllowScrolling(false);
+            // }
         }
     });
     $( function() {
@@ -435,18 +449,22 @@ $(document).ready(function () {
             if (delta > 0) {
                 if ($('#section-tools').hasClass('tools-camera')) {
                     changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false);
-                } else if ($('#section-tools').hasClass('tools-dji')) {
+                }
+                else if ($('#section-tools').hasClass('tools-dji')) {
                     changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false);
-                } else if ($('#section-tools').hasClass('tools-movi')) {
+                }
+                else if ($('#section-tools').hasClass('tools-movi')) {
                     $(document).unbind('wheel');
                     $.fn.fullpage.setAllowScrolling(true);
                 }
             } else {
                 if ($('#section-tools').hasClass('tools-movi')) {
                     changeTool($('.icon-movi'), $('.icon-dji'), 'tools-movi', 'tools-dji', '2', true);
-                } else if ($('#section-tools').hasClass('tools-dji')) {
+                }
+                else if ($('#section-tools').hasClass('tools-dji')) {
                     changeTool($('.icon-dji'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true);
-                } else if ($('#section-tools').hasClass('tools-camera')) {
+                }
+                else if ($('#section-tools').hasClass('tools-camera')) {
                     $(document).unbind('wheel');
                     $.fn.fullpage.setAllowScrolling(true);
                 }
@@ -536,7 +554,7 @@ $(document).ready(function () {
     }
     function animateCounter() {
         var count = 1;
-        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.72e597f8a65e4f539dd89e15b0a0e99f';
+        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.dc9b2db2c58e48349642da1ca0ac393b';
         var followers;
         $.ajax({
             method: 'GET',
