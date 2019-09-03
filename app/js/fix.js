@@ -1,5 +1,6 @@
 $(document).ready(function () {
    var progressLine = false;
+   var speed;
    var insta = false;
     isDesktop = true;
     var isTouchCapable = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
@@ -81,6 +82,35 @@ $(document).ready(function () {
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
             $(document).unbind('wheel');
+            if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-dji')) {
+                setTimeout(function () {
+                    changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)
+                    setTimeout(function () { $(document).unbind('wheel'); }, speed*2 + 1);
+                }, 400);
+            }
+            else if ((nextIndex.index <= 1) && $('#section-tools').hasClass('tools-dji')) {
+                setTimeout(function () {
+                    changeTool($('.icon-movi'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true)
+                    setTimeout(function () { $(document).unbind('wheel'); }, speed*2 + 1);
+                }, 400);
+            }
+            else if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-camera'))  {
+                setTimeout(function () {
+                    changeTool($('.icon-camera'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)
+                    setTimeout(function () { $(document).unbind('wheel'); }, speed*2 + 1);
+                }, 400);
+            }
+            // else if ((nextIndex.index <= 1) && $('#section-tools').hasClass('tools-camera')) {
+            //     setTimeout(function () { changeTool($('.icon-camera'), $('.icon-dji'), 'tools-dji', 'tools-dji', '2', false)}, 400);
+            //     setTimeout(function () { $(document).unbind('wheel'); }, speed*2 + 1);
+            //     $.fn.fullpage.setAllowScrolling(false);
+            // }
+            else if ((nextIndex.index <= 1) && $('#section-tools').hasClass('tools-movi')) {
+                setTimeout(function () { 
+                    changeTool($('.icon-movi'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true)
+                    setTimeout(function () { $(document).unbind('wheel'); }, speed*2 + 1);
+                }, 400);
+            }
             if ($('body').hasClass('opened--menu')) {$('#menuToggle input').click()}
             $('.text-dots-block').removeClass('active');
             $("#fullpage.fullpage-wrapper").removeClass('long-section');
@@ -461,7 +491,6 @@ $(document).ready(function () {
     }
 
     function changeTool(current_icon, new_icon, current_class, new_class, number, up, fast) {
-        var speed;
         if(fast) {
             speed = 300;
         } else {
