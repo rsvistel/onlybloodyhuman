@@ -81,22 +81,6 @@ $(document).ready(function () {
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
             $(document).unbind('wheel');
-            // if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-dji')) {
-            //     setTimeout(function () { changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)}, 400);
-            //     $(document).unbind('wheel');
-            // }
-            // else if ((nextIndex.index <= 1)  && $('#section-tools').hasClass('tools-dji')) {
-            //     setTimeout(function () { changeTool($('.icon-movi'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true)}, 400);
-            //     $(document).unbind('wheel');
-            // }
-            // if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-camera'))  {
-            //     setTimeout(function () { changeTool($('.icon-camera'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)}, 400);
-            //     $(document).unbind('wheel');
-            // }
-            // else if ((nextIndex.index <= 1)  && $('#section-tools').hasClass('tools-movi')) {
-            //     setTimeout(function () { changeTool($('.icon-movi'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true)}, 400);
-            //     $(document).unbind('wheel');
-            // }
             if ($('body').hasClass('opened--menu')) {$('#menuToggle input').click()}
             $('.text-dots-block').removeClass('active');
             $("#fullpage.fullpage-wrapper").removeClass('long-section');
