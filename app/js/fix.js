@@ -80,6 +80,23 @@ $(document).ready(function () {
         verticalCentered: false,
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
+            $(document).unbind('wheel');
+            // if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-dji')) {
+            //     setTimeout(function () { changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)}, 400);
+            //     $(document).unbind('wheel');
+            // }
+            // else if ((nextIndex.index <= 1)  && $('#section-tools').hasClass('tools-dji')) {
+            //     setTimeout(function () { changeTool($('.icon-movi'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true)}, 400);
+            //     $(document).unbind('wheel');
+            // }
+            // if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-camera'))  {
+            //     setTimeout(function () { changeTool($('.icon-camera'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)}, 400);
+            //     $(document).unbind('wheel');
+            // }
+            // else if ((nextIndex.index <= 1)  && $('#section-tools').hasClass('tools-movi')) {
+            //     setTimeout(function () { changeTool($('.icon-movi'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true)}, 400);
+            //     $(document).unbind('wheel');
+            // }
             if ($('body').hasClass('opened--menu')) {$('#menuToggle input').click()}
             $('.text-dots-block').removeClass('active');
             $("#fullpage.fullpage-wrapper").removeClass('long-section');
@@ -272,7 +289,7 @@ $(document).ready(function () {
         if (insta == false) {
             if (origin.anchor == 'contact') {
                 var count = 1;
-                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.72e597f8a65e4f539dd89e15b0a0e99f';
+                var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.dc9b2db2c58e48349642da1ca0ac393b';
                 var followers;
                 $.ajax({
                     method: 'GET',
@@ -536,7 +553,7 @@ $(document).ready(function () {
     }
     function animateCounter() {
         var count = 1;
-        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.72e597f8a65e4f539dd89e15b0a0e99f';
+        var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.dc9b2db2c58e48349642da1ca0ac393b';
         var followers;
         $.ajax({
             method: 'GET',
