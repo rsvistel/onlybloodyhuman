@@ -80,6 +80,7 @@ $(document).ready(function () {
         verticalCentered: false,
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
+            $(document).unbind('wheel');
             if ($('body').hasClass('opened--menu')) {$('#menuToggle input').click()}
             $('.text-dots-block').removeClass('active');
             $("#fullpage.fullpage-wrapper").removeClass('long-section');
