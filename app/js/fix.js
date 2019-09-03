@@ -80,16 +80,6 @@ $(document).ready(function () {
         verticalCentered: false,
         lazyLoading: false,
         onLeave: function (index, nextIndex, direction) {
-            if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-camera')) {
-                setTimeout(function () { changeTool($('.icon-camera'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)}, 400);
-            }
-            else if ((nextIndex.index <= 1) && $('#section-tools').hasClass('tools-movi')) {
-                setTimeout(function () { changeTool($('.icon-movi'), $('.icon-camera'), 'tools-dji', 'tools-camera', '1', true)}, 400);
-            }
-            // else if ((nextIndex.index >= 3) && $('#section-tools').hasClass('tools-dji')) {
-            //     //setTimeout(function () { changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false)}, 400);
-            //     console.log('tools-dji');
-            // }
             if ($('body').hasClass('opened--menu')) {$('#menuToggle input').click()}
             $('.text-dots-block').removeClass('active');
             $("#fullpage.fullpage-wrapper").removeClass('long-section');
@@ -167,7 +157,7 @@ $(document).ready(function () {
             }
 
             else if (sections[nextIndex.index].attr("id") === "section-contact") {
-                // $.fn.fullpage.setAllowScrolling(true);
+                $.fn.fullpage.setAllowScrolling(true);
             }
             else {
                 dots[nextIndex.index].addClass('active');
@@ -279,7 +269,7 @@ $(document).ready(function () {
                 });
             }
     },
-    afterLoad: function (origin, direction) {
+    afterLoad: function (origin) {
         if (insta == false) {
             if (origin.anchor == 'contact') {
                 var count = 1;
@@ -310,9 +300,6 @@ $(document).ready(function () {
                     }, 3);
                 }
             }
-            // if (origin.anchor ==  'skills' && direction == 'up'){
-            //     $.fn.fullpage.setAllowScrolling(false);
-            // }
         }
     });
     $( function() {
