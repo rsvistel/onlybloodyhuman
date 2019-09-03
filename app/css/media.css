@@ -1417,6 +1417,16 @@
   .embed-arrow {
     padding: 0% 6% 4% 5%; } }
 
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .dots-block-section-banner {
+    pointer-events: none;
+    visibility: hidden; }
+  .opened--menu .dots-block-section-banner {
+    pointer-events: initial;
+    visibility: initial; }
+  .text-dots-block:hover embed {
+    opacity: 0; } }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1366px) and (min-width: 1366px) and (orientation: landscape) {
   .client-contact-list__quote p {
     font-size: 1.2vw;
