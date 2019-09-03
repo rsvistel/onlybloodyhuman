@@ -1400,6 +1400,10 @@
   .embed-arrow {
     padding: 2.5% 6% 1% 5%; } }
 
+@media (min-width: 768px) and (min-height: 768px) and (max-height: 900px) {
+  .embed-arrow {
+    padding: 2% 6% 1% 5%; } }
+
 @media (max-width: 375px) {
   .outdoor-section__image .numberCircle {
     width: 37px;
@@ -1457,6 +1461,8 @@
     font-size: 1vw; }
   h2 {
     font-size: 5.7vw; }
+  h3 {
+    font-size: 1.9vw; }
   h1 {
     font-size: 1vw; }
   p {
@@ -1466,8 +1472,19 @@
     font-size: .77vw; }
   .tittles-section-tools {
     line-height: 2.4vw;
-    font-size: 2vw; } }
+    font-size: 2vw; }
+  .photo-man-section-about {
+    width: 55%; }
+  .first-sentence-section-about {
+    letter-spacing: 1.2px;
+    font-size: 1vw; }
+  .aka-name-section-about {
+    font-size: .7vw; } }
 
 @media (max-width: 1000px) and (min-width: 768px) and (orientation: portrait) {
   .arrow-down-section-banner object {
     width: 2.5vw; } }
+
+@media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
+  .over-line-block .text-under-tittles-section-tools {
+    font-size: 1.2vw !important; } }
