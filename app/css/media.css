@@ -1398,7 +1398,7 @@
   .dots-block-section-banner embed:first-child {
     margin: 3.5% 6% 3% 0; }
   .embed-arrow {
-    padding: 2.5% 6% 1% 5%; } }
+    padding: 1% 6% 1% 5%; } }
 
 @media (min-width: 768px) and (min-height: 768px) and (max-height: 900px) {
   .embed-arrow {
@@ -1417,19 +1417,24 @@
   .embed-arrow {
     padding: 0% 6% 6% 5%; } }
 
-@media (min-width: 1400px) and (max-width: 1800px) {
+@media (min-width: 1400px) and (max-width: 1700px) {
   .embed-arrow {
-    padding: 0% 6% 4% 5%; } }
+    padding: 2% 6% 4% 5%; } }
+
+@media (min-width: 1700px) and (max-width: 1900px) {
+  .embed-arrow {
+    padding: 1% 6% 4% 5%; } }
 
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-  .dots-block-section-banner {
-    pointer-events: none;
-    visibility: hidden; }
   .opened--menu .dots-block-section-banner {
     pointer-events: initial;
     visibility: initial; }
   .text-dots-block:hover embed {
     opacity: 0; } }
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .text-under-img-section-tools {
+    padding: 1% 20%; } }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1366px) and (min-width: 1366px) and (orientation: landscape) {
   .client-contact-list__quote p {
