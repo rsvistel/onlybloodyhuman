@@ -203,7 +203,8 @@ $(document).ready(function () {
             if (sections[nextIndex.index].hasClass('black-right')) {
                 swapColor(false);
                 $('body').addClass('black-mode');
-            } else {
+            }
+            else {
                 swapColor(true);
                 $('body').removeClass('black-mode');
             }
