@@ -77,6 +77,7 @@ $(document).ready(function () {
         menu: '.dots-block-section-banner',
         css3: true,
         scrollOverflow: true,
+        scrollOverflowOptions: { probeType: 3 },
         responsiveWidth: 1000,
         verticalCentered: false,
         lazyLoading: false,
@@ -319,8 +320,24 @@ $(document).ready(function () {
 
                 });
             }
+            if (sections[nextIndex.index].attr('id') === "section-instagram" || sections[nextIndex.index].attr('id') === "section-about") {
+                var iscroll = $(sections[nextIndex.index]).find('.fp-scrollable')[0].fp_iscrollInstance;
+                 //var iscroll = fullpage_api.getActiveSection().item.querySelector('.fp-scrollable').fp_iscrollInstance;
+                console.log(iscroll);
+                iscroll.scrollTo(0, -500);
+                // setTimeout(function () {
+                //     iscroll.refresh();
+                // }, 1000 + 150);
+            }
+        //    if(iscroll && typeof iscroll !== undefined){
+        //         iscroll.on('scroll', getScroll);
+        //    }
+
+        //    function getScroll(){
+        //        console.log(123);
+        //     }
     },
-    afterLoad: function (origin) {
+    afterLoad: function (origin)  {
         if (insta == false) {
             if (origin.anchor == 'contact') {
                 var count = 1;
@@ -351,7 +368,7 @@ $(document).ready(function () {
                     }, 3);
                 }
             }
-        }
+        },
     });
     $( function() {
         if (isTouchCapable) {
