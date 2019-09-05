@@ -1306,9 +1306,13 @@
   h1 {
     font-size: 11vw; }
   .tittles-section-tools {
-    margin-top: 1vw; }
+    margin-top: 1vw; } }
+
+@media (min-width: 450px) and (max-width: 768px) {
   .embed-arrow {
-    padding: 0.5% 6% 1% 5%; } }
+    padding: 0.5% 6% 1% 5%; }
+  .dots-block-section-banner embed:first-child {
+    margin: 6.5% 6% 3% 0; } }
 
 @media (min-width: 768px) and (max-width: 1100px) {
   .text-near-dots {
