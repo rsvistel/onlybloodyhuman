@@ -1039,7 +1039,8 @@
     height: 3vw;
     margin-bottom: 3vw; }
   .hover-location {
-    text-align: center; }
+    text-align: center;
+    padding: 12%; }
   .logo-client-list object {
     padding: 0; }
   .owl-item {
