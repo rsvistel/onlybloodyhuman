@@ -239,14 +239,26 @@ $(document).ready(function () {
                     $('.current-color').css('opacity', '1');
                 }
             }
+            // for (var b = 0; b < nextIndex.index; b++) {
+            //     var heightWindows = $(window).height();
+            //     var height = sections[b].find('.fp-scroller').outerHeight();
+            //     var change = heightWindows - height;
+            //     sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + change + ')');
+            // }
+            // for (var y = nextIndex.index + 1; y < sections.length; y++) {
+            //     sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+            // }
             for (var b = 0; b < nextIndex.index; b++) {
                 var heightWindows = $(window).height();
                 var height = sections[b].find('.fp-scroller').outerHeight();
                 var change = heightWindows - height;
                 sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + change + ')');
+                // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
+
             }
             for (var y = nextIndex.index + 1; y < sections.length; y++) {
                 sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+                // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
             }
             function longSectionScrolling() {
                 var sectionStartPosition;
