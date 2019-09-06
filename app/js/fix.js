@@ -240,27 +240,6 @@ $(document).ready(function () {
                     $('.current-color').css('opacity', '1');
                 }
             }
-            // for (var b = 0; b < nextIndex.index; b++) {
-            //     var heightWindows = $(window).height();
-            //     var height = sections[b].find('.fp-scroller').outerHeight();
-            //     var change = heightWindows - height;
-            //     sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + change + ')');
-            // }
-            // for (var y = nextIndex.index + 1; y < sections.length; y++) {
-            //     sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-            // }
-            for (var b = 0; b < nextIndex.index; b++) {
-                var heightWindows = $(window).height();
-                var height = sections[b].find('.fp-scroller').outerHeight();
-                var change = heightWindows - height;
-                sections[b].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, ' + change + ')');
-                // sections[b].find('.iScrollIndicator').css('transform', 'translate(0px, 383px)');
-
-            }
-            for (var y = nextIndex.index + 1; y < sections.length; y++) {
-                sections[y].find('.fp-scroller').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-                // sections[y].find('.iScrollIndicator').css('transform', 'translate(0px, 0px)');
-            }
             function longSectionScrolling() {
                 var sectionStartPosition;
                 if (sections[nextIndex.index].attr('id') === "section-instagram") {
@@ -320,22 +299,22 @@ $(document).ready(function () {
 
                 });
             }
-            if (sections[nextIndex.index].attr('id') === "section-instagram" || sections[nextIndex.index].attr('id') === "section-about") {
-                var iscroll = $(sections[nextIndex.index]).find('.fp-scrollable')[0].fp_iscrollInstance;
-                 //var iscroll = fullpage_api.getActiveSection().item.querySelector('.fp-scrollable').fp_iscrollInstance;
-                console.log(iscroll);
-                iscroll.scrollTo(0, -500);
-                // setTimeout(function () {
-                //     iscroll.refresh();
-                // }, 1000 + 150);
+            if (nextIndex.index === 4) {
+                var iscrollInstagram = $('#section-instagram').find('.fp-scrollable')[0].fp_iscrollInstance;
+                var iscrollAbout = $('#section-about').find('.fp-scrollable')[0].fp_iscrollInstance;
+                iscrollAbout.scrollTo(0, iscrollAbout.maxScrollY);
+                iscrollInstagram.scrollTo(0, iscrollInstagram.maxScrollY);
+            } else if (nextIndex.index === 2) {
+                var iscrollInstagram = $('#section-instagram').find('.fp-scrollable')[0].fp_iscrollInstance;
+                var iscrollAbout = $('#section-about').find('.fp-scrollable')[0].fp_iscrollInstance;
+                iscrollAbout.scrollTo(0, iscrollAbout.maxScrollY);
+                iscrollInstagram.scrollTo(0, 0);
+            } else if (nextIndex.index === 0) {
+                var iscrollInstagram = $('#section-instagram').find('.fp-scrollable')[0].fp_iscrollInstance;
+                var iscrollAbout = $('#section-about').find('.fp-scrollable')[0].fp_iscrollInstance;
+                iscrollAbout.scrollTo(0, 0);
+                iscrollInstagram.scrollTo(0, 0);
             }
-        //    if(iscroll && typeof iscroll !== undefined){
-        //         iscroll.on('scroll', getScroll);
-        //    }
-
-        //    function getScroll(){
-        //        console.log(123);
-        //     }
     },
     afterLoad: function (origin)  {
         if (insta == false) {
