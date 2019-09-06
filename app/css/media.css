@@ -286,7 +286,6 @@
   .text-center-banner-section {
     z-index: initial; }
   .job-section-about-producer {
-    font-size: 50px;
     margin-bottom: 1vw;
     margin-top: 8vw; }
   .block-tools-section {
@@ -907,7 +906,7 @@
 @media (max-width: 1000px) {
   .block-tools-section {
     display: block; }
-  .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p {
+  .text-under-tittles-section-tools, .text-under-img-section-tools {
     font-size: 3.5vw;
     line-height: 5.4vw; }
   .outdoor-section__text .row {
@@ -1130,8 +1129,6 @@
     min-height: 350px; } }
 
 @media (max-width: 320px) {
-  .client-contact-list__email a {
-    font-size: 30px; }
   .job-section-about {
     padding-left: 7.5%; }
   .nav-icon embed {
@@ -1262,10 +1259,7 @@
     margin-left: 15px;
     padding-left: 30px; }
   .photo-man-section-about {
-    background-position: top; }
-  p {
-    font-size: 3.5vw;
-    line-height: 5.4vw; } }
+    background-position: top; } }
 
 @media (min-width: 450px) and (max-width: 768px) {
   #menuToggle-mobile {
@@ -1402,8 +1396,6 @@
     opacity: 1; } }
 
 @media (min-width: 768px) {
-  .dots-block-section-banner embed:first-child {
-    margin: 3.5% 6% 3% 0; }
   .embed-arrow {
     padding: 1% 6% 1% 5%; } }
 

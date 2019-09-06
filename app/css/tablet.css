@@ -360,7 +360,8 @@
 @media (min-width: 825px) and (max-width: 1112px) and (orientation: landscape) {
   h1 {
     font-size: 10.1vw;
-    line-height: 9.6vw; }
+    line-height: 9.6vw;
+    letter-spacing: -1.2px; }
   h2 {
     font-size: 5.7vw; }
   h3 {
@@ -382,8 +383,6 @@
     padding-right: 4.4%; }
   .arrow-down-section-banner embed {
     width: 1.1vw; }
-  h2 {
-    font-size: 5.7vw; }
   .whole-text-left-logo {
     margin-left: 25px; }
   .left-logo-banner-section object {
@@ -425,10 +424,6 @@
     transition: 0.5s ease-in-out; }
   .job-section-about-producer {
     letter-spacing: -3px; }
-  h6 {
-    font-size: 1vw; }
-  h3 {
-    font-size: 1.9vw; }
   .logo-client-list object {
     min-width: 7.2vw; }
   .jobs-section-about {
@@ -450,10 +445,6 @@
   .text-under-img-section-tools {
     font-size: .85vw;
     line-height: 1.56vw; }
-  h1 {
-    font-size: 10.1vw;
-    line-height: 9.6vw;
-    letter-spacing: -1.2px; }
   .tittles-section-tools {
     line-height: 2.4vw;
     font-size: 2vw; }
