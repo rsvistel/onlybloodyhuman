@@ -399,8 +399,6 @@
     -webkit-transform: none;
         -ms-transform: none;
             transform: none; }
-  .outdoor-section__text--header h2 {
-    text-align: center; }
   .outdoor-section__text--header h3 {
     text-align: center;
     margin: 0; }
@@ -573,10 +571,6 @@
     margin-top: 0; }
   .nav-icon .cross-icon {
     width: 3vw; } }
-
-@media (min-width: 1000px) and (max-width: 1250px) {
-  .text-near-dots {
-    font-size: 1vw; } }
 
 @media (min-width: 900px) and (max-width: 1000px) {
   .nav-icon embed {
@@ -824,7 +818,7 @@
     margin-top: 3.5%; }
   .client-contact-list__social--icon {
     margin-bottom: 10px; }
-  .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.audio embed {
+  .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed {
     height: 17px; }
   .client-contact-list__social--icon.audio embed {
     height: 20px; } }
