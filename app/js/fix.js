@@ -299,21 +299,30 @@ $(document).ready(function () {
 
                 });
             }
+            var iscrollInstagram = $('#section-instagram').find('.fp-scrollable')[0].fp_iscrollInstance;
+            var iscrollAbout = $('#section-about').find('.fp-scrollable')[0].fp_iscrollInstance;
             if (nextIndex.index === 4) {
-                var iscrollInstagram = $('#section-instagram').find('.fp-scrollable')[0].fp_iscrollInstance;
-                var iscrollAbout = $('#section-about').find('.fp-scrollable')[0].fp_iscrollInstance;
-                iscrollAbout.scrollTo(0, iscrollAbout.maxScrollY);
-                iscrollInstagram.scrollTo(0, iscrollInstagram.maxScrollY);
-            } else if (nextIndex.index === 2) {
-                var iscrollInstagram = $('#section-instagram').find('.fp-scrollable')[0].fp_iscrollInstance;
-                var iscrollAbout = $('#section-about').find('.fp-scrollable')[0].fp_iscrollInstance;
-                iscrollAbout.scrollTo(0, iscrollAbout.maxScrollY);
-                iscrollInstagram.scrollTo(0, 0);
-            } else if (nextIndex.index === 0) {
-                var iscrollInstagram = $('#section-instagram').find('.fp-scrollable')[0].fp_iscrollInstance;
-                var iscrollAbout = $('#section-about').find('.fp-scrollable')[0].fp_iscrollInstance;
-                iscrollAbout.scrollTo(0, 0);
-                iscrollInstagram.scrollTo(0, 0);
+                setTimeout(function () {
+                    iscrollAbout.scrollTo(0, iscrollAbout.maxScrollY);
+                    iscrollInstagram.scrollTo(0, iscrollInstagram.maxScrollY);
+                },  1000);
+            }
+            else if (nextIndex.index === 2) {
+                setTimeout(function () {
+                    iscrollAbout.scrollTo(0, iscrollAbout.maxScrollY);
+                    iscrollInstagram.scrollTo(0, 0);
+                },  1000);
+            }
+            else if (nextIndex.index === 3) {
+                setTimeout(function () {
+                    iscrollAbout.scrollTo(0, iscrollAbout.maxScrollY);
+                },  1000);
+            }
+            else if (nextIndex.index === 0) {
+                setTimeout(function () {
+                    iscrollAbout.scrollTo(0, 0);
+                    iscrollInstagram.scrollTo(0, 0);
+                }, 1000);
             }
     },
     afterLoad: function (origin)  {

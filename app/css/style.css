@@ -1484,6 +1484,12 @@ body.opened--menu .text-dots-block embed {
 #section-tools .fp-scrollable {
   height: auto !important; }
 
+#section-contact,
+#section-contact .fp-slide,
+#section-contact .fp-tableCell,
+#section-contact .fp-scrollable {
+  height: auto !important; }
+
 .client-contact-list, .gray-half-section-tools {
   display: -webkit-box;
   display: -webkit-flex;
