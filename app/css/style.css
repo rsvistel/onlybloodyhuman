@@ -643,7 +643,11 @@ body.opened--menu .text-dots-block embed {
   transition: background-position 0.4s ease-in-out; }
 
 .highlight-hover:hover h2 {
-  background-position: -99.99% 0; }
+  background-position: -99.99% 0;
+  color: #ffffff;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out; }
 
 .first-sentence-section-about {
   letter-spacing: 1px;
@@ -973,7 +977,7 @@ body.opened--menu .text-dots-block embed {
   overflow: hidden; }
 
 .outdoor-section__text {
-  width: 26.5%;
+  width: 27.5%;
   text-align: right;
   position: absolute;
   right: 13%;
@@ -1363,7 +1367,11 @@ body.opened--menu .text-dots-block embed {
   transition: background-position 0.4s ease-in-out; }
 
 .client-contact-list__email:hover a {
-  background-position: -99.99% 0; }
+  background-position: -99.99% 0;
+  color: #ffffff;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out; }
 
 .client-contact-list__email a {
   display: inline-block;
