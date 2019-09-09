@@ -79,9 +79,6 @@ $(document).ready(function () {
         scrollOverflow: true,
         scrollOverflowOptions: {
             probeType: 3,
-            disablePointer: true,
-            disableTouch: false,
-            disableMouse: false
          },
         responsiveWidth: 1000,
         verticalCentered: false,
