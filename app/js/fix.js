@@ -78,7 +78,6 @@ $(document).ready(function () {
         css3: true,
         scrollOverflow: true,
         scrollOverflowOptions: {
-            preventDefault: false,
             probeType: 3,
             disablePointer: true,
             disableTouch: false,
