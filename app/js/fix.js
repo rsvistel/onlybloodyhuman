@@ -77,7 +77,12 @@ $(document).ready(function () {
         menu: '.dots-block-section-banner',
         css3: true,
         scrollOverflow: true,
-        scrollOverflowOptions: { probeType: 3 },
+        scrollOverflowOptions: {
+            probeType: 3,
+            disablePointer: true,
+            disableTouch: false,
+            disableMouse: false
+         },
         responsiveWidth: 1000,
         verticalCentered: false,
         lazyLoading: false,
