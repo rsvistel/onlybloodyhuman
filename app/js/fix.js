@@ -401,6 +401,13 @@ $(document).ready(function () {
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
 
+    $('.highlight-hover').hover(function () {
+            $(this).addClass('new-сolor-hover');
+    },
+    function () {
+        $(this).removeClass('new-сolor-hover');
+    });
+
     $('.block-tools-section button').click(function () {
         if (!$(this).hasClass('active')) {
             $('.tools-section__image').animate({'opacity': '0'}, 200);
