@@ -1492,7 +1492,7 @@ body.opened--menu .text-dots-block embed {
   height: auto !important; }
 
 #section-about .fp-scrollable {
-  background-color: #363531 !important; }
+  background-color: #363531; }
 
 #section-about .fp-scroller {
   background-image: url(../img/s2-about/grain_texture.webp);
