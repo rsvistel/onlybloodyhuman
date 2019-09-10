@@ -370,10 +370,20 @@
     min-height: auto; }
   .video-section-cover {
     z-index: 1; }
+  .highlight-hover:hover h2 {
+    color: #333;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
   .highlight-hover h2 {
     background-image: none; }
   .client-contact-list__email a {
     background-image: none; }
+  .client-contact-list__email:hover a {
+    color: #333;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
   .left-logo-banner-section .whole-text-left-logo {
     opacity: 1; } }
 
@@ -1489,3 +1499,9 @@
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   .over-line-block .text-under-tittles-section-tools {
     font-size: 1.2vw !important; } }
+
+@media (min-width: 320px) and (max-width: 1000px) {
+  #section-about {
+    background-image: url(../img/s2-about/grain_texture.webp);
+    -webkit-background-size: 30% 30%;
+            background-size: 30%; } }
