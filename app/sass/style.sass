@@ -459,10 +459,12 @@ body.opened--menu .text-dots-block embed
   top: 1vh
 
 #section-about
-  background-image: url("../img/s2-about/grain_texture.webp")
+  //background-image: url("../img/s2-about/grain_texture.webp")
   color: $primary-color
   font-family: $primary-font
   background-size: 30%
+  //height: 100% !important
+  //height: 99.8vh!important
 
 #section-about .row
   display: flex
@@ -1207,6 +1209,12 @@ body.opened--menu .text-dots-block embed
 #section-tools .fp-tableCell,
 #section-tools .fp-scrollable
   height: auto !important
+
+#section-about .fp-scrollable
+  background-color: #363531!important
+
+#section-about .fp-scroller
+   background-image: url(../img/s2-about/grain_texture.webp)
 
 .client-contact-list, .gray-half-section-tools
   display: flex
