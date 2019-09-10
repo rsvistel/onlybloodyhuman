@@ -353,27 +353,6 @@ $(document).ready(function () {
         });
     }
 
-        // $(window).resize(function() {
-        //     if(screen.width == window.innerWidth){
-        //         alert("you are on normal page with 100% zoom");
-        //     } else if(screen.width > window.innerWidth){
-        //         alert("you have zoomed in the page i.e more than 100%");
-        //         $.fn.fullpage.reBuild();
-        //     } else {
-        //         alert("you have zoomed out i.e less than 100%");
-        //         $.fn.fullpage.reBuild();
-        //     }
-        //  });
-        // var id;
-        //     $(window).resize(function() {
-        //         clearTimeout(id);
-        //         id = setTimeout(doneResizing, 500);
-        //     });
-
-        //     function doneResizing(){
-        //         $.fn.fullpage.reBuild();
-        //     }
-
     $('#menuToggle input, #menuToggle-mobile input').click(function () {
         if ($('body').hasClass('opened--menu')) {
             $('body').removeClass('opened--menu');
