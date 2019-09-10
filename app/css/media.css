@@ -370,10 +370,20 @@
     min-height: auto; }
   .video-section-cover {
     z-index: 1; }
+  .highlight-hover:hover h2 {
+    color: #333;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
   .highlight-hover h2 {
     background-image: none; }
   .client-contact-list__email a {
     background-image: none; }
+  .client-contact-list__email:hover a {
+    color: #333;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
   .left-logo-banner-section .whole-text-left-logo {
     opacity: 1; } }
 
@@ -1123,8 +1133,6 @@
     min-height: 350px; } }
 
 @media (max-width: 320px) {
-  .job-section-about {
-    padding-left: 7.5%; }
   .nav-icon embed {
     top: 3px; }
   .icon-camera embed {
