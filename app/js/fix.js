@@ -1,7 +1,6 @@
 $(document).ready(function () {
    var progressLine = false;
    var speed;
-   var imageAbout = '../img/s2-about/grain_texture.webp'
    var insta = false;
     isDesktop = true;
     var isTouchCapable = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
@@ -345,8 +344,6 @@ $(document).ready(function () {
     $( function() {
         if (isTouchCapable) {
             $.fn.fullpage.setResponsive(true);
-            //$().css(' background-image', 'url(../img/s2-about/grain_texture.webp)');
-            $('#section-about').css('background-image', 'url("' + imageAbout + '")');
         }
     });
     $.fn.fullpage.setAllowScrolling(true);
