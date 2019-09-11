@@ -63,8 +63,8 @@
   .progress-line {
     height: 1.3vw; }
   .photo-man-section-about {
-    width: 50%;
-    margin: 0 25%; }
+    width: 55%;
+    margin: 0 22.5%; }
   .whole-text-section-about .tittle-section-about-margin {
     margin-top: 12vw; }
   .large-tittle-section-tools {
@@ -354,6 +354,11 @@
     height: auto; } }
 
 /* iPad mini, normal, Pro (small) */
+@media (min-width: 834px) and (max-width: 1112px) and (orientation: portrait) {
+  .nav-icon .cross-icon {
+    width: 2.4vw;
+    max-width: 45%; } }
+
 @media (min-width: 825px) and (max-width: 1112px) and (orientation: landscape) {
   h1 {
     font-size: 10.1vw;
@@ -470,7 +475,7 @@
   .section-instagram-followers span {
     font-size: 2.1vw; }
   .section-instagram-followers a {
-    font-size: 1.2vw;
+    font-size: 0.7vw;
     line-height: .4vw; }
   .arrow-down-icon {
     padding: 0 4vw .8vw 4vw; }
@@ -637,7 +642,7 @@
   .photo-man-section-about {
     width: 55%; }
   .whole-text-section-about {
-    padding: 20% 11% 4% 1%;
+    padding: 20% 10% 4% 4%;
     width: 45%; }
   .first-sentence-section-about {
     letter-spacing: 1.2px;
@@ -708,7 +713,7 @@
   .outdoor-section__image + p {
     padding-top: 0.4vw; }
   .outdoor-section__text {
-    width: 33%;
+    width: 34%;
     right: 16%; }
   .outdoor-section-block button span, .block-tools-section button span {
     font-size: .9vw;
@@ -1063,8 +1068,8 @@
   .photo-man-section-about {
     content: url(../img/s2-about/jamie_mob.jpg); }
   .photo-man-section-about {
-    width: 50%;
-    margin: 0 25%; }
+    width: 55%;
+    margin: 0 22.5%; }
   .job-section-about-producer {
     font-size: 13vw; }
   .first-sentence-section-about {
