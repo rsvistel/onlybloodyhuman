@@ -171,7 +171,7 @@
     right: 0;
     top: 0;
     margin-top: 5%;
-    margin-right: 9.5%; }
+    margin-right: 10.5%; }
   #menuToggle-mobile span {
     width: 22px;
     height: 3px;
@@ -316,7 +316,13 @@
     z-index: 1; }
   .arrow-down-section-banner {
     right: -webkit-calc(55% - 1.1vw/2);
-    right: calc(55% - 1.1vw/2); } }
+    right: calc(55% - 1.1vw/2); }
+  .job-section-about-producer {
+    margin-left: 0; }
+  .large-tittle-section-tools {
+    margin: 1vw 0 0 -0.5vw; }
+  .client-contact-list__social--icon {
+    height: 22px; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -1147,7 +1153,9 @@
   .whole-text-section-about {
     padding: 16% 10% 0 10%; }
   .outdoor-section__text, .client-contact-list {
-    padding: 16% 7%; }
+    padding: 16% 10%; }
+  .client-contact-list__email a {
+    font-size: 27px; }
   .gray-half-section-tools {
     padding: 16% 10% 0 10%; }
   .text-dots-block {
