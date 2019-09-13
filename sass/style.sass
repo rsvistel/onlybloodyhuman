@@ -459,7 +459,7 @@ body.opened--menu .text-dots-block embed
   top: 1vh
 
 #section-about
-  background-image: url("../img/s2-about/grain_texture.webp")
+  background-image: url(../img/s2-about/grain_texture.webp)
   color: $primary-color
   font-family: $primary-font
   background-size: 30%
@@ -480,7 +480,6 @@ body.opened--menu .text-dots-block embed
   width: 50%
 
 .highlight-hover h2
-  text-indent: -4px
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(227, 195, 117, 0)), color-stop(50%, #df6f43))
   background-image: -webkit-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #df6f43 50%)
   background-image: -o-linear-gradient(left, rgba(227, 195, 117, 0) 50%, #df6f43 50%)
@@ -493,6 +492,10 @@ body.opened--menu .text-dots-block embed
 
 .highlight-hover:hover h2
   background-position: -99.99% 0
+  color: #ffffff
+  -webkit-transition: 0.4s ease-in-out
+  -o-transition: 0.4s ease-in-out
+  transition: 0.4s ease-in-out
 
 .first-sentence-section-about
   letter-spacing: 1px
@@ -770,7 +773,7 @@ body.opened--menu .text-dots-block embed
   overflow: hidden
 
 .outdoor-section__text
-  width: 26.5%
+  width: 27.5%
   text-align: right
   position: absolute
   right: 13%
@@ -996,6 +999,9 @@ body.opened--menu .text-dots-block embed
   width: 100%
   min-height: 100%
 
+.instafeed-bacground
+  background-color: #f0f2f2
+
 .hover-location
   opacity: 0
   transition: 0.3s linear
@@ -1029,6 +1035,7 @@ body.opened--menu .text-dots-block embed
 
 .section-contact
   min-height: 100vh
+  background-color: #f0f2f2
 
 #section-contact
   overflow: hidden
@@ -1102,6 +1109,10 @@ body.opened--menu .text-dots-block embed
 
 .client-contact-list__email:hover a
   background-position: -99.99% 0
+  color: #ffffff
+  -webkit-transition: 0.4s ease-in-out
+  -o-transition: 0.4s ease-in-out
+  transition: 0.4s ease-in-out
 
 .client-contact-list__email a
   display: inline-block
@@ -1201,6 +1212,13 @@ body.opened--menu .text-dots-block embed
 #section-tools .fp-scrollable
   height: auto !important
 
+#section-about .fp-scrollable
+  background-color: #363531!important
+
+#section-about .fp-scroller
+   background-image: url(../img/s2-about/grain_texture.webp)
+   background-size: 30%
+
 .client-contact-list, .gray-half-section-tools
   display: flex
   flex-direction: column
@@ -1292,5 +1310,3 @@ body.opened--menu .text-dots-block embed
   display: contents
 .text-dots-block:hover a
   text-decoration: none
-
-

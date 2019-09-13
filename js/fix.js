@@ -24,16 +24,6 @@ $(document).ready(function () {
         })
     }
 
-    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    if (isChrome)  {
-        console.log("chrome");
-    } else {
-        $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
-        $("#section-banner").css('background-image', 'url("img/s1-intro/reel_placeholder_dsk.jpg")');
-        $("#section-about").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
-        $(".photo-man-section-about").css('background-image', 'url("img/s2-about/jamie_dsk.jpg")')
-    }
-
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -220,17 +210,6 @@ $(document).ready(function () {
             }
 
             if ($(window).width() < 1025) {
-                $('.inner-content-section-banner-fixed').on("click", function () {
-                    $('.whole-text-left-logo').css('opacity', '1');
-                    setTimeout(function () {
-                        $('.whole-text-left-logo').css('opacity', '0');
-                    }, 3000);
-                });
-                if (nextIndex.index == 0) {
-                    $('.whole-text-left-logo').css('opacity', '1');
-                } else {
-                    $('.whole-text-left-logo').css('opacity', '0');
-                }
                 if (sections[nextIndex.index].hasClass('mobile-swap-color')) {
                     $('.change-color').css('opacity', '1');
                     $('.current-color').css('opacity', '0');
@@ -238,6 +217,33 @@ $(document).ready(function () {
                     $('.change-color').css('opacity', '0');
                     $('.current-color').css('opacity', '1');
                 }
+                $(window).on('scroll', function (){
+                const offsetSections = sections[nextIndex.index].offset().top;
+                    $('.inner-content-section-banner-fixed').on("click", function () {
+                        $('.whole-text-left-logo').css('opacity', '1');
+                        setTimeout(function () {
+                            $('.whole-text-left-logo').css('opacity', '0');
+                        }, 3000);
+                    });
+                    if (nextIndex.index == 0) {
+                    $('.whole-text-left-logo').css('opacity', '1');
+                    }
+                    else {
+                        $('.whole-text-left-logo').css('opacity', '0');
+                    }
+                    if ($(this).scrollTop() > offsetSections - 50 && sections[nextIndex.index].hasClass('mobile-swap-color')) {
+                        $('.change-color').css('opacity', '1');
+                        $('.current-color').css('opacity', '0');
+                    }
+                    else {
+                        $('.change-color').css('opacity', '0');
+                        $('.current-color').css('opacity', '1');
+                    }
+                    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+                        $('.change-color').css('opacity', '1');
+                        $('.current-color').css('opacity', '0');
+                    }
+                });
             }
             for (var b = 0; b < nextIndex.index; b++) {
                 var heightWindows = $(window).height();
@@ -338,6 +344,15 @@ $(document).ready(function () {
                         }
                     }, 3);
                 }
+            }
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (isChrome)  {
+                console.log("chrome");
+            } else {
+                $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
+                $("#section-banner").css('background-image', 'url("img/s1-intro/reel_placeholder_dsk.jpg")');
+                $("#section-about .fp-scroller").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
+                $(".photo-man-section-about").css('background-image', 'url("img/s2-about/jamie_dsk.jpg")')
             }
         }
     });

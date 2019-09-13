@@ -192,7 +192,7 @@
     right: 0
     top: 0
     margin-top: 5%
-    margin-right: 9.5%
+    margin-right: 10.5%
 
   #menuToggle-mobile span
     width: 22px
@@ -309,7 +309,6 @@
     z-index: initial
 
   .job-section-about-producer
-    font-size: 50px
     margin-bottom: 1vw
     margin-top: 8vw
 
@@ -348,6 +347,15 @@
   .arrow-down-section-banner
     right: calc(55% - 1.1vw/2)
 
+  .job-section-about-producer
+    margin-left: 0
+
+  .large-tittle-section-tools
+    margin: 1vw 0 0 -0.5vw
+
+  .client-contact-list__social--icon
+    height: 22px
+
 @media (min-width: 2000px)
   .over-line-block
     margin-top: -2%
@@ -385,6 +393,8 @@
   .icon-dji-mobile, .icon-movi-mobile
     padding: 3% 10% 1% 10%
 
+
+
 @media (max-width: 1024px)
   .outdoor-section__text
     top: 50%
@@ -412,11 +422,18 @@
     min-height: auto
   .video-section-cover
     z-index: 1
+  .highlight-hover:hover h2
+    color: #333
+    transition: none
   .highlight-hover h2
     background-image: none
 
   .client-contact-list__email a
     background-image: none
+
+  .client-contact-list__email:hover a
+    color: #333
+    transition: none
 
   .left-logo-banner-section .whole-text-left-logo
     opacity: 1
@@ -446,9 +463,6 @@
     width: 100%
     position: static
     transform: none
-
-  .outdoor-section__text--header h2
-    text-align: center
 
   .outdoor-section__text--header h3
     text-align: center
@@ -650,10 +664,6 @@
 
   .nav-icon .cross-icon
     width: 3vw
-
-@media (min-width: 1000px) and (max-width: 1250px)
-  .text-near-dots
-    font-size: 1vw
 
 @media (min-width: 900px) and (max-width: 1000px)
   .nav-icon embed
@@ -947,7 +957,7 @@
   .client-contact-list__social--icon
     margin-bottom: 10px
 
-  .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed, .client-contact-list__social--icon.audio embed
+  .client-contact-list__social embed, .client-contact-list__social--icon.telephone embed, .client-contact-list__social--icon.instagram embed
     height: 17px
 
   .client-contact-list__social--icon.audio embed
@@ -1041,7 +1051,7 @@
 @media (max-width: 1000px)
   .block-tools-section
     display: block
-  .text-under-tittles-section-tools, .text-under-img-section-tools, .outdoor-section__image p
+  .text-under-tittles-section-tools, .text-under-img-section-tools
     font-size: 3.5vw
     line-height: 5.4vw
 
@@ -1280,10 +1290,8 @@
     min-height: 350px
 
 @media (max-width: 320px)
-  .client-contact-list__email a
-    font-size: 30px
   .job-section-about
-    padding-left: 7.5%
+    padding-left: 1.5%
   .nav-icon embed
     top: 3px
   .icon-camera embed
@@ -1299,7 +1307,10 @@
     padding: 16% 10% 0 10%
 
   .outdoor-section__text, .client-contact-list
-    padding: 16% 7%
+    padding: 16% 10%
+
+  .client-contact-list__email a
+    font-size: 27px
   .gray-half-section-tools
     padding: 16% 10% 0 10%
 
@@ -1351,9 +1362,9 @@
   .section-instagram__photo:nth-child(6)
     border-top: 0.5px solid #f0f2f2
   .section-instagram__photo:nth-child(2)
-    border-bottom: 0.5px solid #f0f2f2
+    //border-bottom: 0.5px solid #f0f2f2
   .section-instagram__photo:nth-child(1)
-    border-top: 0.5px solid #f0f2f2
+    //border-top: 0.5px solid #f0f2f2
 
   .section-instagram__photo embed
     width: 3vw
@@ -1438,10 +1449,6 @@
 
   .photo-man-section-about
     background-position: top
-
-  p
-    font-size: 3.5vw
-    line-height: 5.4vw
 
 @media (min-width: 450px) and (max-width: 768px)
   #menuToggle-mobile
@@ -1599,8 +1606,6 @@
   .text-dots-block:hover .text-near-dots
     opacity: 1
 @media(min-width: 768px)
-  .dots-block-section-banner embed:first-child
-    margin: 3.5% 6% 3% 0
   .embed-arrow
     padding: 1% 6% 1% 5%
 
@@ -1621,15 +1626,16 @@
 
 @media (min-width: 1400px) and (max-width: 1700px)
   .embed-arrow
-    padding: 2% 6% 4% 5%
+    padding: 0% 6% 4% 5%
 
 @media (min-width: 1700px) and (max-width: 1900px)
   .embed-arrow
     padding: 1% 6% 4% 5%
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)
+    
+@media only screen and (min-width: 769px) and (max-width: 1112px)
   .dots-block-section-banner
-   pointer-events: none
-   visibility: hidden
+    pointer-events: none
+    visibility: hidden
 
   .opened--menu .dots-block-section-banner
     pointer-events: initial
@@ -1711,6 +1717,7 @@
     font-size: .7vw
 
 
+
 @media (max-width: 1000px) and (min-width: 768px) and (orientation: portrait)
   .arrow-down-section-banner object
     width: 2.5vw
@@ -1718,4 +1725,7 @@
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape)
   .over-line-block .text-under-tittles-section-tools
     font-size: 1.2vw!important
+
+
+
 
