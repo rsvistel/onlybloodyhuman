@@ -210,17 +210,6 @@ $(document).ready(function () {
             }
 
             if ($(window).width() < 1025) {
-                $('.inner-content-section-banner-fixed').on("click", function () {
-                    $('.whole-text-left-logo').css('opacity', '1');
-                    setTimeout(function () {
-                        $('.whole-text-left-logo').css('opacity', '0');
-                    }, 3000);
-                });
-                if (nextIndex.index == 0) {
-                    $('.whole-text-left-logo').css('opacity', '1');
-                } else {
-                    $('.whole-text-left-logo').css('opacity', '0');
-                }
                 if (sections[nextIndex.index].hasClass('mobile-swap-color')) {
                     $('.change-color').css('opacity', '1');
                     $('.current-color').css('opacity', '0');
@@ -228,6 +217,33 @@ $(document).ready(function () {
                     $('.change-color').css('opacity', '0');
                     $('.current-color').css('opacity', '1');
                 }
+                $(window).on('scroll', function (){
+                const offsetSections = sections[nextIndex.index].offset().top;
+                    $('.inner-content-section-banner-fixed').on("click", function () {
+                        $('.whole-text-left-logo').css('opacity', '1');
+                        setTimeout(function () {
+                            $('.whole-text-left-logo').css('opacity', '0');
+                        }, 3000);
+                    });
+                    if (nextIndex.index == 0) {
+                    $('.whole-text-left-logo').css('opacity', '1');
+                    }
+                    else {
+                        $('.whole-text-left-logo').css('opacity', '0');
+                    }
+                    if ($(this).scrollTop() > offsetSections - 50 && sections[nextIndex.index].hasClass('mobile-swap-color')) {
+                        $('.change-color').css('opacity', '1');
+                        $('.current-color').css('opacity', '0');
+                    }
+                    else {
+                        $('.change-color').css('opacity', '0');
+                        $('.current-color').css('opacity', '1');
+                    }
+                    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+                        $('.change-color').css('opacity', '1');
+                        $('.current-color').css('opacity', '0');
+                    }
+                });
             }
             for (var b = 0; b < nextIndex.index; b++) {
                 var heightWindows = $(window).height();
