@@ -176,10 +176,6 @@
     border-top: 0.5px solid #f0f2f2; }
   .section-instagram__photo:nth-child(6) {
     border-top: 0.5px solid #f0f2f2; }
-  .section-instagram__photo:nth-child(2) {
-    border-top: 0.5px solid #f0f2f2; }
-  .section-instagram__photo:nth-child(1) {
-    border-top: 0.5px solid #f0f2f2; }
   .client-contact-list {
     padding: 16% 12% 13%;
     max-height: 100%; }
@@ -759,10 +755,6 @@
   .section-instagram__photo:nth-child(5) {
     border-bottom: none; }
   .section-instagram__photo:nth-child(6) {
-    border-top: 0.5px solid #f0f2f2; }
-  .section-instagram__photo:nth-child(2) {
-    border-top: 0.5px solid #f0f2f2; }
-  .section-instagram__photo:nth-child(1) {
     border-top: 0.5px solid #f0f2f2; }
   .embed-arrow embed {
     width: 12px;
