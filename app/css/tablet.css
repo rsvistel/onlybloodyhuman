@@ -351,7 +351,12 @@
   .client-contact-list .client-contact-list__text p {
     margin-bottom: 0; }
   #section-contact {
-    height: auto; } }
+    height: auto; }
+  .photo-man-section-about {
+    width: 55%; }
+  .whole-text-section-about {
+    padding: 20% 10% 4% 4%;
+    width: 45%; } }
 
 /* iPad mini, normal, Pro (small) */
 @media (min-width: 825px) and (max-width: 1112px) and (orientation: landscape) {
@@ -634,11 +639,6 @@
     height: 81vh; }
   .text-over-progress h6 {
     font-size: .77vw; }
-  .photo-man-section-about {
-    width: 55%; }
-  .whole-text-section-about {
-    padding: 20% 11% 4% 1%;
-    width: 45%; }
   .first-sentence-section-about {
     letter-spacing: 1.2px;
     font-size: 1vw; }
@@ -708,7 +708,7 @@
   .outdoor-section__image + p {
     padding-top: 0.4vw; }
   .outdoor-section__text {
-    width: 33%;
+    width: 34%;
     right: 16%; }
   .outdoor-section-block button span, .block-tools-section button span {
     font-size: .9vw;
@@ -769,6 +769,13 @@
     height: 7px; }
   .video-section-cover {
     z-index: 0; } }
+
+@media (min-width: 1111px) and (max-width: 1112px) and (orientation: landscape) {
+  .client-contact-list__email {
+    margin-left: -4px; }
+  .client-contact-list__text p {
+    font-size: 2vw;
+    line-height: 0.6vw; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .section {
@@ -1106,8 +1113,8 @@
   .section-outdoor-professional {
     max-height: 550px; }
   .photo-man-section-about {
-    width: 100%;
-    margin: 0 7%; }
+    width: 50%;
+    margin: 0 25%; }
   #section-contact .row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1125,4 +1132,28 @@
   .left-logo-banner-section {
     margin-top: 7%; }
   .dots-block-section-banner embed:first-child {
-    margin: 5% 6% 3% 0; } }
+    margin: 5% 6% 3% 0; }
+  .arrow-down-section-banner {
+    right: -webkit-calc(52% - 1.1vw/2);
+    right: calc(52% - 1.1vw/2); } }
+
+@media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
+  .section-instagram-followers a {
+    font-size: 0.7vw; } }
+
+@media (min-width: 833px) and (max-width: 834px) and (orientation: portrait) {
+  .nav-icon .cross-icon {
+    max-width: initial;
+    width: 2.4vw; }
+  .arrow-down-section-banner object {
+    width: 1.1vw; }
+  .section-instagram__photo:nth-last-child(-n+4) {
+    display: none; }
+  .photo-man-section-about {
+    height: 64.5vh; }
+  .client-contact-list__text h1 {
+    text-indent: -7px; } }
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .text-under-img-section-tools {
+    padding: 0 20%; } }
