@@ -1149,3 +1149,13 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .text-under-img-section-tools {
     padding: 0 20%; } }
+
+@media (hover: none) and (pointer: coarse) {
+  .dots-block-section-banner {
+    pointer-events: none;
+    visibility: hidden; }
+  .opened--menu .dots-block-section-banner {
+    pointer-events: initial;
+    visibility: initial; }
+  .text-dots-block:hover embed {
+    opacity: 0; } }
