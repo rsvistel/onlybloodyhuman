@@ -401,7 +401,7 @@ $(document).ready(function () {
                 $('object.current-color').css('opacity', 1);
                 $('.whole-text-left-logo').css('color', '#fff');
             }
-            if ($(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[4] || $(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
+            if ($(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
                 $('.change-color').css('opacity', '1');
                 $('.current-color').css('opacity', '0');
 
@@ -410,7 +410,6 @@ $(document).ready(function () {
                 $('.whole-text-left-logo').css('color', '#333');
             }
             if ($(this).scrollTop() > offsetSections[5]) {
-                console.log(offsetSections[5])
                 $('.change-color').css('opacity', '1');
                 $('.current-color').css('opacity', '0');
 
