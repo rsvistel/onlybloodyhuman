@@ -199,7 +199,17 @@ $(document).ready(function () {
                 $('body').removeClass('black-mode');
             }
 
-            if($(window).width() > 768) {
+            // if (sections[nextIndex.index].hasClass('black-left')) {
+            //     $('object.change-color').css('opacity', 1);
+            //     $('object.current-color').css('opacity', 0);
+            //     $('.whole-text-left-logo').css('color', '#333');
+            // } else {
+            //     $('object.change-color').css('opacity', 0);
+            //     $('object.current-color').css('opacity', 1);
+            //     $('.whole-text-left-logo').css('color', '#fff');
+            //  }
+
+            if($(window).width() <= 768) {
                 if (sections[nextIndex.index].hasClass('black-left')) {
                     $('object.change-color').css('opacity', 1);
                     $('object.current-color').css('opacity', 0);
@@ -210,6 +220,7 @@ $(document).ready(function () {
                     $('.whole-text-left-logo').css('color', '#fff');
                  }
             }
+
 
             // if ($(window).width() <= 768) {
             //     console.log('mobile')
@@ -346,31 +357,43 @@ $(document).ready(function () {
     });
     console.log(offsetSections);
     $(window).bind('scroll', function (){
+        $('.inner-content-section-banner-fixed').on("click", function () {
+            $('.whole-text-left-logo').css('opacity', '1');
+            setTimeout(function () {
+                $('.whole-text-left-logo').css('opacity', '0');
+            }, 3000);
+        });
         if ($(window).width() <= 768) {
-            if ($(this).scrollTop() > offsetSections[0]) {
+            if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
                 $('.change-color').css('opacity', '0');
                 $('.current-color').css('opacity', '1');
             }
-            if ($(this).scrollTop() > offsetSections[1]) {
+            if ($(this).scrollTop() > offsetSections[1] &&  $(this).scrollTop() < offsetSections[2] || $(this).scrollTop() > offsetSections[2] && $(this).scrollTop() < offsetSections[3]) {
+            console.log('111')
                 $('.change-color').css('opacity', '1');
                 $('.current-color').css('opacity', '0');
             }
-            if ($(this).scrollTop() > offsetSections[2]) {
+            if ($(this).scrollTop() > offsetSections[2] &&  $(this).scrollTop() < offsetSections[3] || $(this).scrollTop() > offsetSections[3] && $(this).scrollTop() < offsetSections[4]) {
                 $('.change-color').css('opacity', '0');
                 $('.current-color').css('opacity', '1');
             }
-            if ($(this).scrollTop() > offsetSections[3]) {
+            if ($(this).scrollTop() > offsetSections[3] &&  $(this).scrollTop() < offsetSections[4] || $(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
                 $('.change-color').css('opacity', '0');
                 $('.current-color').css('opacity', '1');
             }
-            if ($(this).scrollTop() > offsetSections[4]) {
-                $('.change-color').css('opacity', '0');
-                $('.current-color').css('opacity', '1');
+            if ($(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[4] || $(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
+                $('.change-color').css('opacity', '1');
+                $('.current-color').css('opacity', '0');
             }
             if ($(this).scrollTop() > offsetSections[5]) {
+                console.log(offsetSections[5])
                 $('.change-color').css('opacity', '1');
                 $('.current-color').css('opacity', '0');
             }
+            // if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+            //     $('.change-color').css('opacity', '1');
+            //     $('.current-color').css('opacity', '0');
+            // }
         }
     });
 
