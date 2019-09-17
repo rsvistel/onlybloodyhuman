@@ -364,6 +364,26 @@ $(document).ready(function () {
     });
     $.fn.fullpage.setAllowScrolling(true);
 
+    // $(window).bind('orientationchange', function () {
+    //     if (isTouchCapable) {
+    //         alert("Entered in Orientation change");  //added line
+    //         $.fn.fullpage.reBuild();
+    //         //$.fn.fullpage.setResponsive(true);
+    //     }
+    // });
+
+    // if (isDesktop || isTouchCapable) {
+    //     var resizeId;
+    //     //when resizing the site, we adjust the heights of the sections
+    //     $(window).resize(function() {
+    //         //in order to call the functions only when the resize is finished
+    //         //http://stackoverflow.com/questions/4298612/jquery-how-to-call-resize-event-only-once-its-finished-resizing
+    //         clearTimeout(resizeId);
+    //         resizeId = setTimeout($.fn.fullpage.reBuild, 500);
+    //     });
+
+    // }
+
     if(isDesktop) {
         $('#goToAbout').click(function () {
             fullpage_api.moveTo('about', 1);
