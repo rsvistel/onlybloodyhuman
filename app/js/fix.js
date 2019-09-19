@@ -68,7 +68,7 @@ $(document).ready(function () {
          menu: '.dots-block-section-banner',
          css3: true,
          scrollOverflow: true,
-         responsiveWidth: 1000,
+         responsiveWidth: 1025,
          verticalCentered: false,
          lazyLoading: false,
          onLeave: function (index, nextIndex, direction) {
