@@ -365,34 +365,58 @@ $(document).ready(function () {
              }
      });
 
-    //  $( function() {
-    //  if($(window).innerHeight() > $(window).innerWidth()) {
-    //     alert("Please use Landscape!");
+    // $(window).bind('orientationchange', function () { 
+
+    //     var orientation = $(window).orientation;
+    //     console.log(orientation);
+
+    //     // Look at the value of window.orientation:
+
+    //     if (orientation === 0) {
+
+    //         // iPad is in Portrait mode.
+    //         alert('Hello iPad is in Portrait mode.')
+
+    //     }
+
+    //     else if (orientation === 90 ){
+
+    //         // iPad is in Landscape mode. The screen is turned to the left.
+    //         alert('iPad is in Landscape mode. The screen is turned to the left.')
+
+    //     }
+
+
+    //     else if (orientation === -90) {
+
+    //         // iPad is in Landscape mode. The screen is turned to the right.
+    //         alert('iPad is in Landscape mode. The screen is turned to the right.')
+
     //     }
     // });
- 
+
      $(window).bind('orientationchange', function () {
-         $(window).bind('scroll', function () {
+        if (isTouchCapable) {
+            location.reload();
+        }
+         //$(window).bind('scroll', function () {
              if ($(window).width() <= 768) {
                  location.reload();
                  changeColorOffset();
              }
-         });
-          if (isTouchCapable) {
-             location.reload();
-         }
+         //});
      });
 
     //  $(window).resize(function () {
     //     location.reload();
     // });
     $(window).bind('resize',function(e) {
+        if (isTouchCapable) {
+            location.reload();
+            }
         if ($(window).width() <= 768) {
             location.reload();
             changeColorOffset();
-        }
-     if (isTouchCapable) {
-        location.reload();
         }
     });
 
