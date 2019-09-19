@@ -24,10 +24,6 @@ $(document).ready(function () {
          })
      }
 
-    $(window).resize(function () {
-        location.reload();
-    });
-
      $('.owl-carousel').owlCarousel({
          loop: true,
          margin: 10,
@@ -329,6 +325,13 @@ $(document).ready(function () {
              $.fn.fullpage.setResponsive(true);
          }
      });
+
+    //  $( function() {
+    //     var mql = window.matchMedia("(orientation: portrait)");
+    //     if (isTouchCapable && ) {
+    //         $.fn.fullpage.setResponsive(true);
+    //     }
+    // });
      $.fn.fullpage.setAllowScrolling(true);
  
      if(isDesktop) {
@@ -361,6 +364,12 @@ $(document).ready(function () {
                  }
              }
      });
+
+    //  $( function() {
+    //  if($(window).innerHeight() > $(window).innerWidth()) {
+    //     alert("Please use Landscape!");
+    //     }
+    // });
  
      $(window).bind('orientationchange', function () {
          $(window).bind('scroll', function () {
@@ -373,6 +382,19 @@ $(document).ready(function () {
              location.reload();
          }
      });
+
+    //  $(window).resize(function () {
+    //     location.reload();
+    // });
+    $(window).bind('resize',function(e) {
+        if ($(window).width() <= 768) {
+            location.reload();
+            changeColorOffset();
+        }
+     if (isTouchCapable) {
+        location.reload();
+        }
+    });
 
      function changeColorOffset() {
          if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
