@@ -68,7 +68,7 @@ $(document).ready(function () {
          menu: '.dots-block-section-banner',
          css3: true,
          scrollOverflow: true,
-         responsiveWidth: 1025,
+         responsiveWidth: 1000,
          verticalCentered: false,
          lazyLoading: false,
          onLeave: function (index, nextIndex, direction) {
@@ -326,6 +326,11 @@ $(document).ready(function () {
             $.fn.fullpage.setResponsive(true);
         }
     });
+
+    $('body').click(function() {
+        $.fn.fullpage.setAutoScrolling(false);
+    })
+    
 
      $.fn.fullpage.setAllowScrolling(true);
  
