@@ -324,13 +324,9 @@ $(document).ready(function () {
      $( function() {
         if (isTouchCapable) {
             $.fn.fullpage.setResponsive(true);
+            $.fn.fullpage.setAutoScrolling(false);
         }
     });
-
-    $('body').click(function() {
-        $.fn.fullpage.setAutoScrolling(false);
-    })
-    
 
      $.fn.fullpage.setAllowScrolling(true);
  
