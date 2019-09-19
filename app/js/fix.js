@@ -279,12 +279,6 @@ $(document).ready(function () {
              }
      },
      afterLoad: function (origin) {
-        $( function() {
-            if (isTouchCapable) {
-                alert('hallo');
-                $.fn.fullpage.setResponsive(true);
-            }
-        });
          if (insta == false) {
              if (origin.anchor == 'contact') {
                  var count = 1;
@@ -329,7 +323,6 @@ $(document).ready(function () {
      });
      $( function() {
         if (isTouchCapable) {
-            //alert('hallo');
             $.fn.fullpage.setResponsive(true);
         }
     });
