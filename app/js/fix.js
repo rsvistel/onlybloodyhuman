@@ -379,45 +379,16 @@ $(document).ready(function () {
              }
      });
 
-    // $(window).bind('orientationchange', function () { 
-
-    //     var orientation = $(window).orientation;
-    //     console.log(orientation);
-
-    //     // Look at the value of window.orientation:
-
-    //     if (orientation === 0) {
-
-    //         // iPad is in Portrait mode.
-    //         alert('Hello iPad is in Portrait mode.')
-
-    //     }
-
-    //     else if (orientation === 90 ){
-
-    //         // iPad is in Landscape mode. The screen is turned to the left.
-    //         alert('iPad is in Landscape mode. The screen is turned to the left.')
-
-    //     }
-
-
-    //     else if (orientation === -90) {
-
-    //         // iPad is in Landscape mode. The screen is turned to the right.
-    //         alert('iPad is in Landscape mode. The screen is turned to the right.')
-
-    //     }
-    // });
     $( function() {
      $(window).bind('orientationchange', function () {
          $(window).bind('scroll', function () {
              if ($(window).width() <= 768) {
-                window.location.href='http://stackoverflow.com';
+                window.location.origin
                  changeColorOffset();
              }
          });
          if (isTouchCapable) {
-            window.location.href='http://stackoverflow.com';
+            window.location.origin
         }
      });
     });
