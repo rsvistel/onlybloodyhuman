@@ -9,19 +9,19 @@ $(document).ready(function () {
          isDesktop = false
      }
 
-     $( function() {
-        $(window).bind('orientationchange', function () {
-           if (isTouchCapable) {
-               location.reload();
-           }
-            //$(window).bind('scroll', function () {
-               //  if ($(window).width() <= 768) {
-               //      location.reload();
-               //      changeColorOffset();
-               //  }
-            //});
-        });
-       });
+    //  $( function() {
+    //     $(window).bind('orientationchange', function () {
+    //        if (isTouchCapable) {
+    //            location.reload();
+    //        }
+    //         $(window).bind('scroll', function () {
+    //             if ($(window).width() <= 768) {
+    //                 location.reload();
+    //                 changeColorOffset();
+    //             }
+    //         });
+    //     });
+    //    });
  
      var ua = window.navigator.userAgent;
      var msie = ua.indexOf("MSIE ");
@@ -408,19 +408,19 @@ $(document).ready(function () {
 
     //     }
     // });
-    // $( function() {
-    //  $(window).bind('orientationchange', function () {
-    //     if (isTouchCapable) {
-    //         location.reload();
-    //     }
-    //      //$(window).bind('scroll', function () {
-    //         //  if ($(window).width() <= 768) {
-    //         //      location.reload();
-    //         //      changeColorOffset();
-    //         //  }
-    //      //});
-    //  });
-    // });
+    $( function() {
+     $(window).bind('orientationchange', function () {
+         $(window).bind('scroll', function () {
+             if ($(window).width() <= 768) {
+                window.location.href='http://stackoverflow.com';
+                 changeColorOffset();
+             }
+         });
+         if (isTouchCapable) {
+            window.location.href='http://stackoverflow.com';
+        }
+     });
+    });
 
     //  $(window).resize(function () {
     //     location.reload();
