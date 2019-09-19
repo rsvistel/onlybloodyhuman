@@ -328,12 +328,6 @@ $(document).ready(function () {
          }
      });
 
-    //  $( function() {
-    //     var mql = window.matchMedia("(orientation: portrait)");
-    //     if (isTouchCapable && ) {
-    //         $.fn.fullpage.setResponsive(true);
-    //     }
-    // });
      $.fn.fullpage.setAllowScrolling(true);
  
      if(isDesktop) {
@@ -371,12 +365,12 @@ $(document).ready(function () {
      $(window).bind('orientationchange', function () {
          $(window).bind('scroll', function () {
              if ($(window).width() <= 768) {
-                window.location.origin
+                window.location.href =  window.location.origin
                  changeColorOffset();
              }
          });
          if (isTouchCapable) {
-            window.location.origin
+            window.location.href =  window.location.origin
         }
      });
     });
