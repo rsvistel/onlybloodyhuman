@@ -327,7 +327,6 @@ $(document).ready(function () {
             $.fn.fullpage.setAutoScrolling(false);
         }
     });
-
      $.fn.fullpage.setAllowScrolling(true);
  
      if(isDesktop) {
