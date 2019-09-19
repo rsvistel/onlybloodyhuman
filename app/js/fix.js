@@ -367,7 +367,7 @@ $(document).ready(function () {
              }
          });
           if (isTouchCapable) {
-             alert("Entered in Orientation change");  //added line
+             //alert("Entered in Orientation change");  //added line
              location.reload();
              //$.fn.fullpage.reBuild();
              //$.fn.fullpage.setResponsive(true);
