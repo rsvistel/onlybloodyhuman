@@ -327,6 +327,12 @@ $(document).ready(function () {
              }
          }
      });
+     $( function() {
+        if (isTouchCapable) {
+            //alert('hallo');
+            $.fn.fullpage.setResponsive(true);
+        }
+    });
 
      $.fn.fullpage.setAllowScrolling(true);
  
