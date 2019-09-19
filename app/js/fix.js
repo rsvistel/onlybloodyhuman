@@ -400,25 +400,25 @@ $(document).ready(function () {
             location.reload();
         }
          //$(window).bind('scroll', function () {
-             if ($(window).width() <= 768) {
-                 location.reload();
-                 changeColorOffset();
-             }
+            //  if ($(window).width() <= 768) {
+            //      location.reload();
+            //      changeColorOffset();
+            //  }
          //});
      });
 
     //  $(window).resize(function () {
     //     location.reload();
     // });
-    $(window).bind('resize',function(e) {
-        if (isTouchCapable) {
-            location.reload();
-            }
-        if ($(window).width() <= 768) {
-            location.reload();
-            changeColorOffset();
-        }
-    });
+    // $(window).bind('resize',function(e) {
+    //     if (isTouchCapable) {
+    //         location.reload();
+    //     }
+        // if ($(window).width() <= 768) {
+        //     location.reload();
+        //     changeColorOffset();
+        // }
+    //});
 
      function changeColorOffset() {
          if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
