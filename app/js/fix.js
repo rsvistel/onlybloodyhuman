@@ -23,7 +23,11 @@ $(document).ready(function () {
              $(this).attr("data", route + '-ie.svg')
          })
      }
- 
+
+    $(window).resize(function () {
+        location.reload();
+    });
+
      $('.owl-carousel').owlCarousel({
          loop: true,
          margin: 10,
@@ -49,7 +53,7 @@ $(document).ready(function () {
              }
          }
      });
- 
+
      sections = [];
      $('.section').each(function () {
          sections.push($(this))
@@ -362,31 +366,19 @@ $(document).ready(function () {
          $(window).bind('scroll', function () {
              if ($(window).width() <= 768) {
                  location.reload();
-                 //window.location = document.URL
                  changeColorOffset();
              }
          });
           if (isTouchCapable) {
-             //alert("Entered in Orientation change");  //added line
              location.reload();
-             //$.fn.fullpage.reBuild();
-             //$.fn.fullpage.setResponsive(true);
          }
      });
- 
-    //  window.addEventListener('orientationchange', function () {
-    //      var originalBodyStyle = getComputedStyle(document.body).getPropertyValue('display');
-    //      document.body.style.display='none';
-    //      setTimeout(function () {
-    //     document.body.style.display = originalBodyStyle;
-    //      }, 10);
-    //    });
- 
+
      function changeColorOffset() {
          if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
              $('.change-color').css('opacity', '0');
              $('.current-color').css('opacity', '1');
- 
+
              $('object.change-color').css('opacity', 0);
              $('object.current-color').css('opacity', 1);
              $('.whole-text-left-logo').css('color', '#fff');
@@ -395,7 +387,7 @@ $(document).ready(function () {
          console.log('111')
              $('.change-color').css('opacity', '1');
              $('.current-color').css('opacity', '0');
- 
+
              $('object.change-color').css('opacity', 1);
              $('object.current-color').css('opacity', 0);
              $('.whole-text-left-logo').css('color', '#333');
@@ -403,7 +395,7 @@ $(document).ready(function () {
          if ($(this).scrollTop() > offsetSections[2] &&  $(this).scrollTop() < offsetSections[3] || $(this).scrollTop() > offsetSections[3] && $(this).scrollTop() < offsetSections[4]) {
              $('.change-color').css('opacity', '0');
              $('.current-color').css('opacity', '1');
- 
+
              $('object.change-color').css('opacity', 0);
              $('object.current-color').css('opacity', 1);
              $('.whole-text-left-logo').css('color', '#fff');
@@ -411,7 +403,7 @@ $(document).ready(function () {
          if ($(this).scrollTop() > offsetSections[3] &&  $(this).scrollTop() < offsetSections[4] || $(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
              $('.change-color').css('opacity', '0');
              $('.current-color').css('opacity', '1');
- 
+
              $('object.change-color').css('opacity', 0);
              $('object.current-color').css('opacity', 1);
              $('.whole-text-left-logo').css('color', '#fff');
@@ -419,7 +411,7 @@ $(document).ready(function () {
          if ($(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
              $('.change-color').css('opacity', '1');
              $('.current-color').css('opacity', '0');
- 
+
              $('object.change-color').css('opacity', 1);
              $('object.current-color').css('opacity', 0);
              $('.whole-text-left-logo').css('color', '#333');
@@ -427,30 +419,13 @@ $(document).ready(function () {
          if ($(this).scrollTop() > offsetSections[5]) {
              $('.change-color').css('opacity', '1');
              $('.current-color').css('opacity', '0');
- 
+
              $('object.change-color').css('opacity', 1);
              $('object.current-color').css('opacity', 0);
              $('.whole-text-left-logo').css('color', '#333');
          }
      }
-         // if (isTouchCapable) {
-         //     alert("Entered in Orientation change");  //added line
-         //     $.fn.fullpage.reBuild();
-         //     //$.fn.fullpage.setResponsive(true);
-         // }
- 
-     // if (isDesktop || isTouchCapable) {
-     //     var resizeId;
-     //     //when resizing the site, we adjust the heights of the sections
-     //     $(window).resize(function() {
-     //         //in order to call the functions only when the resize is finished
-     //         //http://stackoverflow.com/questions/4298612/jquery-how-to-call-resize-event-only-once-its-finished-resizing
-     //         clearTimeout(resizeId);
-     //         resizeId = setTimeout($.fn.fullpage.reBuild, 500);
-     //     });
- 
-     // }
- 
+
      $('#menuToggle input, #menuToggle-mobile input').click(function () {
          if ($('body').hasClass('opened--menu')) {
              $('body').removeClass('opened--menu');
@@ -472,7 +447,7 @@ $(document).ready(function () {
      $("#menuToggle input , #menuToggle-mobile input").click(function(){
          $(".list-icon, .cross-icon").fadeToggle(500);
      });
- 
+
      $(window).on("resize", function () {
          if ($(window).width() < 768) {
              $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.jpg)");
