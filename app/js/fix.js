@@ -378,26 +378,21 @@ $(document).ready(function () {
             $('.dots-block-section-banner').css({
                 'pointer-events': 'none',
                 'visibility' : 'hidden',
-                //'opacity': '0',
             });
             $('.opened--menu .dots-block-section-banner').css({
                 'pointer-events': 'initial',
                 'visibility' : 'initial',
-                //'opacity': '1',
             });
             $('#menuToggle input, #menuToggle-mobile input').click(function () {
                 if ($('body').hasClass('opened--menu')) {
-                    console.log('fwefwefwe')
                     $('.opened--menu .dots-block-section-banner').css({
                         'pointer-events': 'initial',
                         'visibility' : 'initial',
-                        //'opacity': '1',
                     });
                 } else {
                     $('.dots-block-section-banner').css({
                         'pointer-events': 'none',
                         'visibility' : 'hidden',
-                        //'opacity': '0',
                     });
                 }
             });
@@ -406,31 +401,16 @@ $(document).ready(function () {
                     $('.opened--menu .dots-block-section-banner').css({
                         'pointer-events': 'initial',
                         'visibility' : 'initial',
-                        //'opacity': '1',
                     });
                 } else {
                     $('.dots-block-section-banner').css({
                         'pointer-events': 'none',
                         'visibility' : 'hidden',
-                        //'opacity': '0',
                     });
                 }
             });
         }
     });
-
-    //  $(window).resize(function () {
-    //     location.reload();
-    // });
-    // $(window).bind('resize',function(e) {
-    //     if (isTouchCapable) {
-    //         location.reload();
-    //     }
-        // if ($(window).width() <= 768) {
-        //     location.reload();
-        //     changeColorOffset();
-        // }
-    //});
 
      function changeColorOffset() {
          if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
