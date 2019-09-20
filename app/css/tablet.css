@@ -1152,4 +1152,5 @@
 
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   #section-about.section {
-    overflow: auto !important; } }
+    overflow-y: auto !important;
+    height: auto !important; } }
