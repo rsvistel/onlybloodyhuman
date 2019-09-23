@@ -1149,3 +1149,8 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .text-under-img-section-tools {
     padding: 0 20%; } }
+
+@media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
+  #section-about.section {
+    overflow-y: auto !important;
+    height: auto !important; } }
