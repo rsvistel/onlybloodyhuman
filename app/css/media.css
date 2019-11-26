@@ -1499,3 +1499,7 @@
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   .over-line-block .text-under-tittles-section-tools {
     font-size: 1.2vw !important; } }
+
+@media (min-width: 1024px) {
+  .text-near-dots {
+    height: 7px; } }
