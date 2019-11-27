@@ -35,7 +35,7 @@
     text-align: left; }
   .job-section-about-producer {
     font-size: 13vw;
-    text-indent: -8px;
+    text-indent: 13px;
     margin-bottom: .36vw;
     margin-top: 5vw; }
   .tittle-section-about {
@@ -71,8 +71,6 @@
     margin: 4vw 0 0;
     font-size: 20vw;
     text-indent: -12px; }
-  .highlight-hover h2 {
-    text-indent: -8px; }
   .over-line-block .text-under-tittles-section-tools, .outdoor-section__text--main p {
     margin: 15px 0 0;
     padding: 0; }
