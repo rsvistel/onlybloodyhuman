@@ -35,7 +35,7 @@
     text-align: left
   .job-section-about-producer
     font-size: 13vw
-    text-indent: -8px
+    text-indent: 13px
     margin-bottom: .36vw
     margin-top: 5vw
   .tittle-section-about
@@ -68,8 +68,8 @@
     margin: 4vw 0 0
     font-size: 20vw
     text-indent: -12px
-  .highlight-hover h2
-    text-indent: -8px
+  //.highlight-hover h2
+  //  text-indent: -8px
   .over-line-block .text-under-tittles-section-tools, .outdoor-section__text--main p
     margin: 15px 0 0
     padding: 0
@@ -373,9 +373,11 @@
     font-size: 1.1vw
     line-height: 1.9vw
 
+  #first-section
+    height: auto!important
 
   #section-instagram
-    height: auto
+    height: auto!important
   .nav-icon .cross-icon
     margin-left: 1.3px
     width: 3vw
@@ -427,7 +429,7 @@
     font-size: 1.2vw
     letter-spacing: .3vw
   .highlight-hover h2
-    text-indent: 0
+    text-indent: 17px
   .first-sentence-section-about
     letter-spacing: 1.2px
     font-size: 1vw
@@ -781,7 +783,23 @@
     font-size: 2vw
     line-height: 0.6vw
 
+@media (max-device-width: 1366px) and (min-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+  .client-contact-list__text p
+    font-size: 2vw
+    line-height: 0.6vw
 
+  .client-contact-list__email
+    margin-left: -9px
+  
+  .client-contact-list__social
+    margin-left: -10px
+
+  .client-contact-list__social--icon
+    margin-bottom: 0.8vw
+
+  .client-contact-list__text p
+    font-size: 2vw
+    line-height: 0.6vw
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)
   .section
