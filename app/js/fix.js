@@ -279,7 +279,7 @@ $(document).ready(function () {
      },
      afterLoad: function (origin) {
          if (insta == false) {
-             if (origin.anchor == 'contact') {
+             if (origin.anchor == 'tools') {
                  var count = 1;
                  var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.dc9b2db2c58e48349642da1ca0ac393b';
                  var followers;
@@ -485,11 +485,11 @@ $(document).ready(function () {
          $(".list-icon, .cross-icon").fadeToggle(500);
      });
 
-     $(window).on("resize", function () {
-         if ($(window).width() < 768) {
-             $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.jpg)");
-         }
-     });
+    //  $(window).on("resize", function () {
+    //      if ($(window).width() < 768) {
+    //          $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.jpg)");
+    //      }
+    //  });
      if ($(window).width() < 768) {
          var videoFile = 'img/video/reel_mob_588.mp4';
          $('.video-in-section-banner video').attr('src', videoFile);
@@ -583,8 +583,10 @@ $(document).ready(function () {
              var delta = e.originalEvent.deltaY;
              if (delta > 0) {
                  if ($('#section-tools').hasClass('tools-camera')) {
+                    setTimeout(function () {
                      changeTool($('.icon-camera'), $('.icon-dji'), 'tools-camera', 'tools-dji', '2', false);
-                     $(document).unbind('wheel');
+                    },500);
+                    $(document).unbind('wheel');
                  }
                  else if ($('#section-tools').hasClass('tools-dji')) {
                      changeTool($('.icon-dji'), $('.icon-movi'), 'tools-dji', 'tools-movi', '3', false);
@@ -596,7 +598,9 @@ $(document).ready(function () {
                  }
              } else {
                  if ($('#section-tools').hasClass('tools-movi')) {
+                    setTimeout(function () {
                      changeTool($('.icon-movi'), $('.icon-dji'), 'tools-movi', 'tools-dji', '2', true);
+                    },500);
                      $(document).unbind('wheel');
                  }
                  else if ($('#section-tools').hasClass('tools-dji')) {
