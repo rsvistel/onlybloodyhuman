@@ -606,6 +606,7 @@ body.opened--menu .text-dots-block embed {
 #section-about {
   background-image: url(../img/s2-about/grain_texture.webp);
   color: #363531;
+  background-color: initial;
   font-family: "Montserrat", sans-serif;
   -webkit-background-size: 30% 30%;
           background-size: 30%; }
