@@ -16,7 +16,7 @@
   .section-outdoor-professional {
     width: auto; } }
 
-@media (max-width: 1366px) and (min-height: 900px){
+@media (max-width: 1366px) and (min-width: 769px){
   .progress-line-gray-94{
     width: 94%;!important
     background: #2c2e31;
