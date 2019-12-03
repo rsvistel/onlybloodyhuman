@@ -16,32 +16,25 @@
   .section-outdoor-professional {
     width: auto; } }
 
-@media (max-width: 1366px) and (min-width: 769px){
-  .progress-line-gray-94{
-    width: 94%;!important
-    background: #2c2e31;
-  }
-  .progress-line-gray-79{
-    width: 79%;!important
-    background: #2c2e31;
-  }
-  .progress-line-gray-87{
-    width: 87%;!important
-    background: #2c2e31;
-  }
-  .progress-line-gray-67{
-    width: 67%;!important
-    background: #2c2e31;
-  }
-  .progress-line-gray-82{
-    width: 82%;!important
-    background: #2c2e31;
-  }
-  #first-section, #section-about, #section-tools, #section-instagram, #section-contact, .section{
-    width: auto!important
-  }
+@media (max-width: 1366px) and (min-width: 769px) {
+  .progress-line-gray-94 {
+    width: 94% !important;
+    background: #2c2e31; }
+  .progress-line-gray-79 {
+    width: 79% !important;
+    background: #2c2e31; }
+  .progress-line-gray-87 {
+    width: 87% !important;
+    background: #2c2e31; }
+  .progress-line-gray-67 {
+    width: 67% !important;
+    background: #2c2e31; }
+  .progress-line-gray-82 {
+    width: 82% !important;
+    background: #2c2e31; }
+  #first-section, #section-about, #section-tools, #section-instagram, #section-contact, .section {
+    width: auto !important; } }
 
-}
 @media (max-width: 768px) {
   .section {
     height: auto !important; }
@@ -1547,11 +1540,7 @@
     padding-left: 10%;
     margin-top: 6%; }
   .section-instagram-followers {
-    padding: 6% 0 6% 9%; } 
-  .text-under-img-section-tools, .over-line-block{
-    padding-right: 15%;
-  }
-  }
+    padding: 6% 0 6% 9%; } }
 
 @media (min-width: 1000px) and (max-width: 1112px) and (orientation: portrait) {
   .highlight-hover h2 {
