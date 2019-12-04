@@ -796,9 +796,7 @@
     background: #2c2e31; }
   .progress-line-gray-82 {
     width: 82% !important;
-    background: #2c2e31; }
-  #first-section, #section-about, #section-tools, #section-instagram, #section-contact, .section {
-    height: auto !important; } }
+    background: #2c2e31; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .section {
