@@ -413,15 +413,11 @@ $(document).ready(function () {
             });
         }
         $(window).bind('scroll', function () {
-        if (isTouchCapable ) {
-            if (isTouchCapable) {
-                $("span.countup").html("1k");
-            }
+        if (isTouchCapable && insta == false ) {
+            $("span.countup").html("1k");
             var topSecInsta = $('#section-instagram span.countup').offset().top;
             var heighttest = $(window).height();
             var resInsta = topSecInsta - heighttest;
-            //var current_transform1 = parseInt($('#section-instagram').css('transform').split(',')[5]);
-            //current_transform1 = (current_transform1);
             if ($('#section-instagram span.countup').isInViewport()) {
                 animateCounter();
             }
