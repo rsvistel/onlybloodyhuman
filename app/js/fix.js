@@ -325,6 +325,7 @@ $(document).ready(function () {
             $.fn.fullpage.setResponsive(true);
             $.fn.fullpage.setAutoScrolling(false);
             fullpage_api.destroy('all');
+            $(".section").css('height', 'auto')
         }
     });
      $.fn.fullpage.setAllowScrolling(true);
