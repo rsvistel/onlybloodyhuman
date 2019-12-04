@@ -417,14 +417,14 @@ $(document).ready(function () {
         if (isTouchCapable && instaTablet == false ) {
             $("span.countup").html("1k");
             var topSecInsta = $('#section-instagram span.countup').offset().top;
-            var heighttest = $(window).height();
-            var resInsta = topSecInsta - heighttest;
+            //var heighttest = $(window).height();
+            //var resInsta = topSecInsta - heighttest;
             if ($('#section-instagram span.countup').isInViewport()) {
                 animateCounter();
+                setTimeout(function () {
+                    instaTablet = true;
+                }, 200);
             }
-            setTimeout(function () {
-                instaTablet = true;
-            }, 200);
         }
         });
     });
