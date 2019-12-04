@@ -324,7 +324,7 @@ $(document).ready(function () {
         if (isTouchCapable) {
             $.fn.fullpage.setResponsive(true);
             $.fn.fullpage.setAutoScrolling(false);
-            fullpage_api.destroy('all');
+            fullpage_api.destroy();
             $(".section").css('height', 'auto')
         }
     });
@@ -412,6 +412,24 @@ $(document).ready(function () {
                 }
             });
         }
+        // $(window).bind('scroll', function () {
+        // if (sections[4].isInViewport() && isTouchCapable ) {
+        //     if (isTouchCapable) {
+        //         $("span.countup").html("1k");
+        //     }
+        //     var topSecInsta = $('#section-instagram span.countup').offset().top;
+        //     var heighttest = $(window).height();
+        //     var resInsta = topSecInsta - heighttest;
+        //     //var current_transform1 = parseInt($('#section-instagram').css('transform').split(',')[5]);
+        //     //current_transform1 = (current_transform1);
+        //     if (sections[4].isInViewport() < resInsta) {
+        //         animateCounter();
+        //     }
+        //     setTimeout(function () {
+        //         insta = true;
+        //     }, 200);
+        // }
+        // });
     });
 
      function changeColorOffset() {
