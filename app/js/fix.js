@@ -324,6 +324,7 @@ $(document).ready(function () {
         if (isTouchCapable) {
             $.fn.fullpage.setResponsive(true);
             $.fn.fullpage.setAutoScrolling(false);
+            fullpage_api.destroy('all');
         }
     });
      $.fn.fullpage.setAllowScrolling(true);
