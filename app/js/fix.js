@@ -413,7 +413,7 @@ $(document).ready(function () {
             });
         }
         $(window).bind('scroll', function () {
-        if (sections[4].isInViewport() && isTouchCapable ) {
+        if (isTouchCapable ) {
             if (isTouchCapable) {
                 $("span.countup").html("1k");
             }
