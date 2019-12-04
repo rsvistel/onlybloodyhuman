@@ -421,9 +421,9 @@ $(document).ready(function () {
             //var resInsta = topSecInsta - heighttest;
             if ($('#section-instagram span.countup').isInViewport()) {
                 animateCounter();
-                setTimeout(function () {
-                    instaTablet = true;
-                }, 200);
+                // setTimeout(function () {
+                //     instaTablet = true;
+                // }, 200);
             }
         }
         });
