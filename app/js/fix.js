@@ -422,7 +422,7 @@ $(document).ready(function () {
             var resInsta = topSecInsta - heighttest;
             //var current_transform1 = parseInt($('#section-instagram').css('transform').split(',')[5]);
             //current_transform1 = (current_transform1);
-            if (sections[4].isInViewport() < resInsta) {
+            if ($('#section-instagram span.countup').isInViewport()) {
                 animateCounter();
             }
             setTimeout(function () {
