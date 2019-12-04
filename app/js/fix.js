@@ -325,7 +325,8 @@ $(document).ready(function () {
             $.fn.fullpage.setResponsive(true);
             $.fn.fullpage.setAutoScrolling(false);
             fullpage_api.destroy();
-            $(".section").css('height', 'auto')
+            $(".section").css('height', 'auto');
+            $('.progress-line-gray').addClass('tablet');
         }
     });
      $.fn.fullpage.setAllowScrolling(true);
@@ -412,24 +413,23 @@ $(document).ready(function () {
                 }
             });
         }
-        // $(window).bind('scroll', function () {
-        // if (sections[4].isInViewport() && isTouchCapable ) {
-        //     if (isTouchCapable) {
-        //         $("span.countup").html("1k");
-        //     }
-        //     var topSecInsta = $('#section-instagram span.countup').offset().top;
-        //     var heighttest = $(window).height();
-        //     var resInsta = topSecInsta - heighttest;
-        //     //var current_transform1 = parseInt($('#section-instagram').css('transform').split(',')[5]);
-        //     //current_transform1 = (current_transform1);
-        //     if (sections[4].isInViewport() < resInsta) {
-        //         animateCounter();
-        //     }
-        //     setTimeout(function () {
-        //         insta = true;
-        //     }, 200);
-        // }
-        // });
+        var instaTablet = false;
+        $(window).bind('scroll', function () {
+        if (isTouchCapable && instaTablet == false) {
+            $("span.countup").html("1k");
+            var topSecInsta = $('#section-instagram span.countup').offset().top;
+            //var heighttest = $(window).height();
+            //var resInsta = topSecInsta - heighttest;
+            //var current_transform1 = parseInt($('#section-instagram').css('transform').split(',')[5]);
+            //current_transform1 = (current_transform1);
+            if ($('#section-instagram span.countup').isInViewport()) {
+                animateCounter();
+                setTimeout(function () {
+                    instaTablet = true;
+                }, 200);
+            }
+        }
+        });
     });
 
      function changeColorOffset() {
