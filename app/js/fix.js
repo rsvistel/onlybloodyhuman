@@ -412,8 +412,9 @@ $(document).ready(function () {
                 }
             });
         }
+        var instaTablet = false
         $(window).bind('scroll', function () {
-        if (isTouchCapable && insta == false ) {
+        if (isTouchCapable && instaTablet == false ) {
             $("span.countup").html("1k");
             var topSecInsta = $('#section-instagram span.countup').offset().top;
             var heighttest = $(window).height();
@@ -422,7 +423,7 @@ $(document).ready(function () {
                 animateCounter();
             }
             setTimeout(function () {
-                insta = true;
+                instaTablet = true;
             }, 200);
         }
         });
