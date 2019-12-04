@@ -412,9 +412,9 @@ $(document).ready(function () {
                 }
             });
         }
-        var instaTablet = false
+        var instaTablet = false;
         $(window).bind('scroll', function () {
-        if (isTouchCapable) {
+        if (isTouchCapable && instaTablet == false ) {
             $("span.countup").html("1k");
             var topSecInsta = $('#section-instagram span.countup').offset().top;
             //var heighttest = $(window).height();
