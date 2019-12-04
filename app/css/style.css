@@ -1491,12 +1491,6 @@ body.opened--menu .text-dots-block embed {
   height: auto;
   min-height: 100vh; }
 
-#section-tools,
-#section-tools .fp-slide,
-#section-tools .fp-tableCell,
-#section-tools .fp-scrollable {
-  height: auto !important; }
-
 #section-about .fp-scrollable {
   background-color: #363531 !important; }
 

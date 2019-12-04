@@ -781,7 +781,24 @@
     margin-bottom: 0.8vw; }
   .client-contact-list__text p {
     font-size: 2vw;
-    line-height: 0.6vw; } }
+    line-height: 0.6vw; }
+  .progress-line-gray-94 {
+    width: 94% !important;
+    background: #2c2e31; }
+  .progress-line-gray-79 {
+    width: 79% !important;
+    background: #2c2e31; }
+  .progress-line-gray-87 {
+    width: 87% !important;
+    background: #2c2e31; }
+  .progress-line-gray-67 {
+    width: 67% !important;
+    background: #2c2e31; }
+  .progress-line-gray-82 {
+    width: 82% !important;
+    background: #2c2e31; }
+  #first-section, #section-about, #section-tools, #section-instagram, #section-contact, .section {
+    height: auto !important; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .section {
@@ -1167,23 +1184,4 @@
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   #section-about.section {
     overflow-y: auto !important;
-    height: auto !important; } }
-
-@media (max-width: 1366px) and (min-width: 769px) {
-  .progress-line-gray-94 {
-    width: 94% !important;
-    background: #2c2e31; }
-  .progress-line-gray-79 {
-    width: 79% !important;
-    background: #2c2e31; }
-  .progress-line-gray-87 {
-    width: 87% !important;
-    background: #2c2e31; }
-  .progress-line-gray-67 {
-    width: 67% !important;
-    background: #2c2e31; }
-  .progress-line-gray-82 {
-    width: 82% !important;
-    background: #2c2e31; }
-  #first-section, #section-about, #section-tools, #section-instagram, #section-contact, .section {
     height: auto !important; } }
