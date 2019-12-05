@@ -329,7 +329,6 @@ $(document).ready(function () {
             $('.progress-line-gray').addClass('tablet');
             $('.white-button').addClass('change-color');
             $('.black-button').addClass('current-color');
-            $('.about-link').attr('id', 'section-about');
         }
     });
      $.fn.fullpage.setAllowScrolling(true);
