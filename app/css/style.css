@@ -1561,7 +1561,7 @@ body.opened--menu .text-dots-block embed {
   max-width: 33%;
   margin-left: 3px; }
 
-.current-color, .change-color {
+.current-color, .change-color, .change-color-tablet, .current-color-tablet {
   transition: opacity .7s;
   -o-transition: opacity .7s;
   -webkit-transition: opacity .7s; }
