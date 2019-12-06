@@ -401,15 +401,15 @@ $(document).ready(function () {
                         'pointer-events': 'none',
                         'visibility' : 'hidden',
                     });
+                    if ($(window).scrollTop() >= offsetSections[1] && $(window).scrollTop() < offsetSections[3] ) {
+                        $('#menuToggle .change-color').css('opacity', 0);
+                        $('#menuToggle .current-color').css('opacity', 1);
+                    }
                 }
             if($('#section-tools, #section-about').hasClass('black-color-tablet')) {
                 if ($('body').hasClass('opened--menu')) {
                     $('#menuToggle .change-color').css('opacity', 1);
                     $('#menuToggle .current-color').css('opacity', 0);
-                }
-                if ($(window).scrollTop() >= offsetSections[1] && $(window).scrollTop() < offsetSections[3] ) {
-                    $('#menuToggle .change-color').css('opacity', 0);
-                    $('#menuToggle .current-color').css('opacity', 1);
                 }
             }
             });
