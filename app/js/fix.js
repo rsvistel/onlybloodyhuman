@@ -443,6 +443,15 @@ $(document).ready(function () {
             }
         }
         });
+
+        $('.text-dots-block').click(function () {
+            var thisElement = $(this);
+                for (var i = 0; i < dots.length; i++) {
+                    if (thisElement.index() === i) {
+                        $('html, body').animate({scrollTop: sections[i].offset().top + 50 }, 1000);
+                    }
+                }
+        });
     });
 
      function changeColorOffset() {
