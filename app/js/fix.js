@@ -440,7 +440,7 @@ $(document).ready(function () {
                 $('#menuToggle .change-color').css('opacity', 1);
                 $('#menuToggle .current-color').css('opacity', 0);
             }
-        
+
         var instaTablet = false;
         $(window).bind('scroll', function () {
         if (isTouchCapable && instaTablet == false) {
@@ -452,23 +452,35 @@ $(document).ready(function () {
                 }, 200);
             }
         }
+
+        });
+
+        $(window).scroll(function () {
+            for (var i = 0; i < sections.length; i++) {
+                if (sections[i].isInViewport()) {
+                    $('.text-dots-block').each(function () {
+                        $(this).removeClass('active')
+                    });
+                    dots[i].addClass('active')
+                }
+            }
         });
 
         $('.text-dots-block').click(function () {
             var thisElement = $(this);
+            console.log(thisElement)
                 for (var i = 0; i < dots.length; i++) {
                     if (thisElement.index() === i) {
                         $('html, body').animate({scrollTop: sections[i].offset().top + 50}, 1000);
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active')
-                        });	
+                        });
                         dots[i].addClass('active')
                     }
                 }
         });
     }
     });
-
 
      function changeColorOffset() {
          if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
