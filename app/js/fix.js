@@ -356,7 +356,7 @@ $(document).ready(function () {
                      $('.whole-text-left-logo').css('opacity', '0');
                  }, 3000);
              });
-             if ($(this).scrollTop() <= offsetSections[0]) {
+             if ($(this).scrollTop() <= offsetSections[0] + 10) {
                  $('.whole-text-left-logo').css('opacity', '1');
                  }
                  else {
@@ -410,9 +410,10 @@ $(document).ready(function () {
                 if ($('body').hasClass('opened--menu')) {
                     $('#menuToggle .change-color').css('opacity', 1);
                     $('#menuToggle .current-color').css('opacity', 0);
+                    }
                 }
-            }
             });
+
             $('.text-dots-block').click(function () {
                 if ($('body').hasClass('opened--menu')) {
                     $('.opened--menu .dots-block-section-banner').css({
@@ -452,6 +453,11 @@ $(document).ready(function () {
                 }, 200);
             }
         }
+        if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() <= 768)) {
+            $('#menuToggle-mobile input').click();
+        } else if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() >= 769 || $(window).width() <= 1500)) {
+            $('#menuToggle input').click();
+        }
 
         });
 
@@ -466,7 +472,7 @@ $(document).ready(function () {
                         dots[i].addClass('active');
                     }
                 }
-                if($(window).scrollTop() == 0) {
+                if($(window).scrollTop() < offsetSections[1]) {
                     $('.text-dots-block').each(function () {
                         $(this).removeClass('active');
                     });
@@ -486,7 +492,7 @@ $(document).ready(function () {
             console.log(thisElement)
                 for (var i = 0; i < dots.length; i++) {
                     if (thisElement.index() === i) {
-                        $('html, body').animate({scrollTop: sections[i].offset().top + 50}, 1000);
+                        $('html, body').animate({scrollTop: sections[i].offset().top + 10}, 1000);
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active');
                         });
@@ -496,7 +502,7 @@ $(document).ready(function () {
         });
 
         $('#goToAbout').click(function () {
-            $('html, body').animate({scrollTop: $("#section-about").offset().top + 50}, 1000);
+            $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
         });
     }
     });
