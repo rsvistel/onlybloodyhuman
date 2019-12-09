@@ -453,9 +453,11 @@ $(document).ready(function () {
                 }, 200);
             }
         }
-        // if ($('body').hasClass('opened--menu') && isTouchCapable) {
-        //     $('#menuToggle input, #menuToggle-mobile input').click();
-        // }
+        if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() <= 768)) {
+            $('#menuToggle-mobile input').click();
+        } else if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() >= 769 || $(window).width() <= 1366)) {
+            $('#menuToggle input').click();
+        }
 
         });
 
