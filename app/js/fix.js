@@ -466,7 +466,7 @@ $(document).ready(function () {
                         dots[i].addClass('active');
                     }
                 }
-                if($(window).scrollTop() == 10) {
+                if($(window).scrollTop() < offsetSections[1]) {
                     $('.text-dots-block').each(function () {
                         $(this).removeClass('active');
                     });
