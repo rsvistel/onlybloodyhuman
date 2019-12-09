@@ -1403,8 +1403,7 @@
   .text-dots-block:hover embed {
     opacity: 1; }
   .text-dots-block:hover .text-near-dots {
-    opacity: 1;
-    height: 0.6vw; } }
+    opacity: 1; } }
 
 @media (min-width: 768px) {
   .embed-arrow {
