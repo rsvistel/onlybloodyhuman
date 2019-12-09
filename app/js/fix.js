@@ -455,7 +455,7 @@ $(document).ready(function () {
         }
         if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() <= 768)) {
             $('#menuToggle-mobile input').click();
-        } else if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() >= 769 || $(window).width() <= 1366)) {
+        } else if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() >= 769 || $(window).width() <= 1500)) {
             $('#menuToggle input').click();
         }
 
