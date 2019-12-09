@@ -391,12 +391,6 @@ $(document).ready(function () {
                 'visibility' : 'initial',
             });
             $('#menuToggle input, #menuToggle-mobile input').click(function () {
-                // $(window).scroll(function () {
-                //     if ($('body').hasClass('opened--menu')) {
-                //         $('#menuToggle input, #menuToggle-mobile input').click();
-                //     }
-                // });
-                
                 if ($('body').hasClass('opened--menu')) {
                     $('.opened--menu .dots-block-section-banner').css({
                         'pointer-events': 'initial',
@@ -459,6 +453,9 @@ $(document).ready(function () {
                 }, 200);
             }
         }
+        // if ($('body').hasClass('opened--menu') && isTouchCapable) {
+        //     $('#menuToggle input, #menuToggle-mobile input').click();
+        // }
 
         });
 
