@@ -781,7 +781,22 @@
     margin-bottom: 0.8vw; }
   .client-contact-list__text p {
     font-size: 2vw;
-    line-height: 0.6vw; } }
+    line-height: 0.6vw; }
+  .progress-line-gray-94.tablet {
+    width: 94% !important;
+    background: #2c2e31; }
+  .progress-line-gray-79.tablet {
+    width: 79% !important;
+    background: #2c2e31; }
+  .progress-line-gray-87.tablet {
+    width: 87% !important;
+    background: #2c2e31; }
+  .progress-line-gray-67.tablet {
+    width: 67% !important;
+    background: #2c2e31; }
+  .progress-line-gray-82.tablet {
+    width: 82% !important;
+    background: #2c2e31; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .section {

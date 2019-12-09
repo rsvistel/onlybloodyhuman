@@ -1428,7 +1428,7 @@
 
 @media (min-width: 1800px) {
   .embed-arrow {
-    padding: 0% 6% 6% 5%; } }
+    padding: 0% 6% 5% 5%; } }
 
 @media (min-width: 1400px) and (max-width: 1700px) {
   .embed-arrow {
@@ -1518,14 +1518,9 @@
   .nav-icon .cross-icon {
     width: 2vh; }
   .left-logo-banner-section {
-    padding-left: 10%;
     margin-top: 6%; }
   .section-instagram-followers {
-    padding: 6% 0 6% 9%; } 
-  .text-under-img-section-tools, .over-line-block{
-    padding-right: 15%;
-  }
-  }
+    padding: 6% 0 6% 9%; } }
 
 @media (min-width: 1000px) and (max-width: 1112px) and (orientation: portrait) {
   .highlight-hover h2 {
@@ -1538,7 +1533,3 @@
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   .over-line-block .text-under-tittles-section-tools {
     font-size: 1.2vw !important; } }
-
-@media (min-width: 1024px) {
-  .text-near-dots {
-    height: 0.6vw; } }

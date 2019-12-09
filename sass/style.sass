@@ -44,6 +44,7 @@ a:focus, a:hover
 .video-references
   position: absolute
   top: 0
+  right: 0
   min-height: 80vh
   min-width: 100%
   z-index: -1
@@ -463,12 +464,13 @@ body.opened--menu .text-dots-block embed
   color: $primary-color
   font-family: $primary-font
   background-size: 30%
+  background-color: initial
 
 #section-about .row
   display: flex
 
 .photo-man-section-about
-  background-image: url("../img/s2-about/jamie_dsk.webp")
+  background-image: url("../img/s2-about/jamie_mob.jpg")
   background-size: cover
   background-repeat: no-repeat
   background-position: center
@@ -1206,11 +1208,7 @@ body.opened--menu .text-dots-block embed
   height: auto
   min-height: 100vh
 
-#section-tools,
-#section-tools .fp-slide,
-#section-tools .fp-tableCell,
-#section-tools .fp-scrollable
-  height: auto !important
+
 
 #section-about .fp-scrollable
   background-color: #363531!important
@@ -1271,7 +1269,7 @@ body.opened--menu .text-dots-block embed
   max-width: 33%
   margin-left: 3px
 
-.current-color, .change-color
+.current-color, .change-color, .change-color-tablet, .current-color-tablet
   transition:  opacity .7s
   -o-transition:  opacity .7s
   -webkit-transition: opacity .7s
