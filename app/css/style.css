@@ -1225,9 +1225,6 @@ body.opened--menu .text-dots-block embed {
 .section-instagram__photo:nth-child(-n+6) {
   border-top: none; }
 
-.section-instagram__photo:nth-child(n+6) {
-  border-bottom: none; }
-
 .section-instagram__photo embed {
   width: 1.2vw; }
 
