@@ -665,7 +665,7 @@ body.opened--menu .text-dots-block embed {
   margin-bottom: 0.2vw;
   text-indent: 13px;
   margin-left: -22px;
-  margin-right: 10px; }
+  margin-right: 1px; }
 
 .now-section-about {
   margin-top: 30%;
@@ -1225,9 +1225,6 @@ body.opened--menu .text-dots-block embed {
 .section-instagram__photo:nth-child(-n+6) {
   border-top: none; }
 
-.section-instagram__photo:nth-child(n+6) {
-  border-bottom: none; }
-
 .section-instagram__photo embed {
   width: 1.2vw; }
 
@@ -1490,14 +1487,6 @@ body.opened--menu .text-dots-block embed {
   padding: 0;
   height: auto;
   min-height: 100vh; }
-
-#section-about .fp-scrollable {
-  background-color: #363531 !important; }
-
-#section-about .fp-scroller {
-  background-image: url(../img/s2-about/grain_texture.webp);
-  -webkit-background-size: 30% 30%;
-          background-size: 30%; }
 
 .client-contact-list, .gray-half-section-tools {
   display: -webkit-box;
