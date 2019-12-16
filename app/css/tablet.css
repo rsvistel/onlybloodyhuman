@@ -553,8 +553,6 @@
     z-index: 0; }
   .section-instagram__photo:nth-child(6) {
     border-bottom: 0.5px solid #f0f2f2; }
-  .section-instagram__photo:nth-child(2) {
-    border-bottom: 1px solid #f0f2f2; }
   .section-instagram__photo:nth-child(1) {
     border-bottom: 0.5px solid #f0f2f2; } }
 
@@ -1019,8 +1017,9 @@
     width: 3.8vw;
     padding: 1vw 0 0; }
   .section-instagram-followers {
-    margin-top: 8%;
-    margin-bottom: 8%; }
+    margin-top: 6%;
+    margin-bottom: 6%;
+    padding: 0 0 0 9%; }
   .section-instagram-followers span {
     font-size: 3.2vw; }
   .section-instagram-followers a {
