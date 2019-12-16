@@ -1491,14 +1491,6 @@ body.opened--menu .text-dots-block embed {
   height: auto;
   min-height: 100vh; }
 
-#section-about .fp-scrollable {
-  background-color: #363531 !important; }
-
-#section-about .fp-scroller {
-  background-image: url(../img/s2-about/grain_texture.webp);
-  -webkit-background-size: 30% 30%;
-          background-size: 30%; }
-
 .client-contact-list, .gray-half-section-tools {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1609,3 +1601,6 @@ body.opened--menu .text-dots-block embed {
 
 .text-dots-block:hover a {
   text-decoration: none; }
+
+.section-tools, .section-about {
+  background: transparent; }
