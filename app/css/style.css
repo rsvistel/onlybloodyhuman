@@ -318,7 +318,8 @@ body.opened--menu .text-dots-block embed {
   width: 60%;
   text-align: right;
   cursor: pointer;
-  margin: 0; }
+  margin: 0;
+  padding-top: 3px; }
 
 .job-text-center {
   font-family: "Montserrat", sans-serif;
