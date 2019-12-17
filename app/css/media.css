@@ -322,7 +322,9 @@
   .large-tittle-section-tools {
     margin: 1vw 0 0 -0.5vw; }
   .client-contact-list__social--icon {
-    height: 22px; } }
+    height: 22px; }
+  .text-near-dots {
+    padding-top: 0px; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
