@@ -425,7 +425,8 @@
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out; }
   .job-section-about-producer {
-    letter-spacing: -3px; }
+    letter-spacing: -3px;
+    margin-right: -3px; }
   .logo-client-list object {
     min-width: 7.2vw; }
   .jobs-section-about {
