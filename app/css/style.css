@@ -1,11 +1,4 @@
-@font-face {
-  font-family: 'Proxima Nova';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: url("https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/fonts/ProximaNova-Light.woff") format("woff"); }
-
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200&display=swap");
 h1 {
   font-size: 9vw;
   line-height: 8vw;
@@ -30,7 +23,7 @@ h6 {
 
 p {
   font-size: 0.9vw;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   line-height: 1.6vw; }
 
 a:focus, a:hover {
@@ -686,7 +679,7 @@ body.opened--menu .text-dots-block embed {
 .aka-name-section-about {
   font-style: italic;
   font-size: 0.55vw;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   text-transform: initial;
   margin-bottom: 30px; }
 
@@ -1046,7 +1039,7 @@ body.opened--menu .text-dots-block embed {
 
 .outdoor-section__text {
   text-align: left;
-  font-family: "Proxima Nova", sans-serif; }
+  font-family: "Nunito Sans", sans-serif; }
 
 .outdoor-section button {
   overflow: hidden; }
