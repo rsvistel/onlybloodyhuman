@@ -118,7 +118,7 @@
     margin-bottom: 0; }
   .now-section-about {
     margin-top: 24%; }
-  .text-under-img-section-tools, .over-line-block {
+  .text-under-img-section-tools {
     padding: 0; }
   .arrow-down-section-banner object {
     width: 3%;
@@ -317,12 +317,12 @@
   .arrow-down-section-banner {
     right: -webkit-calc(55% - 1.1vw/2);
     right: calc(55% - 1.1vw/2); }
-  .job-section-about-producer {
-    margin-left: -4px; }
   .large-tittle-section-tools {
     margin: 1vw 0 0 -0.5vw; }
   .client-contact-list__social--icon {
-    height: 22px; } }
+    height: 22px; }
+  .text-near-dots {
+    padding-top: 0px; } }
 
 @media (min-width: 2000px) {
   .over-line-block {
@@ -1136,7 +1136,9 @@
 @media (max-width: 767px) {
   .photo-half-section-tools {
     height: 50vh;
-    min-height: 350px; } }
+    min-height: 350px; }
+  .job-section-about-producer {
+    margin-left: -4px; } }
 
 @media (max-width: 320px) {
   .job-section-about {
@@ -1501,12 +1503,14 @@
     padding-right: 6.5%; }
   .left-logo-banner-section {
     padding-left: 5%;
-    margin-top: 4px; }
+    margin-top: 1px; }
+  .left-logo-banner-section object {
+    max-width: 4%; }
   .text-left-logo {
     font-size: 9px;
     line-height: 9px; }
   .section-instagram-followers {
-    margin-top: 0;
+    margin-top: 6%;
     margin-bottom: 6%; } }
 
 @media (max-width: 769px) and (min-width: 767px) and (orientation: portrait) {
@@ -1520,7 +1524,8 @@
   .left-logo-banner-section {
     margin-top: 6%; }
   .section-instagram-followers {
-    padding: 6% 0 6% 9%; } }
+    margin-top: 6%;
+    margin-bottom: 6%; } }
 
 @media (min-width: 1000px) and (max-width: 1112px) and (orientation: portrait) {
   .highlight-hover h2 {
@@ -1533,3 +1538,11 @@
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   .over-line-block .text-under-tittles-section-tools {
     font-size: 1.2vw !important; } }
+
+@media (max-width: 767px) {
+  .over-line-block {
+    padding: 0; } }
+
+@media (min-width: 769px) {
+  .section-tools, .section-about {
+    background: transparent; } }

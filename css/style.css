@@ -1,11 +1,4 @@
-@font-face {
-  font-family: 'Proxima Nova';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: url("https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/fonts/ProximaNova-Light.woff") format("woff"); }
-
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200&display=swap");
 h1 {
   font-size: 9vw;
   line-height: 8vw;
@@ -30,7 +23,7 @@ h6 {
 
 p {
   font-size: 0.9vw;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   line-height: 1.6vw; }
 
 a:focus, a:hover {
@@ -318,7 +311,8 @@ body.opened--menu .text-dots-block embed {
   width: 60%;
   text-align: right;
   cursor: pointer;
-  margin: 0; }
+  margin: 0;
+  padding-top: 3px; }
 
 .job-text-center {
   font-family: "Montserrat", sans-serif;
@@ -665,7 +659,7 @@ body.opened--menu .text-dots-block embed {
   margin-bottom: 0.2vw;
   text-indent: 13px;
   margin-left: -22px;
-  margin-right: 10px; }
+  margin-right: 1px; }
 
 .now-section-about {
   margin-top: 30%;
@@ -685,7 +679,7 @@ body.opened--menu .text-dots-block embed {
 .aka-name-section-about {
   font-style: italic;
   font-size: 0.55vw;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   text-transform: initial;
   margin-bottom: 30px; }
 
@@ -1045,7 +1039,7 @@ body.opened--menu .text-dots-block embed {
 
 .outdoor-section__text {
   text-align: left;
-  font-family: "Proxima Nova", sans-serif; }
+  font-family: "Nunito Sans", sans-serif; }
 
 .outdoor-section button {
   overflow: hidden; }
@@ -1224,9 +1218,6 @@ body.opened--menu .text-dots-block embed {
 
 .section-instagram__photo:nth-child(-n+6) {
   border-top: none; }
-
-.section-instagram__photo:nth-child(n+6) {
-  border-bottom: none; }
 
 .section-instagram__photo embed {
   width: 1.2vw; }
@@ -1490,14 +1481,6 @@ body.opened--menu .text-dots-block embed {
   padding: 0;
   height: auto;
   min-height: 100vh; }
-
-#section-about .fp-scrollable {
-  background-color: #363531 !important; }
-
-#section-about .fp-scroller {
-  background-image: url(../img/s2-about/grain_texture.webp);
-  -webkit-background-size: 30% 30%;
-          background-size: 30%; }
 
 .client-contact-list, .gray-half-section-tools {
   display: -webkit-box;

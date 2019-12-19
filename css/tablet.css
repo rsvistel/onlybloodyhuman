@@ -37,7 +37,8 @@
     font-size: 13vw;
     text-indent: 13px;
     margin-bottom: .36vw;
-    margin-top: 5vw; }
+    margin-top: 5vw;
+    margin-right: -20px; }
   .tittle-section-about {
     font-size: 1.44vw;
     margin-top: 20px;
@@ -248,7 +249,7 @@
   .arrow-down-section-banner embed {
     width: 3%; }
   .highlight-hover h2 {
-    text-indent: -8px; }
+    text-indent: 10px; }
   .wrap {
     position: absolute;
     z-index: 15;
@@ -350,7 +351,9 @@
     width: 55%; }
   .whole-text-section-about {
     padding: 20% 10% 4% 4%;
-    width: 45%; } }
+    width: 45%; }
+  .text-near-dots {
+    padding-top: 0; } }
 
 /* iPad mini, normal, Pro (small) */
 @media (min-width: 825px) and (max-width: 1112px) and (orientation: landscape) {
@@ -409,7 +412,8 @@
   .text-near-dots {
     font-size: 1.1vw;
     width: 70%;
-    line-height: 1.1vw; }
+    line-height: 1.1vw;
+    padding-top: 0; }
   .text-dots-block {
     margin-bottom: 5%; }
   .text-over-progress h6 {
@@ -421,7 +425,8 @@
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out; }
   .job-section-about-producer {
-    letter-spacing: -3px; }
+    letter-spacing: -3px;
+    margin-right: -3px; }
   .logo-client-list object {
     min-width: 7.2vw; }
   .jobs-section-about {
@@ -553,10 +558,10 @@
     z-index: 0; }
   .section-instagram__photo:nth-child(6) {
     border-bottom: 0.5px solid #f0f2f2; }
-  .section-instagram__photo:nth-child(2) {
-    border-bottom: 1px solid #f0f2f2; }
   .section-instagram__photo:nth-child(1) {
-    border-bottom: 0.5px solid #f0f2f2; } }
+    border-bottom: 0.5px solid #f0f2f2; }
+  .text-near-dots {
+    padding-top: 0; } }
 
 /* iPad Pro (Big) */
 @media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -575,7 +580,8 @@
     font-size: 1.2vw;
     letter-spacing: .3vw; }
   .job-section-about-producer {
-    letter-spacing: -3px; }
+    letter-spacing: -3px;
+    margin-right: -60px; }
   h6 {
     font-size: 1vw; }
   h3 {
@@ -629,7 +635,8 @@
   .text-near-dots {
     font-size: 1.1vw;
     width: 70%;
-    line-height: 1.1vw; }
+    line-height: 1.1vw;
+    padding-top: 0; }
   .video-references {
     min-height: 80vh;
     height: 81vh; }
@@ -643,7 +650,7 @@
   #section-about.section {
     height: auto; }
   .over-line-block {
-    padding-right: 10%; }
+    padding-right: 16%; }
   .large-tittle-section-tools {
     margin-top: -2px; }
   .text-under-tittles-section-tools {
@@ -752,15 +759,15 @@
   .arrow-down-icon {
     padding: 0 4vw .8vw 4vw;
     width: 100%; }
-  .section-instagram__photo:nth-child(5) {
-    border-bottom: none; }
   .section-instagram__photo:nth-child(6) {
     border-top: 0.5px solid #f0f2f2; }
   .embed-arrow embed {
     width: 12px;
     height: 7px; }
   .video-section-cover {
-    z-index: 0; } }
+    z-index: 0; }
+  .text-near-dots {
+    padding-top: 0; } }
 
 @media (min-width: 1111px) and (max-width: 1112px) and (orientation: landscape) {
   .client-contact-list__email {
@@ -796,7 +803,9 @@
     background: #2c2e31; }
   .progress-line-gray-82.tablet {
     width: 82% !important;
-    background: #2c2e31; } }
+    background: #2c2e31; }
+  .text-near-dots {
+    padding-top: 0; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .section {
@@ -1019,8 +1028,9 @@
     width: 3.8vw;
     padding: 1vw 0 0; }
   .section-instagram-followers {
-    margin-top: 8%;
-    margin-bottom: 8%; }
+    margin-top: 6%;
+    margin-bottom: 6%;
+    padding: 0 0 0 9%; }
   .section-instagram-followers span {
     font-size: 3.2vw; }
   .section-instagram-followers a {
@@ -1124,7 +1134,9 @@
   .under-line-block .img-under-line-block embed, .img-under-line-block object {
     margin: 3% 0 5% 0; }
   .client-contact-list__email--triangle-left embed {
-    display: none; } }
+    display: none; }
+  .section-tools {
+    background: #363531; } }
 
 @media (min-width: 769px) and (max-width: 1000px) and (orientation: portrait) {
   #section-instagram {
@@ -1160,7 +1172,13 @@
 
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   .section-instagram-followers a {
-    font-size: 0.7vw; } }
+    font-size: 0.7vw; }
+  .text-near-dots {
+    padding-top: 0; } }
+
+@media (max-width: 834px) and (min-width: 834px) {
+  .dots-block-section-banner embed {
+    margin: 4.5% 6% 3% 0 !important; } }
 
 @media (min-width: 833px) and (max-width: 834px) and (orientation: portrait) {
   .nav-icon .cross-icon {
@@ -1177,9 +1195,21 @@
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .text-under-img-section-tools {
-    padding: 0 20%; } }
+    padding: 0 20%; }
+  .text-near-dots {
+    padding-top: 0; } }
 
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   #section-about.section {
     overflow-y: auto !important;
     height: auto !important; } }
+
+@media (max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) {
+  .highlight-hover h2 {
+    text-indent: 17px; }
+  .client-contact-list__email {
+    margin-left: -10px; } }
+
+@media (max-width: 1600px) and (min-width: 1400px) {
+  .embed-arrow {
+    padding: 0 6% 2% 5%; } }
