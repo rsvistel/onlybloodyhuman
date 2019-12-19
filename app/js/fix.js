@@ -504,6 +504,15 @@ $(document).ready(function () {
         $('#goToAbout').click(function () {
             $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
         });
+
+
+        var mediaQueryIpadPro = window.matchMedia("(orientation: portrait)");
+
+        if (mediaQueryIpadPro.matches) {
+            alert('1');
+          } else {
+            alert('2');
+          }
     }
     });
 
