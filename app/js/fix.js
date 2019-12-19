@@ -505,13 +505,29 @@ $(document).ready(function () {
             $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
         });
 
-        var mql = window.matchMedia("(orientation: portrait)").matches;
+        // var mql = window.matchMedia("(orientation: portrait)").matches;
 
-        if(mql) {
-            alert('match');
-        } else {
-            alert('no match');
-        }
+        // if(mql) {
+        //     alert('match');
+        // } else {
+        //     alert('no match');
+        // }
+
+        $(window).bind('orientationchange', function(e) {
+
+            switch ( window.orientation ) {
+              case 0:
+                  alert('portrait mode');
+              break;
+              case 90:
+                  alert('landscape mode screen turned to the left');
+              break;
+              case -90:
+                  alert('landscape mode screen turned to the right');
+              break;
+            }
+          });
+
     }
     });
 
