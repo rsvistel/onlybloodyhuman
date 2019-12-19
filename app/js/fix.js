@@ -505,13 +505,13 @@ $(document).ready(function () {
             $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
         });
 
-        var mql = window.matchMedia("(orientation: portrait)").matches;
+        // var mql = window.matchMedia("(orientation: portrait)").matches;
 
-        if(mql) {
-            alert('match');
-        } else {
-            alert('no match');
-        }
+        // if(mql) {
+        //     alert('match');
+        // } else {
+        //     alert('no match');
+        // }
 
         // $(window).bind('orientationchange', function(e) {
 
@@ -528,39 +528,67 @@ $(document).ready(function () {
         //     }
         //   });
 
-            var scrollO = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
+            // var scrollO = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
 
-            if (scrollO.matches) {
-                alert('min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2');
-            }
+            // if (scrollO.matches) {
+            //     alert('min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2');
+            // }
 
-            var scroll = window.matchMedia('orientation: portrait').matches;
+            // var scroll = window.matchMedia('orientation: portrait').matches;
 
-            if (scroll) {
-                alert('scroll 1024px');
-            }
+            // if (scroll) {
+            //     alert('scroll 1024px');
+            // }
 
-            var scrollll = window.matchMedia('orientation: portrait');
+            // var scrollll = window.matchMedia('orientation: portrait');
 
-            if (scrollll.matches) {
-                alert('scrollll.matches');
-            }
+            // if (scrollll.matches) {
+            //     alert('scrollll.matches');
+            // }
 
-            var scrol = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
-            if (scrol) {
-                alert('scrol');
-            }
+            // var scrol = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
+            // if (scrol) {
+            //     alert('scrol');
+            // }
 
-            var mql = window.matchMedia("(orientation: portrait)");
+            // var mql = window.matchMedia("(orientation: portrait)");
 
-            if(mql.matches) {
-                alert('match');
-            } else {
-                alert('no match');
-            }
+            // if(mql.matches) {
+            //     alert('match');
+            // } else {
+            //     alert('no match');
+            // }
 
     }
     });
+
+    $(function () {
+        var widthMediaQuery = window.matchMedia("(orientation: portrait)");
+        if(widthMediaQuery.matches) {
+          alert('match_1');
+        }
+
+        if(window.matchMedia) {
+            var widthMediaQuery = window.matchMedia("(orientation: portrait)");
+            if(widthMediaQuery.matches) {
+                alert('match_2');
+            }
+          }
+
+          if (matchMedia) {
+            const mq = window.matchMedia("(orientation: portrait)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+            }
+
+            function WidthChange(mq) {
+                if (mq.matches) {
+                    alert('match_safary');
+                } else {
+                    alert('no match_safary');
+                }
+            }
+      });
 
      function changeColorOffset() {
          if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
