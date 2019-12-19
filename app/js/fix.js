@@ -505,28 +505,59 @@ $(document).ready(function () {
             $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
         });
 
-        // var mql = window.matchMedia("(orientation: portrait)").matches;
+        var mql = window.matchMedia("(orientation: portrait)").matches;
 
-        // if(mql) {
-        //     alert('match');
-        // } else {
-        //     alert('no match');
-        // }
+        if(mql) {
+            alert('match');
+        } else {
+            alert('no match');
+        }
 
-        $(window).bind('orientationchange', function(e) {
+        // $(window).bind('orientationchange', function(e) {
 
-            switch ( window.orientation ) {
-              case 0:
-                  alert('portrait mode');
-              break;
-              case 90:
-                  alert('landscape mode screen turned to the left');
-              break;
-              case -90:
-                  alert('landscape mode screen turned to the right');
-              break;
+        //     switch ( window.orientation ) {
+        //       case 0:
+        //           alert('portrait mode');
+        //       break;
+        //       case 90:
+        //           alert('landscape mode screen turned to the left');
+        //       break;
+        //       case -90:
+        //           alert('landscape mode screen turned to the right');
+        //       break;
+        //     }
+        //   });
+
+            var scrollO = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
+
+            if (scrollO.matches) {
+                alert('min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2');
             }
-          });
+
+            var scroll = window.matchMedia('orientation: portrait').matches;
+
+            if (scroll) {
+                alert('scroll 1024px');
+            }
+
+            var scrollll = window.matchMedia('orientation: portrait');
+
+            if (scrollll.matches) {
+                alert('scrollll.matches');
+            }
+
+            var scrol = window.matchMedia('(min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)');
+            if (scrol) {
+                alert('scrol');
+            }
+
+            var mql = window.matchMedia("(orientation: portrait)");
+
+            if(mql.matches) {
+                alert('match');
+            } else {
+                alert('no match');
+            }
 
     }
     });
