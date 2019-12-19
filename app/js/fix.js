@@ -505,14 +505,11 @@ $(document).ready(function () {
             $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
         });
 
-
-        var mediaQueryIpadPro = window.matchMedia("(orientation: portrait)");
-
-        if (mediaQueryIpadPro.matches) {
-            alert('1');
-          } else {
-            alert('2');
-          }
+        if ( window.matchMedia('(orientation: portrait)').matches) {
+            console.log('match');
+         } else {
+            console.log('no match');
+         }
     }
     });
 
