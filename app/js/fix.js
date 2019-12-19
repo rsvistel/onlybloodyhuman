@@ -505,11 +505,13 @@ $(document).ready(function () {
             $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
         });
 
-        if ( window.matchMedia('(orientation: portrait)').matches) {
-            console.log('match');
-         } else {
-            console.log('no match');
-         }
+        var mql = window.matchMedia("(orientation: portrait)").matches;
+
+        if(mql) {
+            alert('match');
+        } else {
+            alert('no match');
+        }
     }
     });
 
