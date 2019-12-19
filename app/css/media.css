@@ -1543,6 +1543,20 @@
   .over-line-block {
     padding: 0; } }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   .section-tools, .section-about {
     background: transparent; } }
+
+@media (max-width: 767px) and (min-width: 568px) and (orientation: landscape) {
+  .job-section-about-producer {
+    margin-top: 5vw; }
+  .now-section-about {
+    margin-top: 11%; }
+  .tools-section__image p {
+    margin: 0 19% 10% 19%; }
+  .client-contact-list__email a {
+    padding: 0; } }
+
+@media (max-width: 834px) and (min-width: 768px) {
+  .section-outdoor-professional {
+    width: 100vw; } }
