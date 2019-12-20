@@ -309,14 +309,12 @@ $(document).ready(function () {
                  }
              }
              var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-             if (isChrome)  {
-                 console.log("chrome");
-             } else {
-                 $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
-                 $("#section-banner").css('background-image', 'url("img/s1-intro/reel_placeholder_dsk.jpg")');
-                 $("#section-about").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
-                 $("#section-about .fp-scroller").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
-                 $(".photo-man-section-about").css('background-image', 'url("img/s2-about/jamie_dsk.jpg")')
+             if (!isChrome)  {
+                $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
+                $("#section-banner").css('background-image', 'url("img/s1-intro/reel_placeholder_dsk.jpg")');
+                $("#section-about").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
+                $("#section-about .fp-scroller").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
+                $(".photo-man-section-about").css('background-image', 'url("img/s2-about/jamie_dsk.jpg")');
              }
          }
      });
@@ -510,7 +508,8 @@ $(document).ready(function () {
         $(window).scroll(function () {
             for (var i = 0; i < sections.length; i++) {
                 if (sections[i].isInViewport()) {
-
+                    // $('.text-dots-block').removeClass('active');
+                    // dots[i].addClass('active');
                     if(!dots[i].hasClass('active')) {
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active');
@@ -646,11 +645,6 @@ $(document).ready(function () {
          $(".list-icon, .cross-icon").fadeToggle(500);
      });
 
-    //  $(window).on("resize", function () {
-    //      if ($(window).width() < 768) {
-    //          $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.jpg)");
-    //      }
-    //  });
      if ($(window).width() < 768) {
          var videoFile = 'img/video/reel_mob_588.mp4';
          $('.video-in-section-banner video').attr('src', videoFile);
