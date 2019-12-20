@@ -509,17 +509,17 @@ $(document).ready(function () {
     });
 
     $(function () {
-        var widthMediaQuery = window.matchMedia("(orientation: portrait)");
-        if(widthMediaQuery.matches) {
-          alert('match_1');
-        }
+        // var widthMediaQuery = window.matchMedia("(orientation: portrait)");
+        // if(widthMediaQuery.matches) {
+        //   alert('match_1');
+        // }
 
-        if(window.matchMedia) {
-            var widthMediaQuery = window.matchMedia("(orientation: portrait)");
-            if(widthMediaQuery.matches) {
-                alert('match_2');
-            }
-          }
+        // if(window.matchMedia) {
+        //     var widthMediaQuery = window.matchMedia("(orientation: portrait)");
+        //     if(widthMediaQuery.matches) {
+        //         alert('match_2');
+        //     }
+        //   }
 
           if (matchMedia) {
             const mq = window.matchMedia("(orientation: portrait)");
