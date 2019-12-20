@@ -508,33 +508,33 @@ $(document).ready(function () {
     }
     });
 
-    // $(function () {
-    //     var widthMediaQuery = window.matchMedia("(orientation: portrait)");
-    //     if(widthMediaQuery.matches) {
-    //       alert('match_1');
-    //     }
+    $(function () {
+        var widthMediaQuery = window.matchMedia("(orientation: portrait)");
+        if(widthMediaQuery.matches) {
+          alert('match_1');
+        }
 
-    //     if(window.matchMedia) {
-    //         var widthMediaQuery = window.matchMedia("(orientation: portrait)");
-    //         if(widthMediaQuery.matches) {
-    //             alert('match_2');
-    //         }
-    //       }
+        if(window.matchMedia) {
+            var widthMediaQuery = window.matchMedia("(orientation: portrait)");
+            if(widthMediaQuery.matches) {
+                alert('match_2');
+            }
+          }
 
-    //       if (matchMedia) {
-    //         const mq = window.matchMedia("(orientation: portrait)");
-    //         mq.addListener(WidthChange);
-    //         WidthChange(mq);
-    //         }
+          if (matchMedia) {
+            const mq = window.matchMedia("(orientation: portrait)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+            }
 
-    //         function WidthChange(mq) {
-    //             if (mq.matches) {
-    //                 alert('match_safary');
-    //             } else {
-    //                 alert('no match_safary');
-    //             }
-    //         }
-    //   });
+            function WidthChange(mq) {
+                if (mq.matches) {
+                    alert('match_safary');
+                } else {
+                    alert('no match_safary');
+                }
+            }
+      });
 
      function changeColorOffset() {
          if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
