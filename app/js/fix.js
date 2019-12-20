@@ -522,7 +522,7 @@ $(document).ready(function () {
         //   }
 
           if (matchMedia) {
-            const mq = window.matchMedia("(orientation: portrait)");
+            const mq = window.matchMedia("(min-device-width: 1024px) and (orientation: portrait)");
             mq.addListener(WidthChange);
             WidthChange(mq);
             }
