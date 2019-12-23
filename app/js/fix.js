@@ -329,7 +329,7 @@ $(document).ready(function () {
         $(window).bind('orientationchange', function () {
             $(window).bind('scroll', function () {
                 if (isTouchCapable) {
-                   window.location.href = window.location.origin
+                   window.location.href = window.location.originl
                     changeColorOffset();
                 }
             });
@@ -443,7 +443,6 @@ $(document).ready(function () {
         $(window).scroll(function () {
             for (var i = 0; i < sections.length; i++) {
                 if (sections[i].isInViewport()) {
-
                     if(!dots[i].hasClass('active')) {
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active');
@@ -631,11 +630,6 @@ $(document).ready(function () {
          $(".list-icon, .cross-icon").fadeToggle(500);
      });
 
-    //  $(window).on("resize", function () {
-    //      if ($(window).width() < 768) {
-    //          $('.client-contact-list-img').css("background-image", "url(/img/s6-contact/phone_mob.jpg)");
-    //      }
-    //  });
      if ($(window).width() < 768) {
          var videoFile = 'img/video/reel_mob_588.mp4';
          $('.video-in-section-banner video').attr('src', videoFile);
@@ -834,12 +828,6 @@ $(document).ready(function () {
              $('#arrow-tools-tablet').animate({'left': prop}, 400);
          }
      });
-     function getRepString (rep) {
-         rep = rep+'';
-         if (rep < 1000) return rep;
-         if (rep < 10000) return rep.charAt(0) + ',' + rep.substring(1);
-         return (rep/1000).toFixed(rep % 1000 != 0);
-     }
      function animateCounter() {
          var count = 1;
          var url = 'https://api.instagram.com/v1/users/314886036/?access_token=314886036.4dfcb3e.dc9b2db2c58e48349642da1ca0ac393b';
