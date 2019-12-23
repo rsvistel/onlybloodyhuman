@@ -329,12 +329,12 @@ $(document).ready(function () {
         $(window).bind('orientationchange', function () {
             $(window).bind('scroll', function () {
                 if (isTouchCapable) {
-                   window.location.href =  window.location.origin
+                   window.location.href = window.location.origin
                     changeColorOffset();
                 }
             });
             if (isTouchCapable) {
-               window.location.href =  window.location.origin
+               window.location.href = window.location.origin
            }
         });
         if (isTouchCapable) {
@@ -426,14 +426,14 @@ $(document).ready(function () {
                 $('#menuToggle .current-color').css('opacity', 0);
             }
 
-        $(window).bind('scroll', function () {
-        if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() <= 768)) {
-            $('#menuToggle-mobile input').click();
-        } else if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() >= 769 || $(window).width() <= 1500)) {
-            $('#menuToggle input').click();
-        }
+            $(window).bind('scroll', function () {
+                if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() <= 768)) {
+                    $('#menuToggle-mobile input').click();
+                } else if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() >= 769 || $(window).width() <= 1500)) {
+                    $('#menuToggle input').click();
+                }
 
-        });
+            });
         }
         if (matchMedia) {
             const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
@@ -500,16 +500,6 @@ $(document).ready(function () {
                 }
             }
         });
-
-    // $( function() {
-    // });
-
-    // $( function() {
-    //     if(isTouchCapable) {
-        
-
-    // }
-    // });
 
     function WidthChange(mq) {
         $(window).bind('scroll', function () {
