@@ -396,6 +396,23 @@ $(document).ready(function () {
                 $('#menuToggle .current-color').css('opacity', 0);
             }
 
+            $('.text-dots-block').click(function () {
+                var thisElement = $(this);
+                    for (var i = 0; i < dots.length; i++) {
+                        if (thisElement.index() === i) {
+                            $('html, body').animate({scrollTop: sections[i].offset().top + 10}, 1000);
+                            $('.text-dots-block').each(function () {
+                                $(this).removeClass('active');
+                            });
+                            dots[i].addClass('active');
+                        }
+                    }
+            });
+
+            $('#goToAbout').click(function () {
+                $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
+            });
+
             $(window).scroll(function () {
                 for (var i = 0; i < sections.length; i++) {
                     if (sections[i].isInViewport()) {
@@ -447,7 +464,7 @@ $(document).ready(function () {
         });
     });
      $.fn.fullpage.setAllowScrolling(true);
- 
+
      if(isDesktop) {
          $('#goToAbout').click(function () {
              fullpage_api.moveTo('about', 1);
@@ -487,35 +504,6 @@ $(document).ready(function () {
             }
          }
      });
-
-    $( function() {
-        if(isTouchCapable) {
-
-
-        // $(window).bind('scroll', function () {
-        
-
-        // });
-
-        $('.text-dots-block').click(function () {
-            var thisElement = $(this);
-                for (var i = 0; i < dots.length; i++) {
-                    if (thisElement.index() === i) {
-                        $('html, body').animate({scrollTop: sections[i].offset().top + 10}, 1000);
-                        $('.text-dots-block').each(function () {
-                            $(this).removeClass('active');
-                        });
-                        dots[i].addClass('active');
-                    }
-                }
-        });
-
-        $('#goToAbout').click(function () {
-            $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
-        });
-
-    }
-    });
 
      function changeColorOffset() {
          if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
