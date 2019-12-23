@@ -329,7 +329,7 @@ $(document).ready(function () {
         $(window).bind('orientationchange', function () {
             $(window).bind('scroll', function () {
                 if (isTouchCapable) {
-                   window.location.href = window.location.originl
+                   window.location.href = window.location.origin
                     changeColorOffset();
                 }
             });
@@ -443,7 +443,7 @@ $(document).ready(function () {
         $(window).scroll(function () {
             for (var i = 0; i < sections.length; i++) {
                 if (sections[i].isInViewport()) {
-                    if(!dots[i].hasClass('active')) {
+                    if(i <= dots.length - 1 &&!dots[i].hasClass('active')) {
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active');
                         });
