@@ -58,6 +58,12 @@ $(document).ready(function () {
      $('.text-dots-block').each(function () {
          dots.push($(this))
      });
+
+     var offsetSections = [];
+     $('.section').each(function() {
+         offsetSections.push($(this).offset().top)
+     });
+     
      const instagramStartPosition = $("#section-instagram").offset().top;
      const aboutStartPosition = $("#section-about").offset().top;
      $('#fullpage').fullpage({
@@ -331,6 +337,11 @@ $(document).ready(function () {
             $('.black-button').addClass('current-color');
             $('.about, .tools-camera').addClass('black-color-tablet');
         }
+        if (matchMedia) {
+            const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+            }
     });
      $.fn.fullpage.setAllowScrolling(true);
  
@@ -339,57 +350,6 @@ $(document).ready(function () {
              fullpage_api.moveTo('about', 1);
          });
      }
-
-     var offsetSections = [];
-     $('.section').each(function() {
-         offsetSections.push($(this).offset().top)
-     });
-
-    $(function () {
-        if (matchMedia) {
-          const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
-          mq.addListener(WidthChange);
-          WidthChange(mq);
-          }
-
-          function WidthChange(mq) {
-            $(window).bind('scroll', function () {
-              if (mq.matches && isTouchCapable) {
-                  if($(this).scrollTop() > offsetSections[2] &&  $(this).scrollTop() < offsetSections[3] || $(this).scrollTop() > offsetSections[3] && $(this).scrollTop() < offsetSections[4]) {
-                    $('.change-color').css('opacity', '1');
-                    $('.current-color').css('opacity', '0');
-
-                    $('object.change-color').css('opacity', 0);
-                    $('object.current-color').css('opacity', 1);
-                    $('.whole-text-left-logo').css('color', '#fff');
-
-                    $('#menuToggle .change-color').css('opacity', 1);
-                    $('#menuToggle .current-color').css('opacity', 0);
-                  } else if ($(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
-                    $('.change-color').css('opacity', '1');
-                    $('.current-color').css('opacity', '0');
-
-                    $('object.change-color').css('opacity', 0);
-                    $('object.current-color').css('opacity', 1);
-                    $('.whole-text-left-logo').css('color', '#fff');
-
-                    $('#menuToggle .change-color').css('opacity', 1);
-                    $('#menuToggle .current-color').css('opacity', 0);
-                  } else if ($(this).scrollTop() > offsetSections[5]) {
-                    $('.change-color').css('opacity', '0');
-                    $('.current-color').css('opacity', '1');
-
-                    $('object.change-color').css('opacity', 1);
-                    $('object.current-color').css('opacity', 0);
-                    $('.whole-text-left-logo').css('color', '#333');
-
-                    $('#menuToggle .change-color').css('opacity', 0);
-                    $('#menuToggle .current-color').css('opacity', 1);
-                }
-              }
-          });
-        }
-    });
 
      $(window).bind('scroll', function () {
          if (isTouchCapable) {
@@ -452,7 +412,8 @@ $(document).ready(function () {
                         $('#menuToggle .current-color').css('opacity', 1);
                     }
                 }
-            if($('#section-tools, #section-about').hasClass('black-color-tablet')) {
+
+                if($('#section-tools, #section-about').hasClass('black-color-tablet')) {
                 if ($('body').hasClass('opened--menu')) {
                     $('#menuToggle .change-color').css('opacity', 1);
                     $('#menuToggle .current-color').css('opacity', 0);
@@ -554,6 +515,44 @@ $(document).ready(function () {
 
     }
     });
+
+    function WidthChange(mq) {
+        $(window).bind('scroll', function () {
+          if (mq.matches && isTouchCapable) {
+              if($(this).scrollTop() > offsetSections[2] &&  $(this).scrollTop() < offsetSections[3] || $(this).scrollTop() > offsetSections[3] && $(this).scrollTop() < offsetSections[4]) {
+                $('.change-color').css('opacity', '1');
+                $('.current-color').css('opacity', '0');
+
+                $('object.change-color').css('opacity', 0);
+                $('object.current-color').css('opacity', 1);
+                $('.whole-text-left-logo').css('color', '#fff');
+
+                $('#menuToggle .change-color').css('opacity', 1);
+                $('#menuToggle .current-color').css('opacity', 0);
+              } else if ($(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
+                $('.change-color').css('opacity', '1');
+                $('.current-color').css('opacity', '0');
+
+                $('object.change-color').css('opacity', 0);
+                $('object.current-color').css('opacity', 1);
+                $('.whole-text-left-logo').css('color', '#fff');
+
+                $('#menuToggle .change-color').css('opacity', 1);
+                $('#menuToggle .current-color').css('opacity', 0);
+              } else if ($(this).scrollTop() > offsetSections[5]) {
+                $('.change-color').css('opacity', '0');
+                $('.current-color').css('opacity', '1');
+
+                $('object.change-color').css('opacity', 1);
+                $('object.current-color').css('opacity', 0);
+                $('.whole-text-left-logo').css('color', '#333');
+
+                $('#menuToggle .change-color').css('opacity', 0);
+                $('#menuToggle .current-color').css('opacity', 1);
+            }
+          }
+      });
+    }
 
      function changeColorOffset() {
          if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
