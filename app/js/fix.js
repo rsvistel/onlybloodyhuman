@@ -59,6 +59,12 @@ $(document).ready(function () {
      $('.text-dots-block').each(function () {
          dots.push($(this))
      });
+
+     var offsetSections = [];
+     $('.section').each(function() {
+         offsetSections.push($(this).offset().top);
+     });
+
      const instagramStartPosition = $("#section-instagram").offset().top;
      const aboutStartPosition = $("#section-about").offset().top;
      $('#fullpage').fullpage({
@@ -330,81 +336,6 @@ $(document).ready(function () {
             $('.black-button').addClass('current-color');
             $('.about, .tools-camera').addClass('black-color-tablet');
 
-        }
-    });
-     $.fn.fullpage.setAllowScrolling(true);
- 
-     if(isDesktop) {
-         $('#goToAbout').click(function () {
-             fullpage_api.moveTo('about', 1);
-         });
-     }
-
-     var offsetSections = [];
-     $('.section').each(function() {
-         offsetSections.push($(this).offset().top)
-     });
-
-    $(function () {
-        if (matchMedia) {
-          const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
-          mq.addListener(WidthChange);
-          WidthChange(mq);
-          }
-
-          function WidthChange(mq) {
-            $(window).bind('scroll', function () {
-              if (mq.matches && isTouchCapable) {
-                  changeColorOffsetIPadPro();
-              }
-          });
-        }
-    });
-
-     $(window).bind('scroll', function () {
-        if (isTouchCapable && instaTablet == false) {
-            $("span.countup").html("1k");
-            if ($('#section-instagram span.countup').isInViewport()) {
-                animateCounter();
-                setTimeout(function () {
-                    instaTablet = true;
-                }, 200);
-            }
-        }
-        if (isTouchCapable) {
-             changeColorOffset();
-
-             $('.inner-content-section-banner-fixed').on("click", function () {
-                $('.whole-text-left-logo').css('opacity', '1');
-                setTimeout(function () {
-                    $('.whole-text-left-logo').css('opacity', '0');
-                }, 3000);
-            });
-            if ($(this).scrollTop() <= offsetSections[0] + 10) {
-                $('.whole-text-left-logo').css('opacity', '1');
-                }
-                else {
-                    $('.whole-text-left-logo').css('opacity', '0');
-                }
-         }
-     });
-
-    $( function() {
-     $(window).bind('orientationchange', function () {
-         $(window).bind('scroll', function () {
-             if (isTouchCapable) {
-                window.location.href =  window.location.origin
-                 changeColorOffset();
-             }
-         });
-         if (isTouchCapable) {
-            window.location.href =  window.location.origin
-        }
-     });
-    });
-
-    $( function() {
-        if(isTouchCapable) {
             $('.dots-block-section-banner').css({
                 'pointer-events': 'none',
                 'visibility' : 'hidden',
@@ -465,38 +396,106 @@ $(document).ready(function () {
                 $('#menuToggle .current-color').css('opacity', 0);
             }
 
-        $(window).bind('scroll', function () {
-        if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() <= 768)) {
-            $('#menuToggle-mobile input').click();
-        } else if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() >= 769 || $(window).width() <= 1500)) {
-            $('#menuToggle input').click();
-        }
-
-        });
-
-        $(window).scroll(function () {
-            for (var i = 0; i < sections.length; i++) {
-                if (sections[i].isInViewport()) {
-                    if(!dots[i].hasClass('active')) {
+            $(window).scroll(function () {
+                for (var i = 0; i < sections.length; i++) {
+                    if (sections[i].isInViewport()) {
+                        if(!dots[i].hasClass('active')) {
+                            $('.text-dots-block').each(function () {
+                                $(this).removeClass('active');
+                            });
+                            dots[i].addClass('active');
+                        }
+                    } else if ($(window).scrollTop() == 5) {
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active');
                         });
-                        dots[i].addClass('active');
+                        dots[5].addClass('active');
                     }
-                } else if ($(window).scrollTop() == 5) {
-                    $('.text-dots-block').each(function () {
-                        $(this).removeClass('active');
-                    });
-                    dots[5].addClass('active');
+                    if($(window).scrollTop() < offsetSections[1]) {
+                        $('.text-dots-block').each(function () {
+                            $(this).removeClass('active');
+                        });
+                        dots[0].addClass('active');
+                    }
                 }
-                if($(window).scrollTop() < offsetSections[1]) {
-                    $('.text-dots-block').each(function () {
-                        $(this).removeClass('active');
-                    });
-                    dots[0].addClass('active');
-                }
+            });
+
+        }
+        if (matchMedia) {
+            const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+        }
+
+        function WidthChange(mq) {
+            $(window).bind('scroll', function () {
+            if (mq.matches && isTouchCapable) {
+                changeColorOffsetIPadPro();
             }
+            });
+        }
+        $(window).bind('orientationchange', function () {
+            $(window).bind('scroll', function () {
+                if (isTouchCapable) {
+                   window.location.href =  window.location.origin
+                    changeColorOffset();
+                }
+            });
+            if (isTouchCapable) {
+               window.location.href =  window.location.origin
+           }
         });
+    });
+     $.fn.fullpage.setAllowScrolling(true);
+ 
+     if(isDesktop) {
+         $('#goToAbout').click(function () {
+             fullpage_api.moveTo('about', 1);
+         });
+     }
+
+     $(window).bind('scroll', function () {
+        if (isTouchCapable && instaTablet == false) {
+            $("span.countup").html("1k");
+            if ($('#section-instagram span.countup').isInViewport()) {
+                animateCounter();
+                setTimeout(function () {
+                    instaTablet = true;
+                }, 200);
+            }
+        }
+        if (isTouchCapable) {
+             changeColorOffset();
+
+             $('.inner-content-section-banner-fixed').on("click", function () {
+                $('.whole-text-left-logo').css('opacity', '1');
+                setTimeout(function () {
+                    $('.whole-text-left-logo').css('opacity', '0');
+                }, 3000);
+            });
+            if ($(this).scrollTop() <= offsetSections[0] + 10) {
+                $('.whole-text-left-logo').css('opacity', '1');
+                }
+                else {
+                    $('.whole-text-left-logo').css('opacity', '0');
+                }
+
+            if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() <= 768)) {
+                $('#menuToggle-mobile input').click();
+            } else if ($('body').hasClass('opened--menu') && isTouchCapable && ($(window).width() >= 769 || $(window).width() <= 1500)) {
+                $('#menuToggle input').click();
+            }
+         }
+     });
+
+    $( function() {
+        if(isTouchCapable) {
+
+
+        // $(window).bind('scroll', function () {
+        
+
+        // });
 
         $('.text-dots-block').click(function () {
             var thisElement = $(this);
