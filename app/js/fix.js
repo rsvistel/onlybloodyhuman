@@ -510,9 +510,7 @@ $(document).ready(function () {
              $('.change-color').css('opacity', '0');
              $('.current-color').css('opacity', '1');
 
-             $('object.change-color').css('opacity', 0);
-             $('object.current-color').css('opacity', 1);
-             $('.whole-text-left-logo').css('color', '#fff');
+             changeLogoColorWhite();
 
              $('#menuToggle .change-color').css('opacity', 1);
              $('#menuToggle .current-color').css('opacity', 0);
@@ -521,9 +519,7 @@ $(document).ready(function () {
              $('.change-color').css('opacity', '1');
              $('.current-color').css('opacity', '0');
 
-             $('object.change-color').css('opacity', 1);
-             $('object.current-color').css('opacity', 0);
-             $('.whole-text-left-logo').css('color', '#333');
+             changeLogoColorBlack();
 
              $('#menuToggle .change-color').css('opacity', 0);
              $('#menuToggle .current-color').css('opacity', 1);
@@ -532,9 +528,7 @@ $(document).ready(function () {
              $('.change-color').css('opacity', '0');
              $('.current-color').css('opacity', '1');
 
-             $('object.change-color').css('opacity', 0);
-             $('object.current-color').css('opacity', 1);
-             $('.whole-text-left-logo').css('color', '#fff');
+             changeLogoColorWhite();
 
              $('#menuToggle .change-color').css('opacity', 0);
              $('#menuToggle .current-color').css('opacity', 1);
@@ -543,9 +537,7 @@ $(document).ready(function () {
              $('.change-color').css('opacity', '0');
              $('.current-color').css('opacity', '1');
 
-             $('object.change-color').css('opacity', 0);
-             $('object.current-color').css('opacity', 1);
-             $('.whole-text-left-logo').css('color', '#fff');
+             changeLogoColorWhite();
 
              $('#menuToggle .change-color').css('opacity', 1);
              $('#menuToggle .current-color').css('opacity', 0);
@@ -554,9 +546,7 @@ $(document).ready(function () {
              $('.change-color').css('opacity', '1');
              $('.current-color').css('opacity', '0');
 
-             $('object.change-color').css('opacity', 1);
-             $('object.current-color').css('opacity', 0);
-             $('.whole-text-left-logo').css('color', '#333');
+             changeLogoColorBlack();
 
              $('#menuToggle .change-color').css('opacity', 1);
              $('#menuToggle .current-color').css('opacity', 0);
@@ -565,9 +555,7 @@ $(document).ready(function () {
              $('.change-color').css('opacity', '1');
              $('.current-color').css('opacity', '0');
 
-             $('object.change-color').css('opacity', 1);
-             $('object.current-color').css('opacity', 0);
-             $('.whole-text-left-logo').css('color', '#333');
+             changeLogoColorBlack();
 
              $('#menuToggle .change-color').css('opacity', 1);
              $('#menuToggle .current-color').css('opacity', 0);
@@ -579,9 +567,7 @@ $(document).ready(function () {
             $('.change-color').css('opacity', '1');
             $('.current-color').css('opacity', '0');
 
-            $('object.change-color').css('opacity', 0);
-            $('object.current-color').css('opacity', 1);
-            $('.whole-text-left-logo').css('color', '#fff');
+            changeLogoColorWhite();
 
             $('#menuToggle .change-color').css('opacity', 1);
             $('#menuToggle .current-color').css('opacity', 0);
@@ -589,9 +575,7 @@ $(document).ready(function () {
             $('.change-color').css('opacity', '1');
             $('.current-color').css('opacity', '0');
 
-            $('object.change-color').css('opacity', 0);
-            $('object.current-color').css('opacity', 1);
-            $('.whole-text-left-logo').css('color', '#fff');
+            changeLogoColorWhite();
 
             $('#menuToggle .change-color').css('opacity', 1);
             $('#menuToggle .current-color').css('opacity', 0);
@@ -599,13 +583,23 @@ $(document).ready(function () {
             $('.change-color').css('opacity', '0');
             $('.current-color').css('opacity', '1');
 
-            $('object.change-color').css('opacity', 1);
-            $('object.current-color').css('opacity', 0);
-            $('.whole-text-left-logo').css('color', '#333');
+            changeLogoColorBlack();
 
             $('#menuToggle .change-color').css('opacity', 0);
             $('#menuToggle .current-color').css('opacity', 1);
         }
+     }
+
+     function changeLogoColorBlack() {
+        $('object.change-color').css('opacity', 1);
+        $('object.current-color').css('opacity', 0);
+        $('.whole-text-left-logo').css('color', '#333');
+     }
+
+     function changeLogoColorWhite() {
+        $('object.change-color').css('opacity', 0);
+        $('object.current-color').css('opacity', 1);
+        $('.whole-text-left-logo').css('color', '#fff');
      }
 
 
