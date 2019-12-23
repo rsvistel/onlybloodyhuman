@@ -507,60 +507,72 @@ $(document).ready(function () {
      });
 
      function changeColorOffset() {
-         if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
-             $('.change-color').css('opacity', '0');
-             $('.current-color').css('opacity', '1');
+        if ($(this).scrollTop() > offsetSections[0] &&  $(this).scrollTop() < offsetSections[1] || $(this).scrollTop() > offsetSections[1] && $(this).scrollTop() < offsetSections[2]) {
+            $('.change-color').css('opacity', '0');
+            $('.current-color').css('opacity', '1');
 
-             changeLogoColorWhite();
+            $('object.change-color').css('opacity', 0);
+            $('object.current-color').css('opacity', 1);
+            $('.whole-text-left-logo').css('color', '#fff');
 
-             $('#menuToggle .change-color').css('opacity', 1);
-             $('#menuToggle .current-color').css('opacity', 0);
-         }
-         if ($(this).scrollTop() > offsetSections[1] &&  $(this).scrollTop() < offsetSections[2] || $(this).scrollTop() > offsetSections[2] && $(this).scrollTop() < offsetSections[3]) {
-             $('.change-color').css('opacity', '1');
-             $('.current-color').css('opacity', '0');
+            $('#menuToggle .change-color').css('opacity', 1);
+            $('#menuToggle .current-color').css('opacity', 0);
+        }
+        if ($(this).scrollTop() > offsetSections[1] &&  $(this).scrollTop() < offsetSections[2] || $(this).scrollTop() > offsetSections[2] && $(this).scrollTop() < offsetSections[3]) {
+            $('.change-color').css('opacity', '1');
+            $('.current-color').css('opacity', '0');
 
-             changeLogoColorBlack();
+            $('object.change-color').css('opacity', 1);
+            $('object.current-color').css('opacity', 0);
+            $('.whole-text-left-logo').css('color', '#333');
 
-             $('#menuToggle .change-color').css('opacity', 0);
-             $('#menuToggle .current-color').css('opacity', 1);
-         }
-         if ($(this).scrollTop() > offsetSections[2] &&  $(this).scrollTop() < offsetSections[3] || $(this).scrollTop() > offsetSections[3] && $(this).scrollTop() < offsetSections[4]) {
-             $('.change-color').css('opacity', '0');
-             $('.current-color').css('opacity', '1');
+            $('#menuToggle .change-color').css('opacity', 0);
+            $('#menuToggle .current-color').css('opacity', 1);
+        }
+        if ($(this).scrollTop() > offsetSections[2] &&  $(this).scrollTop() < offsetSections[3] || $(this).scrollTop() > offsetSections[3] && $(this).scrollTop() < offsetSections[4]) {
+            $('.change-color').css('opacity', '0');
+            $('.current-color').css('opacity', '1');
 
-             changeLogoColorWhite();
+            $('object.change-color').css('opacity', 0);
+            $('object.current-color').css('opacity', 1);
+            $('.whole-text-left-logo').css('color', '#fff');
 
-             $('#menuToggle .change-color').css('opacity', 0);
-             $('#menuToggle .current-color').css('opacity', 1);
-         }
-         if ($(this).scrollTop() > offsetSections[3] &&  $(this).scrollTop() < offsetSections[4] || $(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
-             $('.change-color').css('opacity', '0');
-             $('.current-color').css('opacity', '1');
+            $('#menuToggle .change-color').css('opacity', 0);
+            $('#menuToggle .current-color').css('opacity', 1);
+        }
+        if ($(this).scrollTop() > offsetSections[3] &&  $(this).scrollTop() < offsetSections[4] || $(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
+            $('.change-color').css('opacity', '0');
+            $('.current-color').css('opacity', '1');
 
-             changeLogoColorWhite();
+            $('object.change-color').css('opacity', 0);
+            $('object.current-color').css('opacity', 1);
+            $('.whole-text-left-logo').css('color', '#fff');
 
-             $('#menuToggle .change-color').css('opacity', 1);
-             $('#menuToggle .current-color').css('opacity', 0);
-         }
-         if ($(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
-             $('.change-color').css('opacity', '1');
-             $('.current-color').css('opacity', '0');
+            $('#menuToggle .change-color').css('opacity', 1);
+            $('#menuToggle .current-color').css('opacity', 0);
+        }
+        if ($(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
+            $('.change-color').css('opacity', '1');
+            $('.current-color').css('opacity', '0');
 
-             changeLogoColorBlack();
+            $('object.change-color').css('opacity', 1);
+            $('object.current-color').css('opacity', 0);
+            $('.whole-text-left-logo').css('color', '#333');
 
-             $('#menuToggle .change-color').css('opacity', 1);
-             $('#menuToggle .current-color').css('opacity', 0);
-         }
-         if ($(this).scrollTop() > offsetSections[5]) {
-             $('.change-color').css('opacity', '1');
-             $('.current-color').css('opacity', '0');
+            $('#menuToggle .change-color').css('opacity', 1);
+            $('#menuToggle .current-color').css('opacity', 0);
+        }
+        if ($(this).scrollTop() > offsetSections[5]) {
+            $('.change-color').css('opacity', '1');
+            $('.current-color').css('opacity', '0');
 
-             changeLogoColorBlack();
+            $('object.change-color').css('opacity', 1);
+            $('object.current-color').css('opacity', 0);
+            $('.whole-text-left-logo').css('color', '#333');
 
-             $('#menuToggle .change-color').css('opacity', 1);
-             $('#menuToggle .current-color').css('opacity', 0);
-         }
+            $('#menuToggle .change-color').css('opacity', 1);
+            $('#menuToggle .current-color').css('opacity', 0);
+        }
      }
 
      function changeColorOffsetIPadPro() {
@@ -568,7 +580,9 @@ $(document).ready(function () {
             $('.change-color').css('opacity', '1');
             $('.current-color').css('opacity', '0');
 
-            changeLogoColorWhite();
+            $('object.change-color').css('opacity', 0);
+            $('object.current-color').css('opacity', 1);
+            $('.whole-text-left-logo').css('color', '#fff');
 
             $('#menuToggle .change-color').css('opacity', 1);
             $('#menuToggle .current-color').css('opacity', 0);
@@ -576,7 +590,9 @@ $(document).ready(function () {
             $('.change-color').css('opacity', '1');
             $('.current-color').css('opacity', '0');
 
-            changeLogoColorWhite();
+            $('object.change-color').css('opacity', 0);
+            $('object.current-color').css('opacity', 1);
+            $('.whole-text-left-logo').css('color', '#fff');
 
             $('#menuToggle .change-color').css('opacity', 1);
             $('#menuToggle .current-color').css('opacity', 0);
@@ -584,24 +600,26 @@ $(document).ready(function () {
             $('.change-color').css('opacity', '0');
             $('.current-color').css('opacity', '1');
 
-            changeLogoColorBlack();
+            $('object.change-color').css('opacity', 1);
+            $('object.current-color').css('opacity', 0);
+            $('.whole-text-left-logo').css('color', '#333');
 
             $('#menuToggle .change-color').css('opacity', 0);
             $('#menuToggle .current-color').css('opacity', 1);
         }
      }
 
-     function changeLogoColorBlack() {
-        $('object.change-color').css('opacity', 1);
-        $('object.current-color').css('opacity', 0);
-        $('.whole-text-left-logo').css('color', '#333');
-     }
+    //  function changeLogoColorBlack() {
+    //     $('object.change-color').css('opacity', 1);
+    //     $('object.current-color').css('opacity', 0);
+    //     $('.whole-text-left-logo').css('color', '#333');
+    //  }
 
-     function changeLogoColorWhite() {
-        $('object.change-color').css('opacity', 0);
-        $('object.current-color').css('opacity', 1);
-        $('.whole-text-left-logo').css('color', '#fff');
-     }
+    //  function changeLogoColorWhite() {
+    //     $('object.change-color').css('opacity', 0);
+    //     $('object.current-color').css('opacity', 1);
+    //     $('.whole-text-left-logo').css('color', '#fff');
+    //  }
 
 
      $('#menuToggle input, #menuToggle-mobile input').click(function () {
