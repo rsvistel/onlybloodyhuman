@@ -401,11 +401,6 @@ $(document).ready(function () {
                 $('#menuToggle .change-color').css('opacity', 1);
                 $('#menuToggle .current-color').css('opacity', 0);
             }
-
-            // $(window).bind('scroll', function () {
-                
-
-            // });
         }
         if (matchMedia) {
             const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
@@ -492,15 +487,15 @@ $(document).ready(function () {
                 $('#menuToggle .change-color').css('opacity', 1);
                 $('#menuToggle .current-color').css('opacity', 0);
               } else if ($(this).scrollTop() > offsetSections[4] && $(this).scrollTop() < offsetSections[5]) {
-                $('.change-color').css('opacity', '1');
-                $('.current-color').css('opacity', '0');
+                $('.change-color').css('opacity', '0');
+                $('.current-color').css('opacity', '1');
 
-                $('object.change-color').css('opacity', 0);
-                $('object.current-color').css('opacity', 1);
-                $('.whole-text-left-logo').css('color', '#fff');
+                $('object.change-color').css('opacity', 1);
+                $('object.current-color').css('opacity', 0);
+                $('.whole-text-left-logo').css('color', '#333');
 
-                $('#menuToggle .change-color').css('opacity', 1);
-                $('#menuToggle .current-color').css('opacity', 0);
+                $('#menuToggle .change-color').css('opacity', 0);
+                $('#menuToggle .current-color').css('opacity', 1);
               } else if ($(this).scrollTop() > offsetSections[5]) {
                 $('.change-color').css('opacity', '0');
                 $('.current-color').css('opacity', '1');
