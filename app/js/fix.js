@@ -63,7 +63,7 @@ $(document).ready(function () {
      $('.section').each(function() {
          offsetSections.push($(this).offset().top)
      });
-     
+
      const instagramStartPosition = $("#section-instagram").offset().top;
      const aboutStartPosition = $("#section-about").offset().top;
      $('#fullpage').fullpage({
@@ -315,14 +315,12 @@ $(document).ready(function () {
                  }
              }
              var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-             if (isChrome)  {
-                 console.log("chrome");
-             } else {
-                 $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
-                 $("#section-banner").css('background-image', 'url("img/s1-intro/reel_placeholder_dsk.jpg")');
-                 $("#section-about").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
-                 $("#section-about .fp-scroller").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
-                 $(".photo-man-section-about").css('background-image', 'url("img/s2-about/jamie_dsk.jpg")')
+             if (!isChrome) {
+                $("video.section-outdoor-professional").attr('poster', 'img/s4-outdoor/pro_placeholder.jpg');
+                $("#section-banner").css('background-image', 'url("img/s1-intro/reel_placeholder_dsk.jpg")');
+                $("#section-about").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
+                $("#section-about .fp-scroller").css('background-image', 'url("img/s2-about/grain_texture.jpg")');
+                $(".photo-man-section-about").css('background-image', 'url("img/s2-about/jamie_dsk.jpg")')
              }
          }
      });
@@ -344,7 +342,7 @@ $(document).ready(function () {
             }
     });
      $.fn.fullpage.setAllowScrolling(true);
- 
+
      if(isDesktop) {
          $('#goToAbout').click(function () {
              fullpage_api.moveTo('about', 1);
@@ -354,20 +352,19 @@ $(document).ready(function () {
      $(window).bind('scroll', function () {
          if (isTouchCapable) {
              changeColorOffset();
-         }
-         if (isTouchCapable) {
+
              $('.inner-content-section-banner-fixed').on("click", function () {
-                 $('.whole-text-left-logo').css('opacity', '1');
+                    $('.whole-text-left-logo').css('opacity', '1');
                  setTimeout(function () {
-                     $('.whole-text-left-logo').css('opacity', '0');
-                 }, 3000);
+                    $('.whole-text-left-logo').css('opacity', '0');
+                    }, 3000);
              });
              if ($(this).scrollTop() <= offsetSections[0] + 10) {
-                 $('.whole-text-left-logo').css('opacity', '1');
-                 }
-                 else {
-                     $('.whole-text-left-logo').css('opacity', '0');
-                 }
+                    $('.whole-text-left-logo').css('opacity', '1');
+                }
+                else {
+                    $('.whole-text-left-logo').css('opacity', '0');
+                }
 
          }
      });
