@@ -352,64 +352,7 @@ $(document).ready(function () {
             $('#goToAbout').click(function () {
                 $('html, body').animate({scrollTop: $("#section-about").offset().top + 10}, 1000);
             });
-        }
-        if (matchMedia) {
-            const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
-            mq.addListener(WidthChange);
-            WidthChange(mq);
-        }
-    });
-    $.fn.fullpage.setAllowScrolling(true);
 
-    if(isDesktop) {
-        $('#goToAbout').click(function () {
-            fullpage_api.moveTo('about', 1);
-        });
-     }
-
-     $(window).bind('scroll', function () {
-        if (isTouchCapable && instaTablet == false) {
-            $("span.countup").html("1k");
-            if ($('#section-instagram span.countup').isInViewport()) {
-                animateCounter();
-                setTimeout(function () {
-                    instaTablet = true;
-                }, 200);
-            }
-        }
-        if (isTouchCapable) {
-            changeColorOffset();
-             $('.inner-content-section-banner-fixed').on("click", function () {
-                    $('.whole-text-left-logo').css('opacity', '1');
-                setTimeout(function () {
-                    $('.whole-text-left-logo').css('opacity', '0');
-                }, 3000);
-             });
-             if ($(this).scrollTop() <= offsetSections[0] + 10) {
-                    $('.whole-text-left-logo').css('opacity', '1');
-                }
-                else {
-                    $('.whole-text-left-logo').css('opacity', '0');
-                }
-            }
-        });
-
-    $( function() {
-     $(window).bind('orientationchange', function () {
-         $(window).bind('scroll', function () {
-             if (isTouchCapable) {
-                window.location.href =  window.location.origin
-                 changeColorOffset();
-             }
-         });
-         if (isTouchCapable) {
-            window.location.href =  window.location.origin
-        }
-     });
-    });
-
-    $( function() {
-        if(isTouchCapable) {
             $('.dots-block-section-banner').css({
                 'pointer-events': 'none',
                 'visibility' : 'hidden',
@@ -480,6 +423,65 @@ $(document).ready(function () {
         }
 
         });
+        }
+        if (matchMedia) {
+            const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+        }
+    });
+    $.fn.fullpage.setAllowScrolling(true);
+
+    if(isDesktop) {
+        $('#goToAbout').click(function () {
+            fullpage_api.moveTo('about', 1);
+        });
+     }
+
+     $(window).bind('scroll', function () {
+        if (isTouchCapable && instaTablet == false) {
+            $("span.countup").html("1k");
+            if ($('#section-instagram span.countup').isInViewport()) {
+                animateCounter();
+                setTimeout(function () {
+                    instaTablet = true;
+                }, 200);
+            }
+        }
+        if (isTouchCapable) {
+            changeColorOffset();
+             $('.inner-content-section-banner-fixed').on("click", function () {
+                    $('.whole-text-left-logo').css('opacity', '1');
+                setTimeout(function () {
+                    $('.whole-text-left-logo').css('opacity', '0');
+                }, 3000);
+             });
+             if ($(this).scrollTop() <= offsetSections[0] + 10) {
+                    $('.whole-text-left-logo').css('opacity', '1');
+                }
+                else {
+                    $('.whole-text-left-logo').css('opacity', '0');
+                }
+            }
+        });
+
+    $( function() {
+     $(window).bind('orientationchange', function () {
+         $(window).bind('scroll', function () {
+             if (isTouchCapable) {
+                window.location.href =  window.location.origin
+                 changeColorOffset();
+             }
+         });
+         if (isTouchCapable) {
+            window.location.href =  window.location.origin
+        }
+     });
+    });
+
+    $( function() {
+        if(isTouchCapable) {
+
 
         $(window).scroll(function () {
             for (var i = 0; i < sections.length; i++) {
