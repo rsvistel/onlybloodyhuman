@@ -326,6 +326,17 @@ $(document).ready(function () {
          }
      });
      $( function() {
+        $(window).bind('orientationchange', function () {
+            $(window).bind('scroll', function () {
+                if (isTouchCapable) {
+                   window.location.href =  window.location.origin
+                    changeColorOffset();
+                }
+            });
+            if (isTouchCapable) {
+               window.location.href =  window.location.origin
+           }
+        });
         if (isTouchCapable) {
             $.fn.fullpage.setResponsive(true);
             $.fn.fullpage.setAutoScrolling(false);
@@ -429,6 +440,31 @@ $(document).ready(function () {
             mq.addListener(WidthChange);
             WidthChange(mq);
         }
+        $(window).scroll(function () {
+            for (var i = 0; i < sections.length; i++) {
+                if (sections[i].isInViewport()) {
+
+                    if(!dots[i].hasClass('active')) {
+                        $('.text-dots-block').each(function () {
+                            $(this).removeClass('active');
+                        });
+                        dots[i].addClass('active');
+                    }
+                }
+                if($(window).scrollTop() < offsetSections[1]) {
+                    $('.text-dots-block').each(function () {
+                        $(this).removeClass('active');
+                    });
+                    dots[0].addClass('active');
+                }
+                if($(window).scrollTop() == 5) {
+                    $('.text-dots-block').each(function () {
+                        $(this).removeClass('active');
+                    });
+                    dots[5].addClass('active');
+                }
+            }
+        });
     });
     $.fn.fullpage.setAllowScrolling(true);
 
@@ -465,52 +501,15 @@ $(document).ready(function () {
             }
         });
 
-    $( function() {
-     $(window).bind('orientationchange', function () {
-         $(window).bind('scroll', function () {
-             if (isTouchCapable) {
-                window.location.href =  window.location.origin
-                 changeColorOffset();
-             }
-         });
-         if (isTouchCapable) {
-            window.location.href =  window.location.origin
-        }
-     });
-    });
+    // $( function() {
+    // });
 
-    $( function() {
-        if(isTouchCapable) {
+    // $( function() {
+    //     if(isTouchCapable) {
+        
 
-
-        $(window).scroll(function () {
-            for (var i = 0; i < sections.length; i++) {
-                if (sections[i].isInViewport()) {
-
-                    if(!dots[i].hasClass('active')) {
-                        $('.text-dots-block').each(function () {
-                            $(this).removeClass('active');
-                        });
-                        dots[i].addClass('active');
-                    }
-                }
-                if($(window).scrollTop() < offsetSections[1]) {
-                    $('.text-dots-block').each(function () {
-                        $(this).removeClass('active');
-                    });
-                    dots[0].addClass('active');
-                }
-                if($(window).scrollTop() == 5) {
-                    $('.text-dots-block').each(function () {
-                        $(this).removeClass('active');
-                    });
-                    dots[5].addClass('active');
-                }
-            }
-        });
-
-    }
-    });
+    // }
+    // });
 
     function WidthChange(mq) {
         $(window).bind('scroll', function () {
