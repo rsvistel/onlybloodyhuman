@@ -372,7 +372,7 @@ $(document).ready(function () {
                 'pointer-events': 'initial',
                 'visibility' : 'initial',
             });
-            $('#menuToggle input, #menuToggle-mobile input').click(function (e) {
+            $('#menuToggle input, #menuToggle-mobile input, .text-dots-block').click(function (e) {
                 if ($('body').hasClass('opened--menu')) {
                     $('.opened--menu .dots-block-section-banner').css({
                         'pointer-events': 'initial',
@@ -397,30 +397,6 @@ $(document).ready(function () {
                 }
                 e.stopPropagation();
             });
-
-            $('.text-dots-block').click(function () {
-                if ($('body').hasClass('opened--menu')) {
-                    $('.opened--menu .dots-block-section-banner').css({
-                        'pointer-events': 'initial',
-                        'visibility' : 'initial',
-                    });
-                } else {
-                    $('.dots-block-section-banner').css({
-                        'pointer-events': 'none',
-                        'visibility' : 'hidden',
-                    });
-                    if ($(window).scrollTop() >= offsetSections[1] && $(window).scrollTop() < offsetSections[3] ) {
-                        $('#menuToggle .change-color').css('opacity', 0);
-                        $('#menuToggle .current-color').css('opacity', 1);
-                    }
-                }
-                if($('#section-tools, #section-about').hasClass('black-color-tablet')) {
-                    if ($('body').hasClass('opened--menu')) {
-                        $('#menuToggle .change-color').css('opacity', 1);
-                        $('#menuToggle .current-color').css('opacity', 0);
-                    }
-                }
-            });
             if ($(this).scrollTop() <= offsetSections[0]) {
                 $('#menuToggle .change-color').css('opacity', 1);
                 $('#menuToggle .current-color').css('opacity', 0);
@@ -439,6 +415,7 @@ $(document).ready(function () {
             const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
             mq.addListener(WidthChange);
             WidthChange(mq);
+
         }
         $(window).scroll(function () {
             for (var i = 0; i < sections.length; i++) {
