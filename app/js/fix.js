@@ -344,7 +344,7 @@ $(document).ready(function () {
                 'pointer-events': 'initial',
                 'visibility' : 'initial',
             });
-            $('#menuToggle input, #menuToggle-mobile input').click(function () {
+            $('#menuToggle input, #menuToggle-mobile input').click(function (e) {
                 if ($('body').hasClass('opened--menu')) {
                     $('.opened--menu .dots-block-section-banner').css({
                         'pointer-events': 'initial',
@@ -366,6 +366,7 @@ $(document).ready(function () {
                     $('#menuToggle .current-color').css('opacity', 0);
                     }
                 }
+                e.stopPropagation();
             });
 
             $('.text-dots-block').click(function () {
