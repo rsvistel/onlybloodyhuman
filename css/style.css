@@ -219,7 +219,8 @@ a:focus, a:hover {
     position: absolute;
     margin: 3.5% 6% 3% 0; }
   .dots-block-section-banner embed:last-child {
-    visibility: hidden; }
+    visibility: hidden;
+    margin: 3.5% 6% 3% 0; }
 
 .dot-section-banner {
   height: -webkit-calc(0.4vw + 1px);
