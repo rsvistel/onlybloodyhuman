@@ -564,7 +564,7 @@ $(document).ready(function () {
             var thisElement = $(this);
                 for (var i = 0; i < dots.length; i++) {
                     if (thisElement.index() === i) {
-                        $('html, body').animate({scrollTop: sections[i].offset().top + 10}, 1000);
+                        $('html, body').animate({scrollTop: sections[i].offset().top + 20}, 1000);
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active');
                         });
