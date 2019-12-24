@@ -436,7 +436,7 @@ $(document).ready(function () {
                 'pointer-events': 'initial',
                 'visibility' : 'initial',
             });
-            $('#menuToggle input, #menuToggle-mobile input').click(function () {
+            $('#menuToggle input, #menuToggle-mobile input').click(function (e) {
                 if ($('body').hasClass('opened--menu')) {
                     $('.opened--menu .dots-block-section-banner').css({
                         'pointer-events': 'initial',
@@ -458,6 +458,7 @@ $(document).ready(function () {
                     $('#menuToggle .current-color').css('opacity', 0);
                     }
                 }
+                e.stopPropagation();
             });
 
             $('.text-dots-block').click(function () {
@@ -511,7 +512,7 @@ $(document).ready(function () {
             for (var i = 0; i < sections.length; i++) {
                 if (sections[i].isInViewport()) {
 
-                    if(!dots[i].hasClass('active')) {
+                    if(i <= dots.length - 1 && !dots[i].hasClass('active')) {
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active');
                         });
@@ -535,7 +536,6 @@ $(document).ready(function () {
 
         $('.text-dots-block').click(function () {
             var thisElement = $(this);
-            console.log(thisElement)
                 for (var i = 0; i < dots.length; i++) {
                     if (thisElement.index() === i) {
                         $('html, body').animate({scrollTop: sections[i].offset().top + 10}, 1000);
