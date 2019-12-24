@@ -2,6 +2,7 @@ $(document).ready(function () {
     var progressLine = false;
     var speed;
     var insta = false;
+    const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
      isDesktop = true;
      var isTouchCapable = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
      if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -347,9 +348,12 @@ $(document).ready(function () {
 
     $(function () {
         if (matchMedia) {
-          const mq = window.matchMedia("(min-width: 1024px) and (orientation: portrait)");
+
           mq.addListener(WidthChange);
           WidthChange(mq);
+
+          $('.tools-camera').addClass('white-color-tablet-pro');
+          $('.section-instagram').addClass('white-color-tablet-pro');
           }
 
           function WidthChange(mq) {
@@ -436,7 +440,7 @@ $(document).ready(function () {
                 'pointer-events': 'initial',
                 'visibility' : 'initial',
             });
-            $('#menuToggle input, #menuToggle-mobile input').click(function () {
+            $('#menuToggle input, #menuToggle-mobile input').click(function (e) {
                 if ($('body').hasClass('opened--menu')) {
                     $('.opened--menu .dots-block-section-banner').css({
                         'pointer-events': 'initial',
@@ -447,7 +451,18 @@ $(document).ready(function () {
                         'pointer-events': 'none',
                         'visibility' : 'hidden',
                     });
-                    if ($(window).scrollTop() >= offsetSections[1] && $(window).scrollTop() < offsetSections[3] ) {
+                    if ($(window).scrollTop() >= offsetSections[1] && $(window).scrollTop() < offsetSections[3] && !mq.matches) {
+                        $('#menuToggle .change-color').css('opacity', 0);
+                        $('#menuToggle .current-color').css('opacity', 1);
+                    }
+                    if ($('.tools-camera, .section-instagram').hasClass('white-color-tablet-pro') && mq.matches && $(window).scrollTop() >= offsetSections[2] && $(window).scrollTop() <= offsetSections[4]) {
+                        $('#menuToggle .change-color').css('opacity', 1);
+                        $('#menuToggle .current-color').css('opacity', 0);
+                    } else if ($(window).scrollTop() == offsetSections[0]) {
+                        $('#menuToggle .change-color').css('opacity', 1);
+                        $('#menuToggle .current-color').css('opacity', 0);
+                    }
+                     else if (mq.matches) {
                         $('#menuToggle .change-color').css('opacity', 0);
                         $('#menuToggle .current-color').css('opacity', 1);
                     }
@@ -458,6 +473,7 @@ $(document).ready(function () {
                     $('#menuToggle .current-color').css('opacity', 0);
                     }
                 }
+                e.stopPropagation();
             });
 
             $('.text-dots-block').click(function () {
@@ -471,7 +487,18 @@ $(document).ready(function () {
                         'pointer-events': 'none',
                         'visibility' : 'hidden',
                     });
-                    if ($(window).scrollTop() >= offsetSections[1] && $(window).scrollTop() < offsetSections[3] ) {
+                    if ($(window).scrollTop() >= offsetSections[1] && $(window).scrollTop() < offsetSections[3] && !mq.matches) {
+                        $('#menuToggle .change-color').css('opacity', 0);
+                        $('#menuToggle .current-color').css('opacity', 1);
+                    }
+                    if ($('.tools-camera, .section-instagram').hasClass('white-color-tablet-pro') && mq.matches && $(window).scrollTop() >= offsetSections[2] && $(window).scrollTop() <= offsetSections[4]) {
+                        $('#menuToggle .change-color').css('opacity', 1);
+                        $('#menuToggle .current-color').css('opacity', 0);
+                    } else if ($(window).scrollTop() == offsetSections[0]) {
+                        $('#menuToggle .change-color').css('opacity', 1);
+                        $('#menuToggle .current-color').css('opacity', 0);
+                    }
+                     else if (mq.matches) {
                         $('#menuToggle .change-color').css('opacity', 0);
                         $('#menuToggle .current-color').css('opacity', 1);
                     }
@@ -511,7 +538,7 @@ $(document).ready(function () {
             for (var i = 0; i < sections.length; i++) {
                 if (sections[i].isInViewport()) {
 
-                    if(!dots[i].hasClass('active')) {
+                    if(i <= dots.length - 1 && !dots[i].hasClass('active')) {
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active');
                         });
@@ -535,10 +562,9 @@ $(document).ready(function () {
 
         $('.text-dots-block').click(function () {
             var thisElement = $(this);
-            console.log(thisElement)
                 for (var i = 0; i < dots.length; i++) {
                     if (thisElement.index() === i) {
-                        $('html, body').animate({scrollTop: sections[i].offset().top + 10}, 1000);
+                        $('html, body').animate({scrollTop: sections[i].offset().top + 20}, 1000);
                         $('.text-dots-block').each(function () {
                             $(this).removeClass('active');
                         });
