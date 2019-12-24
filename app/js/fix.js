@@ -351,6 +351,9 @@ $(document).ready(function () {
 
           mq.addListener(WidthChange);
           WidthChange(mq);
+
+          $('.tools-camera').addClass('white-color-tablet-pro');
+          $('.section-instagram').addClass('white-color-tablet-pro');
           }
 
           function WidthChange(mq) {
@@ -459,7 +462,7 @@ $(document).ready(function () {
                         $('#menuToggle .change-color').css('opacity', 1);
                         $('#menuToggle .current-color').css('opacity', 0);
                     }
-                     else {
+                     else if (mq.matches) {
                         $('#menuToggle .change-color').css('opacity', 0);
                         $('#menuToggle .current-color').css('opacity', 1);
                     }
@@ -484,7 +487,18 @@ $(document).ready(function () {
                         'pointer-events': 'none',
                         'visibility' : 'hidden',
                     });
-                    if ($(window).scrollTop() >= offsetSections[1] && $(window).scrollTop() < offsetSections[3] ) {
+                    if ($(window).scrollTop() >= offsetSections[1] && $(window).scrollTop() < offsetSections[3] && !mq.matches) {
+                        $('#menuToggle .change-color').css('opacity', 0);
+                        $('#menuToggle .current-color').css('opacity', 1);
+                    }
+                    if ($('.tools-camera, .section-instagram').hasClass('white-color-tablet-pro') && mq.matches && $(window).scrollTop() >= offsetSections[2] && $(window).scrollTop() <= offsetSections[4]) {
+                        $('#menuToggle .change-color').css('opacity', 1);
+                        $('#menuToggle .current-color').css('opacity', 0);
+                    } else if ($(window).scrollTop() == offsetSections[0]) {
+                        $('#menuToggle .change-color').css('opacity', 1);
+                        $('#menuToggle .current-color').css('opacity', 0);
+                    }
+                     else if (mq.matches) {
                         $('#menuToggle .change-color').css('opacity', 0);
                         $('#menuToggle .current-color').css('opacity', 1);
                     }
