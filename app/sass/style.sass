@@ -172,10 +172,10 @@ a:focus, a:hover
     &:first-child
       visibility: visible
       position: absolute
-      margin: 3.5% 6% 3% 0
+      top: calc(50% - 4px)
     &:last-child
       visibility: hidden
-      margin: 3.5% 6% 3% 0
+      top: calc(50% - 4px)
 
 .dot-section-banner
   height: calc(0.4vw + 1px)
@@ -1307,7 +1307,8 @@ body.opened--menu .text-dots-block embed
 .text-dots-block:hover .text-near-dots.text-gray
   color: #363531
 .embed-arrow
-  padding: 3% 6% 3.5% 5%
+  position: relative
+  padding: 3% 6% 3% 5%
 .embed-arrow embed
   width: 0.8vw
   height: 8px
