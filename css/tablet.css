@@ -2,93 +2,120 @@
   #menuToggle-mobile {
     margin-top: 5.2%;
     margin-right: 9%; }
+
   .nav-icon .cross-icon {
     width: 2.6vw;
-    margin-left: .3vw; }
+    margin-left: 0.3vw; }
+
   .dots-block-section-banner {
     padding-right: 7%;
     width: 20%; }
+
   h3 {
     font-size: 2.8vw;
     line-height: 1.2; }
+
   h2 {
     font-size: 5.3vw; }
+
   p {
     font-size: 2vw; }
+
   .job-text-center {
     font-size: 1.6vw;
     letter-spacing: 6.5px; }
+
   .lines-job-text-center {
     font-size: 3.4vw; }
+
   .video-section-cover {
     height: auto;
     z-index: 1; }
+
   .whole-text-section-about {
     padding-bottom: 2%; }
+
   .first-sentence-section-about {
     font-size: 1.44vw;
     margin-top: 0;
     margin-bottom: 0; }
+
   .aka-name-section-about {
     font-size: 1.2vw; }
+
   .job-section-about, .first-sentence-section-about, .aka-name-section-about, .jobs-section-about {
     text-align: left; }
+
   .job-section-about-producer {
     font-size: 13vw;
     text-indent: 13px;
-    margin-bottom: .36vw;
+    margin-bottom: 0.36vw;
     margin-top: 5vw;
     margin-right: -20px; }
+
   .tittle-section-about {
     font-size: 1.44vw;
     margin-top: 20px;
     margin-bottom: 6px; }
+
   .jobs-section-about, .tittles-section-tools {
     font-size: 2.8vw; }
+
   .now-section-about {
     margin-top: 14vw; }
+
   .left-logo-banner-section .whole-text-left-logo {
-    -webkit-animation: none !important;
-            animation: none !important;
-    -webkit-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
+    animation: none !important;
     transition: 0.5s ease-in-out; }
+
   .whole-text-section-about .stuff-section-about {
     margin-top: 9vw;
     margin-bottom: 1.6vw; }
+
   .text-over-progress h6 {
     font-size: 1.2vw;
     line-height: 1.6vw; }
+
   .progress-section {
     margin-bottom: 1.8vw; }
+
   .progress-line {
     height: 1.3vw; }
+
   .photo-man-section-about {
     width: 50%;
     margin: 0 25%; }
+
   .whole-text-section-about .tittle-section-about-margin {
     margin-top: 12vw; }
+
   .large-tittle-section-tools {
     margin: 4vw 0 0;
     font-size: 20vw;
     text-indent: -12px; }
+
   .over-line-block .text-under-tittles-section-tools, .outdoor-section__text--main p {
     margin: 15px 0 0;
     padding: 0; }
+
   .outdoor-section__icons .tools-section__image p {
     font-size: 1.26vw;
     line-height: 2.34vw;
     padding: 1% 23%;
     margin: 0 12% 9%; }
+
   .tittles-section-tools {
     line-height: 1.2;
     margin-top: 4vh; }
+
   .block-tools-section, .outdoor-section-block {
     padding: 9.5% 12.5% 1.5%; }
+
   #section-tools hr, .outdoor-section hr {
     border-top: 2px solid #f0f2f2;
     margin: 0 5%;
     width: 90%; }
+
   .outdoor-section__text--header h2 {
     text-align: right;
     font-size: 12vw; }
@@ -96,62 +123,84 @@
     text-align: right;
     margin-top: -1.2vh;
     margin-bottom: 7vh; }
+
   .outdoor-section__text--main {
     margin: 0 0 0 35%; }
     .outdoor-section__text--main p {
       text-align: right; }
+
   .img-div-outdoor-section__icons {
     margin: 1.4% 12% 3%; }
+
   .icon-camera embed {
     height: 8vh; }
+
   .icon-dji-mobile {
     height: 6.4vh; }
+
   .icon-movi-mobile {
     height: 9.6vh; }
+
   .section-outdoor-professional {
     min-height: initial;
     max-height: 430px; }
+
   .outdoor-section__text {
     padding: 16% 12% 12%; }
+
   p, .outdoor-section-block button span, .block-tools-section button span {
     font-size: 1.6vw;
     line-height: 2.88vw; }
+
   .text-under-tittles-section-tools {
     font-size: 1.6vw;
     line-height: 2.88vw;
     width: 100%; }
+
   .outdoor-section hr .img-div-outdoor-section__icons {
     margin: 3% 0 6%; }
+
   .outdoor-section-block {
     padding-top: 18%; }
+
   .outdoor-section hr, .section-tools-mobile__button hr {
     padding-bottom: 1vw; }
+
   #arrow-skills, #arrow-tools {
     width: 2.2%; }
+
   .text-under-img-section-tools, .outdoor-section__image p {
     font-size: 1.44vw;
     line-height: normal;
-    padding-top: .4vw; }
+    padding-top: 0.4vw; }
+
   .outdoor-section__text .arrow-down-icon {
     padding: 0 13% 2vw 12.5%; }
+
   .arrow-down-icon {
     padding: 0 13% 0.8vw 12.5%; }
+
   .outdoor-section__image.icon-travel {
     padding: 1.1vw 12.8vw 0; }
   .outdoor-section__image.icon-outdoor, .outdoor-section__image.icon-safety {
-    padding: .4vw 13vw 0; }
+    padding: 0.4vw 13vw 0; }
   .outdoor-section__image embed {
     width: 5vw;
     height: 5vw; }
+
   .icon-alpinizm embed, .icon-surf embed {
     width: 5vw;
     height: 5vw; }
+
   .icon-paraglide embed, .icon-desert embed, .icon-jungle embed {
     width: 4.5vw; }
+
   .icon-ski embed {
     width: 4vw; }
+
   .icon-wilderness embed {
     width: 5.2vw; }
+
   .section-instagram-followers span {
     font-size: 3.2vw; }
   .section-instagram-followers embed {
@@ -160,53 +209,66 @@
     margin-right: 1vw; }
   .section-instagram-followers a {
     font-size: 1.2vw;
-    line-height: .7vw;
+    line-height: 0.7vw;
     height: auto; }
+
   .hover-location .location {
     width: 3.2vw;
     height: 3.2vw;
-    margin-bottom: .4vw; }
+    margin-bottom: 0.4vw; }
+
   .section-instagram__photo .location embed {
     width: 2.6vw; }
   .section-instagram__photo .hover-location span {
     font-size: 1.44vw; }
+
   .section-instagram__photo:nth-child(5) {
     border-bottom: none;
     border-top: 0.5px solid #f0f2f2; }
+
   .section-instagram__photo:nth-child(6) {
     border-top: 0.5px solid #f0f2f2; }
+
   .client-contact-list {
     padding: 16% 12% 13%;
     max-height: 100%; }
+
   .client-contact-list__text h1 {
     font-size: 18vw;
     line-height: 13.6vw; }
   .client-contact-list__text p {
     font-size: 3.4vw;
     line-height: normal;
-    margin-left: .5vw; }
+    margin-left: 0.5vw; }
+
   .client-contact-list__center-arrow {
     padding: 3.4vw 0 3.6vw;
     width: 13vw; }
     .client-contact-list__center-arrow embed {
       width: 2.4vw; }
+
   .client-contact-list__quote p {
     font-size: 2.2vw;
     line-height: 3.5vw;
     margin-bottom: 11.6vw; }
+
   .client-contact-list__email a {
     font-size: 5vw;
     padding: 0;
-    letter-spacing: .45vw;
+    letter-spacing: 0.45vw;
     font-weight: 300; }
+
   .client-contact-list__social {
     padding-top: 14vw;
     margin-left: -8px; }
+
   .client-contact-list__img {
     width: 5vw;
     margin-right: 1%; }
+
   .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a {
     font-size: 1.3vw; }
+
   .client-contact-list__social--icon {
     margin-bottom: 1.3vw;
     height: auto; }
@@ -219,997 +281,1238 @@
     .client-contact-list__social--icon.telephone embed {
       height: 2.1vw;
       width: 4.5vw; }
+
   .client-contact-list-img {
     height: 32vh;
     min-height: 32vh; }
+
   .footer-section {
     padding: 1vw 0 4.5vw; }
+
   .footer-client p {
-    letter-spacing: .1vw;
+    letter-spacing: 0.1vw;
     font-size: 1vw;
-    margin-bottom: .35vw;
+    margin-bottom: 0.35vw;
     line-height: 2.15vw; }
   .footer-client span {
-    letter-spacing: .35vw;
+    letter-spacing: 0.35vw;
     font-size: 2.2vw;
     line-height: 1.8vw; }
+
   .footer-section img {
     width: 3.8vw;
     padding: 1vw 0 0; }
+
   .embed-arrow embed {
     width: 9px;
     height: 5px; } }
-
 @media (min-width: 1000px) and (max-width: 1112px) {
   .whole-text-left-logo {
     margin-left: 25px; }
+
   .left-logo-banner-section object {
     position: absolute;
     pointer-events: none; }
+
   .arrow-down-section-banner embed {
     width: 3%; }
+
   .highlight-hover h2 {
     text-indent: 10px; }
+
   .wrap {
     position: absolute;
     z-index: 15;
     width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex; }
+
   .left-logo-banner-section object {
     max-width: 3.2%; }
+
   .left-logo-banner-section .whole-text-left-logo {
     opacity: 1; }
+
   .left-logo-banner-section .whole-text-left-logo {
-    -webkit-animation: none !important;
-            animation: none !important;
-    -webkit-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
+    animation: none !important;
     transition: 0.5s ease-in-out; }
+
   .dots-block-section-banner {
     padding-right: 3.7%; }
+
   .text-dots-block {
     width: 170%;
     margin-bottom: 10%; }
+
   .dot-section-banner {
     width: 5.5px;
     height: 5.5px; }
+
   #menu {
     margin: -10vw 0 0 -20vw; }
+
   #section-tools .hr-tablet {
     margin: 0; }
+
   .icon-dji, .icon-movi {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     opacity: 0; }
+
   .under-line-block {
     -webkit-box-align: end;
     -webkit-align-items: end;
     -ms-flex-align: end;
     align-items: end; }
+
   #arrow-tools-tablet {
     position: relative;
-    width: .9vw;
-    margin-top: .5vh;
+    width: 0.9vw;
+    margin-top: 0.5vh;
     -webkit-transform: translateX(-0.4vw);
     -ms-transform: translateX(-0.4vw);
     transform: translateX(-0.4vw);
     left: 16.66%; }
+
   .block-tools-section.block-tools-section-tablet {
     padding: 9.5% 0 1.5% 0; }
+
   .block-tools-section-tablet {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     width: 100%; }
+
   #section-tools .hr-tablet {
     margin: 0; }
+
   .under-line-block {
     -webkit-box-align: end;
     -webkit-align-items: end;
     -ms-flex-align: end;
     align-items: end; }
+
   #arrow-tools-tablet {
     position: relative;
-    width: .9vw;
-    margin-top: .5vh;
+    width: 0.9vw;
+    margin-top: 0.5vh;
     -webkit-transform: translateX(-0.4vw);
     -ms-transform: translateX(-0.4vw);
     transform: translateX(-0.4vw);
     left: 16.66%; }
+
   .icon-camera embed {
     height: 7vw; }
+
   .tools-section__image p {
     margin: 0 11% 4%; }
+
   .outdoor-section__text {
     width: 33%;
     right: 15%; }
+
   .outdoor-section__image {
     padding: 0 4.2vw 0 4.2vw; }
+
   .outdoor-section hr {
     padding-bottom: 0.5vw; }
+
   .arrow-down-icon {
-    padding: 0 0.9vw .8vw 0.9vw;
+    padding: 0 0.9vw 0.8vw 0.9vw;
     width: 100%; }
+
   .section-outdoor-professional {
     width: initial; }
+
   .img-div-outdoor-section__icons {
     margin: 3% 0 4%; }
+
   .section-contact {
     height: auto;
     min-height: auto; }
+
   .client-contact-list .client-contact-list__text p {
     margin-bottom: 0; }
+
   #section-contact {
     height: auto; }
+
   .photo-man-section-about {
     width: 55%; }
+
   .whole-text-section-about {
     padding: 20% 10% 4% 4%;
     width: 45%; }
+
   .text-near-dots {
     padding-top: 0; } }
-
 /* iPad mini, normal, Pro (small) */
 @media (min-width: 825px) and (max-width: 1112px) and (orientation: landscape) {
   h1 {
     font-size: 10.1vw;
     line-height: 9.6vw;
     letter-spacing: -1.2px; }
+
   h2 {
     font-size: 5.7vw; }
+
   h3 {
     font-size: 1.9vw; }
+
   h6 {
     font-size: 1vw; }
+
   p {
     font-size: 1.1vw;
     line-height: 1.9vw; }
+
   #first-section {
     height: auto !important; }
+
   #section-instagram {
     height: auto !important; }
+
   .nav-icon .cross-icon {
     margin-left: 1.3px;
     width: 3vw; }
+
   .job-text-center {
-    font-size: .9vw;
+    font-size: 0.9vw;
     margin: 3px 1px 0 5px; }
+
   .dots-block-section-banner {
     padding-right: 4.4%; }
+
   .arrow-down-section-banner embed {
     width: 1.1vw; }
+
   .whole-text-left-logo {
     margin-left: 25px; }
+
   .left-logo-banner-section object {
     position: absolute;
     pointer-events: none; }
+
   .wrap {
     position: absolute;
     z-index: 15;
     width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex; }
+
   .menuToggle input, #menuToggle-mobile input {
     width: 3vw;
     height: 5.4vh; }
+
   .whole-text-left-logo {
     -webkit-animation: none;
     animation: none;
-    -webkit-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     opacity: 1; }
+
   #menu {
     margin: -5vw 0 0 -11vw; }
+
   .text-near-dots {
     font-size: 1.1vw;
     width: 70%;
     line-height: 1.1vw;
     padding-top: 0; }
+
   .text-dots-block {
     margin-bottom: 5%; }
+
   .text-over-progress h6 {
-    font-size: .77vw; }
+    font-size: 0.77vw; }
+
   .left-logo-banner-section .whole-text-left-logo {
-    -webkit-animation: none !important;
-            animation: none !important;
-    -webkit-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
+    animation: none !important;
     transition: 0.5s ease-in-out; }
+
   .job-section-about-producer {
     letter-spacing: -3px;
     margin-right: -3px; }
+
   .logo-client-list object {
     min-width: 7.2vw; }
+
   .jobs-section-about {
     font-size: 1.2vw;
-    letter-spacing: .3vw; }
+    letter-spacing: 0.3vw; }
+
   .highlight-hover h2 {
     text-indent: 17px; }
+
   .first-sentence-section-about {
     letter-spacing: 1.2px;
     font-size: 1vw; }
+
   .aka-name-section-about {
-    font-size: .7vw; }
+    font-size: 0.7vw; }
+
   .over-line-block {
     padding-right: 10%; }
     .over-line-block .text-under-tittles-section-tools {
       padding: 1.4% 0;
       font-size: 1.1vw;
       line-height: 1.9vw; }
+
   .text-under-img-section-tools {
-    font-size: .85vw;
+    font-size: 0.85vw;
     line-height: 1.56vw; }
+
   .tittles-section-tools {
     line-height: 2.4vw;
     font-size: 2vw; }
+
   .large-tittle-section-tools {
     margin-top: -2px; }
+
   .tittles-margin-section-tools {
-    margin-top: .7vh; }
+    margin-top: 0.7vh; }
+
   .under-line-block .img-under-line-block embed, .img-under-line-block object {
     min-width: 11.4vw;
     max-width: 13.2vw;
     margin-top: 5%; }
+
   .icon-movi object {
     height: 6vw;
     margin-top: 2%; }
+
   .icon-desert embed, .icon-jungle embed {
     width: 2.6vw; }
+
   .icon-avalanche embed, .icon-wilderness embed {
     width: 3.1vw; }
+
   .outdoor-section__image + p {
     padding-top: 0.4vw; }
+
   .outdoor-section-block button span, .under-line-block .block-tools-section button span {
     font-size: 1vw;
     line-height: 1.3vw; }
+
   .outdoor-section__image p {
     padding-top: 0.4vw; }
+
   .section-instagram-followers span {
     font-size: 2.1vw; }
   .section-instagram-followers a {
     font-size: 1.2vw;
-    line-height: .4vw; }
+    line-height: 0.4vw; }
+
   .arrow-down-icon {
-    padding: 0 4vw .8vw 4vw; }
+    padding: 0 4vw 0.8vw 4vw; }
+
   .outdoor-section-block {
     padding: 9.5% 4vw 1.5%; }
+
   .outdoor-section__image .numberCircle {
     font-size: 1.08vw;
     width: 2.5vw;
     height: 2.5vw;
-    border: .23vw #f0f2f2 solid; }
+    border: 0.23vw #f0f2f2 solid; }
   .outdoor-section__image.icon-travel {
-    padding: .6vw 5.5vw 0; }
+    padding: 0.6vw 5.5vw 0; }
   .outdoor-section__image.icon-outdoor, .outdoor-section__image.icon-safety {
-    padding: .4vw 5.5vw 0; }
+    padding: 0.4vw 5.5vw 0; }
+
   .outdoor-section__image .col-sm-3 .countries {
     font-size: 0.9vw; }
+
   .icon-alpinizm embed, .icon-surf embed {
     width: 2.75vw; }
+
   .icon-paraglide embed {
     width: 2.45vw; }
+
   .icon-ski embed {
     width: 2vw; }
+
   .outdoor-section hr {
     padding-bottom: 1vh;
     margin: 0 2.8vw; }
+
   #arrow-skills {
-    width: .9vw; }
+    width: 0.9vw; }
+
   .outdoor-section-block button span .section-instagram-followers embed, .outdoor-section__image p .section-instagram-followers embed {
     width: 2.1%;
     min-width: 19px; }
+
   .hover-location .location {
     width: 2vw;
     height: 2vw;
-    margin-bottom: .1vw; }
+    margin-bottom: 0.1vw; }
+
   .section-instagram__photo .location embed {
     width: 1.6vw; }
   .section-instagram__photo .hover-location span {
-    font-size: .9vw; }
+    font-size: 0.9vw; }
+
   .client-contact-list__text p {
     font-size: 2vw;
-    line-height: .6vw; }
+    line-height: 0.6vw; }
+
   .client-contact-list__quote p {
     font-size: 1.2vw;
-    letter-spacing: .06vw; }
+    letter-spacing: 0.06vw; }
+
   .client-contact-list__email a {
-    letter-spacing: .3vw;
+    letter-spacing: 0.3vw;
     font-size: 3.1vw; }
+
   .client-contact-list__social {
-    letter-spacing: .003vw;
+    letter-spacing: 0.003vw;
     margin-left: -8px; }
+
   .client-contact-list__img {
     width: 3.6vw; }
+
   .client-contact-list__social--icon {
-    font-size: .9vw;
-    margin-bottom: .9vw; }
+    font-size: 0.9vw;
+    margin-bottom: 0.9vw; }
+
   .footer-client p {
-    letter-spacing: .04vw;
-    font-size: .66vw; }
+    letter-spacing: 0.04vw;
+    font-size: 0.66vw; }
   .footer-client span {
-    letter-spacing: .25vw;
+    letter-spacing: 0.25vw;
     font-size: 1.4vw;
     line-height: 1.2vw; }
+
   .client-contact-list__social--icon.audio embed {
     width: 2.1vw;
     height: 1.55vw; }
+
   .client-contact-list__social--icon.instagram embed {
     width: 1.5vw;
     height: 1.4vw; }
+
   .client-contact-list__social--icon.telephone embed {
     width: 3vw;
     height: 1.38vw; }
+
   .footer-section img {
     width: 2.8vw; }
+
   .section-instagram-followers a {
     height: 1.3vh; }
+
   #section-about.section {
     height: auto; }
+
   .video-section-cover {
     z-index: 0; }
+
   .section-instagram__photo:nth-child(6) {
     border-bottom: 0.5px solid #f0f2f2; }
+
   .section-instagram__photo:nth-child(1) {
     border-bottom: 0.5px solid #f0f2f2; }
+
   .text-near-dots {
     padding-top: 0; } }
-
 /* iPad Pro (Big) */
 @media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   p {
     font-size: 1.1vw;
     line-height: 1.9vw; }
+
   .job-text-center {
     font-size: 1vw;
     letter-spacing: 7px;
     margin: 5px 1px 0 5px; }
+
   .lines-job-text-center {
     font-size: 2.2vw; }
+
   h2 {
     font-size: 5.7vw; }
+
   .jobs-section-about {
     font-size: 1.2vw;
-    letter-spacing: .3vw; }
+    letter-spacing: 0.3vw; }
+
   .job-section-about-producer {
     letter-spacing: -3px;
     margin-right: -60px; }
+
   h6 {
     font-size: 1vw; }
+
   h3 {
     font-size: 1.9vw; }
+
   h1 {
     font-size: 10.1vw;
     line-height: 9.6vw;
     letter-spacing: -1.2px; }
+
   .dots-block-section-banner {
     padding-right: 4.4%; }
+
   .nav-icon .cross-icon {
     margin-left: 2.5px;
     width: 1.5vw; }
+
   .logo-client-list object {
     min-width: 7.2vw; }
+
   .whole-text-left-logo {
     margin-left: 30px; }
+
   .left-logo-banner-section .whole-text-left-logo {
-    -webkit-animation: none !important;
-            animation: none !important;
-    -webkit-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
+    animation: none !important;
     transition: 0.5s ease-in-out; }
+
   .left-logo-banner-section object {
     position: absolute;
     pointer-events: none; }
+
   .wrap {
     position: absolute;
     z-index: 15;
     width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex; }
+
   #menuToggle input, #menuToggle-mobile input {
     width: 3vw;
     height: 5.4vh; }
+
   #menu {
     margin: -5vw 0 0 -11vw; }
+
   .text-dots-block {
     margin-bottom: 5%; }
+
   .section-instagram-followers a {
     height: 1.3vh; }
+
   .whole-text-left-logo {
     -webkit-animation: none;
     animation: none;
-    -webkit-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     opacity: 1; }
+
   .text-near-dots {
     font-size: 1.1vw;
     width: 70%;
     line-height: 1.1vw;
     padding-top: 0; }
+
   .video-references {
     min-height: 80vh;
     height: 81vh; }
+
   .text-over-progress h6 {
-    font-size: .77vw; }
+    font-size: 0.77vw; }
+
   .first-sentence-section-about {
     letter-spacing: 1.2px;
     font-size: 1vw; }
+
   .aka-name-section-about {
-    font-size: .7vw; }
+    font-size: 0.7vw; }
+
   #section-about.section {
     height: auto; }
+
   .over-line-block {
     padding-right: 16%; }
+
   .large-tittle-section-tools {
     margin-top: -2px; }
+
   .text-under-tittles-section-tools {
     font-size: 1.1vw;
     line-height: 1.9vw; }
+
   .over-line-block .text-under-tittles-section-tools {
     padding: 1.4% 0; }
+
   .text-under-img-section-tools {
-    font-size: .85vw;
+    font-size: 0.85vw;
     line-height: 1.56vw; }
+
   .tittles-section-tools {
     line-height: 2.4vw;
     font-size: 2vw; }
+
   .under-line-block .img-under-line-block embed, .img-under-line-block object {
     min-width: 11.4vw;
     max-width: 13.2vw;
     margin-top: 5%; }
+
   .icon-movi object {
     height: 6vw;
     margin-top: 2%; }
+
   .block-tools-section-tablet {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     width: 100%; }
+
   .block-tools-section.block-tools-section-tablet {
     padding: 9.5% 0 1.5% 0; }
+
   #section-tools .hr-tablet {
     margin: 0; }
+
   .under-line-block {
     -webkit-box-align: end;
     -webkit-align-items: end;
     -ms-flex-align: end;
     align-items: end; }
+
   .icon-dji, .icon-movi {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+
   .outdoor-section hr {
     padding-bottom: 1vh;
     margin: 0 2.5vw; }
+
   #arrow-skills {
-    width: .9vw; }
+    width: 0.9vw; }
+
   #arrow-tools-tablet {
     position: relative;
-    margin-top: .8vh;
-    width: .9vw;
+    margin-top: 0.8vh;
+    width: 0.9vw;
     -webkit-transform: translateX(-0.4vw);
     -ms-transform: translateX(-0.4vw);
     transform: translateX(-0.4vw);
     left: 16.66%; }
+
   .icon-desert embed, .icon-jungle embed {
     width: 2.6vw; }
+
   .icon-avalanche embed, .icon-wilderness embed {
     width: 3.1vw; }
+
   .outdoor-section__image + p {
     padding-top: 0.4vw; }
+
   .outdoor-section__text {
     width: 34%;
     right: 16%; }
+
   .outdoor-section-block button span, .block-tools-section button span {
-    font-size: .9vw;
+    font-size: 0.9vw;
     line-height: 1.6vw; }
+
   .section-instagram-followers span {
     font-size: 2.1vw; }
   .section-instagram-followers a {
-    font-size: .7vw;
-    line-height: .4vw; }
+    font-size: 0.7vw;
+    line-height: 0.4vw; }
+
   .outdoor-section-block {
     padding: 9.5% 4vw 1.5%; }
+
   .outdoor-section__image .numberCircle {
     font-size: 1.08vw;
     width: 2.5vw;
     height: 2.5vw;
-    border: .23vw #f0f2f2 solid; }
+    border: 0.23vw #f0f2f2 solid; }
     .outdoor-section__image .numberCircle + p {
       padding-top: 0.4vw; }
   .outdoor-section__image.icon-travel {
-    padding: .8vw 5.6vw 0; }
+    padding: 0.8vw 5.6vw 0; }
   .outdoor-section__image.icon-outdoor, .outdoor-section__image.icon-safety {
-    padding: .4vw 5.8vw 0; }
+    padding: 0.4vw 5.8vw 0; }
+
   .outdoor-section__image .col-sm-3 .countries {
     font-size: 0.9vw; }
+
   .icon-alpinizm embed, .icon-surf embed {
     width: 2.75vw; }
+
   .icon-paraglide embed {
     width: 2.45vw; }
+
   .icon-ski embed {
     width: 2vw; }
+
   .outdoor-section__image p {
-    font-size: .95vw;
+    font-size: 0.95vw;
     padding-top: 0.4vw; }
+
   .section-instagram-followers embed {
     width: 2%;
     min-width: 19px; }
+
   .hover-location .location {
     width: 2vw;
     height: 2vw;
-    margin-bottom: .1vw; }
+    margin-bottom: 0.1vw; }
+
   .section-instagram__photo .location embed {
     width: 1.6vw; }
   .section-instagram__photo .hover-location span {
-    font-size: .9vw; }
+    font-size: 0.9vw; }
+
   .arrow-down-icon {
-    padding: 0 4vw .8vw 4vw;
+    padding: 0 4vw 0.8vw 4vw;
     width: 100%; }
+
   .section-instagram__photo:nth-child(6) {
     border-top: 0.5px solid #f0f2f2; }
+
   .embed-arrow embed {
     width: 12px;
     height: 7px; }
+
   .video-section-cover {
     z-index: 0; }
+
   .text-near-dots {
     padding-top: 0; } }
-
 @media (min-width: 1111px) and (max-width: 1112px) and (orientation: landscape) {
   .client-contact-list__email {
     margin-left: -4px; }
+
   .client-contact-list__text p {
     font-size: 2vw;
     line-height: 0.6vw; } }
-
 @media (max-device-width: 1366px) and (min-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
   .client-contact-list__text p {
     font-size: 2vw;
     line-height: 0.6vw; }
+
   .client-contact-list__email {
     margin-left: -9px; }
+
   .client-contact-list__social {
     margin-left: -10px; }
+
   .client-contact-list__social--icon {
     margin-bottom: 0.8vw; }
+
   .client-contact-list__text p {
     font-size: 2vw;
     line-height: 0.6vw; }
+
   .progress-line-gray-94.tablet {
     width: 94% !important;
     background: #2c2e31; }
+
   .progress-line-gray-79.tablet {
     width: 79% !important;
     background: #2c2e31; }
+
   .progress-line-gray-87.tablet {
     width: 87% !important;
     background: #2c2e31; }
+
   .progress-line-gray-67.tablet {
     width: 67% !important;
     background: #2c2e31; }
+
   .progress-line-gray-82.tablet {
     width: 82% !important;
     background: #2c2e31; }
+
   .text-near-dots {
     padding-top: 0; } }
-
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .section {
     height: auto !important; }
+
   #section-about,
   #section-about .fp-slide,
   #section-about .fp-tableCell,
   #section-about .fp-scrollable {
     height: auto !important; }
+
   #section-tools,
   #section-tools .fp-slide,
   #section-tools .fp-tableCell,
   #section-tools .fp-scrollable {
     height: auto !important; } }
-
 @media (min-width: 768px) and (max-width: 1000px) {
   #section-instagram {
     height: auto; }
+
   .tablet-image {
     display: block; }
+
   .mobile-vertical-image {
     display: none; } }
-
 /* iPad Pro Portrait(Big) */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   #section-tools .row.section-tools-mobile {
     display: none; }
+
   #section-tools .row.section-tools-mobile__button {
     display: block; }
+
   .gray-half-section-tools {
     width: 100%;
     padding: 16% 12% 0% 12%; }
+
   .gray-half-section-tools.gray-half-section-tools__image {
     padding: 0;
     width: 100%; }
+
   #section-tools .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    flex-direction: column; }
+
   .block-tools-section {
     display: block; }
+
   #section-tools hr, .outdoor-section hr {
     border-top: 2px solid #f0f2f2;
     margin: 0 5%;
     width: 90%;
     padding: 0; }
+
   .outdoor-section__image img, .tools-section__image img {
     width: 100%; }
+
   .mobile-vertical-image {
     display: none; }
+
   .tablet-image {
     display: block; }
+
   .img-div-outdoor-section__icons {
     margin: 1.4% 12% 3%; }
+
   .icon-dji-mobile {
     height: 6.4vh; }
+
   .gray-half-section-tools {
     max-height: 1366px;
     height: auto; }
+
   .tools-section__image {
     padding: 0; }
+
   .large-tittle-section-tools {
     margin: 4vw 0 0;
     font-size: 20vw;
     text-indent: -12px; }
+
   .tittles-section-tools {
     line-height: 1.2;
     margin-top: 4vh; }
+
   .tittles-section-tools {
     font-size: 2.8vw; }
+
   .block-tools-section, .outdoor-section-block {
     padding: 9.5% 12.5% 1.5%; }
+
   .block-tools-section button {
     padding-top: 4%; }
+
   .block-tools-section button span, .tools-section__image p {
     font-size: 1.6vw;
     line-height: 2.88vw; }
+
   .outdoor-section__icons .tools-section__image p {
     font-size: 1.26vw;
     line-height: 2.34vw;
     padding: 1% 23%;
     margin: 0 12% 5% 12%;
     text-transform: capitalize; }
+
   .arrow-down-icon {
     padding: 2% 13% 0.8vw 12.5%; }
+
   #arrow-skills, #arrow-tools {
     width: 2.2%; }
+
   .icon-camera embed {
     height: 8vh; }
+
   .icon-movi-mobile {
     height: 9.6vh; }
+
   .img-div-outdoor-section__icons.img-div-outdoor-section__icons-movi {
     margin-top: 0; }
+
   .outdoor-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    flex-direction: column; }
+
   .outdoor-section {
     height: auto; }
+
   .outdoor-section__text {
     width: 100%;
     position: static;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
+    transform: none;
     padding: 16% 12% 12%; }
+
   .video-section-cover {
     height: auto;
     z-index: 1; }
+
   .section-outdoor-professional {
     position: static;
     min-height: initial;
     max-height: 590px; }
+
   .outdoor-section__text--header h2 {
     text-align: right;
     font-size: 12vw; }
+
   .outdoor-section__text--header h3 {
     text-align: right;
     margin-top: -1.2vh;
     margin-bottom: 7vh; }
+
   .outdoor-section__text--main p {
     text-align: right; }
+
   .outdoor-section__text--main {
     margin: 0 0 0 35%; }
+
   .outdoor-section-block {
     padding-top: 18%; }
+
   .outdoor-section-block button span, .outdoor-section__image p {
     font-size: 1.6vw; }
+
   .outdoor-section-block {
     padding: 9.5% 12.5% 1.5%; }
+
   .outdoor-section__image.icon-outdoor, .outdoor-section__image.icon-safety {
-    padding: .4vw 13vw 0; }
+    padding: 0.4vw 13vw 0; }
+
   .icon-alpinizm embed, .icon-surf embed {
     width: 5vw;
     height: 5vw; }
+
   .icon-paraglide embed, .icon-desert embed, .icon-jungle embed {
     width: 4.5vw;
     height: 5vw; }
+
   .icon-ski embed {
     width: 4vw;
     height: 5vw; }
+
   .icon-wilderness embed {
     width: 5.2vw;
     height: 5vw; }
+
   .outdoor-section__image embed {
     width: 5vw;
     height: 5vw; }
+
   .outdoor-section__image.icon-travel {
     padding: 1.1vw 12.8vw 0; }
+
   .outdoor-section__image .numberCircle {
     border: 3px #f0f2f2 solid;
     width: 35px;
     height: 35px;
     font-size: 14px; }
+
   #section-contact .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    flex-direction: column; }
+
   .client-contact-list {
     padding: 16% 12% 13%;
     max-height: 100%;
     width: 100%; }
+
   .client-contact-list-img {
     height: 32vh;
     width: 100%;
     min-height: 0; }
+
   .client-contact-list__text h1 {
     font-size: 18vw;
     line-height: 13.6vw;
     text-indent: -7px; }
+
   .client-contact-list__text p {
     font-size: 3.4vw;
     line-height: normal;
-    margin-left: .5vw; }
+    margin-left: 0.5vw; }
+
   .client-contact-list__quote p {
     font-size: 2.2vw;
     line-height: 3.5vw;
     margin-bottom: 11.6vw; }
+
   .client-contact-list__center-arrow {
     padding: 3.4vw 0 3.6vw;
     width: 13vw; }
+
   .client-contact-list__email a {
     font-size: 5vw;
     padding: 0;
-    letter-spacing: .45vw;
+    letter-spacing: 0.45vw;
     font-weight: 300; }
+
   .client-contact-list__social--icon {
     margin-bottom: 1.3vw;
     height: auto; }
+
   .client-contact-list__social--icon.audio embed {
     width: 3.6vw;
     height: 2.34vw; }
+
   .client-contact-list__social--icon.instagram embed {
     height: 2.16vw;
     width: 3.9vw; }
+
   .client-contact-list__social--icon.telephone embed {
     height: 2.1vw;
     width: 4.5vw; }
+
   .client-contact-list__img {
     width: 5vw;
     margin-right: 1%; }
+
   .client-contact-list__social span, .client-contact-list__social--icon.audio a, .client-contact-list__social a {
     font-size: 1.3vw; }
+
   .footer-client p {
-    letter-spacing: .1vw;
+    letter-spacing: 0.1vw;
     font-size: 1vw;
-    margin-bottom: .35vw;
+    margin-bottom: 0.35vw;
     line-height: 2.15vw; }
+
   .footer-client span {
-    letter-spacing: .35vw;
+    letter-spacing: 0.35vw;
     font-size: 2.2vw;
     line-height: 1.8vw; }
+
   .footer-section img {
     width: 3.8vw;
     padding: 1vw 0 0; }
+
   .section-instagram-followers {
     margin-top: 6%;
     margin-bottom: 6%;
     padding: 0 0 0 9%; }
+
   .section-instagram-followers span {
     font-size: 3.2vw; }
+
   .section-instagram-followers a {
     font-size: 1.2vw;
-    line-height: .7vw;
+    line-height: 0.7vw;
     height: auto; }
+
   .section-instagram-followers embed {
     width: 3.2%;
     min-width: 19px;
     margin-right: 1vw; }
+
   .client-contact-list__center-arrow embed {
     width: 2.4vw; }
+
   .section-instagram__photo:nth-last-child(-n+4) {
     display: none; }
+
   .section-instagram__photo {
     width: 24.67%;
     height: 24.67vw; }
+
   #section-instagram {
     height: auto; }
+
   #menuToggle input {
     width: 3vw;
     height: 5.4vh; }
+
   .job-text-center {
     font-size: 1.6vw;
     margin: 3px 1px 0 5px; }
+
   .text-left-logo {
     font-size: 7px;
     line-height: 7px; }
+
   .now-section-about h3 {
     font-size: 1.9vw; }
+
   .jobs-section-about {
     font-size: 1.2vw;
-    letter-spacing: .3vw; }
+    letter-spacing: 0.3vw; }
+
   .tittle-section-about h6 {
     font-size: 1vw; }
+
   .text-under-tittles-section-tools {
     font-size: 1.9vw;
     line-height: 3.5vw; }
+
   h1 {
     font-size: 10.1vw;
     line-height: 9.6vw;
     letter-spacing: -1.2px; }
+
   .text-under-img-section-tools {
     font-size: 1.6vw;
     line-height: 2.88vw; }
+
   p {
     font-size: 1.9vw;
     line-height: 3.5vw; }
+
   .client-contact-list__social {
-    letter-spacing: .003vw;
+    letter-spacing: 0.003vw;
     margin-left: -8px; }
+
   .img-under-line-block {
     margin: 0; }
+
   #section-contact {
     height: auto; }
+
   .whole-text-section-about {
     padding: 16% 12% 0 12%;
     width: 100%; }
+
   #section-about .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse; }
+    flex-direction: column-reverse; }
+
   #section-about {
     height: auto;
     overflow: hidden; }
+
   .photo-man-section-about {
     content: url(../img/s2-about/jamie_mob.jpg); }
+
   .photo-man-section-about {
     width: 50%;
     margin: 0 25%; }
+
   .job-section-about-producer {
     font-size: 13vw; }
+
   .first-sentence-section-about {
     font-size: 1.44vw;
     margin-top: 0;
     margin-bottom: 0; }
+
   .aka-name-section-about {
     font-size: 1.2vw; }
+
   .jobs-section-about {
     font-size: 2.8vw; }
+
   .now-section-about {
     margin-top: 14vw; }
+
   h3 {
     font-size: 2.8vw; }
+
   .tittle-section-about {
     font-size: 1.6vw; }
+
   .whole-text-section-about .stuff-section-about {
     margin-top: 9vw;
     margin-bottom: 1.6vw; }
+
   .progress-line-gray-79 {
     width: 79%; }
+
   .text-over-progress h6 {
     font-size: 1.2vw;
     line-height: 1.6vw; }
+
   .progress-line {
     height: 1.3vw; }
+
   .over-line-block {
     margin-top: -20%; }
+
   .under-line-block .img-under-line-block embed, .img-under-line-block object {
     margin: 3% 0 5% 0; }
+
   .client-contact-list__email--triangle-left embed {
     display: none; }
+
   .section-tools {
     background: #363531; } }
-
 @media (min-width: 769px) and (max-width: 1000px) and (orientation: portrait) {
   #section-instagram {
     height: auto; }
+
   .outdoor-section__text--header h2 {
     line-height: 140px; }
+
   .section-outdoor-professional {
     max-height: 550px; }
+
   .photo-man-section-about {
     width: 50%;
     margin: 0 25%; }
+
   #section-contact .row {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    flex-direction: column; }
+
   .client-contact-list, .client-contact-list-img {
     width: 100%; } }
-
 @media (min-width: 768px) and (max-width: 768px) and (orientation: portrait) {
   .left-logo-banner-section {
     margin-top: 7%; }
+
   .dots-block-section-banner embed:first-child {
     margin: 5% 6% 3% 0; }
-  .arrow-down-section-banner {
-    right: -webkit-calc(52% - 1.1vw/2);
-    right: calc(52% - 1.1vw/2); } }
 
+  .arrow-down-section-banner {
+    right: calc(52% - 1.1vw/2); } }
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   .section-instagram-followers a {
     font-size: 0.7vw; }
+
   .text-near-dots {
     padding-top: 0; } }
-
 @media (max-width: 834px) and (min-width: 834px) {
   .dots-block-section-banner embed {
     margin: 4.5% 6% 3% 0 !important; } }
-
 @media (min-width: 833px) and (max-width: 834px) and (orientation: portrait) {
   .nav-icon .cross-icon {
     max-width: initial;
     width: 2.4vw; }
+
   .arrow-down-section-banner object {
     width: 1.1vw; }
+
   .section-instagram__photo:nth-last-child(-n+4) {
     display: none; }
+
   .photo-man-section-about {
     height: 76.5vh; }
+
   .client-contact-list__text h1 {
     text-indent: -7px; } }
-
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .text-under-img-section-tools {
     padding: 0 20%; }
+
   .text-near-dots {
     padding-top: 0; } }
-
 @media (max-width: 1112px) and (min-width: 825px) and (orientation: landscape) {
   #section-about.section {
     overflow-y: auto !important;
     height: auto !important; } }
-
 @media (max-width: 1366px) and (min-width: 1024px) and (orientation: landscape) {
   .highlight-hover h2 {
     text-indent: 17px; }
+
   .client-contact-list__email {
     margin-left: -10px; } }
-
 @media (max-width: 1600px) and (min-width: 1400px) {
   .embed-arrow {
     padding: 0 6% 2% 5%; } }
