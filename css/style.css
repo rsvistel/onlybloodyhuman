@@ -5,6 +5,9 @@
   font-display: swap;
   unicode-range: U+000-5FF;
   src: url("https://cdn.jsdelivr.net/npm/font-proxima-nova@1.0.1/fonts/ProximaNova-Light.woff") format("woff"); }
+html, body {
+  overflow: hidden; }
+
 h1 {
   font-size: 9vw;
   line-height: 8vw;
@@ -53,6 +56,8 @@ a:focus, a:hover {
   height: 100vh;
   overflow: hidden;
   -webkit-overflow-scrolling: touch; }
+  .section .iScrollVerticalScrollbar {
+    display: none; }
 
 ::-webkit-scrollbar {
   width: 0;

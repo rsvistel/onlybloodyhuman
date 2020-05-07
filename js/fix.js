@@ -25,32 +25,6 @@ $(document).ready(function () {
          })
      }
 
-     $('.owl-carousel').owlCarousel({
-         loop: true,
-         margin: 10,
-         responsiveClass: true,
-         autoplay: true,
-         autoplayTimeout: 3000,
-         nav: false,
-         dots: false,
-         responsive: {
-             0: {
-                 items: 1
-             },
-             450: {
-                 items: 2
-             },
-             767: {
-                 items: 3
-             },
-             1000: {
-                 items: 7,
-                 autoplay: false,
-                 loop: false
-             }
-         }
-     });
-
      sections = [];
      $('.section').each(function () {
          sections.push($(this))
@@ -121,7 +95,7 @@ $(document).ready(function () {
                      $.fn.fullpage.setAllowScrolling(false);
                      setTimeout(function () {
                          bindTools();
-                     }, 700);
+                     }, 1000);
                  }
              } else if (sections[nextIndex.index].attr("id") === "section-about") {
                  $.fn.fullpage.setAllowScrolling(false);
@@ -145,7 +119,7 @@ $(document).ready(function () {
                              setTimeout(function () {
                                  progressLine = true;
                              }, 3000);
- 
+
                              function animateStat(item) {
                                  if (!item.find('.progress-line-gray').hasClass('animated')) {
                                      var width;
@@ -220,13 +194,14 @@ $(document).ready(function () {
              }
              function longSectionScrolling() {
                  var sectionStartPosition;
+                 var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
+                 var sectionEnd = $(window).height() - sectionHeight;
                  if (sections[nextIndex.index].attr('id') === "section-instagram") {
                      sectionStartPosition = instagramStartPosition;
                  } else if (sections[nextIndex.index].attr('id') === "section-about") {
                      sectionStartPosition = aboutStartPosition;
+                     sectionEnd = $(window).height() - $('#section-about .row').outerHeight();
                  }
-                 var sectionHeight = sections[nextIndex.index].find('.fp-scroller').outerHeight();
-                 var sectionEnd = $(window).height() - sectionHeight;
                  var sectionScroll = sectionStartPosition;
                  $(window).bind('wheel', function (e) {
                      if  (sections[nextIndex.index].find('.fp-scroller').css('transform') === 'matrix(1, 0, 0, 1, 0, ' + 0 + ')') {
@@ -321,6 +296,33 @@ $(document).ready(function () {
              }
          }
      });
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            450: {
+                items: 2
+            },
+            767: {
+                items: 3
+            },
+            1000: {
+                items: 7,
+                autoplay: false,
+                loop: false
+            }
+        }
+    });
+
      $( function() {
         if (isTouchCapable) {
             $.fn.fullpage.setResponsive(true);
